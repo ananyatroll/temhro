@@ -1,0 +1,6 @@
+{
+  "name": "ተምህሮ / Temhiro",
+  "description": "An offline-first educational platform designed to help students with notes, exams, and practice modes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

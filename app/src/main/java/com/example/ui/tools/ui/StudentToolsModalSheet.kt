@@ -1,0 +1,355 @@
+package com.example.ui.tools.ui
+
+import androidx.compose.animation.*
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.*
+import androidx.compose.material3.*
+import androidx.compose.material3.TabRowDefaults.tabIndicatorOffset
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.example.R
+import com.example.ads.AdsManager
+import com.example.ads.InterstitialAdManager
+import com.example.ui.StudyViewModel
+import com.example.ui.theme.*
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun StudentToolsModalSheet(
+    viewModel: StudyViewModel,
+    subjectName: String = "",
+    currentTopic: String = "",
+    onDismiss: () -> Unit
+) {
+    val context = LocalContext.current
+    val isDark by viewModel.isDarkTheme.collectAsState()
+    val activeTab by viewModel.activeToolsTab.collectAsState()
+    val learningContext by viewModel.activeLearningContext.collectAsState()
+    val subjectsList by viewModel.subjects.collectAsState()
+
+    val effectiveSubjectName = remember(learningContext?.courseName, subjectName) {
+        val fromCtx = learningContext?.courseName?.trim()
+        when {
+            !fromCtx.isNullOrBlank() -> fromCtx
+            subjectName.isNotBlank() -> subjectName
+            else -> ""
+        }
+    }
+
+    val effectiveTopic = remember(learningContext?.topicName, currentTopic) {
+        learningContext?.topicName?.trim()?.ifBlank { currentTopic } ?: currentTopic
+    }
+
+    var showPlanWeekDetail by remember { mutableStateOf(false) }
+
+    // Interstitial ad trigger on dismiss (respects 3-minute cap and test unit fallback)
+    val handleDismiss: () -> Unit = {
+        val activity = AdsManager.findActivity(context)
+        if (activity != null) {
+            InterstitialAdManager.showIfAllowed(activity) {
+                onDismiss()
+            }
+        } else {
+            onDismiss()
+        }
+    }
+
+    ModalBottomSheet(
+        onDismissRequest = handleDismiss,
+        sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
+        containerColor = if (isDark) CardBgDark else Color.White,
+        windowInsets = WindowInsets(0, 0, 0, 0),
+        dragHandle = {
+            BottomSheetDefaults.DragHandle(
+                color = if (isDark) Color(0xFF475569) else Color(0xFFCBD5E1)
+            )
+        },
+        modifier = Modifier.fillMaxHeight(0.95f)
+    ) {
+        Column(modifier = Modifier.fillMaxSize()) {
+
+            // Top Header: Logo + Title + Close Button
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp, vertical = 4.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Surface(
+                        shape = CircleShape,
+                        color = Color.White,
+                        shadowElevation = 2.dp,
+                        modifier = Modifier.size(36.dp)
+                    ) {
+                        Image(
+                            painter = painterResource(id = R.drawable.img_app_icon),
+                            contentDescription = "Tamhero Logo",
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .clip(CircleShape)
+                        )
+                    }
+                    Spacer(modifier = Modifier.width(10.dp))
+                    Column {
+                        Text(
+                            text = "Student Tools",
+                            style = MaterialTheme.typography.titleMedium.copy(
+                                fontWeight = FontWeight.Bold,
+                                color = if (isDark) TextLight else Color(0xFF0F172A)
+                            )
+                        )
+                        Text(
+                            text = "Tamhero Academic Companion",
+                            style = MaterialTheme.typography.labelSmall.copy(color = EmeraldPrimary)
+                        )
+                    }
+                }
+
+                IconButton(
+                    onClick = handleDismiss,
+                    modifier = Modifier.size(32.dp)
+                ) {
+                    Icon(Icons.Default.Close, contentDescription = "Close", tint = TextMuted)
+                }
+            }
+
+            // Context Banner & Contextual Quick Action Chips
+            Surface(
+                color = if (isDark) Color(0xFF1E293B) else Color(0xFFF8FAFC),
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Column(modifier = Modifier.padding(vertical = 6.dp)) {
+                    // Context indicator
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 16.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Icon(
+                            Icons.Default.School,
+                            contentDescription = null,
+                            tint = EmeraldPrimary,
+                            modifier = Modifier.size(14.dp)
+                        )
+                        Spacer(modifier = Modifier.width(6.dp))
+                        val activeCourseText = if (effectiveSubjectName.isNotBlank()) {
+                            "Active Course: $effectiveSubjectName" + if (effectiveTopic.isNotBlank()) " • $effectiveTopic" else ""
+                        } else {
+                            "Academic Assistant • All Subjects"
+                        }
+                        Text(
+                            text = activeCourseText,
+                            fontSize = 11.sp,
+                            fontWeight = FontWeight.SemiBold,
+                            color = if (isDark) EmeraldLight else EmeraldDark
+                        )
+                    }
+
+                    Spacer(modifier = Modifier.height(6.dp))
+
+                    // Context Quick Action Chips
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .horizontalScroll(rememberScrollState())
+                            .padding(horizontal = 16.dp),
+                        horizontalArrangement = Arrangement.spacedBy(6.dp)
+                    ) {
+                        // Quick Action 1: Explain Concept
+                        val explainPrompt = if (effectiveSubjectName.isNotBlank()) {
+                            "Explain $effectiveSubjectName core concept simply step by step"
+                        } else {
+                            "Explain key exam concepts and how to study effectively"
+                        }
+                        SuggestionChip(
+                            onClick = {
+                                viewModel.openStudentTools("ask", explainPrompt)
+                            },
+                            label = { Text("Explain Concept", fontSize = 11.sp) },
+                            icon = { Icon(Icons.Default.Lightbulb, null, modifier = Modifier.size(12.dp)) },
+                            colors = SuggestionChipDefaults.suggestionChipColors(
+                                containerColor = if (isDark) Color(0xFF334155) else Color(0xFFE2E8F0)
+                            ),
+                            border = null
+                        )
+
+                        // Quick Action 2: Practice Questions
+                        val quizPrompt = if (effectiveSubjectName.isNotBlank()) {
+                            "Generate 4 multiple choice practice exam questions for $effectiveSubjectName with answers and detailed explanations"
+                        } else {
+                            "Generate 4 multiple choice practice exam questions with answers and detailed explanations"
+                        }
+                        SuggestionChip(
+                            onClick = {
+                                viewModel.openStudentTools("ask", quizPrompt)
+                            },
+                            label = { Text("Practice Questions", fontSize = 11.sp) },
+                            icon = { Icon(Icons.Default.Quiz, null, modifier = Modifier.size(12.dp)) },
+                            colors = SuggestionChipDefaults.suggestionChipColors(
+                                containerColor = if (isDark) Color(0xFF334155) else Color(0xFFE2E8F0)
+                            ),
+                            border = null
+                        )
+
+                        // Quick Action 3: Start 25m Timer
+                        SuggestionChip(
+                            onClick = {
+                                viewModel.openStudentTools("timer_tasks")
+                            },
+                            label = { Text("Start 25m Timer", fontSize = 11.sp) },
+                            icon = { Icon(Icons.Default.Timer, null, modifier = Modifier.size(12.dp)) },
+                            colors = SuggestionChipDefaults.suggestionChipColors(
+                                containerColor = if (isDark) Color(0xFF334155) else Color(0xFFE2E8F0)
+                            ),
+                            border = null
+                        )
+
+                        // Quick Action 4: Plan Study Week
+                        SuggestionChip(
+                            onClick = {
+                                viewModel.openStudentTools("calendar")
+                                showPlanWeekDetail = true
+                            },
+                            label = { Text("Plan My Week", fontSize = 11.sp) },
+                            icon = { Icon(Icons.Default.CalendarToday, null, modifier = Modifier.size(12.dp)) },
+                            colors = SuggestionChipDefaults.suggestionChipColors(
+                                containerColor = if (isDark) Color(0xFF334155) else Color(0xFFE2E8F0)
+                            ),
+                            border = null
+                        )
+                    }
+                }
+            }
+
+            // Tab Navigation Row
+            val tabs = listOf(
+                "ask" to ("Ask Tamhero" to Icons.Default.SmartToy),
+                "calendar" to ("Calendar & Plan" to Icons.Default.CalendarMonth),
+                "grades" to ("Target Grades" to Icons.Default.Calculate),
+                "scanner" to ("Doc Scanner" to Icons.Default.DocumentScanner),
+                "timer_tasks" to ("Timer & Tasks" to Icons.Default.Timer)
+            )
+
+            val selectedIndex = tabs.indexOfFirst { it.first == activeTab }.coerceAtLeast(0)
+
+            ScrollableTabRow(
+                selectedTabIndex = selectedIndex,
+                edgePadding = 12.dp,
+                containerColor = if (isDark) Color(0xFF0F172A) else Color(0xFFF1F5F9),
+                contentColor = EmeraldPrimary,
+                indicator = { tabPositions ->
+                    if (selectedIndex < tabPositions.size) {
+                        TabRowDefaults.SecondaryIndicator(
+                            modifier = Modifier.tabIndicatorOffset(tabPositions[selectedIndex]),
+                            color = EmeraldPrimary,
+                            height = 3.dp
+                        )
+                    }
+                },
+                divider = {}
+            ) {
+                tabs.forEachIndexed { index, (tabId, tabData) ->
+                    val isSelected = activeTab == tabId
+                    Tab(
+                        selected = isSelected,
+                        onClick = {
+                            viewModel.activeToolsTab.value = tabId
+                            if (tabId != "calendar") {
+                                showPlanWeekDetail = false
+                            }
+                        },
+                        text = {
+                            Text(
+                                text = tabData.first,
+                                fontSize = 12.sp,
+                                fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
+                                color = if (isSelected) EmeraldPrimary else (if (isDark) TextMuted else Color.Gray)
+                            )
+                        },
+                        icon = {
+                            Icon(
+                                imageVector = tabData.second,
+                                contentDescription = tabData.first,
+                                modifier = Modifier.size(18.dp),
+                                tint = if (isSelected) EmeraldPrimary else (if (isDark) TextMuted else Color.Gray)
+                            )
+                        }
+                    )
+                }
+            }
+
+            // Tab Body Content
+            Box(
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxWidth()
+            ) {
+                when (activeTab) {
+                    "ask" -> {
+                        AskTamheroView(
+                            viewModel = viewModel,
+                            subjectName = effectiveSubjectName,
+                            currentTopic = effectiveTopic
+                        )
+                    }
+                    "calendar" -> {
+                        if (showPlanWeekDetail) {
+                            PlanMyWeekView(
+                                viewModel = viewModel,
+                                onBackToCalendar = { showPlanWeekDetail = false }
+                            )
+                        } else {
+                            AcademicCalendarView(
+                                viewModel = viewModel,
+                                onSwitchToPlanWeek = { showPlanWeekDetail = true }
+                            )
+                        }
+                    }
+                    "grades" -> {
+                        GradePlannerView(
+                            viewModel = viewModel,
+                            onAskTamheroAboutGrade = { prompt ->
+                                viewModel.openStudentTools("ask", prompt)
+                            }
+                        )
+                    }
+                    "scanner" -> {
+                        DocumentScannerView(
+                            viewModel = viewModel,
+                            subjectName = effectiveSubjectName,
+                            onOpenAskTamheroWithText = { text ->
+                                viewModel.openStudentTools("ask", text)
+                            }
+                        )
+                    }
+                    "timer_tasks" -> {
+                        StudyTimerAndTasksView(
+                            viewModel = viewModel,
+                            defaultSubject = effectiveSubjectName
+                        )
+                    }
+                }
+            }
+        }
+    }
+}

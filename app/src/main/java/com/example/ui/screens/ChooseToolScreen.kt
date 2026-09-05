@@ -1,0 +1,849 @@
+package com.example.ui.screens
+
+import androidx.compose.animation.*
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.compose.ui.window.Dialog
+import com.example.ads.InterstitialAdManager
+import com.example.ads.AdsManager
+import com.example.ui.StudyViewModel
+import com.example.ui.TranslationManager
+import com.example.ui.components.*
+import com.example.ui.theme.*
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun ChooseToolScreen(viewModel: StudyViewModel) {
+    val progress by viewModel.userProgress.collectAsState()
+    val searchQuery by viewModel.searchQuery.collectAsState()
+    val accordionExpanded by viewModel.packageAccordionExpanded.collectAsState()
+    val confirmationPackage by viewModel.enrollmentConfirmationPackage.collectAsState()
+    val showPaymentForm by viewModel.showPaymentVerificationScreen.collectAsState()
+
+    val currentLang by viewModel.currentLanguage.collectAsState()
+    val studentName by viewModel.studentName.collectAsState()
+    val studentGoal by viewModel.studentGoal.collectAsState()
+    val isDarkTheme by viewModel.isDarkTheme.collectAsState()
+
+    fun t(key: String): String = TranslationManager.get(key, currentLang)
+
+    val bgModifier = Modifier.background(Color.Transparent)
+
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .then(bgModifier)
+    ) {
+        LazyColumn(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(horizontal = 16.dp),
+            contentPadding = PaddingValues(top = 16.dp, bottom = 80.dp)
+        ) {
+            // Header Row
+            item {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 12.dp),
+                    horizontalArrangement = Arrangement.End,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    var langMenuExpanded by remember { mutableStateOf(false) }
+
+                    Row(
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        // Dark / Light Mode symbol toggle (pure symbols, no text)
+                        Box(
+                            modifier = Modifier
+                                .clip(HexagonalCutShape)
+                                .background(if (isDarkTheme) CardBgDark else Color.White)
+                                .clickable { viewModel.toggleDarkTheme() }
+                                .padding(horizontal = 10.dp, vertical = 7.dp)
+                                .border(1.dp, if (isDarkTheme) EmeraldPrimary.copy(alpha = 0.35f) else IndigoLight, HexagonalCutShape),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Icon(
+                                imageVector = if (isDarkTheme) Icons.Default.DarkMode else Icons.Default.WbSunny,
+                                contentDescription = "Toggle Theme",
+                                tint = if (isDarkTheme) HolographicAqua else GoldDark,
+                                modifier = Modifier.size(20.dp)
+                            )
+                        }
+
+                        Box(
+                            modifier = Modifier
+                                .clip(HexagonalCutShape)
+                                .background(if (isDarkTheme) CardBgDark else Color.White)
+                                .clickable { langMenuExpanded = true }
+                                .padding(horizontal = 10.dp, vertical = 7.dp)
+                                .border(1.dp, if (isDarkTheme) EmeraldPrimary.copy(alpha = 0.35f) else IndigoLight, HexagonalCutShape),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.spacedBy(3.dp)
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Default.Language,
+                                    contentDescription = "Language",
+                                    tint = if (isDarkTheme) HolographicAqua else EmeraldPrimary,
+                                    modifier = Modifier.size(20.dp)
+                                )
+                                Icon(
+                                    imageVector = Icons.Default.ArrowDropDown,
+                                    contentDescription = "Language Dropdown",
+                                    tint = if (isDarkTheme) Color.White else IndigoSecondary,
+                                    modifier = Modifier.size(18.dp)
+                                )
+                            }
+                        }
+
+                        DropdownMenu(
+                            expanded = langMenuExpanded,
+                            onDismissRequest = { langMenuExpanded = false },
+                            modifier = Modifier.glassEffect(
+                                shape = RoundedCornerShape(16.dp),
+                                backgroundColor = if (isDarkTheme) CardBgDark.copy(alpha = 0.85f) else Color.White.copy(alpha = 0.88f),
+                                borderColor = Color.White.copy(alpha = 0.35f)
+                            )
+                        ) {
+                            val itemColor = if (isDarkTheme) Color.White else Color.DarkGray
+                            DropdownMenuItem(
+                                text = { Text("🇬🇧 English", color = itemColor, fontSize = 13.sp) },
+                                onClick = {
+                                    viewModel.setLanguage("en")
+                                    langMenuExpanded = false
+                                }
+                            )
+                            DropdownMenuItem(
+                                text = { Text("🇪🇹 አማርኛ (Amharic)", color = itemColor, fontSize = 13.sp) },
+                                onClick = {
+                                    viewModel.setLanguage("am")
+                                    langMenuExpanded = false
+                                }
+                            )
+                            DropdownMenuItem(
+                                text = { Text("🇪🇹 Afaan Oromoo (Oromifa)", color = itemColor, fontSize = 13.sp) },
+                                onClick = {
+                                    viewModel.setLanguage("om")
+                                    langMenuExpanded = false
+                                }
+                            )
+                            DropdownMenuItem(
+                                text = { Text("🇪🇹 Soomaali (Somali)", color = itemColor, fontSize = 13.sp) },
+                                onClick = {
+                                    viewModel.setLanguage("so")
+                                    langMenuExpanded = false
+                                }
+                            )
+                            DropdownMenuItem(
+                                text = { Text("🇪🇹 ትግርኛ (Tigrigna)", color = itemColor, fontSize = 13.sp) },
+                                onClick = {
+                                    viewModel.setLanguage("ti")
+                                    langMenuExpanded = false
+                                }
+                            )
+                        }
+                    }
+                }
+            }
+
+            // Title
+            item {
+                Spacer(modifier = Modifier.height(12.dp))
+                Text(
+                    text = t("choose_tool"),
+                    style = MaterialTheme.typography.displayLarge.copy(
+                        fontWeight = FontWeight.Black,
+                        fontStyle = androidx.compose.ui.text.font.FontStyle.Italic,
+                        lineHeight = 28.sp,
+                        fontSize = 22.sp
+                    ),
+                    color = if (isDarkTheme) Color.White else IndigoSecondary,
+                )
+                Text(
+                    text = t("choose_tool_desc"),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = if (isDarkTheme) TextMuted else Color.Gray,
+                    modifier = Modifier.padding(top = 4.dp, bottom = 24.dp)
+                )
+            }
+
+            // Popular Tools Section
+            item {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 16.dp, bottom = 4.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = t("popular_tools").uppercase(),
+                        style = MaterialTheme.typography.titleMedium.copy(
+                            fontWeight = FontWeight.Black,
+                            fontSize = 14.sp,
+                            letterSpacing = 1.5.sp
+                        ),
+                        color = if (isDarkTheme) Color.White else IndigoSecondary
+                    )
+                    Text(
+                        text = t("study_programs_count"),
+                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.ExtraBold, letterSpacing = 0.5.sp),
+                        color = EmeraldPrimary,
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(8.dp))
+                            .background(EmeraldPrimary.copy(alpha = 0.1f))
+                            .padding(horizontal = 10.dp, vertical = 4.dp)
+                    )
+                }
+                Spacer(modifier = Modifier.height(14.dp))
+            }
+
+            // Cards Data Filtering based on search query
+            val cardsList = listOf(
+                PackageCardData(
+                    id = "euee",
+                    title = t("pkg_euee_title"),
+                    badge = t("status_free_trial"),
+                    description = t("pkg_euee_desc"),
+                    comingSoon = false
+                ),
+                PackageCardData(
+                    id = "freshman",
+                    title = t("pkg_freshman_title"),
+                    badge = t("status_free_trial"),
+                    description = t("pkg_freshman_desc"),
+                    comingSoon = false
+                ),
+                PackageCardData(
+                    id = "aau_uat",
+                    title = t("pkg_uat_title"),
+                    badge = t("status_free_trial"),
+                    description = t("pkg_uat_desc"),
+                    comingSoon = false
+                ),
+                PackageCardData(
+                    id = "department",
+                    title = t("pkg_dept_title"),
+                    badge = t("status_free_trial"),
+                    description = t("pkg_dept_desc"),
+                    comingSoon = false
+                ),
+                PackageCardData(
+                    id = "exit_exam",
+                    title = t("pkg_exit_title"),
+                    badge = t("status_free_trial"),
+                    description = t("pkg_exit_desc"),
+                    comingSoon = false
+                )
+            ).filter { it.title.lowercase().contains(searchQuery.lowercase()) || it.description.lowercase().contains(searchQuery.lowercase()) }
+
+            if (cardsList.isEmpty() && searchQuery.isNotEmpty()) {
+                item {
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 32.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        Icon(Icons.Default.SearchOff, contentDescription = null, modifier = Modifier.size(48.dp), tint = Color.Gray)
+                        Text(t("no_packages_match"), style = MaterialTheme.typography.bodyLarge, color = Color.Gray, modifier = Modifier.padding(top = 12.dp))
+                    }
+                }
+            } else {
+                items(cardsList) { pkg ->
+                    val isEnrolled = if (pkg.id == "euee") {
+                        progress.activePackageId == "euee_natural" || progress.activePackageId == "euee_social"
+                    } else {
+                        progress.activePackageId == pkg.id
+                    }
+
+                    val effectivePurchased = if (progress.purchasedPackageId.isNotEmpty()) {
+                        progress.purchasedPackageId
+                    } else if (progress.paymentStatus == "approved") {
+                        progress.activePackageId ?: "euee_natural"
+                    } else {
+                        ""
+                    }
+
+                    val isPkgPurchased = viewModel.isPackagePurchased(effectivePurchased, pkg.id)
+
+                    val context = androidx.compose.ui.platform.LocalContext.current
+                    PackageCard(
+                        data = pkg,
+                        isEnrolled = isEnrolled,
+                        isApproved = isPkgPurchased,
+                        isResetMode = progress.activePackageId == null,
+                        isDarkTheme = isDarkTheme,
+                        currentLang = currentLang,
+                        onEnrollClick = {
+                            if (isEnrolled) {
+                                val activity = AdsManager.findActivity(context)
+                                if (activity != null) {
+                                    InterstitialAdManager.showIfAllowed(activity) {
+                                        viewModel.currentTab.value = "home"
+                                    }
+                                } else {
+                                    viewModel.currentTab.value = "home"
+                                }
+                            } else if (isPkgPurchased) {
+                                val targetPkg = if (pkg.id == "euee") {
+                                    if (progress.activePackageId == "euee_social") "euee_social" else "euee_natural"
+                                } else {
+                                    pkg.id
+                                }
+                                val activity = AdsManager.findActivity(context)
+                                if (activity != null) {
+                                    InterstitialAdManager.showIfAllowed(activity) {
+                                        viewModel.enrollInPackage(targetPkg)
+                                        viewModel.currentTab.value = "home"
+                                    }
+                                } else {
+                                    viewModel.enrollInPackage(targetPkg)
+                                    viewModel.currentTab.value = "home"
+                                }
+                            } else {
+                                viewModel.enrollmentConfirmationPackage.value = pkg.id
+                            }
+                        }
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                }
+            }
+
+            item {
+                com.example.ui.components.LegalLinksFooter(
+                    currentLang = currentLang,
+                    textColor = if (isDarkTheme) TextMuted else Color.Gray,
+                    screenTagPrefix = "choosetool"
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+            }
+        }
+
+        // Enrollment Dialog Backdrop
+        if (confirmationPackage != null) {
+            val pkgId = confirmationPackage!!
+            val pkgName = when(pkgId) {
+                "euee" -> t("pkg_euee_title")
+                "freshman" -> t("pkg_freshman_title")
+                "aau_uat" -> t("pkg_uat_title")
+                "department" -> t("pkg_dept_title")
+                "exit_exam" -> t("pkg_exit_title")
+                else -> "Study Plan"
+            }
+            val modalContext = androidx.compose.ui.platform.LocalContext.current
+            EnrollmentConfirmationModal(
+                packageId = pkgId,
+                packageName = pkgName,
+                currentLang = currentLang,
+                onDismiss = { viewModel.enrollmentConfirmationPackage.value = null },
+                onConfirm = { selectedPackageId ->
+                    val activity = AdsManager.findActivity(modalContext)
+                    if (activity != null) {
+                        InterstitialAdManager.showIfAllowed(activity) {
+                            viewModel.enrollInPackage(selectedPackageId)
+                            viewModel.currentTab.value = "home"
+                        }
+                    } else {
+                        viewModel.enrollInPackage(selectedPackageId)
+                        viewModel.currentTab.value = "home"
+                    }
+                },
+                onUpgradePremium = {
+                    viewModel.paywallPackageIdForUpgrade.value = pkgId
+                    viewModel.enrollmentConfirmationPackage.value = null
+                    viewModel.showPaymentVerificationScreen.value = true
+                }
+            )
+        }
+    }
+}
+
+data class PackageCardData(
+    val id: String,
+    val title: String,
+    val badge: String,
+    val description: String,
+    val comingSoon: Boolean
+)
+
+@Composable
+fun PackageCard(
+    data: PackageCardData,
+    isEnrolled: Boolean,
+    isApproved: Boolean = false,
+    isResetMode: Boolean = false,
+    isDarkTheme: Boolean = false,
+    currentLang: String = "en",
+    onEnrollClick: () -> Unit
+) {
+    fun t(key: String): String = TranslationManager.get(key, currentLang)
+
+    val pkgIcon = when (data.id) {
+        "euee" -> Icons.Default.School
+        "freshman" -> Icons.Default.LocalLibrary
+        "aau_uat" -> Icons.Default.AutoAwesome
+        "department" -> Icons.Default.AccountBalance
+        "exit_exam" -> Icons.Default.Assignment
+        else -> Icons.Default.MenuBook
+    }
+
+    val brandColor = if (isEnrolled) EmeraldPrimary else if (isApproved) GoldAccent else if (isDarkTheme) HolographicAqua else IndigoMedium
+
+    val containerBg = if (isDarkTheme) {
+        if (data.comingSoon) Color(0xFF0F172A) else Color(0xFF131C2E)
+    } else {
+        if (data.comingSoon) Color(0xFFF8FAFC) else Color.White
+    }
+
+    val cardBorderColor = if (isEnrolled) {
+        EmeraldPrimary
+    } else if (isApproved) {
+        GoldAccent
+    } else if (isDarkTheme) {
+        Color(0xFF334155)
+    } else {
+        Color(0xFFE2E8F0)
+    }
+
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .pressBounce(),
+        shape = RoundedCornerShape(18.dp),
+        border = BorderStroke(width = if (isEnrolled) 2.dp else 1.dp, color = cardBorderColor),
+        colors = CardDefaults.cardColors(
+            containerColor = containerBg
+        ),
+        elevation = CardDefaults.cardElevation(
+            defaultElevation = if (isEnrolled) 4.dp else 2.dp
+        )
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(18.dp)
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.weight(1f)
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .size(38.dp)
+                            .clip(HexagonalCutShape)
+                            .background(
+                                if (data.comingSoon) Color.LightGray.copy(alpha = 0.4f)
+                                else brandColor.copy(alpha = 0.15f)
+                            ),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Icon(
+                            imageVector = pkgIcon,
+                            contentDescription = null,
+                            tint = if (data.comingSoon) Color.Gray else brandColor,
+                            modifier = Modifier.size(20.dp)
+                        )
+                    }
+                    Spacer(modifier = Modifier.width(12.dp))
+                    Text(
+                        text = data.title,
+                        style = MaterialTheme.typography.titleLarge.copy(
+                            fontWeight = FontWeight.Black,
+                            fontSize = 17.sp,
+                            letterSpacing = 0.2.sp
+                        ),
+                        color = if (data.comingSoon) Color.Gray else if (isDarkTheme) Color.White else IndigoSecondary
+                    )
+                }
+
+                // High-contrast modern badge
+                Box(
+                    modifier = Modifier
+                        .clip(HexagonalCutShape)
+                        .background(
+                            if (data.comingSoon) Color(0xFFE2E8F0)
+                            else if (isEnrolled) EmeraldPrimary
+                            else if (isApproved) GoldAccent
+                            else if (isDarkTheme) Color(0xFF78350F)
+                            else GoldLight
+                        )
+                        .padding(horizontal = 10.dp, vertical = 5.dp)
+                ) {
+                    Text(
+                        text = if (isEnrolled) t("status_active") else if (isApproved) t("status_unlocked") else data.badge.uppercase(),
+                        color = if (data.comingSoon) Color.DarkGray else if (isEnrolled) Color.White else if (isApproved) Color(0xFF0F172A) else if (isDarkTheme) GoldLight else GoldDark,
+                        style = MaterialTheme.typography.labelSmall.copy(
+                            fontSize = 9.sp,
+                            fontWeight = FontWeight.ExtraBold,
+                            letterSpacing = 0.5.sp
+                        )
+                    )
+                }
+            }
+
+            Spacer(modifier = Modifier.height(10.dp))
+            Text(
+                text = data.description,
+                style = MaterialTheme.typography.bodyMedium.copy(
+                    fontSize = 13.sp,
+                    lineHeight = 20.sp
+                ),
+                color = if (data.comingSoon) Color.Gray else if (isDarkTheme) TextMuted else Color.DarkGray
+            )
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            // Action Button
+            if (data.comingSoon) {
+                Button(
+                    onClick = {},
+                    enabled = false,
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = ChamferedCardShape,
+                    colors = ButtonDefaults.buttonColors(
+                        disabledContainerColor = Color(0xFFE5E7EB),
+                        disabledContentColor = Color(0xFF9CA3AF)
+                    )
+                ) {
+                    Text(
+                        text = t("status_coming_soon"),
+                        style = MaterialTheme.typography.titleMedium.copy(fontSize = 14.sp),
+                        fontWeight = FontWeight.Bold
+                    )
+                }
+            } else {
+                Button(
+                    onClick = onEnrollClick,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .pressBounce()
+                        .testTag("enroll_button_${data.id}"),
+                    shape = ChamferedCardShape,
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = if (isEnrolled) IndigoMedium else if (isApproved) EmeraldPrimary else EmeraldPrimary,
+                        contentColor = Color.White
+                    )
+                ) {
+                    Row(
+                        horizontalArrangement = Arrangement.Center,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        if (isEnrolled) {
+                            Icon(Icons.Default.Check, contentDescription = null, tint = Color.White)
+                            Spacer(modifier = Modifier.width(8.dp))
+                            Text(
+                                text = t("btn_continue_prep"),
+                                style = MaterialTheme.typography.titleMedium.copy(fontSize = 14.sp),
+                                fontWeight = FontWeight.Bold
+                            )
+                        } else if (isApproved) {
+                            Icon(Icons.Default.LockOpen, contentDescription = null, tint = Color.White)
+                            Spacer(modifier = Modifier.width(8.dp))
+                            Text(
+                                text = if (isResetMode) t("btn_go_back") else t("btn_switch_program"),
+                                style = MaterialTheme.typography.titleMedium.copy(fontSize = 14.sp),
+                                fontWeight = FontWeight.Bold
+                            )
+                        } else {
+                            Text(
+                                text = t("btn_enroll_free_trial"),
+                                style = MaterialTheme.typography.titleMedium.copy(fontSize = 14.sp),
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun EnrollmentConfirmationModal(
+    packageId: String,
+    packageName: String,
+    currentLang: String = "en",
+    onDismiss: () -> Unit,
+    onConfirm: (String) -> Unit,
+    onUpgradePremium: () -> Unit
+) {
+    var selectedStream by remember { mutableStateOf("natural") } // "natural" or "social"
+    fun t(key: String): String = TranslationManager.get(key, currentLang)
+
+    Dialog(onDismissRequest = onDismiss) {
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp)
+                .border(
+                    width = 1.5.dp,
+                    brush = Brush.linearGradient(
+                        listOf(Color.White.copy(alpha = 0.5f), HolographicAqua.copy(alpha = 0.5f))
+                    ),
+                    shape = ChamferedCardShape
+                ),
+            shape = ChamferedCardShape,
+            colors = CardDefaults.cardColors(
+                containerColor = Color(0xFF0F172A).copy(alpha = 0.96f)
+            )
+        ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .holographicShimmer()
+                    .padding(24.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Box(
+                    modifier = Modifier
+                        .size(56.dp)
+                        .clip(ChamferedCardShape)
+                        .background(EmeraldPrimary.copy(alpha = 0.15f)),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Icon(
+                        Icons.Default.WorkspacePremium,
+                        contentDescription = null,
+                        tint = GoldAccent,
+                        modifier = Modifier.size(36.dp)
+                    )
+                }
+
+                Spacer(modifier = Modifier.height(16.dp))
+                Text(
+                    text = t("modal_confirm_enrollment"),
+                    style = MaterialTheme.typography.displayMedium,
+                    color = Color.White,
+                    textAlign = TextAlign.Center
+                )
+                Text(
+                    text = packageName,
+                    style = MaterialTheme.typography.titleMedium,
+                    color = GoldAccent,
+                    fontWeight = FontWeight.Bold,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.padding(top = 4.dp, bottom = 12.dp)
+                )
+
+                if (packageId == "euee") {
+                    Text(
+                        text = t("modal_choose_stream"),
+                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black, letterSpacing = 1.5.sp),
+                        color = GoldAccent,
+                        modifier = Modifier.padding(bottom = 8.dp)
+                    )
+                    
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(bottom = 16.dp),
+                        horizontalArrangement = Arrangement.spacedBy(12.dp)
+                    ) {
+                        // Natural Science Card Button
+                        Card(
+                            modifier = Modifier
+                                .weight(1f)
+                                .clickable { selectedStream = "natural" }
+                                .border(
+                                    1.5.dp,
+                                    if (selectedStream == "natural") EmeraldPrimary else Color.Transparent,
+                                    RoundedCornerShape(12.dp)
+                                ),
+                            shape = RoundedCornerShape(12.dp),
+                            colors = CardDefaults.cardColors(
+                                containerColor = if (selectedStream == "natural") Color(0xFF1E293B) else Color(0xFF0F172A)
+                            )
+                        ) {
+                            Column(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(12.dp),
+                                horizontalAlignment = Alignment.CenterHorizontally
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Default.Science,
+                                    contentDescription = null,
+                                    tint = if (selectedStream == "natural") EmeraldPrimary else Color.Gray,
+                                    modifier = Modifier.size(24.dp)
+                                )
+                                Spacer(modifier = Modifier.height(6.dp))
+                                Text(
+                                    text = t("stream_natural"),
+                                    style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
+                                    color = Color.White
+                                )
+                            }
+                        }
+
+                        // Social Science Card Button
+                        Card(
+                            modifier = Modifier
+                                .weight(1f)
+                                .clickable { selectedStream = "social" }
+                                .border(
+                                    1.5.dp,
+                                    if (selectedStream == "social") EmeraldPrimary else Color.Transparent,
+                                    RoundedCornerShape(12.dp)
+                                ),
+                            shape = RoundedCornerShape(12.dp),
+                            colors = CardDefaults.cardColors(
+                                containerColor = if (selectedStream == "social") Color(0xFF1E293B) else Color(0xFF0F172A)
+                            )
+                        ) {
+                            Column(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(12.dp),
+                                horizontalAlignment = Alignment.CenterHorizontally
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Default.Public,
+                                    contentDescription = null,
+                                    tint = if (selectedStream == "social") EmeraldPrimary else Color.Gray,
+                                    modifier = Modifier.size(24.dp)
+                                )
+                                Spacer(modifier = Modifier.height(6.dp))
+                                Text(
+                                    text = t("stream_social"),
+                                    style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
+                                    color = Color.White
+                                )
+                            }
+                        }
+                    }
+                    
+                    Text(
+                        text = t("euee_trial_desc"),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = TextMuted,
+                        textAlign = TextAlign.Center,
+                        lineHeight = 18.sp,
+                        modifier = Modifier.padding(bottom = 20.dp)
+                    )
+                } else {
+                    val descText = "${t("other_trial_desc_prefix")}$packageName${t("other_trial_desc_suffix")}\n\n" +
+                            "${t("trial_includes_title")}\n" +
+                            "${t("trial_inc_1")}\n" +
+                            "${t("trial_inc_2")}\n" +
+                            "${t("trial_inc_3")}\n" +
+                            t("trial_inc_4")
+                    Text(
+                        text = descText,
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = TextMuted,
+                        textAlign = TextAlign.Start,
+                        lineHeight = 20.sp,
+                        modifier = Modifier.padding(bottom = 24.dp)
+                    )
+                }
+
+                Column(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    // 1. Premium Upgrade Button
+                    Button(
+                        onClick = {
+                            onUpgradePremium()
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(50.dp)
+                            .pressBounce()
+                            .testTag("modal_upgrade_premium_button"),
+                        shape = RoundedCornerShape(14.dp),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = GoldAccent,
+                            contentColor = Color(0xFF0F172A)
+                        )
+                    ) {
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.Center,
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Icon(imageVector = Icons.Default.WorkspacePremium, contentDescription = null, modifier = Modifier.size(20.dp))
+                            Spacer(modifier = Modifier.width(8.dp))
+                            Text(
+                                text = t("btn_go_premium"),
+                                style = MaterialTheme.typography.titleMedium,
+                                fontWeight = FontWeight.Bold,
+                                maxLines = 1,
+                                overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
+                            )
+                        }
+                    }
+
+                    // 2. Free Trial Button
+                    Button(
+                        onClick = {
+                            if (packageId == "euee") {
+                                onConfirm(if (selectedStream == "natural") "euee_natural" else "euee_social")
+                            } else {
+                                onConfirm(packageId)
+                            }
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .testTag("modal_confirm_button"),
+                        shape = ChamferedCardShape,
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = EmeraldPrimary,
+                            contentColor = Color.White
+                        )
+                    ) {
+                        Text(
+                            text = t("btn_activate_trial"),
+                            style = MaterialTheme.typography.bodyLarge,
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
+
+                    // 3. Cancel Button
+                    TextButton(
+                        onClick = onDismiss,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Text(
+                            text = t("btn_cancel_back"),
+                            color = Color.LightGray,
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
