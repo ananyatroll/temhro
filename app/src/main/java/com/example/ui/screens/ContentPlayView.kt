@@ -751,6 +751,7 @@ fun DarkThemedNotesReader(
     onMarkCompleted: () -> Unit
 ) {
     val selectedGrade by viewModel.selectedGradeFilter.collectAsState()
+    val currentLang by viewModel.currentLanguage.collectAsState()
     val isSatCourse = subjectName.contains("SAT", ignoreCase = true) || subjectName.contains("Aptitude", ignoreCase = true)
 
     LaunchedEffect(note?.id) {
@@ -842,7 +843,7 @@ fun DarkThemedNotesReader(
                     ) {
                         Icon(Icons.Default.SmartToy, contentDescription = "Ask Tamhero AI", modifier = Modifier.size(14.dp))
                         Spacer(modifier = Modifier.width(4.dp))
-                        Text("Ask AI", fontSize = 11.sp, fontWeight = FontWeight.Bold)
+                        Text(TranslationManager.get("btn_ask_ai", currentLang), fontSize = 11.sp, fontWeight = FontWeight.Bold)
                     }
 
                     Spacer(modifier = Modifier.width(4.dp))
@@ -885,58 +886,6 @@ fun DarkThemedNotesReader(
             }
 
             Spacer(modifier = Modifier.height(12.dp))
-
-            // Grade / Chapter Level Filter Chips (Except SAT)
-            val isFreshmanCourse = subjectName.contains("Freshman", ignoreCase = true) ||
-                                   subjectName.contains("Phys 1011", ignoreCase = true) ||
-                                   subjectName.contains("1011", ignoreCase = true) ||
-                                   subjectName.contains("1012", ignoreCase = true) ||
-                                   subjectName.contains("1111", ignoreCase = true) ||
-                                   subjectName.contains("1122", ignoreCase = true) ||
-                                   subjectName.contains("1112", ignoreCase = true) ||
-                                   note?.gradeLevel?.startsWith("Chapter", ignoreCase = true) == true
-
-            val filterOptions = when {
-                isSatCourse -> emptyList()
-                isFreshmanCourse -> listOf("All", "Chapter 1", "Chapter 2", "Chapter 3", "Chapter 4")
-                else -> listOf("All", "Grade 9", "Grade 10", "Grade 11", "Grade 12")
-            }
-
-            if (filterOptions.isNotEmpty()) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(bottom = 12.dp),
-                    horizontalArrangement = Arrangement.spacedBy(6.dp)
-                ) {
-                    filterOptions.forEach { grade ->
-                        val isSelected = selectedGrade.equals(grade, ignoreCase = true)
-                        Surface(
-                            shape = RoundedCornerShape(12.dp),
-                            color = if (isSelected) EmeraldPrimary else CardBgDark,
-                            border = androidx.compose.foundation.BorderStroke(
-                                1.dp,
-                                if (isSelected) EmeraldPrimary else Color.White.copy(alpha = 0.15f)
-                            ),
-                            modifier = Modifier
-                                .clickable {
-                                    viewModel.selectedGradeFilter.value = grade
-                                    viewModel.activeNoteIndex.value = 0
-                                }
-                        ) {
-                            Text(
-                                text = grade,
-                                style = MaterialTheme.typography.labelSmall.copy(
-                                    fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-                                    fontSize = 11.sp
-                                ),
-                                color = if (isSelected) IndigoSecondary else Color.White,
-                                modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
-                            )
-                        }
-                    }
-                }
-            }
 
             // Progress bar
             LinearProgressIndicator(

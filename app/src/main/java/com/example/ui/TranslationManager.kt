@@ -249,7 +249,8 @@ object TranslationManager {
             "saved_items_count" to "items saved",
             "no_saved_notes" to "No saved notes yet. Bookmark pages you want to revisit later!",
             "no_saved_flashcards" to "No favorite flashcards yet. Star cards to study them anytime!",
-            "no_saved_questions" to "No saved questions yet. Bookmark questions during exams and practice!"
+            "no_saved_questions" to "No saved questions yet. Bookmark questions during exams and practice!",
+            "btn_ask_ai" to "Ask AI"
         ),
         "am" to mapOf(
             // 1. Onboarding & Preferences
@@ -491,7 +492,8 @@ object TranslationManager {
             "academic_motivation_hub" to "የትምህርት ማነቃቂያ ማዕከል",
             "daily_motivation" to "የቀን ማነቃቂያ",
             "send_morning_push" to "☀️ የቀን ግብ ማሳሰቢያ መልዕክት ላክ",
-            "daily_push_toast" to "የቀን ማነቃቂያ መልዕክት ተልኳል!"
+            "daily_push_toast" to "የቀን ማነቃቂያ መልዕክት ተልኳል!",
+            "btn_ask_ai" to "AI ጠይቅ"
         ),
         "om" to mapOf(
             // 1. Entry & Preferences Form

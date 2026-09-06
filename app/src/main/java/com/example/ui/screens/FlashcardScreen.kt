@@ -426,7 +426,7 @@ fun SubjectFlashcardRow(
                         if (units.isNotEmpty()) listOf("All Units") + units else emptyList()
                     }
 
-                    if (availableUnits.size > 1) {
+                    if (!selectedGrade.equals("All", ignoreCase = true) && availableUnits.size > 1) {
                         Row(
                             modifier = Modifier
                                 .fillMaxWidth()

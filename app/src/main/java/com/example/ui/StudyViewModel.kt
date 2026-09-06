@@ -461,8 +461,15 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     val activeNotes = combine(rawNotes, selectedGradeFilter) { notesList, grade ->
-        if (grade == "All") notesList
+        val filtered = if (grade == "All") notesList
         else notesList.filter { it.gradeLevel.equals(grade, ignoreCase = true) || it.gradeLevel == "General" }
+        filtered.sortedWith(
+            compareBy<SubjectNote> { note ->
+                Regex("""Unit\s+(\d+)""", RegexOption.IGNORE_CASE).find(note.unit)?.groupValues?.getOrNull(1)?.toIntOrNull() ?: 99
+            }.thenBy { note ->
+                Regex("""Section\s+(\d+(?:\.\d+)?)""", RegexOption.IGNORE_CASE).find(note.title)?.groupValues?.getOrNull(1)?.toFloatOrNull() ?: 0f
+            }
+        )
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
     val activeNoteIndex = MutableStateFlow(0)
