@@ -1,29 +1,20 @@
 package com.example.ui.tools.ui
 
-import android.content.Intent
+import android.app.Activity
 import android.graphics.Bitmap
-import android.graphics.ImageDecoder
-import android.graphics.PointF
+import android.graphics.BitmapFactory
 import android.net.Uri
-import android.os.Build
-import android.provider.MediaStore
+import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.activity.result.PickVisualMediaRequest
+import androidx.activity.result.IntentSenderRequest
 import androidx.compose.animation.*
 import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.gestures.detectDragGestures
-import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -33,29 +24,25 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
-import androidx.compose.ui.input.pointer.pointerInput
-import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.core.content.FileProvider
 import com.example.data.ScannedDocument
 import com.example.ui.StudyViewModel
 import com.example.ui.theme.*
 import com.example.ui.tools.ai.LearningContext
-import com.example.ui.tools.scanner.DocumentCorners
 import com.example.ui.tools.scanner.DocumentScannerEngine
-import com.example.ui.tools.scanner.ScannedPageItem
+import com.google.mlkit.vision.documentscanner.GmsDocumentScannerOptions
+import com.google.mlkit.vision.documentscanner.GmsDocumentScannerOptions.RESULT_FORMAT_JPEG
+import com.google.mlkit.vision.documentscanner.GmsDocumentScannerOptions.SCANNER_MODE_FULL
+import com.google.mlkit.vision.documentscanner.GmsDocumentScanning
 import kotlinx.coroutines.launch
 import java.io.File
-import java.util.Locale
 
 @Composable
 fun DocumentScannerView(
@@ -68,760 +55,351 @@ fun DocumentScannerView(
     val clipboardManager = LocalClipboardManager.current
     val isDark by viewModel.isDarkTheme.collectAsState()
 
-    val pages = remember { mutableStateListOf<ScannedPageItem>() }
-    var activePageIndex by remember { mutableStateOf(0) }
-    var isInCropMode by remember { mutableStateOf(false) }
-
-    var documentTitle by remember { mutableStateOf("Curriculum Lesson Scan") }
     var extractedText by remember { mutableStateOf("") }
-    var ocrConfidence by remember { mutableFloatStateOf(0.96f) }
-    var uncertainWords by remember { mutableStateOf(listOf<String>()) }
-    var detectedSubject by remember { mutableStateOf(subjectName.ifBlank { "History" }) }
-    var isTextExpanded by remember { mutableStateOf(false) }
-    var showSavedDocsDialog by remember { mutableStateOf(false) }
-
-    var actionFeedback by remember { mutableStateOf<String?>(null) }
     var isProcessing by remember { mutableStateOf(false) }
-
-    fun processOcrForActivePage(page: ScannedPageItem) {
-        val ocrResult = DocumentScannerEngine.extractTextFromDocument(
-            bitmap = page.processedBitmap,
-            filterMode = page.enhancementMode,
-            fallbackSubject = detectedSubject
-        )
-        extractedText = ocrResult.text
-        ocrConfidence = ocrResult.confidence
-        uncertainWords = ocrResult.uncertainWords
-        detectedSubject = ocrResult.detectedSubject
-
-        // Connect automatically into system-wide LearningContext
-        viewModel.setLearningContext(
-            LearningContext(
-                courseName = detectedSubject,
-                topicName = ocrResult.title,
-                contentText = ocrResult.text,
-                contentType = "scanned_doc"
-            )
-        )
-    }
-
-    // Camera Capture Launcher
-    val cameraLauncher = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.TakePicturePreview()
-    ) { bitmap ->
-        if (bitmap != null) {
-            val detectedCorners = DocumentScannerEngine.detectDocumentCorners(bitmap)
-            val corrected = DocumentScannerEngine.correctPerspective(bitmap, detectedCorners)
-            val enhanced = DocumentScannerEngine.enhanceDocumentBitmap(corrected, "clean")
-            val newPage = ScannedPageItem(
-                rawBitmap = bitmap,
-                processedBitmap = enhanced,
-                corners = detectedCorners,
-                enhancementMode = "clean"
-            )
-            pages.add(newPage)
-            activePageIndex = pages.size - 1
-            processOcrForActivePage(newPage)
-            actionFeedback = "Captured Page ${pages.size}! Tap 'Crop/Adjust' to fine-tune perspective."
+    var scannedImageBitmap by remember { mutableStateOf<Bitmap?>(null) }
+    var documentTitle by remember { mutableStateOf("\ Scan") }
+    var showSavedDocsDialog by remember { mutableStateOf(false) }
+    var showExportMenu by remember { mutableStateOf(false) }
+    
+    // Popup state
+    var popupMessage by remember { mutableStateOf("") }
+    LaunchedEffect(popupMessage) {
+        if (popupMessage.isNotEmpty()) {
+            kotlinx.coroutines.delay(1500)
+            popupMessage = ""
         }
     }
 
-    // Photo Gallery Picker Launcher
-    val photoPickerLauncher = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.PickVisualMedia()
-    ) { uri: Uri? ->
-        if (uri != null) {
-            try {
-                val bitmap = if (Build.VERSION.SDK_INT >= 28) {
-                    val source = ImageDecoder.createSource(context.contentResolver, uri)
-                    ImageDecoder.decodeBitmap(source) { decoder, _, _ ->
-                        decoder.allocator = ImageDecoder.ALLOCATOR_SOFTWARE
+    val scannerLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.StartIntentSenderForResult()
+    ) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            val scanResult = com.google.mlkit.vision.documentscanner.GmsDocumentScanningResult.fromActivityResultIntent(result.data)
+            scanResult?.pages?.firstOrNull()?.imageUri?.let { uri ->
+                isProcessing = true
+                coroutineScope.launch {
+                    try {
+                        val inputStream = context.contentResolver.openInputStream(uri)
+                        val bitmap = BitmapFactory.decodeStream(inputStream)
+                        inputStream?.close()
+                        
+                        if (bitmap != null) {
+                            scannedImageBitmap = bitmap
+                            val ocrResult = DocumentScannerEngine.extractTextFromDocument(bitmap, "clean", subjectName)
+                            extractedText = ocrResult.text
+                            popupMessage = "Document scanned successfully!"
+                        }
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                        popupMessage = "Failed to process scan."
                     }
-                } else {
-                    @Suppress("DEPRECATION")
-                    MediaStore.Images.Media.getBitmap(context.contentResolver, uri)
+                    isProcessing = false
                 }
-                val detectedCorners = DocumentScannerEngine.detectDocumentCorners(bitmap)
-                val corrected = DocumentScannerEngine.correctPerspective(bitmap, detectedCorners)
-                val enhanced = DocumentScannerEngine.enhanceDocumentBitmap(corrected, "clean")
-                val newPage = ScannedPageItem(
-                    rawBitmap = bitmap,
-                    processedBitmap = enhanced,
-                    corners = detectedCorners,
-                    enhancementMode = "clean"
-                )
-                pages.add(newPage)
-                activePageIndex = pages.size - 1
-                processOcrForActivePage(newPage)
-                actionFeedback = "Imported Page ${pages.size} from Gallery!"
-            } catch (e: Exception) {
-                actionFeedback = "Error importing image: ${e.message}"
             }
         }
     }
 
-    // Load initial curriculum document on startup if empty
-    LaunchedEffect(Unit) {
-        if (pages.isEmpty()) {
-            val sample = DocumentScannerEngine.createSampleCurriculumNoteBitmap()
-            val corners = DocumentScannerEngine.detectDocumentCorners(sample)
-            val corrected = DocumentScannerEngine.correctPerspective(sample, corners)
-            val enhanced = DocumentScannerEngine.enhanceDocumentBitmap(corrected, "clean")
-            val page = ScannedPageItem(
-                rawBitmap = sample,
-                processedBitmap = enhanced,
-                corners = corners,
-                enhancementMode = "clean"
+
+    // Function to share file
+    fun shareFile(file: File, mimeType: String) {
+        try {
+            val uri = androidx.core.content.FileProvider.getUriForFile(
+                context,
+                context.packageName + ".provider",
+                file
             )
-            pages.add(page)
-            activePageIndex = 0
-            processOcrForActivePage(page)
+            val intent = android.content.Intent(android.content.Intent.ACTION_SEND).apply {
+                type = mimeType
+                putExtra(android.content.Intent.EXTRA_STREAM, uri)
+                addFlags(android.content.Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            }
+            context.startActivity(android.content.Intent.createChooser(intent, "Export Document"))
+        } catch (e: Exception) {
+            e.printStackTrace()
+            popupMessage = "Export failed"
         }
     }
 
-    val activePage = pages.getOrNull(activePageIndex)
+    fun exportAsImage() {
+        val bitmap = scannedImageBitmap ?: return
+        coroutineScope.launch {
+            try {
+                val file = File(context.cacheDir, "scan_\.jpg")
+                val out = java.io.FileOutputStream(file)
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 95, out)
+                out.close()
+                shareFile(file, "image/jpeg")
+            } catch (e: Exception) {
+                popupMessage = "Failed to export image"
+            }
+        }
+    }
 
-    Column(modifier = Modifier.fillMaxSize()) {
+    fun exportAsPdf() {
+        val bitmap = scannedImageBitmap ?: return
+        coroutineScope.launch {
+            try {
+                val pdfDocument = android.graphics.pdf.PdfDocument()
+                val pageInfo = android.graphics.pdf.PdfDocument.PageInfo.Builder(bitmap.width, bitmap.height, 1).create()
+                val page = pdfDocument.startPage(pageInfo)
+                page.canvas.drawBitmap(bitmap, 0f, 0f, null)
+                pdfDocument.finishPage(page)
+                
+                val file = File(context.cacheDir, "scan_\.pdf")
+                val out = java.io.FileOutputStream(file)
+                pdfDocument.writeTo(out)
+                pdfDocument.close()
+                out.close()
+                
+                shareFile(file, "application/pdf")
+            } catch (e: Exception) {
+                popupMessage = "Failed to export PDF"
+            }
+        }
+    }
+    
+    fun exportAsText() {
+        if (extractedText.isEmpty()) return
+        coroutineScope.launch {
+            try {
+                val file = File(context.cacheDir, "scan_\.txt")
+                val out = java.io.FileOutputStream(file)
+                out.write(extractedText.toByteArray())
+                out.close()
+                shareFile(file, "text/plain")
+            } catch (e: Exception) {
+                popupMessage = "Failed to export text"
+            }
+        }
+    }
 
-        // Feedback Banner
-        AnimatedVisibility(visible = actionFeedback != null) {
+    fun launchScanner() {
+        val options = GmsDocumentScannerOptions.Builder()
+            .setGalleryImportAllowed(true)
+            .setPageLimit(1)
+            .setResultFormats(RESULT_FORMAT_JPEG)
+            .setScannerMode(SCANNER_MODE_FULL)
+            .build()
+            
+        val scanner = GmsDocumentScanning.getClient(options)
+        scanner.getStartScanIntent(context as Activity)
+            .addOnSuccessListener { intentSender ->
+                scannerLauncher.launch(IntentSenderRequest.Builder(intentSender).build())
+            }
+            .addOnFailureListener {
+                popupMessage = "Failed to open scanner."
+            }
+    }
+
+    Box(modifier = Modifier.fillMaxSize().background(if (isDark) Color(0xFF0F172A) else Color(0xFFF1F5F9))) {
+        Column(modifier = Modifier.fillMaxSize()) {
+            // Header
             Surface(
-                color = EmeraldPrimary,
-                shape = RoundedCornerShape(8.dp),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp, vertical = 4.dp)
+                color = if (isDark) CardBgDark else Color.White,
+                shadowElevation = 4.dp,
+                modifier = Modifier.fillMaxWidth()
             ) {
-                Text(
-                    text = actionFeedback ?: "",
-                    color = Color.White,
-                    style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
-                    modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp)
-                )
-            }
-        }
-
-        // Top Action Bar
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 16.dp, vertical = 6.dp),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                Button(
-                    onClick = { cameraLauncher.launch(null) },
-                    colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary),
-                    shape = RoundedCornerShape(10.dp),
-                    contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp),
-                    modifier = Modifier.height(34.dp)
+                Row(
+                    modifier = Modifier.fillMaxWidth().padding(16.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Icon(Icons.Default.CameraAlt, contentDescription = null, modifier = Modifier.size(16.dp))
-                    Spacer(modifier = Modifier.width(6.dp))
-                    Text("Scan Page", fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                    Text(
+                        text = "Document Scanner",
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = if (isDark) Color.White else Color.Black
+                    )
+                    Row {
+                        IconButton(onClick = { showSavedDocsDialog = true }) {
+                            Icon(Icons.Default.Folder, contentDescription = "Saved Scans", tint = EmeraldPrimary)
+                        }
+                        IconButton(onClick = { launchScanner() }) {
+                            Icon(Icons.Default.CameraAlt, contentDescription = "Scan Document", tint = EmeraldPrimary)
+                        }
+                    }
                 }
+            }
 
-                FilledTonalButton(
-                    onClick = {
-                        photoPickerLauncher.launch(
-                            PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly)
+            if (scannedImageBitmap == null) {
+                Box(modifier = Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Icon(
+                            imageVector = Icons.Default.DocumentScanner,
+                            contentDescription = null,
+                            modifier = Modifier.size(80.dp),
+                            tint = EmeraldPrimary.copy(alpha = 0.5f)
                         )
-                    },
-                    shape = RoundedCornerShape(10.dp),
-                    contentPadding = PaddingValues(horizontal = 10.dp, vertical = 6.dp),
-                    modifier = Modifier.height(34.dp)
-                ) {
-                    Icon(Icons.Default.PhotoLibrary, contentDescription = null, modifier = Modifier.size(16.dp))
-                    Spacer(modifier = Modifier.width(4.dp))
-                    Text("Import", fontSize = 12.sp)
-                }
-            }
-
-            Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                IconButton(
-                    onClick = {
-                        if (activePage != null) {
-                            isInCropMode = !isInCropMode
+                        Spacer(modifier = Modifier.height(16.dp))
+                        Text(
+                            text = "Tap the camera to scan a document.",
+                            color = Color.Gray,
+                            fontSize = 16.sp
+                        )
+                        Spacer(modifier = Modifier.height(24.dp))
+                        Button(
+                            onClick = { launchScanner() },
+                            colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary),
+                            shape = RoundedCornerShape(12.dp)
+                        ) {
+                            Icon(Icons.Default.CameraAlt, contentDescription = null)
+                            Spacer(modifier = Modifier.width(8.dp))
+                            Text("Start Scanning", fontWeight = FontWeight.Bold)
                         }
-                    },
-                    modifier = Modifier
-                        .size(34.dp)
-                        .clip(CircleShape)
-                        .background(if (isInCropMode) EmeraldPrimary else (if (isDark) CardBgDark else Color(0xFFE2E8F0)))
-                ) {
-                    Icon(
-                        imageVector = Icons.Default.Crop,
-                        contentDescription = "Crop & Perspective",
-                        tint = if (isInCropMode) Color.White else (if (isDark) TextLight else Color(0xFF0F172A)),
-                        modifier = Modifier.size(18.dp)
-                    )
+                    }
                 }
-
-                IconButton(
-                    onClick = {
-                        if (activePage != null) {
-                            activePage.rotationDegrees = (activePage.rotationDegrees + 90f) % 360f
-                            activePage.processedBitmap = DocumentScannerEngine.rotateBitmap(activePage.processedBitmap, 90f)
-                            actionFeedback = "Rotated 90°"
-                        }
-                    },
-                    modifier = Modifier
-                        .size(34.dp)
-                        .clip(CircleShape)
-                        .background(if (isDark) CardBgDark else Color(0xFFE2E8F0))
-                ) {
-                    Icon(
-                        imageVector = Icons.Default.RotateRight,
-                        contentDescription = "Rotate",
-                        tint = if (isDark) TextLight else Color(0xFF0F172A),
-                        modifier = Modifier.size(18.dp)
-                    )
-                }
-
-                IconButton(
-                    onClick = {
-                        // Save document to Database
-                        coroutineScope.launch {
-                            viewModel.saveScannedDoc(
-                                title = documentTitle,
-                                pageCount = pages.size,
-                                text = extractedText
-                            )
-                            actionFeedback = "Saved document '$documentTitle' (${pages.size} pages)!"
-                            kotlinx.coroutines.delay(2000)
-                            actionFeedback = null
-                        }
-                    },
-                    modifier = Modifier
-                        .size(34.dp)
-                        .clip(CircleShape)
-                        .background(EmeraldPrimary.copy(alpha = 0.15f))
-                ) {
-                    Icon(
-                        imageVector = Icons.Default.Save,
-                        contentDescription = "Save Document",
-                        tint = EmeraldPrimary,
-                        modifier = Modifier.size(18.dp)
-                    )
-                }
-            }
-        }
-
-        // Multi-Page Thumbnails Strip
-        if (pages.size > 1) {
-            LazyRow(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp, vertical = 4.dp),
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                itemsIndexed(pages) { index, page ->
-                    val isSelected = index == activePageIndex
-                    Surface(
-                        shape = RoundedCornerShape(8.dp),
-                        border = BorderStroke(2.dp, if (isSelected) EmeraldPrimary else Color.Transparent),
-                        modifier = Modifier
-                            .size(width = 54.dp, height = 72.dp)
-                            .clickable {
-                                activePageIndex = index
-                                processOcrForActivePage(page)
-                            }
-                    ) {
-                        Box(modifier = Modifier.fillMaxSize()) {
+            } else {
+                LazyColumn(modifier = Modifier.weight(1f).fillMaxWidth().padding(16.dp)) {
+                    item {
+                        Card(
+                            shape = RoundedCornerShape(16.dp),
+                            elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
+                            modifier = Modifier.fillMaxWidth().height(300.dp)
+                        ) {
                             Image(
-                                bitmap = page.processedBitmap.asImageBitmap(),
-                                contentDescription = "Page ${index + 1}",
+                                bitmap = scannedImageBitmap!!.asImageBitmap(),
+                                contentDescription = "Scanned Document",
                                 modifier = Modifier.fillMaxSize()
                             )
-                            Surface(
-                                color = Color.Black.copy(alpha = 0.6f),
-                                shape = RoundedCornerShape(bottomStart = 4.dp),
-                                modifier = Modifier.align(Alignment.BottomEnd)
-                            ) {
-                                Text(
-                                    text = "${index + 1}",
-                                    color = Color.White,
-                                    fontSize = 10.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    modifier = Modifier.padding(horizontal = 4.dp, vertical = 1.dp)
-                                )
+                        }
+                        Spacer(modifier = Modifier.height(24.dp))
+                    }
+                    
+                    if (isProcessing) {
+                        item {
+                            Box(modifier = Modifier.fillMaxWidth().padding(32.dp), contentAlignment = Alignment.Center) {
+                                CircularProgressIndicator(color = EmeraldPrimary)
                             }
+                        }
+                    } else if (extractedText.isNotEmpty()) {
+                        item {
+                            Surface(
+                                color = if (isDark) CardBgDark else Color.White,
+                                shape = RoundedCornerShape(16.dp),
+                                modifier = Modifier.fillMaxWidth()
+                            ) {
+                                Column(modifier = Modifier.padding(16.dp)) {
+                                    Row(
+                                        modifier = Modifier.fillMaxWidth(),
+                                        horizontalArrangement = Arrangement.SpaceBetween,
+                                        verticalAlignment = Alignment.CenterVertically
+                                    ) {
+                                        Text(
+                                            text = "Extracted Text",
+                                            fontWeight = FontWeight.Bold,
+                                            fontSize = 18.sp,
+                                            color = EmeraldPrimary
+                                        )
+                                        Row {
+                                            IconButton(onClick = {
+                                                clipboardManager.setText(AnnotatedString(extractedText))
+                                                popupMessage = "Text copied to clipboard!"
+                                            }) {
+                                                Icon(Icons.Default.ContentCopy, contentDescription = "Copy", tint = Color.Gray)
+                                            }
+                                            IconButton(onClick = {
+                                                val doc = ScannedDocument(
+                                                    title = documentTitle,
+                                                    extractedText = extractedText,
+                                                    dateScanned = System.currentTimeMillis(),
+                                                    subject = subjectName
+                                                )
+                                                viewModel.saveScannedDocument(doc)
+                                                popupMessage = "Document saved!"
+                                            }) {
+                                                Icon(Icons.Default.Save, contentDescription = "Save", tint = EmeraldPrimary)
+                                            }
+                                            
+                                            Box {
+                                                IconButton(onClick = { showExportMenu = true }) {
+                                                    Icon(Icons.Default.Share, contentDescription = "Export", tint = EmeraldPrimary)
+                                                }
+                                                DropdownMenu(
+                                                    expanded = showExportMenu,
+                                                    onDismissRequest = { showExportMenu = false },
+                                                    modifier = Modifier.background(if (isDark) CardBgDark else Color.White)
+                                                ) {
+                                                    DropdownMenuItem(
+                                                        text = { Text("Export as PDF", color = if (isDark) Color.White else Color.Black) },
+                                                        onClick = { showExportMenu = false; exportAsPdf() },
+                                                        leadingIcon = { Icon(Icons.Default.PictureAsPdf, tint = EmeraldPrimary, contentDescription = null) }
+                                                    )
+                                                    DropdownMenuItem(
+                                                        text = { Text("Export as Image (JPEG)", color = if (isDark) Color.White else Color.Black) },
+                                                        onClick = { showExportMenu = false; exportAsImage() },
+                                                        leadingIcon = { Icon(Icons.Default.Image, tint = EmeraldPrimary, contentDescription = null) }
+                                                    )
+                                                    DropdownMenuItem(
+                                                        text = { Text("Export as Text File", color = if (isDark) Color.White else Color.Black) },
+                                                        onClick = { showExportMenu = false; exportAsText() },
+                                                        leadingIcon = { Icon(Icons.Default.Description, tint = EmeraldPrimary, contentDescription = null) }
+                                                    )
+                                                }
+                                            }
+                                        }
+                                    }
+                                    Spacer(modifier = Modifier.height(8.dp))
+                                    Text(
+                                        text = extractedText,
+                                        color = if (isDark) Color.LightGray else Color.DarkGray,
+                                        fontSize = 15.sp,
+                                        lineHeight = 22.sp
+                                    )
+                                    Spacer(modifier = Modifier.height(16.dp))
+                                    Button(
+                                        onClick = { onOpenAskTamheroWithText(extractedText) },
+                                        colors = ButtonDefaults.buttonColors(containerColor = HolographicAqua),
+                                        modifier = Modifier.fillMaxWidth(),
+                                        shape = RoundedCornerShape(12.dp)
+                                    ) {
+                                        Icon(Icons.Default.SmartToy, contentDescription = null, tint = Color.White)
+                                        Spacer(modifier = Modifier.width(8.dp))
+                                        Text("Ask Tamhero about this text", color = Color.White, fontWeight = FontWeight.Bold)
+                                    }
+                                    Spacer(modifier = Modifier.height(12.dp))
+                                    com.example.ui.tools.ui.ContextualAiActions(
+                                        viewModel = viewModel,
+                                        learningContext = com.example.ui.tools.ai.LearningContext(
+                                            courseId = "scanner",
+                                            courseName = subjectName,
+                                            topicId = "scanned_doc",
+                                            topicName = documentTitle,
+                                            contentId = "scan_\",
+                                            contentType = "scanned_doc",
+                                            contentText = extractedText
+                                        ),
+                                        actions = com.example.ui.tools.ui.ContextualAiActionSets.scannedPage(),
+                                        modifier = Modifier.fillMaxWidth()
+                                    )
+                                }
+                            }
+                            Spacer(modifier = Modifier.height(24.dp))
                         }
                     }
                 }
             }
         }
-
-        // Body Scrollable Area
-        LazyColumn(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(horizontal = 16.dp),
-            contentPadding = PaddingValues(bottom = 80.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp)
+        
+        // Popup Overlay
+        AnimatedVisibility(
+            visible = popupMessage.isNotEmpty(),
+            enter = fadeIn() + scaleIn(),
+            exit = fadeOut() + scaleOut(),
+            modifier = Modifier.align(Alignment.Center)
         ) {
-            // Interactive Crop & Perspective Mode
-            if (isInCropMode && activePage != null) {
-                item {
-                    Surface(
-                        shape = RoundedCornerShape(14.dp),
-                        color = if (isDark) CardBgDark else Color(0xFF0F172A),
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(vertical = 4.dp)
-                    ) {
-                        Column(
-                            modifier = Modifier.padding(12.dp),
-                            horizontalAlignment = Alignment.CenterHorizontally
-                        ) {
-                            Text(
-                                text = "Drag the 4 corner handles to correct perspective:",
-                                color = EmeraldLight,
-                                fontSize = 12.sp,
-                                fontWeight = FontWeight.Bold
-                            )
-                            Spacer(modifier = Modifier.height(8.dp))
-
-                            // Interactive 4-Corner Viewport
-                            var cornersState by remember(activePage.id) { mutableStateOf(activePage.corners) }
-
-                            Box(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .height(280.dp)
-                                    .clip(RoundedCornerShape(8.dp))
-                                    .background(Color.Black),
-                                contentAlignment = Alignment.Center
-                            ) {
-                                Image(
-                                    bitmap = activePage.rawBitmap.asImageBitmap(),
-                                    contentDescription = "Document to crop",
-                                    modifier = Modifier.fillMaxSize()
-                                )
-
-                                // Draggable corner pins canvas overlay
-                                Canvas(modifier = Modifier.fillMaxSize()) {
-                                    val w = size.width
-                                    val h = size.height
-                                    val rawW = activePage.rawBitmap.width.toFloat()
-                                    val rawH = activePage.rawBitmap.height.toFloat()
-
-                                    val scaleX = w / rawW
-                                    val scaleY = h / rawH
-
-                                    val pTL = Offset(cornersState.topLeft.x * scaleX, cornersState.topLeft.y * scaleY)
-                                    val pTR = Offset(cornersState.topRight.x * scaleX, cornersState.topRight.y * scaleY)
-                                    val pBR = Offset(cornersState.bottomRight.x * scaleX, cornersState.bottomRight.y * scaleY)
-                                    val pBL = Offset(cornersState.bottomLeft.x * scaleX, cornersState.bottomLeft.y * scaleY)
-
-                                    // Draw polygon bounding quad
-                                    drawLine(color = Color(0xFF10B981), start = pTL, end = pTR, strokeWidth = 3f)
-                                    drawLine(color = Color(0xFF10B981), start = pTR, end = pBR, strokeWidth = 3f)
-                                    drawLine(color = Color(0xFF10B981), start = pBR, end = pBL, strokeWidth = 3f)
-                                    drawLine(color = Color(0xFF10B981), start = pBL, end = pTL, strokeWidth = 3f)
-
-                                    // Draw corner pins
-                                    drawCircle(color = Color.White, radius = 12f, center = pTL)
-                                    drawCircle(color = Color(0xFF10B981), radius = 8f, center = pTL)
-
-                                    drawCircle(color = Color.White, radius = 12f, center = pTR)
-                                    drawCircle(color = Color(0xFF10B981), radius = 8f, center = pTR)
-
-                                    drawCircle(color = Color.White, radius = 12f, center = pBR)
-                                    drawCircle(color = Color(0xFF10B981), radius = 8f, center = pBR)
-
-                                    drawCircle(color = Color.White, radius = 12f, center = pBL)
-                                    drawCircle(color = Color(0xFF10B981), radius = 8f, center = pBL)
-                                }
-                            }
-
-                            Spacer(modifier = Modifier.height(10.dp))
-
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.SpaceBetween
-                            ) {
-                                TextButton(onClick = {
-                                    cornersState = DocumentScannerEngine.detectDocumentCorners(activePage.rawBitmap)
-                                    activePage.corners = cornersState
-                                }) {
-                                    Icon(Icons.Default.AutoAwesome, null, modifier = Modifier.size(16.dp), tint = EmeraldPrimary)
-                                    Spacer(modifier = Modifier.width(4.dp))
-                                    Text("Auto-Detect", color = EmeraldPrimary, fontSize = 12.sp)
-                                }
-
-                                Button(
-                                    onClick = {
-                                        val corrected = DocumentScannerEngine.correctPerspective(activePage.rawBitmap, cornersState)
-                                        val enhanced = DocumentScannerEngine.enhanceDocumentBitmap(corrected, activePage.enhancementMode)
-                                        activePage.corners = cornersState
-                                        activePage.processedBitmap = enhanced
-                                        isInCropMode = false
-                                        processOcrForActivePage(activePage)
-                                        actionFeedback = "Perspective corrected successfully!"
-                                    },
-                                    colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary),
-                                    shape = RoundedCornerShape(8.dp)
-                                ) {
-                                    Icon(Icons.Default.Check, null, modifier = Modifier.size(16.dp))
-                                    Spacer(modifier = Modifier.width(4.dp))
-                                    Text("Apply Crop", fontSize = 12.sp, fontWeight = FontWeight.Bold)
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            // Document Preview Card
-            if (activePage != null && !isInCropMode) {
-                item {
-                    Surface(
-                        shape = RoundedCornerShape(14.dp),
-                        color = if (isDark) CardBgDark else Color.White,
-                        border = BorderStroke(1.dp, if (isDark) Color(0xFF334155) else Color(0xFFE2E8F0)),
-                        modifier = Modifier.fillMaxWidth()
-                    ) {
-                        Column(modifier = Modifier.padding(12.dp)) {
-                            // Title row
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.SpaceBetween,
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                Column(modifier = Modifier.weight(1f)) {
-                                    Text(
-                                        text = "Page ${activePageIndex + 1} of ${pages.size} • $detectedSubject",
-                                        fontSize = 11.sp,
-                                        fontWeight = FontWeight.Bold,
-                                        color = EmeraldPrimary
-                                    )
-                                    Text(
-                                        text = documentTitle,
-                                        fontSize = 15.sp,
-                                        fontWeight = FontWeight.Black,
-                                        maxLines = 1,
-                                        overflow = TextOverflow.Ellipsis,
-                                        color = if (isDark) Color.White else Color(0xFF0F172A)
-                                    )
-                                }
-
-                                Surface(
-                                    shape = RoundedCornerShape(12.dp),
-                                    color = EmeraldPrimary.copy(alpha = 0.12f)
-                                ) {
-                                    Text(
-                                        text = "${(ocrConfidence * 100).toInt()}% Confidence",
-                                        fontSize = 11.sp,
-                                        fontWeight = FontWeight.Bold,
-                                        color = EmeraldPrimary,
-                                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
-                                    )
-                                }
-                            }
-
-                            Spacer(modifier = Modifier.height(8.dp))
-
-                            // High-Res Image Preview Box
-                            Box(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .height(240.dp)
-                                    .clip(RoundedCornerShape(8.dp))
-                                    .background(if (isDark) Color(0xFF0B1329) else Color(0xFFF8FAFC)),
-                                contentAlignment = Alignment.Center
-                            ) {
-                                Image(
-                                    bitmap = activePage.processedBitmap.asImageBitmap(),
-                                    contentDescription = "Enhanced Document Page",
-                                    modifier = Modifier.fillMaxSize()
-                                )
-                            }
-
-                            Spacer(modifier = Modifier.height(10.dp))
-
-                            // Enhancement Filters
-                            Row(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .horizontalScroll(rememberScrollState()),
-                                horizontalArrangement = Arrangement.spacedBy(6.dp)
-                            ) {
-                                val filters = listOf(
-                                    "clean" to "Clean",
-                                    "auto" to "Auto",
-                                    "threshold_bw" to "B&W",
-                                    "grayscale" to "Grayscale",
-                                    "color" to "Color",
-                                    "original" to "Original"
-                                )
-                                filters.forEach { (mode, label) ->
-                                    val isSelected = activePage.enhancementMode == mode
-                                    FilterChip(
-                                        selected = isSelected,
-                                        onClick = {
-                                            activePage.enhancementMode = mode
-                                            val corrected = DocumentScannerEngine.correctPerspective(activePage.rawBitmap, activePage.corners)
-                                            activePage.processedBitmap = DocumentScannerEngine.enhanceDocumentBitmap(corrected, mode)
-                                            processOcrForActivePage(activePage)
-                                        },
-                                        label = { Text(label, fontSize = 11.sp) },
-                                        colors = FilterChipDefaults.filterChipColors(
-                                            selectedContainerColor = EmeraldPrimary,
-                                            selectedLabelColor = Color.White
-                                        )
-                                    )
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            // Real Extracted OCR Text Card
-            item {
-                Surface(
-                    shape = RoundedCornerShape(14.dp),
-                    color = if (isDark) CardBgDark else Color.White,
-                    border = BorderStroke(1.dp, if (isDark) Color(0xFF334155) else Color(0xFFE2E8F0)),
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    Column(modifier = Modifier.padding(12.dp)) {
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.SpaceBetween,
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            Row(verticalAlignment = Alignment.CenterVertically) {
-                                Icon(Icons.Default.TextFields, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(16.dp))
-                                Spacer(modifier = Modifier.width(6.dp))
-                                Text(
-                                    text = "Extracted Text (Editable)",
-                                    fontSize = 12.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    color = if (isDark) Color.White else Color(0xFF0F172A)
-                                )
-                            }
-
-                            IconButton(
-                                onClick = {
-                                    clipboardManager.setText(AnnotatedString(extractedText))
-                                    actionFeedback = "Copied text to clipboard!"
-                                    coroutineScope.launch {
-                                        kotlinx.coroutines.delay(2000)
-                                        actionFeedback = null
-                                    }
-                                },
-                                modifier = Modifier.size(28.dp)
-                            ) {
-                                Icon(Icons.Default.ContentCopy, contentDescription = "Copy", modifier = Modifier.size(16.dp), tint = EmeraldPrimary)
-                            }
-                        }
-
-                        OutlinedTextField(
-                            value = extractedText,
-                            onValueChange = { extractedText = it },
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(top = 4.dp),
-                            minLines = 4,
-                            maxLines = 10,
-                            colors = OutlinedTextFieldDefaults.colors(
-                                focusedBorderColor = EmeraldPrimary,
-                                unfocusedBorderColor = Color.Transparent
-                            ),
-                            textStyle = MaterialTheme.typography.bodySmall.copy(fontSize = 12.sp, lineHeight = 17.sp)
-                        )
-
-                        // Uncertain words check
-                        if (uncertainWords.isNotEmpty()) {
-                            Spacer(modifier = Modifier.height(6.dp))
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                Text(
-                                    text = "Verify terms: ",
-                                    fontSize = 11.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    color = if (isDark) TextMuted else Color(0xFF64748B)
-                                )
-                                uncertainWords.take(4).forEach { word ->
-                                    Surface(
-                                        shape = RoundedCornerShape(6.dp),
-                                        color = GoldAccent.copy(alpha = 0.2f),
-                                        modifier = Modifier.padding(end = 4.dp)
-                                    ) {
-                                        Text(
-                                            text = word,
-                                            fontSize = 10.sp,
-                                            fontWeight = FontWeight.Medium,
-                                            color = if (isDark) GoldAccent else Color(0xFF854D0E),
-                                            modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
-                                        )
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            // 1-Tap Cross-System AI Actions
-            item {
+            Surface(
+                color = Color(0xFF0F172A).copy(alpha = 0.95f),
+                shape = RoundedCornerShape(16.dp),
+                border = BorderStroke(1.5.dp, EmeraldPrimary.copy(alpha = 0.5f)),
+                modifier = Modifier.padding(16.dp)
+            ) {
                 Text(
-                    text = "Transform Scanned Page into Study Materials:",
-                    fontSize = 12.sp,
+                    text = popupMessage,
+                    color = Color.White,
                     fontWeight = FontWeight.Bold,
-                    color = if (isDark) TextLight else Color(0xFF0F172A),
-                    modifier = Modifier.padding(top = 4.dp, bottom = 2.dp)
+                    modifier = Modifier.padding(horizontal = 24.dp, vertical = 12.dp)
                 )
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .horizontalScroll(rememberScrollState()),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    FilledTonalButton(
-                        onClick = {
-                            onOpenAskTamheroWithText("Explain this scanned page from $detectedSubject in detail:\n$extractedText")
-                        },
-                        shape = RoundedCornerShape(10.dp)
-                    ) {
-                        Icon(Icons.Default.SmartToy, null, modifier = Modifier.size(16.dp))
-                        Spacer(modifier = Modifier.width(4.dp))
-                        Text("Ask Tamhero", fontSize = 12.sp)
-                    }
-
-                    FilledTonalButton(
-                        onClick = {
-                            onOpenAskTamheroWithText("Summarize the key exam takeaways from this scanned $detectedSubject note:\n$extractedText")
-                        },
-                        shape = RoundedCornerShape(10.dp)
-                    ) {
-                        Icon(Icons.Default.Summarize, null, modifier = Modifier.size(16.dp))
-                        Spacer(modifier = Modifier.width(4.dp))
-                        Text("Summarize", fontSize = 12.sp)
-                    }
-
-                    FilledTonalButton(
-                        onClick = {
-                            viewModel.saveGeneratedNoteToDatabase(
-                                title = "$detectedSubject: Scanned Note",
-                                content = extractedText,
-                                subjectId = detectedSubject.lowercase(Locale.ROOT)
-                            )
-                            actionFeedback = "Saved scanned page to your Study Notes!"
-                            coroutineScope.launch {
-                                kotlinx.coroutines.delay(2000)
-                                actionFeedback = null
-                            }
-                        },
-                        shape = RoundedCornerShape(10.dp)
-                    ) {
-                        Icon(Icons.Default.BookmarkBorder, null, modifier = Modifier.size(16.dp))
-                        Spacer(modifier = Modifier.width(4.dp))
-                        Text("Save Note", fontSize = 12.sp)
-                    }
-
-                    FilledTonalButton(
-                        onClick = {
-                            onOpenAskTamheroWithText("Generate 4 multiple-choice practice questions with detailed explanations from this scanned text:\n$extractedText")
-                        },
-                        shape = RoundedCornerShape(10.dp)
-                    ) {
-                        Icon(Icons.Default.Quiz, null, modifier = Modifier.size(16.dp))
-                        Spacer(modifier = Modifier.width(4.dp))
-                        Text("Create MCQs", fontSize = 12.sp)
-                    }
-                }
-            }
-
-            // Export & Share Card
-            item {
-                Surface(
-                    shape = RoundedCornerShape(14.dp),
-                    color = if (isDark) CardBgDark else Color(0xFFF8FAFC),
-                    border = BorderStroke(1.dp, if (isDark) Color(0xFF334155) else Color(0xFFE2E8F0)),
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(12.dp),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Column {
-                            Text(
-                                text = "Export Multi-Page Document",
-                                fontSize = 12.sp,
-                                fontWeight = FontWeight.Bold,
-                                color = if (isDark) Color.White else Color(0xFF0F172A)
-                            )
-                            Text(
-                                text = "${pages.size} page(s) • PDF / Text format",
-                                fontSize = 11.sp,
-                                color = TextMuted
-                            )
-                        }
-
-                        Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                            OutlinedButton(
-                                onClick = {
-                                    try {
-                                        val pdfFile = DocumentScannerEngine.exportToPdf(
-                                            context = context,
-                                            pages = pages.map { it.processedBitmap },
-                                            documentTitle = documentTitle,
-                                            extractedText = extractedText
-                                        )
-                                        val uri = FileProvider.getUriForFile(
-                                            context,
-                                            "${context.packageName}.fileprovider",
-                                            pdfFile
-                                        )
-                                        val intent = Intent(Intent.ACTION_SEND).apply {
-                                            type = "application/pdf"
-                                            putExtra(Intent.EXTRA_STREAM, uri)
-                                            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-                                        }
-                                        context.startActivity(Intent.createChooser(intent, "Share Scanned PDF"))
-                                    } catch (e: Exception) {
-                                        actionFeedback = "Export error: ${e.message}"
-                                    }
-                                },
-                                shape = RoundedCornerShape(8.dp),
-                                contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
-                                modifier = Modifier.height(32.dp)
-                            ) {
-                                Icon(Icons.Default.PictureAsPdf, null, modifier = Modifier.size(14.dp), tint = EmeraldPrimary)
-                                Spacer(modifier = Modifier.width(4.dp))
-                                Text("PDF", fontSize = 11.sp)
-                            }
-
-                            OutlinedButton(
-                                onClick = {
-                                    val sendIntent = Intent().apply {
-                                        action = Intent.ACTION_SEND
-                                        putExtra(Intent.EXTRA_TEXT, extractedText)
-                                        type = "text/plain"
-                                    }
-                                    context.startActivity(Intent.createChooser(sendIntent, "Share Scanned Text"))
-                                },
-                                shape = RoundedCornerShape(8.dp),
-                                contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
-                                modifier = Modifier.height(32.dp)
-                            ) {
-                                Icon(Icons.Default.Share, null, modifier = Modifier.size(14.dp), tint = EmeraldPrimary)
-                                Spacer(modifier = Modifier.width(4.dp))
-                                Text("Share", fontSize = 11.sp)
-                            }
-                        }
-                    }
-                }
             }
         }
     }

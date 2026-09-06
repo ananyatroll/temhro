@@ -652,11 +652,61 @@ fun SubjectFlashcardRow(
                                 }
 
                                 // Interactive Flippable Card Frame
-                                FlippableCard(
-                                    card = currentCard,
-                                    isFlipped = isFlipped,
-                                    onFlipClick = { viewModel.isFlashcardFlipped.value = !isFlipped }
-                                )
+                                Box(contentAlignment = Alignment.Center) {
+                                    FlippableCard(
+                                        card = currentCard,
+                                        isFlipped = isFlipped,
+                                        onFlipClick = { viewModel.isFlashcardFlipped.value = !isFlipped }
+                                    )
+                                    
+                                    var popupMessage by remember { mutableStateOf("") }
+                                    LaunchedEffect(popupMessage) {
+                                        if (popupMessage.isNotEmpty()) {
+                                            kotlinx.coroutines.delay(1500)
+                                            popupMessage = ""
+                                        }
+                                    }
+                                    
+                                    AnimatedVisibility(
+                                        visible = popupMessage.isNotEmpty(),
+                                        enter = fadeIn() + scaleIn(),
+                                        exit = fadeOut() + scaleOut()
+                                    ) {
+                                        Surface(
+                                            color = Color(0xFF0F172A).copy(alpha = 0.95f),
+                                            shape = RoundedCornerShape(16.dp),
+                                            border = androidx.compose.foundation.BorderStroke(1.5.dp, EmeraldPrimary.copy(alpha = 0.5f)),
+                                            modifier = Modifier.padding(16.dp)
+                                        ) {
+                                            Text(
+                                                text = popupMessage,
+                                                color = Color.White,
+                                                fontWeight = FontWeight.Bold,
+                                                modifier = Modifier.padding(horizontal = 24.dp, vertical = 12.dp)
+                                            )
+                                        }
+                                    }
+                                }
+
+                            Spacer(modifier = Modifier.height(14.dp))
+
+                            // Contextual AI actions for the current flashcard
+                            com.example.ui.tools.ui.ContextualAiActions(
+                                viewModel = viewModel,
+                                learningContext = com.example.ui.tools.ai.LearningContext(
+                                    courseId = currentCard.subjectId,
+                                    courseName = subject.name,
+                                    topicId = currentCard.id,
+                                    topicName = "${subject.name} Card #${cardIndex + 1}",
+                                    contentId = currentCard.id,
+                                    contentType = "flashcard",
+                                    flashcardFront = currentCard.front,
+                                    flashcardBack = currentCard.back,
+                                    gradeLevel = currentCard.gradeLevel
+                                ),
+                                actions = com.example.ui.tools.ui.ContextualAiActionSets.flashcard(),
+                                modifier = Modifier.fillMaxWidth()
+                            )
 
                             Spacer(modifier = Modifier.height(14.dp))
 
@@ -666,7 +716,7 @@ fun SubjectFlashcardRow(
                                 horizontalArrangement = Arrangement.SpaceBetween,
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
-                                Row(horizontalArrangement = Arrangement.spacedBy(4.dp), verticalAlignment = Alignment.CenterVertically) {
+                                Row(horizontalArrangement = Arrangement.spacedBy(16.dp), verticalAlignment = Alignment.CenterVertically) {
                                     // Mark Mastered button
                                     IconButton(
                                         onClick = {
@@ -674,6 +724,7 @@ fun SubjectFlashcardRow(
                                             if (cardIndex == activeDeckCards.size - 1) {
                                                 viewModel.triggerCompletionCelebration()
                                             }
+                                            popupMessage = "Card mastered!"
                                         }
                                     ) {
                                         Icon(
@@ -688,13 +739,14 @@ fun SubjectFlashcardRow(
                                     IconButton(
                                         onClick = {
                                             viewModel.markFlashcardDifficult(currentCard.id)
+                                            popupMessage = if (isCardDifficult) "Flag removed!" else "Card flagged as difficult!"
                                         }
                                     ) {
                                         Icon(
                                             imageVector = if (isCardDifficult) Icons.Default.Flag else Icons.Default.OutlinedFlag,
                                             contentDescription = "Mark Difficult",
                                             tint = if (isCardDifficult) Color(0xFFF87171) else Color.Gray,
-                                            modifier = Modifier.size(24.dp)
+                                            modifier = Modifier.size(26.dp)
                                         )
                                     }
 
@@ -708,13 +760,14 @@ fun SubjectFlashcardRow(
                                                 currentCard.isStarred
                                             )
                                             viewModel.toggleSaveFlashcard(currentCard.id)
+                                            popupMessage = if (!isCardSaved) "Card saved!" else "Card unsaved!"
                                         }
                                     ) {
                                         Icon(
                                             imageVector = if (isCardSaved) Icons.Default.Star else Icons.Default.StarBorder,
                                             contentDescription = "Star card",
                                             tint = if (isCardSaved) GoldAccent else Color.Gray,
-                                            modifier = Modifier.size(24.dp)
+                                            modifier = Modifier.size(26.dp)
                                         )
                                     }
 
@@ -743,7 +796,7 @@ fun SubjectFlashcardRow(
                                             imageVector = Icons.Default.SmartToy,
                                             contentDescription = "Ask Tamhero about card",
                                             tint = HolographicAqua,
-                                            modifier = Modifier.size(24.dp)
+                                            modifier = Modifier.size(26.dp)
                                         )
                                     }
                                 }

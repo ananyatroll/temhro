@@ -9,6 +9,10 @@ import java.util.Locale
 import kotlin.math.hypot
 import kotlin.math.max
 import kotlin.math.min
+import com.google.mlkit.vision.common.InputImage
+import com.google.mlkit.vision.text.TextRecognition
+import com.google.mlkit.vision.text.latin.TextRecognizerOptions
+import kotlinx.coroutines.tasks.await
 
 data class DocumentCorners(
     val topLeft: PointF,
@@ -298,208 +302,34 @@ object DocumentScannerEngine {
      * Evaluates actual image brightness, contrast, and layout density to compute
      * high-confidence, structured curriculum text.
      */
-    fun extractTextFromDocument(
+    suspend fun extractTextFromDocument(
         bitmap: Bitmap,
         filterMode: String = "clean",
         fallbackSubject: String = "General"
     ): OcrResult {
-        // Measure bitmap stroke contrast and lighting balance
-        var totalLuma = 0f
-        var count = 0
-        var darkPixelCount = 0
-        val stepX = (bitmap.width / 24).coerceAtLeast(1)
-        val stepY = (bitmap.height / 24).coerceAtLeast(1)
-
-        for (x in 0 until bitmap.width step stepX) {
-            for (y in 0 until bitmap.height step stepY) {
-                val pixel = bitmap.getPixel(x, y)
-                val luma = (0.299f * Color.red(pixel) + 0.587f * Color.green(pixel) + 0.114f * Color.blue(pixel))
-                totalLuma += luma
-                if (luma < 90f) darkPixelCount++
-                count++
-            }
-        }
-
-        val avgLuma = if (count > 0) totalLuma / count else 180f
-        val textDensity = if (count > 0) darkPixelCount.toFloat() / count else 0.15f
-        val isOptimalScan = avgLuma in 110f..245f && textDensity in 0.05f..0.45f
-
-        val baseConfidence = when {
-            isOptimalScan && (filterMode == "clean" || filterMode == "threshold_bw") -> 0.96f
-            isOptimalScan -> 0.92f
-            filterMode == "grayscale" -> 0.88f
-            else -> 0.84f
-        }
-
-        val subLower = fallbackSubject.lowercase(Locale.ROOT)
-        return when {
-            subLower.contains("hist") -> {
-                val title = "History: Battle of Adwa & Treaties"
-                val text = """
-                    History Unit 4: Anti-Colonial Resistance & Adwa
-                    1. The Treaty of Wuchale (May 2, 1889):
-                       Signed between Emperor Menelik II and Count Pietro Antonelli.
-                       - Article XVII Controversy: Italian text imposed an Italian protectorate; Amharic text made diplomatic mediation optional.
-                    2. Mobilization and March to the North:
-                       - Edict of War issued in Sept 1895.
-                       - Empress Taytu Betul led troops at the Siege of Mekelle and cut water supplies.
-                    3. Battle of Adwa (March 1, 1896):
-                       - Ethiopian victory preserving sovereignty.
-                       - Overturned the Berlin Conference 'Scramble for Africa' assumptions.
-                    Exam Tip: Compare the Peace Treaty of Addis Ababa (Oct 1896) with the Treaty of Wuchale.
-                """.trimIndent()
-                OcrResult(
-                    title = title,
-                    text = text,
-                    confidence = baseConfidence,
-                    uncertainWords = listOf("Article XVII", "Antonelli", "Taytu Betul", "Mekelle"),
-                    detectedSubject = "History",
-                    lineCount = 14
-                )
-            }
-            subLower.contains("geo") -> {
-                val title = "Geography: Map Reading & East African Rift"
-                val text = """
-                    Geography Unit 2: Topographic Maps & Landforms
-                    1. Map Scale Types:
-                       - Representative Fraction (RF): e.g., 1:50,000.
-                       - Graphical/Bar scale & Verbal scale.
-                       - Large-scale maps (< 1:50,000) show small areas with high detail.
-                    2. Contour Lines:
-                       - Lines connecting points of equal elevation above sea level.
-                       - Close contour spacing indicates steep terrain; wide spacing indicates gentle slope.
-                    3. The East African Rift System:
-                       - Tectonic extensional faulting dividing Nubian and Somali plates.
-                       - Associated with volcanic landforms, hot springs, and graben lakes.
-                    Key Exam Formula: Ground Distance = Map Distance * Scale Denominator.
-                """.trimIndent()
-                OcrResult(
-                    title = title,
-                    text = text,
-                    confidence = baseConfidence,
-                    uncertainWords = listOf("1:50,000", "Nubian", "Graben", "RF"),
-                    detectedSubject = "Geography",
-                    lineCount = 13
-                )
-            }
-            subLower.contains("math") -> {
-                val title = "Mathematics: Quadratic Relations & Functions"
-                val text = """
-                    Mathematics Unit 3: Quadratic Equations & Quadratics
-                    1. Standard Form: a*x^2 + b*x + c = 0 (where a != 0).
-                    2. Quadratic Formula:
-                       x = (-b +/- sqrt(b^2 - 4*a*c)) / (2*a).
-                    3. The Discriminant (Delta = b^2 - 4*a*c):
-                       - Delta > 0: Two distinct real roots.
-                       - Delta = 0: One real repeated root (tangent to x-axis).
-                       - Delta < 0: No real roots (two complex conjugate roots).
-                    4. Vertex Coordinates of Parabola:
-                       - x_v = -b / (2*a)
-                       - y_v = f(x_v)
-                """.trimIndent()
-                OcrResult(
-                    title = title,
-                    text = text,
-                    confidence = (baseConfidence - 0.03f).coerceAtLeast(0.78f),
-                    uncertainWords = listOf("+/-", "sqrt(b^2 - 4ac)", "Delta", "x_v"),
-                    detectedSubject = "Mathematics",
-                    lineCount = 12
-                )
-            }
-            subLower.contains("bio") -> {
-                val title = "Biology: Cell Biology & Respiration"
-                val text = """
-                    Biology Unit 2: Cellular Metabolism and Respiration
-                    1. Cellular Respiration Stages:
-                       - Glycolysis: Cytoplasm, anaerobic, yields 2 ATP + 2 NADH + 2 Pyruvate.
-                       - Krebs Cycle (Citric Acid Cycle): Mitochondrial matrix, yields 2 ATP + 6 NADH + 2 FADH2.
-                       - Oxidative Phosphorylation (ETC): Inner mitochondrial cristae, yields ~28-32 ATP via ATP synthase.
-                    2. Photosynthesis vs Cellular Respiration:
-                       - Photosynthesis stores solar energy in chemical bonds of glucose (anabolic).
-                       - Respiration breaks down glucose to release ATP (catabolic).
-                    High-Yield Exam Focus: Electron transport chain and ATP synthase chemiosmosis.
-                """.trimIndent()
-                OcrResult(
-                    title = title,
-                    text = text,
-                    confidence = baseConfidence,
-                    uncertainWords = listOf("NADH", "FADH2", "chemiosmosis", "ATP synthase"),
-                    detectedSubject = "Biology",
-                    lineCount = 12
-                )
-            }
-            subLower.contains("chem") -> {
-                val title = "Chemistry: Chemical Bonding & Molecular Geometry"
-                val text = """
-                    Chemistry Unit 3: Chemical Bonding and Structure
-                    1. Ionic Bonding:
-                       - Electrostatic attraction between cations and anions (electron transfer).
-                       - High melting points, electrical conductivity in molten/aqueous state.
-                    2. Covalent Bonding:
-                       - Sharing of electron pairs between non-metal atoms.
-                       - Polar vs non-polar covalent bonds determined by electronegativity differences (Delta EN).
-                    3. VSEPR Theory (Valence Shell Electron Pair Repulsion):
-                       - Linear (180 deg), Trigonal Planar (120 deg), Tetrahedral (109.5 deg).
-                       - Bent geometry (e.g., H2O at 104.5 deg due to two lone pairs).
-                """.trimIndent()
-                OcrResult(
-                    title = title,
-                    text = text,
-                    confidence = baseConfidence,
-                    uncertainWords = listOf("Delta EN", "VSEPR", "cations", "electronegativity"),
-                    detectedSubject = "Chemistry",
-                    lineCount = 13
-                )
-            }
-            subLower.contains("econ") -> {
-                val title = "Economics: Microeconomics & Market Equilibrium"
-                val text = """
-                    Economics Unit 1: Fundamentals of Microeconomics
-                    1. Law of Demand:
-                       - Ceteris paribus, as price increases, quantity demanded decreases (inverse relationship).
-                       - Movement along curve vs shift of the demand curve.
-                    2. Price Elasticity of Demand (PED):
-                       - PED = (% change in Q_d) / (% change in Price).
-                       - Inelastic if |PED| < 1; Elastic if |PED| > 1; Unitary if |PED| = 1.
-                    3. Opportunity Cost:
-                       - The value of the next best alternative forgone when making a decision.
-                """.trimIndent()
-                OcrResult(
-                    title = title,
-                    text = text,
-                    confidence = baseConfidence,
-                    uncertainWords = listOf("Ceteris paribus", "PED", "Q_d", "|PED|"),
-                    detectedSubject = "Economics",
-                    lineCount = 11
-                )
-            }
-            else -> {
-                // Physics default
-                val title = "Physics: Newton's Laws & Dynamics"
-                val text = """
-                    Physics Unit 3: Newton's Laws & Dynamics
-                    1. First Law of Motion (Inertia):
-                       An object at rest remains at rest unless acted upon by net force.
-                    2. Second Law of Motion (Acceleration):
-                       F_net = m * a (Force in Newtons, Mass in kg, Accel in m/s^2).
-                       Acceleration is directly proportional to net force.
-                    3. Third Law of Motion (Action-Reaction):
-                       For every action, there is an equal and opposite reaction.
-                       Forces always occur in matched interaction pairs.
-                    4. Friction and Normal Force:
-                       f_max = mu * F_N. Static friction exceeds kinetic friction.
-                    High-Yield Exam Reminder:
-                    Always draw a Free Body Diagram (FBD) before solving vector forces!
-                """.trimIndent()
-                OcrResult(
-                    title = title,
-                    text = text,
-                    confidence = baseConfidence,
-                    uncertainWords = listOf("F_net", "m/s^2", "mu", "F_N", "FBD"),
-                    detectedSubject = "Physics",
-                    lineCount = 14
-                )
-            }
+        return try {
+            val image = InputImage.fromBitmap(bitmap, 0)
+            val recognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS)
+            val result = recognizer.process(image).await()
+            val text = result.text.ifBlank { "No text recognized." }
+            
+            OcrResult(
+                title = "$fallbackSubject Scan",
+                text = text,
+                confidence = 0.95f,
+                uncertainWords = emptyList(),
+                detectedSubject = fallbackSubject,
+                lineCount = text.lines().size
+            )
+        } catch (e: Exception) {
+            OcrResult(
+                title = "Scan Error",
+                text = "Failed to extract text: ${e.message}",
+                confidence = 0f,
+                uncertainWords = emptyList(),
+                detectedSubject = fallbackSubject,
+                lineCount = 1
+            )
         }
     }
 

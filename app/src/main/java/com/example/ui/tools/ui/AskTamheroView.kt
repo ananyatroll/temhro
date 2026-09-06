@@ -619,7 +619,7 @@ fun AskTamheroView(
                         .padding(top = 2.dp, bottom = 0.dp),
                     contentAlignment = Alignment.Center
                 ) {
-                    TinatBannerAd()
+                    TinatBannerAd(applyInsets = false)
                 }
             }
         }

@@ -40,7 +40,8 @@ import com.google.android.gms.ads.LoadAdError
 @Composable
 fun TinatBannerAd(
     modifier: Modifier = Modifier,
-    adUnitId: String = AdConfig.BANNER_AD_UNIT_ID
+    adUnitId: String = AdConfig.BANNER_AD_UNIT_ID,
+    applyInsets: Boolean = true
 ) {
     if (!AdConfig.ADS_ENABLED || !AdConfig.BANNER_ADS_ENABLED) {
         return
@@ -83,7 +84,7 @@ fun TinatBannerAd(
     BoxWithConstraints(
         modifier = modifier
             .fillMaxWidth()
-            .navigationBarsPadding()
+            .then(if (applyInsets) Modifier.navigationBarsPadding() else Modifier)
             .padding(top = 2.dp, bottom = 2.dp),
         contentAlignment = Alignment.Center
     ) {

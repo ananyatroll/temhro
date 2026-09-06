@@ -200,6 +200,23 @@ fun DuotoneIcon(
         "history" -> Icons.Default.AutoStories
         "geography" -> Icons.Default.Public
         "economics" -> Icons.Default.TrendingUp
+        "computer" -> Icons.Default.Computer
+        "business" -> Icons.Default.Business
+        "fitness" -> Icons.Default.FitnessCenter
+        "psychology" -> Icons.Default.Psychology
+        "groups" -> Icons.Default.Groups
+        "analytics" -> Icons.Default.Analytics
+        "accounting" -> Icons.Default.AccountBalance
+        "management" -> Icons.Default.ManageAccounts
+        "logistics" -> Icons.Default.LocalShipping
+        "bais" -> Icons.Default.BusinessCenter
+        "psir" -> Icons.Default.AccountBalance
+        "marketing" -> Icons.Default.Storefront
+        "padm" -> Icons.Default.CorporateFare
+        "info_sci" -> Icons.Default.DataUsage
+        "software" -> Icons.Default.Code
+        "mechanical" -> Icons.Default.Engineering
+        "electrical" -> Icons.Default.ElectricalServices
         else -> Icons.Default.School
     }
 

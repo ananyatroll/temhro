@@ -51,6 +51,7 @@ fun ContentPlayView(viewModel: StudyViewModel) {
     val context = LocalContext.current
     val activeSub by viewModel.activeSubject.collectAsState()
     val showStudyOptions by viewModel.showStudyOptionsModal.collectAsState()
+    val showTextbookReader by viewModel.showTextbookReader.collectAsState()
     val showModeSelection by viewModel.showModeSelectionModal.collectAsState()
     val showNotes by viewModel.showNotesView.collectAsState()
     val showQuestionsPlay by viewModel.showContentPlayView.collectAsState()
@@ -66,6 +67,9 @@ fun ContentPlayView(viewModel: StudyViewModel) {
     androidx.activity.compose.BackHandler(enabled = showNotes) {
         viewModel.showNotesView.value = false
         viewModel.resetPlayState()
+    }
+    androidx.activity.compose.BackHandler(enabled = showTextbookReader) {
+        viewModel.showTextbookReader.value = false
     }
 
     val notes by viewModel.activeNotes.collectAsState()
@@ -141,6 +145,7 @@ fun ContentPlayView(viewModel: StudyViewModel) {
                 onNotesClick = { viewModel.startNotes() },
                 onExamsClick = { viewModel.initiateModeSelection() },
                 onFlashcardsClick = { viewModel.startFlashcards() },
+                onTextbookClick = { viewModel.startTextbook() },
                 onSavedMaterialsClick = {
                     viewModel.showStudyOptionsModal.value = false
                     viewModel.showSavedMaterialPickerModal.value = true
@@ -163,6 +168,14 @@ fun ContentPlayView(viewModel: StudyViewModel) {
             SyllabusNotesTableOfContents(
                 viewModel = viewModel,
                 onDismiss = { viewModel.showNotesTableOfContents.value = false }
+            )
+        }
+
+        // 5. Official Textbook Reader
+        if (showTextbookReader) {
+            OfficialTextbookScreen(
+                subjectName = subject.name,
+                onClose = { viewModel.showTextbookReader.value = false }
             )
         }
 
@@ -338,30 +351,40 @@ fun ContentPlayView(viewModel: StudyViewModel) {
 
 @Composable
 fun FuturisticLoadingState() {
-    Box(
+    val infiniteTransition = rememberInfiniteTransition()
+    val alpha by infiniteTransition.animateFloat(
+        initialValue = 0.2f,
+        targetValue = 0.7f,
+        animationSpec = infiniteRepeatable(
+            animation = tween(1000, easing = LinearEasing),
+            repeatMode = RepeatMode.Reverse
+        )
+    )
+
+    Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xE60A0F19)), // High opacity black background
-        contentAlignment = Alignment.Center
+            .padding(16.dp)
+            .padding(top = 40.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            // Futuristic pulsing spinner with dynamic trail
-            CircularProgressIndicator(
-                color = EmeraldPrimary,
-                strokeWidth = 4.dp,
+        // Skeleton Header
+        Box(
+            modifier = Modifier
+                .fillMaxWidth(0.6f)
+                .height(30.dp)
+                .clip(RoundedCornerShape(8.dp))
+                .background(Color.Gray.copy(alpha = alpha))
+        )
+        Spacer(modifier = Modifier.height(16.dp))
+        // Skeleton List Items
+        repeat(5) {
+            Box(
                 modifier = Modifier
-                    .size(64.dp)
-                    .pulseGlow(EmeraldPrimary)
-            )
-
-            Spacer(modifier = Modifier.height(24.dp))
-
-            Text(
-                text = "Loading chapters and questions...",
-                style = MaterialTheme.typography.bodyLarge,
-                color = Color.White,
-                fontWeight = FontWeight.Bold,
-                textAlign = TextAlign.Center
+                    .fillMaxWidth()
+                    .height(80.dp)
+                    .clip(RoundedCornerShape(12.dp))
+                    .background(Color.Gray.copy(alpha = alpha))
             )
         }
     }
@@ -458,6 +481,7 @@ fun SubjectDetailModal(
     onNotesClick: () -> Unit,
     onExamsClick: () -> Unit,
     onFlashcardsClick: () -> Unit,
+    onTextbookClick: () -> Unit,
     onSavedMaterialsClick: () -> Unit
 ) {
     Dialog(onDismissRequest = onDismiss) {
@@ -562,6 +586,27 @@ fun SubjectDetailModal(
                         Icon(Icons.Default.Layers, contentDescription = null, tint = Color.White)
                         Spacer(modifier = Modifier.width(12.dp))
                         Text(TranslationManager.get("opt_flashcards", currentLang), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                    }
+                }
+
+                // 4. Official Textbook Mode Button
+                Button(
+                    onClick = onTextbookClick,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 5.dp)
+                        .pressBounce()
+                        .testTag("study_option_textbook"),
+                    shape = RoundedCornerShape(12.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary)
+                ) {
+                    Row(
+                        modifier = Modifier.padding(vertical = 4.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Icon(Icons.Default.MenuBook, contentDescription = null, tint = Color.White)
+                        Spacer(modifier = Modifier.width(12.dp))
+                        Text("Official Textbook", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
                     }
                 }
 
@@ -922,6 +967,25 @@ fun DarkThemedNotesReader(
                         lineHeight = 26.sp
                     )
 
+                    Spacer(modifier = Modifier.height(16.dp))
+
+                    // Contextual AI actions for the active note
+                    com.example.ui.tools.ui.ContextualAiActions(
+                        viewModel = viewModel,
+                        learningContext = com.example.ui.tools.ai.LearningContext(
+                            courseId = note.subjectId,
+                            courseName = subjectName,
+                            topicId = note.id,
+                            topicName = note.title.ifBlank { note.unit },
+                            contentId = note.id,
+                            contentText = note.content,
+                            contentType = "notes",
+                            gradeLevel = note.gradeLevel
+                        ),
+                        actions = com.example.ui.tools.ui.ContextualAiActionSets.notes(note.title.ifBlank { note.unit }),
+                        modifier = Modifier.fillMaxWidth()
+                    )
+
                     Spacer(modifier = Modifier.height(24.dp))
 
                     // Connected Academic Learning Loop Action Cards
@@ -1118,49 +1182,7 @@ fun QuestionsArena(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(4.dp)
                 ) {
-                    // Practice Mode AI Hint Button (Strictly hidden during active exam mode)
-                    if (!isExam && question != null) {
-                        FilledTonalButton(
-                            onClick = {
-                                val options = listOfNotNull(
-                                    question.optionA.let { "A) $it" },
-                                    question.optionB.let { "B) $it" },
-                                    question.optionC.let { "C) $it" },
-                                    question.optionD.let { "D) $it" }
-                                )
-                                val lContext = com.example.ui.tools.ai.LearningContext(
-                                    courseId = question.subjectId,
-                                    courseName = subjectName,
-                                    topicId = question.id,
-                                    topicName = "$subjectName Question #${index + 1}",
-                                    contentId = question.id,
-                                    contentType = "practice",
-                                    question = question.questionText,
-                                    questionOptions = options,
-                                    correctAnswer = question.correctOption,
-                                    explanation = question.explanation
-                                )
-                                viewModel.openStudentTools(
-                                    tab = "ask",
-                                    prompt = "Give me a learning hint for this question without giving away the final answer",
-                                    context = lContext
-                                )
-                            },
-                            colors = ButtonDefaults.filledTonalButtonColors(
-                                containerColor = EmeraldPrimary.copy(alpha = 0.25f),
-                                contentColor = EmeraldLight
-                            ),
-                            contentPadding = PaddingValues(horizontal = 8.dp, vertical = 2.dp),
-                            shape = RoundedCornerShape(10.dp),
-                            modifier = Modifier
-                                .height(32.dp)
-                                .testTag("practice_hint_ai_btn")
-                        ) {
-                            Icon(Icons.Default.Lightbulb, contentDescription = "Hint", modifier = Modifier.size(13.dp))
-                            Spacer(modifier = Modifier.width(4.dp))
-                            Text("Hint", fontSize = 11.sp, fontWeight = FontWeight.Bold)
-                        }
-                    }
+
 
                     // Save Question Button
                     IconButton(
@@ -1301,6 +1323,33 @@ fun QuestionsArena(
                                 )
                             }
                         }
+                    }
+
+                    // Contextual AI help for the current question (practice mode only, before reveal)
+                    if (!isExam && !isAnswerRevealed) {
+                        Spacer(modifier = Modifier.height(12.dp))
+                        com.example.ui.tools.ui.ContextualAiActions(
+                            viewModel = viewModel,
+                            learningContext = com.example.ui.tools.ai.LearningContext(
+                                courseId = question.subjectId,
+                                courseName = subjectName,
+                                topicId = question.id,
+                                topicName = "$subjectName Question #${index + 1}",
+                                contentId = question.id,
+                                contentType = "practice",
+                                question = question.questionText,
+                                questionOptions = listOf(
+                                    "A) ${question.optionA}",
+                                    "B) ${question.optionB}",
+                                    "C) ${question.optionC}",
+                                    "D) ${question.optionD}"
+                                ),
+                                correctAnswer = question.correctOption,
+                                explanation = question.explanation
+                            ),
+                            actions = com.example.ui.tools.ui.ContextualAiActionSets.practice(),
+                            modifier = Modifier.fillMaxWidth()
+                        )
                     }
 
                     // Reveal Answer button (For Practice Mode)

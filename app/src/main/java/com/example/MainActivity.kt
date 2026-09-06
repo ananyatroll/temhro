@@ -129,12 +129,30 @@ class MainActivity : ComponentActivity() {
                                         style = MaterialTheme.typography.bodyMedium.copy(color = Color.Gray)
                                     )
                                     Spacer(modifier = Modifier.height(24.dp))
-                                    CircularProgressIndicator(
-                                        color = EmeraldPrimary,
-                                        modifier = Modifier.size(36.dp)
+                                    val infiniteTransition = rememberInfiniteTransition()
+                                    val alpha by infiniteTransition.animateFloat(
+                                        initialValue = 0.2f,
+                                        targetValue = 0.7f,
+                                        animationSpec = infiniteRepeatable(
+                                            animation = tween(1000, easing = LinearEasing),
+                                            repeatMode = RepeatMode.Reverse
+                                        )
                                     )
+                                    Column(
+                                        modifier = Modifier.fillMaxWidth().padding(horizontal = 32.dp),
+                                        verticalArrangement = Arrangement.spacedBy(16.dp)
+                                    ) {
+                                        repeat(3) {
+                                            Box(
+                                                modifier = Modifier
+                                                    .fillMaxWidth()
+                                                    .height(60.dp)
+                                                    .clip(RoundedCornerShape(12.dp))
+                                                    .background(Color.Gray.copy(alpha = alpha))
+                                            )
+                                        }
+                                    }
                                 }
-                            }
                         } else {
                             // Root layout: Content area + Persistent bottom banner advertisement
                             Column(modifier = Modifier.fillMaxSize()) {

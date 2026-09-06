@@ -860,6 +860,12 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
             return
         }
 
+        if (subject.packageId == "department") {
+            academicDepartment.value = subject.name
+            showDepartmentSetupModal.value = true
+            return
+        }
+
         questionShuffleTrigger.value += 1
         activeSubject.value = subject
         showStudyOptionsModal.value = true
@@ -957,6 +963,12 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
         showModeSelectionModal.value = true
     }
 
+        val showTextbookReader = MutableStateFlow(false)
+
+    fun startTextbook() {
+        showStudyOptionsModal.value = false
+        showTextbookReader.value = true
+    }
     fun startFlashcards() {
         val subject = activeSubject.value ?: subjects.value.firstOrNull()
         if (subject != null) {
@@ -1006,7 +1018,6 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
         stopTimer()
         // Increment shuffle trigger so closing and re-entering the exam/practice tab reshuffles questions
         questionShuffleTrigger.value += 1
-        activeSubject.value = null
         showContentPlayView.value = false
         showNotesView.value = false
         showNotesTableOfContents.value = false
@@ -1265,6 +1276,20 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
     val studentClassLevel = MutableStateFlow(sharedPrefs.getString("student_class_level", "Grade 12 EUEE Prep") ?: "Grade 12 EUEE Prep")
     val studentGoal = MutableStateFlow(sharedPrefs.getString("student_goal", "") ?: "")
     val isOnboardingCompleted = MutableStateFlow(sharedPrefs.getBoolean("is_student_onboarded", false))
+
+    val academicYear = MutableStateFlow(sharedPrefs.getString("academic_year", "") ?: "")
+    val academicDepartment = MutableStateFlow(sharedPrefs.getString("academic_department", "") ?: "")
+    val showDepartmentSetupModal = MutableStateFlow(false)
+
+    fun saveDepartmentSetup(dept: String, year: String) {
+        academicDepartment.value = dept
+        academicYear.value = year
+        sharedPrefs.edit()
+            .putString("academic_department", dept)
+            .putString("academic_year", year)
+            .apply()
+        showDepartmentSetupModal.value = false
+    }
 
     fun saveStudentProfile(
         name: String,
