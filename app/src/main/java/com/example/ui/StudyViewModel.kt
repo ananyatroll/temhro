@@ -496,9 +496,9 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
             else repository.getQuestionsBySubject(subject.id)
         }
         
-    val activeQuestions: StateFlow<List<ExamQuestion>> = combine(rawQuestions, selectedExamUnit) { questions, unit ->
+    val activeQuestions: StateFlow<List<ExamQuestion>> = combine(rawQuestions, selectedExamUnit, questionShuffleTrigger) { questions, unit, trigger ->
         val filtered = if (unit == "All") questions else questions.filter { it.unit.equals(unit, ignoreCase = true) || it.unit.equals("All", ignoreCase = true) }
-        filtered.shuffled()
+        if (trigger > 0) filtered.shuffled(java.util.Random(trigger.toLong())) else filtered
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
     private val rawFlashcards = activeSubject.flatMapLatest { subject ->

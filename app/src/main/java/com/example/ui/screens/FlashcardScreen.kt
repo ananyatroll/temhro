@@ -484,7 +484,7 @@ fun SubjectFlashcardRow(
                             "review" -> filteredByUnit.filter { !cardMasteredSet.contains(it.id) && !it.isKnown }
                             else -> filteredByUnit
                         }
-                        if (shuffleSeed > 0) filtered.shuffled() else filtered
+                        if (shuffleSeed > 0) filtered.shuffled(java.util.Random(shuffleSeed.toLong())) else filtered
                     }
 
                     // 4. Smart Mastery Progress & Spaced Repetition Bar

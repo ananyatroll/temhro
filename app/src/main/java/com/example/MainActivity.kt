@@ -63,14 +63,11 @@ class MainActivity : ComponentActivity() {
                 val showStudentToolsLauncher = onboardingCompleted &&
                         progress.activePackageId != null &&
                         progress.paymentStatus != "pending" &&
+                        currentTab != "flashcards" &&
                         !inActiveTimedExam &&
-                        !showNotes &&
-                        !showContentPlay &&
-                        !showVideos &&
-                        !showStudyOptions &&
-                        !showModeSelection &&
                         !showMarketing &&
-                        !isStudentToolsOpen
+                        !isStudentToolsOpen &&
+                        (showNotes || showContentPlay || showVideos || showStudyOptions || showModeSelection)
 
                 // Exception checks for AdMob banner
                 val showPaymentForm by viewModel.showPaymentVerificationScreen.collectAsState()
