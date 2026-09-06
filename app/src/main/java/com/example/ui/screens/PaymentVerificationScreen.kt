@@ -198,7 +198,7 @@ fun SleekPaymentVerificationScreen(
                                 onClick = {
                                     clipboardManager.setText(androidx.compose.ui.text.AnnotatedString("1000721803477"))
                                     copiedCbe = true
-                                    android.widget.Toast.makeText(context, "Account number copied!", android.widget.Toast.LENGTH_SHORT).show()
+                                    
                                 },
                                 modifier = Modifier.testTag("copy_cbe_account_button")
                             ) {
@@ -241,7 +241,7 @@ fun SleekPaymentVerificationScreen(
                                 onClick = {
                                     clipboardManager.setText(androidx.compose.ui.text.AnnotatedString("+251932176773"))
                                     copiedTelebirr = true
-                                    android.widget.Toast.makeText(context, "Phone number copied!", android.widget.Toast.LENGTH_SHORT).show()
+                                    
                                 },
                                 modifier = Modifier.testTag("copy_telebirr_phone_button")
                             ) {
