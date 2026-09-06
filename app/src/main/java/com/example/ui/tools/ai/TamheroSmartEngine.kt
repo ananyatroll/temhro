@@ -126,6 +126,36 @@ class TamheroSmartEngine : AiProvider {
         return@withContext explainCurriculumTopic(rawSubject, rawTopic, noteContent)
     }
 
+    
+    private fun generateDynamicSubjectTip(subject: String, content: String? = null): String {
+        val lowerSub = subject.lowercase(java.util.Locale.ROOT)
+        val lowerContent = content?.lowercase(java.util.Locale.ROOT) ?: ""
+        
+        return when {
+            lowerSub.contains("hist") || lowerContent.contains("century") || lowerContent.contains("war") -> 
+                "Focus on the timeline of events, primary causes, and decisive leadership actions."
+            lowerSub.contains("geo") || lowerContent.contains("climate") || lowerContent.contains("earth") -> 
+                "Remember spatial relationships: always link geographical features to their economic or environmental impacts."
+            lowerSub.contains("math") || lowerContent.contains("equation") || lowerContent.contains("theorem") -> 
+                "Double-check your signs and always write out each step. If stuck, try working backward from the answer."
+            lowerSub.contains("econ") || lowerContent.contains("market") || lowerContent.contains("supply") -> 
+                "Remember the distinction between a 'shift in' the curve vs a 'movement along' the curve."
+            lowerSub.contains("eng") || lowerContent.contains("grammar") || lowerContent.contains("tense") -> 
+                "Pay close attention to tense transformations and subject-verb agreement exceptions."
+            lowerSub.contains("bio") || lowerContent.contains("cell") || lowerContent.contains("protein") -> 
+                "Structure determines function. Always connect the anatomical structure to its biological purpose."
+            lowerSub.contains("phys") || lowerContent.contains("force") || lowerContent.contains("energy") -> 
+                "Always write down your knowns and unknowns first, and verify your units match before calculating."
+            lowerSub.contains("chem") || lowerContent.contains("reaction") || lowerContent.contains("acid") -> 
+                "Ensure chemical equations are balanced and remember your periodic table trends (electronegativity, radius)."
+            lowerSub.contains("account") || lowerContent.contains("balance") || lowerContent.contains("asset") -> 
+                "Assets = Liabilities + Equity. Always ensure every transaction has matching debit and credit entries."
+            lowerSub.contains("law") || lowerContent.contains("article") || lowerContent.contains("court") -> 
+                "Memorize the precedent cases and the specific constitutional articles that apply to the scenario."
+            else -> "Break down the core concept into 3 bullet points. Try teaching it out loud to verify you understand it."
+        }
+    }
+
     private fun explainScannedDocument(
         docText: String,
         subject: String,
@@ -152,27 +182,7 @@ class TamheroSmartEngine : AiProvider {
             }
 
             appendLine("### 💡 High-Yield Exam Takeaway for $subject:")
-            val lowerSub = subject.lowercase(Locale.ROOT)
-            when {
-                lowerSub.contains("hist") -> {
-                    appendLine("• Focus on the timeline of events, treaty articles (e.g. Wuchale Art. XVII), and decisive leadership actions (Emperor Menelik II, Empress Taytu).")
-                }
-                lowerSub.contains("geo") -> {
-                    appendLine("• Focus on map scale calculations (RF vs Graphic scale) and contour spacing (steep vs gentle slope indicators).")
-                }
-                lowerSub.contains("math") -> {
-                    appendLine("• Standardize into ax^2 + bx + c = 0 first. Check the discriminant (b^2 - 4ac) before choosing factoring vs quadratic formula.")
-                }
-                lowerSub.contains("econ") -> {
-                    appendLine("• Remember that price changes cause movements along the demand curve, whereas non-price factors cause shifts of the entire curve.")
-                }
-                lowerSub.contains("eng") -> {
-                    appendLine("• Pay close attention to tense transformations (Present to Past in reported speech; be + V3 in passive voice).")
-                }
-                else -> {
-                    appendLine("• Remember: F_net = m * a. Draw a Free Body Diagram (FBD) and calculate normal force before determining frictional limits.")
-                }
-            }
+            appendLine("• " + generateDynamicSubjectTip(subject, docText))
             appendLine()
             appendLine("✨ *Tip:* You can ask me: *'Give me an example'*, *'Make it simpler'*, or tap **'Cards'** or **'MCQs'** to generate practice assets directly from this page!")
         }
