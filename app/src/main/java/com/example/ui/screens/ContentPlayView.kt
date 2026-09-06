@@ -143,7 +143,7 @@ fun ContentPlayView(viewModel: StudyViewModel) {
                 currentLang = currentLang,
                 onDismiss = { viewModel.showStudyOptionsModal.value = false },
                 onNotesClick = { viewModel.startNotes() },
-                onExamsClick = { viewModel.initiateModeSelection() },
+                onExamsClick = { viewModel.initiateModeSelection(note.unit) },
                 onFlashcardsClick = { viewModel.startFlashcards() },
                 onTextbookClick = { viewModel.startTextbook() },
                 onSavedMaterialsClick = {
@@ -1029,7 +1029,7 @@ fun DarkThemedNotesReader(
 
                                 Button(
                                     onClick = {
-                                        viewModel.initiateModeSelection()
+                                        viewModel.initiateModeSelection(note.unit)
                                     },
                                     colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary),
                                     shape = RoundedCornerShape(8.dp),

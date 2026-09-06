@@ -47,7 +47,8 @@ data class ExamQuestion(
     val optionC: String,
     val optionD: String,
     val correctOption: String, // "A", "B", "C", or "D"
-    val explanation: String
+    val explanation: String,
+    val unit: String = "All"
 )
 
 @Entity(tableName = "flashcards")
@@ -58,7 +59,8 @@ data class Flashcard(
     val back: String,
     val isStarred: Boolean = false,
     val isKnown: Boolean = false,
-    val gradeLevel: String = "Grade 9" // "Grade 9", "Grade 10", "Grade 11", "Grade 12", "General"
+    val gradeLevel: String = "Grade 9",
+    val unit: String = "All"
 )
 
 @Entity(tableName = "analyzed_videos")

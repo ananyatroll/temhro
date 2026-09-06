@@ -472,7 +472,7 @@ fun SubjectFlashcardRow(
                         } else {
                             val targetUnitClean = selectedUnit.trim().lowercase()
                             flashcards.filter { card ->
-                                card.front.lowercase().contains(targetUnitClean)
+                                card.unit.lowercase() == targetUnitClean || card.unit.lowercase() == "all" || card.unit.lowercase() == "all units"
                             }
                         }
                     }
@@ -591,6 +591,19 @@ fun SubjectFlashcardRow(
                                     Spacer(modifier = Modifier.height(8.dp))
                                     TextButton(onClick = { smartFilter = "all" }) {
                                         Text("Show All Cards", color = EmeraldPrimary)
+                                    }
+                                }
+                                
+                                if (selectedUnit != "All" && selectedUnit != "All Units" && smartFilter == "all") {
+                                    Spacer(modifier = Modifier.height(16.dp))
+                                    Button(
+                                        onClick = { /* viewModel.generateSmartFlashcards(selectedUnit) */ },
+                                        colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary),
+                                        shape = RoundedCornerShape(8.dp)
+                                    ) {
+                                        Icon(Icons.Default.AutoAwesome, contentDescription = null, modifier = Modifier.size(16.dp))
+                                        Spacer(modifier = Modifier.width(8.dp))
+                                        Text("Generate Smart Flashcards for ")
                                     }
                                 }
                             }

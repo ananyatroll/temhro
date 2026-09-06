@@ -487,16 +487,19 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
     // Practice/Exam view - Shuffles questions freshly on every entry and re-entry
     val questionShuffleTrigger = MutableStateFlow(0)
 
-    val activeQuestions: StateFlow<List<ExamQuestion>> = combine(
+    private val rawQuestions = combine(
         activeSubject,
         questionShuffleTrigger
     ) { subject, _ -> subject }
         .flatMapLatest { subject ->
             if (subject == null) flowOf(emptyList())
-            else repository.getQuestionsBySubject(subject.id).map { questions ->
-                questions.shuffled()
-            }
-        }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+            else repository.getQuestionsBySubject(subject.id)
+        }
+        
+    val activeQuestions: StateFlow<List<ExamQuestion>> = combine(rawQuestions, selectedExamUnit) { questions, unit ->
+        val filtered = if (unit == "All") questions else questions.filter { it.unit.equals(unit, ignoreCase = true) || it.unit.equals("All", ignoreCase = true) }
+        filtered.shuffled()
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
     private val rawFlashcards = activeSubject.flatMapLatest { subject ->
         if (subject == null) flowOf(emptyList())
@@ -514,6 +517,7 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
 
     // Smart Flashcards: Unit filtering and spaced review status
     val selectedFlashcardUnit = MutableStateFlow("All")
+    val selectedExamUnit = MutableStateFlow("All")
     val cardMasteredSet = MutableStateFlow<Set<String>>(sharedPrefs.getStringSet("card_mastered_ids", emptySet()) ?: emptySet())
     val cardDifficultSet = MutableStateFlow<Set<String>>(sharedPrefs.getStringSet("card_difficult_ids", emptySet()) ?: emptySet())
     val cardReviewHistory = MutableStateFlow<Map<String, Int>>(emptyMap())
@@ -949,7 +953,8 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    fun initiateModeSelection() {
+    fun initiateModeSelection(unitName: String = "All") {
+        selectedExamUnit.value = unitName
         val sub = activeSubject.value ?: subjects.value.firstOrNull()
         if (sub == null) return
         if (isSubjectLocked(sub)) {
