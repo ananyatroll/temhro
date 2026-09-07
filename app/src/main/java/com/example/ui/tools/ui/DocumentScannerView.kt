@@ -37,10 +37,6 @@ import com.example.ui.StudyViewModel
 import com.example.ui.theme.*
 import com.example.ui.tools.ai.LearningContext
 import com.example.ui.tools.scanner.DocumentScannerEngine
-import com.google.mlkit.vision.documentscanner.GmsDocumentScannerOptions
-import com.google.mlkit.vision.documentscanner.GmsDocumentScannerOptions.RESULT_FORMAT_JPEG
-import com.google.mlkit.vision.documentscanner.GmsDocumentScannerOptions.SCANNER_MODE_FULL
-import com.google.mlkit.vision.documentscanner.GmsDocumentScanning
 import kotlinx.coroutines.launch
 import java.io.File
 
@@ -58,7 +54,7 @@ fun DocumentScannerView(
     var extractedText by remember { mutableStateOf("") }
     var isProcessing by remember { mutableStateOf(false) }
     var scannedImageBitmap by remember { mutableStateOf<Bitmap?>(null) }
-    var documentTitle by remember { mutableStateOf("\ Scan") }
+    var documentTitle by remember { mutableStateOf("Document Scan") }
     var showSavedDocsDialog by remember { mutableStateOf(false) }
     var showExportMenu by remember { mutableStateOf(false) }
     
@@ -72,30 +68,27 @@ fun DocumentScannerView(
     }
 
     val scannerLauncher = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.StartIntentSenderForResult()
-    ) { result ->
-        if (result.resultCode == Activity.RESULT_OK) {
-            val scanResult = com.google.mlkit.vision.documentscanner.GmsDocumentScanningResult.fromActivityResultIntent(result.data)
-            scanResult?.pages?.firstOrNull()?.imageUri?.let { uri ->
-                isProcessing = true
-                coroutineScope.launch {
-                    try {
-                        val inputStream = context.contentResolver.openInputStream(uri)
-                        val bitmap = BitmapFactory.decodeStream(inputStream)
-                        inputStream?.close()
-                        
-                        if (bitmap != null) {
-                            scannedImageBitmap = bitmap
-                            val ocrResult = DocumentScannerEngine.extractTextFromDocument(bitmap, "clean", subjectName)
-                            extractedText = ocrResult.text
-                            popupMessage = "Document scanned successfully!"
-                        }
-                    } catch (e: Exception) {
-                        e.printStackTrace()
-                        popupMessage = "Failed to process scan."
+        contract = ActivityResultContracts.GetContent()
+    ) { uri ->
+        uri?.let {
+            isProcessing = true
+            coroutineScope.launch {
+                try {
+                    val inputStream = context.contentResolver.openInputStream(uri)
+                    val bitmap = BitmapFactory.decodeStream(inputStream)
+                    inputStream?.close()
+                    
+                    if (bitmap != null) {
+                        scannedImageBitmap = bitmap
+                        val ocrResult = DocumentScannerEngine.extractTextFromDocument(bitmap, "clean", subjectName)
+                        extractedText = ocrResult.text
+                        popupMessage = "Document scanned successfully!"
                     }
-                    isProcessing = false
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                    popupMessage = "Failed to process scan."
                 }
+                isProcessing = false
             }
         }
     }
@@ -125,7 +118,7 @@ fun DocumentScannerView(
         val bitmap = scannedImageBitmap ?: return
         coroutineScope.launch {
             try {
-                val file = File(context.cacheDir, "scan_\.jpg")
+                val file = File(context.cacheDir, "scan_image.jpg")
                 val out = java.io.FileOutputStream(file)
                 bitmap.compress(Bitmap.CompressFormat.JPEG, 95, out)
                 out.close()
@@ -146,7 +139,7 @@ fun DocumentScannerView(
                 page.canvas.drawBitmap(bitmap, 0f, 0f, null)
                 pdfDocument.finishPage(page)
                 
-                val file = File(context.cacheDir, "scan_\.pdf")
+                val file = File(context.cacheDir, "scan_document.pdf")
                 val out = java.io.FileOutputStream(file)
                 pdfDocument.writeTo(out)
                 pdfDocument.close()
@@ -163,7 +156,7 @@ fun DocumentScannerView(
         if (extractedText.isEmpty()) return
         coroutineScope.launch {
             try {
-                val file = File(context.cacheDir, "scan_\.txt")
+                val file = File(context.cacheDir, "scan_document.txt")
                 val out = java.io.FileOutputStream(file)
                 out.write(extractedText.toByteArray())
                 out.close()
@@ -175,21 +168,7 @@ fun DocumentScannerView(
     }
 
     fun launchScanner() {
-        val options = GmsDocumentScannerOptions.Builder()
-            .setGalleryImportAllowed(true)
-            .setPageLimit(1)
-            .setResultFormats(RESULT_FORMAT_JPEG)
-            .setScannerMode(SCANNER_MODE_FULL)
-            .build()
-            
-        val scanner = GmsDocumentScanning.getClient(options)
-        scanner.getStartScanIntent(context as Activity)
-            .addOnSuccessListener { intentSender ->
-                scannerLauncher.launch(IntentSenderRequest.Builder(intentSender).build())
-            }
-            .addOnFailureListener {
-                popupMessage = "Failed to open scanner."
-            }
+        scannerLauncher.launch("image/*")
     }
 
     Box(modifier = Modifier.fillMaxSize().background(if (isDark) Color(0xFF0F172A) else Color(0xFFF1F5F9))) {
@@ -299,15 +278,9 @@ fun DocumentScannerView(
                                                 Icon(Icons.Default.ContentCopy, contentDescription = "Copy", tint = Color.Gray)
                                             }
                                             IconButton(onClick = {
-                                                val doc = ScannedDocument(
-                                                    title = documentTitle,
-                                                    extractedText = extractedText,
-                                                    dateScanned = System.currentTimeMillis(),
-                                                    subject = subjectName
-                                                )
-                                                viewModel.saveScannedDocument(doc)
-                                                popupMessage = "Document saved!"
-                                            }) {
+                                                 viewModel.saveScannedDoc(documentTitle, 1, extractedText)
+                                                 popupMessage = "Document saved!"
+                                             }) {
                                                 Icon(Icons.Default.Save, contentDescription = "Save", tint = EmeraldPrimary)
                                             }
                                             
@@ -365,7 +338,7 @@ fun DocumentScannerView(
                                             courseName = subjectName,
                                             topicId = "scanned_doc",
                                             topicName = documentTitle,
-                                            contentId = "scan_\",
+                                            contentId = "scan_document",
                                             contentType = "scanned_doc",
                                             contentText = extractedText
                                         ),

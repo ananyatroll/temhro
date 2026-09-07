@@ -4,7 +4,7 @@ object Grade12EconomicsNotes {
 
     fun getGrade12EconomicsNotes(): List<SubjectNote> {
         val notesList = mutableListOf<SubjectNote>()
-        val subId = "euee_soc_eco"
+        val subId = "euee_soc_economics"
         var idx = 1
 
         fun addNote(unit: String, title: String, content: String) {

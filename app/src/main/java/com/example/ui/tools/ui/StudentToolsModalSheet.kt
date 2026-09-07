@@ -74,7 +74,6 @@ fun StudentToolsModalSheet(
     ModalBottomSheet(
         onDismissRequest = handleDismiss,
         sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
-        windowInsets = WindowInsets(0),
         containerColor = if (isDark) CardBgDark else Color.White,
         dragHandle = {
             BottomSheetDefaults.DragHandle(

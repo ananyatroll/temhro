@@ -4,7 +4,7 @@ object Grade11BiologyNotes {
 
     fun getGrade11BiologyNotes(): List<SubjectNote> {
         val notesList = mutableListOf<SubjectNote>()
-        val subId = "euee_nat_bio"
+        val subId = "biology"
         var idx = 1
 
         fun addNote(unit: String, title: String, content: String) {

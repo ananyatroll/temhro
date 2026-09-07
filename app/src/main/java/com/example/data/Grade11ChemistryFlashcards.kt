@@ -4,7 +4,7 @@ object Grade11ChemistryFlashcards {
 
     fun get500Flashcards(): List<Flashcard> {
         val list = mutableListOf<Flashcard>()
-        val subId = "euee_nat_chem_g11"
+        val subId = "chemistry"
 
         val units = listOf(
             Pair("Unit 1: Atomic Structure", 63),

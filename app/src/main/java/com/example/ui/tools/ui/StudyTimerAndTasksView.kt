@@ -368,32 +368,6 @@ fun StudyTimerAndTasksView(
 
                 // Tasks List
                 items(tasks, key = { it.id }) { task ->
-                    val dismissState = rememberDismissState(
-                        confirmValueChange = {
-                            if (it == DismissValue.DismissedToStart || it == DismissValue.DismissedToEnd) {
-                                viewModel.deleteStudyTask(task)
-                                true
-                            } else false
-                        }
-                    )
-                    
-                    @OptIn(ExperimentalMaterial3Api::class)
-                    SwipeToDismiss(
-                        state = dismissState,
-                        background = {
-                            val color = when (dismissState.dismissDirection) {
-                                DismissDirection.StartToEnd -> Color(0xFFEF4444)
-                                DismissDirection.EndToStart -> Color(0xFFEF4444)
-                                null -> Color.Transparent
-                            }
-                            Box(
-                                modifier = Modifier.fillMaxSize().background(color, RoundedCornerShape(10.dp)).padding(horizontal = 20.dp),
-                                contentAlignment = Alignment.CenterEnd
-                            ) {
-                                Icon(Icons.Default.Delete, contentDescription = "Delete", tint = Color.White)
-                            }
-                        },
-                        dismissContent = {
                     val diff = task.dueDateEpochDay - currentEpochDay
                     val dueText = when {
                         diff < 0 -> "Overdue"

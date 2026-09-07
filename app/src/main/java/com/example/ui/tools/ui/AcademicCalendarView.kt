@@ -53,7 +53,7 @@ fun AcademicCalendarView(
     val firstDayOfWeek = currentMonth.atDay(1).dayOfWeek.value % 7 // 0=Sunday, 6=Saturday
     
     val selectedEpochDay = selectedDate.toEpochDay()
-    val selectedDayEvents = events.filter { it.dueDateEpochDay == selectedEpochDay }
+    val selectedDayEvents = events.filter { it.dateEpochDay == selectedEpochDay }
 
     Column(modifier = Modifier.fillMaxSize().background(if (isDark) Color(0xFF0F172A) else Color(0xFFF1F5F9))) {
         // Header Controls
@@ -105,7 +105,7 @@ fun AcademicCalendarView(
                         Icon(Icons.Rounded.ChevronLeft, contentDescription = "Previous Month")
                     }
                     Text(
-                        text = "\ ",
+                        text = currentMonth.format(java.time.format.DateTimeFormatter.ofPattern("MMMM yyyy", Locale.ENGLISH)),
                         fontSize = 18.sp,
                         fontWeight = FontWeight.Bold,
                         color = if (isDark) Color.White else Color.Black
@@ -147,7 +147,7 @@ fun AcademicCalendarView(
                                 val date = currentMonth.atDay(dayOfMonth)
                                 val isSelected = date == selectedDate
                                 val isToday = date == LocalDate.now()
-                                val dayEvents = events.filter { it.dueDateEpochDay == date.toEpochDay() }
+                                val dayEvents = events.filter { it.dateEpochDay == date.toEpochDay() }
                                 
                                 Box(
                                     contentAlignment = Alignment.Center,
@@ -197,7 +197,7 @@ fun AcademicCalendarView(
 
         // Agenda View
         Text(
-            text = "Schedule for \ ",
+            text = "Schedule for $selectedDate",
             fontSize = 16.sp,
             fontWeight = FontWeight.Bold,
             color = if (isDark) Color.LightGray else Color.DarkGray,
@@ -254,7 +254,7 @@ fun AcademicCalendarView(
                                     }
                                 }
                             }
-                            IconButton(onClick = { viewModel.deleteCalendarEvent(event) }) {
+                            IconButton(onClick = { viewModel.deleteCalendarEvent(event.id) }) {
                                 Icon(Icons.Default.Delete, contentDescription = "Delete", tint = Color.Gray)
                             }
                         }
@@ -290,9 +290,9 @@ fun AcademicCalendarView(
                             title = newTitle,
                             subject = newSubject,
                             eventType = newType,
-                            dueDateEpochDay = selectedEpochDay
+                            dateEpochDay = selectedEpochDay
                         )
-                        viewModel.saveCalendarEvent(ev)
+                        viewModel.addCalendarEvent(ev)
                         showAddDialog = false
                     }
                 }) { Text("Save") }

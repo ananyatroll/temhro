@@ -36,6 +36,24 @@ fun SleekPaymentVerificationScreen(
 ) {
     var phoneNumber by remember { mutableStateOf("") }
     var redeemCode by remember { mutableStateOf("") }
+    var selectedDept by remember { mutableStateOf("Computer Science") }
+    val departments = listOf(
+        "Accounting and Finance",
+        "Economics",
+        "Management",
+        "Logistics and Supply Chain Management (LSCM)",
+        "Business Administration and Information Systems (BAIS)",
+        "Political Science and International Relations (PSIR)",
+        "Marketing Management",
+        "Public Administration and Development Management (PADM)",
+        "Computer Science",
+        "Information Sciences",
+        "Psychology",
+        "Software Engineering",
+        "Mechanical Engineering",
+        "Electrical Engineering",
+        "Law"
+    )
     val uriHandler = androidx.compose.ui.platform.LocalUriHandler.current
     val clipboardManager = androidx.compose.ui.platform.LocalClipboardManager.current
     val context = androidx.compose.ui.platform.LocalContext.current
@@ -327,6 +345,56 @@ fun SleekPaymentVerificationScreen(
                 }
 
                 // Section 4: Activation portal
+                if (packageId == "department") {
+                    Text(
+                        text = "SELECT YOUR DEPARTMENT",
+                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black, letterSpacing = 1.5.sp),
+                        color = GoldAccent,
+                        modifier = Modifier.align(Alignment.Start).padding(bottom = 8.dp)
+                    )
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .heightIn(max = 220.dp)
+                            .verticalScroll(rememberScrollState())
+                            .padding(bottom = 16.dp),
+                        verticalArrangement = Arrangement.spacedBy(6.dp)
+                    ) {
+                        departments.forEach { dept ->
+                            val isSelected = selectedDept == dept
+                            Surface(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clickable { 
+                                        selectedDept = dept
+                                        viewModel.saveDepartmentSetup(dept, "Year 2")
+                                    },
+                                shape = RoundedCornerShape(10.dp),
+                                color = if (isSelected) EmeraldPrimary.copy(alpha = 0.2f) else Color(0xFF1E293B),
+                                border = androidx.compose.foundation.BorderStroke(1.dp, if (isSelected) EmeraldPrimary else Color(0xFF334155))
+                            ) {
+                                Row(
+                                    modifier = Modifier.padding(10.dp),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    Icon(
+                                        imageVector = if (isSelected) Icons.Default.CheckCircle else Icons.Default.RadioButtonUnchecked,
+                                        contentDescription = null,
+                                        tint = if (isSelected) EmeraldPrimary else Color.Gray,
+                                        modifier = Modifier.size(16.dp)
+                                    )
+                                    Spacer(modifier = Modifier.width(8.dp))
+                                    Text(
+                                        text = dept,
+                                        style = MaterialTheme.typography.bodyMedium.copy(fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal),
+                                        color = Color.White
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
+
                 Text(
                     text = com.example.ui.TranslationManager.get("step2_portal", currentLang),
                     style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black, letterSpacing = 1.5.sp),
@@ -402,6 +470,9 @@ fun SleekPaymentVerificationScreen(
 
                 Button(
                     onClick = {
+                        if (packageId == "department") {
+                            viewModel.saveDepartmentSetup(selectedDept, "Year 2")
+                        }
                         if (isValidActivation && !isActivating) {
                             viewModel.activatePremiumWithRedeemCode(
                                 phoneNumber = phoneNumber.trim(),

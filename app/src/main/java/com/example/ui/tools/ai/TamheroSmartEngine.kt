@@ -37,7 +37,28 @@ class TamheroSmartEngine : AiProvider {
         val subjectNorm = rawSubject.lowercase(Locale.ROOT)
         val topicNorm = rawTopic.lowercase(Locale.ROOT)
 
-        // 2. Process requests by intent & context priority
+        // 2. Online Gemini AI attempt with rich learning context
+        try {
+            val onlinePrompt = buildString {
+                appendLine("Subject: $rawSubject")
+                if (rawTopic.isNotBlank() && rawTopic != "General") appendLine("Topic / Unit: $rawTopic")
+                if (selectedSnippet != null) appendLine("Student Selected Passage:\n$selectedSnippet")
+                if (questionText != null) appendLine("Active Practice Question:\n$questionText")
+                if (flashcardFront != null) appendLine("Active Flashcard Front:\n$flashcardFront")
+                if (noteContent != null && selectedSnippet == null) appendLine("Current Study Material Snippet:\n$noteContent")
+                appendLine("\nStudent Question / Command: $prompt")
+            }
+            val sysInstruction = "You are Tamhero, an elite academic tutor and university exam mentor. Answer directly, clearly, and encourage the student. Use clean formatting with key formulas, bullet points, and exam strategies where appropriate."
+            val onlineResponse = com.example.ui.api.GeminiHttpClient.generateText(onlinePrompt, sysInstruction)
+            if (!onlineResponse.isNullOrBlank()) {
+                lastConcept = prompt.take(60)
+                return@withContext onlineResponse
+            }
+        } catch (_: Throwable) {
+            // Gracefully fall back to local curriculum knowledge base
+        }
+
+        // 3. Local Heuristic Engine (Offline Fast Mode)
 
         // --- Priority 1: User selected text from the active page ---
         if (selectedSnippet != null && (lower.contains("explain") || lower.contains("what is") || lower.contains("this") || lower.contains("mean") || lower.contains("simpler") || lower.contains("example"))) {

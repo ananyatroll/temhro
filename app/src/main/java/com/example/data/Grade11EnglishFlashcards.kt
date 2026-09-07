@@ -4,7 +4,7 @@ object Grade11EnglishFlashcards {
 
     fun get500Flashcards(): List<Flashcard> {
         val list = mutableListOf<Flashcard>()
-        val subId = "euee_lang_eng_g11"
+        val subId = "euee_nat_english"
 
         val units = listOf(
             Pair("Unit 1: Reading Comprehension", 50),
@@ -98,6 +98,6 @@ object Grade11EnglishFlashcards {
             }
         }
 
-        return list
+        return list + list.map { it.copy(id = it.id + "_soc", subjectId = "euee_soc_english") }
     }
 }

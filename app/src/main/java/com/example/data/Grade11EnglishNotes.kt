@@ -4,7 +4,7 @@ object Grade11EnglishNotes {
 
     fun getGrade11EnglishNotes(): List<SubjectNote> {
         val notesList = mutableListOf<SubjectNote>()
-        val subId = "euee_lang_eng"
+        val subId = "euee_nat_english"
         var idx = 1
 
         fun addNote(unit: String, title: String, content: String) {
@@ -152,6 +152,6 @@ object Grade11EnglishNotes {
             """.trimIndent()
         )
 
-        return notesList
+        return notesList + notesList.map { it.copy(id = it.id + "_soc", subjectId = "euee_soc_english") }
     }
 }

@@ -27,6 +27,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
@@ -143,7 +144,7 @@ fun ContentPlayView(viewModel: StudyViewModel) {
                 currentLang = currentLang,
                 onDismiss = { viewModel.showStudyOptionsModal.value = false },
                 onNotesClick = { viewModel.startNotes() },
-                onExamsClick = { viewModel.initiateModeSelection(note.unit) },
+                onExamsClick = { viewModel.initiateModeSelection() },
                 onFlashcardsClick = { viewModel.startFlashcards() },
                 onTextbookClick = { viewModel.startTextbook() },
                 onSavedMaterialsClick = {
@@ -823,21 +824,17 @@ fun DarkThemedNotesReader(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Column(modifier = Modifier.weight(1f)) {
-                    Text(
-                        text = subjectName.uppercase(),
-                        style = MaterialTheme.typography.labelSmall,
-                        color = HolographicAqua,
-                        fontWeight = FontWeight.Black
-                    )
-                    Row(verticalAlignment = Alignment.CenterVertically) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
                         Text(
-                            text = note?.unit ?: "UNIT O",
-                            style = MaterialTheme.typography.titleLarge,
-                            color = Color.White,
-                            fontWeight = FontWeight.Bold
+                            text = subjectName.uppercase(),
+                            style = MaterialTheme.typography.labelSmall,
+                            color = HolographicAqua,
+                            fontWeight = FontWeight.Black
                         )
-                        if (note != null && !isSatCourse) {
-                            Spacer(modifier = Modifier.width(8.dp))
+                        if (note != null && !isSatCourse && note.gradeLevel.isNotBlank()) {
                             Surface(
                                 color = EmeraldPrimary.copy(alpha = 0.2f),
                                 shape = RoundedCornerShape(6.dp),
@@ -845,68 +842,30 @@ fun DarkThemedNotesReader(
                             ) {
                                 Text(
                                     text = note.gradeLevel,
-                                    style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
+                                    style = MaterialTheme.typography.labelSmall.copy(
+                                        fontWeight = FontWeight.Bold,
+                                        fontSize = 10.sp
+                                    ),
                                     color = EmeraldPrimary,
                                     modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
                                 )
                             }
                         }
                     }
+                    Spacer(modifier = Modifier.height(2.dp))
+                    Text(
+                        text = note?.unit ?: "Unit 1",
+                        style = MaterialTheme.typography.titleMedium.copy(
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 18.sp
+                        ),
+                        color = Color.White,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
+                    )
                 }
 
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    // Ask Tamhero AI button for active note
-                    FilledTonalButton(
-                        onClick = {
-                            if (note != null) {
-                                val lContext = com.example.ui.tools.ai.LearningContext(
-                                    courseId = note.subjectId,
-                                    courseName = subjectName,
-                                    topicId = note.id,
-                                    topicName = note.title.ifBlank { note.unit },
-                                    contentId = note.id,
-                                    contentText = note.content,
-                                    contentType = "notes",
-                                    gradeLevel = note.gradeLevel
-                                )
-                                viewModel.openStudentTools(
-                                    tab = "ask",
-                                    prompt = "Explain this lesson note on '${note.title.ifBlank { note.unit }}' simply step by step",
-                                    context = lContext
-                                )
-                            }
-                        },
-                        colors = ButtonDefaults.filledTonalButtonColors(
-                            containerColor = EmeraldPrimary.copy(alpha = 0.25f),
-                            contentColor = EmeraldLight
-                        ),
-                        contentPadding = PaddingValues(horizontal = 8.dp, vertical = 2.dp),
-                        shape = RoundedCornerShape(10.dp),
-                        modifier = Modifier
-                            .height(34.dp)
-                            .testTag("note_ask_ai_btn")
-                    ) {
-                        Icon(Icons.Default.SmartToy, contentDescription = "Ask Tamhero AI", modifier = Modifier.size(14.dp))
-                        Spacer(modifier = Modifier.width(4.dp))
-                        Text(TranslationManager.get("btn_ask_ai", currentLang), fontSize = 11.sp, fontWeight = FontWeight.Bold)
-                    }
-
-                    Spacer(modifier = Modifier.width(4.dp))
-
-                    // Table of Contents button
-                    IconButton(
-                        onClick = { viewModel.showNotesTableOfContents.value = true },
-                        modifier = Modifier.testTag("note_toc_button")
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.FormatListBulleted,
-                            contentDescription = "Table of Contents",
-                            tint = EmeraldPrimary
-                        )
-                    }
-
-                    Spacer(modifier = Modifier.width(4.dp))
-
                     // Save note button
                     IconButton(
                         onClick = {

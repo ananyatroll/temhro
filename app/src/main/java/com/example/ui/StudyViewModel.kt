@@ -452,7 +452,7 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    val selectedGradeFilter = MutableStateFlow("All") // "All", "Grade 9", "Grade 10", "Grade 11", "Grade 12"
+    val selectedGradeFilter = MutableStateFlow("Grade 9") // "Grade 9", "Grade 10", "Grade 11", "Grade 12"
 
     // Notes reading view
     private val rawNotes = activeSubject.flatMapLatest { subject ->
@@ -465,9 +465,20 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
         else notesList.filter { it.gradeLevel.equals(grade, ignoreCase = true) || it.gradeLevel == "General" }
         filtered.sortedWith(
             compareBy<SubjectNote> { note ->
-                Regex("""Unit\s+(\d+)""", RegexOption.IGNORE_CASE).find(note.unit)?.groupValues?.getOrNull(1)?.toIntOrNull() ?: 99
+                val uMatch = Regex("""(?:Unit|Chapter)\s*(\d+)""", RegexOption.IGNORE_CASE).find(note.unit)
+                val uNum = uMatch?.groupValues?.getOrNull(1)?.toIntOrNull()
+                val secInTitle = Regex("""(?:Section|Sec\.?|Sections)\s*(\d+)\.(\d+)""", RegexOption.IGNORE_CASE).find(note.title)
+                    ?: Regex("""\b(\d+)\.(\d+)\b""").find(note.title)
+                val secInUnit = Regex("""(?:Section|Sec\.?|Sections)\s*(\d+)\.(\d+)""", RegexOption.IGNORE_CASE).find(note.unit)
+                    ?: Regex("""\b(\d+)\.(\d+)\b""").find(note.unit)
+                uNum ?: secInTitle?.groupValues?.getOrNull(1)?.toIntOrNull()
+                    ?: secInUnit?.groupValues?.getOrNull(1)?.toIntOrNull() ?: 99
             }.thenBy { note ->
-                Regex("""Section\s+(\d+(?:\.\d+)?)""", RegexOption.IGNORE_CASE).find(note.title)?.groupValues?.getOrNull(1)?.toFloatOrNull() ?: 0f
+                val secMatch = Regex("""(?:Section|Sec\.?|Sections)\s*(\d+(?:\.\d+)?)""", RegexOption.IGNORE_CASE).find(note.title)
+                    ?: Regex("""\b(\d+\.\d+)\b""").find(note.title)
+                    ?: Regex("""(?:Section|Sec\.?|Sections)\s*(\d+(?:\.\d+)?)""", RegexOption.IGNORE_CASE).find(note.unit)
+                    ?: Regex("""\b(\d+\.\d+)\b""").find(note.unit)
+                secMatch?.groupValues?.getOrNull(1)?.toFloatOrNull() ?: 0f
             }
         )
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
@@ -483,6 +494,10 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
     val lastStudiedTopic = MutableStateFlow<String?>(sharedPrefs.getString("last_studied_topic", null))
     val lastStudiedSubjectId = MutableStateFlow<String?>(sharedPrefs.getString("last_studied_subject_id", null))
     val lastStudiedGrade = MutableStateFlow<String?>(sharedPrefs.getString("last_studied_grade", null))
+
+    // Smart Flashcards: Unit filtering and spaced review status
+    val selectedFlashcardUnit = MutableStateFlow("All")
+    val selectedExamUnit = MutableStateFlow("All")
 
     // Practice/Exam view - Shuffles questions freshly on every entry and re-entry
     val questionShuffleTrigger = MutableStateFlow(0)
@@ -515,9 +530,6 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
     val currentFlashcardIndex = MutableStateFlow(0)
     val isFlashcardFlipped = MutableStateFlow(false)
 
-    // Smart Flashcards: Unit filtering and spaced review status
-    val selectedFlashcardUnit = MutableStateFlow("All")
-    val selectedExamUnit = MutableStateFlow("All")
     val cardMasteredSet = MutableStateFlow<Set<String>>(sharedPrefs.getStringSet("card_mastered_ids", emptySet()) ?: emptySet())
     val cardDifficultSet = MutableStateFlow<Set<String>>(sharedPrefs.getStringSet("card_difficult_ids", emptySet()) ?: emptySet())
     val cardReviewHistory = MutableStateFlow<Map<String, Int>>(emptyMap())
@@ -861,12 +873,6 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
     // Selection routines
     fun selectSubject(subject: StudySubject) {
         if (!checkFreeTrialAccess(subject)) {
-            return
-        }
-
-        if (subject.packageId == "department") {
-            academicDepartment.value = subject.name
-            showDepartmentSetupModal.value = true
             return
         }
 

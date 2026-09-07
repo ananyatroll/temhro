@@ -16,7 +16,10 @@ object GeminiHttpClient {
         .writeTimeout(60, TimeUnit.SECONDS)
         .build()
 
-    private const val BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
+    private const val BASE_URL_25 = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
+    private const val BASE_URL_15 = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent"
+
+    private fun getApiUrls(): List<String> = listOf(BASE_URL_25, BASE_URL_15)
 
     suspend fun analyzeVideo(videoUrlOrTopic: String, subjectName: String, mode: String): JSONObject? = withContext(Dispatchers.IO) {
         val apiKey = com.example.BuildConfig.GEMINI_API_KEY
@@ -60,41 +63,43 @@ object GeminiHttpClient {
             }
         """.trimIndent()
 
-        try {
-            val partsObj = JSONObject().put("text", prompt)
-            val contentObj = JSONObject().put("parts", org.json.JSONArray().put(partsObj))
-            val contentsArr = org.json.JSONArray().put(contentObj)
-            
-            val genConfig = JSONObject().put("responseMimeType", "application/json")
-            
-            val payload = JSONObject()
-                .put("contents", contentsArr)
-                .put("generationConfig", genConfig)
+        for (endpoint in getApiUrls()) {
+            try {
+                val partsObj = JSONObject().put("text", prompt)
+                val contentObj = JSONObject().put("parts", org.json.JSONArray().put(partsObj))
+                val contentsArr = org.json.JSONArray().put(contentObj)
+                
+                val genConfig = JSONObject().put("responseMimeType", "application/json")
+                
+                val payload = JSONObject()
+                    .put("contents", contentsArr)
+                    .put("generationConfig", genConfig)
 
-            val mediaType = "application/json; charset=utf-8".toMediaType()
-            val body = payload.toString().toRequestBody(mediaType)
+                val mediaType = "application/json; charset=utf-8".toMediaType()
+                val body = payload.toString().toRequestBody(mediaType)
 
-            val url = "$BASE_URL?key=$apiKey"
-            val request = Request.Builder()
-                .url(url)
-                .post(body)
-                .build()
+                val url = "$endpoint?key=$apiKey"
+                val request = Request.Builder()
+                    .url(url)
+                    .post(body)
+                    .build()
 
-            val response = client.newCall(request).execute()
-            if (!response.isSuccessful) return@withContext null
-            
-            val responseBody = response.body?.string() ?: return@withContext null
-            val responseJson = JSONObject(responseBody)
-            
-            val candidates = responseJson.getJSONArray("candidates")
-            val firstCandidate = candidates.getJSONObject(0)
-            val text = firstCandidate.getJSONObject("content").getJSONArray("parts").getJSONObject(0).getString("text")
-            
-            JSONObject(text)
-        } catch (e: Exception) {
-            e.printStackTrace()
-            null
+                val response = client.newCall(request).execute()
+                if (!response.isSuccessful) continue
+                
+                val responseBody = response.body?.string() ?: continue
+                val responseJson = JSONObject(responseBody)
+                
+                val candidates = responseJson.getJSONArray("candidates")
+                val firstCandidate = candidates.getJSONObject(0)
+                val text = firstCandidate.getJSONObject("content").getJSONArray("parts").getJSONObject(0).getString("text")
+                
+                return@withContext JSONObject(text)
+            } catch (e: Exception) {
+                // Try next endpoint
+            }
         }
+        null
     }
 
     suspend fun generateText(prompt: String, systemInstruction: String? = null): String? = withContext(Dispatchers.IO) {
@@ -103,40 +108,126 @@ object GeminiHttpClient {
             return@withContext null
         }
 
-        try {
-            val partsObj = JSONObject().put("text", prompt)
-            val contentObj = JSONObject().put("parts", org.json.JSONArray().put(partsObj))
-            val contentsArr = org.json.JSONArray().put(contentObj)
+        for (endpoint in getApiUrls()) {
+            try {
+                val partsObj = JSONObject().put("text", prompt)
+                val contentObj = JSONObject().put("parts", org.json.JSONArray().put(partsObj))
+                val contentsArr = org.json.JSONArray().put(contentObj)
 
-            val payload = JSONObject().put("contents", contentsArr)
+                val payload = JSONObject().put("contents", contentsArr)
 
-            if (!systemInstruction.isNullOrBlank()) {
-                val sysPart = JSONObject().put("text", systemInstruction)
-                val sysContent = JSONObject().put("parts", org.json.JSONArray().put(sysPart))
-                payload.put("systemInstruction", sysContent)
+                if (!systemInstruction.isNullOrBlank()) {
+                    val sysPart = JSONObject().put("text", systemInstruction)
+                    val sysContent = JSONObject().put("parts", org.json.JSONArray().put(sysPart))
+                    payload.put("systemInstruction", sysContent)
+                }
+
+                val mediaType = "application/json; charset=utf-8".toMediaType()
+                val body = payload.toString().toRequestBody(mediaType)
+
+                val url = "$endpoint?key=$apiKey"
+                val request = Request.Builder()
+                    .url(url)
+                    .post(body)
+                    .build()
+
+                val response = client.newCall(request).execute()
+                if (!response.isSuccessful) continue
+
+                val responseBody = response.body?.string() ?: continue
+                val responseJson = JSONObject(responseBody)
+
+                val candidates = responseJson.optJSONArray("candidates") ?: continue
+                if (candidates.length() == 0) continue
+                val firstCandidate = candidates.getJSONObject(0)
+                val parts = firstCandidate.optJSONObject("content")?.optJSONArray("parts") ?: continue
+                if (parts.length() == 0) continue
+                val result = parts.getJSONObject(0).optString("text", "")
+                if (result.isNotBlank()) {
+                    return@withContext result
+                }
+            } catch (e: Exception) {
+                // Try next fallback endpoint
             }
-
-            val mediaType = "application/json; charset=utf-8".toMediaType()
-            val body = payload.toString().toRequestBody(mediaType)
-
-            val url = "$BASE_URL?key=$apiKey"
-            val request = Request.Builder()
-                .url(url)
-                .post(body)
-                .build()
-
-            val response = client.newCall(request).execute()
-            if (!response.isSuccessful) return@withContext null
-
-            val responseBody = response.body?.string() ?: return@withContext null
-            val responseJson = JSONObject(responseBody)
-
-            val candidates = responseJson.getJSONArray("candidates")
-            val firstCandidate = candidates.getJSONObject(0)
-            firstCandidate.getJSONObject("content").getJSONArray("parts").getJSONObject(0).getString("text")
-        } catch (e: Exception) {
-            e.printStackTrace()
-            null
         }
+        null
+    }
+
+    /**
+     * Extracts text and study notes from a document bitmap using Gemini Vision.
+     */
+    suspend fun extractTextFromImage(bitmap: android.graphics.Bitmap): String? = withContext(Dispatchers.IO) {
+        val apiKey = com.example.BuildConfig.GEMINI_API_KEY
+        if (apiKey.isEmpty() || apiKey == "MY_GEMINI_API_KEY") {
+            return@withContext null
+        }
+
+        val base64Image = try {
+            val stream = java.io.ByteArrayOutputStream()
+            // Scale bitmap to reasonable resolution for high OCR fidelity without payload bloat
+            val maxDimension = 1280
+            val scale = if (bitmap.width > maxDimension || bitmap.height > maxDimension) {
+                val factor = maxDimension.toFloat() / kotlin.math.max(bitmap.width, bitmap.height)
+                android.graphics.Bitmap.createScaledBitmap(
+                    bitmap,
+                    (bitmap.width * factor).toInt(),
+                    (bitmap.height * factor).toInt(),
+                    true
+                )
+            } else {
+                bitmap
+            }
+            scale.compress(android.graphics.Bitmap.CompressFormat.JPEG, 85, stream)
+            val byteArray = stream.toByteArray()
+            android.util.Base64.encodeToString(byteArray, android.util.Base64.NO_WRAP)
+        } catch (e: Exception) {
+            return@withContext null
+        }
+
+        val ocrPrompt = "Transcribe all printed or handwritten text from this document image accurately and clearly. Preserve paragraph structure, headings, bullet points, numbers, and formulas. Do not add intro/outro commentary, return only the extracted text."
+
+        for (endpoint in getApiUrls()) {
+            try {
+                val textPart = JSONObject().put("text", ocrPrompt)
+                val inlineData = JSONObject()
+                    .put("mimeType", "image/jpeg")
+                    .put("data", base64Image)
+                val imagePart = JSONObject().put("inlineData", inlineData)
+
+                val partsArr = org.json.JSONArray().put(textPart).put(imagePart)
+                val contentObj = JSONObject().put("parts", partsArr)
+                val contentsArr = org.json.JSONArray().put(contentObj)
+
+                val payload = JSONObject().put("contents", contentsArr)
+
+                val mediaType = "application/json; charset=utf-8".toMediaType()
+                val body = payload.toString().toRequestBody(mediaType)
+
+                val url = "$endpoint?key=$apiKey"
+                val request = Request.Builder()
+                    .url(url)
+                    .post(body)
+                    .build()
+
+                val response = client.newCall(request).execute()
+                if (!response.isSuccessful) continue
+
+                val responseBody = response.body?.string() ?: continue
+                val responseJson = JSONObject(responseBody)
+
+                val candidates = responseJson.optJSONArray("candidates") ?: continue
+                if (candidates.length() == 0) continue
+                val firstCandidate = candidates.getJSONObject(0)
+                val parts = firstCandidate.optJSONObject("content")?.optJSONArray("parts") ?: continue
+                if (parts.length() == 0) continue
+                val result = parts.getJSONObject(0).optString("text", "")
+                if (result.isNotBlank()) {
+                    return@withContext result.trim()
+                }
+            } catch (e: Exception) {
+                // Try next endpoint
+            }
+        }
+        null
     }
 }

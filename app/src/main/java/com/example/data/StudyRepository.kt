@@ -170,9 +170,9 @@ class StudyRepository(private val dao: EducationDao) : DataRepository {
         Log.d(TAG, "seedDatabaseIfEmpty: Verification check -> subjects: $subjectsCount, notes: $notesCount, questions: $questionsCount, flashcards: $flashcardsCount")
 
         // Fast path: If all data is already populated and verified, return immediately without instantiating large lists
-        if (subjectsCount >= 41 && notesCount >= 462 && questionsCount >= 796 && flashcardsCount >= 9128) {
+        if (subjectsCount >= 41 && notesCount >= 750 && questionsCount >= 796 && flashcardsCount >= 17000) {
             val elapsed = System.currentTimeMillis() - startTime
-            Log.d(TAG, "seedDatabaseIfEmpty: Database verified in ${elapsed}ms. DB is fully populated with 41 subjects, 462 notes, 796 questions, and 9,128 flashcards.")
+            Log.d(TAG, "seedDatabaseIfEmpty: Database verified in ${elapsed}ms. DB is fully populated with subjects, notes, questions, and flashcards.")
             return@withContext
         }
 
@@ -260,7 +260,7 @@ class StudyRepository(private val dao: EducationDao) : DataRepository {
         }
 
         // 2. Seed Notes if needed
-        if (notesCount < 462) {
+        if (notesCount < 750) {
             Log.d(TAG, "seedDatabaseIfEmpty: Notes count low ($notesCount), seeding comprehensive notes...")
             val notesList = listOf(
                 // Biology
@@ -339,7 +339,7 @@ class StudyRepository(private val dao: EducationDao) : DataRepository {
                     "• Classification: Australopithecus afarensis. She represents a highly complete skeletal link demonstrating evolutionary upright bipedalism, combined with small chimpanzee-sized brain cavities.\n" +
                     "• Paleontological Context: Discoveries like Ardi (Ardipithecus ramidus) further cement the Great Rift Valley as a global goldmine for human origin research."
                 )
-            ) + getFreshmanNotes() + getSemester2Notes() + getUatNotes() + getEueeNotes() + getDepartmentNotes() + getExitExamNotes() + Grade9MathNotes.getGrade9MathNotes() + Grade9EnglishNotes.getGrade9EnglishNotes() + Grade9PhysicsNotes.getGrade9PhysicsNotes() + Grade9BiologyNotes.getGrade9BiologyNotes() + Grade9ChemistryNotes.getGrade9ChemistryNotes() + Grade9HistoryNotes.getGrade9HistoryNotes() + Grade9GeographyNotes.getGrade9GeographyNotes() + Grade9EconomicsNotes.getGrade9EconomicsNotes() + Grade10MathNotes.getGrade10MathNotes() + Grade10EnglishNotes.getGrade10EnglishNotes() + Grade10ChemistryNotes.getGrade10ChemistryNotes() + Grade10PhysicsNotes.getGrade10PhysicsNotes() + Grade10BiologyNotes.getGrade10BiologyNotes() + Grade10HistoryNotes.getGrade10HistoryNotes() + Grade10GeographyNotes.getGrade10GeographyNotes() + Grade10EconomicsNotes.getGrade10EconomicsNotes()
+            ) + getFreshmanNotes() + getSemester2Notes() + getUatNotes() + getEueeNotes() + getDepartmentNotes() + getExitExamNotes() + Grade9MathNotes.getGrade9MathNotes() + Grade9EnglishNotes.getGrade9EnglishNotes() + Grade9PhysicsNotes.getGrade9PhysicsNotes() + Grade9BiologyNotes.getGrade9BiologyNotes() + Grade9ChemistryNotes.getGrade9ChemistryNotes() + Grade9HistoryNotes.getGrade9HistoryNotes() + Grade9GeographyNotes.getGrade9GeographyNotes() + Grade9EconomicsNotes.getGrade9EconomicsNotes() + Grade10MathNotes.getGrade10MathNotes() + Grade10EnglishNotes.getGrade10EnglishNotes() + Grade10ChemistryNotes.getGrade10ChemistryNotes() + Grade10PhysicsNotes.getGrade10PhysicsNotes() + Grade10BiologyNotes.getGrade10BiologyNotes() + Grade10HistoryNotes.getGrade10HistoryNotes() + Grade10GeographyNotes.getGrade10GeographyNotes() + Grade10EconomicsNotes.getGrade10EconomicsNotes() + Grade11BiologyNotes.getGrade11BiologyNotes() + Grade11ChemistryNotes.getGrade11ChemistryNotes() + Grade11EconomicsNotes.getGrade11EconomicsNotes() + Grade11EnglishNotes.getGrade11EnglishNotes() + Grade11GeographyNotes.getGrade11GeographyNotes() + Grade11HistoryNotes.getGrade11HistoryNotes() + Grade11MathNotes.getGrade11MathNotes() + Grade11PhysicsNotes.getGrade11PhysicsNotes() + Grade12BiologyNotes.getGrade12BiologyNotes() + Grade12ChemistryNotes.getGrade12ChemistryNotes() + Grade12EconomicsNotes.getGrade12EconomicsNotes() + Grade12EnglishNotes.getGrade12EnglishNotes() + Grade12GeographyNotes.getGrade12GeographyNotes() + Grade12HistoryNotes.getGrade12HistoryNotes() + Grade12MathNotes.getGrade12MathNotes() + Grade12PhysicsNotes.getGrade12PhysicsNotes()
             dao.insertNotes(notesList)
             Log.d(TAG, "seedDatabaseIfEmpty: Inserted ${notesList.size} notes.")
         }
@@ -417,7 +417,7 @@ class StudyRepository(private val dao: EducationDao) : DataRepository {
         }
 
         // 4. Seed Flashcards if needed
-        if (flashcardsCount < 9128) {
+        if (flashcardsCount < 17000) {
             Log.d(TAG, "seedDatabaseIfEmpty: Flashcards count low ($flashcardsCount), seeding flashcards...")
             val flashcardsList = listOf(
                 // Biology
@@ -439,7 +439,7 @@ class StudyRepository(private val dao: EducationDao) : DataRepository {
                 Flashcard("anth_fc_1", "anthropology", "Lucy (Dinkinesh)", "Famous bipedal Australopithecus afarensis skeleton discovered in Afar in 1974.", false, false),
                 Flashcard("anth_fc_2", "anthropology", "Four-Field Approach", "Traditional fields: Archaeology, Cultural, Biological, and Linguistic Anthropology.", false, false),
                 Flashcard("anth_fc_3", "anthropology", "Bipedalism", "The evolutionary anatomical capacity to stand and walk upright on two legs.", false, false)
-            ) + getEueeFlashcards() + getFreshmanFlashcards() + getDepartmentFlashcards() + getExitExamFlashcards() + Grade9MathFlashcards.get500Flashcards() + Grade9EnglishFlashcards.get500Flashcards() + Grade9PhysicsFlashcards.get500Flashcards() + Grade9BiologyFlashcards.get500Flashcards() + Grade9ChemistryFlashcards.get500Flashcards() + Grade9HistoryFlashcards.get500Flashcards() + Grade9GeographyFlashcards.get500Flashcards() + Grade9EconomicsFlashcards.get500Flashcards() + Grade10MathFlashcards.get500Flashcards() + Grade10EnglishFlashcards.get500Flashcards() + Grade10ChemistryFlashcards.get500Flashcards() + Grade10PhysicsFlashcards.get500Flashcards() + Grade10BiologyFlashcards.get500Flashcards() + Grade10HistoryFlashcards.get500Flashcards() + Grade10GeographyFlashcards.get500Flashcards() + Grade10EconomicsFlashcards.get500Flashcards()
+            ) + getEueeFlashcards() + getFreshmanFlashcards() + getDepartmentFlashcards() + getExitExamFlashcards() + Grade9MathFlashcards.get500Flashcards() + Grade9EnglishFlashcards.get500Flashcards() + Grade9PhysicsFlashcards.get500Flashcards() + Grade9BiologyFlashcards.get500Flashcards() + Grade9ChemistryFlashcards.get500Flashcards() + Grade9HistoryFlashcards.get500Flashcards() + Grade9GeographyFlashcards.get500Flashcards() + Grade9EconomicsFlashcards.get500Flashcards() + Grade10MathFlashcards.get500Flashcards() + Grade10EnglishFlashcards.get500Flashcards() + Grade10ChemistryFlashcards.get500Flashcards() + Grade10PhysicsFlashcards.get500Flashcards() + Grade10BiologyFlashcards.get500Flashcards() + Grade10HistoryFlashcards.get500Flashcards() + Grade10GeographyFlashcards.get500Flashcards() + Grade10EconomicsFlashcards.get500Flashcards() + Grade11BiologyFlashcards.get500Flashcards() + Grade11ChemistryFlashcards.get500Flashcards() + Grade11EconomicsFlashcards.get500Flashcards() + Grade11EnglishFlashcards.get500Flashcards() + Grade11GeographyFlashcards.get500Flashcards() + Grade11HistoryFlashcards.get500Flashcards() + Grade11MathFlashcards.get500Flashcards() + Grade11PhysicsFlashcards.get500Flashcards() + Grade12BiologyFlashcards.get500Flashcards() + Grade12ChemistryFlashcards.get500Flashcards() + Grade12EconomicsFlashcards.get500Flashcards() + Grade12EnglishFlashcards.get500Flashcards() + Grade12GeographyFlashcards.get500Flashcards() + Grade12HistoryFlashcards.get500Flashcards() + Grade12MathFlashcards.get500Flashcards() + Grade12PhysicsFlashcards.get500Flashcards()
             dao.insertFlashcards(flashcardsList)
             Log.d(TAG, "seedDatabaseIfEmpty: Inserted ${flashcardsList.size} flashcards.")
         }

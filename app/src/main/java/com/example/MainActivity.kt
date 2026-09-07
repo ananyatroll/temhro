@@ -25,6 +25,9 @@ import com.example.ui.theme.EmeraldPrimary
 import com.example.ui.theme.MyApplicationTheme
 import com.example.ui.tools.ui.StudentToolsLauncher
 import com.example.ui.tools.ui.StudentToolsModalSheet
+import androidx.compose.animation.core.*
+import androidx.compose.ui.draw.clip
+import androidx.compose.foundation.shape.RoundedCornerShape
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -150,6 +153,7 @@ class MainActivity : ComponentActivity() {
                                         }
                                     }
                                 }
+                            }
                         } else {
                             // Root layout: Content area + Persistent bottom banner advertisement
                             Column(modifier = Modifier.fillMaxSize()) {

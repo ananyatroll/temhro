@@ -613,6 +613,13 @@ fun SubjectFlashcardRow(
                         if (currentCard != null) {
                             val isCardMastered = cardMasteredSet.contains(currentCard.id) || currentCard.isKnown
                             val isCardDifficult = cardDifficultSet.contains(currentCard.id)
+                            var popupMessage by remember { mutableStateOf("") }
+                            LaunchedEffect(popupMessage) {
+                                if (popupMessage.isNotEmpty()) {
+                                    kotlinx.coroutines.delay(1500)
+                                    popupMessage = ""
+                                }
+                            }
 
                             Column(
                                 modifier = Modifier
@@ -666,40 +673,12 @@ fun SubjectFlashcardRow(
 
                                 // Interactive Flippable Card Frame
                                 Box(contentAlignment = Alignment.Center) {
-                                    FlippableCard(
-                                        card = currentCard,
-                                        isFlipped = isFlipped,
-                                        onFlipClick = { viewModel.isFlashcardFlipped.value = !isFlipped }
-                                    )
-                                    
-                                    var popupMessage by remember { mutableStateOf("") }
-                                    LaunchedEffect(popupMessage) {
-                                        if (popupMessage.isNotEmpty()) {
-                                            kotlinx.coroutines.delay(1500)
-                                            popupMessage = ""
-                                        }
-                                    }
-                                    
-                                    AnimatedVisibility(
-                                        visible = popupMessage.isNotEmpty(),
-                                        enter = fadeIn() + scaleIn(),
-                                        exit = fadeOut() + scaleOut()
-                                    ) {
-                                        Surface(
-                                            color = Color(0xFF0F172A).copy(alpha = 0.95f),
-                                            shape = RoundedCornerShape(16.dp),
-                                            border = androidx.compose.foundation.BorderStroke(1.5.dp, EmeraldPrimary.copy(alpha = 0.5f)),
-                                            modifier = Modifier.padding(16.dp)
-                                        ) {
-                                            Text(
-                                                text = popupMessage,
-                                                color = Color.White,
-                                                fontWeight = FontWeight.Bold,
-                                                modifier = Modifier.padding(horizontal = 24.dp, vertical = 12.dp)
-                                            )
-                                        }
-                                    }
-                                }
+                                     FlippableCard(
+                                         card = currentCard,
+                                         isFlipped = isFlipped,
+                                         onFlipClick = { viewModel.isFlashcardFlipped.value = !isFlipped }
+                                     )
+                                 }
 
                             Spacer(modifier = Modifier.height(14.dp))
 

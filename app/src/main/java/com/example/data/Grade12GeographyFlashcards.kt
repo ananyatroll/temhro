@@ -4,7 +4,7 @@ object Grade12GeographyFlashcards {
 
     fun get500Flashcards(): List<Flashcard> {
         val list = mutableListOf<Flashcard>()
-        val subId = "euee_soc_geo_g12"
+        val subId = "euee_soc_geography"
 
         val units = listOf(
             Pair("Unit 1: Human Geography: Nature and Scope", 42),

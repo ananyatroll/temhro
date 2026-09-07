@@ -8,6 +8,8 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -362,6 +364,7 @@ fun ChooseToolScreen(viewModel: StudyViewModel) {
                 packageId = pkgId,
                 packageName = pkgName,
                 currentLang = currentLang,
+                viewModel = viewModel,
                 onDismiss = { viewModel.enrollmentConfirmationPackage.value = null },
                 onConfirm = { selectedPackageId ->
                     val activity = AdsManager.findActivity(modalContext)
@@ -595,11 +598,30 @@ fun EnrollmentConfirmationModal(
     packageId: String,
     packageName: String,
     currentLang: String = "en",
+    viewModel: StudyViewModel,
     onDismiss: () -> Unit,
     onConfirm: (String) -> Unit,
     onUpgradePremium: () -> Unit
 ) {
     var selectedStream by remember { mutableStateOf("natural") } // "natural" or "social"
+    var selectedDept by remember { mutableStateOf("Computer Science") }
+    val departments = listOf(
+        "Accounting and Finance",
+        "Economics",
+        "Management",
+        "Logistics and Supply Chain Management (LSCM)",
+        "Business Administration and Information Systems (BAIS)",
+        "Political Science and International Relations (PSIR)",
+        "Marketing Management",
+        "Public Administration and Development Management (PADM)",
+        "Computer Science",
+        "Information Sciences",
+        "Psychology",
+        "Software Engineering",
+        "Mechanical Engineering",
+        "Electrical Engineering",
+        "Law"
+    )
     fun t(key: String): String = TranslationManager.get(key, currentLang)
 
     Dialog(onDismissRequest = onDismiss) {
@@ -752,6 +774,62 @@ fun EnrollmentConfirmationModal(
                         lineHeight = 18.sp,
                         modifier = Modifier.padding(bottom = 20.dp)
                     )
+                } else if (packageId == "department") {
+                    Text(
+                        text = "SELECT YOUR DEPARTMENT",
+                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black, letterSpacing = 1.5.sp),
+                        color = GoldAccent,
+                        modifier = Modifier.padding(bottom = 8.dp)
+                    )
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .heightIn(max = 220.dp)
+                            .verticalScroll(rememberScrollState())
+                            .padding(bottom = 12.dp),
+                        verticalArrangement = Arrangement.spacedBy(6.dp)
+                    ) {
+                        departments.forEach { dept ->
+                            val isSelected = selectedDept == dept
+                            Surface(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clickable { 
+                                        selectedDept = dept
+                                        viewModel.saveDepartmentSetup(dept, "Year 2")
+                                    },
+                                shape = RoundedCornerShape(10.dp),
+                                color = if (isSelected) EmeraldPrimary.copy(alpha = 0.2f) else Color(0xFF1E293B),
+                                border = BorderStroke(1.dp, if (isSelected) EmeraldPrimary else Color.Transparent)
+                            ) {
+                                Row(
+                                    modifier = Modifier.padding(10.dp),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    Icon(
+                                        imageVector = if (isSelected) Icons.Default.CheckCircle else Icons.Default.RadioButtonUnchecked,
+                                        contentDescription = null,
+                                        tint = if (isSelected) EmeraldPrimary else Color.Gray,
+                                        modifier = Modifier.size(16.dp)
+                                    )
+                                    Spacer(modifier = Modifier.width(8.dp))
+                                    Text(
+                                        text = dept,
+                                        style = MaterialTheme.typography.bodyMedium.copy(fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal),
+                                        color = Color.White
+                                    )
+                                }
+                            }
+                        }
+                    }
+                    Text(
+                        text = "Select your academic department to access tailored department courses and exam prep.",
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = TextMuted,
+                        textAlign = TextAlign.Center,
+                        lineHeight = 18.sp,
+                        modifier = Modifier.padding(bottom = 16.dp)
+                    )
                 } else {
                     val descText = "${t("other_trial_desc_prefix")}$packageName${t("other_trial_desc_suffix")}\n\n" +
                             "${t("trial_includes_title")}\n" +
@@ -776,6 +854,9 @@ fun EnrollmentConfirmationModal(
                     // 1. Premium Upgrade Button
                     Button(
                         onClick = {
+                            if (packageId == "department") {
+                                viewModel.saveDepartmentSetup(selectedDept, "Year 2")
+                            }
                             onUpgradePremium()
                         },
                         modifier = Modifier
@@ -812,6 +893,9 @@ fun EnrollmentConfirmationModal(
                             if (packageId == "euee") {
                                 onConfirm(if (selectedStream == "natural") "euee_natural" else "euee_social")
                             } else {
+                                if (packageId == "department") {
+                                    viewModel.saveDepartmentSetup(selectedDept, "Year 2")
+                                }
                                 onConfirm(packageId)
                             }
                         },
