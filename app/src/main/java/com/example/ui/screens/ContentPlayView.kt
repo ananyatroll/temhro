@@ -254,11 +254,13 @@ fun ContentPlayView(viewModel: StudyViewModel) {
                 onPrevious = {
                     if (currentQuestionIdx > 0) {
                         viewModel.currentQuestionIndex.value = currentQuestionIdx - 1
+                        viewModel.resetQuestionTimer(120)
                     }
                 },
                 onNext = {
                     if (currentQuestionIdx < questions.size - 1) {
                         viewModel.currentQuestionIndex.value = currentQuestionIdx + 1
+                        viewModel.resetQuestionTimer(120)
                     }
                 },
                 onSubmit = { viewModel.finishExam() },
@@ -927,81 +929,6 @@ fun DarkThemedNotesReader(
                     )
 
                     Spacer(modifier = Modifier.height(16.dp))
-
-                    // Contextual AI actions for the active note
-                    com.example.ui.tools.ui.ContextualAiActions(
-                        viewModel = viewModel,
-                        learningContext = com.example.ui.tools.ai.LearningContext(
-                            courseId = note.subjectId,
-                            courseName = subjectName,
-                            topicId = note.id,
-                            topicName = note.title.ifBlank { note.unit },
-                            contentId = note.id,
-                            contentText = note.content,
-                            contentType = "notes",
-                            gradeLevel = note.gradeLevel
-                        ),
-                        actions = com.example.ui.tools.ui.ContextualAiActionSets.notes(note.title.ifBlank { note.unit }),
-                        modifier = Modifier.fillMaxWidth()
-                    )
-
-                    Spacer(modifier = Modifier.height(24.dp))
-
-                    // Connected Academic Learning Loop Action Cards
-                    Card(
-                        shape = RoundedCornerShape(12.dp),
-                        colors = CardDefaults.cardColors(containerColor = CardBgDark),
-                        border = androidx.compose.foundation.BorderStroke(1.dp, EmeraldPrimary.copy(alpha = 0.35f)),
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(vertical = 12.dp)
-                    ) {
-                        Column(modifier = Modifier.padding(14.dp)) {
-                            Text(
-                                text = "PRACTICE & REVIEW THIS UNIT",
-                                style = MaterialTheme.typography.labelSmall.copy(
-                                    fontWeight = FontWeight.Black,
-                                    fontSize = 10.sp,
-                                    letterSpacing = 1.sp
-                                ),
-                                color = EmeraldPrimary
-                            )
-                            Spacer(modifier = Modifier.height(10.dp))
-
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.spacedBy(8.dp)
-                            ) {
-                                Button(
-                                    onClick = {
-                                        viewModel.openFlashcardsForCurrentUnit(note.unit)
-                                    },
-                                    colors = ButtonDefaults.buttonColors(containerColor = IndigoSecondary),
-                                    shape = RoundedCornerShape(8.dp),
-                                    contentPadding = PaddingValues(horizontal = 10.dp, vertical = 8.dp),
-                                    modifier = Modifier.weight(1f)
-                                ) {
-                                    Icon(Icons.Default.Layers, contentDescription = null, modifier = Modifier.size(16.dp), tint = EmeraldLight)
-                                    Spacer(modifier = Modifier.width(6.dp))
-                                    Text("Flashcards", fontSize = 12.sp, color = Color.White, fontWeight = FontWeight.Bold)
-                                }
-
-                                Button(
-                                    onClick = {
-                                        viewModel.initiateModeSelection(note.unit)
-                                    },
-                                    colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary),
-                                    shape = RoundedCornerShape(8.dp),
-                                    contentPadding = PaddingValues(horizontal = 10.dp, vertical = 8.dp),
-                                    modifier = Modifier.weight(1f)
-                                ) {
-                                    Icon(Icons.Default.Timer, contentDescription = null, modifier = Modifier.size(16.dp), tint = Color.White)
-                                    Spacer(modifier = Modifier.width(6.dp))
-                                    Text("Practice Arena", fontSize = 12.sp, color = Color.White, fontWeight = FontWeight.Bold)
-                                }
-                            }
-                        }
-                    }
                 } else {
                     Box(
                         modifier = Modifier
@@ -1284,33 +1211,6 @@ fun QuestionsArena(
                         }
                     }
 
-                    // Contextual AI help for the current question (practice mode only, before reveal)
-                    if (!isExam && !isAnswerRevealed) {
-                        Spacer(modifier = Modifier.height(12.dp))
-                        com.example.ui.tools.ui.ContextualAiActions(
-                            viewModel = viewModel,
-                            learningContext = com.example.ui.tools.ai.LearningContext(
-                                courseId = question.subjectId,
-                                courseName = subjectName,
-                                topicId = question.id,
-                                topicName = "$subjectName Question #${index + 1}",
-                                contentId = question.id,
-                                contentType = "practice",
-                                question = question.questionText,
-                                questionOptions = listOf(
-                                    "A) ${question.optionA}",
-                                    "B) ${question.optionB}",
-                                    "C) ${question.optionC}",
-                                    "D) ${question.optionD}"
-                                ),
-                                correctAnswer = question.correctOption,
-                                explanation = question.explanation
-                            ),
-                            actions = com.example.ui.tools.ui.ContextualAiActionSets.practice(),
-                            modifier = Modifier.fillMaxWidth()
-                        )
-                    }
-
                     // Reveal Answer button (For Practice Mode)
                     if (!isExam) {
                         Spacer(modifier = Modifier.height(20.dp))
@@ -1352,51 +1252,6 @@ fun QuestionsArena(
                                         color = TextLight,
                                         lineHeight = 20.sp
                                     )
-
-                                    // Deep dive AI explanation (Strictly only in Practice mode)
-                                    if (!isExam) {
-                                        Spacer(modifier = Modifier.height(10.dp))
-                                        FilledTonalButton(
-                                            onClick = {
-                                                val options = listOfNotNull(
-                                                    question.optionA.let { "A) $it" },
-                                                    question.optionB.let { "B) $it" },
-                                                    question.optionC.let { "C) $it" },
-                                                    question.optionD.let { "D) $it" }
-                                                )
-                                                val lContext = com.example.ui.tools.ai.LearningContext(
-                                                    courseId = question.subjectId,
-                                                    courseName = subjectName,
-                                                    topicId = question.id,
-                                                    topicName = "$subjectName Question #${index + 1}",
-                                                    contentId = question.id,
-                                                    contentType = "practice",
-                                                    question = question.questionText,
-                                                    questionOptions = options,
-                                                    correctAnswer = question.correctOption,
-                                                    explanation = question.explanation
-                                                )
-                                                viewModel.openStudentTools(
-                                                    tab = "ask",
-                                                    prompt = "Explain why option ${question.correctOption} is correct for this question and break down the steps",
-                                                    context = lContext
-                                                )
-                                            },
-                                            colors = ButtonDefaults.filledTonalButtonColors(
-                                                containerColor = EmeraldPrimary.copy(alpha = 0.25f),
-                                                contentColor = EmeraldLight
-                                            ),
-                                            shape = RoundedCornerShape(8.dp),
-                                            modifier = Modifier
-                                                .fillMaxWidth()
-                                                .height(36.dp)
-                                                .testTag("practice_explain_step_ai_btn")
-                                        ) {
-                                            Icon(Icons.Default.SmartToy, contentDescription = null, modifier = Modifier.size(14.dp))
-                                            Spacer(modifier = Modifier.width(6.dp))
-                                            Text("Ask Tamhero to Explain Step-by-Step", fontSize = 12.sp, fontWeight = FontWeight.Bold)
-                                        }
-                                    }
                                 }
                             }
                         }

@@ -312,38 +312,12 @@ fun DocumentScannerView(
                                             }
                                         }
                                     }
-                                    Spacer(modifier = Modifier.height(8.dp))
+                                     Spacer(modifier = Modifier.height(8.dp))
                                     Text(
                                         text = extractedText,
                                         color = if (isDark) Color.LightGray else Color.DarkGray,
                                         fontSize = 15.sp,
                                         lineHeight = 22.sp
-                                    )
-                                    Spacer(modifier = Modifier.height(16.dp))
-                                    Button(
-                                        onClick = { onOpenAskTamheroWithText(extractedText) },
-                                        colors = ButtonDefaults.buttonColors(containerColor = HolographicAqua),
-                                        modifier = Modifier.fillMaxWidth(),
-                                        shape = RoundedCornerShape(12.dp)
-                                    ) {
-                                        Icon(Icons.Default.SmartToy, contentDescription = null, tint = Color.White)
-                                        Spacer(modifier = Modifier.width(8.dp))
-                                        Text("Ask Tamhero about this text", color = Color.White, fontWeight = FontWeight.Bold)
-                                    }
-                                    Spacer(modifier = Modifier.height(12.dp))
-                                    com.example.ui.tools.ui.ContextualAiActions(
-                                        viewModel = viewModel,
-                                        learningContext = com.example.ui.tools.ai.LearningContext(
-                                            courseId = "scanner",
-                                            courseName = subjectName,
-                                            topicId = "scanned_doc",
-                                            topicName = documentTitle,
-                                            contentId = "scan_document",
-                                            contentType = "scanned_doc",
-                                            contentText = extractedText
-                                        ),
-                                        actions = com.example.ui.tools.ui.ContextualAiActionSets.scannedPage(),
-                                        modifier = Modifier.fillMaxWidth()
                                     )
                                 }
                             }

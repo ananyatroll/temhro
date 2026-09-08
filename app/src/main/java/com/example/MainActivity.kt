@@ -53,24 +53,29 @@ class MainActivity : ComponentActivity() {
                 val onboardingCompleted by viewModel.isOnboardingCompleted.collectAsState()
                 val isSplashChecking by viewModel.isSplashChecking.collectAsState()
 
+                val academicDepartment by viewModel.academicDepartment.collectAsState()
+
                 // Student Tools State
                 val isStudentToolsOpen by viewModel.isStudentToolsOpen.collectAsState()
                 val activeSub by viewModel.activeSubject.collectAsState()
                 val showContentPlay by viewModel.showContentPlayView.collectAsState()
                 val showNotes by viewModel.showNotesView.collectAsState()
+                val showNotesTOC by viewModel.showNotesTableOfContents.collectAsState()
                 val showVideos by viewModel.showVideosView.collectAsState()
                 val showStudyOptions by viewModel.showStudyOptionsModal.collectAsState()
                 val showModeSelection by viewModel.showModeSelectionModal.collectAsState()
                 val activeExamMode by viewModel.activeExamMode.collectAsState()
                 val inActiveTimedExam = showContentPlay && activeExamMode == "exam"
+                val isReadingOrTesting = showNotes || showContentPlay || showNotesTOC || (currentTab == "flashcards")
                 val showStudentToolsLauncher = onboardingCompleted &&
                         progress.activePackageId != null &&
                         progress.paymentStatus != "pending" &&
-                        currentTab != "flashcards" &&
+                        currentTab == "home" &&
+                        !isReadingOrTesting &&
                         !inActiveTimedExam &&
                         !showMarketing &&
                         !isStudentToolsOpen &&
-                        (showNotes || showContentPlay || showVideos || showStudyOptions || showModeSelection)
+                        !(progress.activePackageId == "department" && academicDepartment.isBlank())
 
                 // Exception checks for AdMob banner
                 val showPaymentForm by viewModel.showPaymentVerificationScreen.collectAsState()
@@ -177,14 +182,19 @@ class MainActivity : ComponentActivity() {
                                                 senderPhone = progress.paymentSenderPhone
                                             )
                                         } else {
-                                            // Enrolled active views (approved status or free trial model)
-                                            when (currentTab) {
-                                                "home" -> DashboardScreen(viewModel = viewModel)
-                                                "flashcards" -> FlashcardScreen(viewModel = viewModel)
-                                                "profile" -> ProfileScreen(viewModel = viewModel)
-                                                else -> DashboardScreen(viewModel = viewModel)
-                                            }
-                                        }
+                                             if (progress.activePackageId == "department" && academicDepartment.isBlank()) {
+                                                 // Dedicated Department Selection Screen
+                                                 DepartmentSelectionScreen(viewModel = viewModel)
+                                             } else {
+                                                 // Enrolled active views (approved status or free trial model)
+                                                 when (currentTab) {
+                                                     "home" -> DashboardScreen(viewModel = viewModel)
+                                                     "flashcards" -> FlashcardScreen(viewModel = viewModel)
+                                                     "profile" -> ProfileScreen(viewModel = viewModel)
+                                                     else -> DashboardScreen(viewModel = viewModel)
+                                                 }
+                                             }
+                                         }
                                     }
 
                                     // Core assessment overlay (Notes reader, study choice panel, Exams mode)
@@ -202,7 +212,7 @@ class MainActivity : ComponentActivity() {
                                     // Student Tools Floating Launcher (Circular 56dp button with Tamhero logo)
                                     StudentToolsLauncher(
                                         isVisible = showStudentToolsLauncher,
-                                        onClick = { viewModel.openStudentTools("ask") },
+                                        onClick = { viewModel.openStudentTools("timer_tasks") },
                                         modifier = Modifier.align(androidx.compose.ui.Alignment.BottomEnd)
                                     )
 

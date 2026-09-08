@@ -682,26 +682,6 @@ fun SubjectFlashcardRow(
 
                             Spacer(modifier = Modifier.height(14.dp))
 
-                            // Contextual AI actions for the current flashcard
-                            com.example.ui.tools.ui.ContextualAiActions(
-                                viewModel = viewModel,
-                                learningContext = com.example.ui.tools.ai.LearningContext(
-                                    courseId = currentCard.subjectId,
-                                    courseName = subject.name,
-                                    topicId = currentCard.id,
-                                    topicName = "${subject.name} Card #${cardIndex + 1}",
-                                    contentId = currentCard.id,
-                                    contentType = "flashcard",
-                                    flashcardFront = currentCard.front,
-                                    flashcardBack = currentCard.back,
-                                    gradeLevel = currentCard.gradeLevel
-                                ),
-                                actions = com.example.ui.tools.ui.ContextualAiActionSets.flashcard(),
-                                modifier = Modifier.fillMaxWidth()
-                            )
-
-                            Spacer(modifier = Modifier.height(14.dp))
-
                             // Smart Action & Navigation Control Strip
                             Row(
                                 modifier = Modifier.fillMaxWidth(),
@@ -709,14 +689,18 @@ fun SubjectFlashcardRow(
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
                                 Row(horizontalArrangement = Arrangement.spacedBy(16.dp), verticalAlignment = Alignment.CenterVertically) {
-                                    // Mark Mastered button
+                                    // Mark Mastered button (toggleable)
                                     IconButton(
                                         onClick = {
                                             viewModel.markFlashcardMastered(currentCard.id)
-                                            if (cardIndex == activeDeckCards.size - 1) {
-                                                viewModel.triggerCompletionCelebration()
+                                            if (!isCardMastered) {
+                                                if (cardIndex == activeDeckCards.size - 1) {
+                                                    viewModel.triggerCompletionCelebration()
+                                                }
+                                                popupMessage = "Card mastered!"
+                                            } else {
+                                                popupMessage = "Mastered removed!"
                                             }
-                                            popupMessage = "Card mastered!"
                                         }
                                     ) {
                                         Icon(
@@ -727,7 +711,7 @@ fun SubjectFlashcardRow(
                                         )
                                     }
 
-                                    // Mark Difficult button
+                                    // Mark Difficult button (toggleable)
                                     IconButton(
                                         onClick = {
                                             viewModel.markFlashcardDifficult(currentCard.id)
@@ -759,35 +743,6 @@ fun SubjectFlashcardRow(
                                             imageVector = if (isCardSaved) Icons.Default.Star else Icons.Default.StarBorder,
                                             contentDescription = "Star card",
                                             tint = if (isCardSaved) GoldAccent else Color.Gray,
-                                            modifier = Modifier.size(26.dp)
-                                        )
-                                    }
-
-                                    // Ask Tamhero AI about this card
-                                    IconButton(
-                                        onClick = {
-                                            val lContext = com.example.ui.tools.ai.LearningContext(
-                                                courseId = currentCard.subjectId,
-                                                courseName = subject.name,
-                                                topicId = currentCard.id,
-                                                topicName = "${subject.name} Card #${cardIndex + 1}",
-                                                contentId = currentCard.id,
-                                                contentType = "flashcard",
-                                                flashcardFront = currentCard.front,
-                                                flashcardBack = currentCard.back,
-                                                gradeLevel = currentCard.gradeLevel
-                                            )
-                                            viewModel.openStudentTools(
-                                                tab = "ask",
-                                                prompt = "Explain the flashcard concept '${currentCard.front}' with an intuitive example and memory trick",
-                                                context = lContext
-                                            )
-                                        }
-                                    ) {
-                                        Icon(
-                                            imageVector = Icons.Default.SmartToy,
-                                            contentDescription = "Ask Tamhero about card",
-                                            tint = HolographicAqua,
                                             modifier = Modifier.size(26.dp)
                                         )
                                     }

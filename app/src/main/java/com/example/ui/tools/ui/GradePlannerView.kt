@@ -426,52 +426,7 @@ fun GradePlannerView(
                     }
                 }
 
-                // AI Smart Engine Advice Button & Card
-                item {
-                    Column {
-                        Button(
-                            onClick = {
-                                isAskingAi = true
-                                coroutineScope.launch {
-                                    val advice = viewModel.aiProvider.explainGrades(
-                                        courseName = selectedCourse.courseName,
-                                        currentAvg = courseAnalysis.currentAveragePct,
-                                        target = selectedCourse.targetGradePct,
-                                        reqFinal = courseAnalysis.requiredScoreOnRemaining
-                                    )
-                                    aiAdviceText = advice
-                                    isAskingAi = false
-                                }
-                            },
-                            colors = ButtonDefaults.buttonColors(containerColor = if (isDark) IndigoMedium else IndigoLight),
-                            modifier = Modifier.fillMaxWidth()
-                        ) {
-                            Icon(Icons.Default.AutoAwesome, contentDescription = null, modifier = Modifier.size(16.dp))
-                            Spacer(modifier = Modifier.width(6.dp))
-                            Text("Ask Tamhero: Strategy to Reach Target Grade", fontSize = 12.sp, fontWeight = FontWeight.Bold)
-                        }
 
-                        if (aiAdviceText != null) {
-                            Spacer(modifier = Modifier.height(8.dp))
-                            Surface(
-                                color = if (isDark) CardBgDark else Color(0xFFFAF5FF),
-                                shape = RoundedCornerShape(10.dp),
-                                border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFC084FC)),
-                                modifier = Modifier.fillMaxWidth()
-                            ) {
-                                Column(modifier = Modifier.padding(12.dp)) {
-                                    Text(
-                                        text = aiAdviceText ?: "",
-                                        style = MaterialTheme.typography.bodySmall.copy(
-                                            color = if (isDark) TextLight else Color(0xFF3B0764),
-                                            lineHeight = 18.sp
-                                        )
-                                    )
-                                }
-                            }
-                        }
-                    }
-                }
 
                 // Assessments Header
                 item {

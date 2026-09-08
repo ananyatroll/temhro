@@ -174,43 +174,7 @@ fun StudentToolsModalSheet(
                             .padding(horizontal = 16.dp),
                         horizontalArrangement = Arrangement.spacedBy(6.dp)
                     ) {
-                        // Quick Action 1: Explain Concept
-                        val explainPrompt = if (effectiveSubjectName.isNotBlank()) {
-                            "Explain $effectiveSubjectName core concept simply step by step"
-                        } else {
-                            "Explain key exam concepts and how to study effectively"
-                        }
-                        SuggestionChip(
-                            onClick = {
-                                viewModel.openStudentTools("ask", explainPrompt)
-                            },
-                            label = { Text("Explain Concept", fontSize = 11.sp) },
-                            icon = { Icon(Icons.Default.Lightbulb, null, modifier = Modifier.size(12.dp)) },
-                            colors = SuggestionChipDefaults.suggestionChipColors(
-                                containerColor = if (isDark) Color(0xFF334155) else Color(0xFFE2E8F0)
-                            ),
-                            border = null
-                        )
-
-                        // Quick Action 2: Practice Questions
-                        val quizPrompt = if (effectiveSubjectName.isNotBlank()) {
-                            "Generate 4 multiple choice practice exam questions for $effectiveSubjectName with answers and detailed explanations"
-                        } else {
-                            "Generate 4 multiple choice practice exam questions with answers and detailed explanations"
-                        }
-                        SuggestionChip(
-                            onClick = {
-                                viewModel.openStudentTools("ask", quizPrompt)
-                            },
-                            label = { Text("Practice Questions", fontSize = 11.sp) },
-                            icon = { Icon(Icons.Default.Quiz, null, modifier = Modifier.size(12.dp)) },
-                            colors = SuggestionChipDefaults.suggestionChipColors(
-                                containerColor = if (isDark) Color(0xFF334155) else Color(0xFFE2E8F0)
-                            ),
-                            border = null
-                        )
-
-                        // Quick Action 3: Start 25m Timer
+                        // Quick Action 1: Start 25m Timer
                         SuggestionChip(
                             onClick = {
                                 viewModel.openStudentTools("timer_tasks")
@@ -223,7 +187,7 @@ fun StudentToolsModalSheet(
                             border = null
                         )
 
-                        // Quick Action 4: Plan Study Week
+                        // Quick Action 2: Plan Study Week
                         SuggestionChip(
                             onClick = {
                                 viewModel.openStudentTools("calendar")
@@ -236,17 +200,42 @@ fun StudentToolsModalSheet(
                             ),
                             border = null
                         )
+
+                        // Quick Action 3: Target Grades
+                        SuggestionChip(
+                            onClick = {
+                                viewModel.openStudentTools("grades")
+                            },
+                            label = { Text("Target Grades", fontSize = 11.sp) },
+                            icon = { Icon(Icons.Default.Calculate, null, modifier = Modifier.size(12.dp)) },
+                            colors = SuggestionChipDefaults.suggestionChipColors(
+                                containerColor = if (isDark) Color(0xFF334155) else Color(0xFFE2E8F0)
+                            ),
+                            border = null
+                        )
+
+                        // Quick Action 4: Scan Document
+                        SuggestionChip(
+                            onClick = {
+                                viewModel.openStudentTools("scanner")
+                            },
+                            label = { Text("Scan Document", fontSize = 11.sp) },
+                            icon = { Icon(Icons.Default.DocumentScanner, null, modifier = Modifier.size(12.dp)) },
+                            colors = SuggestionChipDefaults.suggestionChipColors(
+                                containerColor = if (isDark) Color(0xFF334155) else Color(0xFFE2E8F0)
+                            ),
+                            border = null
+                        )
                     }
                 }
             }
 
             // Tab Navigation Row
             val tabs = listOf(
-                "ask" to ("Ask Tamhero" to Icons.Default.SmartToy),
+                "timer_tasks" to ("Timer & Tasks" to Icons.Default.Timer),
                 "calendar" to ("Calendar & Plan" to Icons.Default.CalendarMonth),
                 "grades" to ("Target Grades" to Icons.Default.Calculate),
-                "scanner" to ("Doc Scanner" to Icons.Default.DocumentScanner),
-                "timer_tasks" to ("Timer & Tasks" to Icons.Default.Timer)
+                "scanner" to ("Doc Scanner" to Icons.Default.DocumentScanner)
             )
 
             val selectedIndex = tabs.indexOfFirst { it.first == activeTab }.coerceAtLeast(0)
@@ -304,13 +293,6 @@ fun StudentToolsModalSheet(
                     .fillMaxWidth()
             ) {
                 when (activeTab) {
-                    "ask" -> {
-                        AskTamheroView(
-                            viewModel = viewModel,
-                            subjectName = effectiveSubjectName,
-                            currentTopic = effectiveTopic
-                        )
-                    }
                     "calendar" -> {
                         if (showPlanWeekDetail) {
                             PlanMyWeekView(
@@ -327,21 +309,23 @@ fun StudentToolsModalSheet(
                     "grades" -> {
                         GradePlannerView(
                             viewModel = viewModel,
-                            onAskTamheroAboutGrade = { prompt ->
-                                viewModel.openStudentTools("ask", prompt)
-                            }
+                            onAskTamheroAboutGrade = { }
                         )
                     }
                     "scanner" -> {
                         DocumentScannerView(
                             viewModel = viewModel,
                             subjectName = effectiveSubjectName,
-                            onOpenAskTamheroWithText = { text ->
-                                viewModel.openStudentTools("ask", text)
-                            }
+                            onOpenAskTamheroWithText = { }
                         )
                     }
                     "timer_tasks" -> {
+                        StudyTimerAndTasksView(
+                            viewModel = viewModel,
+                            defaultSubject = effectiveSubjectName
+                        )
+                    }
+                    else -> {
                         StudyTimerAndTasksView(
                             viewModel = viewModel,
                             defaultSubject = effectiveSubjectName

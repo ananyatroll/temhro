@@ -30,7 +30,7 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
 
     // Student Tools UI State
     val isStudentToolsOpen = MutableStateFlow(false)
-    val activeToolsTab = MutableStateFlow("ask") // "ask", "calendar", "grades", "scanner", "timer_tasks"
+    val activeToolsTab = MutableStateFlow("timer_tasks") // "calendar", "grades", "scanner", "timer_tasks"
     val toolsContextPrompt = MutableStateFlow<String?>(null)
     val activeLearningContext = MutableStateFlow<LearningContext?>(null)
 
@@ -133,7 +133,7 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    fun openStudentTools(tab: String = "ask", prompt: String? = null, context: LearningContext? = null) {
+    fun openStudentTools(tab: String = "timer_tasks", prompt: String? = null, context: LearningContext? = null) {
         activeToolsTab.value = tab
         toolsContextPrompt.value = prompt
         activeLearningContext.value = context ?: deriveActiveLearningContext()
@@ -745,10 +745,23 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
                 delay(1000)
                 timerRemainingSeconds.value -= 1
             }
-            if (timerRemainingSeconds.value == 0) {
-                // Auto finish exam when timer runs out
-                finishExam()
+            if (timerRemainingSeconds.value == 0 && isTimerActive.value) {
+                // Auto advance to next question or finish exam
+                val curIdx = currentQuestionIndex.value
+                val total = activeQuestions.value.size
+                if (curIdx < total - 1) {
+                    currentQuestionIndex.value = curIdx + 1
+                    startTimer(120)
+                } else {
+                    finishExam()
+                }
             }
+        }
+    }
+
+    fun resetQuestionTimer(durationSeconds: Int = 120) {
+        if (activeExamMode.value == "exam") {
+            startTimer(durationSeconds)
         }
     }
 
@@ -917,23 +930,33 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun markFlashcardMastered(cardId: String) {
-        val updated = cardMasteredSet.value + cardId
-        cardMasteredSet.value = updated
+        val wasMastered = cardMasteredSet.value.contains(cardId)
+        val updatedMastered = if (wasMastered) {
+            cardMasteredSet.value - cardId
+        } else {
+            cardMasteredSet.value + cardId
+        }
         val diffUpdated = cardDifficultSet.value - cardId
+        cardMasteredSet.value = updatedMastered
         cardDifficultSet.value = diffUpdated
         sharedPrefs.edit()
-            .putStringSet("card_mastered_ids", updated)
+            .putStringSet("card_mastered_ids", updatedMastered)
             .putStringSet("card_difficult_ids", diffUpdated)
             .apply()
     }
 
     fun markFlashcardDifficult(cardId: String) {
-        val updated = cardDifficultSet.value + cardId
-        cardDifficultSet.value = updated
+        val wasDifficult = cardDifficultSet.value.contains(cardId)
+        val updatedDifficult = if (wasDifficult) {
+            cardDifficultSet.value - cardId
+        } else {
+            cardDifficultSet.value + cardId
+        }
         val mastUpdated = cardMasteredSet.value - cardId
+        cardDifficultSet.value = updatedDifficult
         cardMasteredSet.value = mastUpdated
         sharedPrefs.edit()
-            .putStringSet("card_difficult_ids", updated)
+            .putStringSet("card_difficult_ids", updatedDifficult)
             .putStringSet("card_mastered_ids", mastUpdated)
             .apply()
     }
