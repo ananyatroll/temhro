@@ -525,7 +525,6 @@ fun GreetingHeader(viewModel: StudyViewModel, username: String) {
         ) {
             val context = LocalContext.current
             var showLoginCelebrationModal by remember { mutableStateOf(false) }
-            var isNotesDownloaded by remember { mutableStateOf(false) }
 
             // Trigger login celebration animation & notification once per calendar day
             LaunchedEffect(Unit) {
@@ -667,27 +666,7 @@ fun GreetingHeader(viewModel: StudyViewModel, username: String) {
                     }
                 )
             }
-            // Download Course Materials symbol button (direct offline sync, zero popups)
-            Box(
-                modifier = Modifier
-                    .clip(HexagonChamferShape)
-                    .background(if (isDarkTheme) CardBgDark else Color.White)
-                    .pressBounce(pressedScale = 0.92f)
-                    .clickable {
-                        isNotesDownloaded = true
-                        viewModel.startNotes()
-                    }
-                    .padding(horizontal = 10.dp, vertical = 7.dp)
-                    .border(1.dp, if (isDarkTheme) EmeraldPrimary.copy(alpha = 0.35f) else IndigoLight, HexagonChamferShape),
-                contentAlignment = Alignment.Center
-            ) {
-                Icon(
-                    imageVector = if (isNotesDownloaded) Icons.Default.CheckCircle else Icons.Default.Download,
-                    contentDescription = "Download Course Materials",
-                    tint = if (isDarkTheme) EmeraldPrimary else HolographicAqua,
-                    modifier = Modifier.size(20.dp)
-                )
-            }
+
 
             // Dark / Light Mode symbol toggle (pure symbols, no text)
             Box(
