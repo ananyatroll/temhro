@@ -49,6 +49,7 @@ import com.example.ui.StudyViewModel
 import com.example.ui.components.*
 import com.example.ui.theme.*
 import java.io.File
+import java.io.FileInputStream
 import java.io.FileOutputStream
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -557,14 +558,18 @@ suspend fun downloadTextbookToCache(
     dest: File,
     onProgress: (Int) -> Unit
 ): Boolean = kotlinx.coroutines.withContext(Dispatchers.IO) {
+    val tempFile = File(dest.absolutePath + ".downloading")
     try {
         val conn = (java.net.URL(url).openConnection() as java.net.HttpURLConnection).apply {
             setRequestProperty("User-Agent", "Mozilla/5.0")
             connect()
         }
+        if (conn.responseCode !in 200..299) {
+            return@withContext false
+        }
         val totalLen = conn.contentLengthLong
         conn.inputStream.use { input ->
-            FileOutputStream(dest).use { output ->
+            FileOutputStream(tempFile).use { output ->
                 val buf = ByteArray(8192)
                 var r: Int
                 var total = 0L
@@ -577,9 +582,36 @@ suspend fun downloadTextbookToCache(
                 }
             }
         }
-        onProgress(100)
-        true
+        // PDF Signature Validation
+        var isValidPdf = false
+        if (tempFile.exists() && tempFile.length() > 5) {
+            try {
+                FileInputStream(tempFile).use { fis ->
+                    val header = ByteArray(5)
+                    if (fis.read(header) == 5) {
+                        // %PDF-
+                        if (header[0] == 0x25.toByte() && header[1] == 0x50.toByte() &&
+                            header[2] == 0x44.toByte() && header[3] == 0x46.toByte() &&
+                            header[4] == 0x2D.toByte()) {
+                            isValidPdf = true
+                        }
+                    }
+                }
+            } catch (e: Exception) {
+                isValidPdf = false
+            }
+        }
+
+        if (isValidPdf) {
+            tempFile.renameTo(dest)
+            onProgress(100)
+            true
+        } else {
+            if (tempFile.exists()) tempFile.delete()
+            false
+        }
     } catch (_: Exception) {
+        if (tempFile.exists()) tempFile.delete()
         false
     }
 }
@@ -592,7 +624,7 @@ fun OfficialTextbookScreen(
     viewModel: StudyViewModel? = null
 ) {
     val editions = remember(subjectName) { OfficialTextbookRegistry.getTextbooksForSubject(subjectName) }
-    var selectedGrade by remember { mutableStateOf(editions.firstOrNull()?.grade ?: "Grade 12") }
+    var selectedGrade by remember { mutableStateOf(viewModel?.selectedGradeFilter?.value ?: editions.firstOrNull()?.grade ?: "Grade 12") }
     var selectedUnitIndex by remember { mutableStateOf<Int?>(null) }
     var searchQuery by remember { mutableStateOf("") }
     var activeReaderUnitPage by remember { mutableStateOf<Int?>(null) }
@@ -627,7 +659,9 @@ fun OfficialTextbookScreen(
             scope.launch {
                 modalDownloadProgress = 0
                 modalDownloadError = null
-                val dest = File(context.cacheDir, edition.fileName)
+                val dir = File(context.filesDir, "official_textbooks")
+                if (!dir.exists()) dir.mkdirs()
+                val dest = File(dir, edition.fileName)
                 val ok = downloadTextbookToCache(bookDownloadUrl, dest) { modalDownloadProgress = it }
                 if (ok) {
                     kotlinx.coroutines.delay(300)
@@ -700,21 +734,35 @@ fun OfficialTextbookScreen(
                     )
 
                     if (modalDownloadProgress != null) {
+                        Spacer(modifier = Modifier.height(24.dp))
+                        Box(
+                            contentAlignment = Alignment.Center,
+                            modifier = Modifier.size(100.dp)
+                        ) {
+                            CircularProgressIndicator(
+                                progress = { 1f },
+                                modifier = Modifier.fillMaxSize(),
+                                color = Color(0xFF334155),
+                                strokeWidth = 8.dp
+                            )
+                            CircularProgressIndicator(
+                                progress = { (modalDownloadProgress ?: 0) / 100f },
+                                modifier = Modifier.fillMaxSize(),
+                                color = EmeraldPrimary,
+                                strokeWidth = 8.dp,
+                                strokeCap = StrokeCap.Round
+                            )
+                            Text(
+                                text = "${modalDownloadProgress ?: 0}%",
+                                style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Black),
+                                color = EmeraldPrimary
+                            )
+                        }
                         Spacer(modifier = Modifier.height(16.dp))
-                        LinearProgressIndicator(
-                            progress = { (modalDownloadProgress ?: 0) / 100f },
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .height(8.dp)
-                                .clip(RoundedCornerShape(4.dp)),
-                            color = EmeraldPrimary,
-                            trackColor = Color(0xFF334155)
-                        )
-                        Spacer(modifier = Modifier.height(8.dp))
                         Text(
-                            text = "Downloading Official Textbook... ${modalDownloadProgress ?: 0}%",
-                            style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Black),
-                            color = EmeraldPrimary
+                            text = "Downloading Official Textbook...",
+                            style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Bold),
+                            color = Color.LightGray
                         )
                     }
 
@@ -1296,44 +1344,11 @@ fun OfficialTextbookScreen(
     }
 }
 
-// Resolve real official textbook PDF from cache, local path, device storage, or bundled assets
 fun getOrCreateTextbookPdfFile(context: android.content.Context, edition: TextbookEdition): File? {
-    val cached = File(context.cacheDir, edition.fileName)
-    if (cached.exists() && cached.length() > 0) return cached
-
-    // 1. Direct host/device paths (Windows host folder or Android device storage)
-    val candidates = listOf(
-        File("C:/Users/ananya/Documents/freshman/Ethiopian_Textbooks", edition.fileName),
-        File("/sdcard/Documents/freshman/Ethiopian_Textbooks", edition.fileName),
-        File("/sdcard/Ethiopian_Textbooks", edition.fileName),
-        File("/storage/emulated/0/Documents/freshman/Ethiopian_Textbooks", edition.fileName),
-        File("/storage/emulated/0/Ethiopian_Textbooks", edition.fileName),
-        File(android.os.Environment.getExternalStoragePublicDirectory(android.os.Environment.DIRECTORY_DOCUMENTS), "Ethiopian_Textbooks/${edition.fileName}"),
-        File(android.os.Environment.getExternalStoragePublicDirectory(android.os.Environment.DIRECTORY_DOWNLOADS), edition.fileName)
-    )
-    for (candidate in candidates) {
-        if (candidate.exists() && candidate.length() > 0) {
-            try {
-                candidate.copyTo(cached, overwrite = true)
-                if (cached.exists() && cached.length() > 0) return cached
-            } catch (_: Exception) {
-                return candidate
-            }
-        }
-    }
-
-    // 2. Bundled assets
-    val assetNames = listOf("textbooks/${edition.fileName}", edition.fileName)
-    for (name in assetNames) {
-        try {
-            context.assets.open(name).use { input ->
-                FileOutputStream(cached).use { output -> input.copyTo(output) }
-            }
-            if (cached.exists() && cached.length() > 0) return cached
-        } catch (_: Exception) {}
-    }
-
-    return if (cached.exists() && cached.length() > 0) cached else null
+    val dir = File(context.filesDir, "official_textbooks")
+    if (!dir.exists()) dir.mkdirs()
+    val textbookFile = File(dir, edition.fileName)
+    return if (textbookFile.exists() && textbookFile.length() > 0) textbookFile else null
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -1350,8 +1365,6 @@ fun InAppPdfTextbookReader(
     var showJumpDialog by remember { mutableStateOf(false) }
     var showTocModal by remember { mutableStateOf(false) }
     var selectedTocTab by remember { mutableStateOf("units") } // "units", "bookmarks"
-    var customPdfUri by remember { mutableStateOf<Uri?>(null) }
-    var customPageCount by remember { mutableStateOf<Int?>(null) }
     var fallbackBookmarks by remember { mutableStateOf(setOf<Int>()) }
     var downloadProgress by remember { mutableStateOf<Int?>(null) }
     var downloadError by remember { mutableStateOf<String?>(null) }
@@ -1359,25 +1372,7 @@ fun InAppPdfTextbookReader(
     val scope = rememberCoroutineScope()
     val context = LocalContext.current
 
-    val totalPages = customPageCount ?: edition.pageCount
-
-    // File picker launcher for opening any device PDF file (Google Drive / Files / Downloads)
-    val pdfPickerLauncher = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.OpenDocument()
-    ) { uri ->
-        if (uri != null) {
-            try {
-                context.contentResolver.takePersistableUriPermission(
-                    uri,
-                    android.content.Intent.FLAG_GRANT_READ_URI_PERMISSION
-                )
-            } catch (e: Exception) {
-                // Ignore if not persistable
-            }
-            customPdfUri = uri
-            currentPage = 1
-        }
-    }
+    val totalPages = edition.pageCount
 
     val isBookmarked = if (viewModel != null) {
         viewModel.isTextbookPageBookmarked(edition.fileName, currentPage)
@@ -1395,23 +1390,16 @@ fun InAppPdfTextbookReader(
     }
 
     // Render Genuine PDF page bitmap using Android PdfRenderer
-    val pdfBitmap = remember(currentPage, edition.fileName, customPdfUri, reloadTrigger) {
+    val pdfBitmap = remember(currentPage, edition.fileName, reloadTrigger) {
         try {
             var pfd: ParcelFileDescriptor? = null
-            if (customPdfUri != null) {
-                pfd = context.contentResolver.openFileDescriptor(customPdfUri!!, "r")
-            } else {
-                val realPdfFile = getOrCreateTextbookPdfFile(context, edition)
-                if (realPdfFile != null && realPdfFile.exists() && realPdfFile.length() > 0) {
-                    pfd = ParcelFileDescriptor.open(realPdfFile, ParcelFileDescriptor.MODE_READ_ONLY)
-                }
+            val realPdfFile = getOrCreateTextbookPdfFile(context, edition)
+            if (realPdfFile != null && realPdfFile.exists() && realPdfFile.length() > 0) {
+                pfd = ParcelFileDescriptor.open(realPdfFile, ParcelFileDescriptor.MODE_READ_ONLY)
             }
 
             if (pfd != null) {
                 val renderer = PdfRenderer(pfd)
-                if (customPdfUri != null) {
-                    customPageCount = renderer.pageCount
-                }
                 val safePageIdx = (currentPage - 1).coerceIn(0, renderer.pageCount - 1)
                 val page = renderer.openPage(safePageIdx)
                 val renderWidth = (page.width * 2).coerceAtLeast(800)
@@ -1432,17 +1420,19 @@ fun InAppPdfTextbookReader(
     }
 
     // Seamless auto-download in background if textbook not yet cached
-    LaunchedEffect(edition.fileName, customPdfUri) {
-        if (customPdfUri == null && pdfBitmap == null && downloadProgress == null) {
+    LaunchedEffect(edition.fileName) {
+        if (pdfBitmap == null && downloadProgress == null) {
             val bookDownloadUrl = edition.downloadUrl ?: OfficialBookLinks.urls[edition.fileName]
             if (bookDownloadUrl != null) {
-                val dest = File(context.cacheDir, edition.fileName)
+                val dir = File(context.filesDir, "official_textbooks")
+                if (!dir.exists()) dir.mkdirs()
+                val dest = File(dir, edition.fileName)
                 if (!dest.exists() || dest.length() == 0L) {
                     downloadProgress = 0
                     downloadError = null
                     val ok = downloadTextbookToCache(bookDownloadUrl, dest) { downloadProgress = it }
                     if (ok) reloadTrigger++
-                    else downloadError = "Offline file not ready yet. Check your connection or open a local PDF."
+                    else downloadError = "Offline file not ready yet. Check your connection."
                     downloadProgress = null
                 }
             }
@@ -1489,7 +1479,7 @@ fun InAppPdfTextbookReader(
                         Spacer(modifier = Modifier.width(8.dp))
                         Column {
                             Text(
-                                text = if (customPdfUri != null) "Opened Device Document.pdf" else "${edition.fileName}",
+                                text = edition.fileName,
                                 style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
                                 color = textColor,
                                 maxLines = 1,
@@ -1504,10 +1494,6 @@ fun InAppPdfTextbookReader(
                     }
                 },
                 actions = {
-                    // Open PDF from Device storage / Google Drive
-                    IconButton(onClick = { pdfPickerLauncher.launch(arrayOf("application/pdf")) }) {
-                        Icon(Icons.Default.FolderOpen, contentDescription = "Open Device PDF", tint = GoldAccent)
-                    }
                     // Zoom Out
                     IconButton(onClick = { scale = (scale - 0.25f).coerceAtLeast(0.8f) }) {
                         Icon(Icons.Default.ZoomOut, contentDescription = "Zoom Out", tint = textColor)
@@ -1718,7 +1704,9 @@ fun InAppPdfTextbookReader(
                                         scope.launch {
                                             downloadProgress = 0
                                             downloadError = null
-                                            val dest = File(context.cacheDir, edition.fileName)
+                                            val dir = File(context.filesDir, "official_textbooks")
+                                            if (!dir.exists()) dir.mkdirs()
+                                            val dest = File(dir, edition.fileName)
                                             val ok = downloadTextbookToCache(bookDownloadUrl, dest) { downloadProgress = it }
                                             if (ok) reloadTrigger++
                                             else downloadError = "Download failed. Please check your connection."
@@ -1731,15 +1719,6 @@ fun InAppPdfTextbookReader(
                                     Spacer(modifier = Modifier.width(6.dp))
                                     Text("Download Official PDF", fontWeight = FontWeight.Bold)
                                 }
-                            }
-                            OutlinedButton(
-                                onClick = { pdfPickerLauncher.launch(arrayOf("application/pdf")) },
-                                colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White),
-                                border = BorderStroke(1.dp, Color(0xFF475569))
-                            ) {
-                                Icon(Icons.Default.FolderOpen, contentDescription = null, modifier = Modifier.size(16.dp))
-                                Spacer(modifier = Modifier.width(6.dp))
-                                Text("Open Local PDF")
                             }
                         }
                     }
