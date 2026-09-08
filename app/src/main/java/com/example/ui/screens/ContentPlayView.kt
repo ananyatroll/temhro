@@ -176,7 +176,8 @@ fun ContentPlayView(viewModel: StudyViewModel) {
         if (showTextbookReader) {
             OfficialTextbookScreen(
                 subjectName = subject.name,
-                onClose = { viewModel.showTextbookReader.value = false }
+                onClose = { viewModel.showTextbookReader.value = false },
+                viewModel = viewModel
             )
         }
 
