@@ -72,6 +72,20 @@ fun DepartmentSelectionScreen(viewModel: StudyViewModel) {
         containerColor = if (isDarkTheme) ReaderBgDark else BgOffWhite,
         topBar = {
             TopAppBar(
+                navigationIcon = {
+                    IconButton(onClick = {
+                        // Return to package selection
+                        viewModel.packageAccordionExpanded.value = false
+                        val currentProgress = viewModel.userProgress.value
+                        viewModel.updateProgress(currentProgress.copy(activePackageId = null))
+                    }) {
+                        Icon(
+                            imageVector = Icons.Default.ArrowBack,
+                            contentDescription = "Back",
+                            tint = if (isDarkTheme) Color.White else IndigoSecondary
+                        )
+                    }
+                },
                 title = {
                     Column {
                         Text(

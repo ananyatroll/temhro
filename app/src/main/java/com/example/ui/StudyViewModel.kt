@@ -526,6 +526,17 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
     // Completion particles trigger
     val showCompletionParticles = MutableStateFlow(false)
 
+    fun checkAndClaimDailyLoginBonus(): Boolean {
+        val currentEpochDay = System.currentTimeMillis() / (1000L * 60L * 60L * 24L)
+        val lastClaimDay = sharedPrefs.getLong("last_daily_bonus_epoch_day", 0L)
+        if (currentEpochDay > lastClaimDay) {
+            sharedPrefs.edit().putLong("last_daily_bonus_epoch_day", currentEpochDay).apply()
+            triggerCompletionCelebration()
+            return true
+        }
+        return false
+    }
+
     fun triggerCompletionCelebration() {
         viewModelScope.launch {
             showCompletionParticles.value = true

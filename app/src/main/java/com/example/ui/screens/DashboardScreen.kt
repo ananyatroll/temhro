@@ -526,16 +526,18 @@ fun GreetingHeader(viewModel: StudyViewModel, username: String) {
             val context = LocalContext.current
             var showLoginCelebrationModal by remember { mutableStateOf(false) }
 
-            // Trigger login celebration animation & notification once per session start
+            // Trigger login celebration animation & notification once per calendar day
             LaunchedEffect(Unit) {
                 kotlinx.coroutines.delay(600)
-                showLoginCelebrationModal = true
-                viewModel.triggerCompletionCelebration()
-                NotificationHelper.sendMotivationalNotification(
-                    context = context,
-                    studentName = username.ifEmpty { "Student" },
-                    studentGoal = "Master high-yield topics & conquer your exams"
-                )
+                val awarded = viewModel.checkAndClaimDailyLoginBonus()
+                if (awarded) {
+                    showLoginCelebrationModal = true
+                    NotificationHelper.sendMotivationalNotification(
+                        context = context,
+                        studentName = username.ifEmpty { "Student" },
+                        studentGoal = "Master high-yield topics & conquer your exams"
+                    )
+                }
             }
 
             // Gamified Streak & XP Pill (Duolingo / Phantom Wallet Style)

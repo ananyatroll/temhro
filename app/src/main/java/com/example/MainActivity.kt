@@ -62,11 +62,13 @@ class MainActivity : ComponentActivity() {
                 val showNotes by viewModel.showNotesView.collectAsState()
                 val showNotesTOC by viewModel.showNotesTableOfContents.collectAsState()
                 val showVideos by viewModel.showVideosView.collectAsState()
+                val showTextbookReader by viewModel.showTextbookReader.collectAsState()
                 val showStudyOptions by viewModel.showStudyOptionsModal.collectAsState()
                 val showModeSelection by viewModel.showModeSelectionModal.collectAsState()
+                val showSavedMaterialPicker by viewModel.showSavedMaterialPickerModal.collectAsState()
                 val activeExamMode by viewModel.activeExamMode.collectAsState()
                 val inActiveTimedExam = showContentPlay && activeExamMode == "exam"
-                val isReadingOrTesting = showNotes || showContentPlay || showNotesTOC || (currentTab == "flashcards")
+                val isReadingOrTesting = showNotes || showContentPlay || showNotesTOC || showVideos || showTextbookReader || showStudyOptions || showModeSelection || showSavedMaterialPicker || (currentTab == "flashcards")
                 val showStudentToolsLauncher = onboardingCompleted &&
                         progress.activePackageId != null &&
                         progress.paymentStatus != "pending" &&

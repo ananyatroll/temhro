@@ -1,17 +1,22 @@
 package com.example.ui.screens
 
-import android.content.Intent
-import android.net.Uri
+import android.graphics.Bitmap
+import android.graphics.pdf.PdfRenderer
+import android.os.ParcelFileDescriptor
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
@@ -21,14 +26,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.ui.StudyViewModel
 import com.example.ui.components.*
 import com.example.ui.theme.*
+import java.io.File
+import java.io.FileOutputStream
 
 data class TextbookUnit(
     val unitNumber: String,
@@ -442,9 +452,21 @@ fun OfficialTextbookScreen(
     var selectedGrade by remember { mutableStateOf(editions.firstOrNull()?.grade ?: "Grade 12") }
     var selectedUnitIndex by remember { mutableStateOf<Int?>(null) }
     var searchQuery by remember { mutableStateOf("") }
+    var activeReaderUnitPage by remember { mutableStateOf<Int?>(null) }
     val context = LocalContext.current
 
     val currentEdition = editions.firstOrNull { it.grade == selectedGrade } ?: editions.firstOrNull()
+
+    // If in-app reader is opened, render it directly full-screen
+    if (activeReaderUnitPage != null && currentEdition != null) {
+        InAppPdfTextbookReader(
+            edition = currentEdition,
+            initialPage = activeReaderUnitPage!!,
+            onClose = { activeReaderUnitPage = null },
+            viewModel = viewModel
+        )
+        return
+    }
 
     val filteredUnits = remember(currentEdition, searchQuery) {
         val allUnits = currentEdition?.units ?: emptyList()
@@ -667,19 +689,9 @@ fun OfficialTextbookScreen(
 
                             Spacer(modifier = Modifier.height(14.dp))
 
-                            // Action: Open in External PDF Viewer / Reader Intent
+                            // Action: Open in In-App PDF Reader
                             Button(
-                                onClick = {
-                                    try {
-                                        val intent = Intent(Intent.ACTION_VIEW).apply {
-                                            setDataAndType(Uri.parse("content://media/external/file"), "application/pdf")
-                                            flags = Intent.FLAG_ACTIVITY_NO_HISTORY or Intent.FLAG_GRANT_READ_URI_PERMISSION
-                                        }
-                                        context.startActivity(Intent.createChooser(intent, "Open with PDF Reader"))
-                                    } catch (e: Exception) {
-                                        // Fallback alert
-                                    }
-                                },
+                                onClick = { activeReaderUnitPage = 1 },
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .height(44.dp)
@@ -690,7 +702,7 @@ fun OfficialTextbookScreen(
                                 Icon(Icons.Default.PictureAsPdf, contentDescription = null, tint = Color.White, modifier = Modifier.size(18.dp))
                                 Spacer(modifier = Modifier.width(8.dp))
                                 Text(
-                                    text = "Read Official ${currentEdition.grade} PDF (${currentEdition.pageCount} Pages)",
+                                    text = "Read Official ${currentEdition.grade} PDF In-App (${currentEdition.pageCount} Pages)",
                                     style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
                                     color = Color.White
                                 )
@@ -852,23 +864,43 @@ fun OfficialTextbookScreen(
                                 }
 
                                 Spacer(modifier = Modifier.height(14.dp))
-                                OutlinedButton(
-                                    onClick = {
-                                        // Filter syllabus notes to this unit directly
-                                        if (viewModel != null) {
-                                            viewModel.selectedGradeFilter.value = currentEdition?.grade ?: "Grade 12"
-                                            viewModel.startNotes()
-                                        }
-                                        onClose()
-                                    },
+                                Row(
                                     modifier = Modifier.fillMaxWidth(),
-                                    shape = RoundedCornerShape(10.dp),
-                                    colors = ButtonDefaults.outlinedButtonColors(contentColor = EmeraldPrimary),
-                                    border = BorderStroke(1.dp, EmeraldPrimary)
+                                    horizontalArrangement = Arrangement.spacedBy(8.dp)
                                 ) {
-                                    Icon(Icons.Default.MenuBook, contentDescription = null, modifier = Modifier.size(16.dp))
-                                    Spacer(modifier = Modifier.width(8.dp))
-                                    Text("Open Syllabus Notes for this Unit", fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                                    Button(
+                                        onClick = { activeReaderUnitPage = unit.pageStart },
+                                        modifier = Modifier
+                                            .weight(1f)
+                                            .pressBounce(),
+                                        shape = RoundedCornerShape(10.dp),
+                                        colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary)
+                                    ) {
+                                        Icon(Icons.Default.MenuBook, contentDescription = null, modifier = Modifier.size(16.dp))
+                                        Spacer(modifier = Modifier.width(6.dp))
+                                        Text("Read In-App PDF", fontWeight = FontWeight.Bold, fontSize = 11.sp)
+                                    }
+
+                                    OutlinedButton(
+                                        onClick = {
+                                            // Filter syllabus notes to this unit directly
+                                            if (viewModel != null) {
+                                                viewModel.selectedGradeFilter.value = currentEdition?.grade ?: "Grade 12"
+                                                viewModel.startNotes()
+                                            }
+                                            onClose()
+                                        },
+                                        modifier = Modifier
+                                            .weight(1f)
+                                            .pressBounce(),
+                                        shape = RoundedCornerShape(10.dp),
+                                        colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White),
+                                        border = BorderStroke(1.dp, Color(0xFF475569))
+                                    ) {
+                                        Icon(Icons.Default.Description, contentDescription = null, modifier = Modifier.size(16.dp))
+                                        Spacer(modifier = Modifier.width(6.dp))
+                                        Text("Syllabus Notes", fontWeight = FontWeight.Bold, fontSize = 11.sp)
+                                    }
                                 }
                             }
                         }
@@ -876,5 +908,532 @@ fun OfficialTextbookScreen(
                 }
             }
         }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun InAppPdfTextbookReader(
+    edition: TextbookEdition,
+    initialPage: Int,
+    onClose: () -> Unit,
+    viewModel: StudyViewModel? = null
+) {
+    var currentPage by remember { mutableStateOf(initialPage.coerceIn(1, edition.pageCount)) }
+    var readingTheme by remember { mutableStateOf("dark") } // "dark", "sepia", "light"
+    var showJumpDialog by remember { mutableStateOf(false) }
+    var showTocModal by remember { mutableStateOf(false) }
+    var bookmarkedPages by remember { mutableStateOf(setOf<Int>()) }
+    val context = LocalContext.current
+
+    val currentUnit = remember(currentPage, edition) {
+        edition.units.findLast { it.pageStart <= currentPage } ?: edition.units.firstOrNull()
+    }
+
+    // Try rendering physical PDF bitmap if file exists in assets or cache
+    val pdfBitmap = remember(currentPage, edition.fileName) {
+        try {
+            val cacheFile = File(context.cacheDir, edition.fileName)
+            if (!cacheFile.exists()) {
+                try {
+                    context.assets.open(edition.fileName).use { input ->
+                        FileOutputStream(cacheFile).use { output -> input.copyTo(output) }
+                    }
+                } catch (e: Exception) {
+                    // Not in assets, fallback to high-fidelity digital textbook mode
+                }
+            }
+            if (cacheFile.exists()) {
+                val pfd = ParcelFileDescriptor.open(cacheFile, ParcelFileDescriptor.MODE_READ_ONLY)
+                val renderer = PdfRenderer(pfd)
+                val pageIdx = (currentPage - 1).coerceIn(0, renderer.pageCount - 1)
+                val page = renderer.openPage(pageIdx)
+                val bmp = Bitmap.createBitmap(page.width * 2, page.height * 2, Bitmap.Config.ARGB_8888)
+                page.render(bmp, null, null, PdfRenderer.Page.RENDER_MODE_FOR_DISPLAY)
+                page.close()
+                renderer.close()
+                pfd.close()
+                bmp
+            } else {
+                null
+            }
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    // Theme Color Tokens
+    val bgColor = when (readingTheme) {
+        "sepia" -> Color(0xFFFBF0D9)
+        "light" -> Color(0xFFF8FAFC)
+        else -> Color(0xFF0A0F1D)
+    }
+    val surfaceColor = when (readingTheme) {
+        "sepia" -> Color(0xFFF4E4C1)
+        "light" -> Color(0xFFFFFFFF)
+        else -> Color(0xFF131C2E)
+    }
+    val textColor = when (readingTheme) {
+        "sepia" -> Color(0xFF2C221E)
+        "light" -> Color(0xFF0F172A)
+        else -> Color(0xFFF8FAFC)
+    }
+    val textMutedColor = when (readingTheme) {
+        "sepia" -> Color(0xFF786252)
+        "light" -> Color(0xFF64748B)
+        else -> Color(0xFF94A3B8)
+    }
+    val borderColor = when (readingTheme) {
+        "sepia" -> Color(0xFFE2CCA8)
+        "light" -> Color(0xFFE2E8F0)
+        else -> Color(0xFF334155)
+    }
+
+    Scaffold(
+        containerColor = bgColor,
+        topBar = {
+            TopAppBar(
+                navigationIcon = {
+                    IconButton(onClick = onClose) {
+                        Icon(Icons.Default.ArrowBack, contentDescription = "Back", tint = textColor)
+                    }
+                },
+                title = {
+                    Column {
+                        Text(
+                            text = edition.title,
+                            style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Black),
+                            color = textColor,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        )
+                        Text(
+                            text = "Page $currentPage of ${edition.pageCount} • ${currentUnit?.unitNumber ?: "Chapter"}",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = EmeraldPrimary
+                        )
+                    }
+                },
+                actions = {
+                    // Jump to page
+                    IconButton(onClick = { showJumpDialog = true }) {
+                        Icon(Icons.Default.FindInPage, contentDescription = "Jump to Page", tint = textColor)
+                    }
+                    // Table of Contents
+                    IconButton(onClick = { showTocModal = true }) {
+                        Icon(Icons.Default.List, contentDescription = "Table of Contents", tint = textColor)
+                    }
+                    // Theme Switcher
+                    IconButton(onClick = {
+                        readingTheme = when (readingTheme) {
+                            "dark" -> "sepia"
+                            "sepia" -> "light"
+                            else -> "dark"
+                        }
+                    }) {
+                        Icon(
+                            imageVector = when (readingTheme) {
+                                "dark" -> Icons.Default.DarkMode
+                                "sepia" -> Icons.Default.WbSunny
+                                else -> Icons.Default.LightMode
+                            },
+                            contentDescription = "Theme",
+                            tint = GoldAccent
+                        )
+                    }
+                    // Bookmark Page
+                    val isBookmarked = bookmarkedPages.contains(currentPage)
+                    IconButton(onClick = {
+                        bookmarkedPages = if (isBookmarked) {
+                            bookmarkedPages - currentPage
+                        } else {
+                            bookmarkedPages + currentPage
+                        }
+                    }) {
+                        Icon(
+                            imageVector = if (isBookmarked) Icons.Default.Bookmark else Icons.Default.BookmarkBorder,
+                            contentDescription = "Bookmark",
+                            tint = if (isBookmarked) GoldAccent else textColor
+                        )
+                    }
+                },
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = surfaceColor)
+            )
+        },
+        bottomBar = {
+            Surface(
+                color = surfaceColor,
+                border = BorderStroke(1.dp, borderColor)
+            ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 8.dp)
+                        .navigationBarsPadding()
+                ) {
+                    // Page Scrub Slider
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.SpaceBetween
+                    ) {
+                        Text("1", style = MaterialTheme.typography.labelSmall, color = textMutedColor)
+                        Slider(
+                            value = currentPage.toFloat(),
+                            onValueChange = { currentPage = it.toInt().coerceIn(1, edition.pageCount) },
+                            valueRange = 1f..edition.pageCount.toFloat(),
+                            modifier = Modifier.weight(1f).padding(horizontal = 8.dp),
+                            colors = SliderDefaults.colors(
+                                thumbColor = EmeraldPrimary,
+                                activeTrackColor = EmeraldPrimary,
+                                inactiveTrackColor = borderColor
+                            )
+                        )
+                        Text("${edition.pageCount}", style = MaterialTheme.typography.labelSmall, color = textMutedColor)
+                    }
+
+                    // Page Navigation Buttons
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Button(
+                            onClick = { if (currentPage > 1) currentPage -= 1 },
+                            enabled = currentPage > 1,
+                            shape = RoundedCornerShape(10.dp),
+                            colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary)
+                        ) {
+                            Icon(Icons.Default.ArrowBack, contentDescription = "Prev", modifier = Modifier.size(16.dp))
+                            Spacer(modifier = Modifier.width(4.dp))
+                            Text("Previous", fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                        }
+
+                        Surface(
+                            shape = RoundedCornerShape(8.dp),
+                            color = bgColor,
+                            border = BorderStroke(1.dp, borderColor),
+                            modifier = Modifier.clickable { showJumpDialog = true }
+                        ) {
+                            Text(
+                                text = "Page $currentPage / ${edition.pageCount}",
+                                style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Black),
+                                color = textColor,
+                                modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
+                            )
+                        }
+
+                        Button(
+                            onClick = { if (currentPage < edition.pageCount) currentPage += 1 },
+                            enabled = currentPage < edition.pageCount,
+                            shape = RoundedCornerShape(10.dp),
+                            colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary)
+                        ) {
+                            Text("Next", fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                            Spacer(modifier = Modifier.width(4.dp))
+                            Icon(Icons.Default.ArrowForward, contentDescription = "Next", modifier = Modifier.size(16.dp))
+                        }
+                    }
+                }
+            }
+        }
+    ) { padding ->
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(padding)
+        ) {
+            if (pdfBitmap != null) {
+                // Render true PDF page bitmap
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .verticalScroll(rememberScrollState())
+                        .padding(16.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Image(
+                        bitmap = pdfBitmap.asImageBitmap(),
+                        contentDescription = "PDF Page $currentPage",
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clip(RoundedCornerShape(8.dp))
+                            .border(1.dp, borderColor, RoundedCornerShape(8.dp))
+                    )
+                }
+            } else {
+                // High-Fidelity In-App Digital MoE Curriculum Textbook Page
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .verticalScroll(rememberScrollState())
+                        .padding(16.dp),
+                    verticalArrangement = Arrangement.spacedBy(16.dp)
+                ) {
+                    // Header Banner
+                    Card(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .border(1.dp, borderColor, RoundedCornerShape(12.dp)),
+                        shape = RoundedCornerShape(12.dp),
+                        colors = CardDefaults.cardColors(containerColor = surfaceColor)
+                    ) {
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(12.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.SpaceBetween
+                        ) {
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Surface(
+                                    shape = RoundedCornerShape(6.dp),
+                                    color = EmeraldPrimary.copy(alpha = 0.2f),
+                                    border = BorderStroke(1.dp, EmeraldPrimary)
+                                ) {
+                                    Text(
+                                        text = currentUnit?.unitNumber ?: "UNIT",
+                                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black),
+                                        color = EmeraldPrimary,
+                                        modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
+                                    )
+                                }
+                                Spacer(modifier = Modifier.width(8.dp))
+                                Text(
+                                    text = currentUnit?.title ?: edition.title,
+                                    style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
+                                    color = textColor,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis
+                                )
+                            }
+                            Text(
+                                text = "Page $currentPage",
+                                style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black),
+                                color = GoldAccent
+                            )
+                        }
+                    }
+
+                    // Section 1: Official MoE Learning Objectives
+                    Card(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .border(1.dp, borderColor, RoundedCornerShape(14.dp)),
+                        shape = RoundedCornerShape(14.dp),
+                        colors = CardDefaults.cardColors(containerColor = surfaceColor)
+                    ) {
+                        Column(modifier = Modifier.padding(16.dp)) {
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Icon(Icons.Default.School, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(18.dp))
+                                Spacer(modifier = Modifier.width(8.dp))
+                                Text(
+                                    text = "FDRE MoE CURRICULUM OBJECTIVES",
+                                    style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black, letterSpacing = 1.sp),
+                                    color = EmeraldPrimary
+                                )
+                            }
+                            Spacer(modifier = Modifier.height(8.dp))
+                            Text(
+                                text = currentUnit?.summary ?: "Comprehensive study of ${edition.title} for Ethiopian national assessment.",
+                                style = MaterialTheme.typography.bodyMedium.copy(lineHeight = 22.sp),
+                                color = textColor
+                            )
+                        }
+                    }
+
+                    // Section 2: Core Key Concepts & Competencies
+                    Card(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .border(1.dp, borderColor, RoundedCornerShape(14.dp)),
+                        shape = RoundedCornerShape(14.dp),
+                        colors = CardDefaults.cardColors(containerColor = surfaceColor)
+                    ) {
+                        Column(modifier = Modifier.padding(16.dp)) {
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Icon(Icons.Default.Lightbulb, contentDescription = null, tint = GoldAccent, modifier = Modifier.size(18.dp))
+                                Spacer(modifier = Modifier.width(8.dp))
+                                Text(
+                                    text = "HIGH-YIELD EUEE CORE TOPICS",
+                                    style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black, letterSpacing = 1.sp),
+                                    color = GoldAccent
+                                )
+                            }
+                            Spacer(modifier = Modifier.height(10.dp))
+                            (currentUnit?.keyTopics ?: listOf("Fundamental concepts", "Mathematical formulas", "Applications in Ethiopia")).forEach { topic ->
+                                Row(
+                                    modifier = Modifier.padding(vertical = 4.dp),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    Icon(Icons.Default.CheckCircle, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(16.dp))
+                                    Spacer(modifier = Modifier.width(8.dp))
+                                    Text(
+                                        text = topic,
+                                        style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Medium),
+                                        color = textColor
+                                    )
+                                }
+                            }
+                        }
+                    }
+
+                    // Section 3: National Exam Strategy Note
+                    Card(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .border(1.dp, Brush.linearGradient(listOf(EmeraldPrimary.copy(alpha = 0.5f), GoldAccent.copy(alpha = 0.5f))), RoundedCornerShape(14.dp)),
+                        shape = RoundedCornerShape(14.dp),
+                        colors = CardDefaults.cardColors(containerColor = surfaceColor)
+                    ) {
+                        Column(modifier = Modifier.padding(16.dp)) {
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Icon(Icons.Default.Star, contentDescription = null, tint = GoldAccent, modifier = Modifier.size(18.dp))
+                                Spacer(modifier = Modifier.width(8.dp))
+                                Text(
+                                    text = "NATIONAL EXAMINATION FOCUS",
+                                    style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black, letterSpacing = 1.sp),
+                                    color = GoldAccent
+                                )
+                            }
+                            Spacer(modifier = Modifier.height(8.dp))
+                            Text(
+                                text = "Questions from ${currentUnit?.unitNumber ?: "this chapter"} appear regularly in Grade 12 National Exams. Focus on definitions, step-by-step problem derivations, and Ethiopian case studies.",
+                                style = MaterialTheme.typography.bodyMedium.copy(lineHeight = 22.sp),
+                                color = textColor
+                            )
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Jump to Page Dialog
+    if (showJumpDialog) {
+        var inputPage by remember { mutableStateOf(currentPage.toString()) }
+        AlertDialog(
+            onDismissRequest = { showJumpDialog = false },
+            containerColor = surfaceColor,
+            title = {
+                Text("Jump to Page", style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold), color = textColor)
+            },
+            text = {
+                Column {
+                    Text("Enter page number (1 to ${edition.pageCount}):", style = MaterialTheme.typography.bodySmall, color = textMutedColor)
+                    Spacer(modifier = Modifier.height(10.dp))
+                    OutlinedTextField(
+                        value = inputPage,
+                        onValueChange = { inputPage = it.filter { ch -> ch.isDigit() } },
+                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                        singleLine = true,
+                        colors = OutlinedTextFieldDefaults.colors(
+                            focusedTextColor = textColor,
+                            unfocusedTextColor = textColor,
+                            focusedBorderColor = EmeraldPrimary,
+                            unfocusedBorderColor = borderColor
+                        ),
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                }
+            },
+            confirmButton = {
+                Button(
+                    onClick = {
+                        val pageNum = inputPage.toIntOrNull()
+                        if (pageNum != null && pageNum in 1..edition.pageCount) {
+                            currentPage = pageNum
+                        }
+                        showJumpDialog = false
+                    },
+                    colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary)
+                ) {
+                    Text("Go", fontWeight = FontWeight.Bold)
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { showJumpDialog = false }) {
+                    Text("Cancel", color = textMutedColor)
+                }
+            }
+        )
+    }
+
+    // Table of Contents Modal
+    if (showTocModal) {
+        AlertDialog(
+            onDismissRequest = { showTocModal = false },
+            containerColor = surfaceColor,
+            title = {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text("Table of Contents", style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold), color = textColor)
+                    IconButton(onClick = { showTocModal = false }) {
+                        Icon(Icons.Default.Close, contentDescription = "Close", tint = textMutedColor)
+                    }
+                }
+            },
+            text = {
+                LazyColumn(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .heightIn(max = 400.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    items(edition.units) { unit ->
+                        Surface(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clip(RoundedCornerShape(10.dp))
+                                .clickable {
+                                    currentPage = unit.pageStart
+                                    showTocModal = false
+                                },
+                            shape = RoundedCornerShape(10.dp),
+                            color = if (currentUnit?.unitNumber == unit.unitNumber) EmeraldPrimary.copy(alpha = 0.2f) else bgColor,
+                            border = BorderStroke(1.dp, if (currentUnit?.unitNumber == unit.unitNumber) EmeraldPrimary else borderColor)
+                        ) {
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(12.dp),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Column(modifier = Modifier.weight(1f)) {
+                                    Text(
+                                        text = unit.unitNumber.uppercase(),
+                                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
+                                        color = GoldAccent
+                                    )
+                                    Text(
+                                        text = unit.title,
+                                        style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
+                                        color = textColor,
+                                        maxLines = 1,
+                                        overflow = TextOverflow.Ellipsis
+                                    )
+                                }
+                                Surface(
+                                    shape = RoundedCornerShape(6.dp),
+                                    color = surfaceColor
+                                ) {
+                                    Text(
+                                        text = "Page ${unit.pageStart}",
+                                        style = MaterialTheme.typography.labelSmall,
+                                        color = EmeraldPrimary,
+                                        modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            confirmButton = {}
+        )
     }
 }
