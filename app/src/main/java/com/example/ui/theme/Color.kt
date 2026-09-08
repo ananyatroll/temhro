@@ -22,10 +22,12 @@ val GoldLight = Color(0xFFFEF3C7)
 val BgSoftGray = Color(0xFFF3F4F6)
 val BgOffWhite = Color(0xFFFDFDFD)
 
-// Readers / Dark Mode Holographic Accents
-val ReaderBgDark = Color(0xFF0B0F19)
-val CardBgDark = Color(0xFF161E30)
-val HolographicAqua = Color(0xFF06B6D4)
-val HolographicPink = Color(0xFF10B981) // Replaced with Brand Emerald Green
-val TextLight = Color(0xFFF3F4F6)
-val TextMuted = Color(0xFF9CA3AF)
+// Apple-Grade OLED Dark Mode Palette
+val ReaderBgDark = Color(0xFF0A0D14) // Deep Obsidian OLED Black
+val CardBgDark = Color(0xFF131926)   // Precision Slate Surface
+val CardElevatedDark = Color(0xFF1A2337) // Elevated Surface
+val BorderDark = Color(0xFF24304A)       // Crisp subtle border
+val HolographicAqua = Color(0xFF38BDF8)  // Electric Cyan
+val HolographicPink = Color(0xFF10B981)  // Brand Emerald Green
+val TextLight = Color(0xFFF8FAFC)        // Crisp High Contrast Text
+val TextMuted = Color(0xFF94A3B8)        // Neutral Secondary Text
