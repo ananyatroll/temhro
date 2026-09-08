@@ -666,12 +666,12 @@ fun SubjectHexCard(
             .pressBounce()
             .clickable(onClick = onSubjectClick)
             .testTag("subject_card_${iconName}"),
-        shape = RoundedCornerShape(18.dp),
+        shape = RoundedCornerShape(20.dp),
         border = BorderStroke(width = 1.dp, color = cardBorderColor),
         colors = CardDefaults.cardColors(
             containerColor = cardBg
         ),
-        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = 3.dp)
     ) {
         Box(
             modifier = Modifier.fillMaxWidth()

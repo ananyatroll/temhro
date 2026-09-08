@@ -439,8 +439,8 @@ fun PackageCard(
         modifier = Modifier
             .fillMaxWidth()
             .pressBounce(),
-        shape = RoundedCornerShape(18.dp),
-        border = BorderStroke(width = if (isEnrolled) 2.dp else 1.dp, color = cardBorderColor),
+        shape = RoundedCornerShape(20.dp),
+        border = BorderStroke(width = if (isEnrolled) 1.5.dp else 1.dp, color = cardBorderColor),
         colors = CardDefaults.cardColors(
             containerColor = containerBg
         ),
@@ -451,7 +451,7 @@ fun PackageCard(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(18.dp)
+                .padding(20.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -464,10 +464,10 @@ fun PackageCard(
                 ) {
                     Box(
                         modifier = Modifier
-                            .size(38.dp)
-                            .clip(HexagonalCutShape)
+                            .size(42.dp)
+                            .clip(RoundedCornerShape(12.dp))
                             .background(
-                                if (data.comingSoon) Color.LightGray.copy(alpha = 0.4f)
+                                if (data.comingSoon) Color.LightGray.copy(alpha = 0.3f)
                                 else brandColor.copy(alpha = 0.15f)
                             ),
                         contentAlignment = Alignment.Center
@@ -476,10 +476,10 @@ fun PackageCard(
                             imageVector = pkgIcon,
                             contentDescription = null,
                             tint = if (data.comingSoon) Color.Gray else brandColor,
-                            modifier = Modifier.size(20.dp)
+                            modifier = Modifier.size(22.dp)
                         )
                     }
-                    Spacer(modifier = Modifier.width(12.dp))
+                    Spacer(modifier = Modifier.width(14.dp))
                     Text(
                         text = data.title,
                         style = MaterialTheme.typography.titleLarge.copy(
@@ -492,17 +492,17 @@ fun PackageCard(
                 }
 
                 // High-contrast modern badge
-                Box(
-                    modifier = Modifier
-                        .clip(HexagonalCutShape)
-                        .background(
-                            if (data.comingSoon) Color(0xFFE2E8F0)
+                Surface(
+                    shape = RoundedCornerShape(8.dp),
+                    color = if (data.comingSoon) Color(0xFFE2E8F0)
                             else if (isEnrolled) EmeraldPrimary
                             else if (isApproved) GoldAccent
-                            else if (isDarkTheme) Color(0xFF78350F)
-                            else GoldLight
-                        )
-                        .padding(horizontal = 10.dp, vertical = 5.dp)
+                            else if (isDarkTheme) Color(0xFF78350F).copy(alpha = 0.6f)
+                            else GoldLight,
+                    border = BorderStroke(
+                        1.dp,
+                        if (isEnrolled) EmeraldPrimary else if (isApproved) GoldAccent else GoldAccent.copy(alpha = 0.4f)
+                    )
                 ) {
                     Text(
                         text = if (isEnrolled) t("status_active") else if (isApproved) t("status_unlocked") else data.badge.uppercase(),
@@ -511,12 +511,13 @@ fun PackageCard(
                             fontSize = 9.sp,
                             fontWeight = FontWeight.ExtraBold,
                             letterSpacing = 0.5.sp
-                        )
+                        ),
+                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp)
                     )
                 }
             }
 
-            Spacer(modifier = Modifier.height(10.dp))
+            Spacer(modifier = Modifier.height(12.dp))
             Text(
                 text = data.description,
                 style = MaterialTheme.typography.bodyMedium.copy(
@@ -551,9 +552,10 @@ fun PackageCard(
                     onClick = onEnrollClick,
                     modifier = Modifier
                         .fillMaxWidth()
+                        .height(48.dp)
                         .pressBounce()
                         .testTag("enroll_button_${data.id}"),
-                    shape = ChamferedCardShape,
+                    shape = RoundedCornerShape(14.dp),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = if (isEnrolled) IndigoMedium else if (isApproved) EmeraldPrimary else EmeraldPrimary,
                         contentColor = Color.White

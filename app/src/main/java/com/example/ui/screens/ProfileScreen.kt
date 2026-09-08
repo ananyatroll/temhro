@@ -292,55 +292,84 @@ fun ProfileScreen(viewModel: StudyViewModel) {
                 Card(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .border(1.dp, HolographicAqua.copy(alpha = 0.2f), ChamferedCardShape),
-                    shape = ChamferedCardShape,
-                    colors = CardDefaults.cardColors(containerColor = IndigoSecondary)
+                        .border(1.dp, if (isDarkTheme) Color(0xFF334155) else Color(0xFFE2E8F0), RoundedCornerShape(20.dp)),
+                    shape = RoundedCornerShape(20.dp),
+                    colors = CardDefaults.cardColors(containerColor = if (isDarkTheme) Color(0xFF131B2E) else Color.White),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
                 ) {
                     Column(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(16.dp),
-                        verticalArrangement = Arrangement.spacedBy(10.dp)
+                            .padding(20.dp),
+                        verticalArrangement = Arrangement.spacedBy(12.dp)
                     ) {
                         Row(verticalAlignment = Alignment.CenterVertically) {
-                            Icon(Icons.Default.Badge, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(20.dp))
-                            Spacer(modifier = Modifier.width(10.dp))
+                            Box(
+                                modifier = Modifier
+                                    .size(36.dp)
+                                    .background(EmeraldPrimary.copy(alpha = 0.15f), RoundedCornerShape(8.dp)),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Icon(Icons.Default.Badge, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(18.dp))
+                            }
+                            Spacer(modifier = Modifier.width(12.dp))
                             Column {
-                                Text(com.example.ui.TranslationManager.get("lbl_student_name", currentLang), style = MaterialTheme.typography.labelSmall, color = Color.Gray)
-                                Text(text = studentName.ifEmpty { "Default Candidate" }, style = MaterialTheme.typography.bodyLarge, color = Color.White, fontWeight = FontWeight.Bold)
+                                Text(com.example.ui.TranslationManager.get("lbl_student_name", currentLang), style = MaterialTheme.typography.labelSmall, color = TextMuted)
+                                Text(text = studentName.ifEmpty { "Default Candidate" }, style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Bold), color = if (isDarkTheme) Color.White else IndigoSecondary)
                             }
                         }
 
-                        Divider(color = Color.White.copy(alpha = 0.1f))
+                        HorizontalDivider(color = if (isDarkTheme) Color(0xFF334155).copy(alpha = 0.6f) else Color(0xFFE2E8F0))
 
                         Row(verticalAlignment = Alignment.CenterVertically) {
-                            Icon(Icons.Default.Email, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(20.dp))
-                            Spacer(modifier = Modifier.width(10.dp))
+                            Box(
+                                modifier = Modifier
+                                    .size(36.dp)
+                                    .background(EmeraldPrimary.copy(alpha = 0.15f), RoundedCornerShape(8.dp)),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Icon(Icons.Default.Email, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(18.dp))
+                            }
+                            Spacer(modifier = Modifier.width(12.dp))
                             Column {
-                                Text(com.example.ui.TranslationManager.get("lbl_reg_email", currentLang), style = MaterialTheme.typography.labelSmall, color = Color.Gray)
-                                Text(text = studentEmail.ifEmpty { "student@ethio-hub.edu" }, style = MaterialTheme.typography.bodyMedium, color = Color.White)
+                                Text(com.example.ui.TranslationManager.get("lbl_reg_email", currentLang), style = MaterialTheme.typography.labelSmall, color = TextMuted)
+                                Text(text = studentEmail.ifEmpty { "student@ethio-hub.edu" }, style = MaterialTheme.typography.bodyMedium, color = if (isDarkTheme) Color.White else IndigoSecondary)
                             }
                         }
 
-                        Divider(color = Color.White.copy(alpha = 0.1f))
+                        HorizontalDivider(color = if (isDarkTheme) Color(0xFF334155).copy(alpha = 0.6f) else Color(0xFFE2E8F0))
 
                         Row(verticalAlignment = Alignment.CenterVertically) {
-                            Icon(Icons.Default.School, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(20.dp))
-                            Spacer(modifier = Modifier.width(10.dp))
+                            Box(
+                                modifier = Modifier
+                                    .size(36.dp)
+                                    .background(EmeraldPrimary.copy(alpha = 0.15f), RoundedCornerShape(8.dp)),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Icon(Icons.Default.School, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(18.dp))
+                            }
+                            Spacer(modifier = Modifier.width(12.dp))
                             Column {
-                                Text(com.example.ui.TranslationManager.get("lbl_current_class", currentLang), style = MaterialTheme.typography.labelSmall, color = Color.Gray)
-                                Text(text = studentClassLevel.ifEmpty { "Grade 12 (EUEE Prep)" }, style = MaterialTheme.typography.bodyMedium, color = Color.White, fontWeight = FontWeight.Bold)
+                                Text(com.example.ui.TranslationManager.get("lbl_current_class", currentLang), style = MaterialTheme.typography.labelSmall, color = TextMuted)
+                                Text(text = studentClassLevel.ifEmpty { "Grade 12 (EUEE Prep)" }, style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold), color = if (isDarkTheme) Color.White else IndigoSecondary)
                             }
                         }
 
-                        Divider(color = Color.White.copy(alpha = 0.1f))
+                        HorizontalDivider(color = if (isDarkTheme) Color(0xFF334155).copy(alpha = 0.6f) else Color(0xFFE2E8F0))
 
                         Row(verticalAlignment = Alignment.CenterVertically) {
-                            Icon(Icons.Default.EmojiEvents, contentDescription = null, tint = GoldAccent, modifier = Modifier.size(20.dp))
-                            Spacer(modifier = Modifier.width(10.dp))
+                            Box(
+                                modifier = Modifier
+                                    .size(36.dp)
+                                    .background(GoldAccent.copy(alpha = 0.15f), RoundedCornerShape(8.dp)),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Icon(Icons.Default.EmojiEvents, contentDescription = null, tint = GoldAccent, modifier = Modifier.size(18.dp))
+                            }
+                            Spacer(modifier = Modifier.width(12.dp))
                             Column {
-                                Text(com.example.ui.TranslationManager.get("lbl_academic_goal", currentLang), style = MaterialTheme.typography.labelSmall, color = Color.Gray)
-                                Text(text = studentGoal.ifEmpty { "Score 500+ Matric Result / First Class Dept Honors" }, style = MaterialTheme.typography.bodyMedium, color = GoldAccent, fontWeight = FontWeight.Bold)
+                                Text(com.example.ui.TranslationManager.get("lbl_academic_goal", currentLang), style = MaterialTheme.typography.labelSmall, color = TextMuted)
+                                Text(text = studentGoal.ifEmpty { "Score 500+ Matric Result / First Class Dept Honors" }, style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold), color = GoldAccent)
                             }
                         }
 
@@ -348,14 +377,17 @@ fun ProfileScreen(viewModel: StudyViewModel) {
 
                         OutlinedButton(
                             onClick = { viewModel.restartOnboarding() },
-                            colors = ButtonDefaults.outlinedButtonColors(contentColor = HolographicAqua),
-                            border = androidx.compose.foundation.BorderStroke(1.dp, HolographicAqua.copy(alpha = 0.5f)),
-                            shape = RoundedCornerShape(10.dp),
-                            modifier = Modifier.fillMaxWidth().testTag("edit_onboarding_preferences_button")
+                            colors = ButtonDefaults.outlinedButtonColors(contentColor = EmeraldPrimary),
+                            border = androidx.compose.foundation.BorderStroke(1.dp, EmeraldPrimary.copy(alpha = 0.5f)),
+                            shape = RoundedCornerShape(12.dp),
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(44.dp)
+                                .testTag("edit_onboarding_preferences_button")
                         ) {
-                            Icon(Icons.Default.Tune, contentDescription = null, modifier = Modifier.size(16.dp))
+                            Icon(Icons.Default.Tune, contentDescription = null, modifier = Modifier.size(16.dp), tint = EmeraldPrimary)
                             Spacer(modifier = Modifier.width(8.dp))
-                            Text(com.example.ui.TranslationManager.get("btn_reconfigure_onboarding", currentLang))
+                            Text(com.example.ui.TranslationManager.get("btn_reconfigure_onboarding", currentLang), fontWeight = FontWeight.SemiBold)
                         }
                     }
                 }
