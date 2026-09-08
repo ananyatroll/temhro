@@ -414,16 +414,38 @@ fun SubjectFlashcardRow(
                         }
                     }
 
+                    // Helper function to extract unit/chapter from a flashcard's front, back, or unit field
+                    fun extractCardUnit(card: Flashcard): String {
+                        if (card.unit.isNotBlank() && !card.unit.equals("All", ignoreCase = true) && !card.unit.equals("All Units", ignoreCase = true)) {
+                            return card.unit.trim()
+                        }
+                        // 1. Check front text for (Grade X Subject, Unit Y...) or (Unit Y...) or [Unit Y...]
+                        val unitPattern = Regex("""(?:Unit|Chapter)\s+\d+(?:\s*:\s*[^,\)\]]+)?""", RegexOption.IGNORE_CASE)
+                        val matchFront = unitPattern.find(card.front)
+                        if (matchFront != null) return matchFront.value.trim()
+
+                        // 2. Check back text for [Unit Y...] or [Grade X Subject, Unit Y...]
+                        val matchBack = unitPattern.find(card.back)
+                        if (matchBack != null) return matchBack.value.trim()
+
+                        return "All Units"
+                    }
+
+                    // Helper to get normalized unit key for matching (e.g. "Unit 1" or "Chapter 1")
+                    fun getUnitKey(unitStr: String): String {
+                        val numMatch = Regex("""(?:Unit|Chapter)\s+(\d+)""", RegexOption.IGNORE_CASE).find(unitStr)
+                        return if (numMatch != null) "Unit ${numMatch.groupValues[1]}".lowercase() else unitStr.trim().lowercase()
+                    }
+
                     // 2. Unit Selector Row (Grade → Unit → Flashcards)
                     val availableUnits = remember(flashcards) {
-                        val units = flashcards.mapNotNull { card ->
-                            val regex = Regex("""\[(Unit\s+\d+[^,\]]*)[,\]]""", RegexOption.IGNORE_CASE)
-                            val match = regex.find(card.front)
-                            match?.groupValues?.getOrNull(1)?.trim() ?: run {
-                                val uMatch = Regex("""(Unit\s+\d+)""", RegexOption.IGNORE_CASE).find(card.front)
-                                uMatch?.groupValues?.getOrNull(1)?.trim()
+                        val units = flashcards.map { extractCardUnit(it) }
+                            .filter { it != "All Units" }
+                            .distinct()
+                            .sortedBy { unitStr ->
+                                val numMatch = Regex("""\d+""").find(unitStr)
+                                numMatch?.value?.toIntOrNull() ?: 999
                             }
-                        }.distinct()
                         if (units.isNotEmpty()) listOf("All Units") + units else emptyList()
                     }
 
@@ -454,8 +476,8 @@ fun SubjectFlashcardRow(
                                     Text(
                                         text = unitItem,
                                         style = MaterialTheme.typography.labelSmall.copy(
-                                            fontWeight = if (isUnitSelected) FontWeight.Bold else FontWeight.Normal,
-                                            fontSize = 11.sp
+                                             fontWeight = if (isUnitSelected) FontWeight.Bold else FontWeight.Normal,
+                                             fontSize = 11.sp
                                         ),
                                         maxLines = 1,
                                         color = if (isUnitSelected) EmeraldLight else Color.LightGray,
@@ -466,14 +488,16 @@ fun SubjectFlashcardRow(
                         }
                     }
 
-                    // 3. Filter Flashcards by Unit and Learning State
+                    // 3. Filter Flashcards strictly by Unit and Learning State
                     val filteredByUnit = remember(flashcards, selectedUnit) {
                         if (selectedUnit == "All" || selectedUnit == "All Units") {
                             flashcards
                         } else {
-                            val targetUnitClean = selectedUnit.trim().lowercase()
+                            val selectedKey = getUnitKey(selectedUnit)
                             flashcards.filter { card ->
-                                card.unit.lowercase() == targetUnitClean || card.unit.lowercase() == "all" || card.unit.lowercase() == "all units"
+                                val cardUnitExtracted = extractCardUnit(card)
+                                val cardKey = getUnitKey(cardUnitExtracted)
+                                cardKey == selectedKey
                             }
                         }
                     }
