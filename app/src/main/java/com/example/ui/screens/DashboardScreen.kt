@@ -140,7 +140,7 @@ fun DashboardScreen(viewModel: StudyViewModel) {
         }
     }
 
-    val isDepartmentMode = progress.activePackageId == "department"
+    val isDepartmentMode = progress.activePackageId == "department" || progress.activePackageId == "exit_exam"
 
     val bgModifier = Modifier.background(Color.Transparent)
 
@@ -521,6 +521,35 @@ fun GreetingHeader(viewModel: StudyViewModel, username: String) {
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
+            // Gamified Streak Pill (Duolingo Style)
+            val answeredCount = viewModel.answeredQuestionsSet.collectAsState().value.size
+            val streakDays = (answeredCount / 3).coerceAtLeast(1)
+            Box(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(12.dp))
+                    .background(if (isDarkTheme) Color(0xFF1E293B) else Color(0xFFFFFBEB))
+                    .border(1.dp, GoldAccent.copy(alpha = 0.4f), RoundedCornerShape(12.dp))
+                    .pressBounce(pressedScale = 0.94f)
+                    .padding(horizontal = 8.dp, vertical = 6.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(4.dp)
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.LocalFireDepartment,
+                        contentDescription = "Streak",
+                        tint = Color(0xFFF97316),
+                        modifier = Modifier.size(18.dp)
+                    )
+                    Text(
+                        text = "$streakDays",
+                        style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Black),
+                        color = if (isDarkTheme) GoldLight else Color(0xFFC2410C)
+                    )
+                }
+            }
             // Dark / Light Mode symbol toggle (pure symbols, no text)
             Box(
                 modifier = Modifier

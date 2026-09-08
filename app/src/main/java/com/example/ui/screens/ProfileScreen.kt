@@ -192,6 +192,118 @@ fun ProfileScreen(viewModel: StudyViewModel) {
                                 fontWeight = FontWeight.Bold
                             )
                         }
+
+                        Spacer(modifier = Modifier.height(20.dp))
+
+                        // Gamified Stats Grid (Duolingo / Phantom Wallet style)
+                        val answeredQuestionsCount = viewModel.answeredQuestionsSet.collectAsState().value.size
+                        val readNotesCount = viewModel.readNotesSet.collectAsState().value.size
+                        val totalXp = (answeredQuestionsCount * 15) + (readNotesCount * 25) + (progress.scoreCount * 10)
+                        val streakDays = (answeredQuestionsCount / 3).coerceAtLeast(1)
+
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(10.dp)
+                        ) {
+                            // Streak Card
+                            Card(
+                                modifier = Modifier.weight(1f),
+                                shape = RoundedCornerShape(16.dp),
+                                colors = CardDefaults.cardColors(
+                                    containerColor = if (isDarkTheme) Color(0xFF1E293B) else Color(0xFFFFFBEB)
+                                ),
+                                border = BorderStroke(1.dp, Color(0xFFF97316).copy(alpha = 0.35f))
+                            ) {
+                                Column(
+                                    modifier = Modifier.padding(12.dp),
+                                    horizontalAlignment = Alignment.CenterHorizontally
+                                ) {
+                                    Icon(
+                                        imageVector = Icons.Default.LocalFireDepartment,
+                                        contentDescription = "Streak",
+                                        tint = Color(0xFFF97316),
+                                        modifier = Modifier.size(24.dp)
+                                    )
+                                    Spacer(modifier = Modifier.height(4.dp))
+                                    Text(
+                                        text = "$streakDays Days",
+                                        style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Black),
+                                        color = if (isDarkTheme) Color.White else Color(0xFF9A3412)
+                                    )
+                                    Text(
+                                        text = "Study Streak",
+                                        style = MaterialTheme.typography.labelSmall,
+                                        color = TextMuted
+                                    )
+                                }
+                            }
+
+                            // XP Card
+                            Card(
+                                modifier = Modifier.weight(1f),
+                                shape = RoundedCornerShape(16.dp),
+                                colors = CardDefaults.cardColors(
+                                    containerColor = if (isDarkTheme) Color(0xFF1E293B) else Color(0xFFEFF6FF)
+                                ),
+                                border = BorderStroke(1.dp, Color(0xFF3B82F6).copy(alpha = 0.35f))
+                            ) {
+                                Column(
+                                    modifier = Modifier.padding(12.dp),
+                                    horizontalAlignment = Alignment.CenterHorizontally
+                                ) {
+                                    Icon(
+                                        imageVector = Icons.Default.Bolt,
+                                        contentDescription = "XP",
+                                        tint = Color(0xFF3B82F6),
+                                        modifier = Modifier.size(24.dp)
+                                    )
+                                    Spacer(modifier = Modifier.height(4.dp))
+                                    Text(
+                                        text = "$totalXp XP",
+                                        style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Black),
+                                        color = if (isDarkTheme) Color.White else Color(0xFF1E40AF)
+                                    )
+                                    Text(
+                                        text = "Total Points",
+                                        style = MaterialTheme.typography.labelSmall,
+                                        color = TextMuted
+                                    )
+                                }
+                            }
+
+                            // Solved Card
+                            Card(
+                                modifier = Modifier.weight(1f),
+                                shape = RoundedCornerShape(16.dp),
+                                colors = CardDefaults.cardColors(
+                                    containerColor = if (isDarkTheme) Color(0xFF1E293B) else Color(0xFFECFDF5)
+                                ),
+                                border = BorderStroke(1.dp, EmeraldPrimary.copy(alpha = 0.35f))
+                            ) {
+                                Column(
+                                    modifier = Modifier.padding(12.dp),
+                                    horizontalAlignment = Alignment.CenterHorizontally
+                                ) {
+                                    Icon(
+                                        imageVector = Icons.Default.CheckCircle,
+                                        contentDescription = "Questions Solved",
+                                        tint = EmeraldPrimary,
+                                        modifier = Modifier.size(24.dp)
+                                    )
+                                    Spacer(modifier = Modifier.height(4.dp))
+                                    Text(
+                                        text = "$answeredQuestionsCount",
+                                        style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Black),
+                                        color = if (isDarkTheme) Color.White else EmeraldDark
+                                    )
+                                    Text(
+                                        text = "Questions",
+                                        style = MaterialTheme.typography.labelSmall,
+                                        color = TextMuted
+                                    )
+                                }
+                            }
+                        }
                     }
                 }
                 Spacer(modifier = Modifier.height(24.dp))

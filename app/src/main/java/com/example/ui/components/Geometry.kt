@@ -218,6 +218,18 @@ fun DuotoneIcon(
         "software" -> Icons.Default.Code
         "mechanical" -> Icons.Default.Engineering
         "electrical" -> Icons.Default.ElectricalServices
+        "euee" -> Icons.Default.School
+        "freshman" -> Icons.Default.LocalLibrary
+        "aau_uat", "uat" -> Icons.Default.AutoAwesome
+        "department", "dept" -> Icons.Default.AccountBalance
+        "exit_exam", "exit" -> Icons.Default.WorkspacePremium
+        "lock" -> Icons.Default.Lock
+        "flame", "streak" -> Icons.Default.LocalFireDepartment
+        "star" -> Icons.Default.Star
+        "bolt" -> Icons.Default.Bolt
+        "trophy" -> Icons.Default.EmojiEvents
+        "check" -> Icons.Default.CheckCircle
+        "book" -> Icons.Default.MenuBook
         else -> Icons.Default.School
     }
 

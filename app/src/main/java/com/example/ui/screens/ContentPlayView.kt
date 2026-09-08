@@ -529,28 +529,32 @@ fun SubjectDetailModal(
                 )
                 Spacer(modifier = Modifier.height(16.dp))
 
-                // 1. Notes Mode Button
-                Button(
-                    onClick = onNotesClick,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(vertical = 5.dp)
-                        .pressBounce()
-                        .testTag("study_option_notes"),
-                    shape = RoundedCornerShape(12.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = if (mode == "exit_exam") Color(0xFF991B1B) else EmeraldPrimary)
-                ) {
-                    Row(
-                        modifier = Modifier.padding(vertical = 4.dp),
-                        verticalAlignment = Alignment.CenterVertically
+                val isUat = subject.packageId == "aau_uat" || mode == "aau_uat"
+
+                // 1. Notes Mode Button (Hidden for AAU UAT)
+                if (!isUat) {
+                    Button(
+                        onClick = onNotesClick,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 5.dp)
+                            .pressBounce()
+                            .testTag("study_option_notes"),
+                        shape = RoundedCornerShape(12.dp),
+                        colors = ButtonDefaults.buttonColors(containerColor = if (mode == "exit_exam") Color(0xFF991B1B) else EmeraldPrimary)
                     ) {
-                        Icon(Icons.Default.MenuBook, contentDescription = null, tint = Color.White)
-                        Spacer(modifier = Modifier.width(12.dp))
-                        Text(TranslationManager.get("opt_syllabus_notes", currentLang), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                        Row(
+                            modifier = Modifier.padding(vertical = 4.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Icon(Icons.Default.MenuBook, contentDescription = null, tint = Color.White)
+                            Spacer(modifier = Modifier.width(12.dp))
+                            Text(TranslationManager.get("opt_syllabus_notes", currentLang), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                        }
                     }
                 }
 
-                // 2. Exams Mode Button
+                // 2. Exams Mode Button (Always available, tailored for UAT practice & mock exams)
                 Button(
                     onClick = onExamsClick,
                     modifier = Modifier
@@ -567,53 +571,61 @@ fun SubjectDetailModal(
                     ) {
                         Icon(Icons.Default.Timer, contentDescription = null, tint = Color.White)
                         Spacer(modifier = Modifier.width(12.dp))
-                        Text(TranslationManager.get("opt_past_exams", currentLang), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                        Text(
+                            if (isUat) "Timed Mock & Past Exams" else TranslationManager.get("opt_past_exams", currentLang),
+                            style = MaterialTheme.typography.titleMedium,
+                            fontWeight = FontWeight.Bold
+                        )
                     }
                 }
 
-                // 3. Flashcards Mode Button
-                Button(
-                    onClick = onFlashcardsClick,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(vertical = 5.dp)
-                        .pressBounce()
-                        .testTag("study_option_flashcards"),
-                    shape = RoundedCornerShape(12.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary)
-                ) {
-                    Row(
-                        modifier = Modifier.padding(vertical = 4.dp),
-                        verticalAlignment = Alignment.CenterVertically
+                // 3. Flashcards Mode Button (Hidden for AAU UAT)
+                if (!isUat) {
+                    Button(
+                        onClick = onFlashcardsClick,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 5.dp)
+                            .pressBounce()
+                            .testTag("study_option_flashcards"),
+                        shape = RoundedCornerShape(12.dp),
+                        colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary)
                     ) {
-                        Icon(Icons.Default.Layers, contentDescription = null, tint = Color.White)
-                        Spacer(modifier = Modifier.width(12.dp))
-                        Text(TranslationManager.get("opt_flashcards", currentLang), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                        Row(
+                            modifier = Modifier.padding(vertical = 4.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Icon(Icons.Default.Layers, contentDescription = null, tint = Color.White)
+                            Spacer(modifier = Modifier.width(12.dp))
+                            Text(TranslationManager.get("opt_flashcards", currentLang), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                        }
                     }
                 }
 
-                // 4. Official Textbook Mode Button
-                Button(
-                    onClick = onTextbookClick,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(vertical = 5.dp)
-                        .pressBounce()
-                        .testTag("study_option_textbook"),
-                    shape = RoundedCornerShape(12.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary)
-                ) {
-                    Row(
-                        modifier = Modifier.padding(vertical = 4.dp),
-                        verticalAlignment = Alignment.CenterVertically
+                // 4. Official Textbook Mode Button (Hidden for AAU UAT)
+                if (!isUat) {
+                    Button(
+                        onClick = onTextbookClick,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 5.dp)
+                            .pressBounce()
+                            .testTag("study_option_textbook"),
+                        shape = RoundedCornerShape(12.dp),
+                        colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary)
                     ) {
-                        Icon(Icons.Default.MenuBook, contentDescription = null, tint = Color.White)
-                        Spacer(modifier = Modifier.width(12.dp))
-                        Text("Official Textbook", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                        Row(
+                            modifier = Modifier.padding(vertical = 4.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Icon(Icons.Default.MenuBook, contentDescription = null, tint = Color.White)
+                            Spacer(modifier = Modifier.width(12.dp))
+                            Text("Official Textbook", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                        }
                     }
                 }
 
-                // 4. Saved Materials Mode Button (Requested Fourth Item)
+                // 5. Saved Materials Mode Button
                 Button(
                     onClick = onSavedMaterialsClick,
                     modifier = Modifier

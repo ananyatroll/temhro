@@ -467,19 +467,23 @@ fun PackageCard(
                 ) {
                     Box(
                         modifier = Modifier
-                            .size(42.dp)
-                            .clip(RoundedCornerShape(12.dp))
+                            .size(48.dp)
+                            .clip(RoundedCornerShape(14.dp))
                             .background(
-                                if (data.comingSoon) Color.LightGray.copy(alpha = 0.3f)
-                                else brandColor.copy(alpha = 0.15f)
+                                if (data.comingSoon) Color.LightGray.copy(alpha = 0.2f)
+                                else brandColor.copy(alpha = 0.12f)
+                            )
+                            .border(
+                                1.dp,
+                                if (data.comingSoon) Color.Transparent else brandColor.copy(alpha = 0.25f),
+                                RoundedCornerShape(14.dp)
                             ),
                         contentAlignment = Alignment.Center
                     ) {
-                        Icon(
-                            imageVector = pkgIcon,
-                            contentDescription = null,
-                            tint = if (data.comingSoon) Color.Gray else brandColor,
-                            modifier = Modifier.size(22.dp)
+                        DuotoneIcon(
+                            name = data.id,
+                            isActive = isEnrolled || isApproved,
+                            modifier = Modifier.size(28.dp)
                         )
                     }
                     Spacer(modifier = Modifier.width(14.dp))
@@ -859,7 +863,7 @@ fun EnrollmentConfirmationModal(
                     // 1. Premium Upgrade Button
                     Button(
                         onClick = {
-                            if (packageId == "department") {
+                            if (packageId == "department" || packageId == "exit_exam") {
                                 viewModel.saveDepartmentSetup("", selectedYear)
                             }
                             onUpgradePremium()
@@ -898,7 +902,7 @@ fun EnrollmentConfirmationModal(
                             if (packageId == "euee") {
                                 onConfirm(if (selectedStream == "natural") "euee_natural" else "euee_social")
                             } else {
-                                if (packageId == "department") {
+                                if (packageId == "department" || packageId == "exit_exam") {
                                     viewModel.saveDepartmentSetup("", selectedYear)
                                 }
                                 onConfirm(packageId)

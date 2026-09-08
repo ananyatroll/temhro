@@ -182,7 +182,7 @@ class MainActivity : ComponentActivity() {
                                                 senderPhone = progress.paymentSenderPhone
                                             )
                                         } else {
-                                             if (progress.activePackageId == "department" && academicDepartment.isBlank()) {
+                                             if ((progress.activePackageId == "department" || progress.activePackageId == "exit_exam") && academicDepartment.isBlank()) {
                                                  // Dedicated Department Selection Screen
                                                  DepartmentSelectionScreen(viewModel = viewModel)
                                              } else {
