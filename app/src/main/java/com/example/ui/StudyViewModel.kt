@@ -507,6 +507,7 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
     val savedNotesSet = MutableStateFlow<Set<String>>(sharedPrefs.getStringSet("saved_notes_ids", emptySet()) ?: emptySet())
     val savedFlashcardsSet = MutableStateFlow<Set<String>>(sharedPrefs.getStringSet("saved_flashcards_ids", emptySet()) ?: emptySet())
     val savedQuestionsSet = MutableStateFlow<Set<String>>(sharedPrefs.getStringSet("saved_questions_ids", emptySet()) ?: emptySet())
+    val savedTextbookBookmarksSet = MutableStateFlow<Set<String>>(sharedPrefs.getStringSet("saved_textbook_bookmarks", emptySet()) ?: emptySet())
 
     val showSavedNotesModal = MutableStateFlow(false)
     val showSavedFlashcardsModal = MutableStateFlow(false)
@@ -555,6 +556,20 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
     fun toggleSaveNote(noteId: String) = toggleIdInSet(savedNotesSet, "saved_notes_ids", noteId)
     fun toggleSaveFlashcard(cardId: String) = toggleIdInSet(savedFlashcardsSet, "saved_flashcards_ids", cardId)
     fun toggleSaveQuestion(questionId: String) = toggleIdInSet(savedQuestionsSet, "saved_questions_ids", questionId)
+    fun toggleSaveTextbookBookmark(editionFileName: String, pageNumber: Int) =
+        toggleIdInSet(savedTextbookBookmarksSet, "saved_textbook_bookmarks", "${editionFileName}_$pageNumber")
+
+    fun isTextbookPageBookmarked(editionFileName: String, pageNumber: Int): Boolean {
+        return savedTextbookBookmarksSet.value.contains("${editionFileName}_$pageNumber")
+    }
+
+    fun getBookmarkedPagesForEdition(editionFileName: String): List<Int> {
+        val prefix = "${editionFileName}_"
+        return savedTextbookBookmarksSet.value
+            .filter { it.startsWith(prefix) }
+            .mapNotNull { it.removePrefix(prefix).toIntOrNull() }
+            .sorted()
+    }
 
     val subjectProgressMap: StateFlow<Map<String, Float>> = combine(
         combine(repository.getAllNotes(), repository.getAllFlashcards(), repository.getAllQuestions()) { n, f, q ->

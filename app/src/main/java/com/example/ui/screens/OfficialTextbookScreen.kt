@@ -34,6 +34,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.ads.AdConfig
+import com.example.ads.AdsManager
+import com.example.ads.TinatBannerAd
 import com.example.ui.StudyViewModel
 import com.example.ui.components.*
 import com.example.ui.theme.*
@@ -551,7 +554,16 @@ fun OfficialTextbookScreen(
             }
 
             IconButton(
-                onClick = onClose,
+                onClick = {
+                    val activity = AdsManager.findActivity(context)
+                    if (activity != null) {
+                        AdsManager.showInterstitialIfAllowed(activity) {
+                            onClose()
+                        }
+                    } else {
+                        onClose()
+                    }
+                },
                 modifier = Modifier
                     .clip(CircleShape)
                     .background(Color(0xFF1E293B))
@@ -637,7 +649,7 @@ fun OfficialTextbookScreen(
         // 4. Main Content: Book Overview & Unit Breakdown
         LazyColumn(
             modifier = Modifier
-                .fillMaxSize()
+                .weight(1f)
                 .padding(horizontal = 16.dp),
             contentPadding = PaddingValues(bottom = 32.dp),
             verticalArrangement = Arrangement.spacedBy(14.dp)
@@ -691,7 +703,16 @@ fun OfficialTextbookScreen(
 
                             // Action: Open in In-App PDF Reader
                             Button(
-                                onClick = { activeReaderUnitPage = 1 },
+                                onClick = {
+                                    val activity = AdsManager.findActivity(context)
+                                    if (activity != null) {
+                                        AdsManager.showInterstitialIfAllowed(activity) {
+                                            activeReaderUnitPage = 1
+                                        }
+                                    } else {
+                                        activeReaderUnitPage = 1
+                                    }
+                                },
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .height(44.dp)
@@ -869,7 +890,16 @@ fun OfficialTextbookScreen(
                                     horizontalArrangement = Arrangement.spacedBy(8.dp)
                                 ) {
                                     Button(
-                                        onClick = { activeReaderUnitPage = unit.pageStart },
+                                        onClick = {
+                                            val activity = AdsManager.findActivity(context)
+                                            if (activity != null) {
+                                                AdsManager.showInterstitialIfAllowed(activity) {
+                                                    activeReaderUnitPage = unit.pageStart
+                                                }
+                                            } else {
+                                                activeReaderUnitPage = unit.pageStart
+                                            }
+                                        },
                                         modifier = Modifier
                                             .weight(1f)
                                             .pressBounce(),
@@ -908,6 +938,11 @@ fun OfficialTextbookScreen(
                 }
             }
         }
+
+        // Permanent Anchored Adaptive Banner Ad in Official Textbooks screen
+        if (AdConfig.ADS_ENABLED && AdConfig.BANNER_ADS_ENABLED) {
+            TinatBannerAd()
+        }
     }
 }
 
@@ -923,8 +958,21 @@ fun InAppPdfTextbookReader(
     var readingTheme by remember { mutableStateOf("dark") } // "dark", "sepia", "light"
     var showJumpDialog by remember { mutableStateOf(false) }
     var showTocModal by remember { mutableStateOf(false) }
-    var bookmarkedPages by remember { mutableStateOf(setOf<Int>()) }
+    var selectedTocTab by remember { mutableStateOf("units") } // "units", "bookmarks"
+    var fallbackBookmarks by remember { mutableStateOf(setOf<Int>()) }
     val context = LocalContext.current
+
+    val savedBookmarksSet = viewModel?.savedTextbookBookmarksSet?.collectAsState()?.value ?: emptySet()
+    val isBookmarked = if (viewModel != null) {
+        viewModel.isTextbookPageBookmarked(edition.fileName, currentPage)
+    } else {
+        fallbackBookmarks.contains(currentPage)
+    }
+    val editionBookmarks = if (viewModel != null) {
+        viewModel.getBookmarkedPagesForEdition(edition.fileName)
+    } else {
+        fallbackBookmarks.toList().sorted()
+    }
 
     val currentUnit = remember(currentPage, edition) {
         edition.units.findLast { it.pageStart <= currentPage } ?: edition.units.firstOrNull()
@@ -994,7 +1042,16 @@ fun InAppPdfTextbookReader(
         topBar = {
             TopAppBar(
                 navigationIcon = {
-                    IconButton(onClick = onClose) {
+                    IconButton(onClick = {
+                        val activity = AdsManager.findActivity(context)
+                        if (activity != null) {
+                            AdsManager.showInterstitialIfAllowed(activity) {
+                                onClose()
+                            }
+                        } else {
+                            onClose()
+                        }
+                    }) {
                         Icon(Icons.Default.ArrowBack, contentDescription = "Back", tint = textColor)
                     }
                 },
@@ -1019,7 +1076,7 @@ fun InAppPdfTextbookReader(
                     IconButton(onClick = { showJumpDialog = true }) {
                         Icon(Icons.Default.FindInPage, contentDescription = "Jump to Page", tint = textColor)
                     }
-                    // Table of Contents
+                    // Table of Contents & Bookmarks
                     IconButton(onClick = { showTocModal = true }) {
                         Icon(Icons.Default.List, contentDescription = "Table of Contents", tint = textColor)
                     }
@@ -1042,12 +1099,15 @@ fun InAppPdfTextbookReader(
                         )
                     }
                     // Bookmark Page
-                    val isBookmarked = bookmarkedPages.contains(currentPage)
                     IconButton(onClick = {
-                        bookmarkedPages = if (isBookmarked) {
-                            bookmarkedPages - currentPage
+                        if (viewModel != null) {
+                            viewModel.toggleSaveTextbookBookmark(edition.fileName, currentPage)
                         } else {
-                            bookmarkedPages + currentPage
+                            fallbackBookmarks = if (isBookmarked) {
+                                fallbackBookmarks - currentPage
+                            } else {
+                                fallbackBookmarks + currentPage
+                            }
                         }
                     }) {
                         Icon(
@@ -1133,6 +1193,12 @@ fun InAppPdfTextbookReader(
                             Spacer(modifier = Modifier.width(4.dp))
                             Icon(Icons.Default.ArrowForward, contentDescription = "Next", modifier = Modifier.size(16.dp))
                         }
+                    }
+
+                    // Permanent Anchored Adaptive Banner Ad in PDF Reader
+                    if (AdConfig.ADS_ENABLED && AdConfig.BANNER_ADS_ENABLED) {
+                        Spacer(modifier = Modifier.height(4.dp))
+                        TinatBannerAd()
                     }
                 }
             }
@@ -1359,74 +1425,201 @@ fun InAppPdfTextbookReader(
         )
     }
 
-    // Table of Contents Modal
+    // Table of Contents and Bookmarks Modal
     if (showTocModal) {
         AlertDialog(
             onDismissRequest = { showTocModal = false },
             containerColor = surfaceColor,
             title = {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text("Table of Contents", style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold), color = textColor)
-                    IconButton(onClick = { showTocModal = false }) {
-                        Icon(Icons.Default.Close, contentDescription = "Close", tint = textMutedColor)
+                Column {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text("Textbook Navigation", style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold), color = textColor)
+                        IconButton(onClick = { showTocModal = false }) {
+                            Icon(Icons.Default.Close, contentDescription = "Close", tint = textMutedColor)
+                        }
+                    }
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        Surface(
+                            modifier = Modifier
+                                .weight(1f)
+                                .clip(RoundedCornerShape(8.dp))
+                                .clickable { selectedTocTab = "units" },
+                            shape = RoundedCornerShape(8.dp),
+                            color = if (selectedTocTab == "units") EmeraldPrimary else bgColor,
+                            border = BorderStroke(1.dp, if (selectedTocTab == "units") EmeraldPrimary else borderColor)
+                        ) {
+                            Text(
+                                text = "Units (${edition.units.size})",
+                                style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
+                                color = if (selectedTocTab == "units") Color.White else textColor,
+                                textAlign = TextAlign.Center,
+                                modifier = Modifier.padding(vertical = 6.dp)
+                            )
+                        }
+
+                        Surface(
+                            modifier = Modifier
+                                .weight(1f)
+                                .clip(RoundedCornerShape(8.dp))
+                                .clickable { selectedTocTab = "bookmarks" },
+                            shape = RoundedCornerShape(8.dp),
+                            color = if (selectedTocTab == "bookmarks") GoldAccent else bgColor,
+                            border = BorderStroke(1.dp, if (selectedTocTab == "bookmarks") GoldAccent else borderColor)
+                        ) {
+                            Text(
+                                text = "Bookmarks (${editionBookmarks.size})",
+                                style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
+                                color = if (selectedTocTab == "bookmarks") Color.Black else textColor,
+                                textAlign = TextAlign.Center,
+                                modifier = Modifier.padding(vertical = 6.dp)
+                            )
+                        }
                     }
                 }
             },
             text = {
-                LazyColumn(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .heightIn(max = 400.dp),
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    items(edition.units) { unit ->
-                        Surface(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clip(RoundedCornerShape(10.dp))
-                                .clickable {
-                                    currentPage = unit.pageStart
-                                    showTocModal = false
-                                },
-                            shape = RoundedCornerShape(10.dp),
-                            color = if (currentUnit?.unitNumber == unit.unitNumber) EmeraldPrimary.copy(alpha = 0.2f) else bgColor,
-                            border = BorderStroke(1.dp, if (currentUnit?.unitNumber == unit.unitNumber) EmeraldPrimary else borderColor)
-                        ) {
-                            Row(
+                if (selectedTocTab == "units") {
+                    LazyColumn(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .heightIn(max = 380.dp),
+                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        items(edition.units) { unit ->
+                            Surface(
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .padding(12.dp),
-                                horizontalArrangement = Arrangement.SpaceBetween,
-                                verticalAlignment = Alignment.CenterVertically
+                                    .clip(RoundedCornerShape(10.dp))
+                                    .clickable {
+                                        currentPage = unit.pageStart
+                                        showTocModal = false
+                                    },
+                                shape = RoundedCornerShape(10.dp),
+                                color = if (currentUnit?.unitNumber == unit.unitNumber) EmeraldPrimary.copy(alpha = 0.2f) else bgColor,
+                                border = BorderStroke(1.dp, if (currentUnit?.unitNumber == unit.unitNumber) EmeraldPrimary else borderColor)
                             ) {
-                                Column(modifier = Modifier.weight(1f)) {
-                                    Text(
-                                        text = unit.unitNumber.uppercase(),
-                                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
-                                        color = GoldAccent
-                                    )
-                                    Text(
-                                        text = unit.title,
-                                        style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
-                                        color = textColor,
-                                        maxLines = 1,
-                                        overflow = TextOverflow.Ellipsis
-                                    )
-                                }
-                                Surface(
-                                    shape = RoundedCornerShape(6.dp),
-                                    color = surfaceColor
+                                Row(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(12.dp),
+                                    horizontalArrangement = Arrangement.SpaceBetween,
+                                    verticalAlignment = Alignment.CenterVertically
                                 ) {
-                                    Text(
-                                        text = "Page ${unit.pageStart}",
-                                        style = MaterialTheme.typography.labelSmall,
-                                        color = EmeraldPrimary,
-                                        modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
-                                    )
+                                    Column(modifier = Modifier.weight(1f)) {
+                                        Text(
+                                            text = unit.unitNumber.uppercase(),
+                                            style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
+                                            color = GoldAccent
+                                        )
+                                        Text(
+                                            text = unit.title,
+                                            style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
+                                            color = textColor,
+                                            maxLines = 1,
+                                            overflow = TextOverflow.Ellipsis
+                                        )
+                                    }
+                                    Surface(
+                                        shape = RoundedCornerShape(6.dp),
+                                        color = surfaceColor
+                                    ) {
+                                        Text(
+                                            text = "Page ${unit.pageStart}",
+                                            style = MaterialTheme.typography.labelSmall,
+                                            color = EmeraldPrimary,
+                                            modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
+                                        )
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    if (editionBookmarks.isEmpty()) {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(24.dp),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Text(
+                                text = "No bookmarks saved for this edition yet. Tap the bookmark icon on any page to save it here!",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = textMutedColor,
+                                textAlign = TextAlign.Center
+                            )
+                        }
+                    } else {
+                        LazyColumn(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .heightIn(max = 380.dp),
+                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            items(editionBookmarks) { pageNum ->
+                                val pageUnit = edition.units.findLast { it.pageStart <= pageNum } ?: edition.units.firstOrNull()
+                                Surface(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .clip(RoundedCornerShape(10.dp))
+                                        .clickable {
+                                            currentPage = pageNum
+                                            showTocModal = false
+                                        },
+                                    shape = RoundedCornerShape(10.dp),
+                                    color = if (currentPage == pageNum) GoldAccent.copy(alpha = 0.15f) else bgColor,
+                                    border = BorderStroke(1.dp, if (currentPage == pageNum) GoldAccent else borderColor)
+                                ) {
+                                    Row(
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .padding(12.dp),
+                                        horizontalArrangement = Arrangement.SpaceBetween,
+                                        verticalAlignment = Alignment.CenterVertically
+                                    ) {
+                                        Row(
+                                            verticalAlignment = Alignment.CenterVertically,
+                                            modifier = Modifier.weight(1f)
+                                        ) {
+                                            Icon(Icons.Default.Bookmark, contentDescription = null, tint = GoldAccent, modifier = Modifier.size(18.dp))
+                                            Spacer(modifier = Modifier.width(8.dp))
+                                            Column {
+                                                Text(
+                                                    text = "Page $pageNum",
+                                                    style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
+                                                    color = textColor
+                                                )
+                                                Text(
+                                                    text = "${pageUnit?.unitNumber ?: "Chapter"}: ${pageUnit?.title ?: ""}",
+                                                    style = MaterialTheme.typography.labelSmall,
+                                                    color = textMutedColor,
+                                                    maxLines = 1,
+                                                    overflow = TextOverflow.Ellipsis
+                                                )
+                                            }
+                                        }
+
+                                        IconButton(
+                                            onClick = {
+                                                if (viewModel != null) {
+                                                    viewModel.toggleSaveTextbookBookmark(edition.fileName, pageNum)
+                                                } else {
+                                                    fallbackBookmarks = fallbackBookmarks - pageNum
+                                                }
+                                            },
+                                            modifier = Modifier.size(24.dp)
+                                        ) {
+                                            Icon(Icons.Default.Close, contentDescription = "Delete", tint = textMutedColor, modifier = Modifier.size(16.dp))
+                                        }
+                                    }
                                 }
                             }
                         }
