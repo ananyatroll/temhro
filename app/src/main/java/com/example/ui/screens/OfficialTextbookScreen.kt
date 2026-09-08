@@ -2,13 +2,18 @@ package com.example.ui.screens
 
 import android.graphics.Bitmap
 import android.graphics.pdf.PdfRenderer
+import android.net.Uri
 import android.os.ParcelFileDescriptor
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.rememberTransformableState
+import androidx.compose.foundation.gestures.transformable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -24,10 +29,14 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
@@ -36,7 +45,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.ads.AdConfig
 import com.example.ads.AdsManager
-import com.example.ads.TinatBannerAd
 import com.example.ui.StudyViewModel
 import com.example.ui.components.*
 import com.example.ui.theme.*
@@ -938,11 +946,6 @@ fun OfficialTextbookScreen(
                 }
             }
         }
-
-        // Permanent Anchored Adaptive Banner Ad in Official Textbooks screen
-        if (AdConfig.ADS_ENABLED && AdConfig.BANNER_ADS_ENABLED) {
-            TinatBannerAd()
-        }
     }
 }
 
@@ -955,14 +958,36 @@ fun InAppPdfTextbookReader(
     viewModel: StudyViewModel? = null
 ) {
     var currentPage by remember { mutableStateOf(initialPage.coerceIn(1, edition.pageCount)) }
-    var readingTheme by remember { mutableStateOf("dark") } // "dark", "sepia", "light"
+    var scale by remember { mutableStateOf(1f) }
+    var offset by remember { mutableStateOf(Offset.Zero) }
     var showJumpDialog by remember { mutableStateOf(false) }
     var showTocModal by remember { mutableStateOf(false) }
     var selectedTocTab by remember { mutableStateOf("units") } // "units", "bookmarks"
+    var customPdfUri by remember { mutableStateOf<Uri?>(null) }
+    var customPageCount by remember { mutableStateOf<Int?>(null) }
     var fallbackBookmarks by remember { mutableStateOf(setOf<Int>()) }
     val context = LocalContext.current
 
-    val savedBookmarksSet = viewModel?.savedTextbookBookmarksSet?.collectAsState()?.value ?: emptySet()
+    val totalPages = customPageCount ?: edition.pageCount
+
+    // File picker launcher for opening any device PDF file (Google Drive / Files / Downloads)
+    val pdfPickerLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.OpenDocument()
+    ) { uri ->
+        if (uri != null) {
+            try {
+                context.contentResolver.takePersistableUriPermission(
+                    uri,
+                    android.content.Intent.FLAG_GRANT_READ_URI_PERMISSION
+                )
+            } catch (e: Exception) {
+                // Ignore if not persistable
+            }
+            customPdfUri = uri
+            currentPage = 1
+        }
+    }
+
     val isBookmarked = if (viewModel != null) {
         viewModel.isTextbookPageBookmarked(edition.fileName, currentPage)
     } else {
@@ -978,22 +1003,33 @@ fun InAppPdfTextbookReader(
         edition.units.findLast { it.pageStart <= currentPage } ?: edition.units.firstOrNull()
     }
 
-    // Try rendering physical PDF bitmap if file exists in assets or cache
-    val pdfBitmap = remember(currentPage, edition.fileName) {
+    // Attempt to render genuine PDF bitmap from custom picked URI, local cache, or assets
+    val pdfBitmap = remember(currentPage, edition.fileName, customPdfUri) {
         try {
-            val cacheFile = File(context.cacheDir, edition.fileName)
-            if (!cacheFile.exists()) {
-                try {
-                    context.assets.open(edition.fileName).use { input ->
-                        FileOutputStream(cacheFile).use { output -> input.copyTo(output) }
+            var pfd: ParcelFileDescriptor? = null
+            if (customPdfUri != null) {
+                pfd = context.contentResolver.openFileDescriptor(customPdfUri!!, "r")
+            } else {
+                val cacheFile = File(context.cacheDir, edition.fileName)
+                if (!cacheFile.exists()) {
+                    try {
+                        context.assets.open(edition.fileName).use { input ->
+                            FileOutputStream(cacheFile).use { output -> input.copyTo(output) }
+                        }
+                    } catch (e: Exception) {
+                        // Not in assets
                     }
-                } catch (e: Exception) {
-                    // Not in assets, fallback to high-fidelity digital textbook mode
+                }
+                if (cacheFile.exists()) {
+                    pfd = ParcelFileDescriptor.open(cacheFile, ParcelFileDescriptor.MODE_READ_ONLY)
                 }
             }
-            if (cacheFile.exists()) {
-                val pfd = ParcelFileDescriptor.open(cacheFile, ParcelFileDescriptor.MODE_READ_ONLY)
+
+            if (pfd != null) {
                 val renderer = PdfRenderer(pfd)
+                if (customPdfUri != null) {
+                    customPageCount = renderer.pageCount
+                }
                 val pageIdx = (currentPage - 1).coerceIn(0, renderer.pageCount - 1)
                 val page = renderer.openPage(pageIdx)
                 val bmp = Bitmap.createBitmap(page.width * 2, page.height * 2, Bitmap.Config.ARGB_8888)
@@ -1010,35 +1046,19 @@ fun InAppPdfTextbookReader(
         }
     }
 
-    // Theme Color Tokens
-    val bgColor = when (readingTheme) {
-        "sepia" -> Color(0xFFFBF0D9)
-        "light" -> Color(0xFFF8FAFC)
-        else -> Color(0xFF0A0F1D)
-    }
-    val surfaceColor = when (readingTheme) {
-        "sepia" -> Color(0xFFF4E4C1)
-        "light" -> Color(0xFFFFFFFF)
-        else -> Color(0xFF131C2E)
-    }
-    val textColor = when (readingTheme) {
-        "sepia" -> Color(0xFF2C221E)
-        "light" -> Color(0xFF0F172A)
-        else -> Color(0xFFF8FAFC)
-    }
-    val textMutedColor = when (readingTheme) {
-        "sepia" -> Color(0xFF786252)
-        "light" -> Color(0xFF64748B)
-        else -> Color(0xFF94A3B8)
-    }
-    val borderColor = when (readingTheme) {
-        "sepia" -> Color(0xFFE2CCA8)
-        "light" -> Color(0xFFE2E8F0)
-        else -> Color(0xFF334155)
+    // Google Drive / Acrobat Dark Theme Tokens
+    val viewerBg = Color(0xFF1E1F22)
+    val barBg = Color(0xFF2B2D30)
+    val textColor = Color(0xFFE6EDF3)
+    val textMuted = Color(0xFF9DA5B4)
+
+    val transformState = rememberTransformableState { zoomChange, offsetChange, _ ->
+        scale = (scale * zoomChange).coerceIn(0.8f, 3.5f)
+        offset += offsetChange
     }
 
     Scaffold(
-        containerColor = bgColor,
+        containerColor = viewerBg,
         topBar = {
             TopAppBar(
                 navigationIcon = {
@@ -1056,47 +1076,50 @@ fun InAppPdfTextbookReader(
                     }
                 },
                 title = {
-                    Column {
-                        Text(
-                            text = edition.title,
-                            style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Black),
-                            color = textColor,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Icon(
+                            imageVector = Icons.Default.PictureAsPdf,
+                            contentDescription = null,
+                            tint = Color(0xFFEA4335),
+                            modifier = Modifier.size(20.dp)
                         )
-                        Text(
-                            text = "Page $currentPage of ${edition.pageCount} • ${currentUnit?.unitNumber ?: "Chapter"}",
-                            style = MaterialTheme.typography.labelSmall,
-                            color = EmeraldPrimary
-                        )
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Column {
+                            Text(
+                                text = if (customPdfUri != null) "Opened Device Document.pdf" else "${edition.fileName}",
+                                style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
+                                color = textColor,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis
+                            )
+                            Text(
+                                text = "Page $currentPage of $totalPages • ${currentUnit?.unitNumber ?: "Chapter"}",
+                                style = MaterialTheme.typography.labelSmall,
+                                color = EmeraldPrimary
+                            )
+                        }
                     }
                 },
                 actions = {
+                    // Open PDF from Device storage / Google Drive
+                    IconButton(onClick = { pdfPickerLauncher.launch(arrayOf("application/pdf")) }) {
+                        Icon(Icons.Default.FolderOpen, contentDescription = "Open Device PDF", tint = GoldAccent)
+                    }
+                    // Zoom Out
+                    IconButton(onClick = { scale = (scale - 0.25f).coerceAtLeast(0.8f) }) {
+                        Icon(Icons.Default.ZoomOut, contentDescription = "Zoom Out", tint = textColor)
+                    }
+                    // Zoom In
+                    IconButton(onClick = { scale = (scale + 0.25f).coerceAtMost(3.5f) }) {
+                        Icon(Icons.Default.ZoomIn, contentDescription = "Zoom In", tint = textColor)
+                    }
                     // Jump to page
                     IconButton(onClick = { showJumpDialog = true }) {
                         Icon(Icons.Default.FindInPage, contentDescription = "Jump to Page", tint = textColor)
                     }
                     // Table of Contents & Bookmarks
                     IconButton(onClick = { showTocModal = true }) {
-                        Icon(Icons.Default.List, contentDescription = "Table of Contents", tint = textColor)
-                    }
-                    // Theme Switcher
-                    IconButton(onClick = {
-                        readingTheme = when (readingTheme) {
-                            "dark" -> "sepia"
-                            "sepia" -> "light"
-                            else -> "dark"
-                        }
-                    }) {
-                        Icon(
-                            imageVector = when (readingTheme) {
-                                "dark" -> Icons.Default.DarkMode
-                                "sepia" -> Icons.Default.WbSunny
-                                else -> Icons.Default.LightMode
-                            },
-                            contentDescription = "Theme",
-                            tint = GoldAccent
-                        )
+                        Icon(Icons.Default.FormatListBulleted, contentDescription = "Table of Contents", tint = textColor)
                     }
                     // Bookmark Page
                     IconButton(onClick = {
@@ -1117,13 +1140,13 @@ fun InAppPdfTextbookReader(
                         )
                     }
                 },
-                colors = TopAppBarDefaults.topAppBarColors(containerColor = surfaceColor)
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = barBg)
             )
         },
         bottomBar = {
             Surface(
-                color = surfaceColor,
-                border = BorderStroke(1.dp, borderColor)
+                color = barBg,
+                border = BorderStroke(1.dp, Color(0xFF3C3F41))
             ) {
                 Column(
                     modifier = Modifier
@@ -1137,22 +1160,22 @@ fun InAppPdfTextbookReader(
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
-                        Text("1", style = MaterialTheme.typography.labelSmall, color = textMutedColor)
+                        Text("1", style = MaterialTheme.typography.labelSmall, color = textMuted)
                         Slider(
                             value = currentPage.toFloat(),
-                            onValueChange = { currentPage = it.toInt().coerceIn(1, edition.pageCount) },
-                            valueRange = 1f..edition.pageCount.toFloat(),
+                            onValueChange = { currentPage = it.toInt().coerceIn(1, totalPages) },
+                            valueRange = 1f..totalPages.toFloat(),
                             modifier = Modifier.weight(1f).padding(horizontal = 8.dp),
                             colors = SliderDefaults.colors(
                                 thumbColor = EmeraldPrimary,
                                 activeTrackColor = EmeraldPrimary,
-                                inactiveTrackColor = borderColor
+                                inactiveTrackColor = Color(0xFF4E5157)
                             )
                         )
-                        Text("${edition.pageCount}", style = MaterialTheme.typography.labelSmall, color = textMutedColor)
+                        Text("$totalPages", style = MaterialTheme.typography.labelSmall, color = textMuted)
                     }
 
-                    // Page Navigation Buttons
+                    // Bottom Navigation Buttons
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween,
@@ -1161,7 +1184,7 @@ fun InAppPdfTextbookReader(
                         Button(
                             onClick = { if (currentPage > 1) currentPage -= 1 },
                             enabled = currentPage > 1,
-                            shape = RoundedCornerShape(10.dp),
+                            shape = RoundedCornerShape(8.dp),
                             colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary)
                         ) {
                             Icon(Icons.Default.ArrowBack, contentDescription = "Prev", modifier = Modifier.size(16.dp))
@@ -1170,35 +1193,29 @@ fun InAppPdfTextbookReader(
                         }
 
                         Surface(
-                            shape = RoundedCornerShape(8.dp),
-                            color = bgColor,
-                            border = BorderStroke(1.dp, borderColor),
+                            shape = RoundedCornerShape(6.dp),
+                            color = viewerBg,
+                            border = BorderStroke(1.dp, Color(0xFF4E5157)),
                             modifier = Modifier.clickable { showJumpDialog = true }
                         ) {
                             Text(
-                                text = "Page $currentPage / ${edition.pageCount}",
+                                text = "Page $currentPage / $totalPages",
                                 style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Black),
                                 color = textColor,
-                                modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
+                                modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp)
                             )
                         }
 
                         Button(
-                            onClick = { if (currentPage < edition.pageCount) currentPage += 1 },
-                            enabled = currentPage < edition.pageCount,
-                            shape = RoundedCornerShape(10.dp),
+                            onClick = { if (currentPage < totalPages) currentPage += 1 },
+                            enabled = currentPage < totalPages,
+                            shape = RoundedCornerShape(8.dp),
                             colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary)
                         ) {
                             Text("Next", fontSize = 12.sp, fontWeight = FontWeight.Bold)
                             Spacer(modifier = Modifier.width(4.dp))
                             Icon(Icons.Default.ArrowForward, contentDescription = "Next", modifier = Modifier.size(16.dp))
                         }
-                    }
-
-                    // Permanent Anchored Adaptive Banner Ad in PDF Reader
-                    if (AdConfig.ADS_ENABLED && AdConfig.BANNER_ADS_ENABLED) {
-                        Spacer(modifier = Modifier.height(4.dp))
-                        TinatBannerAd()
                     }
                 }
             }
@@ -1208,9 +1225,12 @@ fun InAppPdfTextbookReader(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
+                .background(viewerBg)
+                .transformable(state = transformState),
+            contentAlignment = Alignment.Center
         ) {
             if (pdfBitmap != null) {
-                // Render true PDF page bitmap
+                // Render Genuine PDF Page Bitmap
                 Column(
                     modifier = Modifier
                         .fillMaxSize()
@@ -1223,151 +1243,242 @@ fun InAppPdfTextbookReader(
                         contentDescription = "PDF Page $currentPage",
                         modifier = Modifier
                             .fillMaxWidth()
-                            .clip(RoundedCornerShape(8.dp))
-                            .border(1.dp, borderColor, RoundedCornerShape(8.dp))
+                            .shadow(8.dp, RoundedCornerShape(4.dp))
+                            .clip(RoundedCornerShape(4.dp))
+                            .graphicsLayer(
+                                scaleX = scale,
+                                scaleY = scale,
+                                translationX = offset.x,
+                                translationY = offset.y
+                            )
                     )
                 }
             } else {
-                // High-Fidelity In-App Digital MoE Curriculum Textbook Page
+                // Google Drive / Adobe Acrobat Authentic A4 White Document Sheet
                 Column(
                     modifier = Modifier
                         .fillMaxSize()
                         .verticalScroll(rememberScrollState())
-                        .padding(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(16.dp)
+                        .padding(horizontal = 16.dp, vertical = 14.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    // Header Banner
-                    Card(
+                    Surface(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .border(1.dp, borderColor, RoundedCornerShape(12.dp)),
-                        shape = RoundedCornerShape(12.dp),
-                        colors = CardDefaults.cardColors(containerColor = surfaceColor)
+                            .shadow(12.dp, RoundedCornerShape(4.dp))
+                            .graphicsLayer(
+                                scaleX = scale,
+                                scaleY = scale,
+                                translationX = offset.x,
+                                translationY = offset.y
+                            ),
+                        shape = RoundedCornerShape(4.dp),
+                        color = Color.White
                     ) {
-                        Row(
+                        Column(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(12.dp),
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.SpaceBetween
+                                .padding(24.dp)
                         ) {
-                            Row(verticalAlignment = Alignment.CenterVertically) {
-                                Surface(
-                                    shape = RoundedCornerShape(6.dp),
-                                    color = EmeraldPrimary.copy(alpha = 0.2f),
-                                    border = BorderStroke(1.dp, EmeraldPrimary)
-                                ) {
-                                    Text(
-                                        text = currentUnit?.unitNumber ?: "UNIT",
-                                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black),
-                                        color = EmeraldPrimary,
-                                        modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
-                                    )
-                                }
-                                Spacer(modifier = Modifier.width(8.dp))
+                            // 1. Running Header
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
                                 Text(
-                                    text = currentUnit?.title ?: edition.title,
-                                    style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
-                                    color = textColor,
-                                    maxLines = 1,
-                                    overflow = TextOverflow.Ellipsis
+                                    text = "FEDERAL DEMOCRATIC REPUBLIC OF ETHIOPIA • MINISTRY OF EDUCATION",
+                                    style = MaterialTheme.typography.labelSmall.copy(
+                                        fontSize = 8.5.sp,
+                                        fontWeight = FontWeight.Black,
+                                        letterSpacing = 0.5.sp
+                                    ),
+                                    color = Color(0xFF1E293B)
+                                )
+                                Text(
+                                    text = "${edition.grade.uppercase()}",
+                                    style = MaterialTheme.typography.labelSmall.copy(fontSize = 9.sp, fontWeight = FontWeight.Bold),
+                                    color = Color(0xFF047857)
                                 )
                             }
-                            Text(
-                                text = "Page $currentPage",
-                                style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black),
-                                color = GoldAccent
-                            )
-                        }
-                    }
+                            Spacer(modifier = Modifier.height(4.dp))
+                            HorizontalDivider(color = Color(0xFF94A3B8), thickness = 1.dp)
+                            Spacer(modifier = Modifier.height(16.dp))
 
-                    // Section 1: Official MoE Learning Objectives
-                    Card(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .border(1.dp, borderColor, RoundedCornerShape(14.dp)),
-                        shape = RoundedCornerShape(14.dp),
-                        colors = CardDefaults.cardColors(containerColor = surfaceColor)
-                    ) {
-                        Column(modifier = Modifier.padding(16.dp)) {
-                            Row(verticalAlignment = Alignment.CenterVertically) {
-                                Icon(Icons.Default.School, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(18.dp))
-                                Spacer(modifier = Modifier.width(8.dp))
-                                Text(
-                                    text = "FDRE MoE CURRICULUM OBJECTIVES",
-                                    style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black, letterSpacing = 1.sp),
-                                    color = EmeraldPrimary
-                                )
-                            }
-                            Spacer(modifier = Modifier.height(8.dp))
-                            Text(
-                                text = currentUnit?.summary ?: "Comprehensive study of ${edition.title} for Ethiopian national assessment.",
-                                style = MaterialTheme.typography.bodyMedium.copy(lineHeight = 22.sp),
-                                color = textColor
-                            )
-                        }
-                    }
-
-                    // Section 2: Core Key Concepts & Competencies
-                    Card(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .border(1.dp, borderColor, RoundedCornerShape(14.dp)),
-                        shape = RoundedCornerShape(14.dp),
-                        colors = CardDefaults.cardColors(containerColor = surfaceColor)
-                    ) {
-                        Column(modifier = Modifier.padding(16.dp)) {
-                            Row(verticalAlignment = Alignment.CenterVertically) {
-                                Icon(Icons.Default.Lightbulb, contentDescription = null, tint = GoldAccent, modifier = Modifier.size(18.dp))
-                                Spacer(modifier = Modifier.width(8.dp))
-                                Text(
-                                    text = "HIGH-YIELD EUEE CORE TOPICS",
-                                    style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black, letterSpacing = 1.sp),
-                                    color = GoldAccent
-                                )
-                            }
-                            Spacer(modifier = Modifier.height(10.dp))
-                            (currentUnit?.keyTopics ?: listOf("Fundamental concepts", "Mathematical formulas", "Applications in Ethiopia")).forEach { topic ->
+                            // 2. Unit Banner
+                            Surface(
+                                shape = RoundedCornerShape(4.dp),
+                                color = Color(0xFF0F766E),
+                                modifier = Modifier.fillMaxWidth()
+                            ) {
                                 Row(
-                                    modifier = Modifier.padding(vertical = 4.dp),
+                                    modifier = Modifier.padding(horizontal = 14.dp, vertical = 8.dp),
                                     verticalAlignment = Alignment.CenterVertically
                                 ) {
-                                    Icon(Icons.Default.CheckCircle, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(16.dp))
-                                    Spacer(modifier = Modifier.width(8.dp))
+                                    Surface(
+                                        shape = RoundedCornerShape(3.dp),
+                                        color = Color.White
+                                    ) {
+                                        Text(
+                                            text = currentUnit?.unitNumber?.uppercase() ?: "CHAPTER",
+                                            style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Black),
+                                            color = Color(0xFF0F766E),
+                                            modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
+                                        )
+                                    }
+                                    Spacer(modifier = Modifier.width(10.dp))
                                     Text(
-                                        text = topic,
-                                        style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Medium),
-                                        color = textColor
+                                        text = currentUnit?.title ?: edition.title,
+                                        style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Black),
+                                        color = Color.White,
+                                        maxLines = 1,
+                                        overflow = TextOverflow.Ellipsis
                                     )
                                 }
                             }
-                        }
-                    }
 
-                    // Section 3: National Exam Strategy Note
-                    Card(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .border(1.dp, Brush.linearGradient(listOf(EmeraldPrimary.copy(alpha = 0.5f), GoldAccent.copy(alpha = 0.5f))), RoundedCornerShape(14.dp)),
-                        shape = RoundedCornerShape(14.dp),
-                        colors = CardDefaults.cardColors(containerColor = surfaceColor)
-                    ) {
-                        Column(modifier = Modifier.padding(16.dp)) {
-                            Row(verticalAlignment = Alignment.CenterVertically) {
-                                Icon(Icons.Default.Star, contentDescription = null, tint = GoldAccent, modifier = Modifier.size(18.dp))
-                                Spacer(modifier = Modifier.width(8.dp))
+                            Spacer(modifier = Modifier.height(16.dp))
+
+                            // 3. Learning Objectives & Curriculum Framework
+                            Surface(
+                                shape = RoundedCornerShape(4.dp),
+                                color = Color(0xFFF0FDF4),
+                                border = BorderStroke(1.dp, Color(0xFF86EFAC)),
+                                modifier = Modifier.fillMaxWidth()
+                            ) {
+                                Column(modifier = Modifier.padding(12.dp)) {
+                                    Text(
+                                        text = "1.0 INTRODUCTION & LEARNING COMPETENCIES",
+                                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black),
+                                        color = Color(0xFF166534)
+                                    )
+                                    Spacer(modifier = Modifier.height(4.dp))
+                                    Text(
+                                        text = currentUnit?.summary ?: "In this unit, students explore core scientific, analytical, and conceptual foundations aligned with FDRE Ministry of Education curriculum guidelines.",
+                                        style = MaterialTheme.typography.bodySmall.copy(fontSize = 12.sp, lineHeight = 18.sp),
+                                        color = Color(0xFF1F2937)
+                                    )
+                                }
+                            }
+
+                            Spacer(modifier = Modifier.height(16.dp))
+
+                            // 4. In-Depth Textbook Text & Subsections
+                            Text(
+                                text = "1.1 Core Conceptual Foundations",
+                                style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
+                                color = Color(0xFF111827)
+                            )
+                            Spacer(modifier = Modifier.height(6.dp))
+                            Text(
+                                text = "Students preparing for the Ethiopian University Entrance Examination (EUEE) must grasp the theoretical frameworks, empirical mechanisms, and practical applications outlined in this chapter. Each principle is designed to foster critical thinking, problem-solving abilities, and national development perspectives.",
+                                style = MaterialTheme.typography.bodySmall.copy(fontSize = 12.5.sp, lineHeight = 19.sp),
+                                color = Color(0xFF374151)
+                            )
+
+                            Spacer(modifier = Modifier.height(14.dp))
+
+                            // 5. Key Terms Callout Box
+                            Surface(
+                                shape = RoundedCornerShape(4.dp),
+                                color = Color(0xFFFFFBEB),
+                                border = BorderStroke(1.dp, Color(0xFFFDE68A)),
+                                modifier = Modifier.fillMaxWidth()
+                            ) {
+                                Column(modifier = Modifier.padding(12.dp)) {
+                                    Text(
+                                        text = "KEY DEFINITIONS & FORMULAS",
+                                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black),
+                                        color = Color(0xFF92400E)
+                                    )
+                                    Spacer(modifier = Modifier.height(6.dp))
+                                    (currentUnit?.keyTopics ?: listOf("Key Concept 1", "Key Concept 2", "Key Concept 3")).forEachIndexed { index, topic ->
+                                        Row(
+                                            modifier = Modifier.padding(vertical = 2.dp),
+                                            verticalAlignment = Alignment.CenterVertically
+                                        ) {
+                                            Text(
+                                                text = "• ${topic}: ",
+                                                style = MaterialTheme.typography.bodySmall.copy(fontWeight = FontWeight.Bold, fontSize = 11.5.sp),
+                                                color = Color(0xFF78350F)
+                                            )
+                                            Text(
+                                                text = "Core requirement under MoE Grade ${edition.grade.filter { it.isDigit() }} benchmark standard.",
+                                                style = MaterialTheme.typography.bodySmall.copy(fontSize = 11.5.sp),
+                                                color = Color(0xFF4B5563)
+                                            )
+                                        }
+                                    }
+                                }
+                            }
+
+                            Spacer(modifier = Modifier.height(14.dp))
+
+                            // 6. Ethiopian Context Case Study
+                            Surface(
+                                shape = RoundedCornerShape(4.dp),
+                                color = Color(0xFFF8FAFC),
+                                border = BorderStroke(1.dp, Color(0xFFE2E8F0)),
+                                modifier = Modifier.fillMaxWidth()
+                            ) {
+                                Column(modifier = Modifier.padding(12.dp)) {
+                                    Text(
+                                        text = "ETHIOPIAN CASE STUDY & APPLICATION",
+                                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black),
+                                        color = Color(0xFF0369A1)
+                                    )
+                                    Spacer(modifier = Modifier.height(4.dp))
+                                    Text(
+                                        text = "Application of these principles directly supports sustainable development, technological modernization, and industrial growth in Ethiopia. Examine how Ethiopian research institutions and agricultural initiatives apply these paradigms.",
+                                        style = MaterialTheme.typography.bodySmall.copy(fontSize = 12.sp, lineHeight = 18.sp),
+                                        color = Color(0xFF334155)
+                                    )
+                                }
+                            }
+
+                            Spacer(modifier = Modifier.height(18.dp))
+
+                            // 7. Unit Review Assessment Exercises
+                            Text(
+                                text = "Unit Review Assessment Checkpoint",
+                                style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
+                                color = Color(0xFF111827)
+                            )
+                            Spacer(modifier = Modifier.height(6.dp))
+                            listOf(
+                                "1. Explain the fundamental mechanisms governing ${currentUnit?.title ?: "this topic"}.",
+                                "2. Derive the primary relationship between key variables described in Section 1.1.",
+                                "3. Discuss the relevance of these concepts to national development priorities in Ethiopia."
+                            ).forEach { question ->
                                 Text(
-                                    text = "NATIONAL EXAMINATION FOCUS",
-                                    style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black, letterSpacing = 1.sp),
-                                    color = GoldAccent
+                                    text = question,
+                                    style = MaterialTheme.typography.bodySmall.copy(fontSize = 11.5.sp, lineHeight = 17.sp),
+                                    color = Color(0xFF374151),
+                                    modifier = Modifier.padding(vertical = 2.dp)
                                 )
                             }
+
+                            Spacer(modifier = Modifier.height(24.dp))
+                            HorizontalDivider(color = Color(0xFFCBD5E1), thickness = 1.dp)
                             Spacer(modifier = Modifier.height(8.dp))
-                            Text(
-                                text = "Questions from ${currentUnit?.unitNumber ?: "this chapter"} appear regularly in Grade 12 National Exams. Focus on definitions, step-by-step problem derivations, and Ethiopian case studies.",
-                                style = MaterialTheme.typography.bodyMedium.copy(lineHeight = 22.sp),
-                                color = textColor
-                            )
+
+                            // 8. Running Footer
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Text(
+                                    text = "FDRE MoE Textbook • ${edition.grade}",
+                                    style = MaterialTheme.typography.labelSmall.copy(fontSize = 9.sp),
+                                    color = Color(0xFF64748B)
+                                )
+                                Text(
+                                    text = "Page $currentPage of ${totalPages}",
+                                    style = MaterialTheme.typography.labelSmall.copy(fontSize = 9.sp, fontWeight = FontWeight.Bold),
+                                    color = Color(0xFF0F766E)
+                                )
+                            }
                         }
                     }
                 }
@@ -1380,13 +1491,13 @@ fun InAppPdfTextbookReader(
         var inputPage by remember { mutableStateOf(currentPage.toString()) }
         AlertDialog(
             onDismissRequest = { showJumpDialog = false },
-            containerColor = surfaceColor,
+            containerColor = barBg,
             title = {
                 Text("Jump to Page", style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold), color = textColor)
             },
             text = {
                 Column {
-                    Text("Enter page number (1 to ${edition.pageCount}):", style = MaterialTheme.typography.bodySmall, color = textMutedColor)
+                    Text("Enter page number (1 to $totalPages):", style = MaterialTheme.typography.bodySmall, color = textMuted)
                     Spacer(modifier = Modifier.height(10.dp))
                     OutlinedTextField(
                         value = inputPage,
@@ -1397,7 +1508,7 @@ fun InAppPdfTextbookReader(
                             focusedTextColor = textColor,
                             unfocusedTextColor = textColor,
                             focusedBorderColor = EmeraldPrimary,
-                            unfocusedBorderColor = borderColor
+                            unfocusedBorderColor = Color(0xFF4E5157)
                         ),
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -1407,7 +1518,7 @@ fun InAppPdfTextbookReader(
                 Button(
                     onClick = {
                         val pageNum = inputPage.toIntOrNull()
-                        if (pageNum != null && pageNum in 1..edition.pageCount) {
+                        if (pageNum != null && pageNum in 1..totalPages) {
                             currentPage = pageNum
                         }
                         showJumpDialog = false
@@ -1419,7 +1530,7 @@ fun InAppPdfTextbookReader(
             },
             dismissButton = {
                 TextButton(onClick = { showJumpDialog = false }) {
-                    Text("Cancel", color = textMutedColor)
+                    Text("Cancel", color = textMuted)
                 }
             }
         )
@@ -1429,7 +1540,7 @@ fun InAppPdfTextbookReader(
     if (showTocModal) {
         AlertDialog(
             onDismissRequest = { showTocModal = false },
-            containerColor = surfaceColor,
+            containerColor = barBg,
             title = {
                 Column {
                     Row(
@@ -1437,9 +1548,9 @@ fun InAppPdfTextbookReader(
                         horizontalArrangement = Arrangement.SpaceBetween,
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Text("Textbook Navigation", style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold), color = textColor)
+                        Text("Document Outline", style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold), color = textColor)
                         IconButton(onClick = { showTocModal = false }) {
-                            Icon(Icons.Default.Close, contentDescription = "Close", tint = textMutedColor)
+                            Icon(Icons.Default.Close, contentDescription = "Close", tint = textMuted)
                         }
                     }
                     Spacer(modifier = Modifier.height(8.dp))
@@ -1453,8 +1564,8 @@ fun InAppPdfTextbookReader(
                                 .clip(RoundedCornerShape(8.dp))
                                 .clickable { selectedTocTab = "units" },
                             shape = RoundedCornerShape(8.dp),
-                            color = if (selectedTocTab == "units") EmeraldPrimary else bgColor,
-                            border = BorderStroke(1.dp, if (selectedTocTab == "units") EmeraldPrimary else borderColor)
+                            color = if (selectedTocTab == "units") EmeraldPrimary else viewerBg,
+                            border = BorderStroke(1.dp, if (selectedTocTab == "units") EmeraldPrimary else Color(0xFF4E5157))
                         ) {
                             Text(
                                 text = "Units (${edition.units.size})",
@@ -1471,8 +1582,8 @@ fun InAppPdfTextbookReader(
                                 .clip(RoundedCornerShape(8.dp))
                                 .clickable { selectedTocTab = "bookmarks" },
                             shape = RoundedCornerShape(8.dp),
-                            color = if (selectedTocTab == "bookmarks") GoldAccent else bgColor,
-                            border = BorderStroke(1.dp, if (selectedTocTab == "bookmarks") GoldAccent else borderColor)
+                            color = if (selectedTocTab == "bookmarks") GoldAccent else viewerBg,
+                            border = BorderStroke(1.dp, if (selectedTocTab == "bookmarks") GoldAccent else Color(0xFF4E5157))
                         ) {
                             Text(
                                 text = "Bookmarks (${editionBookmarks.size})",
@@ -1503,8 +1614,8 @@ fun InAppPdfTextbookReader(
                                         showTocModal = false
                                     },
                                 shape = RoundedCornerShape(10.dp),
-                                color = if (currentUnit?.unitNumber == unit.unitNumber) EmeraldPrimary.copy(alpha = 0.2f) else bgColor,
-                                border = BorderStroke(1.dp, if (currentUnit?.unitNumber == unit.unitNumber) EmeraldPrimary else borderColor)
+                                color = if (currentUnit?.unitNumber == unit.unitNumber) EmeraldPrimary.copy(alpha = 0.2f) else viewerBg,
+                                border = BorderStroke(1.dp, if (currentUnit?.unitNumber == unit.unitNumber) EmeraldPrimary else Color(0xFF4E5157))
                             ) {
                                 Row(
                                     modifier = Modifier
@@ -1529,7 +1640,7 @@ fun InAppPdfTextbookReader(
                                     }
                                     Surface(
                                         shape = RoundedCornerShape(6.dp),
-                                        color = surfaceColor
+                                        color = barBg
                                     ) {
                                         Text(
                                             text = "Page ${unit.pageStart}",
@@ -1553,7 +1664,7 @@ fun InAppPdfTextbookReader(
                             Text(
                                 text = "No bookmarks saved for this edition yet. Tap the bookmark icon on any page to save it here!",
                                 style = MaterialTheme.typography.bodySmall,
-                                color = textMutedColor,
+                                color = textMuted,
                                 textAlign = TextAlign.Center
                             )
                         }
@@ -1575,8 +1686,8 @@ fun InAppPdfTextbookReader(
                                             showTocModal = false
                                         },
                                     shape = RoundedCornerShape(10.dp),
-                                    color = if (currentPage == pageNum) GoldAccent.copy(alpha = 0.15f) else bgColor,
-                                    border = BorderStroke(1.dp, if (currentPage == pageNum) GoldAccent else borderColor)
+                                    color = if (currentPage == pageNum) GoldAccent.copy(alpha = 0.15f) else viewerBg,
+                                    border = BorderStroke(1.dp, if (currentPage == pageNum) GoldAccent else Color(0xFF4E5157))
                                 ) {
                                     Row(
                                         modifier = Modifier
@@ -1600,7 +1711,7 @@ fun InAppPdfTextbookReader(
                                                 Text(
                                                     text = "${pageUnit?.unitNumber ?: "Chapter"}: ${pageUnit?.title ?: ""}",
                                                     style = MaterialTheme.typography.labelSmall,
-                                                    color = textMutedColor,
+                                                    color = textMuted,
                                                     maxLines = 1,
                                                     overflow = TextOverflow.Ellipsis
                                                 )
@@ -1617,7 +1728,7 @@ fun InAppPdfTextbookReader(
                                             },
                                             modifier = Modifier.size(24.dp)
                                         ) {
-                                            Icon(Icons.Default.Close, contentDescription = "Delete", tint = textMutedColor, modifier = Modifier.size(16.dp))
+                                            Icon(Icons.Default.Close, contentDescription = "Delete", tint = textMuted, modifier = Modifier.size(16.dp))
                                         }
                                     }
                                 }
