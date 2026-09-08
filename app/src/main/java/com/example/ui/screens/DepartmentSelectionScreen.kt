@@ -69,7 +69,7 @@ fun DepartmentSelectionScreen(viewModel: StudyViewModel) {
     }
 
     Scaffold(
-        containerColor = if (isDarkTheme) DarkSurface else LightBackground,
+        containerColor = if (isDarkTheme) ReaderBgDark else BgOffWhite,
         topBar = {
             TopAppBar(
                 title = {
