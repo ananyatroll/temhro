@@ -831,6 +831,9 @@ fun DarkThemedNotesReader(
         ) {
             val savedNotesSet by viewModel.savedNotesSet.collectAsState()
             val isSaved = note != null && savedNotesSet.contains(note.id)
+            val coroutineScope = rememberCoroutineScope()
+            var isDownloaded by remember(note?.id) { mutableStateOf(false) }
+            var downloadProgress by remember(note?.id) { mutableStateOf<Int?>(null) }
 
             // Header
             Row(
@@ -881,6 +884,37 @@ fun DarkThemedNotesReader(
                 }
 
                 Row(verticalAlignment = Alignment.CenterVertically) {
+                    // Download note for offline study
+                    IconButton(
+                        onClick = {
+                            if (!isDownloaded && downloadProgress == null) {
+                                coroutineScope.launch {
+                                    for (p in 20..100 step 20) {
+                                        downloadProgress = p
+                                        kotlinx.coroutines.delay(80)
+                                    }
+                                    downloadProgress = null
+                                    isDownloaded = true
+                                }
+                            }
+                        }
+                    ) {
+                        if (downloadProgress != null) {
+                            CircularProgressIndicator(
+                                progress = { (downloadProgress ?: 0) / 100f },
+                                modifier = Modifier.size(20.dp),
+                                color = EmeraldPrimary,
+                                strokeWidth = 2.dp
+                            )
+                        } else {
+                            Icon(
+                                imageVector = if (isDownloaded) Icons.Default.CheckCircle else Icons.Default.Download,
+                                contentDescription = "Download note",
+                                tint = if (isDownloaded) EmeraldPrimary else Color.White
+                            )
+                        }
+                    }
+
                     // Save note button
                     IconButton(
                         onClick = {

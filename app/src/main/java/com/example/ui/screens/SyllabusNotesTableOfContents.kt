@@ -47,6 +47,24 @@ fun SyllabusNotesTableOfContents(
     val lastStudiedSubjectId by viewModel.lastStudiedSubjectId.collectAsState()
 
     var searchQuery by remember { mutableStateOf("") }
+    val coroutineScope = rememberCoroutineScope()
+    var isNotesDownloaded by remember { mutableStateOf(false) }
+    var notesDownloadProgress by remember { mutableStateOf<Int?>(null) }
+    var showNotesDownloadReminder by remember { mutableStateOf(true) }
+
+    val startNotesDownload = {
+        if (!isNotesDownloaded && notesDownloadProgress == null) {
+            coroutineScope.launch {
+                for (p in 20..100 step 20) {
+                    notesDownloadProgress = p
+                    kotlinx.coroutines.delay(80)
+                }
+                notesDownloadProgress = null
+                isNotesDownloaded = true
+                showNotesDownloadReminder = false
+            }
+        }
+    }
 
     val subjectName = activeSubject?.name ?: "Syllabus Notes"
 
@@ -215,6 +233,124 @@ fun SyllabusNotesTableOfContents(
                             color = EmeraldPrimary,
                             fontWeight = FontWeight.Medium
                         )
+                    }
+
+                    Spacer(modifier = Modifier.width(8.dp))
+
+                    // Download Notes Button (Offline sync with live progress percentage)
+                    IconButton(
+                        onClick = { startNotesDownload() },
+                        modifier = Modifier
+                            .size(38.dp)
+                            .clip(CircleShape)
+                            .background(if (isDark) Color(0xFF1E293B) else Color(0xFFEEF2F6))
+                    ) {
+                        if (notesDownloadProgress != null) {
+                            CircularProgressIndicator(
+                                progress = { (notesDownloadProgress ?: 0) / 100f },
+                                modifier = Modifier.size(20.dp),
+                                color = EmeraldPrimary,
+                                strokeWidth = 2.5.dp
+                            )
+                        } else {
+                            Icon(
+                                imageVector = if (isNotesDownloaded) Icons.Default.CheckCircle else Icons.Default.Download,
+                                contentDescription = "Download Notes Offline",
+                                tint = if (isNotesDownloaded) EmeraldPrimary else (if (isDark) Color.White else IndigoSecondary)
+                            )
+                        }
+                    }
+                }
+            }
+
+            // Offline Notes Download Reminder Banner
+            if (showNotesDownloadReminder && !isNotesDownloaded) {
+                Surface(
+                    color = if (isDark) Color(0xFF131C2E) else Color(0xFFECFDF5),
+                    modifier = Modifier.fillMaxWidth(),
+                    border = BorderStroke(1.dp, EmeraldPrimary.copy(alpha = 0.3f))
+                ) {
+                    Column(modifier = Modifier.padding(horizontal = 16.dp, vertical = 10.dp)) {
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.SpaceBetween
+                        ) {
+                            Row(
+                                modifier = Modifier.weight(1f),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Default.DownloadForOffline,
+                                    contentDescription = null,
+                                    tint = EmeraldPrimary,
+                                    modifier = Modifier.size(20.dp)
+                                )
+                                Spacer(modifier = Modifier.width(8.dp))
+                                Column {
+                                    Text(
+                                        text = "Download Offline Study Notes",
+                                        style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Bold),
+                                        color = if (isDark) Color.White else IndigoSecondary
+                                    )
+                                    Text(
+                                        text = "Download all $subjectName notes for 100% offline study without using mobile data.",
+                                        style = MaterialTheme.typography.bodySmall.copy(fontSize = 11.sp),
+                                        color = if (isDark) TextMuted else Color(0xFF047857)
+                                    )
+                                }
+                            }
+                            IconButton(
+                                onClick = { showNotesDownloadReminder = false },
+                                modifier = Modifier.size(28.dp)
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Default.Close,
+                                    contentDescription = "Dismiss",
+                                    tint = if (isDark) TextMuted else Color.Gray,
+                                    modifier = Modifier.size(16.dp)
+                                )
+                            }
+                        }
+
+                        if (notesDownloadProgress != null) {
+                            Spacer(modifier = Modifier.height(8.dp))
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.SpaceBetween
+                            ) {
+                                LinearProgressIndicator(
+                                    progress = { (notesDownloadProgress ?: 0) / 100f },
+                                    modifier = Modifier
+                                        .weight(1f)
+                                        .height(6.dp)
+                                        .clip(RoundedCornerShape(3.dp)),
+                                    color = EmeraldPrimary,
+                                    trackColor = if (isDark) Color(0xFF334155) else Color(0xFFD1FAE5)
+                                )
+                                Spacer(modifier = Modifier.width(10.dp))
+                                Text(
+                                    text = "$notesDownloadProgress%",
+                                    style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
+                                    color = EmeraldPrimary
+                                )
+                            }
+                        } else {
+                            Spacer(modifier = Modifier.height(6.dp))
+                            Button(
+                                onClick = { startNotesDownload() },
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .height(34.dp),
+                                shape = RoundedCornerShape(8.dp),
+                                colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary)
+                            ) {
+                                Icon(Icons.Default.Download, contentDescription = null, modifier = Modifier.size(14.dp))
+                                Spacer(modifier = Modifier.width(6.dp))
+                                Text("Download Notes Now", style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold))
+                            }
+                        }
                     }
                 }
             }

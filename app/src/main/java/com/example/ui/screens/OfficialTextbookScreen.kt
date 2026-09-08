@@ -50,11 +50,8 @@ import com.example.ui.components.*
 import com.example.ui.theme.*
 import java.io.File
 import java.io.FileOutputStream
-import android.graphics.Canvas
-import android.graphics.Paint
-import android.graphics.Rect
-import android.graphics.Typeface
-import android.graphics.pdf.PdfDocument
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 data class TextbookUnit(
     val unitNumber: String,
@@ -71,8 +68,53 @@ data class TextbookEdition(
     val pageCount: Int,
     val publisher: String = "Ministry of Education Ethiopia (MoE)",
     val curriculumVersion: String = "New Curriculum (FDRE-MoE)",
+    val downloadUrl: String? = null,
     val units: List<TextbookUnit>
 )
+
+object OfficialBookLinks {
+    val urls = mapOf(
+        // Grade 9
+        "Grade_9_Mathematics.pdf" to "https://kehulum.com/bfile_asset/books_91/collection/grade-9-mathematics-new-curriculum--student-textbook-_kehulum_com_0fa6.pdf",
+        "Grade_9_English.pdf" to "https://kehulum.com/bfile_asset/books_91/collection/grade-9-english-for-ethiopia-new-curriculum--student-textbook-kehulumcom175993262346a1.pdf",
+        "Grade_9_Physics.pdf" to "https://kehulum.com/bfile_asset/books_91/collection/grade-9-physics-new-curriculum--student-textbook-kehulumcom1759930084a307.pdf",
+        "Grade_9_Biology.pdf" to "https://kehulum.com/bfile_asset/books_91/collection/grade-9-biology-new-curriculum--student-textbook-kehulumcom17599334842417.pdf",
+        "Grade_9_Chemistry.pdf" to "https://kehulum.com/bfile_asset/books_91/collection/grade-9-chemistry-new-curriculum--student-textbook-kehulumcom17599332397bc8.pdf",
+        "Grade_9_History.pdf" to "https://kehulum.com/bfile_asset/books_91/collection/grade-9-history-new-curriculum--student-textbook-kehulumcom1759931286d445.pdf",
+        "Grade_9_Geography.pdf" to "https://kehulum.com/books_asset/books_91/collection/grade-9-geography-new-curriculum--student-textbook-kehulumcom1759931498f683.pdf",
+        "Grade_9_Economics.pdf" to "https://kehulum.com/bfile_asset/books_91/collection/grade-9-economics-new-curriculum--student-textbook-kehulumcom1759932804ce76.pdf",
+
+        // Grade 10
+        "Grade_10_Mathematics.pdf" to "https://kehulum.com/bfile_asset/books_92/collection/grade-10-mathematics-new-curriculum--student-textbook-kehulumcom1759925836e39e.pdf",
+        "Grade_10_English.pdf" to "https://kehulum.com/bfile_asset/books_92/collection/grade-10-english-for-ethiopia-new-curriculum--student-textbook-kehulumcom1759928736fa82.pdf",
+        "Grade_10_Physics.pdf" to "https://kehulum.com/bfile_asset/books_92/collection/grade-10-physics-new-curriculum--student-textbook-kehulumcom17599255229e06.pdf",
+        "Grade_10_Biology.pdf" to "https://kehulum.com/books_asset/books_92/collection/grade%2010-biology_kehulumcom_d02c.pdf",
+        "Grade_10_Chemistry.pdf" to "https://kehulum.com/books_asset/books_92/collection/grade-10-chemistry-new-curriculum--student-textbook-kehulumcom175992936186a3.pdf",
+        "Grade_10_History.pdf" to "https://kehulum.com/bfile_asset/books_92/collection/grade-10-history-new-curriculum--student-textbook-kehulumcom1759927358e997.pdf",
+        "Grade_10_Geography.pdf" to "https://kehulum.com/bfile_asset/books_92/collection/grade-10-geography-new-curriculum--student-textbook-kehulumcom17599285581298.pdf",
+        "Grade_10_Economics.pdf" to "https://kehulum.com/bfile_asset/books_92/collection/grade-10-economics-new-curriculum--student-textbook-kehulumcom1759928992f5b9.pdf",
+
+        // Grade 11
+        "Grade_11_Mathematics.pdf" to "https://kehulum.com/bfile_asset/books_98/collection/grade-11-mathematics-new-curriculum--student-textbook-kehulumcom1759919088fbdb.pdf",
+        "Grade_11_English.pdf" to "https://kehulum.com/bfile_asset/books_98/collection/grade-11-english-for-ethiopia-new-curriculum--student-textbook-kehulumcom175992307047b8.pdf",
+        "Grade_11_Physics.pdf" to "https://kehulum.com/books_asset/books_98/collection/grade-11-physics-new-curriculum--student-textbook-kehulumcom17551049158ab7.pdf",
+        "Grade_11_Biology.pdf" to "https://kehulum.com/bfile_asset/books_98/collection/grade-11-biology-new-curriculum--student-textbook-kehulumcom1759924577039e.pdf",
+        "Grade_11_Chemistry.pdf" to "https://kehulum.com/bfile_asset/books_98/collection/grade-11-chemistry-new-curriculum--student-textbook-kehulumcom17599238964126.pdf",
+        "Grade_11_History.pdf" to "https://kehulum.com/bfile_asset/books_98/collection/grade-11-history-new-curriculum--student-textbook-kehulumcom17599198807fa3.pdf",
+        "Grade_11_Geography.pdf" to "https://kehulum.com/bfile_asset/books_98/collection/grade-11-geography-new-curriculum--student-textbook-kehulumcom1759920987ac44.pdf",
+        "Grade_11_Economics.pdf" to "https://kehulum.com/bfile_asset/books_98/collection/grade-11-economics-new-curriculum--student-textbook-kehulumcom17599236035876.pdf",
+
+        // Grade 12
+        "Grade_12_Mathematics.pdf" to "https://kehulum.com/bfile_asset/books_99/collection/grade-12-mathematics-new-curriculum--student-textbook-kehulumcom17599122086bb1.pdf",
+        "Grade_12_English.pdf" to "https://kehulum.com/bfile_asset/books_99/collection/grade-12-english-for-ethiopia-new-curriculum--student-textbook-kehulumcom1759915593b3b5.pdf",
+        "Grade_12_Physics.pdf" to "https://kehulum.com/bfile_asset/books_99/collection/grade-12-physics-new-curriculum--student-textbook-kehulumcom1759910068aff6.pdf",
+        "Grade_12_Biology.pdf" to "https://kehulum.com/bfile_asset/books_99/collection/grade-12-biology-new-curriculum--student-textbook-kehulumcom17599148324a02.pdf",
+        "Grade_12_Chemistry.pdf" to "https://kehulum.com/bfile_asset/books_99/collection/grade-12-chemistry-new-curriculum--student-textbook-kehulumcom1759915918b6bd.pdf",
+        "Grade_12_History.pdf" to "https://kehulum.com/bfile_asset/books_99/collection/grade-12-history-new-curriculum--student-textbook-kehulumcom17599097897dd4.pdf",
+        "Grade_12_Geography.pdf" to "https://kehulum.com/bfile_asset/books_99/collection/grade-12-geography-new-curriculum--student-textbook-kehulumcom17599134797b34.pdf",
+        "Grade_12_Economics.pdf" to "https://kehulum.com/bfile_asset/books_99/collection/grade-12-economics-new-curriculum--student-textbook-kehulumcom1759915712056d.pdf"
+    )
+}
 
 object OfficialTextbookRegistry {
     fun getTextbooksForSubject(subjectName: String): List<TextbookEdition> {
@@ -116,6 +158,19 @@ object OfficialTextbookRegistry {
                         TextbookUnit("Unit 2", "Plants", 28, "Structure and function of roots, stems, leaves, flowers, pollination, and seed dispersal.", listOf("Plant Morphology", "Photosynthesis Basics", "Reproduction in Plants")),
                         TextbookUnit("Unit 3", "Biochemical Molecules", 65, "Carbohydrates, lipids, proteins, nucleic acids, and dietary requirements.", listOf("Carbohydrates & Lipids", "Proteins & Enzymes", "Nucleic Acids")),
                         TextbookUnit("Unit 4", "Cell Division", 110, "Cell cycle stages, mitosis phases, meiosis, genetic variation, and cancer biology.", listOf("Mitosis Phases", "Meiosis & Crossing Over", "Cancer & Mutation"))
+                    )
+                ),
+                TextbookEdition(
+                    grade = "Grade 9",
+                    title = "Grade 9 Biology Student Textbook",
+                    fileName = "Grade_9_Biology.pdf",
+                    pageCount = 210,
+                    downloadUrl = OfficialBookLinks.urls["Grade_9_Biology.pdf"],
+                    units = listOf(
+                        TextbookUnit("Unit 1", "Introduction to Biology", 1, "Scope of biology, living things characteristics, and laboratory equipment.", listOf("Biology Meaning", "Characteristics of Life", "Microscope Usage")),
+                        TextbookUnit("Unit 2", "Characteristics and Classification of Organisms", 35, "Taxonomy, binomial nomenclature, five kingdoms of classification.", listOf("Taxonomy Rules", "Five Kingdoms", "Keys for Identification")),
+                        TextbookUnit("Unit 3", "Cells and Cell Theory", 78, "Cell organelles, plant vs animal cells, levels of biological organization.", listOf("Cell Organelles", "Prokaryotes vs Eukaryotes", "Tissue Levels")),
+                        TextbookUnit("Unit 4", "Human Biology and Health", 125, "Nutrition, digestive system, circulatory system, and disease prevention.", listOf("Human Digestion", "Blood Circulation", "Hygiene & Diseases"))
                     )
                 )
             )
@@ -211,6 +266,19 @@ object OfficialTextbookRegistry {
                         TextbookUnit("Unit 4", "Electrostatics", 164, "Coulomb's law, electric field lines, electric potential, capacitors in series and parallel.", listOf("Coulomb's Law", "Electric Field & Potential", "Capacitor Energy Storage")),
                         TextbookUnit("Unit 5", "Current Electricity", 212, "Ohm's law, resistivity, Kirchhoff's rules, electrical power and energy.", listOf("Resistors in Series & Parallel", "Kirchhoff's Junction & Loop Rules", "Electric Energy Costs"))
                     )
+                ),
+                TextbookEdition(
+                    grade = "Grade 9",
+                    title = "Grade 9 Physics Student Textbook",
+                    fileName = "Grade_9_Physics.pdf",
+                    pageCount = 220,
+                    downloadUrl = OfficialBookLinks.urls["Grade_9_Physics.pdf"],
+                    units = listOf(
+                        TextbookUnit("Unit 1", "Physics and Human Society", 1, "Role of physics in society, branches of physics, scientific inquiry.", listOf("Branches of Physics", "Relationship to Society", "Scientific Method")),
+                        TextbookUnit("Unit 2", "Physical Quantities and Measurement", 30, "SI base and derived units, measurement instruments, errors and uncertainties.", listOf("SI Units", "Measurement Tools", "Error Analysis")),
+                        TextbookUnit("Unit 3", "Motion in a Straight Line", 75, "Speed, velocity, acceleration, graphs of linear motion.", listOf("Distance vs Displacement", "Velocity Calculations", "Acceleration Graphs")),
+                        TextbookUnit("Unit 4", "Forces and Newton's Laws", 130, "Types of forces, friction, Newton's three laws of motion.", listOf("Inertia & Force", "F = ma Applications", "Action-Reaction Pairs"))
+                    )
                 )
             )
 
@@ -253,6 +321,20 @@ object OfficialTextbookRegistry {
                         TextbookUnit("Unit 3", "Exponential and Logarithmic Functions", 121, "Laws of exponents, logarithms properties, exponential decay and growth equations.", listOf("Laws of Exponents", "Properties of Logarithms", "Exponential Equations")),
                         TextbookUnit("Unit 4", "Trigonometric Functions", 199, "Sine, cosine, tangent ratios in right triangles, angle of elevation and depression.", listOf("SOH CAH TOA Ratios", "Angles of Elevation/Depression", "Trig Identities Basics"))
                     )
+                ),
+                TextbookEdition(
+                    grade = "Grade 9",
+                    title = "Grade 9 Mathematics Student Textbook",
+                    fileName = "Grade_9_Mathematics.pdf",
+                    pageCount = 280,
+                    downloadUrl = OfficialBookLinks.urls["Grade_9_Mathematics.pdf"],
+                    units = listOf(
+                        TextbookUnit("Unit 1", "The Number System", 1, "Real numbers, rational and irrational numbers, scientific notation.", listOf("Real Numbers", "Radicals & Surds", "Scientific Notation")),
+                        TextbookUnit("Unit 2", "Equations and Inequalities", 50, "Linear equations, quadratic equations, linear inequalities solutions.", listOf("Linear Equations", "Quadratic Equations", "Inequalities on Number Line")),
+                        TextbookUnit("Unit 3", "Geometry and Measurement", 110, "Triangles, quadrilaterals, congruence, similarity, Pythagorean theorem.", listOf("Congruence & Similarity", "Pythagorean Theorem", "Perimeter and Area")),
+                        TextbookUnit("Unit 4", "Introduction to Trigonometry", 175, "Trigonometric ratios in right triangles, angle calculations.", listOf("Sine, Cosine, Tangent", "Right Triangle Trigonometry", "Applications")),
+                        TextbookUnit("Unit 5", "Statistics and Probability", 220, "Data presentation, measures of central tendency, simple probability.", listOf("Bar Graphs & Histograms", "Mean, Median, Mode", "Basic Probability"))
+                    )
                 )
             )
 
@@ -291,6 +373,19 @@ object OfficialTextbookRegistry {
                         TextbookUnit("Unit 1", "Education & Lifelong Learning", 1, "Present perfect tense vs past simple, classroom discussion vocabulary.", listOf("Present Perfect Tense", "Collocations", "Paragraph Writing")),
                         TextbookUnit("Unit 2", "Traditional Games & Sports", 38, "Comparative and superlative forms, vocabulary on athletic games in Ethiopia.", listOf("Comparatives & Superlatives", "Sports Vocabulary", "Speech Delivery")),
                         TextbookUnit("Unit 3", "Environmental Conservation", 76, "Future tenses (Will vs Going to vs Present Continuous), ecology reading texts.", listOf("Expressing Future Plans", "Environmental Vocabulary", "Letter of Application"))
+                    )
+                ),
+                TextbookEdition(
+                    grade = "Grade 9",
+                    title = "Grade 9 English Student Textbook",
+                    fileName = "Grade_9_English.pdf",
+                    pageCount = 250,
+                    downloadUrl = OfficialBookLinks.urls["Grade_9_English.pdf"],
+                    units = listOf(
+                        TextbookUnit("Unit 1", "Living in a Community", 1, "Community life, vocabulary, present simple vs present continuous.", listOf("Community Vocabulary", "Present Tenses", "Paragraph Organization")),
+                        TextbookUnit("Unit 2", "Water and Life", 35, "Water resources, reading comprehension, countable and uncountable nouns.", listOf("Environmental Reading", "Countable/Uncountable", "Expressing Quantity")),
+                        TextbookUnit("Unit 3", "Health and Fitness", 70, "Healthy lifestyles, modal verbs for advice, writing informal letters.", listOf("Health Vocabulary", "Should & Must", "Letter Writing")),
+                        TextbookUnit("Unit 4", "Traditional Agriculture in Ethiopia", 115, "Farming practices, past simple narrative, passive voice basics.", listOf("Agricultural Terms", "Past Tense Narratives", "Passive Structures"))
                     )
                 )
             )
@@ -457,6 +552,38 @@ object OfficialTextbookRegistry {
     }
 }
 
+suspend fun downloadTextbookToCache(
+    url: String,
+    dest: File,
+    onProgress: (Int) -> Unit
+): Boolean = kotlinx.coroutines.withContext(Dispatchers.IO) {
+    try {
+        val conn = (java.net.URL(url).openConnection() as java.net.HttpURLConnection).apply {
+            setRequestProperty("User-Agent", "Mozilla/5.0")
+            connect()
+        }
+        val totalLen = conn.contentLengthLong
+        conn.inputStream.use { input ->
+            FileOutputStream(dest).use { output ->
+                val buf = ByteArray(8192)
+                var r: Int
+                var total = 0L
+                while (input.read(buf).also { r = it } != -1) {
+                    output.write(buf, 0, r)
+                    total += r
+                    if (totalLen > 0) {
+                        onProgress(((total * 100) / totalLen).toInt().coerceIn(0, 99))
+                    }
+                }
+            }
+        }
+        onProgress(100)
+        true
+    } catch (_: Exception) {
+        false
+    }
+}
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun OfficialTextbookScreen(
@@ -472,6 +599,167 @@ fun OfficialTextbookScreen(
     val context = LocalContext.current
 
     val currentEdition = editions.firstOrNull { it.grade == selectedGrade } ?: editions.firstOrNull()
+
+    var reloadTrigger by remember { mutableStateOf(0) }
+    val isCurrentBookCached = remember(currentEdition, reloadTrigger) {
+        if (currentEdition == null) false
+        else {
+            val f = getOrCreateTextbookPdfFile(context, currentEdition)
+            f != null && f.exists() && f.length() > 0
+        }
+    }
+    var showDownloadPromptModal by remember { mutableStateOf(!isCurrentBookCached) }
+    var modalDownloadProgress by remember { mutableStateOf<Int?>(null) }
+    var modalDownloadError by remember { mutableStateOf<String?>(null) }
+    val scope = rememberCoroutineScope()
+
+    LaunchedEffect(selectedGrade) {
+        val f = if (currentEdition != null) getOrCreateTextbookPdfFile(context, currentEdition) else null
+        val cached = f != null && f.exists() && f.length() > 0
+        if (!cached) {
+            showDownloadPromptModal = true
+        }
+    }
+
+    val startDownload: (TextbookEdition) -> Unit = { edition ->
+        val bookDownloadUrl = edition.downloadUrl ?: OfficialBookLinks.urls[edition.fileName]
+        if (bookDownloadUrl != null) {
+            scope.launch {
+                modalDownloadProgress = 0
+                modalDownloadError = null
+                val dest = File(context.cacheDir, edition.fileName)
+                val ok = downloadTextbookToCache(bookDownloadUrl, dest) { modalDownloadProgress = it }
+                if (ok) {
+                    kotlinx.coroutines.delay(300)
+                    modalDownloadProgress = null
+                    reloadTrigger++
+                    showDownloadPromptModal = false
+                } else {
+                    modalDownloadError = "Unable to download. Please check your network connection."
+                    modalDownloadProgress = null
+                }
+            }
+        } else {
+            modalDownloadError = "Curriculum textbook will be available in the next sync."
+        }
+    }
+
+    // Modal popup to prompt downloading official textbook with visible percentages
+    if (showDownloadPromptModal && currentEdition != null && !isCurrentBookCached) {
+        AlertDialog(
+            onDismissRequest = {
+                if (modalDownloadProgress == null) {
+                    showDownloadPromptModal = false
+                }
+            },
+            containerColor = Color(0xFF131C2E),
+            icon = {
+                Box(
+                    modifier = Modifier
+                        .size(52.dp)
+                        .clip(CircleShape)
+                        .background(EmeraldPrimary.copy(alpha = 0.2f)),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.Download,
+                        contentDescription = null,
+                        tint = EmeraldPrimary,
+                        modifier = Modifier.size(28.dp)
+                    )
+                }
+            },
+            title = {
+                Text(
+                    text = "Download Official Textbook",
+                    fontWeight = FontWeight.Black,
+                    fontSize = 18.sp,
+                    color = Color.White,
+                    textAlign = TextAlign.Center
+                )
+            },
+            text = {
+                Column(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Text(
+                        text = "${currentEdition.grade} • ${currentEdition.title}",
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 14.sp,
+                        color = HolographicAqua,
+                        textAlign = TextAlign.Center
+                    )
+                    Spacer(modifier = Modifier.height(6.dp))
+                    Text(
+                        text = "Official Ministry of Education curriculum textbook (${currentEdition.pageCount} pages). Download to your device for high-speed offline access with complete diagrams, exercises, and chapters.",
+                        fontSize = 12.sp,
+                        lineHeight = 18.sp,
+                        color = Color(0xFFCBD5E1),
+                        textAlign = TextAlign.Center
+                    )
+
+                    if (modalDownloadProgress != null) {
+                        Spacer(modifier = Modifier.height(16.dp))
+                        LinearProgressIndicator(
+                            progress = { (modalDownloadProgress ?: 0) / 100f },
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(8.dp)
+                                .clip(RoundedCornerShape(4.dp)),
+                            color = EmeraldPrimary,
+                            trackColor = Color(0xFF334155)
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Text(
+                            text = "Downloading Official Textbook... ${modalDownloadProgress ?: 0}%",
+                            style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Black),
+                            color = EmeraldPrimary
+                        )
+                    }
+
+                    if (modalDownloadError != null) {
+                        Spacer(modifier = Modifier.height(10.dp))
+                        Text(
+                            text = modalDownloadError!!,
+                            style = MaterialTheme.typography.labelSmall,
+                            color = Color(0xFFEF4444),
+                            textAlign = TextAlign.Center
+                        )
+                    }
+                }
+            },
+            confirmButton = {
+                if (modalDownloadProgress != null) {
+                    Button(
+                        onClick = {},
+                        enabled = false,
+                        colors = ButtonDefaults.buttonColors(disabledContainerColor = EmeraldPrimary.copy(alpha = 0.5f)),
+                        shape = RoundedCornerShape(10.dp)
+                    ) {
+                        Text("Downloading (${modalDownloadProgress}%)...", color = Color.White, fontWeight = FontWeight.Bold)
+                    }
+                } else {
+                    Button(
+                        onClick = { startDownload(currentEdition) },
+                        colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary),
+                        shape = RoundedCornerShape(10.dp)
+                    ) {
+                        Icon(Icons.Default.Download, contentDescription = null, modifier = Modifier.size(16.dp))
+                        Spacer(modifier = Modifier.width(6.dp))
+                        Text("Download Official PDF (${currentEdition.pageCount}p)", fontWeight = FontWeight.Bold)
+                    }
+                }
+            },
+            dismissButton = {
+                if (modalDownloadProgress == null) {
+                    TextButton(onClick = { showDownloadPromptModal = false }) {
+                        Text("Later / Browse Units", color = TextMuted)
+                    }
+                }
+            }
+        )
+    }
 
     // If in-app reader is opened, render it directly full-screen
     if (activeReaderUnitPage != null && currentEdition != null) {
@@ -566,22 +854,55 @@ fun OfficialTextbookScreen(
                 }
             }
 
-            IconButton(
-                onClick = {
-                    val activity = AdsManager.findActivity(context)
-                    if (activity != null) {
-                        AdsManager.showInterstitialIfAllowed(activity) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                // Download button on top bar
+                IconButton(
+                    onClick = {
+                        if (isCurrentBookCached) {
+                            // Already cached
+                        } else if (modalDownloadProgress == null && currentEdition != null) {
+                            showDownloadPromptModal = true
+                        }
+                    },
+                    modifier = Modifier
+                        .clip(CircleShape)
+                        .background(Color(0xFF1E293B))
+                ) {
+                    if (modalDownloadProgress != null) {
+                        CircularProgressIndicator(
+                            progress = { (modalDownloadProgress ?: 0) / 100f },
+                            modifier = Modifier.size(20.dp),
+                            color = EmeraldPrimary,
+                            strokeWidth = 2.dp
+                        )
+                    } else {
+                        Icon(
+                            imageVector = if (isCurrentBookCached) Icons.Default.CheckCircle else Icons.Default.Download,
+                            contentDescription = "Download Textbook",
+                            tint = if (isCurrentBookCached) EmeraldPrimary else Color.White
+                        )
+                    }
+                }
+
+                Spacer(modifier = Modifier.width(8.dp))
+
+                IconButton(
+                    onClick = {
+                        val activity = AdsManager.findActivity(context)
+                        if (activity != null) {
+                            AdsManager.showInterstitialIfAllowed(activity) {
+                                onClose()
+                            }
+                        } else {
                             onClose()
                         }
-                    } else {
-                        onClose()
-                    }
-                },
-                modifier = Modifier
-                    .clip(CircleShape)
-                    .background(Color(0xFF1E293B))
-            ) {
-                Icon(Icons.Default.Close, contentDescription = "Close", tint = Color.White)
+                    },
+                    modifier = Modifier
+                        .clip(CircleShape)
+                        .background(Color(0xFF1E293B))
+                ) {
+                    Icon(Icons.Default.Close, contentDescription = "Close", tint = Color.White)
+                }
             }
         }
 
@@ -717,13 +1038,17 @@ fun OfficialTextbookScreen(
                             // Action: Open in In-App PDF Reader
                             Button(
                                 onClick = {
-                                    val activity = AdsManager.findActivity(context)
-                                    if (activity != null) {
-                                        AdsManager.showInterstitialIfAllowed(activity) {
+                                    if (!isCurrentBookCached) {
+                                        showDownloadPromptModal = true
+                                    } else {
+                                        val activity = AdsManager.findActivity(context)
+                                        if (activity != null) {
+                                            AdsManager.showInterstitialIfAllowed(activity) {
+                                                activeReaderUnitPage = 1
+                                            }
+                                        } else {
                                             activeReaderUnitPage = 1
                                         }
-                                    } else {
-                                        activeReaderUnitPage = 1
                                     }
                                 },
                                 modifier = Modifier
@@ -733,10 +1058,16 @@ fun OfficialTextbookScreen(
                                 shape = RoundedCornerShape(12.dp),
                                 colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary)
                             ) {
-                                Icon(Icons.Default.PictureAsPdf, contentDescription = null, tint = Color.White, modifier = Modifier.size(18.dp))
+                                Icon(
+                                    imageVector = if (isCurrentBookCached) Icons.Default.PictureAsPdf else Icons.Default.Download,
+                                    contentDescription = null,
+                                    tint = Color.White,
+                                    modifier = Modifier.size(18.dp)
+                                )
                                 Spacer(modifier = Modifier.width(8.dp))
                                 Text(
-                                    text = "Read Official ${currentEdition.grade} PDF In-App (${currentEdition.pageCount} Pages)",
+                                    text = if (isCurrentBookCached) "Read Official ${currentEdition.grade} PDF In-App (${currentEdition.pageCount} Pages)"
+                                           else "Download & Read Official ${currentEdition.grade} PDF (${currentEdition.pageCount}p)",
                                     style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
                                     color = Color.White
                                 )
@@ -904,13 +1235,17 @@ fun OfficialTextbookScreen(
                                 ) {
                                     Button(
                                         onClick = {
-                                            val activity = AdsManager.findActivity(context)
-                                            if (activity != null) {
-                                                AdsManager.showInterstitialIfAllowed(activity) {
+                                            if (!isCurrentBookCached) {
+                                                showDownloadPromptModal = true
+                                            } else {
+                                                val activity = AdsManager.findActivity(context)
+                                                if (activity != null) {
+                                                    AdsManager.showInterstitialIfAllowed(activity) {
+                                                        activeReaderUnitPage = unit.pageStart
+                                                    }
+                                                } else {
                                                     activeReaderUnitPage = unit.pageStart
                                                 }
-                                            } else {
-                                                activeReaderUnitPage = unit.pageStart
                                             }
                                         },
                                         modifier = Modifier
@@ -919,14 +1254,21 @@ fun OfficialTextbookScreen(
                                         shape = RoundedCornerShape(10.dp),
                                         colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary)
                                     ) {
-                                        Icon(Icons.Default.MenuBook, contentDescription = null, modifier = Modifier.size(16.dp))
+                                        Icon(
+                                            imageVector = if (isCurrentBookCached) Icons.Default.MenuBook else Icons.Default.Download,
+                                            contentDescription = null,
+                                            modifier = Modifier.size(16.dp)
+                                        )
                                         Spacer(modifier = Modifier.width(6.dp))
-                                        Text("Read In-App PDF", fontWeight = FontWeight.Bold, fontSize = 11.sp)
+                                        Text(
+                                            text = if (isCurrentBookCached) "Read In-App PDF" else "Download & Read",
+                                            fontWeight = FontWeight.Bold,
+                                            fontSize = 11.sp
+                                        )
                                     }
 
                                     OutlinedButton(
                                         onClick = {
-                                            // Filter syllabus notes to this unit directly
                                             if (viewModel != null) {
                                                 viewModel.selectedGradeFilter.value = currentEdition?.grade ?: "Grade 12"
                                                 viewModel.startNotes()
@@ -954,199 +1296,44 @@ fun OfficialTextbookScreen(
     }
 }
 
-// Helper function to synthesize a realistic high-resolution PDF document for any textbook edition
-fun getOrCreateTextbookPdfFile(context: android.content.Context, edition: TextbookEdition): File {
-    val pdfFile = File(context.cacheDir, edition.fileName)
-    // Check if asset exists first
-    try {
-        context.assets.open(edition.fileName).use { input ->
-            FileOutputStream(pdfFile).use { output -> input.copyTo(output) }
+// Resolve real official textbook PDF from cache, local path, device storage, or bundled assets
+fun getOrCreateTextbookPdfFile(context: android.content.Context, edition: TextbookEdition): File? {
+    val cached = File(context.cacheDir, edition.fileName)
+    if (cached.exists() && cached.length() > 0) return cached
+
+    // 1. Direct host/device paths (Windows host folder or Android device storage)
+    val candidates = listOf(
+        File("C:/Users/ananya/Documents/freshman/Ethiopian_Textbooks", edition.fileName),
+        File("/sdcard/Documents/freshman/Ethiopian_Textbooks", edition.fileName),
+        File("/sdcard/Ethiopian_Textbooks", edition.fileName),
+        File("/storage/emulated/0/Documents/freshman/Ethiopian_Textbooks", edition.fileName),
+        File("/storage/emulated/0/Ethiopian_Textbooks", edition.fileName),
+        File(android.os.Environment.getExternalStoragePublicDirectory(android.os.Environment.DIRECTORY_DOCUMENTS), "Ethiopian_Textbooks/${edition.fileName}"),
+        File(android.os.Environment.getExternalStoragePublicDirectory(android.os.Environment.DIRECTORY_DOWNLOADS), edition.fileName)
+    )
+    for (candidate in candidates) {
+        if (candidate.exists() && candidate.length() > 0) {
+            try {
+                candidate.copyTo(cached, overwrite = true)
+                if (cached.exists() && cached.length() > 0) return cached
+            } catch (_: Exception) {
+                return candidate
+            }
         }
-        if (pdfFile.exists() && pdfFile.length() > 0) {
-            return pdfFile
-        }
-    } catch (e: Exception) {
-        // Asset not present
     }
 
-    // Check if bundled sample document can be copied
-    if (!pdfFile.exists() || pdfFile.length() == 0L) {
+    // 2. Bundled assets
+    val assetNames = listOf("textbooks/${edition.fileName}", edition.fileName, "sample_document.pdf")
+    for (name in assetNames) {
         try {
-            context.assets.open("sample_document.pdf").use { input ->
-                FileOutputStream(pdfFile).use { output -> input.copyTo(output) }
+            context.assets.open(name).use { input ->
+                FileOutputStream(cached).use { output -> input.copyTo(output) }
             }
-            if (pdfFile.exists() && pdfFile.length() > 0) {
-                return pdfFile
-            }
-        } catch (e: Exception) {
-            // Not present
-        }
+            if (cached.exists() && cached.length() > 0) return cached
+        } catch (_: Exception) {}
     }
 
-    // If still no PDF file or we need complete syllabus textbook pages, generate authentic PDF with Android PdfDocument
-    if (!pdfFile.exists() || pdfFile.length() == 0L) {
-        val document = PdfDocument()
-        val pageWidth = 595 // A4 standard width in points
-        val pageHeight = 842 // A4 standard height in points
-
-        // Setup paint objects
-        val titlePaint = Paint().apply {
-            color = android.graphics.Color.rgb(15, 23, 42)
-            textSize = 18f
-            typeface = Typeface.create(Typeface.DEFAULT, Typeface.BOLD)
-            isAntiAlias = true
-        }
-        val headerPaint = Paint().apply {
-            color = android.graphics.Color.rgb(15, 118, 110)
-            textSize = 10f
-            typeface = Typeface.create(Typeface.DEFAULT, Typeface.BOLD)
-            isAntiAlias = true
-        }
-        val bodyPaint = Paint().apply {
-            color = android.graphics.Color.rgb(51, 65, 85)
-            textSize = 11f
-            typeface = Typeface.DEFAULT
-            isAntiAlias = true
-        }
-        val bodyBoldPaint = Paint().apply {
-            color = android.graphics.Color.rgb(30, 41, 59)
-            textSize = 11f
-            typeface = Typeface.create(Typeface.DEFAULT, Typeface.BOLD)
-            isAntiAlias = true
-        }
-        val subtitlePaint = Paint().apply {
-            color = android.graphics.Color.rgb(3, 105, 161)
-            textSize = 13f
-            typeface = Typeface.create(Typeface.DEFAULT, Typeface.BOLD)
-            isAntiAlias = true
-        }
-        val boxPaint = Paint().apply {
-            color = android.graphics.Color.rgb(241, 245, 249)
-            style = Paint.Style.FILL
-        }
-        val borderPaint = Paint().apply {
-            color = android.graphics.Color.rgb(203, 213, 225)
-            style = Paint.Style.STROKE
-            strokeWidth = 1f
-        }
-        val accentBoxPaint = Paint().apply {
-            color = android.graphics.Color.rgb(240, 253, 244)
-            style = Paint.Style.FILL
-        }
-        val accentBorderPaint = Paint().apply {
-            color = android.graphics.Color.rgb(134, 239, 172)
-            style = Paint.Style.STROKE
-            strokeWidth = 1f
-        }
-        val bannerPaint = Paint().apply {
-            color = android.graphics.Color.rgb(15, 118, 110)
-            style = Paint.Style.FILL
-        }
-        val bannerTextPaint = Paint().apply {
-            color = android.graphics.Color.WHITE
-            textSize = 12f
-            typeface = Typeface.create(Typeface.DEFAULT, Typeface.BOLD)
-            isAntiAlias = true
-        }
-
-        // Generate each page corresponding to units and curriculum content
-        val totalPdfPages = edition.pageCount.coerceIn(15, 60)
-        for (pageNum in 1..totalPdfPages) {
-            val pageInfo = PdfDocument.PageInfo.Builder(pageWidth, pageHeight, pageNum).create()
-            val page = document.startPage(pageInfo)
-            val canvas = page.canvas
-
-            // Page Background
-            canvas.drawColor(android.graphics.Color.WHITE)
-
-            // Header Banner
-            canvas.drawText("FEDERAL DEMOCRATIC REPUBLIC OF ETHIOPIA • MINISTRY OF EDUCATION", 40f, 40f, headerPaint)
-            val gradeStr = edition.grade.uppercase()
-            val gradeWidth = headerPaint.measureText(gradeStr)
-            canvas.drawText(gradeStr, pageWidth - 40f - gradeWidth, 40f, headerPaint)
-            canvas.drawLine(40f, 48f, pageWidth - 40f, 48f, borderPaint)
-
-            // Determine unit for this page
-            val currentUnit = edition.units.findLast { it.pageStart <= pageNum } ?: edition.units.firstOrNull()
-
-            // Unit Header Banner Box
-            val bannerRect = Rect(40, 65, pageWidth - 40, 105)
-            canvas.drawRect(bannerRect, bannerPaint)
-            canvas.drawText("${currentUnit?.unitNumber?.uppercase() ?: "UNIT"}: ${currentUnit?.title ?: edition.title}", 55f, 90f, bannerTextPaint)
-
-            // Section 1: Introduction & Concept
-            canvas.drawText("1.0 Official Curriculum Standards & Overview", 40f, 135f, subtitlePaint)
-            val summaryText = currentUnit?.summary ?: "In this unit, students explore foundational principles and practical applications aligned with the national curriculum."
-            
-            // Draw summary inside nice rounded box
-            val summBox = Rect(40, 145, pageWidth - 40, 205)
-            canvas.drawRect(summBox, accentBoxPaint)
-            canvas.drawRect(summBox, accentBorderPaint)
-            
-            // Draw multi-line summary text
-            val words = summaryText.split(" ")
-            var curY = 165f
-            var curLine = ""
-            for (w in words) {
-                val testLine = if (curLine.isEmpty()) w else "$curLine $w"
-                if (bodyPaint.measureText(testLine) > (pageWidth - 110)) {
-                    canvas.drawText(curLine, 55f, curY, bodyPaint)
-                    curY += 16f
-                    curLine = w
-                } else {
-                    curLine = testLine
-                }
-            }
-            if (curLine.isNotEmpty() && curY <= 195f) {
-                canvas.drawText(curLine, 55f, curY, bodyPaint)
-            }
-
-            // Section 2: Core Topics & Examination Concepts
-            canvas.drawText("1.1 National Examination Key Concepts (Page $pageNum)", 40f, 235f, subtitlePaint)
-            var topicY = 260f
-            val topics = currentUnit?.keyTopics ?: listOf("Core Concept A", "Core Concept B", "Core Concept C")
-            for ((idx, topic) in topics.withIndex()) {
-                canvas.drawText("${idx + 1}. $topic", 50f, topicY, bodyBoldPaint)
-                canvas.drawText("Comprehensive EUEE mastery guideline under FDRE MoE Grade ${edition.grade.filter { it.isDigit() }} curriculum standard.", 65f, topicY + 15f, bodyPaint)
-                topicY += 36f
-            }
-
-            // Section 3: Study Notes & Analytical Deep-Dive
-            val studyBox = Rect(40, topicY.toInt() + 10, pageWidth - 40, topicY.toInt() + 140)
-            canvas.drawRect(studyBox, boxPaint)
-            canvas.drawRect(studyBox, borderPaint)
-            canvas.drawText("OFFICIAL STUDY NOTEBOOK & HIGHLIGHTS", 55f, topicY + 32f, headerPaint)
-            canvas.drawText("• Critical Concept: Focus on theoretical frameworks and calculation methodology.", 55f, topicY + 54f, bodyPaint)
-            canvas.drawText("• Exam Frequency: High priority in regional and national entrance assessments.", 55f, topicY + 74f, bodyPaint)
-            canvas.drawText("• Ethiopian Application: Direct relevance to national industrial and educational initiatives.", 55f, topicY + 94f, bodyPaint)
-            canvas.drawText("• Self-Assessment: Complete the end-of-chapter exercises and syllabus notes.", 55f, topicY + 114f, bodyPaint)
-
-            // Section 4: Sample Practice Problem
-            val practiceY = topicY + 170f
-            canvas.drawText("1.2 Practice Exercise Checkpoint", 40f, practiceY, subtitlePaint)
-            canvas.drawText("Q1. Outline the main mechanisms and analytical derivations relevant to Section 1.1.", 50f, practiceY + 22f, bodyPaint)
-            canvas.drawText("Q2. Contrast the theoretical predictions with empirical findings in the Ethiopian context.", 50f, practiceY + 40f, bodyPaint)
-            canvas.drawText("Q3. State the core governing laws and standard formulas applicable to Unit ${currentUnit?.unitNumber?.filter { it.isDigit() } ?: "1"}.", 50f, practiceY + 58f, bodyPaint)
-
-            // Footer
-            canvas.drawLine(40f, pageHeight - 50f, pageWidth - 40f, pageHeight - 50f, borderPaint)
-            canvas.drawText("${edition.title} • MoE Ethiopia", 40f, pageHeight - 35f, headerPaint)
-            val pNumText = "Page $pageNum of $totalPdfPages"
-            val pNumWidth = headerPaint.measureText(pNumText)
-            canvas.drawText(pNumText, pageWidth - 40f - pNumWidth, pageHeight - 35f, headerPaint)
-
-            document.finishPage(page)
-        }
-
-        try {
-            FileOutputStream(pdfFile).use { out -> document.writeTo(out) }
-        } catch (e: Exception) {
-            e.printStackTrace()
-        } finally {
-            document.close()
-        }
-    }
-    return pdfFile
+    return if (cached.exists() && cached.length() > 0) cached else null
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -1166,6 +1353,10 @@ fun InAppPdfTextbookReader(
     var customPdfUri by remember { mutableStateOf<Uri?>(null) }
     var customPageCount by remember { mutableStateOf<Int?>(null) }
     var fallbackBookmarks by remember { mutableStateOf(setOf<Int>()) }
+    var downloadProgress by remember { mutableStateOf<Int?>(null) }
+    var downloadError by remember { mutableStateOf<String?>(null) }
+    var reloadTrigger by remember { mutableStateOf(0) }
+    val scope = rememberCoroutineScope()
     val context = LocalContext.current
 
     val totalPages = customPageCount ?: edition.pageCount
@@ -1204,14 +1395,14 @@ fun InAppPdfTextbookReader(
     }
 
     // Render Genuine PDF page bitmap using Android PdfRenderer
-    val pdfBitmap = remember(currentPage, edition.fileName, customPdfUri) {
+    val pdfBitmap = remember(currentPage, edition.fileName, customPdfUri, reloadTrigger) {
         try {
             var pfd: ParcelFileDescriptor? = null
             if (customPdfUri != null) {
                 pfd = context.contentResolver.openFileDescriptor(customPdfUri!!, "r")
             } else {
                 val realPdfFile = getOrCreateTextbookPdfFile(context, edition)
-                if (realPdfFile.exists() && realPdfFile.length() > 0) {
+                if (realPdfFile != null && realPdfFile.exists() && realPdfFile.length() > 0) {
                     pfd = ParcelFileDescriptor.open(realPdfFile, ParcelFileDescriptor.MODE_READ_ONLY)
                 }
             }
@@ -1237,6 +1428,24 @@ fun InAppPdfTextbookReader(
         } catch (e: Exception) {
             e.printStackTrace()
             null
+        }
+    }
+
+    // Seamless auto-download in background if textbook not yet cached
+    LaunchedEffect(edition.fileName, customPdfUri) {
+        if (customPdfUri == null && pdfBitmap == null && downloadProgress == null) {
+            val bookDownloadUrl = edition.downloadUrl ?: OfficialBookLinks.urls[edition.fileName]
+            if (bookDownloadUrl != null) {
+                val dest = File(context.cacheDir, edition.fileName)
+                if (!dest.exists() || dest.length() == 0L) {
+                    downloadProgress = 0
+                    downloadError = null
+                    val ok = downloadTextbookToCache(bookDownloadUrl, dest) { downloadProgress = it }
+                    if (ok) reloadTrigger++
+                    else downloadError = "Offline file not ready yet. Check your connection or open a local PDF."
+                    downloadProgress = null
+                }
+            }
         }
     }
 
@@ -1314,6 +1523,12 @@ fun InAppPdfTextbookReader(
                     // Table of Contents & Bookmarks
                     IconButton(onClick = { showTocModal = true }) {
                         Icon(Icons.Default.FormatListBulleted, contentDescription = "Table of Contents", tint = textColor)
+                    }
+                    // Companion Syllabus Notes
+                    if (viewModel != null) {
+                        IconButton(onClick = { viewModel.startNotes() }) {
+                            Icon(Icons.Default.Description, contentDescription = "Study Notes", tint = EmeraldPrimary)
+                        }
                     }
                     // Bookmark Page
                     IconButton(onClick = {
@@ -1448,230 +1663,83 @@ fun InAppPdfTextbookReader(
                     )
                 }
             } else {
-                // High-fidelity dynamic document page fallback with full chapter content
-                Column(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .verticalScroll(rememberScrollState())
-                        .padding(horizontal = 16.dp, vertical = 14.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally
+                val bookDownloadUrl = edition.downloadUrl ?: OfficialBookLinks.urls[edition.fileName]
+                Box(
+                    modifier = Modifier.fillMaxSize(),
+                    contentAlignment = Alignment.Center
                 ) {
-                    Surface(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .shadow(12.dp, RoundedCornerShape(4.dp))
-                            .graphicsLayer(
-                                scaleX = scale,
-                                scaleY = scale,
-                                translationX = offset.x,
-                                translationY = offset.y
-                            ),
-                        shape = RoundedCornerShape(4.dp),
-                        color = Color.White
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.spacedBy(12.dp),
+                        modifier = Modifier.padding(24.dp)
                     ) {
-                        Column(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(24.dp)
-                        ) {
-                            // 1. Running Header
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.SpaceBetween,
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
+                        if (downloadProgress != null) {
+                            CircularProgressIndicator(color = EmeraldPrimary, strokeWidth = 3.dp)
+                            Text(
+                                text = "Downloading Official Textbook ($downloadProgress%)...",
+                                style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
+                                color = Color.White
+                            )
+                            LinearProgressIndicator(
+                                progress = { (downloadProgress ?: 0) / 100f },
+                                modifier = Modifier.fillMaxWidth(0.75f),
+                                color = EmeraldPrimary
+                            )
+                        } else {
+                            Icon(
+                                Icons.Default.MenuBook,
+                                contentDescription = null,
+                                tint = EmeraldPrimary,
+                                modifier = Modifier.size(48.dp)
+                            )
+                            Text(
+                                text = edition.title,
+                                style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
+                                color = Color.White,
+                                textAlign = TextAlign.Center
+                            )
+                            Text(
+                                text = "Ministry of Education Official PDF",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = Color(0xFF94A3B8)
+                            )
+                            if (downloadError != null) {
                                 Text(
-                                    text = "FEDERAL DEMOCRATIC REPUBLIC OF ETHIOPIA • MINISTRY OF EDUCATION",
-                                    style = MaterialTheme.typography.labelSmall.copy(
-                                        fontSize = 8.5.sp,
-                                        fontWeight = FontWeight.Black,
-                                        letterSpacing = 0.5.sp
-                                    ),
-                                    color = Color(0xFF1E293B)
-                                )
-                                Text(
-                                    text = "${edition.grade.uppercase()}",
-                                    style = MaterialTheme.typography.labelSmall.copy(fontSize = 9.sp, fontWeight = FontWeight.Bold),
-                                    color = Color(0xFF047857)
+                                    text = downloadError!!,
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = Color(0xFFEF4444),
+                                    textAlign = TextAlign.Center
                                 )
                             }
                             Spacer(modifier = Modifier.height(4.dp))
-                            HorizontalDivider(color = Color(0xFF94A3B8), thickness = 1.dp)
-                            Spacer(modifier = Modifier.height(16.dp))
-
-                            // 2. Unit Banner
-                            Surface(
-                                shape = RoundedCornerShape(4.dp),
-                                color = Color(0xFF0F766E),
-                                modifier = Modifier.fillMaxWidth()
-                            ) {
-                                Row(
-                                    modifier = Modifier.padding(horizontal = 14.dp, vertical = 8.dp),
-                                    verticalAlignment = Alignment.CenterVertically
-                                ) {
-                                    Surface(
-                                        shape = RoundedCornerShape(3.dp),
-                                        color = Color.White
-                                    ) {
-                                        Text(
-                                            text = currentUnit?.unitNumber?.uppercase() ?: "CHAPTER",
-                                            style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Black),
-                                            color = Color(0xFF0F766E),
-                                            modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
-                                        )
-                                    }
-                                    Spacer(modifier = Modifier.width(10.dp))
-                                    Text(
-                                        text = currentUnit?.title ?: edition.title,
-                                        style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Black),
-                                        color = Color.White,
-                                        maxLines = 1,
-                                        overflow = TextOverflow.Ellipsis
-                                    )
-                                }
-                            }
-
-                            Spacer(modifier = Modifier.height(16.dp))
-
-                            // 3. Learning Objectives & Curriculum Framework
-                            Surface(
-                                shape = RoundedCornerShape(4.dp),
-                                color = Color(0xFFF0FDF4),
-                                border = BorderStroke(1.dp, Color(0xFF86EFAC)),
-                                modifier = Modifier.fillMaxWidth()
-                            ) {
-                                Column(modifier = Modifier.padding(12.dp)) {
-                                    Text(
-                                        text = "1.0 INTRODUCTION & LEARNING COMPETENCIES (PAGE $currentPage)",
-                                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black),
-                                        color = Color(0xFF166534)
-                                    )
-                                    Spacer(modifier = Modifier.height(4.dp))
-                                    Text(
-                                        text = currentUnit?.summary ?: "In this unit, students explore core scientific, analytical, and conceptual foundations aligned with FDRE Ministry of Education curriculum guidelines.",
-                                        style = MaterialTheme.typography.bodySmall.copy(fontSize = 12.sp, lineHeight = 18.sp),
-                                        color = Color(0xFF1F2937)
-                                    )
-                                }
-                            }
-
-                            Spacer(modifier = Modifier.height(16.dp))
-
-                            // 4. In-Depth Textbook Text & Subsections
-                            Text(
-                                text = "1.1 Core Conceptual Foundations • Section $currentPage",
-                                style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
-                                color = Color(0xFF111827)
-                            )
-                            Spacer(modifier = Modifier.height(6.dp))
-                            Text(
-                                text = "Students preparing for the Ethiopian University Entrance Examination (EUEE) must grasp the theoretical frameworks, empirical mechanisms, and practical applications outlined in this chapter. Each principle is designed to foster critical thinking, problem-solving abilities, and national development perspectives.",
-                                style = MaterialTheme.typography.bodySmall.copy(fontSize = 12.5.sp, lineHeight = 19.sp),
-                                color = Color(0xFF374151)
-                            )
-
-                            Spacer(modifier = Modifier.height(14.dp))
-
-                            // 5. Key Terms Callout Box
-                            Surface(
-                                shape = RoundedCornerShape(4.dp),
-                                color = Color(0xFFFFFBEB),
-                                border = BorderStroke(1.dp, Color(0xFFFDE68A)),
-                                modifier = Modifier.fillMaxWidth()
-                            ) {
-                                Column(modifier = Modifier.padding(12.dp)) {
-                                    Text(
-                                        text = "KEY DEFINITIONS & FORMULAS",
-                                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black),
-                                        color = Color(0xFF92400E)
-                                    )
-                                    Spacer(modifier = Modifier.height(6.dp))
-                                    (currentUnit?.keyTopics ?: listOf("Key Concept 1", "Key Concept 2", "Key Concept 3")).forEachIndexed { index, topic ->
-                                        Row(
-                                            modifier = Modifier.padding(vertical = 2.dp),
-                                            verticalAlignment = Alignment.CenterVertically
-                                        ) {
-                                            Text(
-                                                text = "• ${topic}: ",
-                                                style = MaterialTheme.typography.bodySmall.copy(fontWeight = FontWeight.Bold, fontSize = 11.5.sp),
-                                                color = Color(0xFF78350F)
-                                            )
-                                            Text(
-                                                text = "Core requirement under MoE Grade ${edition.grade.filter { it.isDigit() }} benchmark standard.",
-                                                style = MaterialTheme.typography.bodySmall.copy(fontSize = 11.5.sp),
-                                                color = Color(0xFF4B5563)
-                                            )
+                            if (bookDownloadUrl != null) {
+                                Button(
+                                    onClick = {
+                                        scope.launch {
+                                            downloadProgress = 0
+                                            downloadError = null
+                                            val dest = File(context.cacheDir, edition.fileName)
+                                            val ok = downloadTextbookToCache(bookDownloadUrl, dest) { downloadProgress = it }
+                                            if (ok) reloadTrigger++
+                                            else downloadError = "Download failed. Please check your connection."
+                                            downloadProgress = null
                                         }
-                                    }
+                                    },
+                                    colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary)
+                                ) {
+                                    Icon(Icons.Default.Download, contentDescription = null, modifier = Modifier.size(18.dp))
+                                    Spacer(modifier = Modifier.width(6.dp))
+                                    Text("Download Official PDF", fontWeight = FontWeight.Bold)
                                 }
                             }
-
-                            Spacer(modifier = Modifier.height(14.dp))
-
-                            // 6. Ethiopian Context Case Study
-                            Surface(
-                                shape = RoundedCornerShape(4.dp),
-                                color = Color(0xFFF8FAFC),
-                                border = BorderStroke(1.dp, Color(0xFFE2E8F0)),
-                                modifier = Modifier.fillMaxWidth()
+                            OutlinedButton(
+                                onClick = { pdfPickerLauncher.launch(arrayOf("application/pdf")) },
+                                colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White),
+                                border = BorderStroke(1.dp, Color(0xFF475569))
                             ) {
-                                Column(modifier = Modifier.padding(12.dp)) {
-                                    Text(
-                                        text = "ETHIOPIAN CASE STUDY & APPLICATION",
-                                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black),
-                                        color = Color(0xFF0369A1)
-                                    )
-                                    Spacer(modifier = Modifier.height(4.dp))
-                                    Text(
-                                        text = "Application of these principles directly supports sustainable development, technological modernization, and industrial growth in Ethiopia. Examine how Ethiopian research institutions and agricultural initiatives apply these paradigms.",
-                                        style = MaterialTheme.typography.bodySmall.copy(fontSize = 12.sp, lineHeight = 18.sp),
-                                        color = Color(0xFF334155)
-                                    )
-                                }
-                            }
-
-                            Spacer(modifier = Modifier.height(18.dp))
-
-                            // 7. Unit Review Assessment Exercises
-                            Text(
-                                text = "Unit Review Assessment Checkpoint (Page $currentPage)",
-                                style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
-                                color = Color(0xFF111827)
-                            )
-                            Spacer(modifier = Modifier.height(6.dp))
-                            listOf(
-                                "1. Explain the fundamental mechanisms governing ${currentUnit?.title ?: "this topic"}.",
-                                "2. Derive the primary relationship between key variables described in Section 1.1.",
-                                "3. Discuss the relevance of these concepts to national development priorities in Ethiopia."
-                            ).forEach { question ->
-                                Text(
-                                    text = question,
-                                    style = MaterialTheme.typography.bodySmall.copy(fontSize = 11.5.sp, lineHeight = 17.sp),
-                                    color = Color(0xFF374151),
-                                    modifier = Modifier.padding(vertical = 2.dp)
-                                )
-                            }
-
-                            Spacer(modifier = Modifier.height(24.dp))
-                            HorizontalDivider(color = Color(0xFFCBD5E1), thickness = 1.dp)
-                            Spacer(modifier = Modifier.height(8.dp))
-
-                            // 8. Running Footer
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.SpaceBetween,
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                Text(
-                                    text = "FDRE MoE Textbook • ${edition.grade}",
-                                    style = MaterialTheme.typography.labelSmall.copy(fontSize = 9.sp),
-                                    color = Color(0xFF64748B)
-                                )
-                                Text(
-                                    text = "Page $currentPage of ${totalPages}",
-                                    style = MaterialTheme.typography.labelSmall.copy(fontSize = 9.sp, fontWeight = FontWeight.Bold),
-                                    color = Color(0xFF0F766E)
-                                )
+                                Icon(Icons.Default.FolderOpen, contentDescription = null, modifier = Modifier.size(16.dp))
+                                Spacer(modifier = Modifier.width(6.dp))
+                                Text("Open Local PDF")
                             }
                         }
                     }
