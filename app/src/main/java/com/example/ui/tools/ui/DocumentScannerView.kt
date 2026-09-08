@@ -53,10 +53,9 @@ fun DocumentScannerView(
     var isProcessing by remember { mutableStateOf(false) }
     var scannedImageBitmap by remember { mutableStateOf<Bitmap?>(null) }
     var documentTitle by remember { mutableStateOf("Document Scan") }
+    var showSourceSelector by remember { mutableStateOf(false) }
     var showSavedDocsDialog by remember { mutableStateOf(false) }
     var showExportMenu by remember { mutableStateOf(false) }
-    
-    // Popup state
     var popupMessage by remember { mutableStateOf("") }
     LaunchedEffect(popupMessage) {
         if (popupMessage.isNotEmpty()) {
@@ -64,31 +63,106 @@ fun DocumentScannerView(
             popupMessage = ""
         }
     }
+    var tempCameraUri by remember { mutableStateOf<Uri?>(null) }
+
+    fun processBitmap(bitmap: Bitmap) {
+        isProcessing = true
+        coroutineScope.launch {
+            try {
+                // Apply smart document boundary detection & perspective crop
+                val corners = DocumentScannerEngine.detectDocumentCorners(bitmap)
+                val cropped = DocumentScannerEngine.warpPerspective(bitmap, corners)
+                val enhanced = DocumentScannerEngine.enhanceDocumentBitmap(cropped, "clean")
+                scannedImageBitmap = enhanced
+                
+                // Extract text offline using bundled on-device ML Kit
+                val ocrResult = DocumentScannerEngine.extractTextFromDocument(enhanced, "clean", subjectName)
+                extractedText = ocrResult.text
+                popupMessage = "Document scanned successfully!"
+            } catch (e: Exception) {
+                e.printStackTrace()
+                // Fallback to direct bitmap if perspective warp fails
+                try {
+                    scannedImageBitmap = bitmap
+                    val ocrResult = DocumentScannerEngine.extractTextFromDocument(bitmap, "clean", subjectName)
+                    extractedText = ocrResult.text
+                    popupMessage = "Document scanned successfully!"
+                } catch (ex: Exception) {
+                    ex.printStackTrace()
+                    popupMessage = "Failed to process scan."
+                }
+            } finally {
+                isProcessing = false
+            }
+        }
+    }
+
+    val cameraLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.TakePicture()
+    ) { success ->
+        if (success && tempCameraUri != null) {
+            coroutineScope.launch {
+                try {
+                    val inputStream = context.contentResolver.openInputStream(tempCameraUri!!)
+                    val bitmap = BitmapFactory.decodeStream(inputStream)
+                    inputStream?.close()
+                    if (bitmap != null) {
+                        processBitmap(bitmap)
+                    } else {
+                        popupMessage = "Could not load captured photo."
+                    }
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                    popupMessage = "Failed to open camera photo."
+                }
+            }
+        }
+    }
 
     val scannerLauncher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.GetContent()
     ) { uri ->
         uri?.let {
-            isProcessing = true
             coroutineScope.launch {
                 try {
                     val inputStream = context.contentResolver.openInputStream(uri)
                     val bitmap = BitmapFactory.decodeStream(inputStream)
                     inputStream?.close()
-                    
                     if (bitmap != null) {
-                        scannedImageBitmap = bitmap
-                        val ocrResult = DocumentScannerEngine.extractTextFromDocument(bitmap, "clean", subjectName)
-                        extractedText = ocrResult.text
-                        popupMessage = "Document scanned successfully!"
+                        processBitmap(bitmap)
+                    } else {
+                        popupMessage = "Could not load selected image."
                     }
                 } catch (e: Exception) {
                     e.printStackTrace()
-                    popupMessage = "Failed to process scan."
+                    popupMessage = "Failed to process image."
                 }
-                isProcessing = false
             }
         }
+    }
+
+    fun launchCamera() {
+        try {
+            val photoFile = File(context.cacheDir, "camera_scan_${System.currentTimeMillis()}.jpg")
+            val uri = androidx.core.content.FileProvider.getUriForFile(
+                context,
+                "com.aistudio.tinat.studyapp.provider",
+                photoFile
+            )
+            tempCameraUri = uri
+            cameraLauncher.launch(uri)
+        } catch (e: Exception) {
+            e.printStackTrace()
+            popupMessage = "Unable to launch camera: ${e.message}"
+        }
+    }
+
+    fun launchGallery() {
+        scannerLauncher.launch("image/*")
+    }
+
+    fun openScanOptions() {
+        showSourceSelector = true
     }
 
 
@@ -192,7 +266,7 @@ fun DocumentScannerView(
                         IconButton(onClick = { showSavedDocsDialog = true }) {
                             Icon(Icons.Default.Folder, contentDescription = "Saved Scans", tint = EmeraldPrimary)
                         }
-                        IconButton(onClick = { launchScanner() }) {
+                        IconButton(onClick = { openScanOptions() }) {
                             Icon(Icons.Default.CameraAlt, contentDescription = "Scan Document", tint = EmeraldPrimary)
                         }
                     }
@@ -210,13 +284,13 @@ fun DocumentScannerView(
                         )
                         Spacer(modifier = Modifier.height(16.dp))
                         Text(
-                            text = "Tap the camera to scan a document.",
+                            text = "Take a photo or upload a document to scan.",
                             color = Color.Gray,
                             fontSize = 16.sp
                         )
                         Spacer(modifier = Modifier.height(24.dp))
                         Button(
-                            onClick = { launchScanner() },
+                            onClick = { openScanOptions() },
                             colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary),
                             shape = RoundedCornerShape(12.dp)
                         ) {
@@ -347,5 +421,157 @@ fun DocumentScannerView(
                 )
             }
         }
+    }
+
+    // Modal Sheet: Choose Camera or Gallery
+    if (showSourceSelector) {
+        AlertDialog(
+            onDismissRequest = { showSourceSelector = false },
+            containerColor = if (isDark) CardBgDark else Color.White,
+            title = {
+                Text(
+                    text = "Scan Document",
+                    fontWeight = FontWeight.Bold,
+                    color = if (isDark) Color.White else Color.Black
+                )
+            },
+            text = {
+                Column(modifier = Modifier.fillMaxWidth().padding(top = 8.dp)) {
+                    Text(
+                        text = "Choose how you would like to scan your document. Both work completely offline.",
+                        color = Color.Gray,
+                        fontSize = 14.sp
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Surface(
+                        onClick = {
+                            showSourceSelector = false
+                            launchCamera()
+                        },
+                        shape = RoundedCornerShape(12.dp),
+                        color = EmeraldPrimary.copy(alpha = 0.1f),
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Row(
+                            modifier = Modifier.fillMaxWidth().padding(14.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Icon(Icons.Default.PhotoCamera, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(28.dp))
+                            Spacer(modifier = Modifier.width(14.dp))
+                            Column {
+                                Text("Take Photo with Camera", fontWeight = FontWeight.Bold, color = if (isDark) Color.White else Color.Black)
+                                Text("Real-time camera capture & scan", fontSize = 12.sp, color = Color.Gray)
+                            }
+                        }
+                    }
+                    Spacer(modifier = Modifier.height(10.dp))
+                    Surface(
+                        onClick = {
+                            showSourceSelector = false
+                            launchGallery()
+                        },
+                        shape = RoundedCornerShape(12.dp),
+                        color = EmeraldPrimary.copy(alpha = 0.1f),
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Row(
+                            modifier = Modifier.fillMaxWidth().padding(14.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Icon(Icons.Default.PhotoLibrary, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(28.dp))
+                            Spacer(modifier = Modifier.width(14.dp))
+                            Column {
+                                Text("Upload from Gallery / Files", fontWeight = FontWeight.Bold, color = if (isDark) Color.White else Color.Black)
+                                Text("Select an existing document photo", fontSize = 12.sp, color = Color.Gray)
+                            }
+                        }
+                    }
+                }
+            },
+            confirmButton = {},
+            dismissButton = {
+                TextButton(onClick = { showSourceSelector = false }) {
+                    Text("Cancel", color = EmeraldPrimary)
+                }
+            }
+        )
+    }
+
+    // Saved Documents Dialog
+    if (showSavedDocsDialog) {
+        val savedDocs by viewModel.scannedDocs.collectAsState()
+        AlertDialog(
+            onDismissRequest = { showSavedDocsDialog = false },
+            containerColor = if (isDark) CardBgDark else Color.White,
+            title = {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = "Saved Scans (${savedDocs.size})",
+                        fontWeight = FontWeight.Bold,
+                        color = if (isDark) Color.White else Color.Black
+                    )
+                    IconButton(onClick = { showSavedDocsDialog = false }) {
+                        Icon(Icons.Default.Close, contentDescription = "Close", tint = Color.Gray)
+                    }
+                }
+            },
+            text = {
+                if (savedDocs.isEmpty()) {
+                    Box(
+                        modifier = Modifier.fillMaxWidth().height(140.dp),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text("No saved documents yet.", color = Color.Gray)
+                    }
+                } else {
+                    LazyColumn(modifier = Modifier.fillMaxWidth().heightIn(max = 400.dp)) {
+                        itemsIndexed(savedDocs) { _, doc ->
+                            Card(
+                                shape = RoundedCornerShape(10.dp),
+                                colors = CardDefaults.cardColors(containerColor = if (isDark) Color(0xFF1E293B) else Color(0xFFF8FAFC)),
+                                modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)
+                            ) {
+                                Row(
+                                    modifier = Modifier.fillMaxWidth().padding(12.dp),
+                                    horizontalArrangement = Arrangement.SpaceBetween,
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    Column(modifier = Modifier.weight(1f)) {
+                                        Text(doc.title, fontWeight = FontWeight.Bold, color = if (isDark) Color.White else Color.Black, maxLines = 1)
+                                        Text(
+                                            doc.extractedText.take(60) + if (doc.extractedText.length > 60) "..." else "",
+                                            fontSize = 12.sp,
+                                            color = Color.Gray,
+                                            maxLines = 2
+                                        )
+                                    }
+                                    Row {
+                                        IconButton(onClick = {
+                                            extractedText = doc.extractedText
+                                            documentTitle = doc.title
+                                            showSavedDocsDialog = false
+                                            popupMessage = "Loaded scan: ${doc.title}"
+                                        }) {
+                                            Icon(Icons.Default.Visibility, contentDescription = "View", tint = EmeraldPrimary)
+                                        }
+                                        IconButton(onClick = {
+                                            viewModel.deleteScannedDoc(doc.id)
+                                            popupMessage = "Deleted scan"
+                                        }) {
+                                            Icon(Icons.Default.Delete, contentDescription = "Delete", tint = Color.Red.copy(alpha = 0.7f))
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            confirmButton = {}
+        )
     }
 }
