@@ -781,15 +781,15 @@ fun SubjectHexCard(
     val isEffectivelyCompleted = isCompleted || progress >= 0.999f
 
     val cardBg = if (isDarkTheme) {
-        if (isLocked) Color(0xFF1E293B) else CardBgDark
+        if (isLocked) Color(0xFF161E30).copy(alpha = 0.65f) else CardBgDark
     } else {
         if (isLocked) Color(0xFFF8FAFC) else Color.White
     }
 
     val cardBorderColor = if (isDarkTheme) {
-        if (isLocked) Color(0xFF334155)
-        else if (isEffectivelyCompleted) EmeraldPrimary
-        else Color(0xFF334155)
+        if (isLocked) Color(0xFF334155).copy(alpha = 0.5f)
+        else if (isEffectivelyCompleted) EmeraldPrimary.copy(alpha = 0.8f)
+        else Color(0xFF334155).copy(alpha = 0.7f)
     } else {
         if (isLocked) Color(0xFFE2E8F0)
         else if (isEffectivelyCompleted) EmeraldPrimary
@@ -797,9 +797,9 @@ fun SubjectHexCard(
     }
 
     val iconBoxBg = if (isDarkTheme) {
-        if (isLocked) Color(0xFF331E1E)
-        else if (isEffectivelyCompleted) Color(0xFF065F46)
-        else Color(0xFF1E293B)
+        if (isLocked) Color(0xFF3B1818).copy(alpha = 0.6f)
+        else if (isEffectivelyCompleted) Color(0xFF064E3B).copy(alpha = 0.8f)
+        else Color(0xFF0F172A)
     } else {
         if (isLocked) Color(0xFFFEF2F2)
         else if (isEffectivelyCompleted) Color(0xFFECFDF5)
@@ -809,18 +809,31 @@ fun SubjectHexCard(
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .pressBounce()
+            .pressBounce(pressedScale = 0.96f)
             .clickable(onClick = onSubjectClick)
             .testTag("subject_card_${iconName}"),
-        shape = RoundedCornerShape(20.dp),
-        border = BorderStroke(width = 1.dp, color = cardBorderColor),
+        shape = RoundedCornerShape(22.dp),
+        border = BorderStroke(width = if (isEffectivelyCompleted) 1.5.dp else 1.dp, color = cardBorderColor),
         colors = CardDefaults.cardColors(
             containerColor = cardBg
         ),
-        elevation = CardDefaults.cardElevation(defaultElevation = 3.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = if (isDarkTheme) 6.dp else 3.dp)
     ) {
         Box(
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(
+                    if (isDarkTheme && !isLocked) {
+                        Brush.verticalGradient(
+                            colors = listOf(
+                                CardBgDark,
+                                Color(0xFF0F172A).copy(alpha = 0.95f)
+                            )
+                        )
+                    } else {
+                        Brush.linearGradient(listOf(cardBg, cardBg))
+                    }
+                )
         ) {
             // Circular Progress Bar in Top Right Corner showing material usage
             SubjectProgressIndicator(

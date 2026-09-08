@@ -423,7 +423,7 @@ fun PackageCard(
     val brandColor = if (isEnrolled) EmeraldPrimary else if (isApproved) GoldAccent else if (isDarkTheme) HolographicAqua else IndigoMedium
 
     val containerBg = if (isDarkTheme) {
-        if (data.comingSoon) Color(0xFF0F172A) else Color(0xFF131C2E)
+        if (data.comingSoon) Color(0xFF0F172A).copy(alpha = 0.5f) else CardBgDark
     } else {
         if (data.comingSoon) Color(0xFFF8FAFC) else Color.White
     }
@@ -433,7 +433,7 @@ fun PackageCard(
     } else if (isApproved) {
         GoldAccent
     } else if (isDarkTheme) {
-        Color(0xFF334155)
+        Color(0xFF334155).copy(alpha = 0.8f)
     } else {
         Color(0xFFE2E8F0)
     }
@@ -441,14 +441,14 @@ fun PackageCard(
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .pressBounce(),
-        shape = RoundedCornerShape(20.dp),
+            .pressBounce(pressedScale = 0.97f),
+        shape = RoundedCornerShape(22.dp),
         border = BorderStroke(width = if (isEnrolled) 1.5.dp else 1.dp, color = cardBorderColor),
         colors = CardDefaults.cardColors(
             containerColor = containerBg
         ),
         elevation = CardDefaults.cardElevation(
-            defaultElevation = if (isEnrolled) 4.dp else 2.dp
+            defaultElevation = if (isDarkTheme) 6.dp else if (isEnrolled) 4.dp else 2.dp
         )
     ) {
         Column(
