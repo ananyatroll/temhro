@@ -672,91 +672,179 @@ fun SubjectFlashcardRow(
                                 }
 
                                 // Interactive Flippable Card Frame
-                                Box(contentAlignment = Alignment.Center) {
-                                     FlippableCard(
-                                         card = currentCard,
-                                         isFlipped = isFlipped,
-                                         onFlipClick = { viewModel.isFlashcardFlipped.value = !isFlipped }
-                                     )
-                                 }
+                                Box(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(vertical = 4.dp),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    FlippableCard(
+                                        card = currentCard,
+                                        isFlipped = isFlipped,
+                                        onFlipClick = { viewModel.isFlashcardFlipped.value = !isFlipped }
+                                    )
+                                }
 
-                            Spacer(modifier = Modifier.height(14.dp))
+                                Spacer(modifier = Modifier.height(16.dp))
 
-                            // Smart Action & Navigation Control Strip
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.SpaceBetween,
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                Row(horizontalArrangement = Arrangement.spacedBy(16.dp), verticalAlignment = Alignment.CenterVertically) {
-                                    // Mark Mastered button (toggleable)
-                                    IconButton(
-                                        onClick = {
-                                            viewModel.markFlashcardMastered(currentCard.id)
-                                            if (!isCardMastered) {
-                                                if (cardIndex == activeDeckCards.size - 1) {
-                                                    viewModel.triggerCompletionCelebration()
-                                                }
-                                                popupMessage = "Card mastered!"
-                                            } else {
-                                                popupMessage = "Mastered removed!"
-                                            }
-                                        }
-                                    ) {
-                                        Icon(
-                                            imageVector = if (isCardMastered) Icons.Default.CheckCircle else Icons.Default.RadioButtonUnchecked,
-                                            contentDescription = "Mark Mastered",
-                                            tint = if (isCardMastered) EmeraldPrimary else Color.Gray,
-                                            modifier = Modifier.size(26.dp)
+                                // Impeccable Quick Toggles Row (Difficult / Mastered / Star)
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    // Difficult Pill Chip
+                                    Surface(
+                                        modifier = Modifier
+                                            .weight(1f)
+                                            .height(40.dp)
+                                            .clickable {
+                                                viewModel.markFlashcardDifficult(currentCard.id)
+                                                popupMessage = if (isCardDifficult) "Flag removed" else "Marked as difficult"
+                                            },
+                                        shape = RoundedCornerShape(10.dp),
+                                        color = if (isCardDifficult) Color(0xFFEF4444).copy(alpha = 0.18f) else Color(0xFF1E293B),
+                                        border = BorderStroke(
+                                            1.dp,
+                                            if (isCardDifficult) Color(0xFFEF4444) else Color.White.copy(alpha = 0.08f)
                                         )
-                                    }
-
-                                    // Mark Difficult button (toggleable)
-                                    IconButton(
-                                        onClick = {
-                                            viewModel.markFlashcardDifficult(currentCard.id)
-                                            popupMessage = if (isCardDifficult) "Flag removed!" else "Card flagged as difficult!"
-                                        }
                                     ) {
-                                        Icon(
-                                            imageVector = if (isCardDifficult) Icons.Default.Flag else Icons.Default.OutlinedFlag,
-                                            contentDescription = "Mark Difficult",
-                                            tint = if (isCardDifficult) Color(0xFFF87171) else Color.Gray,
-                                            modifier = Modifier.size(26.dp)
-                                        )
-                                    }
-
-                                    // Star / Save
-                                    val isCardSaved = savedFlashcardsSet.contains(currentCard.id) || currentCard.isStarred
-                                    IconButton(
-                                        onClick = {
-                                            viewModel.toggleFlashcardStarred(
-                                                currentCard.id,
-                                                currentCard.isKnown,
-                                                currentCard.isStarred
+                                        Row(
+                                            modifier = Modifier.fillMaxSize(),
+                                            verticalAlignment = Alignment.CenterVertically,
+                                            horizontalArrangement = Arrangement.Center
+                                        ) {
+                                            Icon(
+                                                imageVector = if (isCardDifficult) Icons.Default.Flag else Icons.Default.OutlinedFlag,
+                                                contentDescription = "Difficult",
+                                                tint = if (isCardDifficult) Color(0xFFF87171) else Color.LightGray,
+                                                modifier = Modifier.size(16.dp)
                                             )
-                                            viewModel.toggleSaveFlashcard(currentCard.id)
-                                            popupMessage = if (!isCardSaved) "Card saved!" else "Card unsaved!"
+                                            Spacer(modifier = Modifier.width(6.dp))
+                                            Text(
+                                                text = "Difficult",
+                                                style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
+                                                color = if (isCardDifficult) Color(0xFFF87171) else Color.LightGray
+                                            )
                                         }
-                                    ) {
-                                        Icon(
-                                            imageVector = if (isCardSaved) Icons.Default.Star else Icons.Default.StarBorder,
-                                            contentDescription = "Star card",
-                                            tint = if (isCardSaved) GoldAccent else Color.Gray,
-                                            modifier = Modifier.size(26.dp)
+                                    }
+
+                                    // Mastered Pill Chip
+                                    Surface(
+                                        modifier = Modifier
+                                            .weight(1.1f)
+                                            .height(40.dp)
+                                            .clickable {
+                                                viewModel.markFlashcardMastered(currentCard.id)
+                                                if (!isCardMastered) {
+                                                    if (cardIndex == activeDeckCards.size - 1) {
+                                                        viewModel.triggerCompletionCelebration()
+                                                    }
+                                                    popupMessage = "Mastered!"
+                                                } else {
+                                                    popupMessage = "Mastered removed"
+                                                }
+                                            },
+                                        shape = RoundedCornerShape(10.dp),
+                                        color = if (isCardMastered) EmeraldPrimary.copy(alpha = 0.2f) else Color(0xFF1E293B),
+                                        border = BorderStroke(
+                                            1.dp,
+                                            if (isCardMastered) EmeraldPrimary else Color.White.copy(alpha = 0.08f)
                                         )
+                                    ) {
+                                        Row(
+                                            modifier = Modifier.fillMaxSize(),
+                                            verticalAlignment = Alignment.CenterVertically,
+                                            horizontalArrangement = Arrangement.Center
+                                        ) {
+                                            Icon(
+                                                imageVector = if (isCardMastered) Icons.Default.CheckCircle else Icons.Default.RadioButtonUnchecked,
+                                                contentDescription = "Mastered",
+                                                tint = if (isCardMastered) EmeraldPrimary else Color.LightGray,
+                                                modifier = Modifier.size(16.dp)
+                                            )
+                                            Spacer(modifier = Modifier.width(6.dp))
+                                            Text(
+                                                text = "Mastered",
+                                                style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
+                                                color = if (isCardMastered) EmeraldPrimary else Color.LightGray
+                                            )
+                                        }
+                                    }
+
+                                    // Star / Save Icon Button
+                                    val isCardSaved = savedFlashcardsSet.contains(currentCard.id) || currentCard.isStarred
+                                    Surface(
+                                        modifier = Modifier
+                                            .size(40.dp)
+                                            .clickable {
+                                                viewModel.toggleFlashcardStarred(
+                                                    currentCard.id,
+                                                    currentCard.isKnown,
+                                                    currentCard.isStarred
+                                                )
+                                                viewModel.toggleSaveFlashcard(currentCard.id)
+                                                popupMessage = if (!isCardSaved) "Saved to bookmarks" else "Removed from bookmarks"
+                                            },
+                                        shape = RoundedCornerShape(10.dp),
+                                        color = if (isCardSaved) GoldAccent.copy(alpha = 0.18f) else Color(0xFF1E293B),
+                                        border = BorderStroke(
+                                            1.dp,
+                                            if (isCardSaved) GoldAccent else Color.White.copy(alpha = 0.08f)
+                                        )
+                                    ) {
+                                        Box(
+                                            modifier = Modifier.fillMaxSize(),
+                                            contentAlignment = Alignment.Center
+                                        ) {
+                                            Icon(
+                                                imageVector = if (isCardSaved) Icons.Default.Star else Icons.Default.StarBorder,
+                                                contentDescription = "Save card",
+                                                tint = if (isCardSaved) GoldAccent else Color.LightGray,
+                                                modifier = Modifier.size(20.dp)
+                                            )
+                                        }
                                     }
                                 }
 
-                                // View Source Note & Pagination
+                                Spacer(modifier = Modifier.height(14.dp))
+
+                                // Navigation & Source Control Bar
                                 Row(
-                                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .background(Color(0xFF0F172A), RoundedCornerShape(12.dp))
+                                        .border(1.dp, Color.White.copy(alpha = 0.08f), RoundedCornerShape(12.dp))
+                                        .padding(horizontal = 8.dp, vertical = 6.dp),
+                                    horizontalArrangement = Arrangement.SpaceBetween,
                                     verticalAlignment = Alignment.CenterVertically
                                 ) {
-                                    // View Source Button (Learning Loop bridge back to Syllabus Notes)
+                                    // Previous Button
+                                    TextButton(
+                                        onClick = {
+                                            if (cardIndex > 0) {
+                                                viewModel.currentFlashcardIndex.value = cardIndex - 1
+                                                viewModel.isFlashcardFlipped.value = false
+                                            }
+                                        },
+                                        enabled = cardIndex > 0,
+                                        colors = ButtonDefaults.textButtonColors(
+                                            contentColor = if (cardIndex > 0) Color.White else Color(0xFF475569),
+                                            disabledContentColor = Color(0xFF475569)
+                                        )
+                                    ) {
+                                        Icon(
+                                            Icons.AutoMirrored.Filled.ArrowBack,
+                                            contentDescription = "Previous",
+                                            modifier = Modifier.size(16.dp)
+                                        )
+                                        Spacer(modifier = Modifier.width(4.dp))
+                                        Text("Previous", fontSize = 12.sp, fontWeight = FontWeight.SemiBold)
+                                    }
+
+                                    // View Source Button (Bridge to Syllabus Notes)
                                     OutlinedButton(
                                         onClick = {
-                                            // Extract unit snippet
                                             val regex = Regex("""\[(Unit\s+\d+[^,\]]*)[,\]]""", RegexOption.IGNORE_CASE)
                                             val match = regex.find(currentCard.front)
                                             val unitSnippet = match?.groupValues?.getOrNull(1)?.trim() ?: run {
@@ -770,34 +858,16 @@ fun SubjectFlashcardRow(
                                             )
                                         },
                                         shape = RoundedCornerShape(8.dp),
-                                        contentPadding = PaddingValues(horizontal = 8.dp, vertical = 4.dp),
-                                        border = androidx.compose.foundation.BorderStroke(1.dp, EmeraldPrimary.copy(alpha = 0.5f))
+                                        contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
+                                        border = BorderStroke(1.dp, EmeraldPrimary.copy(alpha = 0.5f))
                                     ) {
                                         Icon(Icons.Default.MenuBook, contentDescription = null, modifier = Modifier.size(14.dp), tint = EmeraldPrimary)
                                         Spacer(modifier = Modifier.width(4.dp))
                                         Text("Source", fontSize = 11.sp, color = EmeraldPrimary, fontWeight = FontWeight.Bold)
                                     }
 
-                                    // Prev-Next pagination
-                                    IconButton(
-                                        onClick = {
-                                            if (cardIndex > 0) {
-                                                viewModel.currentFlashcardIndex.value = cardIndex - 1
-                                                viewModel.isFlashcardFlipped.value = false
-                                            }
-                                        },
-                                        enabled = cardIndex > 0,
-                                        modifier = Modifier.size(32.dp)
-                                    ) {
-                                        Icon(
-                                            Icons.AutoMirrored.Filled.ArrowBack,
-                                            contentDescription = "Back",
-                                            tint = if (cardIndex > 0) Color.White else Color.DarkGray,
-                                            modifier = Modifier.size(18.dp)
-                                        )
-                                    }
-
-                                    IconButton(
+                                    // Next Button
+                                    TextButton(
                                         onClick = {
                                             if (cardIndex < activeDeckCards.size - 1) {
                                                 viewModel.currentFlashcardIndex.value = cardIndex + 1
@@ -805,17 +875,20 @@ fun SubjectFlashcardRow(
                                             }
                                         },
                                         enabled = cardIndex < activeDeckCards.size - 1,
-                                        modifier = Modifier.size(32.dp)
+                                        colors = ButtonDefaults.textButtonColors(
+                                            contentColor = if (cardIndex < activeDeckCards.size - 1) Color.White else Color(0xFF475569),
+                                            disabledContentColor = Color(0xFF475569)
+                                        )
                                     ) {
+                                        Text("Next", fontSize = 12.sp, fontWeight = FontWeight.SemiBold)
+                                        Spacer(modifier = Modifier.width(4.dp))
                                         Icon(
-                                            Icons.AutoMirrored.Filled.ArrowForward,
-                                            contentDescription = "Next",
-                                            tint = if (cardIndex < activeDeckCards.size - 1) Color.White else Color.DarkGray,
-                                            modifier = Modifier.size(18.dp)
+                                             Icons.AutoMirrored.Filled.ArrowForward,
+                                             contentDescription = "Next",
+                                             modifier = Modifier.size(16.dp)
                                         )
                                     }
                                 }
-                            }
                         }
                     }
                 }
@@ -841,25 +914,32 @@ fun FlippableCard(
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .height(240.dp)
+            .height(250.dp)
             .pressBounce()
             .clickable(onClick = onFlipClick)
             .graphicsLayer {
                 rotationY = rotation
-                cameraDistance = 12f * density
+                cameraDistance = 14f * density
             }
             .border(
-                width = 1.dp,
-                color = if (isFlipped) EmeraldPrimary.copy(alpha = 0.5f) else Color.White.copy(alpha = 0.2f),
-                shape = RoundedCornerShape(16.dp)
+                width = 1.2.dp,
+                color = if (isFlipped) EmeraldPrimary.copy(alpha = 0.6f) else Color.White.copy(alpha = 0.12f),
+                shape = RoundedCornerShape(20.dp)
             ),
-        shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = CardBgDark)
+        shape = RoundedCornerShape(20.dp),
+        colors = CardDefaults.cardColors(containerColor = Color(0xFF131B2E)),
+        elevation = CardDefaults.cardElevation(defaultElevation = 6.dp)
     ) {
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(20.dp),
+                .background(
+                    Brush.verticalGradient(
+                        colors = if (isFlipped) listOf(Color(0xFF131B2E), Color(0xFF0F172A))
+                        else listOf(Color(0xFF1A233A), Color(0xFF111827))
+                    )
+                )
+                .padding(22.dp),
             contentAlignment = Alignment.Center
         ) {
             if (rotation <= 90f) {
@@ -876,31 +956,43 @@ fun FlippableCard(
                     ) {
                         if (card.gradeLevel != "General") {
                             Surface(
-                                color = EmeraldPrimary.copy(alpha = 0.15f),
-                                shape = RoundedCornerShape(6.dp)
+                                color = EmeraldPrimary.copy(alpha = 0.18f),
+                                shape = RoundedCornerShape(8.dp),
+                                border = BorderStroke(1.dp, EmeraldPrimary.copy(alpha = 0.35f))
                             ) {
                                 Text(
                                     text = card.gradeLevel,
                                     style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold, fontSize = 11.sp),
                                     color = EmeraldPrimary,
-                                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 2.dp)
+                                    modifier = Modifier.padding(horizontal = 10.dp, vertical = 3.dp)
                                 )
                             }
                         } else {
                             Spacer(modifier = Modifier.width(1.dp))
                         }
 
-                        Text(
-                            text = "QUESTION / TERM",
-                            style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold, fontSize = 10.sp),
-                            color = HolographicAqua
-                        )
+                        Surface(
+                            color = HolographicAqua.copy(alpha = 0.12f),
+                            shape = RoundedCornerShape(6.dp)
+                        ) {
+                            Text(
+                                text = "QUESTION / TERM",
+                                style = MaterialTheme.typography.labelSmall.copy(
+                                    fontWeight = FontWeight.Black,
+                                    letterSpacing = 1.sp,
+                                    fontSize = 9.5.sp
+                                ),
+                                color = HolographicAqua,
+                                modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp)
+                            )
+                        }
                     }
 
                     Box(
                         modifier = Modifier
                             .weight(1f)
-                            .fillMaxWidth(),
+                            .fillMaxWidth()
+                            .padding(vertical = 12.dp),
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
@@ -908,29 +1000,36 @@ fun FlippableCard(
                             style = MaterialTheme.typography.titleMedium.copy(
                                 fontWeight = FontWeight.Bold,
                                 fontSize = if (card.front.length > 80) 16.sp else 19.sp,
-                                lineHeight = if (card.front.length > 80) 22.sp else 26.sp
+                                lineHeight = if (card.front.length > 80) 24.sp else 28.sp,
+                                letterSpacing = 0.2.sp
                             ),
                             color = Color.White,
                             textAlign = TextAlign.Center,
-                            modifier = Modifier.padding(horizontal = 8.dp)
+                            modifier = Modifier.padding(horizontal = 6.dp)
                         )
                     }
 
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(4.dp)
+                    Surface(
+                        color = Color.White.copy(alpha = 0.06f),
+                        shape = RoundedCornerShape(12.dp)
                     ) {
-                        Icon(
-                            imageVector = Icons.Default.TouchApp,
-                            contentDescription = null,
-                            tint = Color.LightGray,
-                            modifier = Modifier.size(14.dp)
-                        )
-                        Text(
-                            text = "Tap to flip",
-                            style = MaterialTheme.typography.labelSmall.copy(fontSize = 11.sp),
-                            color = Color.LightGray
-                        )
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(6.dp),
+                            modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp)
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.TouchApp,
+                                contentDescription = null,
+                                tint = Color.LightGray,
+                                modifier = Modifier.size(13.dp)
+                            )
+                            Text(
+                                text = "Tap to reveal answer",
+                                style = MaterialTheme.typography.labelSmall.copy(fontSize = 10.5.sp, fontWeight = FontWeight.Medium),
+                                color = Color.LightGray
+                            )
+                        }
                     }
                 }
             } else {
@@ -947,22 +1046,32 @@ fun FlippableCard(
                         horizontalArrangement = Arrangement.SpaceBetween,
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Text(
-                            text = "ANSWER & EXPLANATION",
-                            style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold, fontSize = 10.sp),
-                            color = EmeraldPrimary
-                        )
+                        Surface(
+                            color = EmeraldPrimary.copy(alpha = 0.15f),
+                            shape = RoundedCornerShape(6.dp)
+                        ) {
+                            Text(
+                                text = "ANSWER & EXPLANATION",
+                                style = MaterialTheme.typography.labelSmall.copy(
+                                    fontWeight = FontWeight.Black,
+                                    letterSpacing = 1.sp,
+                                    fontSize = 9.5.sp
+                                ),
+                                color = EmeraldPrimary,
+                                modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp)
+                            )
+                        }
 
                         if (card.gradeLevel != "General") {
                             Surface(
                                 color = EmeraldPrimary.copy(alpha = 0.15f),
-                                shape = RoundedCornerShape(6.dp)
+                                shape = RoundedCornerShape(8.dp)
                             ) {
                                 Text(
                                     text = card.gradeLevel,
                                     style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold, fontSize = 11.sp),
                                     color = EmeraldPrimary,
-                                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 2.dp)
+                                    modifier = Modifier.padding(horizontal = 10.dp, vertical = 3.dp)
                                 )
                             }
                         }
@@ -971,36 +1080,44 @@ fun FlippableCard(
                     Box(
                         modifier = Modifier
                             .weight(1f)
-                            .fillMaxWidth(),
+                            .fillMaxWidth()
+                            .padding(vertical = 10.dp),
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
                             text = card.back,
                             style = MaterialTheme.typography.bodyMedium.copy(
-                                fontSize = if (card.back.length > 150) 13.sp else 15.sp,
-                                lineHeight = if (card.back.length > 150) 18.sp else 21.sp
+                                fontSize = if (card.back.length > 150) 13.5.sp else 15.sp,
+                                lineHeight = if (card.back.length > 150) 20.sp else 23.sp,
+                                letterSpacing = 0.2.sp
                             ),
                             color = Color.White,
                             textAlign = TextAlign.Start,
-                            modifier = Modifier.padding(horizontal = 8.dp)
+                            modifier = Modifier.padding(horizontal = 6.dp)
                         )
                     }
 
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(4.dp)
+                    Surface(
+                        color = Color.White.copy(alpha = 0.06f),
+                        shape = RoundedCornerShape(12.dp)
                     ) {
-                        Icon(
-                            imageVector = Icons.Default.Replay,
-                            contentDescription = null,
-                            tint = Color.LightGray,
-                            modifier = Modifier.size(14.dp)
-                        )
-                        Text(
-                            text = "Tap to flip back",
-                            style = MaterialTheme.typography.labelSmall.copy(fontSize = 11.sp),
-                            color = Color.LightGray
-                        )
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(6.dp),
+                            modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp)
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.Replay,
+                                contentDescription = null,
+                                tint = Color.LightGray,
+                                modifier = Modifier.size(13.dp)
+                            )
+                            Text(
+                                text = "Tap to flip back",
+                                style = MaterialTheme.typography.labelSmall.copy(fontSize = 10.5.sp, fontWeight = FontWeight.Medium),
+                                color = Color.LightGray
+                            )
+                        }
                     }
                 }
             }

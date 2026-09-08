@@ -1,4 +1,4 @@
-﻿package com.example.ui.screens
+package com.example.ui.screens
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -138,15 +138,23 @@ fun DepartmentSelectionScreen(viewModel: StudyViewModel) {
             ) {
                 filteredFaculties.forEach { (facultyName, departments) ->
                     item {
-                        Text(
-                            text = facultyName.uppercase(),
-                            style = MaterialTheme.typography.labelSmall.copy(
-                                fontWeight = FontWeight.Bold,
-                                letterSpacing = 1.sp
-                            ),
-                            color = GoldAccent,
-                            modifier = Modifier.padding(vertical = 4.dp)
-                        )
+                        Surface(
+                            shape = RoundedCornerShape(6.dp),
+                            color = GoldAccent.copy(alpha = 0.12f),
+                            border = BorderStroke(1.dp, GoldAccent.copy(alpha = 0.3f)),
+                            modifier = Modifier.padding(top = 8.dp, bottom = 4.dp)
+                        ) {
+                            Text(
+                                text = facultyName.uppercase(),
+                                style = MaterialTheme.typography.labelSmall.copy(
+                                    fontWeight = FontWeight.Black,
+                                    letterSpacing = 1.sp,
+                                    fontSize = 10.sp
+                                ),
+                                color = GoldAccent,
+                                modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                            )
+                        }
                     }
 
                     items(departments) { dept ->
@@ -157,15 +165,18 @@ fun DepartmentSelectionScreen(viewModel: StudyViewModel) {
                                     val currentYr = if (academicYear.isNotBlank()) academicYear else "Year 2"
                                     viewModel.saveDepartmentSetup(dept, currentYr)
                                 },
-                            shape = RoundedCornerShape(12.dp),
-                            color = if (isDarkTheme) CardBgDark else Color.White,
-                            border = BorderStroke(1.dp, if (isDarkTheme) Color(0xFF334155) else Color(0xFFE2E8F0)),
-                            shadowElevation = 2.dp
+                            shape = RoundedCornerShape(14.dp),
+                            color = if (isDarkTheme) Color(0xFF131B2E) else Color.White,
+                            border = BorderStroke(
+                                1.dp,
+                                if (isDarkTheme) Color(0xFF334155).copy(alpha = 0.8f) else Color(0xFFE2E8F0)
+                            ),
+                            shadowElevation = 3.dp
                         ) {
                             Row(
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .padding(16.dp),
+                                    .padding(horizontal = 16.dp, vertical = 14.dp),
                                 horizontalArrangement = Arrangement.SpaceBetween,
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
@@ -173,27 +184,48 @@ fun DepartmentSelectionScreen(viewModel: StudyViewModel) {
                                     verticalAlignment = Alignment.CenterVertically,
                                     modifier = Modifier.weight(1f)
                                 ) {
-                                    Icon(
-                                        imageVector = Icons.Default.School,
-                                        contentDescription = null,
-                                        tint = EmeraldPrimary,
-                                        modifier = Modifier.size(20.dp)
-                                    )
-                                    Spacer(modifier = Modifier.width(12.dp))
+                                    Box(
+                                        modifier = Modifier
+                                            .size(36.dp)
+                                            .background(
+                                                EmeraldPrimary.copy(alpha = 0.15f),
+                                                RoundedCornerShape(8.dp)
+                                            ),
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        Icon(
+                                            imageVector = Icons.Default.School,
+                                            contentDescription = null,
+                                            tint = EmeraldPrimary,
+                                            modifier = Modifier.size(18.dp)
+                                        )
+                                    }
+                                    Spacer(modifier = Modifier.width(14.dp))
                                     Text(
                                         text = dept,
                                         style = MaterialTheme.typography.bodyMedium.copy(
-                                            fontWeight = FontWeight.SemiBold
+                                            fontWeight = FontWeight.SemiBold,
+                                            fontSize = 13.5.sp
                                         ),
                                         color = if (isDarkTheme) Color.White else Color(0xFF0F172A)
                                     )
                                 }
-                                Icon(
-                                    imageVector = Icons.Default.ChevronRight,
-                                    contentDescription = "Select",
-                                    tint = EmeraldPrimary,
-                                    modifier = Modifier.size(20.dp)
-                                )
+                                Box(
+                                    modifier = Modifier
+                                        .size(28.dp)
+                                        .background(
+                                            Color.White.copy(alpha = 0.05f),
+                                            RoundedCornerShape(6.dp)
+                                        ),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Icon(
+                                        imageVector = Icons.Default.ChevronRight,
+                                        contentDescription = "Select",
+                                        tint = EmeraldPrimary,
+                                        modifier = Modifier.size(18.dp)
+                                    )
+                                }
                             }
                         }
                     }
