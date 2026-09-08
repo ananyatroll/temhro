@@ -477,14 +477,22 @@ fun SubjectFlashcardRow(
                         }
                     }
 
-                    val activeDeckCards = remember(filteredByUnit, smartFilter, cardMasteredSet, cardDifficultSet, shuffleSeed) {
+                    var isAutoShuffleEnabled by remember { mutableStateOf(true) }
+
+                    val activeDeckCards = remember(filteredByUnit, smartFilter, cardMasteredSet, cardDifficultSet, shuffleSeed, isAutoShuffleEnabled) {
                         val filtered = when (smartFilter) {
                             "difficult" -> filteredByUnit.filter { cardDifficultSet.contains(it.id) }
                             "mastered" -> filteredByUnit.filter { cardMasteredSet.contains(it.id) || it.isKnown }
                             "review" -> filteredByUnit.filter { !cardMasteredSet.contains(it.id) && !it.isKnown }
                             else -> filteredByUnit
                         }
-                        if (shuffleSeed > 0) filtered.shuffled(java.util.Random(shuffleSeed.toLong())) else filtered
+                        if (isAutoShuffleEnabled || shuffleSeed > 0) {
+                            // Seed based on subject name + unit + shuffleSeed to get deterministic auto-shuffled experience without requiring manual button press
+                            val seed = (subject.id.hashCode() + selectedUnit.hashCode() + shuffleSeed + 777).toLong()
+                            filtered.shuffled(java.util.Random(seed))
+                        } else {
+                            filtered
+                        }
                     }
 
                     // 4. Smart Mastery Progress & Spaced Repetition Bar

@@ -158,6 +158,9 @@ fun StudyTimerAndTasksView(
                     subjectsList.map { it.name }.distinct().filter { it.isNotBlank() }
                 }
                 Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .horizontalScroll(rememberScrollState()),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(6.dp)
                 ) {

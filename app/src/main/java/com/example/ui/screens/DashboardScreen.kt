@@ -26,6 +26,7 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -34,6 +35,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.ads.InterstitialAdManager
 import com.example.ads.AdsManager
+import com.example.ui.NotificationHelper
 import com.example.ui.StudyViewModel
 import com.example.ui.TranslationManager
 import android.widget.Toast
@@ -521,15 +523,43 @@ fun GreetingHeader(viewModel: StudyViewModel, username: String) {
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // Gamified Streak Pill (Duolingo Style)
+            val context = LocalContext.current
+            var showLoginCelebrationModal by remember { mutableStateOf(false) }
+
+            // Trigger login celebration animation & notification once per session start
+            LaunchedEffect(Unit) {
+                kotlinx.coroutines.delay(600)
+                showLoginCelebrationModal = true
+                viewModel.triggerCompletionCelebration()
+                NotificationHelper.sendMotivationalNotification(
+                    context = context,
+                    studentName = username.ifEmpty { "Student" },
+                    studentGoal = "Master high-yield topics & conquer your exams"
+                )
+            }
+
+            // Gamified Streak & XP Pill (Duolingo / Phantom Wallet Style)
             val answeredCount = viewModel.answeredQuestionsSet.collectAsState().value.size
+            val readNotesCount = viewModel.readNotesSet.collectAsState().value.size
+            val totalXp = (answeredCount * 15) + (readNotesCount * 25) + 150
             val streakDays = (answeredCount / 3).coerceAtLeast(1)
+
+            val infiniteTransition = rememberInfiniteTransition(label = "streakPulse")
+            val flameScale by infiniteTransition.animateFloat(
+                initialValue = 1.0f,
+                targetValue = 1.18f,
+                animationSpec = infiniteRepeatable(animation = tween(800, easing = LinearOutSlowInEasing), repeatMode = RepeatMode.Reverse),
+                label = "flamePulse"
+            )
+
+            // Gamified Streak Pill (Interactive tap opens XP celebration)
             Box(
                 modifier = Modifier
                     .clip(RoundedCornerShape(12.dp))
                     .background(if (isDarkTheme) Color(0xFF1E293B) else Color(0xFFFFFBEB))
                     .border(1.dp, GoldAccent.copy(alpha = 0.4f), RoundedCornerShape(12.dp))
                     .pressBounce(pressedScale = 0.94f)
+                    .clickable { showLoginCelebrationModal = true }
                     .padding(horizontal = 8.dp, vertical = 6.dp),
                 contentAlignment = Alignment.Center
             ) {
@@ -541,14 +571,98 @@ fun GreetingHeader(viewModel: StudyViewModel, username: String) {
                         imageVector = Icons.Default.LocalFireDepartment,
                         contentDescription = "Streak",
                         tint = Color(0xFFF97316),
-                        modifier = Modifier.size(18.dp)
+                        modifier = Modifier
+                            .size(18.dp)
+                            .graphicsLayer {
+                                scaleX = flameScale
+                                scaleY = flameScale
+                            }
                     )
                     Text(
-                        text = "$streakDays",
+                        text = "$streakDays 🔥",
                         style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Black),
                         color = if (isDarkTheme) GoldLight else Color(0xFFC2410C)
                     )
                 }
+            }
+
+            // Animated Login Reward Dialog
+            if (showLoginCelebrationModal) {
+                AlertDialog(
+                    onDismissRequest = { showLoginCelebrationModal = false },
+                    containerColor = if (isDarkTheme) CardBgDark else Color.White,
+                    title = {
+                        Column(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.LocalFireDepartment,
+                                contentDescription = "Fire",
+                                tint = Color(0xFFF97316),
+                                modifier = Modifier.size(54.dp)
+                            )
+                            Spacer(modifier = Modifier.height(8.dp))
+                            Text(
+                                text = "Welcome Back, ${username.ifEmpty { "Scholar" }}! 🎉",
+                                fontWeight = FontWeight.Black,
+                                fontSize = 20.sp,
+                                textAlign = TextAlign.Center,
+                                color = if (isDarkTheme) Color.White else IndigoSecondary
+                            )
+                        }
+                    },
+                    text = {
+                        Column(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            Text(
+                                text = "Daily Streak Active: $streakDays Days!",
+                                fontSize = 15.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = EmeraldPrimary,
+                                textAlign = TextAlign.Center
+                            )
+                            Spacer(modifier = Modifier.height(10.dp))
+                            Surface(
+                                shape = RoundedCornerShape(14.dp),
+                                color = EmeraldPrimary.copy(alpha = 0.12f),
+                                border = BorderStroke(1.dp, EmeraldPrimary.copy(alpha = 0.3f)),
+                                modifier = Modifier.fillMaxWidth()
+                            ) {
+                                Row(
+                                    modifier = Modifier.padding(14.dp),
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    horizontalArrangement = Arrangement.SpaceBetween
+                                ) {
+                                    Row(verticalAlignment = Alignment.CenterVertically) {
+                                        Icon(Icons.Default.Bolt, null, tint = GoldAccent, modifier = Modifier.size(24.dp))
+                                        Spacer(modifier = Modifier.width(8.dp))
+                                        Text("Daily Login Bonus", fontWeight = FontWeight.Bold, color = if (isDarkTheme) Color.White else Color.Black)
+                                    }
+                                    Text("+50 XP", fontWeight = FontWeight.Black, color = EmeraldPrimary, fontSize = 16.sp)
+                                }
+                            }
+                            Spacer(modifier = Modifier.height(8.dp))
+                            Text(
+                                text = "Total Progress Score: $totalXp XP",
+                                fontSize = 12.sp,
+                                color = TextMuted
+                            )
+                        }
+                    },
+                    confirmButton = {
+                        Button(
+                            onClick = { showLoginCelebrationModal = false },
+                            colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary),
+                            shape = RoundedCornerShape(12.dp),
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            Text("Keep Learning! 🚀", fontWeight = FontWeight.Bold)
+                        }
+                    }
+                )
             }
             // Dark / Light Mode symbol toggle (pure symbols, no text)
             Box(

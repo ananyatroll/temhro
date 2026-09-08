@@ -621,7 +621,7 @@ fun SubjectDetailModal(
                         ) {
                             Icon(Icons.Default.MenuBook, contentDescription = null, tint = Color.White)
                             Spacer(modifier = Modifier.width(12.dp))
-                            Text("Official Textbook", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                            Text("4. Official Textbook", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
                         }
                     }
                 }
@@ -644,7 +644,7 @@ fun SubjectDetailModal(
                         Icon(Icons.Default.Bookmark, contentDescription = null, tint = Color.Black)
                         Spacer(modifier = Modifier.width(12.dp))
                         Text(
-                            TranslationManager.get("opt_saved_materials", currentLang),
+                            "5. " + TranslationManager.get("opt_saved_materials", currentLang),
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
                             color = Color.Black
