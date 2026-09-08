@@ -65,171 +65,70 @@ fun DashboardScreen(viewModel: StudyViewModel) {
 
     // Department Curriculum Definition by Year
     val departmentCurriculum = remember(academicDepartment) {
-        val isEngineering = academicDepartment.contains("Engineering", ignoreCase = true)
+        val isEng = academicDepartment.contains("Engineering", ignoreCase = true)
         val dept = academicDepartment.ifBlank { "Department" }
 
-        val year2Courses = when {
-            dept.contains("Accounting", ignoreCase = true) -> listOf(
-                StudySubject("dept_fin_acc_1", "Financial Accounting I", "accounting", "department"),
-                StudySubject("dept_cost_acc", "Cost and Management Accounting I", "accounting", "department"),
-                StudySubject("dept_business_law", "Business Law", "civics", "department"),
-                StudySubject("dept_micro_econ", "Microeconomics", "economics", "department")
+        fun s(id: String, name: String, icon: String) = StudySubject(id, name, icon, "department")
+
+        val (y2, y3, y4) = when {
+            dept.contains("Accounting", ignoreCase = true) -> Triple(
+                listOf(s("dept_fin_acc_1", "Financial Accounting I", "accounting"), s("dept_cost_acc", "Cost and Management Accounting I", "accounting"), s("dept_business_law", "Business Law", "civics"), s("dept_micro_econ", "Microeconomics", "economics")),
+                listOf(s("dept_fin_acc_2", "Financial Accounting II", "accounting"), s("dept_auditing_1", "Principles of Auditing I", "accounting"), s("dept_tax_acc", "Ethiopian Tax Accounting", "accounting"), s("dept_corp_fin", "Corporate Finance", "business")),
+                listOf(s("dept_advanced_acc", "Advanced Financial Accounting", "accounting"), s("dept_acct_info_sys", "Accounting Information Systems", "analytics"), s("dept_gov_acc", "Public Sector and Fund Accounting", "accounting"), s("dept_senior_research_acc", "Senior Accounting Research", "business"))
             )
-            dept.contains("Economics", ignoreCase = true) -> listOf(
-                StudySubject("dept_micro_1", "Intermediate Microeconomics I", "economics", "department"),
-                StudySubject("dept_macro_1", "Intermediate Macroeconomics I", "economics", "department"),
-                StudySubject("dept_math_econ", "Calculus for Economists", "maths", "department"),
-                StudySubject("dept_stats_econ", "Statistics for Economists", "analytics", "department")
+            dept.contains("Economics", ignoreCase = true) -> Triple(
+                listOf(s("dept_micro_1", "Intermediate Microeconomics I", "economics"), s("dept_macro_1", "Intermediate Macroeconomics I", "economics"), s("dept_math_econ", "Calculus for Economists", "maths"), s("dept_stats_econ", "Statistics for Economists", "analytics")),
+                listOf(s("dept_econometrics_1", "Introduction to Econometrics", "analytics"), s("dept_dev_econ", "Development Economics", "economics"), s("dept_monetary_econ", "Monetary and Banking Economics", "economics"), s("dept_pub_fin", "Public Finance", "business")),
+                listOf(s("dept_adv_econometrics", "Applied Econometrics & Time Series", "analytics"), s("dept_intl_trade", "International Economics & Trade", "economics"), s("dept_eth_econ", "The Ethiopian Economy: Policy & Growth", "economics"), s("dept_econ_thesis", "Undergraduate Research Project", "economics"))
             )
-            dept.contains("Computer Science", ignoreCase = true) || dept.contains("Software", ignoreCase = true) -> listOf(
-                StudySubject("dept_dsa", "Data Structures & Algorithms", "computer", "department"),
-                StudySubject("dept_oop", "Object Oriented Programming (Java/C++)", "software", "department"),
-                StudySubject("dept_db_sys", "Database Systems & SQL", "analytics", "department"),
-                StudySubject("dept_comp_org", "Computer Architecture & Organization", "computer", "department")
+            dept.contains("Computer Science", ignoreCase = true) || dept.contains("Software", ignoreCase = true) -> Triple(
+                listOf(s("dept_dsa", "Data Structures & Algorithms", "computer"), s("dept_oop", "Object Oriented Programming (Java/C++)", "software"), s("dept_db_sys", "Database Systems & SQL", "analytics"), s("dept_comp_org", "Computer Architecture & Organization", "computer")),
+                listOf(s("dept_os", "Operating Systems & Concurrency", "computer"), s("dept_networks", "Computer Networks & Protocols", "computer"), s("dept_soft_eng", "Software Engineering Principles", "software"), s("dept_web_dev", "Web Architecture & Fullstack Dev", "computer")),
+                listOf(s("dept_distributed_sys", "Distributed Systems & Cloud Computing", "computer"), s("dept_ai_ml", "Artificial Intelligence & Data Mining", "computer"), s("dept_cybersecurity", "Information Security & Cryptography", "computer"), s("dept_capstone_1", "Senior Capstone Project I", "software"))
             )
-            dept.contains("Electrical", ignoreCase = true) -> listOf(
-                StudySubject("dept_circuit_1", "Electric Circuits I", "electrical", "department"),
-                StudySubject("dept_applied_math_1", "Applied Mathematics I", "maths", "department"),
-                StudySubject("dept_electromagnetics", "Electromagnetic Fields", "physics", "department"),
-                StudySubject("dept_electronics_1", "Basic Electronics", "electrical", "department")
+            dept.contains("Electrical", ignoreCase = true) -> Triple(
+                listOf(s("dept_circuit_1", "Electric Circuits I", "electrical"), s("dept_applied_math_1", "Applied Mathematics I", "maths"), s("dept_electromagnetics", "Electromagnetic Fields", "physics"), s("dept_electronics_1", "Basic Electronics", "electrical")),
+                listOf(s("dept_signals_sys", "Signals and Systems", "electrical"), s("dept_power_sys", "Electrical Power Systems", "electrical"), s("dept_control_sys", "Control Systems Engineering", "electrical"), s("dept_microprocessors", "Microprocessors & Embedded Systems", "computer")),
+                listOf(s("dept_comm_systems", "Telecommunications Engineering", "electrical"), s("dept_power_electronics", "Power Electronics & Drives", "electrical"), s("dept_power_protection", "Power System Protection & Relay", "electrical"), s("dept_ee_capstone_1", "Engineering Capstone Project I", "electrical"))
             )
-            dept.contains("Mechanical", ignoreCase = true) -> listOf(
-                StudySubject("dept_engineering_mechanics", "Engineering Mechanics (Statics)", "mechanical", "department"),
-                StudySubject("dept_thermodynamics_1", "Thermodynamics I", "mechanical", "department"),
-                StudySubject("dept_materials_sci", "Materials Science and Engineering", "chemistry", "department"),
-                StudySubject("dept_applied_math_mech", "Applied Mathematics I", "maths", "department")
+            dept.contains("Mechanical", ignoreCase = true) -> Triple(
+                listOf(s("dept_engineering_mechanics", "Engineering Mechanics (Statics)", "mechanical"), s("dept_thermodynamics_1", "Thermodynamics I", "mechanical"), s("dept_materials_sci", "Materials Science and Engineering", "chemistry"), s("dept_applied_math_mech", "Applied Mathematics I", "maths")),
+                listOf(s("dept_fluid_mechanics", "Fluid Mechanics", "mechanical"), s("dept_heat_transfer", "Heat Transfer & Cooling", "mechanical"), s("dept_machine_design", "Machine Elements Design I", "mechanical"), s("dept_dynamics", "Dynamics of Machinery", "mechanical")),
+                listOf(s("dept_cad_cam", "CAD/CAM and Industrial Automation", "mechanical"), s("dept_refrigeration", "HVAC & Thermal Systems", "mechanical"), s("dept_ic_engines", "Internal Combustion Engines", "mechanical"), s("dept_mech_capstone_1", "Mechanical Capstone Project I", "mechanical"))
             )
-            dept.contains("Law", ignoreCase = true) -> listOf(
-                StudySubject("dept_constitutional_law", "Law of Constitutional Governance", "civics", "department"),
-                StudySubject("dept_contracts_law", "Law of Contracts I", "civics", "department"),
-                StudySubject("dept_criminal_law", "Criminal Law I", "civics", "department"),
-                StudySubject("dept_legal_research", "Legal Research and Writing", "english", "department")
+            dept.contains("Law", ignoreCase = true) -> Triple(
+                listOf(s("dept_constitutional_law", "Law of Constitutional Governance", "civics"), s("dept_contracts_law", "Law of Contracts I", "civics"), s("dept_criminal_law", "Criminal Law I", "civics"), s("dept_legal_research", "Legal Research and Writing", "english")),
+                listOf(s("dept_property_law", "Ethiopian Property & Land Law", "civics"), s("dept_commercial_law", "Commercial Law & Business Entities", "civics"), s("dept_admin_law", "Administrative Law", "civics"), s("dept_human_rights", "Human Rights Law", "civics")),
+                listOf(s("dept_evidence_law", "Law of Evidence & Trial Practice", "civics"), s("dept_criminal_proc", "Criminal Procedure", "civics"), s("dept_civil_proc", "Civil Procedure & Litigation", "civics"), s("dept_intl_law", "Public International Law", "civics"))
             )
-            else -> listOf(
-                StudySubject("dept_core_1", "$dept Core Fundamentals", "computer", "department"),
-                StudySubject("dept_methods_1", "Research Methods & Quantitative Tools", "analytics", "department"),
-                StudySubject("dept_theory_1", "Applied Professional Theory I", "management", "department"),
-                StudySubject("dept_ethics_1", "Professional Ethics & Governance", "civics", "department")
+            else -> Triple(
+                listOf(s("dept_core_1", "$dept Core Fundamentals", "computer"), s("dept_methods_1", "Research Methods & Quantitative Tools", "analytics"), s("dept_theory_1", "Applied Professional Theory I", "management"), s("dept_ethics_1", "Professional Ethics & Governance", "civics")),
+                listOf(s("dept_core_2", "Advanced $dept Studies", "computer"), s("dept_methods_2", "Statistical Modeling & Analytics", "analytics"), s("dept_project_prep", "Departmental Project Studio", "management"), s("dept_applied_policy", "Policy and Systems Framework", "civics")),
+                listOf(s("dept_seminar_adv", "Senior Academic Seminar", "management"), s("dept_internship_app", "Professional Field Practicum", "business"), s("dept_strategic_mgmt", "Strategic Systems Management", "management"), s("dept_grad_thesis", "Graduation Research Project", "computer"))
             )
         }
 
-        val year3Courses = when {
-            dept.contains("Accounting", ignoreCase = true) -> listOf(
-                StudySubject("dept_fin_acc_2", "Financial Accounting II", "accounting", "department"),
-                StudySubject("dept_auditing_1", "Principles of Auditing I", "accounting", "department"),
-                StudySubject("dept_tax_acc", "Ethiopian Tax Accounting", "accounting", "department"),
-                StudySubject("dept_corp_fin", "Corporate Finance", "business", "department")
-            )
-            dept.contains("Economics", ignoreCase = true) -> listOf(
-                StudySubject("dept_econometrics_1", "Introduction to Econometrics", "analytics", "department"),
-                StudySubject("dept_dev_econ", "Development Economics", "economics", "department"),
-                StudySubject("dept_monetary_econ", "Monetary and Banking Economics", "economics", "department"),
-                StudySubject("dept_pub_fin", "Public Finance", "business", "department")
-            )
-            dept.contains("Computer Science", ignoreCase = true) || dept.contains("Software", ignoreCase = true) -> listOf(
-                StudySubject("dept_os", "Operating Systems & Concurrency", "computer", "department"),
-                StudySubject("dept_networks", "Computer Networks & Protocols", "computer", "department"),
-                StudySubject("dept_soft_eng", "Software Engineering Principles", "software", "department"),
-                StudySubject("dept_web_dev", "Web Architecture & Fullstack Dev", "computer", "department")
-            )
-            dept.contains("Electrical", ignoreCase = true) -> listOf(
-                StudySubject("dept_signals_sys", "Signals and Systems", "electrical", "department"),
-                StudySubject("dept_power_sys", "Electrical Power Systems", "electrical", "department"),
-                StudySubject("dept_control_sys", "Control Systems Engineering", "electrical", "department"),
-                StudySubject("dept_microprocessors", "Microprocessors & Embedded Systems", "computer", "department")
-            )
-            dept.contains("Mechanical", ignoreCase = true) -> listOf(
-                StudySubject("dept_fluid_mechanics", "Fluid Mechanics", "mechanical", "department"),
-                StudySubject("dept_heat_transfer", "Heat Transfer & Cooling", "mechanical", "department"),
-                StudySubject("dept_machine_design", "Machine Elements Design I", "mechanical", "department"),
-                StudySubject("dept_dynamics", "Dynamics of Machinery", "mechanical", "department")
-            )
-            dept.contains("Law", ignoreCase = true) -> listOf(
-                StudySubject("dept_property_law", "Ethiopian Property & Land Law", "civics", "department"),
-                StudySubject("dept_commercial_law", "Commercial Law & Business Entities", "civics", "department"),
-                StudySubject("dept_admin_law", "Administrative Law", "civics", "department"),
-                StudySubject("dept_human_rights", "Human Rights Law", "civics", "department")
-            )
-            else -> listOf(
-                StudySubject("dept_core_2", "Advanced $dept Studies", "computer", "department"),
-                StudySubject("dept_methods_2", "Statistical Modeling & Analytics", "analytics", "department"),
-                StudySubject("dept_project_prep", "Departmental Project Studio", "management", "department"),
-                StudySubject("dept_applied_policy", "Policy and Systems Framework", "civics", "department")
-            )
-        }
-
-        val year4Courses = when {
-            dept.contains("Accounting", ignoreCase = true) -> listOf(
-                StudySubject("dept_advanced_acc", "Advanced Financial Accounting", "accounting", "department"),
-                StudySubject("dept_acct_info_sys", "Accounting Information Systems", "analytics", "department"),
-                StudySubject("dept_gov_acc", "Public Sector and Fund Accounting", "accounting", "department"),
-                StudySubject("dept_senior_research_acc", "Senior Accounting Research", "business", "department")
-            )
-            dept.contains("Economics", ignoreCase = true) -> listOf(
-                StudySubject("dept_adv_econometrics", "Applied Econometrics & Time Series", "analytics", "department"),
-                StudySubject("dept_intl_trade", "International Economics & Trade", "economics", "department"),
-                StudySubject("dept_eth_econ", "The Ethiopian Economy: Policy & Growth", "economics", "department"),
-                StudySubject("dept_econ_thesis", "Undergraduate Research Project", "economics", "department")
-            )
-            dept.contains("Computer Science", ignoreCase = true) || dept.contains("Software", ignoreCase = true) -> listOf(
-                StudySubject("dept_distributed_sys", "Distributed Systems & Cloud Computing", "computer", "department"),
-                StudySubject("dept_ai_ml", "Artificial Intelligence & Data Mining", "computer", "department"),
-                StudySubject("dept_cybersecurity", "Information Security & Cryptography", "computer", "department"),
-                StudySubject("dept_capstone_1", "Senior Capstone Project I", "software", "department")
-            )
-            dept.contains("Electrical", ignoreCase = true) -> listOf(
-                StudySubject("dept_comm_systems", "Telecommunications Engineering", "electrical", "department"),
-                StudySubject("dept_power_electronics", "Power Electronics & Drives", "electrical", "department"),
-                StudySubject("dept_power_protection", "Power System Protection & Relay", "electrical", "department"),
-                StudySubject("dept_ee_capstone_1", "Engineering Capstone Project I", "electrical", "department")
-            )
-            dept.contains("Mechanical", ignoreCase = true) -> listOf(
-                StudySubject("dept_cad_cam", "CAD/CAM and Industrial Automation", "mechanical", "department"),
-                StudySubject("dept_refrigeration", "HVAC & Thermal Systems", "mechanical", "department"),
-                StudySubject("dept_ic_engines", "Internal Combustion Engines", "mechanical", "department"),
-                StudySubject("dept_mech_capstone_1", "Mechanical Capstone Project I", "mechanical", "department")
-            )
-            dept.contains("Law", ignoreCase = true) -> listOf(
-                StudySubject("dept_evidence_law", "Law of Evidence & Trial Practice", "civics", "department"),
-                StudySubject("dept_criminal_proc", "Criminal Procedure", "civics", "department"),
-                StudySubject("dept_civil_proc", "Civil Procedure & Litigation", "civics", "department"),
-                StudySubject("dept_intl_law", "Public International Law", "civics", "department")
-            )
-            else -> listOf(
-                StudySubject("dept_seminar_adv", "Senior Academic Seminar", "management", "department"),
-                StudySubject("dept_internship_app", "Professional Field Practicum", "business", "department"),
-                StudySubject("dept_strategic_mgmt", "Strategic Systems Management", "management", "department"),
-                StudySubject("dept_grad_thesis", "Graduation Research Project", "computer", "department")
-            )
-        }
-
-        val year5Courses = if (isEngineering) {
+        val y5 = if (isEng) {
             when {
                 dept.contains("Electrical", ignoreCase = true) -> listOf(
-                    StudySubject("dept_ee_high_voltage", "High Voltage Engineering", "electrical", "department"),
-                    StudySubject("dept_ee_smart_grid", "Renewable Energy & Smart Grid", "electrical", "department"),
-                    StudySubject("dept_ee_final_thesis", "Final Year Engineering Thesis", "electrical", "department")
+                    s("dept_ee_high_voltage", "High Voltage Engineering", "electrical"),
+                    s("dept_ee_smart_grid", "Renewable Energy & Smart Grid", "electrical"),
+                    s("dept_ee_final_thesis", "Final Year Engineering Thesis", "electrical")
                 )
                 dept.contains("Mechanical", ignoreCase = true) -> listOf(
-                    StudySubject("dept_mech_tribology", "Industrial Maintenance & Tribology", "mechanical", "department"),
-                    StudySubject("dept_mech_power_plant", "Power Plant Engineering", "mechanical", "department"),
-                    StudySubject("dept_mech_final_thesis", "Final Year Engineering Thesis", "mechanical", "department")
+                    s("dept_mech_tribology", "Industrial Maintenance & Tribology", "mechanical"),
+                    s("dept_mech_power_plant", "Power Plant Engineering", "mechanical"),
+                    s("dept_mech_final_thesis", "Final Year Engineering Thesis", "mechanical")
                 )
                 else -> listOf(
-                    StudySubject("dept_eng_mgmt", "Engineering Economics & Project Management", "management", "department"),
-                    StudySubject("dept_eng_internship", "Industrial Engineering Internship", "mechanical", "department"),
-                    StudySubject("dept_eng_final_capstone", "Senior Design Capstone II", "software", "department")
+                    s("dept_eng_mgmt", "Engineering Economics & Project Management", "management"),
+                    s("dept_eng_internship", "Industrial Engineering Internship", "mechanical"),
+                    s("dept_eng_final_capstone", "Senior Design Capstone II", "software")
                 )
             }
-        } else {
-            emptyList()
-        }
+        } else emptyList()
 
-        listOf(
-            "Year 2" to year2Courses,
-            "Year 3" to year3Courses,
-            "Year 4" to year4Courses
-        ) + if (isEngineering) listOf("Year 5" to year5Courses) else emptyList()
+        listOf("Year 2" to y2, "Year 3" to y3, "Year 4" to y4) + if (isEng) listOf("Year 5" to y5) else emptyList()
     }
 
     val enrolledYearNumber = remember(academicYear) {
