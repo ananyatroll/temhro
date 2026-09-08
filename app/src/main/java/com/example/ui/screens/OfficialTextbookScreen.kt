@@ -551,6 +551,16 @@ object OfficialTextbookRegistry {
             )
         }
     }
+
+    fun getAllTextbooksForGrade(grade: String): List<TextbookEdition> {
+        val subjects = listOf("Biology", "Chemistry", "Physics", "Mathematics", "English", "Economics", "Geography", "History")
+        val allEditions = mutableListOf<TextbookEdition>()
+        for (subj in subjects) {
+            val ed = getTextbooksForSubject(subj).firstOrNull { it.grade == grade }
+            if (ed != null) allEditions.add(ed)
+        }
+        return allEditions
+    }
 }
 
 suspend fun downloadTextbookToCache(
@@ -643,6 +653,9 @@ fun OfficialTextbookScreen(
     var showDownloadPromptModal by remember { mutableStateOf(!isCurrentBookCached) }
     var modalDownloadProgress by remember { mutableStateOf<Int?>(null) }
     var modalDownloadError by remember { mutableStateOf<String?>(null) }
+    var showDownloadAllPromptModal by remember { mutableStateOf(false) }
+    var downloadAllOverallProgress by remember { mutableStateOf<Float?>(null) }
+    var downloadAllStatusText by remember { mutableStateOf("") }
     val scope = rememberCoroutineScope()
 
     LaunchedEffect(selectedGrade) {
@@ -675,6 +688,46 @@ fun OfficialTextbookScreen(
             }
         } else {
             modalDownloadError = "Curriculum textbook will be available in the next sync."
+        }
+    }
+
+    val startDownloadAll: () -> Unit = {
+        scope.launch {
+            val allBooks = OfficialTextbookRegistry.getAllTextbooksForGrade(selectedGrade)
+            val toDownload = allBooks.filter { 
+                val f = getOrCreateTextbookPdfFile(context, it)
+                f == null || !f.exists() || f.length() == 0L
+            }
+            if (toDownload.isEmpty()) {
+                downloadAllStatusText = "All $selectedGrade books are downloaded!"
+                kotlinx.coroutines.delay(2000)
+                showDownloadAllPromptModal = false
+                return@launch
+            }
+            
+            var completedCount = 0
+            val totalCount = toDownload.size
+            val dir = File(context.filesDir, "official_textbooks")
+            if (!dir.exists()) dir.mkdirs()
+            
+            for (book in toDownload) {
+                val cleanTitle = book.title.replace("Student Textbook", "").trim()
+                downloadAllStatusText = "Downloading $cleanTitle..."
+                val bookDownloadUrl = book.downloadUrl ?: OfficialBookLinks.urls[book.fileName]
+                if (bookDownloadUrl != null) {
+                    val dest = File(dir, book.fileName)
+                    downloadTextbookToCache(bookDownloadUrl, dest) { currentBookProgress ->
+                        downloadAllOverallProgress = (completedCount.toFloat() + (currentBookProgress / 100f)) / totalCount
+                    }
+                }
+                completedCount++
+                downloadAllOverallProgress = completedCount.toFloat() / totalCount
+                reloadTrigger++
+            }
+            downloadAllStatusText = "All downloads complete!"
+            kotlinx.coroutines.delay(1500)
+            showDownloadAllPromptModal = false
+            downloadAllOverallProgress = null
         }
     }
 
@@ -809,6 +862,93 @@ fun OfficialTextbookScreen(
         )
     }
 
+    if (showDownloadAllPromptModal) {
+        AlertDialog(
+            onDismissRequest = {
+                if (downloadAllOverallProgress == null) showDownloadAllPromptModal = false
+            },
+            containerColor = Color(0xFF131C2E),
+            icon = {
+                Box(
+                    modifier = Modifier.size(52.dp).clip(CircleShape).background(EmeraldPrimary.copy(alpha = 0.2f)),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Icon(Icons.Default.CloudDownload, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(28.dp))
+                }
+            },
+            title = {
+                Text(
+                    text = "Download All $selectedGrade Textbooks",
+                    fontWeight = FontWeight.Black,
+                    fontSize = 18.sp,
+                    color = Color.White,
+                    textAlign = TextAlign.Center
+                )
+            },
+            text = {
+                Column(modifier = Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
+                    Text(
+                        text = "Download official textbooks for all subjects in $selectedGrade for offline access.",
+                        fontSize = 12.sp,
+                        color = Color(0xFFCBD5E1),
+                        textAlign = TextAlign.Center
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                    if (downloadAllOverallProgress != null) {
+                        Box(contentAlignment = Alignment.Center, modifier = Modifier.size(100.dp)) {
+                            CircularProgressIndicator(progress = { 1f }, modifier = Modifier.fillMaxSize(), color = Color(0xFF334155), strokeWidth = 8.dp)
+                            CircularProgressIndicator(
+                                progress = { downloadAllOverallProgress ?: 0f },
+                                modifier = Modifier.fillMaxSize(),
+                                color = EmeraldPrimary,
+                                strokeWidth = 8.dp,
+                                strokeCap = StrokeCap.Round
+                            )
+                            Text(
+                                text = "${((downloadAllOverallProgress ?: 0f) * 100).toInt()}%",
+                                style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Black),
+                                color = EmeraldPrimary
+                            )
+                        }
+                        Spacer(modifier = Modifier.height(16.dp))
+                        Text(
+                            text = downloadAllStatusText,
+                            style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Bold),
+                            color = Color.LightGray
+                        )
+                    } else if (downloadAllStatusText.isNotEmpty()) {
+                        Text(text = downloadAllStatusText, color = EmeraldPrimary, fontWeight = FontWeight.Bold)
+                    }
+                }
+            },
+            confirmButton = {
+                if (downloadAllOverallProgress != null) {
+                    Button(
+                        onClick = {},
+                        enabled = false,
+                        colors = ButtonDefaults.buttonColors(disabledContainerColor = EmeraldPrimary.copy(alpha = 0.5f))
+                    ) {
+                        Text("Downloading...", color = Color.White)
+                    }
+                } else if (downloadAllStatusText.isEmpty()) {
+                    Button(
+                        onClick = { startDownloadAll() },
+                        colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary)
+                    ) {
+                        Text("Start Download", color = Color.White, fontWeight = FontWeight.Bold)
+                    }
+                }
+            },
+            dismissButton = {
+                if (downloadAllOverallProgress == null) {
+                    TextButton(onClick = { showDownloadAllPromptModal = false }) {
+                        Text("Cancel", color = TextMuted)
+                    }
+                }
+            }
+        )
+    }
+
     // If in-app reader is opened, render it directly full-screen
     if (activeReaderUnitPage != null && currentEdition != null) {
         InAppPdfTextbookReader(
@@ -903,31 +1043,43 @@ fun OfficialTextbookScreen(
             }
 
             Row(verticalAlignment = Alignment.CenterVertically) {
-                // Download button on top bar
-                IconButton(
+                // Download All button on top bar
+                TextButton(
                     onClick = {
-                        if (isCurrentBookCached) {
-                            // Already cached
-                        } else if (modalDownloadProgress == null && currentEdition != null) {
-                            showDownloadPromptModal = true
+                        if (downloadAllOverallProgress == null) {
+                            showDownloadAllPromptModal = true
                         }
                     },
                     modifier = Modifier
-                        .clip(CircleShape)
-                        .background(Color(0xFF1E293B))
+                        .clip(RoundedCornerShape(8.dp))
+                        .background(Color(0xFF1E293B)),
+                    contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp)
                 ) {
-                    if (modalDownloadProgress != null) {
+                    if (downloadAllOverallProgress != null) {
                         CircularProgressIndicator(
-                            progress = { (modalDownloadProgress ?: 0) / 100f },
-                            modifier = Modifier.size(20.dp),
+                            progress = { downloadAllOverallProgress ?: 0f },
+                            modifier = Modifier.size(16.dp),
                             color = EmeraldPrimary,
                             strokeWidth = 2.dp
                         )
+                        Spacer(modifier = Modifier.width(6.dp))
+                        Text(
+                            "${((downloadAllOverallProgress ?: 0f) * 100).toInt()}%",
+                            color = EmeraldPrimary,
+                            style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold)
+                        )
                     } else {
                         Icon(
-                            imageVector = if (isCurrentBookCached) Icons.Default.CheckCircle else Icons.Default.Download,
-                            contentDescription = "Download Textbook",
-                            tint = if (isCurrentBookCached) EmeraldPrimary else Color.White
+                            imageVector = Icons.Default.CloudDownload,
+                            contentDescription = "Download All",
+                            tint = Color.White,
+                            modifier = Modifier.size(16.dp)
+                        )
+                        Spacer(modifier = Modifier.width(6.dp))
+                        Text(
+                            "Download All",
+                            color = Color.White,
+                            style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold)
                         )
                     }
                 }

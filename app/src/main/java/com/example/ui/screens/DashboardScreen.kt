@@ -582,7 +582,7 @@ fun GreetingHeader(viewModel: StudyViewModel, username: String) {
                             }
                     )
                     Text(
-                        text = "$streakDays 🔥",
+                        text = "$streakDays",
                         style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Black),
                         color = if (isDarkTheme) GoldLight else Color(0xFFC2410C)
                     )
