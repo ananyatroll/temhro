@@ -35,7 +35,6 @@ import androidx.compose.ui.unit.sp
 import com.example.data.ScannedDocument
 import com.example.ui.StudyViewModel
 import com.example.ui.theme.*
-import com.example.ui.tools.ai.LearningContext
 import com.example.ui.tools.scanner.DocumentScannerEngine
 import kotlinx.coroutines.launch
 import java.io.File
@@ -43,8 +42,7 @@ import java.io.File
 @Composable
 fun DocumentScannerView(
     viewModel: StudyViewModel,
-    subjectName: String,
-    onOpenAskTamheroWithText: (String) -> Unit
+    subjectName: String
 ) {
     val context = LocalContext.current
     val coroutineScope = rememberCoroutineScope()

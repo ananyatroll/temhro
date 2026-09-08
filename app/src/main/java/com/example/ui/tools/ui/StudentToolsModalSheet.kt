@@ -308,15 +308,13 @@ fun StudentToolsModalSheet(
                     }
                     "grades" -> {
                         GradePlannerView(
-                            viewModel = viewModel,
-                            onAskTamheroAboutGrade = { }
+                            viewModel = viewModel
                         )
                     }
                     "scanner" -> {
                         DocumentScannerView(
                             viewModel = viewModel,
-                            subjectName = effectiveSubjectName,
-                            onOpenAskTamheroWithText = { }
+                            subjectName = effectiveSubjectName
                         )
                     }
                     "timer_tasks" -> {

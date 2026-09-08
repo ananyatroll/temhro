@@ -7,12 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.data.*
 import com.example.ui.api.ActivateRequest
 import com.example.ui.api.TinatApiClient
-import com.example.ui.tools.ai.AiProvider
-import com.example.ui.tools.ai.DeviceCapabilityDetector
-import com.example.ui.tools.ai.GeneratedFlashcard
-import com.example.ui.tools.ai.GeneratedQuestion
 import com.example.ui.tools.ai.LearningContext
-import com.example.ui.tools.ai.StudentContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -25,7 +20,6 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
     private val database = AppDatabase.getDatabase(application)
     private val repository: DataRepository = StudyRepository(database.educationDao())
     val studentToolsRepo = StudentToolsRepository(database.studentToolsDao())
-    val aiProvider: AiProvider = DeviceCapabilityDetector.getProvider(application)
     private val sharedPrefs = application.getSharedPreferences("offline_study_local_cache", Context.MODE_PRIVATE)
 
     // Student Tools UI State
@@ -245,56 +239,6 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
     fun deleteScannedDoc(id: String) {
         viewModelScope.launch {
             studentToolsRepo.deleteScannedDocument(id)
-        }
-    }
-
-    fun saveGeneratedFlashcardsToDatabase(cards: List<GeneratedFlashcard>, subjectId: String) {
-        viewModelScope.launch {
-            val newCards = cards.map {
-                Flashcard(
-                    id = "gen_fc_" + System.currentTimeMillis() + "_" + (0..999).random(),
-                    subjectId = subjectId,
-                    front = it.front,
-                    back = it.back,
-                    isStarred = true,
-                    isKnown = false,
-                    gradeLevel = "General"
-                )
-            }
-            repository.insertFlashcards(newCards)
-        }
-    }
-
-    fun saveGeneratedNoteToDatabase(title: String, content: String, subjectId: String) {
-        viewModelScope.launch {
-            val newNote = SubjectNote(
-                id = "gen_note_" + System.currentTimeMillis(),
-                subjectId = subjectId,
-                unit = "STUDENT NOTES",
-                title = title,
-                content = content,
-                gradeLevel = "General"
-            )
-            repository.insertNotes(listOf(newNote))
-        }
-    }
-
-    fun saveGeneratedQuestionsToDatabase(questions: List<GeneratedQuestion>, subjectId: String) {
-        viewModelScope.launch {
-            val newQuestions = questions.map {
-                ExamQuestion(
-                    id = "gen_q_" + System.currentTimeMillis() + "_" + (0..999).random(),
-                    subjectId = subjectId,
-                    questionText = it.questionText,
-                    optionA = it.optionA,
-                    optionB = it.optionB,
-                    optionC = it.optionC,
-                    optionD = it.optionD,
-                    correctOption = it.correctOption,
-                    explanation = it.explanation
-                )
-            }
-            repository.insertQuestions(newQuestions)
         }
     }
 
@@ -590,38 +534,16 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    fun toggleSaveNote(noteId: String) {
-        val current = savedNotesSet.value.toMutableSet()
-        if (current.contains(noteId)) {
-            current.remove(noteId)
-        } else {
-            current.add(noteId)
-        }
-        savedNotesSet.value = current
-        sharedPrefs.edit().putStringSet("saved_notes_ids", current).apply()
+    private fun toggleIdInSet(flow: MutableStateFlow<Set<String>>, prefKey: String, id: String) {
+        val current = flow.value.toMutableSet()
+        if (!current.add(id)) current.remove(id)
+        flow.value = current
+        sharedPrefs.edit().putStringSet(prefKey, current).apply()
     }
 
-    fun toggleSaveFlashcard(cardId: String) {
-        val current = savedFlashcardsSet.value.toMutableSet()
-        if (current.contains(cardId)) {
-            current.remove(cardId)
-        } else {
-            current.add(cardId)
-        }
-        savedFlashcardsSet.value = current
-        sharedPrefs.edit().putStringSet("saved_flashcards_ids", current).apply()
-    }
-
-    fun toggleSaveQuestion(questionId: String) {
-        val current = savedQuestionsSet.value.toMutableSet()
-        if (current.contains(questionId)) {
-            current.remove(questionId)
-        } else {
-            current.add(questionId)
-        }
-        savedQuestionsSet.value = current
-        sharedPrefs.edit().putStringSet("saved_questions_ids", current).apply()
-    }
+    fun toggleSaveNote(noteId: String) = toggleIdInSet(savedNotesSet, "saved_notes_ids", noteId)
+    fun toggleSaveFlashcard(cardId: String) = toggleIdInSet(savedFlashcardsSet, "saved_flashcards_ids", cardId)
+    fun toggleSaveQuestion(questionId: String) = toggleIdInSet(savedQuestionsSet, "saved_questions_ids", questionId)
 
     val subjectProgressMap: StateFlow<Map<String, Float>> = combine(
         combine(repository.getAllNotes(), repository.getAllFlashcards(), repository.getAllQuestions()) { n, f, q ->

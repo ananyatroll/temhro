@@ -22,35 +22,6 @@ data class LearningContext(
     val flashcardBack: String = "",
     val metadata: Map<String, String> = emptyMap()
 ) {
-    /**
-     * Converts to [StudentContext] for compatibility with [AiProvider] methods.
-     */
-    fun toStudentContext(): StudentContext {
-        val snippet = when {
-            selectedText.isNotBlank() -> selectedText
-            contentType == "scanned_doc" && contentText.isNotBlank() -> "Scanned Page Content ($topicName):\n$contentText"
-            contentText.isNotBlank() -> contentText
-            question.isNotBlank() -> buildString {
-                appendLine("Question: $question")
-                if (questionOptions.isNotEmpty()) {
-                    appendLine("Options: ${questionOptions.joinToString(" | ")}")
-                }
-                if (explanation.isNotBlank()) {
-                    appendLine("Explanation: $explanation")
-                }
-            }
-            flashcardFront.isNotBlank() -> "Flashcard Front: $flashcardFront\nFlashcard Back: $flashcardBack"
-            else -> ""
-        }
-        return StudentContext(
-            subject = courseName.ifBlank { "General" },
-            currentTopic = topicName,
-            gradeLevel = gradeLevel,
-            activeNotesSnippet = snippet,
-            learningContext = this
-        )
-    }
-
     fun withCourse(newCourseName: String, newCourseId: String = ""): LearningContext {
         return copy(
             courseName = newCourseName,

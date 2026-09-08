@@ -34,8 +34,7 @@ import java.util.UUID
 
 @Composable
 fun GradePlannerView(
-    viewModel: StudyViewModel,
-    onAskTamheroAboutGrade: (String) -> Unit
+    viewModel: StudyViewModel
 ) {
     val coroutineScope = rememberCoroutineScope()
     val isDark by viewModel.isDarkTheme.collectAsState()
@@ -54,9 +53,6 @@ fun GradePlannerView(
 
     // What-If slider value (hypothetical final exam score % from 0 to 100)
     var whatIfFinalScore by remember { mutableStateOf(85.0) }
-
-    var aiAdviceText by remember { mutableStateOf<String?>(null) }
-    var isAskingAi by remember { mutableStateOf(false) }
 
     // Calculate Semester GPA
     val semesterGpaResult = remember(courses, assessments) {
@@ -148,7 +144,6 @@ fun GradePlannerView(
                     selected = isSelected,
                     onClick = {
                         selectedCourseId = course.id
-                        aiAdviceText = null
                         viewModel.updateActiveCourseInContext(course.courseName)
                     },
                     label = { Text("${course.courseName} (${course.creditHours}cr)", fontSize = 12.sp) },
