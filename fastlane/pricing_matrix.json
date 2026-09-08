@@ -1,0 +1,21 @@
+﻿{
+  "target_market": "Ethiopia Only",
+  "territory": "ET",
+  "currency": "ETB",
+  "pricing_model": "Domestic_Fixed_ETB",
+  "products": [
+    {
+      "product_id": "com.temhiro.full_access_lifetime",
+      "type": "non_consumable",
+      "display_name": "Full Curriculum Lifetime Access",
+      "price_etb": 300,
+      "supported_payment_channels": [
+        "Telebirr",
+        "Commercial Bank of Ethiopia (CBE)",
+        "App Store Ethiopia Region (ETB)"
+      ],
+      "billing_type": "One-time lifetime unlock",
+      "free_trial": "Unlimited access to introductory chapters and past question samples"
+    }
+  ]
+}

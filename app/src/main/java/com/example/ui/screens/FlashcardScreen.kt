@@ -698,6 +698,7 @@ fun SubjectFlashcardRow(
                                         modifier = Modifier
                                             .weight(1f)
                                             .height(40.dp)
+                                            .pressBounce(pressedScale = 0.94f)
                                             .clickable {
                                                 viewModel.markFlashcardDifficult(currentCard.id)
                                                 popupMessage = if (isCardDifficult) "Flag removed" else "Marked as difficult"
@@ -722,9 +723,9 @@ fun SubjectFlashcardRow(
                                             )
                                             Spacer(modifier = Modifier.width(6.dp))
                                             Text(
-                                                text = "Difficult",
-                                                style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
-                                                color = if (isCardDifficult) Color(0xFFF87171) else Color.LightGray
+                                                 text = "Difficult",
+                                                 style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
+                                                 color = if (isCardDifficult) Color(0xFFF87171) else Color.LightGray
                                             )
                                         }
                                     }
@@ -734,6 +735,7 @@ fun SubjectFlashcardRow(
                                         modifier = Modifier
                                             .weight(1.1f)
                                             .height(40.dp)
+                                            .pressBounce(pressedScale = 0.94f)
                                             .clickable {
                                                 viewModel.markFlashcardMastered(currentCard.id)
                                                 if (!isCardMastered) {
@@ -904,10 +906,13 @@ fun FlippableCard(
     isFlipped: Boolean,
     onFlipClick: () -> Unit
 ) {
-    // Smooth 3D Rotation Animation
+    // Apple Fluid Interfaces: Interruptible critically damped spring rotation
     val rotation by animateFloatAsState(
         targetValue = if (isFlipped) 180f else 0f,
-        animationSpec = tween(durationMillis = 400, easing = FastOutSlowInEasing),
+        animationSpec = spring(
+            dampingRatio = 0.82f,
+            stiffness = Spring.StiffnessMediumLow
+        ),
         label = "rotate"
     )
 

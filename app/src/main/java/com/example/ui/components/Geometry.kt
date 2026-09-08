@@ -125,13 +125,20 @@ fun Modifier.pulseGlow(color: Color = EmeraldPrimary): Modifier = composed {
     }
 }
 
-// 4. Parallax press effect modifier (bounces down on press without blocking parent scrolls)
-fun Modifier.pressBounce(): Modifier = composed {
+// 4. Fluid press effect modifier (WWDC Designing Fluid Interfaces: instant feedback, critically damped spring)
+fun Modifier.pressBounce(
+    pressedScale: Float = 0.97f,
+    dampingRatio: Float = Spring.DampingRatioLowBouncy,
+    stiffness: Float = Spring.StiffnessMediumLow
+): Modifier = composed {
     var isPressed by remember { mutableStateOf(false) }
     val scale by animateFloatAsState(
-        targetValue = if (isPressed) 0.95f else 1.0f,
-        animationSpec = spring(dampingRatio = Spring.DampingRatioMediumBouncy, stiffness = Spring.StiffnessMedium),
-        label = "bounce"
+        targetValue = if (isPressed) pressedScale else 1.0f,
+        animationSpec = spring(
+            dampingRatio = dampingRatio,
+            stiffness = stiffness
+        ),
+        label = "fluidPressScale"
     )
 
     this
@@ -141,17 +148,16 @@ fun Modifier.pressBounce(): Modifier = composed {
                 while (true) {
                     val down = awaitFirstDown(requireUnconsumed = false)
                     isPressed = true
-                    var pointerId = down.id
+                    val pointerId = down.id
                     var cancelled = false
                     while (!cancelled) {
                         val event = awaitPointerEvent()
                         val consumed = event.changes.any { it.isConsumed }
                         val released = event.changes.firstOrNull { it.id == pointerId }?.pressed == false
                         val positionChange = event.changes.firstOrNull { it.id == pointerId }?.let {
-                            (it.position - it.previousPosition).PlatformDistance()
+                            (it.position - it.previousPosition).getDistance()
                         } ?: 0f
-                        
-                        if (consumed || released || positionChange > 8f) {
+                        if (consumed || released || positionChange > 10f) {
                             isPressed = false
                             cancelled = true
                         }
@@ -159,11 +165,6 @@ fun Modifier.pressBounce(): Modifier = composed {
                 }
             }
         }
-}
-
-// Inline helper to calculate distance cleanly
-private fun androidx.compose.ui.geometry.Offset.PlatformDistance(): Float {
-    return kotlin.math.sqrt(x * x + y * y)
 }
 
 // 5. Custom Duotone Gradients layered Icons

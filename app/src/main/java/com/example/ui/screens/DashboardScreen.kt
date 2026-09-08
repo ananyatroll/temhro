@@ -193,7 +193,7 @@ fun DashboardScreen(viewModel: StudyViewModel) {
                         style = MaterialTheme.typography.titleLarge.copy(
                             fontWeight = FontWeight.Black,
                             fontSize = 14.sp,
-                            letterSpacing = 0.5.sp
+                            letterSpacing = (-0.2).sp
                         ),
                         maxLines = 1,
                         overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
@@ -507,7 +507,8 @@ fun GreetingHeader(viewModel: StudyViewModel, username: String) {
                         fontWeight = FontWeight.Black,
                         fontStyle = androidx.compose.ui.text.font.FontStyle.Italic,
                         lineHeight = 26.sp,
-                        fontSize = 20.sp
+                        fontSize = 20.sp,
+                        letterSpacing = (-0.4).sp
                     ),
                     color = if (isDarkTheme) Color.White else IndigoSecondary,
                     maxLines = 1,
@@ -525,6 +526,7 @@ fun GreetingHeader(viewModel: StudyViewModel, username: String) {
                 modifier = Modifier
                     .clip(HexagonChamferShape)
                     .background(if (isDarkTheme) CardBgDark else Color.White)
+                    .pressBounce(pressedScale = 0.92f)
                     .clickable { viewModel.toggleDarkTheme() }
                     .padding(horizontal = 10.dp, vertical = 7.dp)
                     .border(1.dp, if (isDarkTheme) EmeraldPrimary.copy(alpha = 0.35f) else IndigoLight, HexagonChamferShape),
@@ -544,6 +546,7 @@ fun GreetingHeader(viewModel: StudyViewModel, username: String) {
                     modifier = Modifier
                         .clip(HexagonChamferShape)
                         .background(if (isDarkTheme) CardBgDark else Color.White)
+                        .pressBounce(pressedScale = 0.94f)
                         .clickable { langMenuExpanded = true }
                         .padding(horizontal = 10.dp, vertical = 7.dp)
                         .border(1.dp, if (isDarkTheme) EmeraldPrimary.copy(alpha = 0.35f) else IndigoLight, HexagonChamferShape),

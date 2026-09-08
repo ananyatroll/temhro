@@ -83,6 +83,7 @@ fun ChooseToolScreen(viewModel: StudyViewModel) {
                             modifier = Modifier
                                 .clip(HexagonalCutShape)
                                 .background(if (isDarkTheme) CardBgDark else Color.White)
+                                .pressBounce(pressedScale = 0.92f)
                                 .clickable { viewModel.toggleDarkTheme() }
                                 .padding(horizontal = 10.dp, vertical = 7.dp)
                                 .border(1.dp, if (isDarkTheme) EmeraldPrimary.copy(alpha = 0.35f) else IndigoLight, HexagonalCutShape),
@@ -100,6 +101,7 @@ fun ChooseToolScreen(viewModel: StudyViewModel) {
                             modifier = Modifier
                                 .clip(HexagonalCutShape)
                                 .background(if (isDarkTheme) CardBgDark else Color.White)
+                                .pressBounce(pressedScale = 0.94f)
                                 .clickable { langMenuExpanded = true }
                                 .padding(horizontal = 10.dp, vertical = 7.dp)
                                 .border(1.dp, if (isDarkTheme) EmeraldPrimary.copy(alpha = 0.35f) else IndigoLight, HexagonalCutShape),
@@ -183,7 +185,8 @@ fun ChooseToolScreen(viewModel: StudyViewModel) {
                         fontWeight = FontWeight.Black,
                         fontStyle = androidx.compose.ui.text.font.FontStyle.Italic,
                         lineHeight = 28.sp,
-                        fontSize = 22.sp
+                        fontSize = 22.sp,
+                        letterSpacing = (-0.4).sp
                     ),
                     color = if (isDarkTheme) Color.White else IndigoSecondary,
                 )
@@ -209,7 +212,7 @@ fun ChooseToolScreen(viewModel: StudyViewModel) {
                         style = MaterialTheme.typography.titleMedium.copy(
                             fontWeight = FontWeight.Black,
                             fontSize = 14.sp,
-                            letterSpacing = 1.5.sp
+                            letterSpacing = (-0.2).sp
                         ),
                         color = if (isDarkTheme) Color.White else IndigoSecondary
                     )

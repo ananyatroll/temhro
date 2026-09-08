@@ -258,6 +258,7 @@ fun ProfileScreen(viewModel: StudyViewModel) {
                                         modifier = Modifier
                                             .clip(RoundedCornerShape(8.dp))
                                             .background(if (isSelected) EmeraldPrimary else (if (isDarkTheme) Color(0xFF1E293B) else BgSoftGray))
+                                            .pressBounce(pressedScale = 0.92f)
                                             .clickable { viewModel.setLanguage(code) }
                                             .padding(horizontal = 8.dp, vertical = 6.dp)
                                     ) {
@@ -383,6 +384,7 @@ fun ProfileScreen(viewModel: StudyViewModel) {
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .height(44.dp)
+                                .pressBounce(pressedScale = 0.96f)
                                 .testTag("edit_onboarding_preferences_button")
                         ) {
                             Icon(Icons.Default.Tune, contentDescription = null, modifier = Modifier.size(16.dp), tint = EmeraldPrimary)
@@ -401,7 +403,7 @@ fun ProfileScreen(viewModel: StudyViewModel) {
                     style = MaterialTheme.typography.titleLarge.copy(
                         fontWeight = FontWeight.Black,
                         fontSize = 15.sp,
-                        letterSpacing = 0.5.sp
+                        letterSpacing = (-0.2).sp
                     ),
                     color = headerTextColor,
                     modifier = Modifier.padding(bottom = 12.dp)
@@ -412,6 +414,7 @@ fun ProfileScreen(viewModel: StudyViewModel) {
                     modifier = Modifier
                         .fillMaxWidth()
                         .border(1.dp, Color.Red.copy(alpha = 0.2f), ChamferedCardShape)
+                        .pressBounce(pressedScale = 0.96f)
                         .clickable { viewModel.resetEnrollment() }
                         .testTag("profile_switch_package_button"),
                     shape = ChamferedCardShape,
