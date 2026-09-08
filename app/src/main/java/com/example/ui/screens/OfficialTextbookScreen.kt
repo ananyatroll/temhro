@@ -1323,7 +1323,7 @@ fun getOrCreateTextbookPdfFile(context: android.content.Context, edition: Textbo
     }
 
     // 2. Bundled assets
-    val assetNames = listOf("textbooks/${edition.fileName}", edition.fileName, "sample_document.pdf")
+    val assetNames = listOf("textbooks/${edition.fileName}", edition.fileName)
     for (name in assetNames) {
         try {
             context.assets.open(name).use { input ->
