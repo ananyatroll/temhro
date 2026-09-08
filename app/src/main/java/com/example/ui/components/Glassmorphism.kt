@@ -24,10 +24,10 @@ fun GlassBackground(
     isDark: Boolean = true,
     content: @Composable BoxScope.() -> Unit
 ) {
-    val baseBg = if (isDark) ReaderBgDark else Color(0xFFF8FAFC)
-    val orb1 = if (isDark) Color(0x2410B981) else Color(0x2810B981) // Subtle Emerald ambient
-    val orb2 = if (isDark) Color(0x2038BDF8) else Color(0x256366F1) // Electric Cyan ambient
-    val orb3 = if (isDark) Color(0x184338CA) else Color(0x20F59E0B) // Deep Indigo ambient
+    val baseBg = if (isDark) Color(0xFF0F172A) else Color(0xFFF8FAFC)
+    val orb1 = if (isDark) Color(0x3310B981) else Color(0x2810B981) // Emerald glow
+    val orb2 = if (isDark) Color(0x334338CA) else Color(0x256366F1) // Indigo glow
+    val orb3 = if (isDark) Color(0x2BDEA715) else Color(0x20F59E0B) // Gold glow
 
     Box(
         modifier = modifier
