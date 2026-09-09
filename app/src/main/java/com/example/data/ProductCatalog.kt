@@ -109,8 +109,6 @@ object ProductCatalog {
         Product("coc_medicine", "coc", plan = "field", field = "medicine", amount = PRICE_COC_ETB, shortLabel = "Medicine COC"),
         Product("coc_dentistry", "coc", plan = "field", field = "dentistry", amount = PRICE_COC_ETB, shortLabel = "Dental Medicine COC"),
         Product("coc_pharmacy", "coc", plan = "field", field = "pharmacy", amount = PRICE_COC_ETB, shortLabel = "Pharmacy COC"),
-        Product("coc_ho", "coc", plan = "field", field = "ho", amount = PRICE_COC_ETB, shortLabel = "HO (Health Officer) COC"),
-        Product("coc_medical_lab", "coc", plan = "field", field = "medical_lab", amount = PRICE_COC_ETB, shortLabel = "Medical Lab COC"),
         Product("coc_engineering", "coc", plan = "field", field = "engineering", amount = PRICE_COC_ETB, shortLabel = "Engineering COC"),
         Product("coc_architecture", "coc", plan = "field", field = "architecture", amount = PRICE_COC_ETB, shortLabel = "Architecture COC"),
         Product("coc_cs_is", "coc", plan = "field", field = "cs_is", amount = PRICE_COC_ETB, shortLabel = "Computer Science & Info IT/Science COC"),
