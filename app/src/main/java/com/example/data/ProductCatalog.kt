@@ -106,21 +106,19 @@ object ProductCatalog {
     // COC products — price is 300 ETB across all 15 fields
     // ---------------------------------------------------------------------
     private val cocProducts = listOf(
-        Product("coc_accounting_finance", "coc", plan = "field", field = "accounting_finance", amount = PRICE_COC_ETB, shortLabel = "Accounting & Finance COC"),
-        Product("coc_economics", "coc", plan = "field", field = "economics", amount = PRICE_COC_ETB, shortLabel = "Economics COC"),
-        Product("coc_management", "coc", plan = "field", field = "management", amount = PRICE_COC_ETB, shortLabel = "Management COC"),
-        Product("coc_marketing_management", "coc", plan = "field", field = "marketing_management", amount = PRICE_COC_ETB, shortLabel = "Marketing Management COC"),
-        Product("coc_lscm", "coc", plan = "field", field = "lscm", amount = PRICE_COC_ETB, shortLabel = "LSCM COC"),
-        Product("coc_bais", "coc", plan = "field", field = "bais", amount = PRICE_COC_ETB, shortLabel = "BAIS COC"),
-        Product("coc_padm", "coc", plan = "field", field = "padm", amount = PRICE_COC_ETB, shortLabel = "PADM COC"),
-        Product("coc_computer_science", "coc", plan = "field", field = "computer_science", amount = PRICE_COC_ETB, shortLabel = "Computer Science COC"),
-        Product("coc_software_engineering", "coc", plan = "field", field = "software_engineering", amount = PRICE_COC_ETB, shortLabel = "Software Engineering COC"),
-        Product("coc_information_sciences", "coc", plan = "field", field = "information_sciences", amount = PRICE_COC_ETB, shortLabel = "Information Sciences COC"),
-        Product("coc_electrical_engineering", "coc", plan = "field", field = "electrical_engineering", amount = PRICE_COC_ETB, shortLabel = "Electrical Engineering COC"),
-        Product("coc_mechanical_engineering", "coc", plan = "field", field = "mechanical_engineering", amount = PRICE_COC_ETB, shortLabel = "Mechanical Engineering COC"),
-        Product("coc_psychology", "coc", plan = "field", field = "psychology", amount = PRICE_COC_ETB, shortLabel = "Psychology COC"),
-        Product("coc_psir", "coc", plan = "field", field = "psir", amount = PRICE_COC_ETB, shortLabel = "PSIR COC"),
-        Product("coc_ethiopian_law", "coc", plan = "field", field = "ethiopian_law", amount = PRICE_COC_ETB, shortLabel = "Ethiopian Law COC")
+        Product("coc_anesthesia", "coc", plan = "field", field = "anesthesia", amount = PRICE_COC_ETB, shortLabel = "Anesthesia COC"),
+        Product("coc_law", "coc", plan = "field", field = "law", amount = PRICE_COC_ETB, shortLabel = "Law COC"),
+        Product("coc_pharmacy", "coc", plan = "field", field = "pharmacy", amount = PRICE_COC_ETB, shortLabel = "Pharmacy COC"),
+        Product("coc_medicine", "coc", plan = "field", field = "medicine", amount = PRICE_COC_ETB, shortLabel = "Medicine COC"),
+        Product("coc_dentistry", "coc", plan = "field", field = "dentistry", amount = PRICE_COC_ETB, shortLabel = "Dentistry COC"),
+        Product("coc_veterinary", "coc", plan = "field", field = "veterinary", amount = PRICE_COC_ETB, shortLabel = "Veterinary COC"),
+        Product("coc_medical_lab", "coc", plan = "field", field = "medical_lab", amount = PRICE_COC_ETB, shortLabel = "Medical Lab COC"),
+        Product("coc_ho", "coc", plan = "field", field = "ho", amount = PRICE_COC_ETB, shortLabel = "HO (Health Officer) COC"),
+        Product("coc_environmental_health", "coc", plan = "field", field = "environmental_health", amount = PRICE_COC_ETB, shortLabel = "Environmental Health COC"),
+        Product("coc_physiotherapy", "coc", plan = "field", field = "physiotherapy", amount = PRICE_COC_ETB, shortLabel = "Physiotherapy COC"),
+        Product("coc_midwifery", "coc", plan = "field", field = "midwifery", amount = PRICE_COC_ETB, shortLabel = "Midwifery COC"),
+        Product("coc_architecture", "coc", plan = "field", field = "architecture", amount = PRICE_COC_ETB, shortLabel = "Architecture COC"),
+        Product("coc_cs_is", "coc", plan = "field", field = "cs_is", amount = PRICE_COC_ETB, shortLabel = "Computer Science & Info Systems COC")
     )
 
     private val all: List<Product> =
