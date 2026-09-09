@@ -33,6 +33,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import com.example.data.*
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import android.webkit.WebView
@@ -294,6 +295,8 @@ fun ContentPlayView(viewModel: StudyViewModel) {
         val savedNotesSet by viewModel.savedNotesSet.collectAsState()
         val savedQuestionsSet by viewModel.savedQuestionsSet.collectAsState()
         val savedFlashcardsSet by viewModel.savedFlashcardsSet.collectAsState()
+        val savedTextbookBookmarks by viewModel.savedTextbookBookmarksSet.collectAsState()
+        val savedTextbookCount = savedTextbookBookmarks.size
 
         if (showSavedPicker) {
             SavedMaterialPickerModal(
@@ -315,6 +318,11 @@ fun ContentPlayView(viewModel: StudyViewModel) {
                 onSelectFlashcards = {
                     viewModel.showSavedMaterialPickerModal.value = false
                     viewModel.showSavedFlashcardsModal.value = true
+                },
+                savedTextbookBookmarksCount = savedTextbookCount,
+                onSelectTextbook = {
+                    viewModel.showSavedMaterialPickerModal.value = false
+                    viewModel.startTextbook()
                 }
             )
         }

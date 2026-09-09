@@ -46,6 +46,10 @@ class StudyRepository(private val dao: EducationDao) : DataRepository {
         dao.insertAnalyzedVideo(video)
     }
 
+    override suspend fun updateProgress(progress: UserProgress) = withContext(Dispatchers.IO) {
+        dao.insertUserProgress(progress)
+    }
+
     override suspend fun enrollPackage(packageId: String) = withContext(Dispatchers.IO) {
         val current = dao.getUserProgressDirect() ?: UserProgress()
         val normalizedPkg = when {

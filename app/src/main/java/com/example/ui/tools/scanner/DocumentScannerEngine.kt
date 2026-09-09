@@ -155,6 +155,10 @@ object DocumentScannerEngine {
      * Performs true 4-point projective perspective transformation (homography)
      * using Android's Matrix.setPolyToPoly to de-warp and square up the document page.
      */
+    fun warpPerspective(bitmap: Bitmap, corners: DocumentCorners): Bitmap {
+        return correctPerspective(bitmap, corners)
+    }
+
     fun correctPerspective(bitmap: Bitmap, corners: DocumentCorners): Bitmap {
         val tl = corners.topLeft
         val tr = corners.topRight

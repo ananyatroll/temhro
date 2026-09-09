@@ -1004,8 +1004,10 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
         showNotesView.value = false
         showNotesTableOfContents.value = false
         showVideosView.value = false
+        showTextbookReader.value = false
         showStudyOptionsModal.value = false
         showModeSelectionModal.value = false
+        showSavedMaterialPickerModal.value = false
         showScoreResultModal.value = false
         contentLoading.value = false
         activeExamMode.value = null
@@ -1063,6 +1065,12 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
         val current = revealedAnswers.value.toMutableSet()
         current.add(questionId)
         revealedAnswers.value = current
+    }
+
+    fun updateProgress(progress: UserProgress) {
+        viewModelScope.launch {
+            repository.updateProgress(progress)
+        }
     }
 
     fun enrollInPackage(packageId: String) {

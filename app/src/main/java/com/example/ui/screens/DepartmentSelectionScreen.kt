@@ -18,6 +18,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.ui.StudyViewModel
+import com.example.ui.TranslationManager
 import com.example.ui.theme.*
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -26,6 +27,7 @@ fun DepartmentSelectionScreen(viewModel: StudyViewModel) {
     var searchQuery by remember { mutableStateOf("") }
     val isDarkTheme by viewModel.isDarkTheme.collectAsState()
     val academicYear by viewModel.academicYear.collectAsState()
+    val currentLang by viewModel.currentLanguage.collectAsState()
 
     val facultyDepartments = remember {
         listOf(
@@ -89,7 +91,7 @@ fun DepartmentSelectionScreen(viewModel: StudyViewModel) {
                 title = {
                     Column {
                         Text(
-                            text = "SELECT YOUR DEPARTMENT",
+                            text = TranslationManager.get("dept_select_title", currentLang).uppercase(),
                             style = MaterialTheme.typography.titleMedium.copy(
                                 fontWeight = FontWeight.Black,
                                 letterSpacing = 1.sp
@@ -97,7 +99,7 @@ fun DepartmentSelectionScreen(viewModel: StudyViewModel) {
                             color = if (isDarkTheme) Color.White else IndigoSecondary
                         )
                         Text(
-                            text = if (academicYear.isNotBlank()) "Enrolled Level: " else "University Department Program",
+                            text = if (academicYear.isNotBlank()) "Enrolled Level: $academicYear" else TranslationManager.get("dept_select_desc", currentLang),
                             style = MaterialTheme.typography.labelSmall,
                             color = EmeraldPrimary
                         )
@@ -122,7 +124,7 @@ fun DepartmentSelectionScreen(viewModel: StudyViewModel) {
                 value = searchQuery,
                 onValueChange = { searchQuery = it },
                 modifier = Modifier.fillMaxWidth(),
-                placeholder = { Text("Search department name...", color = TextMuted) },
+                placeholder = { Text(TranslationManager.get("search_packages", currentLang).ifBlank { "Search department name..." }, color = TextMuted) },
                 leadingIcon = { Icon(Icons.Default.Search, contentDescription = null, tint = EmeraldPrimary) },
                 trailingIcon = {
                     if (searchQuery.isNotEmpty()) {

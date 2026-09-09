@@ -27,6 +27,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.data.SubjectNote
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import com.example.ui.StudyViewModel
 import com.example.ui.theme.*
 
@@ -217,6 +219,8 @@ fun SyllabusNotesTableOfContents(
                             fontWeight = FontWeight.Medium
                         )
                     }
+                }
+            }
 
 
 

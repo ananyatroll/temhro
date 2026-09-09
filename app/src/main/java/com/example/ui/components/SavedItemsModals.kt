@@ -570,7 +570,9 @@ fun SavedMaterialPickerModal(
     onDismiss: () -> Unit,
     onSelectNotes: () -> Unit,
     onSelectExams: () -> Unit,
-    onSelectFlashcards: () -> Unit
+    onSelectFlashcards: () -> Unit,
+    savedTextbookBookmarksCount: Int = 0,
+    onSelectTextbook: (() -> Unit)? = null
 ) {
     Dialog(
         onDismissRequest = onDismiss,
@@ -693,6 +695,22 @@ fun SavedMaterialPickerModal(
                     onClick = onSelectFlashcards,
                     testTag = "picker_saved_flashcards"
                 )
+
+                // 4. Official Textbook Bookmarks Option (If available)
+                if (onSelectTextbook != null) {
+                    Spacer(modifier = Modifier.height(10.dp))
+                    SavedCategoryOptionCard(
+                        icon = Icons.Default.Bookmark,
+                        iconTint = EmeraldPrimary,
+                        iconBg = EmeraldPrimary.copy(alpha = 0.15f),
+                        title = "Official Textbook Pages",
+                        description = "Saved pages & chapters from official curriculum",
+                        count = savedTextbookBookmarksCount,
+                        isDarkTheme = isDarkTheme,
+                        onClick = onSelectTextbook,
+                        testTag = "picker_saved_textbooks"
+                    )
+                }
 
                 Spacer(modifier = Modifier.height(18.dp))
 

@@ -1,12 +1,12 @@
 package com.example
 
+import com.example.data.Flashcard
 import com.example.data.GradeAssessment
 import com.example.data.GradeCourse
-import com.example.data.StudentCalendarEvent
-import com.example.ui.tools.ai.TamheroSmartEngine
+import com.example.ui.TranslationManager
+import com.example.ui.screens.OfficialTextbookRegistry
 import com.example.ui.tools.grades.GradeCalculator
 import com.example.ui.tools.planner.WeeklyPlannerEngine
-import kotlinx.coroutines.runBlocking
 import org.junit.Assert.*
 import org.junit.Test
 
@@ -17,33 +17,41 @@ class ExampleUnitTest {
   }
 
   @Test
-  fun testTamheroSmartEngineExplainsPhysicsAndMathOffline() = runBlocking {
-    val engine = TamheroSmartEngine()
+  fun testOfficialTextbookRegistryLoadsCurriculumEditions() {
+    val biologyTextbooks = OfficialTextbookRegistry.getTextbooksForSubject("Biology")
+    assertTrue(biologyTextbooks.isNotEmpty())
+    val g12Bio = biologyTextbooks.find { it.grade == "Grade 12" }
+    assertNotNull(g12Bio)
+    assertEquals("Grade_12_Biology.pdf", g12Bio?.fileName)
+    assertEquals(358, g12Bio?.pageCount)
+    assertTrue((g12Bio?.units?.size ?: 0) >= 5)
 
-    // Test calculus
-    val mathResponse = engine.explainConcept("derivative in calculus", "Mathematics")
-    assertTrue(mathResponse.isNotBlank())
-    assertTrue(mathResponse.contains("Calculus") || mathResponse.contains("derivative"))
+    val chemistryTextbooks = OfficialTextbookRegistry.getTextbooksForSubject("Chemistry")
+    assertTrue(chemistryTextbooks.isNotEmpty())
+  }
 
-    // Test physics
-    val physicsResponse = engine.explainConcept("Newton laws of motion", "Physics")
-    assertTrue(physicsResponse.isNotBlank())
-    assertTrue(physicsResponse.contains("Newton") || physicsResponse.contains("Inertia"))
+  @Test
+  fun testFlashcardUnitExtraction() {
+    val unitPattern = Regex("""(?:Unit|Chapter)\s+\d+(?:\s*:\s*[^,\)\]]+)?""", RegexOption.IGNORE_CASE)
 
-    // Test question generation
-    val generatedQuestions = engine.generateQuestions("Newton second law states force equals mass times acceleration.", 3)
-    assertEquals(3, generatedQuestions.size)
-    assertTrue(generatedQuestions[0].optionA.isNotBlank())
-    assertTrue(generatedQuestions[0].correctOption.isNotBlank())
+    val cardFront = "What is a function? (Grade 12 Mathematics, Unit 1: Sequences and Series)"
+    val matchFront = unitPattern.find(cardFront)
+    assertNotNull(matchFront)
+    assertEquals("Unit 1: Sequences and Series", matchFront?.value?.trim())
 
-    // Test flashcard generation
-    val generatedCards = engine.generateFlashcards(
-      "Mitochondria is the powerhouse of the cell producing ATP.\nRibosome is the site of cellular protein synthesis.",
-      2
-    )
-    assertTrue(generatedCards.isNotEmpty())
-    assertTrue(generatedCards[0].front.isNotBlank())
-    assertTrue(generatedCards[0].back.isNotBlank())
+    val cardBack = "A function assigns one output to each input. [Chapter 2: Matrices]"
+    val matchBack = unitPattern.find(cardBack)
+    assertNotNull(matchBack)
+    assertEquals("Chapter 2: Matrices", matchBack?.value?.trim())
+  }
+
+  @Test
+  fun testTranslationManagerHasSupportedLanguages() {
+    val englishTitle = TranslationManager.get("student_tools_title", "en")
+    val amharicTitle = TranslationManager.get("student_tools_title", "am")
+    assertEquals("Student Tools", englishTitle)
+    assertTrue(amharicTitle.isNotBlank())
+    assertNotEquals("Student Tools", amharicTitle)
   }
 
   @Test

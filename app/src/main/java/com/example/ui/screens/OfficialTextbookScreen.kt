@@ -1,6 +1,7 @@
 package com.example.ui.screens
 
 import android.graphics.Bitmap
+import android.graphics.Canvas
 import android.graphics.pdf.PdfRenderer
 import android.net.Uri
 import android.os.ParcelFileDescriptor
@@ -33,6 +34,7 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalContext
@@ -563,20 +565,108 @@ object OfficialTextbookRegistry {
     }
 }
 
+/**
+ * Memory-bounded lazy PDF page cache.
+ * Keeps at most [maxEntries] rendered page bitmaps in memory (LRU eviction),
+ * lazily rendering pages on demand on an IO/Default dispatcher to avoid OOM.
+ */
+object PdfPageBitmapCache {
+    private val memoryCache = object : android.util.LruCache<String, Bitmap>(6) {
+        override fun entryRemoved(evicted: Boolean, key: String?, oldValue: Bitmap?, newValue: Bitmap?) {
+            // Let GC reclaim recycled bitmaps safely
+            if (evicted && oldValue != null && !oldValue.isRecycled) {
+                // Don't manually recycle if it might still be referenced by an active Compose frame,
+                // rely on Android GC after removal from LRU cache.
+            }
+        }
+    }
+
+    fun get(key: String): Bitmap? = synchronized(this) {
+        val bmp = memoryCache.get(key)
+        if (bmp != null && !bmp.isRecycled) bmp else null
+    }
+
+    fun put(key: String, bitmap: Bitmap) = synchronized(this) {
+        memoryCache.put(key, bitmap)
+    }
+
+    fun clear() = synchronized(this) {
+        memoryCache.evictAll()
+    }
+}
+
+suspend fun renderPdfPageBitmap(
+    pdfFile: File,
+    pageNumber: Int, // 1-indexed
+    scaleFactor: Float = 2.0f
+): Bitmap? = kotlinx.coroutines.withContext(Dispatchers.IO) {
+    val cacheKey = "${pdfFile.absolutePath}_p${pageNumber}_s$scaleFactor"
+    PdfPageBitmapCache.get(cacheKey)?.let { return@withContext it }
+
+    try {
+        ParcelFileDescriptor.open(pdfFile, ParcelFileDescriptor.MODE_READ_ONLY).use { pfd ->
+            PdfRenderer(pfd).use { renderer ->
+                val safePageIdx = (pageNumber - 1).coerceIn(0, renderer.pageCount - 1)
+                renderer.openPage(safePageIdx).use { page ->
+                    val renderWidth = (page.width * scaleFactor).toInt().coerceAtLeast(800)
+                    val renderHeight = (page.height * scaleFactor).toInt().coerceAtLeast(1100)
+                    val bmp = Bitmap.createBitmap(renderWidth, renderHeight, Bitmap.Config.ARGB_8888)
+                    bmp.eraseColor(android.graphics.Color.WHITE)
+                    val canvas = Canvas(bmp)
+                    canvas.drawColor(android.graphics.Color.WHITE)
+                    page.render(bmp, null, null, PdfRenderer.Page.RENDER_MODE_FOR_DISPLAY)
+                    PdfPageBitmapCache.put(cacheKey, bmp)
+                    bmp
+                }
+            }
+        }
+    } catch (e: Exception) {
+        e.printStackTrace()
+        null
+    }
+}
+
 suspend fun downloadTextbookToCache(
     url: String,
     dest: File,
     onProgress: (Int) -> Unit
 ): Boolean = kotlinx.coroutines.withContext(Dispatchers.IO) {
-    val tempFile = File(dest.absolutePath + ".downloading")
+    val tempFile = File(dest.parentFile, "${dest.name}.${System.currentTimeMillis()}.downloading")
     try {
-        val conn = (java.net.URL(url).openConnection() as java.net.HttpURLConnection).apply {
-            setRequestProperty("User-Agent", "Mozilla/5.0")
-            connect()
+        var currentUrl = url
+        var conn: java.net.HttpURLConnection? = null
+        var redirectCount = 0
+        while (redirectCount < 5) {
+            val u = java.net.URL(currentUrl)
+            conn = (u.openConnection() as java.net.HttpURLConnection).apply {
+                instanceFollowRedirects = true
+                connectTimeout = 15000
+                readTimeout = 20000
+                setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64)")
+                connect()
+            }
+            val status = conn.responseCode
+            if (status in listOf(301, 302, 303, 307, 308)) {
+                val newLoc = conn.getHeaderField("Location")
+                if (!newLoc.isNullOrBlank()) {
+                    currentUrl = if (newLoc.startsWith("http://") || newLoc.startsWith("https://")) {
+                        newLoc
+                    } else {
+                        java.net.URL(u, newLoc).toString()
+                    }
+                    conn.disconnect()
+                    redirectCount++
+                    continue
+                }
+            }
+            break
         }
-        if (conn.responseCode !in 200..299) {
+
+        if (conn == null || conn.responseCode !in 200..299) {
+            conn?.disconnect()
             return@withContext false
         }
+
         val totalLen = conn.contentLengthLong
         conn.inputStream.use { input ->
             FileOutputStream(tempFile).use { output ->
@@ -590,8 +680,11 @@ suspend fun downloadTextbookToCache(
                         onProgress(((total * 100) / totalLen).toInt().coerceIn(0, 99))
                     }
                 }
+                output.flush()
             }
         }
+        conn.disconnect()
+
         // PDF Signature Validation
         var isValidPdf = false
         if (tempFile.exists() && tempFile.length() > 5) {
@@ -612,8 +705,14 @@ suspend fun downloadTextbookToCache(
             }
         }
 
-        if (isValidPdf) {
-            tempFile.renameTo(dest)
+        if (isValidPdf && tempFile.length() > 0) {
+            if (dest.exists()) dest.delete()
+            val renamed = tempFile.renameTo(dest)
+            if (!renamed) {
+                // Fallback to copy and delete if rename fails across file system boundaries
+                tempFile.copyTo(dest, overwrite = true)
+                tempFile.delete()
+            }
             onProgress(100)
             true
         } else {
@@ -693,13 +792,15 @@ fun OfficialTextbookScreen(
 
     val startDownloadAll: () -> Unit = {
         scope.launch {
-            val allBooks = OfficialTextbookRegistry.getAllTextbooksForGrade(selectedGrade)
-            val toDownload = allBooks.filter { 
+            // "Download All" specifically downloads the textbooks for the current subject (e.g. English, Mathematics, etc.)
+            val subjectBooks = editions
+
+            val toDownload = subjectBooks.filter { 
                 val f = getOrCreateTextbookPdfFile(context, it)
                 f == null || !f.exists() || f.length() == 0L
             }
             if (toDownload.isEmpty()) {
-                downloadAllStatusText = "All $selectedGrade books are downloaded!"
+                downloadAllStatusText = "All $subjectName textbooks are already downloaded!"
                 kotlinx.coroutines.delay(2000)
                 showDownloadAllPromptModal = false
                 return@launch
@@ -711,7 +812,7 @@ fun OfficialTextbookScreen(
             if (!dir.exists()) dir.mkdirs()
             
             for (book in toDownload) {
-                val cleanTitle = book.title.replace("Student Textbook", "").trim()
+                val cleanTitle = "${book.grade} ${book.title.replace("Student Textbook", "").trim()}"
                 downloadAllStatusText = "Downloading $cleanTitle..."
                 val bookDownloadUrl = book.downloadUrl ?: OfficialBookLinks.urls[book.fileName]
                 if (bookDownloadUrl != null) {
@@ -724,7 +825,7 @@ fun OfficialTextbookScreen(
                 downloadAllOverallProgress = completedCount.toFloat() / totalCount
                 reloadTrigger++
             }
-            downloadAllStatusText = "All downloads complete!"
+            downloadAllStatusText = "All $subjectName downloads complete!"
             kotlinx.coroutines.delay(1500)
             showDownloadAllPromptModal = false
             downloadAllOverallProgress = null
@@ -878,7 +979,7 @@ fun OfficialTextbookScreen(
             },
             title = {
                 Text(
-                    text = "Download All $selectedGrade Textbooks",
+                    text = "Download $subjectName Textbooks",
                     fontWeight = FontWeight.Black,
                     fontSize = 18.sp,
                     color = Color.White,
@@ -888,7 +989,7 @@ fun OfficialTextbookScreen(
             text = {
                 Column(modifier = Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
                     Text(
-                        text = "Download official textbooks for all subjects in $selectedGrade for offline access.",
+                        text = "Download all official textbooks for $subjectName across grades for offline study.",
                         fontSize = 12.sp,
                         color = Color(0xFFCBD5E1),
                         textAlign = TextAlign.Center
@@ -1526,13 +1627,19 @@ fun InAppPdfTextbookReader(
 
     val totalPages = edition.pageCount
 
+    // Reactively observe saved textbook bookmarks so bookmark state updates instantly in UI
+    val bookmarkedPagesSet = viewModel?.savedTextbookBookmarksSet?.collectAsState()?.value ?: emptySet()
     val isBookmarked = if (viewModel != null) {
-        viewModel.isTextbookPageBookmarked(edition.fileName, currentPage)
+        bookmarkedPagesSet.contains("${edition.fileName}_$currentPage")
     } else {
         fallbackBookmarks.contains(currentPage)
     }
     val editionBookmarks = if (viewModel != null) {
-        viewModel.getBookmarkedPagesForEdition(edition.fileName)
+        val prefix = "${edition.fileName}_"
+        bookmarkedPagesSet
+            .filter { it.startsWith(prefix) }
+            .mapNotNull { it.removePrefix(prefix).toIntOrNull() }
+            .sorted()
     } else {
         fallbackBookmarks.toList().sorted()
     }
@@ -1541,39 +1648,31 @@ fun InAppPdfTextbookReader(
         edition.units.findLast { it.pageStart <= currentPage } ?: edition.units.firstOrNull()
     }
 
-    // Render Genuine PDF page bitmap using Android PdfRenderer
-    val pdfBitmap = remember(currentPage, edition.fileName, reloadTrigger) {
-        try {
-            var pfd: ParcelFileDescriptor? = null
-            val realPdfFile = getOrCreateTextbookPdfFile(context, edition)
-            if (realPdfFile != null && realPdfFile.exists() && realPdfFile.length() > 0) {
-                pfd = ParcelFileDescriptor.open(realPdfFile, ParcelFileDescriptor.MODE_READ_ONLY)
-            }
+    // Lazily load and render PDF pages on IO dispatcher using LRU memory cache
+    var pdfBitmap by remember { mutableStateOf<Bitmap?>(null) }
+    var isRenderingPage by remember { mutableStateOf(false) }
 
-            if (pfd != null) {
-                val renderer = PdfRenderer(pfd)
-                val safePageIdx = (currentPage - 1).coerceIn(0, renderer.pageCount - 1)
-                val page = renderer.openPage(safePageIdx)
-                val renderWidth = (page.width * 2).coerceAtLeast(800)
-                val renderHeight = (page.height * 2).coerceAtLeast(1100)
-                val bmp = Bitmap.createBitmap(renderWidth, renderHeight, Bitmap.Config.ARGB_8888)
-                page.render(bmp, null, null, PdfRenderer.Page.RENDER_MODE_FOR_DISPLAY)
-                page.close()
-                renderer.close()
-                pfd.close()
-                bmp
+    LaunchedEffect(currentPage, edition.fileName, reloadTrigger) {
+        val realPdfFile = getOrCreateTextbookPdfFile(context, edition)
+        if (realPdfFile != null && realPdfFile.exists() && realPdfFile.length() > 0) {
+            val cached = PdfPageBitmapCache.get("${realPdfFile.absolutePath}_p${currentPage}_s2.0")
+            if (cached != null) {
+                pdfBitmap = cached
             } else {
-                null
+                isRenderingPage = true
+                val bmp = renderPdfPageBitmap(realPdfFile, currentPage, 2.0f)
+                pdfBitmap = bmp
+                isRenderingPage = false
             }
-        } catch (e: Exception) {
-            e.printStackTrace()
-            null
+        } else {
+            pdfBitmap = null
         }
     }
 
     // Seamless auto-download in background if textbook not yet cached
     LaunchedEffect(edition.fileName) {
-        if (pdfBitmap == null && downloadProgress == null) {
+        val realPdfFile = getOrCreateTextbookPdfFile(context, edition)
+        if ((realPdfFile == null || !realPdfFile.exists() || realPdfFile.length() == 0L) && downloadProgress == null) {
             val bookDownloadUrl = edition.downloadUrl ?: OfficialBookLinks.urls[edition.fileName]
             if (bookDownloadUrl != null) {
                 val dir = File(context.filesDir, "official_textbooks")
@@ -1591,11 +1690,13 @@ fun InAppPdfTextbookReader(
         }
     }
 
-    // Google Drive / Acrobat Dark Theme Tokens
-    val viewerBg = Color(0xFF1E1F22)
-    val barBg = Color(0xFF2B2D30)
-    val textColor = Color(0xFFE6EDF3)
-    val textMuted = Color(0xFF9DA5B4)
+    // Reader UI Theme Tokens (Adapts to app light/dark theme while document retains original white-paper appearance)
+    val isDarkTheme = viewModel?.isDarkTheme?.collectAsState()?.value ?: androidx.compose.foundation.isSystemInDarkTheme()
+    val viewerBg = if (isDarkTheme) Color(0xFF1E1F22) else Color(0xFFF1F5F9)
+    val barBg = if (isDarkTheme) Color(0xFF2B2D30) else Color(0xFFFFFFFF)
+    val textColor = if (isDarkTheme) Color(0xFFE6EDF3) else Color(0xFF0F172A)
+    val textMuted = if (isDarkTheme) Color(0xFF9DA5B4) else Color(0xFF64748B)
+    val barBorderColor = if (isDarkTheme) Color(0xFF3C3F41) else Color(0xFFE2E8F0)
 
     val transformState = rememberTransformableState { zoomChange, offsetChange, _ ->
         scale = (scale * zoomChange).coerceIn(0.8f, 3.5f)
@@ -1693,7 +1794,7 @@ fun InAppPdfTextbookReader(
         bottomBar = {
             Surface(
                 color = barBg,
-                border = BorderStroke(1.dp, Color(0xFF3C3F41))
+                border = BorderStroke(1.dp, barBorderColor)
             ) {
                 Column(
                     modifier = Modifier
@@ -1716,7 +1817,7 @@ fun InAppPdfTextbookReader(
                             colors = SliderDefaults.colors(
                                 thumbColor = EmeraldPrimary,
                                 activeTrackColor = EmeraldPrimary,
-                                inactiveTrackColor = Color(0xFF4E5157)
+                                inactiveTrackColor = if (isDarkTheme) Color(0xFF4E5157) else Color(0xFFCBD5E1)
                             )
                         )
                         Text("$totalPages", style = MaterialTheme.typography.labelSmall, color = textMuted)
@@ -1741,8 +1842,8 @@ fun InAppPdfTextbookReader(
 
                         Surface(
                             shape = RoundedCornerShape(6.dp),
-                            color = viewerBg,
-                            border = BorderStroke(1.dp, Color(0xFF4E5157)),
+                            color = if (isDarkTheme) Color(0xFF1E1F22) else Color(0xFFF8FAFC),
+                            border = BorderStroke(1.dp, barBorderColor),
                             modifier = Modifier.clickable { showJumpDialog = true }
                         ) {
                             Text(
@@ -1786,12 +1887,13 @@ fun InAppPdfTextbookReader(
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Image(
-                        bitmap = pdfBitmap.asImageBitmap(),
+                        bitmap = pdfBitmap!!.asImageBitmap(),
                         contentDescription = "PDF Page $currentPage",
                         modifier = Modifier
                             .fillMaxWidth()
-                            .shadow(10.dp, RoundedCornerShape(4.dp))
-                            .clip(RoundedCornerShape(4.dp))
+                            .shadow(8.dp, RoundedCornerShape(2.dp))
+                            .clip(RoundedCornerShape(2.dp))
+                            .background(Color.White)
                             .graphicsLayer(
                                 scaleX = scale,
                                 scaleY = scale,
@@ -1799,6 +1901,23 @@ fun InAppPdfTextbookReader(
                                 translationY = offset.y
                             )
                     )
+                }
+            } else if (isRenderingPage) {
+                Box(
+                    modifier = Modifier.fillMaxSize(),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.spacedBy(12.dp)
+                    ) {
+                        CircularProgressIndicator(color = EmeraldPrimary, strokeWidth = 3.dp)
+                        Text(
+                            text = "Loading Page $currentPage...",
+                            style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Medium),
+                            color = textColor
+                        )
+                    }
                 }
             } else {
                 val bookDownloadUrl = edition.downloadUrl ?: OfficialBookLinks.urls[edition.fileName]
@@ -1816,7 +1935,7 @@ fun InAppPdfTextbookReader(
                             Text(
                                 text = "Downloading Official Textbook ($downloadProgress%)...",
                                 style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
-                                color = Color.White
+                                color = textColor
                             )
                             LinearProgressIndicator(
                                 progress = { (downloadProgress ?: 0) / 100f },
@@ -1833,13 +1952,13 @@ fun InAppPdfTextbookReader(
                             Text(
                                 text = edition.title,
                                 style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
-                                color = Color.White,
+                                color = textColor,
                                 textAlign = TextAlign.Center
                             )
                             Text(
                                 text = "Ministry of Education Official PDF",
                                 style = MaterialTheme.typography.bodySmall,
-                                color = Color(0xFF94A3B8)
+                                color = textMuted
                             )
                             if (downloadError != null) {
                                 Text(
@@ -1901,7 +2020,7 @@ fun InAppPdfTextbookReader(
                             focusedTextColor = textColor,
                             unfocusedTextColor = textColor,
                             focusedBorderColor = EmeraldPrimary,
-                            unfocusedBorderColor = Color(0xFF4E5157)
+                            unfocusedBorderColor = barBorderColor
                         ),
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -1958,7 +2077,7 @@ fun InAppPdfTextbookReader(
                                 .clickable { selectedTocTab = "units" },
                             shape = RoundedCornerShape(8.dp),
                             color = if (selectedTocTab == "units") EmeraldPrimary else viewerBg,
-                            border = BorderStroke(1.dp, if (selectedTocTab == "units") EmeraldPrimary else Color(0xFF4E5157))
+                            border = BorderStroke(1.dp, if (selectedTocTab == "units") EmeraldPrimary else barBorderColor)
                         ) {
                             Text(
                                 text = "Units (${edition.units.size})",
@@ -1976,7 +2095,7 @@ fun InAppPdfTextbookReader(
                                 .clickable { selectedTocTab = "bookmarks" },
                             shape = RoundedCornerShape(8.dp),
                             color = if (selectedTocTab == "bookmarks") GoldAccent else viewerBg,
-                            border = BorderStroke(1.dp, if (selectedTocTab == "bookmarks") GoldAccent else Color(0xFF4E5157))
+                            border = BorderStroke(1.dp, if (selectedTocTab == "bookmarks") GoldAccent else barBorderColor)
                         ) {
                             Text(
                                 text = "Bookmarks (${editionBookmarks.size})",
@@ -2008,7 +2127,7 @@ fun InAppPdfTextbookReader(
                                     },
                                 shape = RoundedCornerShape(10.dp),
                                 color = if (currentUnit?.unitNumber == unit.unitNumber) EmeraldPrimary.copy(alpha = 0.2f) else viewerBg,
-                                border = BorderStroke(1.dp, if (currentUnit?.unitNumber == unit.unitNumber) EmeraldPrimary else Color(0xFF4E5157))
+                                border = BorderStroke(1.dp, if (currentUnit?.unitNumber == unit.unitNumber) EmeraldPrimary else barBorderColor)
                             ) {
                                 Row(
                                     modifier = Modifier
@@ -2080,7 +2199,7 @@ fun InAppPdfTextbookReader(
                                         },
                                     shape = RoundedCornerShape(10.dp),
                                     color = if (currentPage == pageNum) GoldAccent.copy(alpha = 0.15f) else viewerBg,
-                                    border = BorderStroke(1.dp, if (currentPage == pageNum) GoldAccent else Color(0xFF4E5157))
+                                    border = BorderStroke(1.dp, if (currentPage == pageNum) GoldAccent else barBorderColor)
                                 ) {
                                     Row(
                                         modifier = Modifier

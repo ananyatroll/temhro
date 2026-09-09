@@ -28,6 +28,7 @@ import com.example.R
 import com.example.ads.AdsManager
 import com.example.ads.InterstitialAdManager
 import com.example.ui.StudyViewModel
+import com.example.ui.TranslationManager
 import com.example.ui.theme.*
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -40,6 +41,7 @@ fun StudentToolsModalSheet(
 ) {
     val context = LocalContext.current
     val isDark by viewModel.isDarkTheme.collectAsState()
+    val currentLang by viewModel.currentLanguage.collectAsState()
     val activeTab by viewModel.activeToolsTab.collectAsState()
     val learningContext by viewModel.activeLearningContext.collectAsState()
     val subjectsList by viewModel.subjects.collectAsState()
@@ -110,14 +112,14 @@ fun StudentToolsModalSheet(
                     Spacer(modifier = Modifier.width(10.dp))
                     Column {
                         Text(
-                            text = "Student Tools",
+                            text = TranslationManager.get("student_tools_title", currentLang),
                             style = MaterialTheme.typography.titleMedium.copy(
                                 fontWeight = FontWeight.Bold,
                                 color = if (isDark) TextLight else Color(0xFF0F172A)
                             )
                         )
                         Text(
-                            text = "Tamhero Academic Companion",
+                            text = TranslationManager.get("student_tools_subtitle", currentLang),
                             style = MaterialTheme.typography.labelSmall.copy(color = EmeraldPrimary)
                         )
                     }
@@ -133,10 +135,10 @@ fun StudentToolsModalSheet(
 
             // Tab Navigation Row
             val tabs = listOf(
-                "timer_tasks" to ("Timer & Tasks" to Icons.Default.Timer),
-                "calendar" to ("Calendar & Plan" to Icons.Default.CalendarMonth),
-                "grades" to ("Target Grades" to Icons.Default.Calculate),
-                "scanner" to ("Doc Scanner" to Icons.Default.DocumentScanner)
+                "timer_tasks" to (TranslationManager.get("tab_timer_tasks", currentLang) to Icons.Default.Timer),
+                "calendar" to (TranslationManager.get("tab_calendar_plan", currentLang) to Icons.Default.CalendarMonth),
+                "grades" to (TranslationManager.get("tab_target_grades", currentLang) to Icons.Default.Calculate),
+                "scanner" to (TranslationManager.get("tab_doc_scanner", currentLang) to Icons.Default.DocumentScanner)
             )
 
             val selectedIndex = tabs.indexOfFirst { it.first == activeTab }.coerceAtLeast(0)

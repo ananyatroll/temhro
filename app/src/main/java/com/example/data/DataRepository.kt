@@ -36,6 +36,7 @@ interface DataRepository {
     suspend fun insertAnalyzedVideo(video: AnalyzedVideo)
 
     // User Progress & Entitlement operations
+    suspend fun updateProgress(progress: UserProgress)
     suspend fun enrollPackage(packageId: String)
     suspend fun resetEnrollment()
     suspend fun submitPaymentIntent(txnId: String, senderPhone: String, screenshotPath: String)

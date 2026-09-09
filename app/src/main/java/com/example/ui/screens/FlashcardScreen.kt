@@ -630,13 +630,20 @@ fun SubjectFlashcardRow(
                                 if (selectedUnit != "All" && selectedUnit != "All Units" && smartFilter == "all") {
                                     Spacer(modifier = Modifier.height(16.dp))
                                     Button(
-                                        onClick = { /* viewModel.generateSmartFlashcards(selectedUnit) */ },
+                                        onClick = { viewModel.openStudentTools("scanner") },
                                         colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary),
                                         shape = RoundedCornerShape(8.dp)
                                     ) {
                                         Icon(Icons.Default.AutoAwesome, contentDescription = null, modifier = Modifier.size(16.dp))
                                         Spacer(modifier = Modifier.width(8.dp))
-                                        Text("Generate Smart Flashcards for ")
+                                        Text("Scan or Add Notes for $selectedUnit")
+                                    }
+                                    Spacer(modifier = Modifier.height(8.dp))
+                                    OutlinedButton(
+                                        onClick = { viewModel.selectedFlashcardUnit.value = "All" },
+                                        shape = RoundedCornerShape(8.dp)
+                                    ) {
+                                        Text("View All Units", color = EmeraldPrimary)
                                     }
                                 }
                             }

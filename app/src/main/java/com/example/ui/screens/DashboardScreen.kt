@@ -35,6 +35,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.ads.InterstitialAdManager
 import com.example.ads.AdsManager
+import com.example.data.StudySubject
 import com.example.ui.NotificationHelper
 import com.example.ui.StudyViewModel
 import com.example.ui.TranslationManager
