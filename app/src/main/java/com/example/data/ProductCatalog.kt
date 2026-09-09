@@ -106,19 +106,15 @@ object ProductCatalog {
     // COC products — price is 300 ETB across all 15 fields
     // ---------------------------------------------------------------------
     private val cocProducts = listOf(
-        Product("coc_anesthesia", "coc", plan = "field", field = "anesthesia", amount = PRICE_COC_ETB, shortLabel = "Anesthesia COC"),
-        Product("coc_law", "coc", plan = "field", field = "law", amount = PRICE_COC_ETB, shortLabel = "Law COC"),
-        Product("coc_pharmacy", "coc", plan = "field", field = "pharmacy", amount = PRICE_COC_ETB, shortLabel = "Pharmacy COC"),
         Product("coc_medicine", "coc", plan = "field", field = "medicine", amount = PRICE_COC_ETB, shortLabel = "Medicine COC"),
-        Product("coc_dentistry", "coc", plan = "field", field = "dentistry", amount = PRICE_COC_ETB, shortLabel = "Dentistry COC"),
-        Product("coc_veterinary", "coc", plan = "field", field = "veterinary", amount = PRICE_COC_ETB, shortLabel = "Veterinary COC"),
-        Product("coc_medical_lab", "coc", plan = "field", field = "medical_lab", amount = PRICE_COC_ETB, shortLabel = "Medical Lab COC"),
+        Product("coc_dentistry", "coc", plan = "field", field = "dentistry", amount = PRICE_COC_ETB, shortLabel = "Dental Medicine COC"),
+        Product("coc_pharmacy", "coc", plan = "field", field = "pharmacy", amount = PRICE_COC_ETB, shortLabel = "Pharmacy COC"),
         Product("coc_ho", "coc", plan = "field", field = "ho", amount = PRICE_COC_ETB, shortLabel = "HO (Health Officer) COC"),
-        Product("coc_environmental_health", "coc", plan = "field", field = "environmental_health", amount = PRICE_COC_ETB, shortLabel = "Environmental Health COC"),
-        Product("coc_physiotherapy", "coc", plan = "field", field = "physiotherapy", amount = PRICE_COC_ETB, shortLabel = "Physiotherapy COC"),
-        Product("coc_midwifery", "coc", plan = "field", field = "midwifery", amount = PRICE_COC_ETB, shortLabel = "Midwifery COC"),
+        Product("coc_medical_lab", "coc", plan = "field", field = "medical_lab", amount = PRICE_COC_ETB, shortLabel = "Medical Lab COC"),
+        Product("coc_engineering", "coc", plan = "field", field = "engineering", amount = PRICE_COC_ETB, shortLabel = "Engineering COC"),
         Product("coc_architecture", "coc", plan = "field", field = "architecture", amount = PRICE_COC_ETB, shortLabel = "Architecture COC"),
-        Product("coc_cs_is", "coc", plan = "field", field = "cs_is", amount = PRICE_COC_ETB, shortLabel = "Computer Science & Info Systems COC")
+        Product("coc_cs_is", "coc", plan = "field", field = "cs_is", amount = PRICE_COC_ETB, shortLabel = "Computer Science & Info IT/Science COC"),
+        Product("coc_law", "coc", plan = "field", field = "law", amount = PRICE_COC_ETB, shortLabel = "Law COC")
     )
 
     private val all: List<Product> =
