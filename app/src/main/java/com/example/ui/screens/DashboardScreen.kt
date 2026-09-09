@@ -184,7 +184,7 @@ fun DashboardScreen(viewModel: StudyViewModel) {
                 ) {
                     val sectionTitle = when (progress.activePackageId) {
                         "euee_natural", "euee_social" -> t("high_yield_topics")
-                        "freshman" -> t("freshman_curriculum")
+                        "freshman_natural", "freshman_social" -> t("freshman_curriculum")
                         "aau_uat" -> t("aau_uat_matrix")
                         "department" -> if (academicDepartment.isNotBlank()) "${academicDepartment.uppercase()} CURRICULUM" else t("dept_course_matrix")
                         "exit_exam" -> t("exit_exam_blueprints")

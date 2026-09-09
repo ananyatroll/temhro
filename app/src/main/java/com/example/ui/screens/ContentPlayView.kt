@@ -94,7 +94,7 @@ fun ContentPlayView(viewModel: StudyViewModel) {
     if (showFreeTrialPaywall) {
         val currentLang by viewModel.currentLanguage.collectAsState()
         FreeTrialPaywallDialog(
-            packageId = paywallPackageId ?: "freshman",
+            packageId = paywallPackageId ?: "freshman_natural",
             currentLang = currentLang,
             onDismiss = { viewModel.showFreeTrialPaywall.value = false },
             onUpgradePremium = {
@@ -109,7 +109,8 @@ fun ContentPlayView(viewModel: StudyViewModel) {
         val pkgId = paywallPackageId ?: progress.activePackageId ?: "euee"
         val pkgName = when(pkgId) {
             "euee" -> "EUEE Prep Ultimate"
-            "freshman" -> "Freshman Course Prep"
+            "freshman_natural" -> "Natural Science Freshman"
+            "freshman_social" -> "Social Science Freshman"
             "aau_uat" -> "AAU UAT Prep Pro"
             "department" -> "University Department Pro"
             "exit_exam" -> "Exit Exam Pro"
@@ -822,9 +823,40 @@ fun DarkThemedNotesReader(
     val selectedGrade by viewModel.selectedGradeFilter.collectAsState()
     val currentLang by viewModel.currentLanguage.collectAsState()
     val isSatCourse = subjectName.contains("SAT", ignoreCase = true) || subjectName.contains("Aptitude", ignoreCase = true)
+    val context = LocalContext.current
 
+    // Date-based locking check
+    val isLockedByDate = remember(note?.id) {
+        val releaseDate = note?.releaseDate
+        if (releaseDate.isNullOrBlank()) {
+            false // No release date set, always available
+        } else {
+            try {
+                val today = java.time.LocalDate.now()
+                val release = java.time.LocalDate.parse(releaseDate)
+                today.isBefore(release)
+            } catch (e: Exception) {
+                false // Invalid date format, treat as available
+            }
+        }
+    }
+
+    // Access logging
     LaunchedEffect(note?.id) {
-        note?.let { viewModel.markNoteAsRead(it.id) }
+        note?.let {
+            viewModel.markNoteAsRead(it.id)
+            // Log access timestamp
+            val prefs = context.getSharedPreferences("note_access_log", android.content.Context.MODE_PRIVATE)
+            val logKey = "accessed_${it.id}"
+            val currentTime = java.time.LocalDateTime.now().toString()
+            val existingLog = prefs.getString(logKey, "")
+            val newLog = if (existingLog.isNullOrBlank()) currentTime else "$existingLog|$currentTime"
+            prefs.edit().putString(logKey, newLog).apply()
+            // Increment access count
+            val countKey = "count_${it.id}"
+            val currentCount = prefs.getInt(countKey, 0)
+            prefs.edit().putInt(countKey, currentCount + 1).apply()
+        }
     }
 
     Surface(
@@ -969,21 +1001,74 @@ fun DarkThemedNotesReader(
                     .verticalScroll(rememberScrollState())
             ) {
                 if (note != null) {
-                    Text(
-                        text = note.title,
-                        style = MaterialTheme.typography.displayMedium,
-                        color = Color.White,
-                        modifier = Modifier.padding(bottom = 16.dp)
-                    )
+                    if (isLockedByDate) {
+                        // Date-locked content
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(vertical = 48.dp),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Column(
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                                verticalArrangement = Arrangement.spacedBy(16.dp)
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Default.Lock,
+                                    contentDescription = "Locked",
+                                    tint = GoldAccent,
+                                    modifier = Modifier.size(64.dp)
+                                )
+                                Text(
+                                    text = "Content Locked",
+                                    style = MaterialTheme.typography.headlineSmall,
+                                    color = Color.White,
+                                    fontWeight = FontWeight.Bold
+                                )
+                                Text(
+                                    text = "This note will be available on ${note.releaseDate}",
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    color = Color.Gray,
+                                    textAlign = TextAlign.Center
+                                )
+                                val daysRemaining = try {
+                                    val today = java.time.LocalDate.now()
+                                    val release = java.time.LocalDate.parse(note.releaseDate)
+                                    java.time.temporal.ChronoUnit.DAYS.between(today, release)
+                                } catch (e: Exception) { 0 }
+                                if (daysRemaining > 0) {
+                                    Surface(
+                                        color = GoldAccent.copy(alpha = 0.15f),
+                                        shape = RoundedCornerShape(8.dp)
+                                    ) {
+                                        Text(
+                                            text = "$daysRemaining day${if (daysRemaining > 1) "s" else ""} remaining",
+                                            style = MaterialTheme.typography.labelMedium,
+                                            color = GoldAccent,
+                                            modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp)
+                                        )
+                                    }
+                                }
+                            }
+                        }
+                    } else {
+                        // Normal content display
+                        Text(
+                            text = note.title,
+                            style = MaterialTheme.typography.displayMedium,
+                            color = Color.White,
+                            modifier = Modifier.padding(bottom = 16.dp)
+                        )
 
-                    Text(
-                        text = note.content,
-                        style = MaterialTheme.typography.bodyLarge,
-                        color = TextLight,
-                        lineHeight = 26.sp
-                    )
+                        Text(
+                            text = note.content,
+                            style = MaterialTheme.typography.bodyLarge,
+                            color = TextLight,
+                            lineHeight = 26.sp
+                        )
 
-                    Spacer(modifier = Modifier.height(16.dp))
+                        Spacer(modifier = Modifier.height(16.dp))
+                    }
                 } else {
                     Box(
                         modifier = Modifier
@@ -1538,7 +1623,7 @@ fun SleekVideosScreen(
 
     val standardVideos = remember(subjectId) {
         when (subjectId) {
-            "euee_nat_maths", "euee_soc_maths", "freshman_maths", "uat_quantitative", "uat_analytical" -> {
+            "euee_nat_maths", "euee_soc_maths", "freshman_soc_maths", "uat_quantitative", "uat_analytical" -> {
                 listOf(
                     VideoItem("math_playlist", "📺 PLAYLIST: Full EUEE Maths Prep Series", "Complete", "Exquisite, comprehensive, high-yield Mathematics preparation series covering both Natural & Social streams with past entrance exam breakthroughs.", "videoseries?list=PLfXpdCfxjXmZooKjB88nHk8FCjnNxSsJ6"),
                     VideoItem("math_1", "Lecture 1: Mathematical Induction & Sequences", "18 mins", "Mastering arithmetic progression (AP), geometric progression (GP), convergence, divergence, and infinite geometric series calculations.", "videoseries?list=PLfXpdCfxjXmZooKjB88nHk8FCjnNxSsJ6&index=0"),
@@ -1548,7 +1633,7 @@ fun SleekVideosScreen(
                     VideoItem("math_5", "Lecture 5: Matrices and Systems of Linear Equations", "15 mins", "Calculating determinants, row reduction, inverse matrices, and applying Cramer's Rule to solve multi-variable systems of equations.", "videoseries?list=PLfXpdCfxjXmZooKjB88nHk8FCjnNxSsJ6&index=4")
                 )
             }
-            "freshman_emerging_tech" -> {
+            "freshman_nat_emerging_tech", "freshman_soc_emerging_tech" -> {
                 listOf(
                     VideoItem("emtech_playlist", "📺 PLAYLIST: Full Emerging Tech Lectures (EmTe 1012)", "Complete", "Official freshman semester course covering Industry 4.0, Artificial Intelligence, Blockchain, IoT, and Cloud Computing ecosystems.", "videoseries?list=PLFNOu8LMZhXZ-a_ze9rH9mfBVyepzxBvf"),
                     VideoItem("emtech_1", "Lecture 1: Industry 4.0 & Digital Revolution", "15 mins", "An essential overview of the evolution of industrial eras, key drivers of the digital age, and hyper-connected systems.", "videoseries?list=PLFNOu8LMZhXZ-a_ze9rH9mfBVyepzxBvf&index=0"),
@@ -1557,7 +1642,7 @@ fun SleekVideosScreen(
                     VideoItem("emtech_4", "Lecture 4: Internet of Things (IoT) & Smart Sensors", "14 mins", "Explaining physical sensors, actuators, edge gateway layers, fog computing, and telemetry networks in smart cities.", "videoseries?list=PLFNOu8LMZhXZ-a_ze9rH9mfBVyepzxBvf&index=3")
                 )
             }
-            "freshman_english_1" -> {
+            "freshman_nat_english_1", "freshman_soc_english_1" -> {
                 listOf(
                     VideoItem(
                         id = "part_1",
@@ -1596,7 +1681,7 @@ fun SleekVideosScreen(
                     )
                 )
             }
-            "freshman_english_2" -> {
+            "freshman_nat_english_2", "freshman_soc_english_2" -> {
                 listOf(
                     VideoItem("eng2_1", "Chapter 1: Advanced Critical Reading and Summary Skills", "18 mins", "Critically dissecting complex scholarly publications, journal structures, and formulating high-value academic summaries.", "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"),
                     VideoItem("eng2_2", "Chapter 2: Paraphrasing Techniques & Plagiarism Prevention", "15 mins", "Active rewriting of core scientific source content without sacrificing semantic meaning or committing standard plagiarism.", "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"),
@@ -1684,7 +1769,7 @@ fun SleekVideosScreen(
                     }
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(
-                        text = if (subjectId == "freshman_english_1") "Communicative English I (FLEN 1011)" else "$subjectName Video Lessons",
+                        text = if (subjectId == "freshman_nat_english_1" || subjectId == "freshman_soc_english_1") "Communicative English I (FLEN 1011)" else "$subjectName Video Lessons",
                         style = MaterialTheme.typography.titleMedium,
                         color = Color.White,
                         fontWeight = FontWeight.Bold
@@ -2134,7 +2219,8 @@ fun FreeTrialPaywallDialog(
     fun t(key: String): String = com.example.ui.TranslationManager.get(key, currentLang)
 
     val displayedPackageName = when (packageId) {
-        "freshman" -> t("pkg_freshman_title")
+        "freshman_natural" -> t("pkg_freshman_natural_title")
+        "freshman_social" -> t("pkg_freshman_social_title")
         "euee" -> t("pkg_euee_title")
         "aau_uat" -> t("pkg_uat_title")
         "department" -> t("pkg_dept_title")
@@ -2143,7 +2229,7 @@ fun FreeTrialPaywallDialog(
     }
 
     val displayDetails = when (packageId) {
-        "freshman" -> t("paywall_freshman_desc")
+        "freshman_natural", "freshman_social" -> t("paywall_freshman_desc")
         "euee", "euee_natural", "euee_social" -> t("paywall_euee_desc")
         "aau_uat" -> t("paywall_uat_desc")
         "department" -> t("paywall_dept_desc")

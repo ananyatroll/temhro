@@ -3,6 +3,32 @@ package com.example.data
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+@Entity(tableName = "entitlements")
+data class Entitlement(
+    @PrimaryKey val productId: String,
+    val grantedAtMillis: Long = System.currentTimeMillis(),
+    /** Server purchase reference that granted this entitlement (for audit). */
+    val purchaseReference: String = ""
+)
+
+@Entity(tableName = "purchase_requests")
+data class PurchaseRequest(
+    @PrimaryKey val reference: String, // e.g. "TH-7F92K"
+    val productId: String,
+    val category: String,
+    val stream: String? = null,
+    val academicYear: Int? = null,
+    val department: String? = null,
+    val plan: String = "sem1",
+    val amount: Int = 0,
+    val currency: String = "ETB",
+    val language: String = "en",
+    val status: String = "pending", // "pending", "approved", "rejected", "redeemed"
+    val payerName: String = "",
+    val transactionId: String = "",
+    val createdAtMillis: Long = System.currentTimeMillis()
+)
+
 @Entity(tableName = "user_progress")
 data class UserProgress(
     @PrimaryKey val id: String = "primary_user",
@@ -34,7 +60,8 @@ data class SubjectNote(
     val unit: String, // "UNIT 1", "UNIT 2", etc.
     val title: String,
     val content: String,
-    val gradeLevel: String = "Grade 9" // "Grade 9", "Grade 10", "Grade 11", "Grade 12", "General"
+    val gradeLevel: String = "Grade 9", // "Grade 9", "Grade 10", "Grade 11", "Grade 12", "General"
+    val releaseDate: String = "" // ISO date string "yyyy-MM-dd" – empty means always available
 )
 
 @Entity(tableName = "exam_questions")

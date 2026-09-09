@@ -358,8 +358,9 @@ fun SubjectFlashcardRow(
                 var shuffleSeed by remember { mutableStateOf(0) }
 
                 Column(modifier = Modifier.fillMaxWidth()) {
-                    val isFreshmanCourse = subject.packageId == "freshman" ||
-                                           subject.id.startsWith("freshman") ||
+                    val isFreshmanCourse = subject.packageId == "freshman_natural" ||
+                                           subject.packageId == "freshman_social" ||
+                                           subject.id.startsWith("freshman_") ||
                                            subject.name.contains("Freshman", ignoreCase = true) ||
                                            subject.name.contains("1011", ignoreCase = true) ||
                                            subject.name.contains("1012", ignoreCase = true) ||

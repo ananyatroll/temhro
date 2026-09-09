@@ -47,4 +47,11 @@ interface DataRepository {
     suspend fun updateTelegramStatus(connected: Boolean)
     suspend fun incrementExamScore(score: Int)
     suspend fun seedDatabaseIfEmpty()
+
+    // Fine-grained Entitlements & Purchase Requests
+    suspend fun grantEntitlement(productId: String, reference: String = "")
+    fun getEntitlements(): Flow<List<Entitlement>>
+    suspend fun savePurchaseRequest(request: PurchaseRequest)
+    suspend fun updatePurchaseStatus(reference: String, status: String)
+    suspend fun isEntitledTo(productId: String): Boolean
 }

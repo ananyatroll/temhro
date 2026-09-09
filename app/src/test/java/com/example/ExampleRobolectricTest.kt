@@ -29,13 +29,21 @@ class ExampleRobolectricTest {
     val app = ApplicationProvider.getApplicationContext<Application>()
     val viewModel = StudyViewModel(app)
 
-    // Freshman: English 1 & Emerging Tech open, others locked
-    val freshmanOpen1 = StudySubject("freshman_english_1", "Communicative English I", "english", "freshman")
-    val freshmanOpen2 = StudySubject("freshman_emerging_tech", "Emerging Tech", "tech", "freshman")
-    val freshmanLocked = StudySubject("freshman_physics", "General Physics", "physics", "freshman")
-    assertFalse(viewModel.isSubjectLocked(freshmanOpen1))
-    assertFalse(viewModel.isSubjectLocked(freshmanOpen2))
-    assertTrue(viewModel.isSubjectLocked(freshmanLocked))
+    // Freshman Natural: English 1 & Emerging Tech open, others locked
+    val freshmanNatOpen1 = StudySubject("freshman_nat_english_1", "Communicative English I", "english", "freshman_natural")
+    val freshmanNatOpen2 = StudySubject("freshman_nat_emerging_tech", "Emerging Tech", "tech", "freshman_natural")
+    val freshmanNatLocked = StudySubject("freshman_nat_physics", "General Physics", "physics", "freshman_natural")
+    assertFalse(viewModel.isSubjectLocked(freshmanNatOpen1))
+    assertFalse(viewModel.isSubjectLocked(freshmanNatOpen2))
+    assertTrue(viewModel.isSubjectLocked(freshmanNatLocked))
+
+    // Freshman Social: English 1 & Emerging Tech open, others locked
+    val freshmanSocOpen1 = StudySubject("freshman_soc_english_1", "Communicative English I", "english", "freshman_social")
+    val freshmanSocOpen2 = StudySubject("freshman_soc_emerging_tech", "Emerging Tech", "tech", "freshman_social")
+    val freshmanSocLocked = StudySubject("freshman_soc_economics", "Economics", "economics", "freshman_social")
+    assertFalse(viewModel.isSubjectLocked(freshmanSocOpen1))
+    assertFalse(viewModel.isSubjectLocked(freshmanSocOpen2))
+    assertTrue(viewModel.isSubjectLocked(freshmanSocLocked))
 
     // EUEE Natural: Maths & English open, others locked
     val eueeNatOpen1 = StudySubject("euee_nat_maths", "Mathematics", "math", "euee_natural")
@@ -76,5 +84,15 @@ class ExampleRobolectricTest {
     assertFalse(viewModel.isSubjectLocked(exitOpen1))
     assertFalse(viewModel.isSubjectLocked(exitOpen2))
     assertTrue(viewModel.isSubjectLocked(exitLocked))
+  }
+
+  @Test
+  fun testEntitlementGrantAndIsolation() {
+    val app = ApplicationProvider.getApplicationContext<Application>()
+    val viewModel = StudyViewModel(app)
+
+    // Sem 2 physics subject is locked initially
+    val freshmanNatSem2Physics = StudySubject("freshman_nat_physics", "General Physics", "physics", "freshman_natural")
+    assertTrue(viewModel.isSubjectLocked(freshmanNatSem2Physics))
   }
 }

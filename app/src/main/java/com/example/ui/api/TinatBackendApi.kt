@@ -50,6 +50,26 @@ data class EntitlementResponse(
     @Json(name = "error") val error: String? = null
 )
 
+data class PurchaseRequestDto(
+    @Json(name = "reference") val reference: String,
+    @Json(name = "productId") val productId: String,
+    @Json(name = "category") val category: String,
+    @Json(name = "stream") val stream: String? = null,
+    @Json(name = "academicYear") val academicYear: Int? = null,
+    @Json(name = "department") val department: String? = null,
+    @Json(name = "plan") val plan: String,
+    @Json(name = "amount") val amount: Int,
+    @Json(name = "currency") val currency: String = "ETB",
+    @Json(name = "language") val language: String = "en"
+)
+
+data class PurchaseRequestResponse(
+    @Json(name = "success") val success: Boolean,
+    @Json(name = "reference") val reference: String? = null,
+    @Json(name = "status") val status: String? = null,
+    @Json(name = "error") val error: String? = null
+)
+
 interface TinatApiService {
     @POST("api/v1/android/activate")
     suspend fun activatePurchase(
@@ -60,6 +80,11 @@ interface TinatApiService {
     suspend fun getEntitlement(
         @Header("Authorization") authHeader: String
     ): Response<EntitlementResponse>
+
+    @POST("api/v1/android/purchase-request")
+    suspend fun createPurchaseRequest(
+        @Body request: PurchaseRequestDto
+    ): Response<PurchaseRequestResponse>
 }
 
 object TinatApiClient {

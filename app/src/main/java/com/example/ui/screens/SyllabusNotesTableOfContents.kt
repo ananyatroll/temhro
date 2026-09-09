@@ -56,8 +56,9 @@ fun SyllabusNotesTableOfContents(
     val isSatCourse = subjectName.contains("SAT", ignoreCase = true) ||
             subjectName.contains("Aptitude", ignoreCase = true)
 
-    val isFreshmanCourse = activeSubject?.packageId == "freshman" ||
-            activeSubject?.id?.startsWith("freshman") == true ||
+    val isFreshmanCourse = activeSubject?.packageId == "freshman_natural" ||
+            activeSubject?.packageId == "freshman_social" ||
+            activeSubject?.id?.startsWith("freshman_") == true ||
             subjectName.contains("Freshman", ignoreCase = true)
 
     val gradeOptions = when {

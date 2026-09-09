@@ -219,7 +219,8 @@ fun DuotoneIcon(
         "mechanical" -> Icons.Default.Engineering
         "electrical" -> Icons.Default.ElectricalServices
         "euee" -> Icons.Default.School
-        "freshman" -> Icons.Default.LocalLibrary
+        "freshman_natural" -> Icons.Default.LocalLibrary
+        "freshman_social" -> Icons.Default.LocalLibrary
         "aau_uat", "uat" -> Icons.Default.AutoAwesome
         "department", "dept" -> Icons.Default.AccountBalance
         "exit_exam", "exit" -> Icons.Default.WorkspacePremium

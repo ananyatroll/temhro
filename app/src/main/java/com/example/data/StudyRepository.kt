@@ -174,14 +174,14 @@ class StudyRepository(private val dao: EducationDao) : DataRepository {
         Log.d(TAG, "seedDatabaseIfEmpty: Verification check -> subjects: $subjectsCount, notes: $notesCount, questions: $questionsCount, flashcards: $flashcardsCount")
 
         // Fast path: If all data is already populated and verified, return immediately without instantiating large lists
-        if (subjectsCount >= 41 && notesCount >= 750 && questionsCount >= 796 && flashcardsCount >= 17000) {
+        if (subjectsCount >= 75 && notesCount >= 750 && questionsCount >= 796 && flashcardsCount >= 17000) {
             val elapsed = System.currentTimeMillis() - startTime
             Log.d(TAG, "seedDatabaseIfEmpty: Database verified in ${elapsed}ms. DB is fully populated with subjects, notes, questions, and flashcards.")
             return@withContext
         }
 
         // 1. Seed Subjects if needed
-        if (subjectsCount < 41) {
+        if (subjectsCount < 75) {
             val subjectsList = listOf(
                 // EUEE Natural Science Stream Subjects
                 StudySubject("euee_nat_maths", "Mathematics", "maths", "euee_natural"),
@@ -199,25 +199,45 @@ class StudyRepository(private val dao: EducationDao) : DataRepository {
                 StudySubject("euee_soc_economics", "Economics", "economics", "euee_social"),
                 StudySubject("euee_soc_aptitude", "Aptitude (SAT)", "aptitude", "euee_social"),
 
-                // Freshman Semester I Package
-                StudySubject("freshman_physics", "General Physics (Phys 1011)", "physics", "freshman"),
-                StudySubject("freshman_english_1", "Communicative English I (FLEn 1111)", "english", "freshman"),
-                StudySubject("freshman_emerging_tech", "Emerging Tech (EmTe 1012)", "computer", "freshman"),
-                StudySubject("freshman_anthropology", "Social Anthropology (Anth 1012)", "anthropology", "freshman"),
-                StudySubject("freshman_economics", "Economics (Econ 1011)", "economics", "freshman"),
-                StudySubject("freshman_entrepreneurship", "Entrepreneurship (MGMT 1012)", "business", "freshman"),
-                StudySubject("freshman_civics", "Moral & Civics (MCiE 1012)", "civics", "freshman"),
-                StudySubject("freshman_global_trends", "Global Trends (GlTr-1012)", "geography", "freshman"),
+                // Freshman Natural Science – Semester I
+                StudySubject("freshman_nat_english_1", "Communicative English I (FLEn 1111)", "english", "freshman_natural"),
+                StudySubject("freshman_nat_psychology", "General Psychology (Psyc1011)", "psychology", "freshman_natural"),
+                StudySubject("freshman_nat_geography", "Geography of Ethiopia (GeES 1011)", "geography", "freshman_natural"),
+                StudySubject("freshman_nat_critical_thinking", "Critical Thinking (LoCT 1011)", "psychology", "freshman_natural"),
+                StudySubject("freshman_nat_physical_fitness", "Physical Fitness (SpSc1011)", "fitness", "freshman_natural"),
+                StudySubject("freshman_nat_maths", "Mathematics for Natural Sciences (Math 1011)", "maths", "freshman_natural"),
+                StudySubject("freshman_nat_physics", "General Physics (Phys 1011)", "physics", "freshman_natural"),
+                StudySubject("freshman_nat_history", "History of Ethiopia (HIST 1012)", "history", "freshman_natural"),
 
-                // Freshman Semester II Package
-                StudySubject("freshman_physical_fitness", "Physical Fitness (SpSc1011)", "fitness", "freshman"),
-                StudySubject("freshman_history", "History of Ethiopia (HIST 1012)", "history", "freshman"),
-                StudySubject("freshman_critical_thinking", "Critical Thinking (LoCT 1011)", "psychology", "freshman"),
-                StudySubject("freshman_geography", "Geography of Ethiopia (GeES 1011)", "geography", "freshman"),
-                StudySubject("freshman_inclusiveness", "Inclusiveness (SNIE1112)", "groups", "freshman"),
-                StudySubject("freshman_psychology", "General Psychology (Psyc1011)", "psychology", "freshman"),
-                StudySubject("freshman_english_2", "Communicative English II (FLEn 1122)", "english", "freshman"),
-                StudySubject("freshman_maths", "Mathematics for Social Sciences (Math 1012)", "maths", "freshman"),
+                // Freshman Natural Science – Semester II
+                StudySubject("freshman_nat_applied_maths", "Applied Mathematics I (Math 1041)", "maths", "freshman_natural"),
+                StudySubject("freshman_nat_english_2", "Communicative English II (FLEn 1122)", "english", "freshman_natural"),
+                StudySubject("freshman_nat_computer_programming", "Computer Programming (SECT 1082)", "computer", "freshman_natural"),
+                StudySubject("freshman_nat_entrepreneurship", "Entrepreneurship (MGMT 1012)", "business", "freshman_natural"),
+                StudySubject("freshman_nat_emerging_tech", "Emerging Tech (EmTe 1012)", "computer", "freshman_natural"),
+                StudySubject("freshman_nat_anthropology", "Social Anthropology (Anth 1012)", "anthropology", "freshman_natural"),
+                StudySubject("freshman_nat_civics", "Moral & Civics (MCiE 1012)", "civics", "freshman_natural"),
+                StudySubject("freshman_nat_biology", "General Biology (Bio 1012)", "biology", "freshman_natural"),
+                StudySubject("freshman_nat_chemistry", "General Chemistry (Chem 1012)", "chemistry", "freshman_natural"),
+
+                // Freshman Social Science – Semester I
+                StudySubject("freshman_soc_civics", "Moral & Civics (MCiE 1012)", "civics", "freshman_social"),
+                StudySubject("freshman_soc_anthropology", "Social Anthropology (Anth 1012)", "anthropology", "freshman_social"),
+                StudySubject("freshman_soc_english_1", "Communicative English I (FLEn 1111)", "english", "freshman_social"),
+                StudySubject("freshman_soc_global_trends", "Global Trends (GlTr 1012)", "geography", "freshman_social"),
+                StudySubject("freshman_soc_economics", "Economics (Econ 1011)", "economics", "freshman_social"),
+                StudySubject("freshman_soc_emerging_tech", "Emerging Tech (EmTe 1012)", "computer", "freshman_social"),
+                StudySubject("freshman_soc_entrepreneurship", "Entrepreneurship (MGMT 1012)", "business", "freshman_social"),
+
+                // Freshman Social Science – Semester II
+                StudySubject("freshman_soc_geography", "Geography of Ethiopia (GeES 1011)", "geography", "freshman_social"),
+                StudySubject("freshman_soc_history", "History of Ethiopia (HIST 1012)", "history", "freshman_social"),
+                StudySubject("freshman_soc_inclusiveness", "Inclusiveness (SNIE1112)", "groups", "freshman_social"),
+                StudySubject("freshman_soc_physical_fitness", "Physical Fitness (SpSc1011)", "fitness", "freshman_social"),
+                StudySubject("freshman_soc_english_2", "Communicative English II (FLEn 1122)", "english", "freshman_social"),
+                StudySubject("freshman_soc_psychology", "General Psychology (Psyc1011)", "psychology", "freshman_social"),
+                StudySubject("freshman_soc_maths", "Mathematics for Social Sciences (Math 1012)", "maths", "freshman_social"),
+                StudySubject("freshman_soc_critical_thinking", "Critical Thinking (LoCT 1011)", "psychology", "freshman_social"),
 
                 // AAU UAT Prep Package
                 StudySubject("uat_verbal", "Verbal Reasoning", "english", "aau_uat"),
@@ -455,168 +475,310 @@ class StudyRepository(private val dao: EducationDao) : DataRepository {
 
     private fun getFreshmanNotes(): List<SubjectNote> {
         return listOf(
-            // General Physics (Phys 1011)
-            SubjectNote("fn_phy_c1", "freshman_physics", "Chapter 1", "Vectors & Kinematics in 1D/2D", 
+            // ===== NATURAL SCIENCE – Semester I =====
+            // General Physics (Phys 1011) – Natural only
+            SubjectNote("fn_nat_phy_c1", "freshman_nat_physics", "Chapter 1", "Vectors & Kinematics in 1D/2D", 
                 "General Physics Phys 1011 Chapter 1 covers physical vector quantities, cross and dot products, 2D projectile motion equations, and velocity vectors.", "Chapter 1"),
-            SubjectNote("fn_phy_c2", "freshman_physics", "Chapter 2", "Newton's Laws of Motion & Work-Energy", 
+            SubjectNote("fn_nat_phy_c2", "freshman_nat_physics", "Chapter 2", "Newton's Laws of Motion & Work-Energy", 
                 "Chapter 2 studies Newton's three laws of motion, friction forces, work done by constant and variable forces, and the Work-Kinetic Energy Theorem (W = ΔKE).", "Chapter 2"),
-            SubjectNote("fn_phy_c3", "freshman_physics", "Chapter 3", "Fluid Mechanics & Thermodynamics", 
+            SubjectNote("fn_nat_phy_c3", "freshman_nat_physics", "Chapter 3", "Fluid Mechanics & Thermodynamics", 
                 "Chapter 3 introduces fluid pressure, Pascal's principle, Archimedes' buoyant force principle, ideal gas laws, and laws of thermodynamics.", "Chapter 3"),
-            SubjectNote("fn_phy_c4", "freshman_physics", "Chapter 4", "Electromagnetism & Modern Physics", 
+            SubjectNote("fn_nat_phy_c4", "freshman_nat_physics", "Chapter 4", "Electromagnetism & Modern Physics", 
                 "Chapter 4 covers Coulomb's law, electric potential, Ohm's law, magnetic induction, photons, and quantum energy quantization (E = hf).", "Chapter 4"),
 
-            // Communicative English I (FLEn 1111)
-            SubjectNote("fn_eng1_c1", "freshman_english_1", "Chapter 1", "Grammar & Word Classes", 
+            // Communicative English I (FLEn 1111) – Both tracks
+            SubjectNote("fn_eng1_nat_c1", "freshman_nat_english_1", "Chapter 1", "Grammar & Word Classes", 
                 "Communicative English I Chapter 1 focuses on lexical categories, noun phrases, auxiliary verbs, tenses, and active voice sentence structures.", "Chapter 1"),
-            SubjectNote("fn_eng1_c2", "freshman_english_1", "Chapter 2", "Active vs Passive Transformations", 
+            SubjectNote("fn_eng1_nat_c2", "freshman_nat_english_1", "Chapter 2", "Active vs Passive Transformations", 
                 "Chapter 2 guides active to passive voice conversions across simple, continuous, and perfect verb tenses.", "Chapter 2"),
-            SubjectNote("fn_eng1_c3", "freshman_english_1", "Chapter 3", "Academic Reading Strategies", 
+            SubjectNote("fn_eng1_nat_c3", "freshman_nat_english_1", "Chapter 3", "Academic Reading Strategies", 
                 "Chapter 3 covers skimming, scanning, contextual vocabulary, and identifying main ideas and thesis statements.", "Chapter 3"),
-            SubjectNote("fn_eng1_c4", "freshman_english_1", "Chapter 4", "Paragraph Cohesion & Discourse Markers", 
+            SubjectNote("fn_eng1_nat_c4", "freshman_nat_english_1", "Chapter 4", "Paragraph Cohesion & Discourse Markers", 
+                "Chapter 4 covers paragraph organization, supporting claims, and discourse transition markers (e.g., Furthermore, However, Consequently).", "Chapter 4"),
+            SubjectNote("fn_eng1_soc_c1", "freshman_soc_english_1", "Chapter 1", "Grammar & Word Classes", 
+                "Communicative English I Chapter 1 focuses on lexical categories, noun phrases, auxiliary verbs, tenses, and active voice sentence structures.", "Chapter 1"),
+            SubjectNote("fn_eng1_soc_c2", "freshman_soc_english_1", "Chapter 2", "Active vs Passive Transformations", 
+                "Chapter 2 guides active to passive voice conversions across simple, continuous, and perfect verb tenses.", "Chapter 2"),
+            SubjectNote("fn_eng1_soc_c3", "freshman_soc_english_1", "Chapter 3", "Academic Reading Strategies", 
+                "Chapter 3 covers skimming, scanning, contextual vocabulary, and identifying main ideas and thesis statements.", "Chapter 3"),
+            SubjectNote("fn_eng1_soc_c4", "freshman_soc_english_1", "Chapter 4", "Paragraph Cohesion & Discourse Markers", 
                 "Chapter 4 covers paragraph organization, supporting claims, and discourse transition markers (e.g., Furthermore, However, Consequently).", "Chapter 4"),
 
-            // Emerging Tech (EmTe 1012)
-            SubjectNote("fn_emtech_c1", "freshman_emerging_tech", "Chapter 1", "Introduction to Emerging Tech (AI, IoT, Cloud)", 
-                "Emerging Tech Chapter 1 introduces Artificial Intelligence, Internet of Things sensor grids, and cloud server infrastructures.", "Chapter 1"),
-            SubjectNote("fn_emtech_c2", "freshman_emerging_tech", "Chapter 2", "Data Science & Big Data Analytics", 
-                "Chapter 2 details big data characteristics (Volume, Velocity, Variety), machine learning models, and predictive data analytics.", "Chapter 2"),
-            SubjectNote("fn_emtech_c3", "freshman_emerging_tech", "Chapter 3", "Blockchain & Decentralized Systems", 
-                "Chapter 3 explores immutable distributed ledgers, smart contracts, cryptographic hashes, and peer-to-peer security.", "Chapter 3"),
-            SubjectNote("fn_emtech_c4", "freshman_emerging_tech", "Chapter 4", "Cybersecurity & Ethics in Emerging Tech", 
-                "Chapter 4 analyzes digital threat vectors, encryption, privacy laws, and ethical implications of autonomous systems.", "Chapter 4"),
+            // General Psychology (Psyc1011) – Both tracks
+            SubjectNote("fn_psych_nat_c1", "freshman_nat_psychology", "Chapter 1", "Foundations of General Psychology", 
+                "Psychology Chapter 1 covers research methods, major psychological perspectives, and neurobiology.", "Chapter 1"),
+            SubjectNote("fn_psych_nat_c2", "freshman_nat_psychology", "Chapter 2", "Sensation, Perception & Learning", 
+                "Chapter 2 details sensory processing, perceptual organization, and Pavlovian Classical & Operant Conditioning.", "Chapter 2"),
+            SubjectNote("fn_psych_nat_c3", "freshman_nat_psychology", "Chapter 3", "Memory Systems & Cognitive Intelligence", 
+                "Chapter 3 covers encoding, short-term/long-term memory consolidation, retrieval, and intelligence metrics.", "Chapter 3"),
+            SubjectNote("fn_psych_nat_c4", "freshman_nat_psychology", "Chapter 4", "Personality, Stress & Mental Health", 
+                "Chapter 4 explores personality theories, stress coping mechanisms, and mental health awareness.", "Chapter 4"),
+            SubjectNote("fn_psych_soc_c1", "freshman_soc_psychology", "Chapter 1", "Foundations of General Psychology", 
+                "Psychology Chapter 1 covers research methods, major psychological perspectives, and neurobiology.", "Chapter 1"),
+            SubjectNote("fn_psych_soc_c2", "freshman_soc_psychology", "Chapter 2", "Sensation, Perception & Learning", 
+                "Chapter 2 details sensory processing, perceptual organization, and Pavlovian Classical & Operant Conditioning.", "Chapter 2"),
+            SubjectNote("fn_psych_soc_c3", "freshman_soc_psychology", "Chapter 3", "Memory Systems & Cognitive Intelligence", 
+                "Chapter 3 covers encoding, short-term/long-term memory consolidation, retrieval, and intelligence metrics.", "Chapter 3"),
+            SubjectNote("fn_psych_soc_c4", "freshman_soc_psychology", "Chapter 4", "Personality, Stress & Mental Health", 
+                "Chapter 4 explores personality theories, stress coping mechanisms, and mental health awareness.", "Chapter 4"),
 
-            // Social Anthropology (Anth 1012)
-            SubjectNote("fn_anth_c1", "freshman_anthropology", "Chapter 1", "Scope & Four Subfields of Anthropology", 
-                "Social Anthropology Chapter 1 covers cultural, biological, archaeological, and linguistic anthropology subfields.", "Chapter 1"),
-            SubjectNote("fn_anth_c2", "freshman_anthropology", "Chapter 2", "Culture, Ethnocentrism & Relativism", 
-                "Chapter 2 examines cultural mechanisms, avoiding ethnocentric bias, and applying cultural relativism.", "Chapter 2"),
-            SubjectNote("fn_anth_c3", "freshman_anthropology", "Chapter 3", "Human Origins & Ethiopian Fossil Discoveries", 
-                "Chapter 3 details hominid evolution, Australopithecus afarensis (Lucy/Dinkinesh), and Afar Rift Valley fossil heritage.", "Chapter 3"),
-            SubjectNote("fn_anth_c4", "freshman_anthropology", "Chapter 4", "Kinship, Marriage & Social Organization", 
-                "Chapter 4 covers family descent systems, marital traditions, economic reciprocity, and social stratification.", "Chapter 4"),
+            // Geography of Ethiopia (GeES 1011) – Both tracks
+            SubjectNote("fn_geo_nat_c1", "freshman_nat_geography", "Chapter 1", "Geological Structure & Topography of Ethiopia", 
+                "Geography Chapter 1 covers Rift Valley formation, highland plateaus, and topographic landforms.", "Chapter 1"),
+            SubjectNote("fn_geo_nat_c2", "freshman_nat_geography", "Chapter 2", "Climate Systems & Drainage Basins", 
+                "Chapter 2 details climate zones (Dega, Weyna Dega, Kolla) and major river basins (Abay, Awash, Omo).", "Chapter 2"),
+            SubjectNote("fn_geo_nat_c3", "freshman_nat_geography", "Chapter 3", "Natural Resources & Conservation", 
+                "Chapter 3 covers soil types, natural vegetation, wildlife parks, and soil erosion control strategies.", "Chapter 3"),
+            SubjectNote("fn_geo_nat_c4", "freshman_nat_geography", "Chapter 4", "Demographics & Economic Sectors", 
+                "Chapter 4 examines population distribution, urbanization, agricultural systems, and manufacturing industries.", "Chapter 4"),
+            SubjectNote("fn_geo_soc_c1", "freshman_soc_geography", "Chapter 1", "Geological Structure & Topography of Ethiopia", 
+                "Geography Chapter 1 covers Rift Valley formation, highland plateaus, and topographic landforms.", "Chapter 1"),
+            SubjectNote("fn_geo_soc_c2", "freshman_soc_geography", "Chapter 2", "Climate Systems & Drainage Basins", 
+                "Chapter 2 details climate zones (Dega, Weyna Dega, Kolla) and major river basins (Abay, Awash, Omo).", "Chapter 2"),
+            SubjectNote("fn_geo_soc_c3", "freshman_soc_geography", "Chapter 3", "Natural Resources & Conservation", 
+                "Chapter 3 covers soil types, natural vegetation, wildlife parks, and soil erosion control strategies.", "Chapter 3"),
+            SubjectNote("fn_geo_soc_c4", "freshman_soc_geography", "Chapter 4", "Demographics & Economic Sectors", 
+                "Chapter 4 examines population distribution, urbanization, agricultural systems, and manufacturing industries.", "Chapter 4"),
 
-            // Economics (Econ 1011)
-            SubjectNote("fn_econ_c1", "freshman_economics", "Chapter 1", "Scarcity & Opportunity Cost", 
+            // Critical Thinking (LoCT 1011) – Both tracks
+            SubjectNote("fn_loct_nat_c1", "freshman_nat_critical_thinking", "Chapter 1", "Logic Fundamentals & Argument Structure", 
+                "Logic & Critical Thinking Chapter 1 defines premises, conclusions, and identifying logical arguments.", "Chapter 1"),
+            SubjectNote("fn_loct_nat_c2", "freshman_nat_critical_thinking", "Chapter 2", "Deductive vs Inductive Reasoning", 
+                "Chapter 2 contrasts validity and soundness in deduction with strength and cogency in induction.", "Chapter 2"),
+            SubjectNote("fn_loct_nat_c3", "freshman_nat_critical_thinking", "Chapter 3", "Informal Fallacies & Cognitive Biases", 
+                "Chapter 3 analyzes informal logical fallacies like Ad Hominem, Straw Man, Slippery Slope, and False Dilemma.", "Chapter 3"),
+            SubjectNote("fn_loct_nat_c4", "freshman_nat_critical_thinking", "Chapter 4", "Categorical Syllogisms & Venn Logic", 
+                "Chapter 4 covers categorical propositions, standard syllogisms, and evaluating validity using Venn diagrams.", "Chapter 4"),
+            SubjectNote("fn_loct_soc_c1", "freshman_soc_critical_thinking", "Chapter 1", "Logic Fundamentals & Argument Structure", 
+                "Logic & Critical Thinking Chapter 1 defines premises, conclusions, and identifying logical arguments.", "Chapter 1"),
+            SubjectNote("fn_loct_soc_c2", "freshman_soc_critical_thinking", "Chapter 2", "Deductive vs Inductive Reasoning", 
+                "Chapter 2 contrasts validity and soundness in deduction with strength and cogency in induction.", "Chapter 2"),
+            SubjectNote("fn_loct_soc_c3", "freshman_soc_critical_thinking", "Chapter 3", "Informal Fallacies & Cognitive Biases", 
+                "Chapter 3 analyzes informal logical fallacies like Ad Hominem, Straw Man, Slippery Slope, and False Dilemma.", "Chapter 3"),
+            SubjectNote("fn_loct_soc_c4", "freshman_soc_critical_thinking", "Chapter 4", "Categorical Syllogisms & Venn Logic", 
+                "Chapter 4 covers categorical propositions, standard syllogisms, and evaluating validity using Venn diagrams.", "Chapter 4"),
+
+            // Physical Fitness (SpSc1011) – Both tracks
+            SubjectNote("fn_spsc_nat_c1", "freshman_nat_physical_fitness", "Chapter 1", "Health-Related Physical Fitness", 
+                "Physical Fitness Chapter 1 covers muscular endurance, strength, flexibility, body composition, and cardiorespiratory endurance.", "Chapter 1"),
+            SubjectNote("fn_spsc_nat_c2", "freshman_nat_physical_fitness", "Chapter 2", "Skill-Related Fitness & Exercise Physiology", 
+                "Chapter 2 covers speed, agility, balance, power, reaction time, and physiological exercise responses.", "Chapter 2"),
+            SubjectNote("fn_spsc_nat_c3", "freshman_nat_physical_fitness", "Chapter 3", "Nutrition, Wellness & Lifestyle Health", 
+                "Chapter 3 explores balanced nutrition, caloric needs, hydration, and preventing lifestyle chronic diseases.", "Chapter 3"),
+            SubjectNote("fn_spsc_nat_c4", "freshman_nat_physical_fitness", "Chapter 4", "Workout Program Design & Injury Safety", 
+                "Chapter 4 guides workout program planning using FITT principles (Frequency, Intensity, Time, Type) and safety.", "Chapter 4"),
+            SubjectNote("fn_spsc_soc_c1", "freshman_soc_physical_fitness", "Chapter 1", "Health-Related Physical Fitness", 
+                "Physical Fitness Chapter 1 covers muscular endurance, strength, flexibility, body composition, and cardiorespiratory endurance.", "Chapter 1"),
+            SubjectNote("fn_spsc_soc_c2", "freshman_soc_physical_fitness", "Chapter 2", "Skill-Related Fitness & Exercise Physiology", 
+                "Chapter 2 covers speed, agility, balance, power, reaction time, and physiological exercise responses.", "Chapter 2"),
+            SubjectNote("fn_spsc_soc_c3", "freshman_soc_physical_fitness", "Chapter 3", "Nutrition, Wellness & Lifestyle Health", 
+                "Chapter 3 explores balanced nutrition, caloric needs, hydration, and preventing lifestyle chronic diseases.", "Chapter 3"),
+            SubjectNote("fn_spsc_soc_c4", "freshman_soc_physical_fitness", "Chapter 4", "Workout Program Design & Injury Safety", 
+                "Chapter 4 guides workout program planning using FITT principles (Frequency, Intensity, Time, Type) and safety.", "Chapter 4"),
+
+            // Mathematics for Natural Sciences (Math 1011) – Natural only
+            SubjectNote("fn_nmath_c1", "freshman_nat_maths", "Chapter 1", "Algebra & Number Theory", 
+                "Natural Science Math Chapter 1 covers number systems, algebraic expressions, polynomial operations, and factorization.", "Chapter 1"),
+            SubjectNote("fn_nmath_c2", "freshman_nat_maths", "Chapter 2", "Functions & Graphs", 
+                "Chapter 2 studies linear, quadratic, exponential, and logarithmic functions with graphing techniques.", "Chapter 2"),
+            SubjectNote("fn_nmath_c3", "freshman_nat_maths", "Chapter 3", "Trigonometry & Analytical Geometry", 
+                "Chapter 3 covers trigonometric identities, unit circle, sine/cosine rules, and coordinate geometry.", "Chapter 3"),
+            SubjectNote("fn_nmath_c4", "freshman_nat_maths", "Chapter 4", "Calculus Introduction", 
+                "Chapter 4 introduces limits, derivatives, basic integration, and applications in natural sciences.", "Chapter 4"),
+
+            // History of Ethiopia (HIST 1012) – Both tracks
+            SubjectNote("fn_hist_nat_c1", "freshman_nat_history", "Chapter 1", "Ancient Peoples & Civilizations in the Horn", 
+                "History Chapter 1 covers human origins, early agricultural societies, and the Aksumite civilization.", "Chapter 1"),
+            SubjectNote("fn_hist_nat_c2", "freshman_nat_history", "Chapter 2", "Medieval Dynasties & Trade Networks", 
+                "Chapter 2 examines the Zagwe dynasty, Solomonic restoration, Gondarine era, and regional trade routes.", "Chapter 2"),
+            SubjectNote("fn_hist_nat_c3", "freshman_nat_history", "Chapter 3", "19th Century Unification & Battle of Adwa", 
+                "Chapter 3 details Emperor Tewodros II, Emperor Menelik II, state centralization, and the Adwa victory (1896).", "Chapter 3"),
+            SubjectNote("fn_hist_nat_c4", "freshman_nat_history", "Chapter 4", "20th Century Ethiopia & Pan-African Leadership", 
+                "Chapter 4 covers modern state consolidation, anti-colonial resistance, OAU founding, and contemporary history.", "Chapter 4"),
+            SubjectNote("fn_hist_soc_c1", "freshman_soc_history", "Chapter 1", "Ancient Peoples & Civilizations in the Horn", 
+                "History Chapter 1 covers human origins, early agricultural societies, and the Aksumite civilization.", "Chapter 1"),
+            SubjectNote("fn_hist_soc_c2", "freshman_soc_history", "Chapter 2", "Medieval Dynasties & Trade Networks", 
+                "Chapter 2 examines the Zagwe dynasty, Solomonic restoration, Gondarine era, and regional trade routes.", "Chapter 2"),
+            SubjectNote("fn_hist_soc_c3", "freshman_soc_history", "Chapter 3", "19th Century Unification & Battle of Adwa", 
+                "Chapter 3 details Emperor Tewodros II, Emperor Menelik II, state centralization, and the Adwa victory (1896).", "Chapter 3"),
+            SubjectNote("fn_hist_soc_c4", "freshman_soc_history", "Chapter 4", "20th Century Ethiopia & Pan-African Leadership", 
+                "Chapter 4 covers modern state consolidation, anti-colonial resistance, OAU founding, and contemporary history.", "Chapter 4"),
+
+            // Economics (Econ 1011) – Social only
+            SubjectNote("fn_econ_c1", "freshman_soc_economics", "Chapter 1", "Scarcity & Opportunity Cost", 
                 "Economics Chapter 1 covers scarcity, choice, opportunity cost, and the Production Possibility Curve (PPC).", "Chapter 1"),
-            SubjectNote("fn_econ_c2", "freshman_economics", "Chapter 2", "Demand, Supply & Market Equilibrium", 
+            SubjectNote("fn_econ_c2", "freshman_soc_economics", "Chapter 2", "Demand, Supply & Market Equilibrium", 
                 "Chapter 2 studies the Law of Demand, Law of Supply, price determination, and price elasticity.", "Chapter 2"),
-            SubjectNote("fn_econ_c3", "freshman_economics", "Chapter 3", "Theory of Production & Cost Functions", 
+            SubjectNote("fn_econ_c3", "freshman_soc_economics", "Chapter 3", "Theory of Production & Cost Functions", 
                 "Chapter 3 examines short-run vs long-run production, marginal cost, total cost, and profit maximization.", "Chapter 3"),
-            SubjectNote("fn_econ_c4", "freshman_economics", "Chapter 4", "Macroeconomic Indicators & Monetary Policy", 
+            SubjectNote("fn_econ_c4", "freshman_soc_economics", "Chapter 4", "Macroeconomic Indicators & Monetary Policy", 
                 "Chapter 4 tracks Gross Domestic Product (GDP), inflation rates, unemployment, and fiscal/monetary controls.", "Chapter 4"),
 
-            // Entrepreneurship (MGMT 1012)
-            SubjectNote("fn_ent_c1", "freshman_entrepreneurship", "Chapter 1", "Entrepreneurial Mindset & Opportunity Identification", 
+            // Entrepreneurship (MGMT 1012) – Both tracks
+            SubjectNote("fn_ent_nat_c1", "freshman_nat_entrepreneurship", "Chapter 1", "Entrepreneurial Mindset & Opportunity Identification", 
                 "Entrepreneurship Chapter 1 covers spotting market opportunities, risk management, and startup innovation.", "Chapter 1"),
-            SubjectNote("fn_ent_c2", "freshman_entrepreneurship", "Chapter 2", "Feasibility Study & Business Plan Development", 
+            SubjectNote("fn_ent_nat_c2", "freshman_nat_entrepreneurship", "Chapter 2", "Feasibility Study & Business Plan Development", 
                 "Chapter 2 details business plan components, executive summaries, market feasibility, and operational setups.", "Chapter 2"),
-            SubjectNote("fn_ent_c3", "freshman_entrepreneurship", "Chapter 3", "Financial Planning & Capital Mobilization", 
+            SubjectNote("fn_ent_nat_c3", "freshman_nat_entrepreneurship", "Chapter 3", "Financial Planning & Capital Mobilization", 
                 "Chapter 3 covers startup seed funding, cash flow projections, venture capital, and break-even calculations.", "Chapter 3"),
-            SubjectNote("fn_ent_c4", "freshman_entrepreneurship", "Chapter 4", "Marketing Strategy & Startup Growth", 
+            SubjectNote("fn_ent_nat_c4", "freshman_nat_entrepreneurship", "Chapter 4", "Marketing Strategy & Startup Growth", 
+                "Chapter 4 examines target market segmentation, branding, sales channels, and customer retention strategies.", "Chapter 4"),
+            SubjectNote("fn_ent_soc_c1", "freshman_soc_entrepreneurship", "Chapter 1", "Entrepreneurial Mindset & Opportunity Identification", 
+                "Entrepreneurship Chapter 1 covers spotting market opportunities, risk management, and startup innovation.", "Chapter 1"),
+            SubjectNote("fn_ent_soc_c2", "freshman_soc_entrepreneurship", "Chapter 2", "Feasibility Study & Business Plan Development", 
+                "Chapter 2 details business plan components, executive summaries, market feasibility, and operational setups.", "Chapter 2"),
+            SubjectNote("fn_ent_soc_c3", "freshman_soc_entrepreneurship", "Chapter 3", "Financial Planning & Capital Mobilization", 
+                "Chapter 3 covers startup seed funding, cash flow projections, venture capital, and break-even calculations.", "Chapter 3"),
+            SubjectNote("fn_ent_soc_c4", "freshman_soc_entrepreneurship", "Chapter 4", "Marketing Strategy & Startup Growth", 
                 "Chapter 4 examines target market segmentation, branding, sales channels, and customer retention strategies.", "Chapter 4"),
 
-            // Moral & Civics (MCiE 1012)
-            SubjectNote("fn_civics_c1", "freshman_civics", "Chapter 1", "Ethics, Morality & Democratic Values", 
+            // Moral & Civics (MCiE 1012) – Both tracks
+            SubjectNote("fn_civics_nat_c1", "freshman_nat_civics", "Chapter 1", "Ethics, Morality & Democratic Values", 
                 "Moral and Civics Chapter 1 covers moral philosophy, ethical judgment, and core democratic principles.", "Chapter 1"),
-            SubjectNote("fn_civics_c2", "freshman_civics", "Chapter 2", "Constitutional Federalism in Ethiopia", 
+            SubjectNote("fn_civics_nat_c2", "freshman_nat_civics", "Chapter 2", "Constitutional Federalism in Ethiopia", 
                 "Chapter 2 studies constitutional supremacy, division of federal/state powers, and rule of law.", "Chapter 2"),
-            SubjectNote("fn_civics_c3", "freshman_civics", "Chapter 3", "Human Rights & Civic Responsibilities", 
+            SubjectNote("fn_civics_nat_c3", "freshman_nat_civics", "Chapter 3", "Human Rights & Civic Responsibilities", 
                 "Chapter 3 covers fundamental human rights protections, legal equality, tax compliance, and civic participation.", "Chapter 3"),
-            SubjectNote("fn_civics_c4", "freshman_civics", "Chapter 4", "Peace Building & Indigenous Conflict Resolution", 
+            SubjectNote("fn_civics_nat_c4", "freshman_nat_civics", "Chapter 4", "Peace Building & Indigenous Conflict Resolution", 
+                "Chapter 4 explores traditional dispute resolution mechanisms, peace-building, and social cohesion.", "Chapter 4"),
+            SubjectNote("fn_civics_soc_c1", "freshman_soc_civics", "Chapter 1", "Ethics, Morality & Democratic Values", 
+                "Moral and Civics Chapter 1 covers moral philosophy, ethical judgment, and core democratic principles.", "Chapter 1"),
+            SubjectNote("fn_civics_soc_c2", "freshman_soc_civics", "Chapter 2", "Constitutional Federalism in Ethiopia", 
+                "Chapter 2 studies constitutional supremacy, division of federal/state powers, and rule of law.", "Chapter 2"),
+            SubjectNote("fn_civics_soc_c3", "freshman_soc_civics", "Chapter 3", "Human Rights & Civic Responsibilities", 
+                "Chapter 3 covers fundamental human rights protections, legal equality, tax compliance, and civic participation.", "Chapter 3"),
+            SubjectNote("fn_civics_soc_c4", "freshman_soc_civics", "Chapter 4", "Peace Building & Indigenous Conflict Resolution", 
                 "Chapter 4 explores traditional dispute resolution mechanisms, peace-building, and social cohesion.", "Chapter 4"),
 
-            // Global Trends (GlTr-1012)
-            SubjectNote("fn_global_c1", "freshman_global_trends", "Chapter 1", "Vectors of Globalization & State Sovereignty", 
+            // Global Trends (GlTr 1012) – Social only
+            SubjectNote("fn_global_c1", "freshman_soc_global_trends", "Chapter 1", "Vectors of Globalization & State Sovereignty", 
                 "Global Trends Chapter 1 analyzes economic/technological globalization and evolving state sovereignty.", "Chapter 1"),
-            SubjectNote("fn_global_c2", "freshman_global_trends", "Chapter 2", "Foreign Policy & Ethiopian Diplomacy", 
+            SubjectNote("fn_global_c2", "freshman_soc_global_trends", "Chapter 2", "Foreign Policy & Ethiopian Diplomacy", 
                 "Chapter 2 covers foreign policy objectives, diplomatic strategies, and regional Horn of Africa relations.", "Chapter 2"),
-            SubjectNote("fn_global_c3", "freshman_global_trends", "Chapter 3", "International Political Economy & Trade", 
+            SubjectNote("fn_global_c3", "freshman_soc_global_trends", "Chapter 3", "International Political Economy & Trade", 
                 "Chapter 3 studies international trade organizations, economic integration, and global market dynamics.", "Chapter 3"),
-            SubjectNote("fn_global_c4", "freshman_global_trends", "Chapter 4", "Global Governance & International Organizations", 
+            SubjectNote("fn_global_c4", "freshman_soc_global_trends", "Chapter 4", "Global Governance & International Organizations", 
                 "Chapter 4 examines the United Nations, African Union, and global security frameworks.", "Chapter 4")
         )
     }
 
     private fun getSemester2Notes(): List<SubjectNote> {
         return listOf(
-            // Physical Fitness (SpSc1011)
-            SubjectNote("fn_spsc_c1", "freshman_physical_fitness", "Chapter 1", "Health-Related Physical Fitness", 
-                "Physical Fitness Chapter 1 covers muscular endurance, strength, flexibility, body composition, and cardiorespiratory endurance.", "Chapter 1"),
-            SubjectNote("fn_spsc_c2", "freshman_physical_fitness", "Chapter 2", "Skill-Related Fitness & Exercise Physiology", 
-                "Chapter 2 covers speed, agility, balance, power, reaction time, and physiological exercise responses.", "Chapter 2"),
-            SubjectNote("fn_spsc_c3", "freshman_physical_fitness", "Chapter 3", "Nutrition, Wellness & Lifestyle Health", 
-                "Chapter 3 explores balanced nutrition, caloric needs, hydration, and preventing lifestyle chronic diseases.", "Chapter 3"),
-            SubjectNote("fn_spsc_c4", "freshman_physical_fitness", "Chapter 4", "Workout Program Design & Injury Safety", 
-                "Chapter 4 guides workout program planning using FITT principles (Frequency, Intensity, Time, Type) and safety.", "Chapter 4"),
+            // ===== NATURAL SCIENCE – Semester II =====
+            // Applied Mathematics I (Math 1041) – Natural only
+            SubjectNote("fn_nat_amath_c1", "freshman_nat_applied_maths", "Chapter 1", "Vectors and Vector Spaces", 
+                "Applied Mathematics I Chapter 1 covers scalar and vector quantities in ℝ² and ℝ³, vector addition, scalar multiplication, parallel and collinear vectors, located and position vectors, and linear independence.", "Chapter 1"),
+            SubjectNote("fn_nat_amath_c2", "freshman_nat_applied_maths", "Chapter 2", "Matrices, Determinants & Linear Equations", 
+                "Chapter 2 introduces matrices, basic matrix operations, determinants, Cramer's rule, inverse matrices, and solving systems of linear equations.", "Chapter 2"),
+            SubjectNote("fn_nat_amath_c3", "freshman_nat_applied_maths", "Chapter 3", "Systems of Linear Equations", 
+                "Chapter 3 covers Gaussian elimination, row echelon form, reduced row echelon form, matrix rank, and homogeneous systems.", "Chapter 3"),
+            SubjectNote("fn_nat_amath_c4", "freshman_nat_applied_maths", "Chapter 4", "Limit and Continuity", 
+                "Chapter 4 examines limit evaluations, one-sided limits, squeeze theorem, continuity of functions, and properties of continuous functions.", "Chapter 4"),
+            SubjectNote("fn_nat_amath_c5", "freshman_nat_applied_maths", "Chapter 5", "Differentiation & Integration", 
+                "Chapter 5 covers derivative rules, chain rule, implicit differentiation, optimization, integration techniques, area calculations, volumes of revolution, and arc length.", "Chapter 5"),
 
-            // History of Ethiopia and the Horn (HIST 1012)
-            SubjectNote("fn_hist_c1", "freshman_history", "Chapter 1", "Ancient Peoples & Civilizations in the Horn", 
-                "History Chapter 1 covers human origins, early agricultural societies, and the Aksumite civilization.", "Chapter 1"),
-            SubjectNote("fn_hist_c2", "freshman_history", "Chapter 2", "Medieval Dynasties & Trade Networks", 
-                "Chapter 2 examines the Zagwe dynasty, Solomonic restoration, Gondarine era, and regional trade routes.", "Chapter 2"),
-            SubjectNote("fn_hist_c3", "freshman_history", "Chapter 3", "19th Century Unification & Battle of Adwa", 
-                "Chapter 3 details Emperor Tewodros II, Emperor Menelik II, state centralization, and the Adwa victory (1896).", "Chapter 3"),
-            SubjectNote("fn_hist_c4", "freshman_history", "Chapter 4", "20th Century Ethiopia & Pan-African Leadership", 
-                "Chapter 4 covers modern state consolidation, anti-colonial resistance, OAU founding, and contemporary history.", "Chapter 4"),
-
-            // Critical Thinking (LoCT 1011)
-            SubjectNote("fn_loct_c1", "freshman_critical_thinking", "Chapter 1", "Logic Fundamentals & Argument Structure", 
-                "Logic & Critical Thinking Chapter 1 defines premises, conclusions, and identifying logical arguments.", "Chapter 1"),
-            SubjectNote("fn_loct_c2", "freshman_critical_thinking", "Chapter 2", "Deductive vs Inductive Reasoning", 
-                "Chapter 2 contrasts validity and soundness in deduction with strength and cogency in induction.", "Chapter 2"),
-            SubjectNote("fn_loct_c3", "freshman_critical_thinking", "Chapter 3", "Informal Fallacies & Cognitive Biases", 
-                "Chapter 3 analyzes informal logical fallacies like Ad Hominem, Straw Man, Slippery Slope, and False Dilemma.", "Chapter 3"),
-            SubjectNote("fn_loct_c4", "freshman_critical_thinking", "Chapter 4", "Categorical Syllogisms & Venn Logic", 
-                "Chapter 4 covers categorical propositions, standard syllogisms, and evaluating validity using Venn diagrams.", "Chapter 4"),
-
-            // Geography of Ethiopia (GeES 1011)
-            SubjectNote("fn_geob_c1", "freshman_geography", "Chapter 1", "Geological Structure & Topography of Ethiopia", 
-                "Geography Chapter 1 covers Rift Valley formation, highland plateaus, and topographic landforms.", "Chapter 1"),
-            SubjectNote("fn_geob_c2", "freshman_geography", "Chapter 2", "Climate Systems & Drainage Basins", 
-                "Chapter 2 details climate zones (Dega, Weyna Dega, Kolla) and major river basins (Abay, Awash, Omo).", "Chapter 2"),
-            SubjectNote("fn_geob_c3", "freshman_geography", "Chapter 3", "Natural Resources & Conservation", 
-                "Chapter 3 covers soil types, natural vegetation, wildlife parks, and soil erosion control strategies.", "Chapter 3"),
-            SubjectNote("fn_geob_c4", "freshman_geography", "Chapter 4", "Demographics & Economic Sectors", 
-                "Chapter 4 examines population distribution, urbanization, agricultural systems, and manufacturing industries.", "Chapter 4"),
-
-            // Inclusiveness (SNIE 1112)
-            SubjectNote("fn_incl_c1", "freshman_inclusiveness", "Chapter 1", "Foundations of Inclusiveness & Special Needs", 
-                "Inclusiveness Chapter 1 covers human rights models of disability and creating accessible social environments.", "Chapter 1"),
-            SubjectNote("fn_incl_c2", "freshman_inclusiveness", "Chapter 2", "Types of Impairments & Assessment", 
-                "Chapter 2 details visual, hearing, motor, intellectual, and specific learning impairments.", "Chapter 2"),
-            SubjectNote("fn_incl_c3", "freshman_inclusiveness", "Chapter 3", "Inclusive Accommodations & Assistive Tech", 
-                "Chapter 3 explores physical accessibility modifications, reasonable accommodations, and assistive tools.", "Chapter 3"),
-            SubjectNote("fn_incl_c4", "freshman_inclusiveness", "Chapter 4", "National Policies & Inclusive Culture", 
-                "Chapter 4 covers legal protections, UN conventions, and fostering an inclusive institutional culture.", "Chapter 4"),
-
-            // General Psychology (Psyc1011)
-            SubjectNote("fn_psych_c1", "freshman_psychology", "Chapter 1", "Foundations of General Psychology", 
-                "Psychology Chapter 1 covers research methods, major psychological perspectives, and neurobiology.", "Chapter 1"),
-            SubjectNote("fn_psych_c2", "freshman_psychology", "Chapter 2", "Sensation, Perception & Learning", 
-                "Chapter 2 details sensory processing, perceptual organization, and Pavlovian Classical & Operant Conditioning.", "Chapter 2"),
-            SubjectNote("fn_psych_c3", "freshman_psychology", "Chapter 3", "Memory Systems & Cognitive Intelligence", 
-                "Chapter 3 covers encoding, short-term/long-term memory consolidation, retrieval, and intelligence metrics.", "Chapter 3"),
-            SubjectNote("fn_psych_c4", "freshman_psychology", "Chapter 4", "Personality, Stress & Mental Health", 
-                "Chapter 4 explores personality theories, stress coping mechanisms, and mental health awareness.", "Chapter 4"),
-
-            // Communicative English II (FLEn 1122)
-            SubjectNote("fn_eng2_c1", "freshman_english_2", "Chapter 1", "Academic Essay Writing Process", 
+            // Communicative English II (FLEn 1122) – Both tracks
+            SubjectNote("fn_eng2_nat_c1", "freshman_nat_english_2", "Chapter 1", "Academic Essay Writing Process", 
                 "Communicative English II Chapter 1 covers pre-writing techniques, thesis formulation, and essay drafting.", "Chapter 1"),
-            SubjectNote("fn_eng2_c2", "freshman_english_2", "Chapter 2", "Argumentative & Expository Models", 
+            SubjectNote("fn_eng2_nat_c2", "freshman_nat_english_2", "Chapter 2", "Argumentative & Expository Models", 
                 "Chapter 2 details constructing persuasive claims, supporting evidence, and counter-argument rebuttals.", "Chapter 2"),
-            SubjectNote("fn_eng2_c3", "freshman_english_2", "Chapter 3", "Research Reports & Literature Reviews", 
+            SubjectNote("fn_eng2_nat_c3", "freshman_nat_english_2", "Chapter 3", "Research Reports & Literature Reviews", 
                 "Chapter 3 guides synthesizing literature, summarizing academic journals, and technical report structure.", "Chapter 3"),
-            SubjectNote("fn_eng2_c4", "freshman_english_2", "Chapter 4", "Citation Formats (APA/MLA) & Integrity", 
+            SubjectNote("fn_eng2_nat_c4", "freshman_nat_english_2", "Chapter 4", "Citation Formats (APA/MLA) & Integrity", 
+                "Chapter 4 covers in-text citations, reference lists, direct quotes, and avoiding academic plagiarism.", "Chapter 4"),
+            SubjectNote("fn_eng2_soc_c1", "freshman_soc_english_2", "Chapter 1", "Academic Essay Writing Process", 
+                "Communicative English II Chapter 1 covers pre-writing techniques, thesis formulation, and essay drafting.", "Chapter 1"),
+            SubjectNote("fn_eng2_soc_c2", "freshman_soc_english_2", "Chapter 2", "Argumentative & Expository Models", 
+                "Chapter 2 details constructing persuasive claims, supporting evidence, and counter-argument rebuttals.", "Chapter 2"),
+            SubjectNote("fn_eng2_soc_c3", "freshman_soc_english_2", "Chapter 3", "Research Reports & Literature Reviews", 
+                "Chapter 3 guides synthesizing literature, summarizing academic journals, and technical report structure.", "Chapter 3"),
+            SubjectNote("fn_eng2_soc_c4", "freshman_soc_english_2", "Chapter 4", "Citation Formats (APA/MLA) & Integrity", 
                 "Chapter 4 covers in-text citations, reference lists, direct quotes, and avoiding academic plagiarism.", "Chapter 4"),
 
-            // Mathematics for Social Sciences (Math 1012)
-            SubjectNote("fn_maths_c1", "freshman_maths", "Chapter 1", "Mathematical Logic & Propositions", 
+            // Computer Programming (SECT 1082) – Natural only
+            SubjectNote("fn_nat_prog_c1", "freshman_nat_computer_programming", "Chapter 1", "Introduction to Programming & Algorithms", 
+                "Computer Programming Chapter 1 covers computational thinking, pseudocode, flowcharts, and basic algorithm design.", "Chapter 1"),
+            SubjectNote("fn_nat_prog_c2", "freshman_nat_computer_programming", "Chapter 2", "Variables, Data Types & Operators", 
+                "Chapter 2 introduces variables, primitive data types, arithmetic/comparison operators, and input/output.", "Chapter 2"),
+            SubjectNote("fn_nat_prog_c3", "freshman_nat_computer_programming", "Chapter 3", "Control Structures & Loops", 
+                "Chapter 3 covers if-else conditionals, switch statements, for/while loops, and nested iterations.", "Chapter 3"),
+            SubjectNote("fn_nat_prog_c4", "freshman_nat_computer_programming", "Chapter 4", "Functions & Arrays", 
+                "Chapter 4 examines function definitions, parameter passing, 1D/2D arrays, and basic string manipulation.", "Chapter 4"),
+
+            // Emerging Tech (EmTe 1012) – Both tracks
+            SubjectNote("fn_emtech_nat_c1", "freshman_nat_emerging_tech", "Chapter 1", "Introduction to Emerging Tech (AI, IoT, Cloud)", 
+                "Emerging Tech Chapter 1 introduces Artificial Intelligence, Internet of Things sensor grids, and cloud server infrastructures.", "Chapter 1"),
+            SubjectNote("fn_emtech_nat_c2", "freshman_nat_emerging_tech", "Chapter 2", "Data Science & Big Data Analytics", 
+                "Chapter 2 details big data characteristics (Volume, Velocity, Variety), machine learning models, and predictive data analytics.", "Chapter 2"),
+            SubjectNote("fn_emtech_nat_c3", "freshman_nat_emerging_tech", "Chapter 3", "Blockchain & Decentralized Systems", 
+                "Chapter 3 explores immutable distributed ledgers, smart contracts, cryptographic hashes, and peer-to-peer security.", "Chapter 3"),
+            SubjectNote("fn_emtech_nat_c4", "freshman_nat_emerging_tech", "Chapter 4", "Cybersecurity & Ethics in Emerging Tech", 
+                "Chapter 4 analyzes digital threat vectors, encryption, privacy laws, and ethical implications of autonomous systems.", "Chapter 4"),
+            SubjectNote("fn_emtech_soc_c1", "freshman_soc_emerging_tech", "Chapter 1", "Introduction to Emerging Tech (AI, IoT, Cloud)", 
+                "Emerging Tech Chapter 1 introduces Artificial Intelligence, Internet of Things sensor grids, and cloud server infrastructures.", "Chapter 1"),
+            SubjectNote("fn_emtech_soc_c2", "freshman_soc_emerging_tech", "Chapter 2", "Data Science & Big Data Analytics", 
+                "Chapter 2 details big data characteristics (Volume, Velocity, Variety), machine learning models, and predictive data analytics.", "Chapter 2"),
+            SubjectNote("fn_emtech_soc_c3", "freshman_soc_emerging_tech", "Chapter 3", "Blockchain & Decentralized Systems", 
+                "Chapter 3 explores immutable distributed ledgers, smart contracts, cryptographic hashes, and peer-to-peer security.", "Chapter 3"),
+            SubjectNote("fn_emtech_soc_c4", "freshman_soc_emerging_tech", "Chapter 4", "Cybersecurity & Ethics in Emerging Tech", 
+                "Chapter 4 analyzes digital threat vectors, encryption, privacy laws, and ethical implications of autonomous systems.", "Chapter 4"),
+
+            // Social Anthropology (Anth 1012) – Both tracks
+            SubjectNote("fn_anth_nat_c1", "freshman_nat_anthropology", "Chapter 1", "Scope & Four Subfields of Anthropology", 
+                "Social Anthropology Chapter 1 covers cultural, biological, archaeological, and linguistic anthropology subfields.", "Chapter 1"),
+            SubjectNote("fn_anth_nat_c2", "freshman_nat_anthropology", "Chapter 2", "Culture, Ethnocentrism & Relativism", 
+                "Chapter 2 examines cultural mechanisms, avoiding ethnocentric bias, and applying cultural relativism.", "Chapter 2"),
+            SubjectNote("fn_anth_nat_c3", "freshman_nat_anthropology", "Chapter 3", "Human Origins & Ethiopian Fossil Discoveries", 
+                "Chapter 3 details hominid evolution, Australopithecus afarensis (Lucy/Dinkinesh), and Afar Rift Valley fossil heritage.", "Chapter 3"),
+            SubjectNote("fn_anth_nat_c4", "freshman_nat_anthropology", "Chapter 4", "Kinship, Marriage & Social Organization", 
+                "Chapter 4 covers family descent systems, marital traditions, economic reciprocity, and social stratification.", "Chapter 4"),
+            SubjectNote("fn_anth_soc_c1", "freshman_soc_anthropology", "Chapter 1", "Scope & Four Subfields of Anthropology", 
+                "Social Anthropology Chapter 1 covers cultural, biological, archaeological, and linguistic anthropology subfields.", "Chapter 1"),
+            SubjectNote("fn_anth_soc_c2", "freshman_soc_anthropology", "Chapter 2", "Culture, Ethnocentrism & Relativism", 
+                "Chapter 2 examines cultural mechanisms, avoiding ethnocentric bias, and applying cultural relativism.", "Chapter 2"),
+            SubjectNote("fn_anth_soc_c3", "freshman_soc_anthropology", "Chapter 3", "Human Origins & Ethiopian Fossil Discoveries", 
+                "Chapter 3 details hominid evolution, Australopithecus afarensis (Lucy/Dinkinesh), and Afar Rift Valley fossil heritage.", "Chapter 3"),
+            SubjectNote("fn_anth_soc_c4", "freshman_soc_anthropology", "Chapter 4", "Kinship, Marriage & Social Organization", 
+                "Chapter 4 covers family descent systems, marital traditions, economic reciprocity, and social stratification.", "Chapter 4"),
+
+            // General Biology (Bio 1012) – Natural only
+            SubjectNote("fn_nat_bio_c1", "freshman_nat_biology", "Chapter 1", "Cell Structure & Organization", 
+                "General Biology Chapter 1 covers eukaryotic and prokaryotic cell structures, organelles, and cell membrane transport.", "Chapter 1"),
+            SubjectNote("fn_nat_bio_c2", "freshman_nat_biology", "Chapter 2", "Biochemistry & Macromolecules", 
+                "Chapter 2 examines carbohydrates, lipids, proteins, nucleic acids, and enzyme kinetics.", "Chapter 2"),
+            SubjectNote("fn_nat_bio_c3", "freshman_nat_biology", "Chapter 3", "Cell Division & Reproduction", 
+                "Chapter 3 covers mitosis, meiosis, cell cycle regulation, and sexual vs asexual reproduction.", "Chapter 3"),
+            SubjectNote("fn_nat_bio_c4", "freshman_nat_biology", "Chapter 4", "Genetics & Heredity", 
+                "Chapter 4 introduces Mendelian genetics, Punnett squares, dominant/recessive traits, and chromosomal inheritance.", "Chapter 4"),
+
+            // General Chemistry (Chem 1012) – Natural only
+            SubjectNote("fn_nat_chem_c1", "freshman_nat_chemistry", "Chapter 1", "Atomic Structure & Periodic Table", 
+                "General Chemistry Chapter 1 covers atomic models, electron configuration, periodic trends, and element groups.", "Chapter 1"),
+            SubjectNote("fn_nat_chem_c2", "freshman_nat_chemistry", "Chapter 2", "Chemical Bonding & Molecular Structure", 
+                "Chapter 2 examines ionic, covalent, and metallic bonds, Lewis structures, and VSEPR theory.", "Chapter 2"),
+            SubjectNote("fn_nat_chem_c3", "freshman_nat_chemistry", "Chapter 3", "Stoichiometry & Chemical Reactions", 
+                "Chapter 3 covers balancing equations, mole concept, limiting reagents, and percent yield calculations.", "Chapter 3"),
+            SubjectNote("fn_nat_chem_c4", "freshman_nat_chemistry", "Chapter 4", "States of Matter & Solutions", 
+                "Chapter 4 examines gases, liquids, solids, intermolecular forces, and solution concentration.", "Chapter 4"),
+
+            // Inclusiveness (SNIE 1112) – Social only
+            SubjectNote("fn_soc_incl_c1", "freshman_soc_inclusiveness", "Chapter 1", "Foundations of Inclusiveness & Special Needs", 
+                "Inclusiveness Chapter 1 covers human rights models of disability and creating accessible social environments.", "Chapter 1"),
+            SubjectNote("fn_soc_incl_c2", "freshman_soc_inclusiveness", "Chapter 2", "Types of Impairments & Assessment", 
+                "Chapter 2 details visual, hearing, motor, intellectual, and specific learning impairments.", "Chapter 2"),
+            SubjectNote("fn_soc_incl_c3", "freshman_soc_inclusiveness", "Chapter 3", "Inclusive Accommodations & Assistive Tech", 
+                "Chapter 3 explores physical accessibility modifications, reasonable accommodations, and assistive tools.", "Chapter 3"),
+            SubjectNote("fn_soc_incl_c4", "freshman_soc_inclusiveness", "Chapter 4", "National Policies & Inclusive Culture", 
+                "Chapter 4 covers legal protections, UN conventions, and fostering an inclusive institutional culture.", "Chapter 4"),
+
+            // Mathematics for Social Sciences (Math 1012) – Social only
+            SubjectNote("fn_smath_c1", "freshman_soc_maths", "Chapter 1", "Mathematical Logic & Propositions", 
                 "Social Math Chapter 1 covers truth tables, logical connectives, tautologies, and rules of inference.", "Chapter 1"),
-            SubjectNote("fn_maths_c2", "freshman_maths", "Chapter 2", "Set Theory & Matrix Algebra", 
+            SubjectNote("fn_smath_c2", "freshman_soc_maths", "Chapter 2", "Set Theory & Matrix Algebra", 
                 "Chapter 2 covers set operations, Venn diagrams, matrix arithmetic, and determinants.", "Chapter 2"),
-            SubjectNote("fn_maths_c3", "freshman_maths", "Chapter 3", "Systems of Linear Equations & Optimization", 
+            SubjectNote("fn_smath_c3", "freshman_soc_maths", "Chapter 3", "Systems of Linear Equations & Optimization", 
                 "Chapter 3 studies Gaussian elimination, inverse matrices, and linear programming applications.", "Chapter 3"),
-            SubjectNote("fn_maths_c4", "freshman_maths", "Chapter 4", "Differential Calculus in Business", 
+            SubjectNote("fn_smath_c4", "freshman_soc_maths", "Chapter 4", "Differential Calculus in Business", 
                 "Chapter 4 covers limit evaluations, derivative rules, marginal revenue/cost analysis, and business optimization.", "Chapter 4")
         )
     }
@@ -636,29 +798,46 @@ class StudyRepository(private val dao: EducationDao) : DataRepository {
 
     private fun getFreshmanQuestions(): List<ExamQuestion> {
         return listOf(
-            ExamQuestion("fn_q_phy1", "freshman_physics", "Which of the following is a vector quantity in General Physics?", "Temperature", "Mass", "Velocity", "Distance", "C", "Velocity has both magnitude and direction, making it a vector quantity, unlike distance or temperature."),
-            ExamQuestion("fn_q_phy2", "freshman_physics", "According to Newton's Second Law of Motion, force is equal to:", "Mass multiplied by acceleration (F = ma)", "Mass divided by velocity", "Work divided by time", "Energy multiplied by distance", "A", "Newton's Second Law defines force as the product of mass and acceleration (F = ma)."),
-            ExamQuestion("fn_q_phy3", "freshman_physics", "What principle states that any fluid pressure applied to an enclosed system is transmitted undiminished?", "Bernoulli's Principle", "Pascal's Principle", "Archimedes' Principle", "Hooke's Law", "B", "Pascal's principle states that pressure changes applied to an enclosed fluid are transmitted equally throughout."),
-            ExamQuestion("fn_q1", "freshman_english_1", "Identify the passive form of: 'The developer compiled the applet safely.'", "The applet was safely compiled by the developer.", "The applet is safely compiling the developer.", "The developer was safely compiling the applet.", "The applet safely compiled the developer.", "A", "Passive voice puts the objective item ('The applet') at the subject position, followed by past participle of auxiliary verb ('was compiled')."),
-            ExamQuestion("fn_q2", "freshman_emerging_tech", "Which emerging technology acts as a secure, decentralized, and immutable ledger?", "Internet of Things", "Cloud Server", "Blockchain Technology", "Artificial Intelligence", "C", "A blockchain uses cryptographically connected blocks to maintain a distributed ledger across peer networks safely."),
-            ExamQuestion("fn_q3", "freshman_anthropology", "The evaluation of local cultures based on their own criteria rather than external comparison is called what?", "Ethnocentrism", "Cultural Relativism", "Cultural Adaptation", "Modern Assimilation", "B", "Cultural Relativism argues that beliefs and values should be appreciated based on the culture's own internal logic."),
-            ExamQuestion("fn_q4", "freshman_economics", "What economic term represents the phenomenon where human wants exceed the available resources?", "Inflation", "Scarcity", "Equilibrium", "Oversupply", "B", "Scarcity is the fundamental economic problem where resources are limited but human demands are infinite."),
-            ExamQuestion("fn_q5", "freshman_entrepreneurship", "What is the crucial first step in the entrepreneurial process before mobilizing capital?", "Launching the IPO", "Assessing market profits", "Identifying a market opportunity or gap", "Hiring administrative staff", "C", "Identifying a feasible opportunity or market gap is the creative spark that begins any entrepreneurial journey."),
-            ExamQuestion("fn_q6", "freshman_civics", "A system stating that all citizens are subject to constitutional laws regardless of their status is called:", "Rule of Law", "Unitary Hegemony", "Autocratic Sovereignty", "Anarchy", "A", "Rule of Law guarantees that laws are applied equally and fairly to all individuals without select exception."),
-            ExamQuestion("fn_q7", "freshman_global_trends", "The rapid integration of world economies, communications, and social processes is called:", "Nationalization", "Insulation", "Globalization", "Decentralization", "C", "Globalization describes the interconnected flow of ideas, commerce, trade, and culture across geographic boundaries.")
+            // Natural Science Semester I questions
+            ExamQuestion("fn_q_nat_phy1", "freshman_nat_physics", "Which of the following is a vector quantity in General Physics?", "Temperature", "Mass", "Velocity", "Distance", "C", "Velocity has both magnitude and direction, making it a vector quantity, unlike distance or temperature."),
+            ExamQuestion("fn_q_nat_phy2", "freshman_nat_physics", "According to Newton's Second Law of Motion, force is equal to:", "Mass multiplied by acceleration (F = ma)", "Mass divided by velocity", "Work divided by time", "Energy multiplied by distance", "A", "Newton's Second Law defines force as the product of mass and acceleration (F = ma)."),
+            ExamQuestion("fn_q_nat_phy3", "freshman_nat_physics", "What principle states that any fluid pressure applied to an enclosed system is transmitted undiminished?", "Bernoulli's Principle", "Pascal's Principle", "Archimedes' Principle", "Hooke's Law", "B", "Pascal's principle states that pressure changes applied to an enclosed fluid are transmitted equally throughout."),
+            ExamQuestion("fn_q_nat_eng1", "freshman_nat_english_1", "Identify the passive form of: 'The developer compiled the applet safely.'", "The applet was safely compiled by the developer.", "The applet is safely compiling the developer.", "The developer was safely compiling the applet.", "The applet safely compiled the developer.", "A", "Passive voice puts the objective item ('The applet') at the subject position, followed by past participle of auxiliary verb ('was compiled')."),
+            ExamQuestion("fn_q_nat_emt", "freshman_nat_emerging_tech", "Which emerging technology acts as a secure, decentralized, and immutable ledger?", "Internet of Things", "Cloud Server", "Blockchain Technology", "Artificial Intelligence", "C", "A blockchain uses cryptographically connected blocks to maintain a distributed ledger across peer networks safely."),
+            ExamQuestion("fn_q_nat_ant", "freshman_nat_anthropology", "The evaluation of local cultures based on their own criteria rather than external comparison is called what?", "Ethnocentrism", "Cultural Relativism", "Cultural Adaptation", "Modern Assimilation", "B", "Cultural Relativism argues that beliefs and values should be appreciated based on the culture's own internal logic."),
+            ExamQuestion("fn_q_nat_ent", "freshman_nat_entrepreneurship", "What is the crucial first step in the entrepreneurial process before mobilizing capital?", "Launching the IPO", "Assessing market profits", "Identifying a market opportunity or gap", "Hiring administrative staff", "C", "Identifying a feasible opportunity or market gap is the creative spark that begins any entrepreneurial journey."),
+            ExamQuestion("fn_q_nat_civ", "freshman_nat_civics", "A system stating that all citizens are subject to constitutional laws regardless of their status is called:", "Rule of Law", "Unitary Hegemony", "Autocratic Sovereignty", "Anarchy", "A", "Rule of Law guarantees that laws are applied equally and fairly to all individuals without select exception."),
+
+            // Social Science Semester I questions
+            ExamQuestion("fn_q_soc_eng1", "freshman_soc_english_1", "Identify the passive form of: 'The developer compiled the applet safely.'", "The applet was safely compiled by the developer.", "The applet is safely compiling the developer.", "The developer was safely compiling the applet.", "The applet safely compiled the developer.", "A", "Passive voice puts the objective item ('The applet') at the subject position, followed by past participle of auxiliary verb ('was compiled')."),
+            ExamQuestion("fn_q_soc_emt", "freshman_soc_emerging_tech", "Which emerging technology acts as a secure, decentralized, and immutable ledger?", "Internet of Things", "Cloud Server", "Blockchain Technology", "Artificial Intelligence", "C", "A blockchain uses cryptographically connected blocks to maintain a distributed ledger across peer networks safely."),
+            ExamQuestion("fn_q_soc_ant", "freshman_soc_anthropology", "The evaluation of local cultures based on their own criteria rather than external comparison is called what?", "Ethnocentrism", "Cultural Relativism", "Cultural Adaptation", "Modern Assimilation", "B", "Cultural Relativism argues that beliefs and values should be appreciated based on the culture's own internal logic."),
+            ExamQuestion("fn_q_soc_eco", "freshman_soc_economics", "What economic term represents the phenomenon where human wants exceed the available resources?", "Inflation", "Scarcity", "Equilibrium", "Oversupply", "B", "Scarcity is the fundamental economic problem where resources are limited but human demands are infinite."),
+            ExamQuestion("fn_q_soc_ent", "freshman_soc_entrepreneurship", "What is the crucial first step in the entrepreneurial process before mobilizing capital?", "Launching the IPO", "Assessing market profits", "Identifying a market opportunity or gap", "Hiring administrative staff", "C", "Identifying a feasible opportunity or market gap is the creative spark that begins any entrepreneurial journey."),
+            ExamQuestion("fn_q_soc_civ", "freshman_soc_civics", "A system stating that all citizens are subject to constitutional laws regardless of their status is called:", "Rule of Law", "Unitary Hegemony", "Autocratic Sovereignty", "Anarchy", "A", "Rule of Law guarantees that laws are applied equally and fairly to all individuals without select exception."),
+            ExamQuestion("fn_q_soc_gt", "freshman_soc_global_trends", "The rapid integration of world economies, communications, and social processes is called:", "Nationalization", "Insulation", "Globalization", "Decentralization", "C", "Globalization describes the interconnected flow of ideas, commerce, trade, and culture across geographic boundaries.")
         )
     }
 
     private fun getSemester2Questions(): List<ExamQuestion> {
         return listOf(
-            ExamQuestion("fn_q8", "freshman_physical_fitness", "Which fitness component refers to the ability of a muscle to exert high force repeatedly?", "Muscular Strength", "Muscular Endurance", "Flexibility", "Agility", "B", "Muscular endurance tracks repetitive physical force over duration, while strength represents maximum singular output."),
-            ExamQuestion("fn_q9", "freshman_history", "The historical victory of Ethiopian forces against Italian invaders in 1896 took place in which location?", "Gondar", "Axum", "Adwa", "Mekelle", "C", "The Battle of Adwa in 1896 secured Ethiopian sovereignty and became a globally recognized symbol of freedom."),
-            ExamQuestion("fn_q10", "freshman_critical_thinking", "What logical fallacy claims an argument is wrong because the speaker's personal traits are attacked?", "Straw Man", "Ad Hominem", "Slippery Slope", "Circular Logic", "B", "Ad Hominem literally means 'to the man', where a speaker attacks personal integrity instead of addressing logic."),
-            ExamQuestion("fn_q11", "freshman_geography", "Which of the following is the largest river basin in Ethiopia, flowing westward into Sudan?", "Awash Basin", "Abay (Nile) Basin", "Omo Gibe Basin", "Wabi Shebelle Basin", "B", "The Abay (Blue Nile) Basin is Ethiopia's largest river system by water volume and flows westward towards Sudan."),
-            ExamQuestion("fn_q12", "freshman_inclusiveness", "What is the primary objective of implementing Inclusiveness policies in schools and workspace?", "Isolating children with learning difficulties", "Removing barriers to support equal participation for everyone", "Simplifying exams for top performers", "Eliminating tests entirely", "B", "Inclusiveness focuses on removing physical, social, and academic barriers to ensure equal access and belonging for all."),
-            ExamQuestion("fn_q13", "freshman_psychology", "What learning behavior process is demonstrated when a biological response pairs with a neutral sound stimulus?", "Operant Conditioning", "Classical Conditioning", "Social Observation", "Trial-and-Error Learning", "B", "Ivan Pavlov demonstrated Classical Conditioning by pairing salivation with neutral auditory indicators like a metronome/bell."),
-            ExamQuestion("fn_q14", "freshman_english_2", "Which section of an academic research paper details list of books, journals, and materials consulted?", "Introduction", "Methodology", "Bibliography or References", "Abstract", "C", "A Bibliography or References list provides bibliographic credits to all sources referenced throughout research."),
-            ExamQuestion("fn_q15", "freshman_maths", "In set theory, what operation collects all unique elements belonging to both Set A and Set B?", "Intersection", "Difference", "Union", "Complement", "C", "The Union operation (A U B) aggregates every unique element present within either or both sets.")
+            // Natural Science Semester II questions
+            ExamQuestion("fn_q_nat_spsc", "freshman_nat_physical_fitness", "Which fitness component refers to the ability of a muscle to exert high force repeatedly?", "Muscular Strength", "Muscular Endurance", "Flexibility", "Agility", "B", "Muscular endurance tracks repetitive physical force over duration, while strength represents maximum singular output."),
+            ExamQuestion("fn_q_nat_hist", "freshman_nat_history", "The historical victory of Ethiopian forces against Italian invaders in 1896 took place in which location?", "Gondar", "Axum", "Adwa", "Mekelle", "C", "The Battle of Adwa in 1896 secured Ethiopian sovereignty and became a globally recognized symbol of freedom."),
+            ExamQuestion("fn_q_nat_lct", "freshman_nat_critical_thinking", "What logical fallacy claims an argument is wrong because the speaker's personal traits are attacked?", "Straw Man", "Ad Hominem", "Slippery Slope", "Circular Logic", "B", "Ad Hominem literally means 'to the man', where a speaker attacks personal integrity instead of addressing logic."),
+            ExamQuestion("fn_q_nat_geo", "freshman_nat_geography", "Which of the following is the largest river basin in Ethiopia, flowing westward into Sudan?", "Awash Basin", "Abay (Nile) Basin", "Omo Gibe Basin", "Wabi Shebelle Basin", "B", "The Abay (Blue Nile) Basin is Ethiopia's largest river system by water volume and flows westward towards Sudan."),
+            ExamQuestion("fn_q_nat_psych", "freshman_nat_psychology", "What learning behavior process is demonstrated when a biological response pairs with a neutral sound stimulus?", "Operant Conditioning", "Classical Conditioning", "Social Observation", "Trial-and-Error Learning", "B", "Ivan Pavlov demonstrated Classical Conditioning by pairing salivation with neutral auditory indicators like a metronome/bell."),
+            ExamQuestion("fn_q_nat_eng2", "freshman_nat_english_2", "Which section of an academic research paper details list of books, journals, and materials consulted?", "Introduction", "Methodology", "Bibliography or References", "Abstract", "C", "A Bibliography or References list provides bibliographic credits to all sources referenced throughout research."),
+
+            // Social Science Semester II questions
+            ExamQuestion("fn_q_soc_spsc", "freshman_soc_physical_fitness", "Which fitness component refers to the ability of a muscle to exert high force repeatedly?", "Muscular Strength", "Muscular Endurance", "Flexibility", "Agility", "B", "Muscular endurance tracks repetitive physical force over duration, while strength represents maximum singular output."),
+            ExamQuestion("fn_q_soc_hist", "freshman_soc_history", "The historical victory of Ethiopian forces against Italian invaders in 1896 took place in which location?", "Gondar", "Axum", "Adwa", "Mekelle", "C", "The Battle of Adwa in 1896 secured Ethiopian sovereignty and became a globally recognized symbol of freedom."),
+            ExamQuestion("fn_q_soc_lct", "freshman_soc_critical_thinking", "What logical fallacy claims an argument is wrong because the speaker's personal traits are attacked?", "Straw Man", "Ad Hominem", "Slippery Slope", "Circular Logic", "B", "Ad Hominem literally means 'to the man', where a speaker attacks personal integrity instead of addressing logic."),
+            ExamQuestion("fn_q_soc_geo", "freshman_soc_geography", "Which of the following is the largest river basin in Ethiopia, flowing westward into Sudan?", "Awash Basin", "Abay (Nile) Basin", "Omo Gibe Basin", "Wabi Shebelle Basin", "B", "The Abay (Blue Nile) Basin is Ethiopia's largest river system by water volume and flows westward towards Sudan."),
+            ExamQuestion("fn_q_soc_incl", "freshman_soc_inclusiveness", "What is the primary objective of implementing Inclusiveness policies in schools and workspace?", "Isolating children with learning difficulties", "Removing barriers to support equal participation for everyone", "Simplifying exams for top performers", "Eliminating tests entirely", "B", "Inclusiveness focuses on removing physical, social, and academic barriers to ensure equal access and belonging for all."),
+            ExamQuestion("fn_q_soc_psych", "freshman_soc_psychology", "What learning behavior process is demonstrated when a biological response pairs with a neutral sound stimulus?", "Operant Conditioning", "Classical Conditioning", "Social Observation", "Trial-and-Error Learning", "B", "Ivan Pavlov demonstrated Classical Conditioning by pairing salivation with neutral auditory indicators like a metronome/bell."),
+            ExamQuestion("fn_q_soc_eng2", "freshman_soc_english_2", "Which section of an academic research paper details list of books, journals, and materials consulted?", "Introduction", "Methodology", "Bibliography or References", "Abstract", "C", "A Bibliography or References list provides bibliographic credits to all sources referenced throughout research."),
+            ExamQuestion("fn_q_soc_smath", "freshman_soc_maths", "In set theory, what operation collects all unique elements belonging to both Set A and Set B?", "Intersection", "Difference", "Union", "Complement", "C", "The Union operation (A U B) aggregates every unique element present within either or both sets.")
         )
     }
 
@@ -673,101 +852,172 @@ class StudyRepository(private val dao: EducationDao) : DataRepository {
 
     private fun getFreshmanFlashcards(): List<Flashcard> {
         return listOf(
-            // General Physics (Phys 1011)
-            Flashcard("fn_fc_phy1", "freshman_physics", "Vector Product", "Cross product of two vectors yielding a orthogonal vector. Chapter 1.", false, false, "Chapter 1"),
-            Flashcard("fn_fc_phy2", "freshman_physics", "Newton's Second Law", "Force equals mass times acceleration (F = ma). Chapter 2.", false, false, "Chapter 2"),
-            Flashcard("fn_fc_phy3", "freshman_physics", "Pascal's Principle", "Pressure applied to an enclosed fluid is transmitted undiminished. Chapter 3.", false, false, "Chapter 3"),
-            Flashcard("fn_fc_phy4", "freshman_physics", "Coulomb's Law", "Electrostatic force between charges is proportional to charge product over distance squared. Chapter 4.", false, false, "Chapter 4"),
+            // ===== NATURAL SCIENCE – Semester I Flashcards =====
+            // General Physics (Phys 1011) – Natural only
+            Flashcard("fn_fc_nat_phy1", "freshman_nat_physics", "Vector Product", "Cross product of two vectors yielding a orthogonal vector. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_nat_phy2", "freshman_nat_physics", "Newton's Second Law", "Force equals mass times acceleration (F = ma). Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_nat_phy3", "freshman_nat_physics", "Pascal's Principle", "Pressure applied to an enclosed fluid is transmitted undiminished. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_nat_phy4", "freshman_nat_physics", "Coulomb's Law", "Electrostatic force between charges is proportional to charge product over distance squared. Chapter 4.", false, false, "Chapter 4"),
 
-            // Communicative English I
-            Flashcard("fn_fc1", "freshman_english_1", "Active Voice", "When the subject performs the action. Example: 'The team won.' Chapter 1.", false, false, "Chapter 1"),
-            Flashcard("fn_fc1_c2", "freshman_english_1", "Passive Voice", "Action recipient occupies the subject position. Chapter 2.", false, false, "Chapter 2"),
-            Flashcard("fn_fc1_c3", "freshman_english_1", "Skimming", "Reading quickly to identify overall thesis and main points. Chapter 3.", false, false, "Chapter 3"),
-            Flashcard("fn_fc1_c4", "freshman_english_1", "Discourse Marker", "Words connecting paragraphs smoothly like 'Furthermore' or 'However'. Chapter 4.", false, false, "Chapter 4"),
+            // Communicative English I – Both tracks
+            Flashcard("fn_fc_nat_eng1_1", "freshman_nat_english_1", "Active Voice", "When the subject performs the action. Example: 'The team won.' Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_nat_eng1_2", "freshman_nat_english_1", "Passive Voice", "Action recipient occupies the subject position. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_nat_eng1_3", "freshman_nat_english_1", "Skimming", "Reading quickly to identify overall thesis and main points. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_nat_eng1_4", "freshman_nat_english_1", "Discourse Marker", "Words connecting paragraphs smoothly like 'Furthermore' or 'However'. Chapter 4.", false, false, "Chapter 4"),
+            Flashcard("fn_fc_soc_eng1_1", "freshman_soc_english_1", "Active Voice", "When the subject performs the action. Example: 'The team won.' Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_soc_eng1_2", "freshman_soc_english_1", "Passive Voice", "Action recipient occupies the subject position. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_soc_eng1_3", "freshman_soc_english_1", "Skimming", "Reading quickly to identify overall thesis and main points. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_soc_eng1_4", "freshman_soc_english_1", "Discourse Marker", "Words connecting paragraphs smoothly like 'Furthermore' or 'However'. Chapter 4.", false, false, "Chapter 4"),
 
-            // Emerging Tech
-            Flashcard("fn_fc2", "freshman_emerging_tech", "IoT (Internet of Things)", "Connected sensors sharing data automatically. Chapter 1.", false, false, "Chapter 1"),
-            Flashcard("fn_fc2_c2", "freshman_emerging_tech", "Big Data 3Vs", "Volume, Velocity, and Variety defining modern data streams. Chapter 2.", false, false, "Chapter 2"),
-            Flashcard("fn_fc2_c3", "freshman_emerging_tech", "Blockchain", "Decentralized immutable ledger using cryptographic blocks. Chapter 3.", false, false, "Chapter 3"),
-            Flashcard("fn_fc2_c4", "freshman_emerging_tech", "Cyber Ethics", "Moral guidelines governing AI, surveillance, and data security. Chapter 4.", false, false, "Chapter 4"),
+            // Emerging Tech – Both tracks
+            Flashcard("fn_fc_nat_emt1", "freshman_nat_emerging_tech", "IoT (Internet of Things)", "Connected sensors sharing data automatically. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_nat_emt2", "freshman_nat_emerging_tech", "Big Data 3Vs", "Volume, Velocity, and Variety defining modern data streams. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_nat_emt3", "freshman_nat_emerging_tech", "Blockchain", "Decentralized immutable ledger using cryptographic blocks. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_nat_emt4", "freshman_nat_emerging_tech", "Cyber Ethics", "Moral guidelines governing AI, surveillance, and data security. Chapter 4.", false, false, "Chapter 4"),
+            Flashcard("fn_fc_soc_emt1", "freshman_soc_emerging_tech", "IoT (Internet of Things)", "Connected sensors sharing data automatically. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_soc_emt2", "freshman_soc_emerging_tech", "Big Data 3Vs", "Volume, Velocity, and Variety defining modern data streams. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_soc_emt3", "freshman_soc_emerging_tech", "Blockchain", "Decentralized immutable ledger using cryptographic blocks. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_soc_emt4", "freshman_soc_emerging_tech", "Cyber Ethics", "Moral guidelines governing AI, surveillance, and data security. Chapter 4.", false, false, "Chapter 4"),
 
-            // Anthropology
-            Flashcard("fn_fc3", "freshman_anthropology", "Cultural Relativism", "Evaluating cultures by their own context rather than external standards. Chapter 1.", false, false, "Chapter 1"),
-            Flashcard("fn_fc3_c2", "freshman_anthropology", "Ethnocentrism", "Judging another culture using one's own cultural norms as superior. Chapter 2.", false, false, "Chapter 2"),
-            Flashcard("fn_fc3_c3", "freshman_anthropology", "Dinkinesh (Lucy)", "Australopithecus afarensis fossil discovered in Hadar, Ethiopia. Chapter 3.", false, false, "Chapter 3"),
-            Flashcard("fn_fc3_c4", "freshman_anthropology", "Patrilineal Descent", "Tracing lineage and inheritance through the paternal father's line. Chapter 4.", false, false, "Chapter 4"),
+            // Social Anthropology – Both tracks
+            Flashcard("fn_fc_nat_ant1", "freshman_nat_anthropology", "Cultural Relativism", "Evaluating cultures by their own context rather than external standards. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_nat_ant2", "freshman_nat_anthropology", "Ethnocentrism", "Judging another culture using one's own cultural norms as superior. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_nat_ant3", "freshman_nat_anthropology", "Dinkinesh (Lucy)", "Australopithecus afarensis fossil discovered in Hadar, Ethiopia. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_nat_ant4", "freshman_nat_anthropology", "Patrilineal Descent", "Tracing lineage and inheritance through the paternal father's line. Chapter 4.", false, false, "Chapter 4"),
+            Flashcard("fn_fc_soc_ant1", "freshman_soc_anthropology", "Cultural Relativism", "Evaluating cultures by their own context rather than external standards. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_soc_ant2", "freshman_soc_anthropology", "Ethnocentrism", "Judging another culture using one's own cultural norms as superior. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_soc_ant3", "freshman_soc_anthropology", "Dinkinesh (Lucy)", "Australopithecus afarensis fossil discovered in Hadar, Ethiopia. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_soc_ant4", "freshman_soc_anthropology", "Patrilineal Descent", "Tracing lineage and inheritance through the paternal father's line. Chapter 4.", false, false, "Chapter 4"),
 
-            // Economics
-            Flashcard("fn_fc4", "freshman_economics", "Macroeconomics", "Study of aggregate economy: GDP, inflation, and employment. Chapter 1.", false, false, "Chapter 1"),
-            Flashcard("fn_fc4_c2", "freshman_economics", "Law of Demand", "Price and quantity demanded move in opposite direction. Chapter 2.", false, false, "Chapter 2"),
-            Flashcard("fn_fc4_c3", "freshman_economics", "Marginal Cost", "Additional cost of producing one more unit of output. Chapter 3.", false, false, "Chapter 3"),
-            Flashcard("fn_fc4_c4", "freshman_economics", "Fiscal Policy", "Government expenditure and taxation used to stabilize economy. Chapter 4.", false, false, "Chapter 4"),
+            // Economics – Social only
+            Flashcard("fn_fc_soc_eco1", "freshman_soc_economics", "Macroeconomics", "Study of aggregate economy: GDP, inflation, and employment. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_soc_eco2", "freshman_soc_economics", "Law of Demand", "Price and quantity demanded move in opposite direction. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_soc_eco3", "freshman_soc_economics", "Marginal Cost", "Additional cost of producing one more unit of output. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_soc_eco4", "freshman_soc_economics", "Fiscal Policy", "Government expenditure and taxation used to stabilize economy. Chapter 4.", false, false, "Chapter 4"),
 
-            // Entrepreneurship
-            Flashcard("fn_fc5", "freshman_entrepreneurship", "Value Proposition", "Unique benefit delivered to solve a customer pain point. Chapter 1.", false, false, "Chapter 1"),
-            Flashcard("fn_fc5_c2", "freshman_entrepreneurship", "Feasibility Study", "Evaluating operational, financial, and market viability of an idea. Chapter 2.", false, false, "Chapter 2"),
-            Flashcard("fn_fc5_c3", "freshman_entrepreneurship", "Break-Even Point", "Sales volume where total revenue equals total operating cost. Chapter 3.", false, false, "Chapter 3"),
-            Flashcard("fn_fc5_c4", "freshman_entrepreneurship", "Target Market", "Specific consumer segment targeted for product marketing. Chapter 4.", false, false, "Chapter 4"),
+            // Entrepreneurship – Both tracks
+            Flashcard("fn_fc_nat_ent1", "freshman_nat_entrepreneurship", "Value Proposition", "Unique benefit delivered to solve a customer pain point. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_nat_ent2", "freshman_nat_entrepreneurship", "Feasibility Study", "Evaluating operational, financial, and market viability of an idea. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_nat_ent3", "freshman_nat_entrepreneurship", "Break-Even Point", "Sales volume where total revenue equals total operating cost. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_nat_ent4", "freshman_nat_entrepreneurship", "Target Market", "Specific consumer segment targeted for product marketing. Chapter 4.", false, false, "Chapter 4"),
+            Flashcard("fn_fc_soc_ent1", "freshman_soc_entrepreneurship", "Value Proposition", "Unique benefit delivered to solve a customer pain point. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_soc_ent2", "freshman_soc_entrepreneurship", "Feasibility Study", "Evaluating operational, financial, and market viability of an idea. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_soc_ent3", "freshman_soc_entrepreneurship", "Break-Even Point", "Sales volume where total revenue equals total operating cost. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_soc_ent4", "freshman_soc_entrepreneurship", "Target Market", "Specific consumer segment targeted for product marketing. Chapter 4.", false, false, "Chapter 4"),
 
-            // Moral & Civics
-            Flashcard("fn_fc6", "freshman_civics", "Rule of Law", "Laws apply equally and fairly to all citizens without exception. Chapter 1.", false, false, "Chapter 1"),
-            Flashcard("fn_fc6_c2", "freshman_civics", "Federalism", "System dividing power between central federal and state governments. Chapter 2.", false, false, "Chapter 2"),
-            Flashcard("fn_fc6_c3", "freshman_civics", "Civic Responsibility", "Duties of active citizens including voting and tax compliance. Chapter 3.", false, false, "Chapter 3"),
-            Flashcard("fn_fc6_c4", "freshman_civics", "Peace Building", "Resolving root causes of conflict to maintain social cohesion. Chapter 4.", false, false, "Chapter 4"),
+            // Moral & Civics – Both tracks
+            Flashcard("fn_fc_nat_civ1", "freshman_nat_civics", "Rule of Law", "Laws apply equally and fairly to all citizens without exception. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_nat_civ2", "freshman_nat_civics", "Federalism", "System dividing power between central federal and state governments. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_nat_civ3", "freshman_nat_civics", "Civic Responsibility", "Duties of active citizens including voting and tax compliance. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_nat_civ4", "freshman_nat_civics", "Peace Building", "Resolving root causes of conflict to maintain social cohesion. Chapter 4.", false, false, "Chapter 4"),
+            Flashcard("fn_fc_soc_civ1", "freshman_soc_civics", "Rule of Law", "Laws apply equally and fairly to all citizens without exception. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_soc_civ2", "freshman_soc_civics", "Federalism", "System dividing power between central federal and state governments. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_soc_civ3", "freshman_soc_civics", "Civic Responsibility", "Duties of active citizens including voting and tax compliance. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_soc_civ4", "freshman_soc_civics", "Peace Building", "Resolving root causes of conflict to maintain social cohesion. Chapter 4.", false, false, "Chapter 4"),
 
-            // Global Trends
-            Flashcard("fn_fc7", "freshman_global_trends", "Globalization", "Interconnected flow of commerce, technology, and culture worldwide. Chapter 1.", false, false, "Chapter 1"),
-            Flashcard("fn_fc7_c2", "freshman_global_trends", "Diplomacy", "Conducting official negotiations between sovereign nations. Chapter 2.", false, false, "Chapter 2"),
-            Flashcard("fn_fc7_c3", "freshman_global_trends", "Tariffs", "Taxes imposed on imported goods to regulate international trade. Chapter 3.", false, false, "Chapter 3"),
-            Flashcard("fn_fc7_c4", "freshman_global_trends", "United Nations", "Global intergovernmental organization maintaining peace and security. Chapter 4.", false, false, "Chapter 4"),
+            // Global Trends – Social only
+            Flashcard("fn_fc_soc_gt1", "freshman_soc_global_trends", "Globalization", "Interconnected flow of commerce, technology, and culture worldwide. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_soc_gt2", "freshman_soc_global_trends", "Diplomacy", "Conducting official negotiations between sovereign nations. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_soc_gt3", "freshman_soc_global_trends", "Tariffs", "Taxes imposed on imported goods to regulate international trade. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_soc_gt4", "freshman_soc_global_trends", "United Nations", "Global intergovernmental organization maintaining peace and security. Chapter 4.", false, false, "Chapter 4"),
 
-            // Physical Fitness
-            Flashcard("fn_fc8", "freshman_physical_fitness", "Muscular Endurance", "Ability of muscle to perform repeated force contractions. Chapter 1.", false, false, "Chapter 1"),
-            Flashcard("fn_fc8_c2", "freshman_physical_fitness", "Agility", "Ability to rapidly change direction with control and balance. Chapter 2.", false, false, "Chapter 2"),
-            Flashcard("fn_fc8_c3", "freshman_physical_fitness", "Caloric Deficit", "Consuming fewer calories than burned, driving weight reduction. Chapter 3.", false, false, "Chapter 3"),
-            Flashcard("fn_fc8_c4", "freshman_physical_fitness", "FITT Principle", "Frequency, Intensity, Time, and Type of exercise planning. Chapter 4.", false, false, "Chapter 4"),
+            // Physical Fitness – Both tracks
+            Flashcard("fn_fc_nat_spsc1", "freshman_nat_physical_fitness", "Muscular Endurance", "Ability of muscle to perform repeated force contractions. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_nat_spsc2", "freshman_nat_physical_fitness", "Agility", "Ability to rapidly change direction with control and balance. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_nat_spsc3", "freshman_nat_physical_fitness", "Caloric Deficit", "Consuming fewer calories than burned, driving weight reduction. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_nat_spsc4", "freshman_nat_physical_fitness", "FITT Principle", "Frequency, Intensity, Time, and Type of exercise planning. Chapter 4.", false, false, "Chapter 4"),
+            Flashcard("fn_fc_soc_spsc1", "freshman_soc_physical_fitness", "Muscular Endurance", "Ability of muscle to perform repeated force contractions. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_soc_spsc2", "freshman_soc_physical_fitness", "Agility", "Ability to rapidly change direction with control and balance. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_soc_spsc3", "freshman_soc_physical_fitness", "Caloric Deficit", "Consuming fewer calories than burned, driving weight reduction. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_soc_spsc4", "freshman_soc_physical_fitness", "FITT Principle", "Frequency, Intensity, Time, and Type of exercise planning. Chapter 4.", false, false, "Chapter 4"),
 
-            // History
-            Flashcard("fn_fc9", "freshman_history", "Battle of Adwa", "1896 victory securing Ethiopian national independence against Italy. Chapter 1.", false, false, "Chapter 1"),
-            Flashcard("fn_fc9_c2", "freshman_history", "Aksumite Empire", "Ancient maritime trading empire in northern Ethiopia and Horn. Chapter 2.", false, false, "Chapter 2"),
-            Flashcard("fn_fc9_c3", "freshman_history", "Zagwe Dynasty", "Medieval Ethiopian dynasty known for Lalibela rock-hewn churches. Chapter 3.", false, false, "Chapter 3"),
-            Flashcard("fn_fc9_c4", "freshman_history", "OAU Founding", "Organization of African Unity established in Addis Ababa in 1963. Chapter 4.", false, false, "Chapter 4"),
+            // History – Both tracks
+            Flashcard("fn_fc_nat_hist1", "freshman_nat_history", "Battle of Adwa", "1896 victory securing Ethiopian national independence against Italy. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_nat_hist2", "freshman_nat_history", "Aksumite Empire", "Ancient maritime trading empire in northern Ethiopia and Horn. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_nat_hist3", "freshman_nat_history", "Zagwe Dynasty", "Medieval Ethiopian dynasty known for Lalibela rock-hewn churches. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_nat_hist4", "freshman_nat_history", "OAU Founding", "Organization of African Unity established in Addis Ababa in 1963. Chapter 4.", false, false, "Chapter 4"),
+            Flashcard("fn_fc_soc_hist1", "freshman_soc_history", "Battle of Adwa", "1896 victory securing Ethiopian national independence against Italy. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_soc_hist2", "freshman_soc_history", "Aksumite Empire", "Ancient maritime trading empire in northern Ethiopia and Horn. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_soc_hist3", "freshman_soc_history", "Zagwe Dynasty", "Medieval Ethiopian dynasty known for Lalibela rock-hewn churches. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_soc_hist4", "freshman_soc_history", "OAU Founding", "Organization of African Unity established in Addis Ababa in 1963. Chapter 4.", false, false, "Chapter 4"),
 
-            // Critical Thinking
-            Flashcard("fn_fc10", "freshman_critical_thinking", "Deductive Logic", "Argument where true premises guarantee a true conclusion. Chapter 1.", false, false, "Chapter 1"),
-            Flashcard("fn_fc10_c2", "freshman_critical_thinking", "Inductive Logic", "Argument offering probable support rather than absolute certainty. Chapter 2.", false, false, "Chapter 2"),
-            Flashcard("fn_fc10_c3", "freshman_critical_thinking", "Ad Hominem", "Attacking speaker's personal character instead of their argument. Chapter 3.", false, false, "Chapter 3"),
-            Flashcard("fn_fc10_c4", "freshman_critical_thinking", "Venn Diagram", "Overlapping circle diagrams testing validity of categorical syllogisms. Chapter 4.", false, false, "Chapter 4"),
+            // Critical Thinking – Both tracks
+            Flashcard("fn_fc_nat_lct1", "freshman_nat_critical_thinking", "Deductive Logic", "Argument where true premises guarantee a true conclusion. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_nat_lct2", "freshman_nat_critical_thinking", "Inductive Logic", "Argument offering probable support rather than absolute certainty. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_nat_lct3", "freshman_nat_critical_thinking", "Ad Hominem", "Attacking speaker's personal character instead of their argument. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_nat_lct4", "freshman_nat_critical_thinking", "Venn Diagram", "Overlapping circle diagrams testing validity of categorical syllogisms. Chapter 4.", false, false, "Chapter 4"),
+            Flashcard("fn_fc_soc_lct1", "freshman_soc_critical_thinking", "Deductive Logic", "Argument where true premises guarantee a true conclusion. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_soc_lct2", "freshman_soc_critical_thinking", "Inductive Logic", "Argument offering probable support rather than absolute certainty. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_soc_lct3", "freshman_soc_critical_thinking", "Ad Hominem", "Attacking speaker's personal character instead of their argument. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_soc_lct4", "freshman_soc_critical_thinking", "Venn Diagram", "Overlapping circle diagrams testing validity of categorical syllogisms. Chapter 4.", false, false, "Chapter 4"),
 
-            // Geography
-            Flashcard("fn_fc11", "freshman_geography", "Weyna Dega", "Warm temperate climate zone optimal for Ethiopian agriculture. Chapter 1.", false, false, "Chapter 1"),
-            Flashcard("fn_fc11_c2", "freshman_geography", "Abay Basin", "Blue Nile river basin flowing westward from Lake Tana towards Sudan. Chapter 2.", false, false, "Chapter 2"),
-            Flashcard("fn_fc11_c3", "freshman_geography", "Terracing", "Farming steps constructed on mountain slopes to prevent soil erosion. Chapter 3.", false, false, "Chapter 3"),
-            Flashcard("fn_fc11_c4", "freshman_geography", "Urbanization", "Process of population shift from rural areas to urban centers. Chapter 4.", false, false, "Chapter 4"),
+            // Geography – Both tracks
+            Flashcard("fn_fc_nat_geo1", "freshman_nat_geography", "Weyna Dega", "Warm temperate climate zone optimal for Ethiopian agriculture. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_nat_geo2", "freshman_nat_geography", "Abay Basin", "Blue Nile river basin flowing westward from Lake Tana towards Sudan. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_nat_geo3", "freshman_nat_geography", "Terracing", "Farming steps constructed on mountain slopes to prevent soil erosion. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_nat_geo4", "freshman_nat_geography", "Urbanization", "Process of population shift from rural areas to urban centers. Chapter 4.", false, false, "Chapter 4"),
+            Flashcard("fn_fc_soc_geo1", "freshman_soc_geography", "Weyna Dega", "Warm temperate climate zone optimal for Ethiopian agriculture. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_soc_geo2", "freshman_soc_geography", "Abay Basin", "Blue Nile river basin flowing westward from Lake Tana towards Sudan. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_soc_geo3", "freshman_soc_geography", "Terracing", "Farming steps constructed on mountain slopes to prevent soil erosion. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_soc_geo4", "freshman_soc_geography", "Urbanization", "Process of population shift from rural areas to urban centers. Chapter 4.", false, false, "Chapter 4"),
 
-            // Inclusiveness
-            Flashcard("fn_fc12", "freshman_inclusiveness", "Accessibility", "Facilities and designs ensuring equal access for persons with disabilities. Chapter 1.", false, false, "Chapter 1"),
-            Flashcard("fn_fc12_c2", "freshman_inclusiveness", "Sensory Impairment", "Visual or hearing functional limitations requiring adaptive tools. Chapter 2.", false, false, "Chapter 2"),
-            Flashcard("fn_fc12_c3", "freshman_inclusiveness", "Braille System", "Tactile reading system using raised dots for visually impaired learners. Chapter 3.", false, false, "Chapter 3"),
-            Flashcard("fn_fc12_c4", "freshman_inclusiveness", "Reasonable Accommodation", "Necessary modifications ensuring equal rights in schools and workplaces. Chapter 4.", false, false, "Chapter 4"),
+            // Inclusiveness – Social only
+            Flashcard("fn_fc_soc_incl1", "freshman_soc_inclusiveness", "Accessibility", "Facilities and designs ensuring equal access for persons with disabilities. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_soc_incl2", "freshman_soc_inclusiveness", "Sensory Impairment", "Visual or hearing functional limitations requiring adaptive tools. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_soc_incl3", "freshman_soc_inclusiveness", "Braille System", "Tactile reading system using raised dots for visually impaired learners. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_soc_incl4", "freshman_soc_inclusiveness", "Reasonable Accommodation", "Necessary modifications ensuring equal rights in schools and workplaces. Chapter 4.", false, false, "Chapter 4"),
 
-            // Psychology
-            Flashcard("fn_fc13", "freshman_psychology", "Classical Conditioning", "Associating biological response with neutral stimulus (Pavlov). Chapter 1.", false, false, "Chapter 1"),
-            Flashcard("fn_fc13_c2", "freshman_psychology", "Operant Conditioning", "Learning behavior through rewards and punishments (Skinner). Chapter 2.", false, false, "Chapter 2"),
-            Flashcard("fn_fc13_c3", "freshman_psychology", "Short-Term Memory", "Temporary storage holding around 7 items for 20-30 seconds. Chapter 3.", false, false, "Chapter 3"),
-            Flashcard("fn_fc13_c4", "freshman_psychology", "Coping Mechanism", "Strategies used to manage stress and emotional challenges. Chapter 4.", false, false, "Chapter 4"),
+            // Psychology – Both tracks
+            Flashcard("fn_fc_nat_psych1", "freshman_nat_psychology", "Classical Conditioning", "Associating biological response with neutral stimulus (Pavlov). Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_nat_psych2", "freshman_nat_psychology", "Operant Conditioning", "Learning behavior through rewards and punishments (Skinner). Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_nat_psych3", "freshman_nat_psychology", "Short-Term Memory", "Temporary storage holding around 7 items for 20-30 seconds. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_nat_psych4", "freshman_nat_psychology", "Coping Mechanism", "Strategies used to manage stress and emotional challenges. Chapter 4.", false, false, "Chapter 4"),
+            Flashcard("fn_fc_soc_psych1", "freshman_soc_psychology", "Classical Conditioning", "Associating biological response with neutral stimulus (Pavlov). Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_soc_psych2", "freshman_soc_psychology", "Operant Conditioning", "Learning behavior through rewards and punishments (Skinner). Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_soc_psych3", "freshman_soc_psychology", "Short-Term Memory", "Temporary storage holding around 7 items for 20-30 seconds. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_soc_psych4", "freshman_soc_psychology", "Coping Mechanism", "Strategies used to manage stress and emotional challenges. Chapter 4.", false, false, "Chapter 4"),
 
-            // Communicative English II
-            Flashcard("fn_fc14", "freshman_english_2", "APA Citation", "American Psychological Association citation style for academic papers. Chapter 1.", false, false, "Chapter 1"),
-            Flashcard("fn_fc14_c2", "freshman_english_2", "Thesis Statement", "Central claim or position statement of an academic essay. Chapter 2.", false, false, "Chapter 2"),
-            Flashcard("fn_fc14_c3", "freshman_english_2", "Literature Review", "Critical summary and synthesis of published academic research. Chapter 3.", false, false, "Chapter 3"),
-            Flashcard("fn_fc14_c4", "freshman_english_2", "Plagiarism", "Using someone else's work or ideas without proper citation. Chapter 4.", false, false, "Chapter 4"),
+            // ===== NATURAL SCIENCE – Semester II Flashcards =====
+            // Applied Mathematics I – Natural only
+            Flashcard("fn_fc_nat_amath1", "freshman_nat_applied_maths", "Vector in ℝ²", "A vector described as an ordered pair (u₁, u₂) where u₁, u₂ ∈ ℝ. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_nat_amath2", "freshman_nat_applied_maths", "Matrix Determinant", "Scalar value calculated from a square matrix representing scale factor. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_nat_amath3", "freshman_nat_applied_maths", "Gaussian Elimination", "Row reduction method for solving systems of linear equations. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_nat_amath4", "freshman_nat_applied_maths", "Limit", "Value that a function approaches as input approaches a given point. Chapter 4.", false, false, "Chapter 4"),
+            Flashcard("fn_fc_nat_amath5", "freshman_nat_applied_maths", "Derivative", "Rate of change measure used in optimization and curve analysis. Chapter 5.", false, false, "Chapter 5"),
 
-            // Social Math
-            Flashcard("fn_fc15", "freshman_maths", "Matrix Determinant", "Scalar value calculated from a square matrix representing scale factor. Chapter 1.", false, false, "Chapter 1"),
-            Flashcard("fn_fc15_c2", "freshman_maths", "Truth Table", "Logical table displaying truth values for propositional statements. Chapter 2.", false, false, "Chapter 2"),
-            Flashcard("fn_fc15_c3", "freshman_maths", "Linear Programming", "Optimization method maximizing profit subject to linear constraints. Chapter 3.", false, false, "Chapter 3"),
-            Flashcard("fn_fc15_c4", "freshman_maths", "Derivative", "Rate of change measure used in marginal profit and cost analysis. Chapter 4.", false, false, "Chapter 4"),
+            // Communicative English II – Both tracks
+            Flashcard("fn_fc_nat_eng2_1", "freshman_nat_english_2", "APA Citation", "American Psychological Association citation style for academic papers. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_nat_eng2_2", "freshman_nat_english_2", "Thesis Statement", "Central claim or position statement of an academic essay. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_nat_eng2_3", "freshman_nat_english_2", "Literature Review", "Critical summary and synthesis of published academic research. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_nat_eng2_4", "freshman_nat_english_2", "Plagiarism", "Using someone else's work or ideas without proper citation. Chapter 4.", false, false, "Chapter 4"),
+            Flashcard("fn_fc_soc_eng2_1", "freshman_soc_english_2", "APA Citation", "American Psychological Association citation style for academic papers. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_soc_eng2_2", "freshman_soc_english_2", "Thesis Statement", "Central claim or position statement of an academic essay. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_soc_eng2_3", "freshman_soc_english_2", "Literature Review", "Critical summary and synthesis of published academic research. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_soc_eng2_4", "freshman_soc_english_2", "Plagiarism", "Using someone else's work or ideas without proper citation. Chapter 4.", false, false, "Chapter 4"),
+
+            // Computer Programming – Natural only
+            Flashcard("fn_fc_nat_prog1", "freshman_nat_computer_programming", "Pseudocode", "Step-by-step informal algorithm description. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_nat_prog2", "freshman_nat_computer_programming", "Variable", "Named storage location in memory holding a value. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_nat_prog3", "freshman_nat_computer_programming", "Loop", "Repeated execution of a code block based on a condition. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_nat_prog4", "freshman_nat_computer_programming", "Function", "Reusable block of code that performs a specific task. Chapter 4.", false, false, "Chapter 4"),
+
+            // Social Science Math – Social only
+            Flashcard("fn_fc_soc_smath1", "freshman_soc_maths", "Truth Table", "Logical table displaying truth values for propositional statements. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_soc_smath2", "freshman_soc_maths", "Set Union", "Operation collecting all unique elements in either or both sets. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_soc_smath3", "freshman_soc_maths", "Linear Programming", "Optimization method maximizing profit subject to linear constraints. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_soc_smath4", "freshman_soc_maths", "Derivative", "Rate of change measure used in marginal profit and cost analysis. Chapter 4.", false, false, "Chapter 4"),
+
+            // General Biology – Natural only
+            Flashcard("fn_fc_nat_bio1", "freshman_nat_biology", "Organelle", "Specialized subunit within a cell with a specific function. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_nat_bio2", "freshman_nat_biology", "Enzyme", "Biological catalyst that speeds up chemical reactions. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_nat_bio3", "freshman_nat_biology", "Mitosis", "Cell division producing two genetically identical daughter cells. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_nat_bio4", "freshman_nat_biology", "Allele", "Variant form of a gene determining inherited traits. Chapter 4.", false, false, "Chapter 4"),
+
+            // General Chemistry – Natural only
+            Flashcard("fn_fc_nat_chem1", "freshman_nat_chemistry", "Electron Configuration", "Distribution of electrons in atomic orbitals. Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_nat_chem2", "freshman_nat_chemistry", "Covalent Bond", "Chemical bond formed by sharing electron pairs. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_nat_chem3", "freshman_nat_chemistry", "Mole Concept", "Unit measuring amount of substance (6.022 x 10^23 particles). Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_nat_chem4", "freshman_nat_chemistry", "Intermolecular Force", "Forces of attraction between molecules. Chapter 4.", false, false, "Chapter 4"),
 
             // AAU UAT Prep
             Flashcard("uat_fc1", "uat_verbal", "Analogy", "Cognitive comparison identifying patterns between pairs of terms.", false, false),
@@ -1058,5 +1308,55 @@ class StudyRepository(private val dao: EducationDao) : DataRepository {
             Flashcard("exit_fc2", "exit_mgmt", "SWOT Analysis", "A structured planning tool evaluating Strengths, Weaknesses, Opportunities, and Threats for an enterprise.", false, false),
             Flashcard("exit_fc3", "exit_med", "Epidemiology", "The clinical study of how frequently diseases occur and why they happen in distinct social populations.", false, false)
         )
+    }
+
+    override suspend fun grantEntitlement(productId: String, reference: String) = withContext(Dispatchers.IO) {
+        val expanded = ProductCatalog.expandEntitlements(productId)
+        val now = System.currentTimeMillis()
+        val entitlements = expanded.map { id ->
+            Entitlement(productId = id, grantedAtMillis = now, purchaseReference = reference)
+        }
+        dao.upsertEntitlements(entitlements)
+        Log.d(TAG, "grantEntitlement: granted $productId (expanded to $expanded) with ref=$reference")
+    }
+
+    override fun getEntitlements(): Flow<List<Entitlement>> = dao.getAllEntitlements()
+
+    override suspend fun savePurchaseRequest(request: PurchaseRequest) = withContext(Dispatchers.IO) {
+        dao.upsertPurchaseRequest(request)
+        Log.d(TAG, "savePurchaseRequest: reference=${request.reference}, product=${request.productId}")
+    }
+
+    override suspend fun updatePurchaseStatus(reference: String, status: String) = withContext(Dispatchers.IO) {
+        dao.updatePurchaseRequestStatus(reference, status)
+        Log.d(TAG, "updatePurchaseStatus: reference=$reference status=$status")
+    }
+
+    override suspend fun isEntitledTo(productId: String): Boolean = withContext(Dispatchers.IO) {
+        if (dao.hasEntitlement(productId)) {
+            return@withContext true
+        }
+
+        // Fallback to legacy purchasedPackageId string checking
+        val progress = dao.getUserProgressDirect() ?: return@withContext false
+        val purchasedList = progress.purchasedPackageId.split(",")
+            .map { it.trim() }
+            .filter { it.isNotEmpty() }
+            .toSet()
+
+        if (purchasedList.isEmpty() && progress.paymentStatus == "approved" && !progress.activePackageId.isNullOrEmpty()) {
+            val active = progress.activePackageId!!
+            if (active == productId || ProductCatalog.legacyMapsTo(active, productId)) {
+                return@withContext true
+            }
+        }
+
+        for (purchasedPkg in purchasedList) {
+            if (purchasedPkg == productId || ProductCatalog.legacyMapsTo(purchasedPkg, productId)) {
+                return@withContext true
+            }
+        }
+
+        false
     }
 }

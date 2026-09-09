@@ -79,4 +79,39 @@ interface EducationDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAnalyzedVideo(video: AnalyzedVideo)
+
+    // Entitlements
+    @Query("SELECT * FROM entitlements")
+    fun getAllEntitlements(): Flow<List<Entitlement>>
+
+    @Query("SELECT * FROM entitlements WHERE productId = :productId LIMIT 1")
+    suspend fun getEntitlement(productId: String): Entitlement?
+
+    @Query("SELECT COUNT(*) FROM entitlements")
+    suspend fun getEntitlementsCount(): Int
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun upsertEntitlement(entitlement: Entitlement)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun upsertEntitlements(entitlements: List<Entitlement>)
+
+    @Query("DELETE FROM entitlements WHERE productId = :productId")
+    suspend fun deleteEntitlement(productId: String)
+
+    @Query("SELECT EXISTS(SELECT 1 FROM entitlements WHERE productId = :productId)")
+    suspend fun hasEntitlement(productId: String): Boolean
+
+    // Purchase Requests
+    @Query("SELECT * FROM purchase_requests ORDER BY createdAtMillis DESC LIMIT 1")
+    suspend fun getLatestPurchaseRequest(): PurchaseRequest?
+
+    @Query("SELECT * FROM purchase_requests WHERE reference = :reference LIMIT 1")
+    suspend fun getPurchaseRequestByReference(reference: String): PurchaseRequest?
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun upsertPurchaseRequest(request: PurchaseRequest)
+
+    @Query("UPDATE purchase_requests SET status = :status WHERE reference = :reference")
+    suspend fun updatePurchaseRequestStatus(reference: String, status: String)
 }

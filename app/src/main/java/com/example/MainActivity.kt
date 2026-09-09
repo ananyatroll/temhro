@@ -15,81 +15,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.ads.AdConfig
-import com.example.ads.AdManager
-import com.example.ads.TinatBannerAd
-import com.example.ui.StudyViewModel
-import com.example.ui.components.*
-import com.example.ui.screens.*
-import com.example.ui.theme.EmeraldPrimary
-import com.example.ui.theme.MyApplicationTheme
-import com.example.ui.tools.ui.StudentToolsLauncher
-import com.example.ui.tools.ui.StudentToolsModalSheet
-import androidx.compose.animation.core.*
-import androidx.compose.ui.draw.clip
-import androidx.compose.foundation.shape.RoundedCornerShape
+                import com.example.ads.AdManager
 
-class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
-            requestPermissions(arrayOf(android.Manifest.permission.POST_NOTIFICATIONS), 101)
-        }
-
-        // Initialize Google AdMob SDK & UMP Privacy Consent flow via AdManager
-        AdManager.initialize(this)
-
-        setContent {
-
-            val viewModel: StudyViewModel = viewModel()
-            val isDarkTheme by viewModel.isDarkTheme.collectAsState()
-
-            MyApplicationTheme(darkTheme = isDarkTheme) {
-                // Initialize Central ViewModel states
-                val progress by viewModel.userProgress.collectAsState()
-                val currentTab by viewModel.currentTab.collectAsState()
-                val showMarketing by viewModel.showMarketingPage.collectAsState()
-                val onboardingCompleted by viewModel.isOnboardingCompleted.collectAsState()
-                val isSplashChecking by viewModel.isSplashChecking.collectAsState()
-
-                val academicDepartment by viewModel.academicDepartment.collectAsState()
-
-                // Student Tools State
-                val isStudentToolsOpen by viewModel.isStudentToolsOpen.collectAsState()
-                val activeSub by viewModel.activeSubject.collectAsState()
-                val showContentPlay by viewModel.showContentPlayView.collectAsState()
-                val showNotes by viewModel.showNotesView.collectAsState()
-                val showNotesTOC by viewModel.showNotesTableOfContents.collectAsState()
-                val showVideos by viewModel.showVideosView.collectAsState()
-                val showTextbookReader by viewModel.showTextbookReader.collectAsState()
-                val showStudyOptions by viewModel.showStudyOptionsModal.collectAsState()
-                val showModeSelection by viewModel.showModeSelectionModal.collectAsState()
-                val showSavedMaterialPicker by viewModel.showSavedMaterialPickerModal.collectAsState()
-                val activeExamMode by viewModel.activeExamMode.collectAsState()
-                val inActiveTimedExam = showContentPlay && activeExamMode == "exam"
-                val isReadingOrTesting = showNotes || showContentPlay || showNotesTOC || showVideos || showTextbookReader || showStudyOptions || showModeSelection || showSavedMaterialPicker || (currentTab == "flashcards")
-                val showStudentToolsLauncher = onboardingCompleted &&
-                        progress.activePackageId != null &&
-                        progress.paymentStatus != "pending" &&
-                        currentTab == "home" &&
-                        !isReadingOrTesting &&
-                        !inActiveTimedExam &&
-                        !showMarketing &&
-                        !isStudentToolsOpen &&
-                        !(progress.activePackageId == "department" && academicDepartment.isBlank())
-
-                // Exception checks for AdMob banner
-                val showPaymentForm by viewModel.showPaymentVerificationScreen.collectAsState()
-                val showFreeTrialPaywall by viewModel.showFreeTrialPaywall.collectAsState()
-                val showScoreResultModal by viewModel.showScoreResultModal.collectAsState()
-
-                val isPaymentOrVerification = showPaymentForm || showFreeTrialPaywall || progress.paymentStatus == "pending"
-
-                // Allowed on: Student Onboarding, Choose Tools, Dashboard (Home), Flashcards, Profile (Settings), Notes Reader, Active Exams, Practice Questions
-                // Excluded on: Splash, Payment/Verification, Results Modal, and when Student Tools/Ask Tamhero modal is open (which hosts its own single bottom banner)
-                val shouldShowBottomBanner = AdConfig.ADS_ENABLED &&
-                        AdConfig.BANNER_ADS_ENABLED &&
+                val shouldShowBottomBanner = AdManager.ADS_ENABLED &&
+                        AdManager.BANNER_ADS_ENABLED &&
                         !isSplashChecking &&
                         !isPaymentOrVerification &&
                         !showScoreResultModal &&

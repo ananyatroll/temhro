@@ -101,13 +101,15 @@ fun SleekPaymentVerificationScreen(
                 }
             }
 
+            val purchaseReq by viewModel.purchaseRequest.collectAsState()
+
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(20.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                // Section 1: Promotional Header
+                // Section 1: Purchase Order & Reference Card
                 Card(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -131,18 +133,30 @@ fun SleekPaymentVerificationScreen(
                                 .padding(horizontal = 10.dp, vertical = 4.dp)
                         ) {
                             Text(
-                                text = com.example.ui.TranslationManager.get("unlock_lifetime", currentLang).uppercase(),
-                                style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black),
+                                text = (purchaseReq?.reference ?: "TH-ORDER").uppercase(),
+                                style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Black, letterSpacing = 1.sp),
                                 color = GoldAccent
                             )
                         }
                         Spacer(modifier = Modifier.height(10.dp))
                         Text(
-                            text = com.example.ui.TranslationManager.get("choose_tool_desc", currentLang),
+                            text = packageName,
+                            style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Bold),
+                            color = Color.White,
+                            textAlign = TextAlign.Center
+                        )
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Text(
+                            text = if (purchaseReq != null && purchaseReq!!.amount > 0) "${purchaseReq!!.amount} ${purchaseReq!!.currency}" else "Announced on Telegram",
                             style = MaterialTheme.typography.bodyMedium,
-                            color = Color.White.copy(alpha = 0.9f),
-                            textAlign = TextAlign.Center,
-                            lineHeight = 20.sp
+                            color = EmeraldPrimary,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Text(
+                            text = "Status: ${(purchaseReq?.status ?: "pending").uppercase()}",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = Color.LightGray
                         )
                     }
                 }
@@ -301,7 +315,9 @@ fun SleekPaymentVerificationScreen(
                         Button(
                             onClick = {
                                 try {
-                                    uriHandler.openUri("https://t.me/tinatapp_bot")
+                                    val refParam = purchaseReq?.reference ?: ""
+                                    val tgUri = if (refParam.isNotEmpty()) "https://t.me/tinatapp_bot?start=$refParam" else "https://t.me/tinatapp_bot"
+                                    uriHandler.openUri(tgUri)
                                 } catch (e: Exception) {
                                     // Failback
                                 }

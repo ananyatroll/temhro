@@ -239,10 +239,17 @@ fun ChooseToolScreen(viewModel: StudyViewModel) {
                     comingSoon = false
                 ),
                 PackageCardData(
-                    id = "freshman",
-                    title = t("pkg_freshman_title"),
+                    id = "freshman_natural",
+                    title = t("pkg_freshman_natural_title"),
                     badge = t("status_free_trial"),
-                    description = t("pkg_freshman_desc"),
+                    description = t("pkg_freshman_natural_desc"),
+                    comingSoon = false
+                ),
+                PackageCardData(
+                    id = "freshman_social",
+                    title = t("pkg_freshman_social_title"),
+                    badge = t("status_free_trial"),
+                    description = t("pkg_freshman_social_desc"),
                     comingSoon = false
                 ),
                 PackageCardData(
@@ -265,6 +272,27 @@ fun ChooseToolScreen(viewModel: StudyViewModel) {
                     badge = t("status_free_trial"),
                     description = t("pkg_exit_desc"),
                     comingSoon = false
+                ),
+                PackageCardData(
+                    id = "coc_medical",
+                    title = t("coc_medical_title"),
+                    badge = t("status_free_trial"),
+                    description = t("pkg_coc_desc"),
+                    comingSoon = false
+                ),
+                PackageCardData(
+                    id = "coc_law",
+                    title = t("coc_law_title"),
+                    badge = t("status_free_trial"),
+                    description = t("pkg_coc_desc"),
+                    comingSoon = false
+                ),
+                PackageCardData(
+                    id = "coc_engineering",
+                    title = t("coc_engineering_title"),
+                    badge = t("status_free_trial"),
+                    description = t("pkg_coc_desc"),
+                    comingSoon = false
                 )
             ).filter { it.title.lowercase().contains(searchQuery.lowercase()) || it.description.lowercase().contains(searchQuery.lowercase()) }
 
@@ -284,6 +312,8 @@ fun ChooseToolScreen(viewModel: StudyViewModel) {
                 items(cardsList) { pkg ->
                     val isEnrolled = if (pkg.id == "euee") {
                         progress.activePackageId == "euee_natural" || progress.activePackageId == "euee_social"
+                    } else if (pkg.id == "freshman_natural" || pkg.id == "freshman_social") {
+                        progress.activePackageId == "freshman_natural" || progress.activePackageId == "freshman_social"
                     } else {
                         progress.activePackageId == pkg.id
                     }
@@ -356,7 +386,8 @@ fun ChooseToolScreen(viewModel: StudyViewModel) {
             val pkgId = confirmationPackage!!
             val pkgName = when(pkgId) {
                 "euee" -> t("pkg_euee_title")
-                "freshman" -> t("pkg_freshman_title")
+                "freshman_natural" -> t("pkg_freshman_natural_title")
+                "freshman_social" -> t("pkg_freshman_social_title")
                 "aau_uat" -> t("pkg_uat_title")
                 "department" -> t("pkg_dept_title")
                 "exit_exam" -> t("pkg_exit_title")
@@ -413,7 +444,8 @@ fun PackageCard(
 
     val pkgIcon = when (data.id) {
         "euee" -> Icons.Default.School
-        "freshman" -> Icons.Default.LocalLibrary
+        "freshman_natural" -> Icons.Default.LocalLibrary
+        "freshman_social" -> Icons.Default.LocalLibrary
         "aau_uat" -> Icons.Default.AutoAwesome
         "department" -> Icons.Default.AccountBalance
         "exit_exam" -> Icons.Default.Assignment
@@ -785,60 +817,113 @@ fun EnrollmentConfirmationModal(
                         lineHeight = 18.sp,
                         modifier = Modifier.padding(bottom = 20.dp)
                     )
-                } else if (packageId == "department") {
-                    Text(
-                        text = "SELECT YOUR CURRENT STUDY YEAR",
-                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black, letterSpacing = 1.5.sp),
-                        color = GoldAccent,
-                        modifier = Modifier.padding(bottom = 8.dp)
-                    )
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(bottom = 12.dp),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        years.forEach { yr ->
-                            val isSelected = selectedYear == yr
-                            Surface(
-                                modifier = Modifier
-                                    .weight(1f)
-                                    .clickable {
-                                        selectedYear = yr
-                                        viewModel.saveDepartmentSetup(selectedDept, yr)
-                                    },
-                                shape = RoundedCornerShape(10.dp),
-                                color = if (isSelected) EmeraldPrimary.copy(alpha = 0.2f) else Color(0xFF1E293B),
-                                border = BorderStroke(1.dp, if (isSelected) EmeraldPrimary else Color.Transparent)
-                            ) {
-                                Column(
-                                    modifier = Modifier.padding(vertical = 12.dp, horizontal = 4.dp),
-                                    horizontalAlignment = Alignment.CenterHorizontally
+                } else if (packageId.startsWith("freshman_") || packageId == "department" || packageId.startsWith("coc_")) {
+                    var selectedPlan by remember { mutableStateOf("sem1") } // "sem1", "sem2", "full_year"
+
+                    if (packageId.startsWith("freshman_") || packageId == "department") {
+                        Text(
+                            text = "CHOOSE STUDY PLAN",
+                            style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black, letterSpacing = 1.5.sp),
+                            color = GoldAccent,
+                            modifier = Modifier.padding(bottom = 8.dp)
+                        )
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(bottom = 16.dp),
+                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            val plans = listOf(
+                                "sem1" to ("Sem 1" to "300 ETB"),
+                                "sem2" to ("Sem 2" to "300 ETB"),
+                                "full_year" to ("Full Year" to "500 ETB")
+                            )
+                            plans.forEach { (pKey, pInfo) ->
+                                val isSel = selectedPlan == pKey
+                                Surface(
+                                    modifier = Modifier
+                                        .weight(1f)
+                                        .clickable { selectedPlan = pKey },
+                                    shape = RoundedCornerShape(10.dp),
+                                    color = if (isSel) EmeraldPrimary.copy(alpha = 0.25f) else Color(0xFF1E293B),
+                                    border = BorderStroke(1.dp, if (isSel) EmeraldPrimary else Color.Transparent)
                                 ) {
-                                    Icon(
-                                        imageVector = if (isSelected) Icons.Default.CheckCircle else Icons.Default.RadioButtonUnchecked,
-                                        contentDescription = null,
-                                        tint = if (isSelected) EmeraldPrimary else Color.Gray,
-                                        modifier = Modifier.size(16.dp)
-                                    )
-                                    Spacer(modifier = Modifier.height(4.dp))
-                                    Text(
-                                        text = yr,
-                                        style = MaterialTheme.typography.bodySmall.copy(fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal),
-                                        color = Color.White
-                                    )
+                                    Column(
+                                        modifier = Modifier.padding(vertical = 10.dp, horizontal = 4.dp),
+                                        horizontalAlignment = Alignment.CenterHorizontally
+                                    ) {
+                                        Text(
+                                            text = pInfo.first,
+                                            style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
+                                            color = Color.White
+                                        )
+                                        Spacer(modifier = Modifier.height(2.dp))
+                                        Text(
+                                            text = pInfo.second,
+                                            style = MaterialTheme.typography.labelSmall,
+                                            color = if (isSel) GoldAccent else TextMuted
+                                        )
+                                    }
+                                }
+                            }
+                        }
+                    } else if (packageId.startsWith("coc_")) {
+                        Text(
+                            text = t("price_announced_telegram"),
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = GoldAccent,
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier.padding(bottom = 16.dp)
+                        )
+                    }
+
+                    if (packageId == "department") {
+                        Text(
+                            text = "SELECT YOUR CURRENT STUDY YEAR",
+                            style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black, letterSpacing = 1.5.sp),
+                            color = GoldAccent,
+                            modifier = Modifier.padding(bottom = 8.dp)
+                        )
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(bottom = 12.dp),
+                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            years.forEach { yr ->
+                                val isSelected = selectedYear == yr
+                                Surface(
+                                    modifier = Modifier
+                                        .weight(1f)
+                                        .clickable {
+                                            selectedYear = yr
+                                            viewModel.saveDepartmentSetup(selectedDept, yr)
+                                        },
+                                    shape = RoundedCornerShape(10.dp),
+                                    color = if (isSelected) EmeraldPrimary.copy(alpha = 0.2f) else Color(0xFF1E293B),
+                                    border = BorderStroke(1.dp, if (isSelected) EmeraldPrimary else Color.Transparent)
+                                ) {
+                                    Column(
+                                        modifier = Modifier.padding(vertical = 12.dp, horizontal = 4.dp),
+                                        horizontalAlignment = Alignment.CenterHorizontally
+                                    ) {
+                                        Icon(
+                                            imageVector = if (isSelected) Icons.Default.CheckCircle else Icons.Default.RadioButtonUnchecked,
+                                            contentDescription = null,
+                                            tint = if (isSelected) EmeraldPrimary else Color.Gray,
+                                            modifier = Modifier.size(16.dp)
+                                        )
+                                        Spacer(modifier = Modifier.height(4.dp))
+                                        Text(
+                                            text = yr,
+                                            style = MaterialTheme.typography.bodySmall.copy(fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal),
+                                            color = Color.White
+                                        )
+                                    }
                                 }
                             }
                         }
                     }
-                    Text(
-                        text = "Programs range from 2nd year up to 5th year for engineering and technology degrees. You can select your department next.",
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = TextMuted,
-                        textAlign = TextAlign.Center,
-                        lineHeight = 18.sp,
-                        modifier = Modifier.padding(bottom = 16.dp)
-                    )
                 } else {
                     val descText = "${t("other_trial_desc_prefix")}$packageName${t("other_trial_desc_suffix")}\n\n" +
                             "${t("trial_includes_title")}\n" +
@@ -865,6 +950,17 @@ fun EnrollmentConfirmationModal(
                         onClick = {
                             if (packageId == "department" || packageId == "exit_exam") {
                                 viewModel.saveDepartmentSetup("", selectedYear)
+                            }
+                            // Create product request for catalog tracking
+                            val targetProductId = when {
+                                packageId == "freshman_natural" -> "freshman_natural_science_y1_sem1"
+                                packageId == "freshman_social" -> "freshman_social_science_y1_sem1"
+                                packageId.startsWith("coc_") -> packageId
+                                else -> packageId
+                            }
+                            val matchedProduct = com.example.data.ProductCatalog.get(targetProductId)
+                            if (matchedProduct != null) {
+                                viewModel.createPurchaseRequest(matchedProduct)
                             }
                             onUpgradePremium()
                         },

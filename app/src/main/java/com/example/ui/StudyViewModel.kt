@@ -275,7 +275,7 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
 
     // Paywall Dialog Flows
     val showFreeTrialPaywall = MutableStateFlow(false)
-    val paywallPackageIdForUpgrade = MutableStateFlow<String?>("freshman")
+    val paywallPackageIdForUpgrade = MutableStateFlow<String?>(null)
 
     // UI state flows
     val userProgress: StateFlow<UserProgress> = repository.userProgress
@@ -299,7 +299,7 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
                 }
             }
             pkg.startsWith("euee_") -> list.filter { it.packageId == pkg }
-            pkg == "freshman" || pkg.startsWith("freshman") -> list.filter { it.packageId == "freshman" }
+            pkg == "freshman_natural" || pkg == "freshman_social" -> list.filter { it.packageId == pkg }
             pkg == "aau_uat" || pkg.startsWith("uat") -> list.filter { it.packageId == "aau_uat" }
             pkg == "department" || pkg.startsWith("dept") -> list.filter { it.packageId == "department" }
             pkg == "exit_exam" || pkg.startsWith("exit") -> list.filter { it.packageId == "exit_exam" }
@@ -321,7 +321,9 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
                 list.filter { it.packageId == "euee_social" }
             } else {
                 list.filter { it.packageId == "euee_natural" }.ifEmpty {
-                    list.filter { it.packageId == "freshman" }.ifEmpty { list }
+                    list.filter { it.packageId == "freshman_natural" }.ifEmpty {
+                        list.filter { it.packageId == "freshman_social" }.ifEmpty { list }
+                    }
                 }
             }
         }
@@ -623,7 +625,59 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
         sharedPrefs.edit().putStringSet("answered_questions_ids", updated).apply()
     }
 
-    // Payment Verification State
+    // Payment Verification & Entitlement Overhaul State
+    val purchaseRequest = MutableStateFlow<PurchaseRequest?>(null)
+    val entitlements = repository.getEntitlements().stateIn(
+        viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList()
+    )
+
+    private fun generatePurchaseReference(): String {
+        val allowedChars = "23456789ABCDEFGHJKLMNPQRSTUVWXYZ"
+        val randomChars = (1..5).map { allowedChars.random() }.joinToString("")
+        return "TH-$randomChars"
+    }
+
+    fun createPurchaseRequest(product: Product, payerName: String = "") {
+        viewModelScope.launch(Dispatchers.IO) {
+            val ref = generatePurchaseReference()
+            val req = PurchaseRequest(
+                reference = ref,
+                productId = product.id,
+                category = product.category,
+                stream = product.stream,
+                academicYear = product.academicYear,
+                department = product.department,
+                plan = product.plan,
+                amount = product.amount ?: 0,
+                currency = product.currency,
+                language = currentLanguage.value,
+                status = "pending",
+                payerName = payerName,
+                createdAtMillis = System.currentTimeMillis()
+            )
+            repository.savePurchaseRequest(req)
+            purchaseRequest.value = req
+
+            try {
+                val dto = com.example.ui.api.PurchaseRequestDto(
+                    reference = req.reference,
+                    productId = req.productId,
+                    category = req.category,
+                    stream = req.stream,
+                    academicYear = req.academicYear,
+                    department = req.department,
+                    plan = req.plan,
+                    amount = req.amount,
+                    currency = req.currency,
+                    language = req.language
+                )
+                TinatApiClient.apiService.createPurchaseRequest(dto)
+            } catch (e: Exception) {
+                // Ignore network failure when sending purchase request to backend; request saved locally
+            }
+        }
+    }
+
     val isSplashChecking = MutableStateFlow(true)
     val showPaymentVerificationScreen = MutableStateFlow(false)
     val paymentTxnIdInput = MutableStateFlow("")
@@ -667,6 +721,7 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
                                 else -> pkgId
                             }
                             repository.approvePayment(packageId = normalizedPkg)
+                            repository.grantEntitlement(productId = normalizedPkg)
                         } else if (response.code() == 401 || response.code() == 404) {
                             // Clear invalid or revoked token
                             sharedPrefs.edit().remove("access_token").apply()
@@ -783,6 +838,18 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
 
     // Helper to check lock status for UI icons
     fun isSubjectLocked(subject: StudySubject): Boolean {
+        // 1. Check fine-grained ProductCatalog entitlement requirement
+        val requiredProduct = ProductCatalog.requiredProductForSubject(subject.id, subject.packageId)
+        val userEntitlements = entitlements.value.map { it.productId }.toSet()
+
+        if (requiredProduct != null) {
+            // Unlocked if user holds exact requirement or bundle granting it
+            if (userEntitlements.any { granted -> ProductCatalog.grants(granted, requiredProduct) }) {
+                return false
+            }
+        }
+
+        // 2. Check legacy package purchase fallback
         val progress = userProgress.value
         val isApproved = progress.paymentStatus == "approved"
 
@@ -803,9 +870,13 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
         val id = subject.id
         // Free trial rules for each package: exactly 2 selected subjects are open, all others locked
         return when (subject.packageId) {
-            "freshman" -> {
+            "freshman_natural" -> {
                 // Communicative English I and Emerging Tech are open
-                !(id == "freshman_english_1" || id == "freshman_emerging_tech")
+                !(id == "freshman_nat_english_1" || id == "freshman_nat_emerging_tech")
+            }
+            "freshman_social" -> {
+                // Communicative English I and Emerging Tech are open
+                !(id == "freshman_soc_english_1" || id == "freshman_soc_emerging_tech")
             }
             "euee_natural" -> {
                 // Mathematics and English are open
@@ -823,7 +894,7 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
                 // Data Structures & Algorithms and Software Engineering are open
                 !(id == "dept_data_structures" || id == "dept_software_engineering")
             }
-            "exit_exam" -> {
+            "exit_exam", "coc_medical", "coc_law", "coc_engineering" -> {
                 // Computer Science Exit Exam and Business Management Exit Exam are open
                 !(id == "exit_cs" || id == "exit_mgmt")
             }
@@ -1092,6 +1163,8 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
             // Reset trial accessed subjects tracking
             sharedPrefs.edit().apply {
                 remove("accessed_freshman_subjects")
+                remove("accessed_freshman_natural_subjects")
+                remove("accessed_freshman_social_subjects")
                 remove("accessed_euee_subjects")
                 remove("accessed_uat_subjects")
                 remove("accessed_trial_subjects")
@@ -1232,6 +1305,7 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
                     }
 
                     repository.approvePayment(packageId = normalizedPkg, username = phoneToSend)
+                    repository.grantEntitlement(productId = normalizedPkg)
 
                     isOnboardingCompleted.value = true
                     showPaymentVerificationScreen.value = false
@@ -1255,6 +1329,16 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
             }
         }
         return true
+    }
+
+    fun redeemCodeWithProductContext(phoneNumber: String, redeemCode: String, productId: String): Boolean {
+        val success = redeemCode(phoneNumber, redeemCode, productId)
+        if (success && productId.isNotEmpty()) {
+            viewModelScope.launch(Dispatchers.IO) {
+                repository.grantEntitlement(productId = productId)
+            }
+        }
+        return success
     }
 
     fun activatePremiumWithCredentials(username: String, password: String, packageId: String): Boolean {

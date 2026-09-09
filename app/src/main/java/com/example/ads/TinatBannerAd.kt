@@ -40,10 +40,10 @@ import com.google.android.gms.ads.LoadAdError
 @Composable
 fun TinatBannerAd(
     modifier: Modifier = Modifier,
-    adUnitId: String = AdConfig.BANNER_AD_UNIT_ID,
+    adUnitId: String = AdManager.BANNER_AD_UNIT_ID,
     applyInsets: Boolean = true
 ) {
-    if (!AdConfig.ADS_ENABLED || !AdConfig.BANNER_ADS_ENABLED) {
+    if (!AdManager.ADS_ENABLED || !AdManager.BANNER_ADS_ENABLED) {
         return
     }
 
