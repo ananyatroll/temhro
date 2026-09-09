@@ -871,34 +871,30 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
         // Free trial rules for each package: exactly 2 selected subjects are open, all others locked
         return when (subject.packageId) {
             "freshman_natural" -> {
-                // Communicative English I and Emerging Tech are open
                 !(id == "freshman_nat_english_1" || id == "freshman_nat_emerging_tech")
             }
             "freshman_social" -> {
-                // Communicative English I and Emerging Tech are open
                 !(id == "freshman_soc_english_1" || id == "freshman_soc_emerging_tech")
             }
             "euee_natural" -> {
-                // Mathematics and English are open
-                !(id == "euee_nat_maths" || id == "euee_nat_english")
+                // Biology and English are open for free trial
+                !(id == "biology" || id == "euee_nat_english")
             }
             "euee_social" -> {
-                // History and Geography are open
-                !(id == "euee_soc_history" || id == "euee_soc_geography")
+                // Geography and English are open for free trial
+                !(id == "euee_soc_geography" || id == "euee_soc_english")
             }
             "aau_uat" -> {
-                // Verbal Reasoning and Quantitative Reasoning are open
                 !(id == "uat_verbal" || id == "uat_quantitative")
             }
             "department" -> {
-                // Data Structures & Algorithms and Software Engineering are open
                 !(id == "dept_data_structures" || id == "dept_software_engineering")
             }
-            "exit_exam", "coc_medical", "coc_law", "coc_engineering" -> {
-                // Computer Science Exit Exam and Business Management Exit Exam are open
+            "exit_exam" -> {
                 !(id == "exit_cs" || id == "exit_mgmt")
             }
-            else -> true // Unknown or unlisted packages are locked by default in free trial
+            // All COC packages have NO free trial (100% locked)
+            else -> true
         }
     }
 
