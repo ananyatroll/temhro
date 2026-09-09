@@ -888,7 +888,8 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
                 !(id == "uat_verbal" || id == "uat_quantitative")
             }
             "department" -> {
-                !(id == "dept_data_structures" || id == "dept_software_engineering")
+                // Exactly 1 course unlocked for free trial in University Department
+                !(id == "dept_data_structures" || id == "dept_fin_acc_1" || id == "dept_micro_1" || id == "dept_circuit_1" || id == "dept_engineering_mechanics" || id == "dept_constitutional_law" || id == "dept_core_1")
             }
             "exit_exam" -> {
                 !(id == "exit_cs" || id == "exit_mgmt")
