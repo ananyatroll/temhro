@@ -75,9 +75,13 @@ object ProductCatalog {
     // University products: university_<department>_y<year>_<plan>
     // Departments mirror the existing department model used in DashboardScreen.
     // ---------------------------------------------------------------------
+    val PRICE_COC_ETB = 300
+
     val universityDepartments = listOf(
-        "accounting", "economics", "computer_science", "electrical",
-        "mechanical", "law", "management"
+        "accounting_finance", "economics", "management", "marketing_management",
+        "lscm", "bais", "padm", "computer_science", "software_engineering",
+        "information_sciences", "electrical_engineering", "mechanical_engineering",
+        "psychology", "psir", "ethiopian_law"
     )
 
     fun universityProducts(departmentKey: String, year: Int): List<Product> {
@@ -96,20 +100,27 @@ object ProductCatalog {
     }
 
     private val allUniversityProducts: List<Product> =
-        universityDepartments.flatMap { dept -> (2..4).flatMap { y -> universityProducts(dept, y) } }
+        universityDepartments.flatMap { dept -> (2..5).flatMap { y -> universityProducts(dept, y) } }
 
     // ---------------------------------------------------------------------
-    // COC products — prices intentionally NOT configured here.
-    // Amount resolution order: backend config > local override. Until a price
-    // exists, the product is not purchasable (isPurchasable == false).
+    // COC products — price is 300 ETB across all 15 fields
     // ---------------------------------------------------------------------
     private val cocProducts = listOf(
-        Product("coc_medical", "coc", plan = "field", field = "medical",
-            amount = null, shortLabel = "Medical COC Exam"),
-        Product("coc_law", "coc", plan = "field", field = "law",
-            amount = null, shortLabel = "Law COC Exam"),
-        Product("coc_engineering", "coc", plan = "field", field = "engineering",
-            amount = null, shortLabel = "Engineering COC Exam")
+        Product("coc_accounting_finance", "coc", plan = "field", field = "accounting_finance", amount = PRICE_COC_ETB, shortLabel = "Accounting & Finance COC"),
+        Product("coc_economics", "coc", plan = "field", field = "economics", amount = PRICE_COC_ETB, shortLabel = "Economics COC"),
+        Product("coc_management", "coc", plan = "field", field = "management", amount = PRICE_COC_ETB, shortLabel = "Management COC"),
+        Product("coc_marketing_management", "coc", plan = "field", field = "marketing_management", amount = PRICE_COC_ETB, shortLabel = "Marketing Management COC"),
+        Product("coc_lscm", "coc", plan = "field", field = "lscm", amount = PRICE_COC_ETB, shortLabel = "LSCM COC"),
+        Product("coc_bais", "coc", plan = "field", field = "bais", amount = PRICE_COC_ETB, shortLabel = "BAIS COC"),
+        Product("coc_padm", "coc", plan = "field", field = "padm", amount = PRICE_COC_ETB, shortLabel = "PADM COC"),
+        Product("coc_computer_science", "coc", plan = "field", field = "computer_science", amount = PRICE_COC_ETB, shortLabel = "Computer Science COC"),
+        Product("coc_software_engineering", "coc", plan = "field", field = "software_engineering", amount = PRICE_COC_ETB, shortLabel = "Software Engineering COC"),
+        Product("coc_information_sciences", "coc", plan = "field", field = "information_sciences", amount = PRICE_COC_ETB, shortLabel = "Information Sciences COC"),
+        Product("coc_electrical_engineering", "coc", plan = "field", field = "electrical_engineering", amount = PRICE_COC_ETB, shortLabel = "Electrical Engineering COC"),
+        Product("coc_mechanical_engineering", "coc", plan = "field", field = "mechanical_engineering", amount = PRICE_COC_ETB, shortLabel = "Mechanical Engineering COC"),
+        Product("coc_psychology", "coc", plan = "field", field = "psychology", amount = PRICE_COC_ETB, shortLabel = "Psychology COC"),
+        Product("coc_psir", "coc", plan = "field", field = "psir", amount = PRICE_COC_ETB, shortLabel = "PSIR COC"),
+        Product("coc_ethiopian_law", "coc", plan = "field", field = "ethiopian_law", amount = PRICE_COC_ETB, shortLabel = "Ethiopian Law COC")
     )
 
     private val all: List<Product> =
@@ -146,10 +157,7 @@ object ProductCatalog {
             "freshman_social" ->
                 if (subjectId in SOCIAL_SEM1_SUBJECTS) "freshman_social_science_y1_sem1"
                 else "freshman_social_science_y1_sem2"
-            "coc_medical" -> "coc_medical"
-            "coc_law" -> "coc_law"
-            "coc_engineering" -> "coc_engineering"
-            else -> null // university handled separately (needs dept+year context)
+            else -> if (subjectPackageId.startsWith("coc_")) subjectPackageId else null
         }
     }
 
@@ -164,13 +172,21 @@ object ProductCatalog {
     fun departmentKeyFor(displayName: String): String {
         val lower = displayName.lowercase()
         return when {
-            lower.contains("account") -> "accounting"
+            lower.contains("account") -> "accounting_finance"
             lower.contains("econ") -> "economics"
-            lower.contains("computer") || lower.contains("software") -> "computer_science"
-            lower.contains("electr") -> "electrical"
-            lower.contains("mechanic") -> "mechanical"
-            lower.contains("law") -> "law"
-            lower.contains("manage") || lower.contains("business") -> "management"
+            lower.contains("software") -> "software_engineering"
+            lower.contains("computer") -> "computer_science"
+            lower.contains("info") && lower.contains("science") -> "information_sciences"
+            lower.contains("electr") -> "electrical_engineering"
+            lower.contains("mechanic") -> "mechanical_engineering"
+            lower.contains("psych") -> "psychology"
+            lower.contains("psir") || lower.contains("political") -> "psir"
+            lower.contains("law") -> "ethiopian_law"
+            lower.contains("lscm") || lower.contains("logistics") -> "lscm"
+            lower.contains("bais") -> "bais"
+            lower.contains("padm") || lower.contains("public") -> "padm"
+            lower.contains("marketing") -> "marketing_management"
+            lower.contains("manage") -> "management"
             else -> lower.replace(Regex("[^a-z0-9]+"), "_").trim('_')
         }
     }
