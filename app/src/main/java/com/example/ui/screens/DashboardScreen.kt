@@ -217,59 +217,7 @@ fun DashboardScreen(viewModel: StudyViewModel) {
 
             // Spacing below header
             item(span = { GridItemSpan(maxLineSpan) }) {
-                Spacer(modifier = Modifier.height(10.dp))
-            }
-
-            // Interactive Semester Segmented Switcher (for freshman and semester packages)
-            val isFreshmanOrSemesterPkg = progress.activePackageId?.startsWith("freshman") == true || progress.activePackageId == "department"
-            if (isFreshmanOrSemesterPkg && !isDepartmentMode) {
-                item(span = { GridItemSpan(maxLineSpan) }) {
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(bottom = 12.dp),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        val filterTabs = listOf(
-                            "all" to "All Courses",
-                            "sem1" to "Semester 1",
-                            "sem2" to "Semester 2"
-                        )
-                        filterTabs.forEach { (tabKey, tabLabel) ->
-                            val isSelected = selectedSemesterFilter == tabKey
-                            Surface(
-                                modifier = Modifier
-                                    .weight(1f)
-                                    .clickable { viewModel.setSemesterFilter(tabKey) },
-                                shape = RoundedCornerShape(10.dp),
-                                color = if (isSelected) {
-                                    if (tabKey == "sem2") Color(0xFF3B82F6) else EmeraldPrimary
-                                } else {
-                                    if (isDarkTheme) Color(0xFF1E293B) else Color(0xFFF1F5F9)
-                                },
-                                border = BorderStroke(
-                                    1.dp,
-                                    if (isSelected) Color.Transparent else (if (isDarkTheme) Color(0xFF334155) else Color(0xFFCBD5E1))
-                                )
-                            ) {
-                                Box(
-                                    modifier = Modifier.padding(vertical = 8.dp),
-                                    contentAlignment = Alignment.Center
-                                ) {
-                                    Text(
-                                        text = tabLabel,
-                                        style = MaterialTheme.typography.labelSmall.copy(
-                                            fontWeight = if (isSelected) FontWeight.Black else FontWeight.Bold,
-                                            fontSize = 11.sp
-                                        ),
-                                        color = if (isSelected) Color.White else (if (isDarkTheme) Color.LightGray else Color(0xFF475569)),
-                                        maxLines = 1
-                                    )
-                                }
-                            }
-                        }
-                    }
-                }
+                Spacer(modifier = Modifier.height(12.dp))
             }
 
             if (isDepartmentMode) {
