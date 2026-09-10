@@ -75,33 +75,37 @@ fun SleekPaymentVerificationScreen(
                 .verticalScroll(scrollState)
         ) {
             // Header
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .background(Color(0xFF1E293B).copy(alpha = 0.65f))
-                    .statusBarsPadding()
-                    .padding(horizontal = 16.dp, vertical = 16.dp),
-                verticalAlignment = Alignment.CenterVertically
+            val purchaseReq by viewModel.purchaseRequest.collectAsState()
+            val reqAmount = purchaseReq?.amount ?: 300
+
+            Surface(
+                color = Color(0xFF0F172A),
+                modifier = Modifier.fillMaxWidth()
             ) {
-                IconButton(onClick = onClose) {
-                    Icon(imageVector = Icons.Default.Close, contentDescription = "Close", tint = Color.White)
-                }
-                Spacer(modifier = Modifier.width(8.dp))
-                Column {
-                    Text(
-                        text = com.example.ui.TranslationManager.get("upgrade_premium", currentLang),
-                        style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
-                        color = Color.White
-                    )
-                    Text(
-                        text = packageName,
-                        style = MaterialTheme.typography.bodySmall,
-                        color = GoldAccent
-                    )
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(16.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    IconButton(onClick = onClose) {
+                        Icon(imageVector = Icons.Default.Close, contentDescription = "Close", tint = Color.White)
+                    }
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            text = com.example.ui.TranslationManager.get("upgrade_premium", currentLang) + " ($reqAmount ETB)",
+                            style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
+                            color = Color.White
+                        )
+                        Text(
+                            text = packageName,
+                            style = MaterialTheme.typography.bodySmall,
+                            color = GoldAccent
+                        )
+                    }
                 }
             }
-
-            val purchaseReq by viewModel.purchaseRequest.collectAsState()
 
             Column(
                 modifier = Modifier
@@ -286,7 +290,7 @@ fun SleekPaymentVerificationScreen(
                             )
                             Spacer(modifier = Modifier.width(8.dp))
                             Text(
-                                text = com.example.ui.TranslationManager.get("btn_telegram_bot", currentLang),
+                                text = "Send Proof ($reqAmount ETB) on Telegram",
                                 style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
                                 color = Color.White
                             )

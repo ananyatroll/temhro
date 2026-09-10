@@ -141,7 +141,26 @@ fun DocumentScannerView(
         }
     }
 
+    val cameraPermissionLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.RequestPermission()
+    ) { isGranted ->
+        if (isGranted) {
+            launchCamera()
+        } else {
+            popupMessage = "Camera permission is required to scan documents."
+        }
+    }
+
     fun launchCamera() {
+        val permissionCheck = androidx.core.content.ContextCompat.checkSelfPermission(
+            context,
+            android.Manifest.permission.CAMERA
+        )
+        if (permissionCheck != android.content.pm.PackageManager.PERMISSION_GRANTED) {
+            cameraPermissionLauncher.launch(android.Manifest.permission.CAMERA)
+            return
+        }
+
         try {
             val photoFile = File(context.cacheDir, "camera_scan_${System.currentTimeMillis()}.jpg")
             val uri = androidx.core.content.FileProvider.getUriForFile(
