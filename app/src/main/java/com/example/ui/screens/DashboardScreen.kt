@@ -417,162 +417,63 @@ fun DashboardScreen(viewModel: StudyViewModel) {
                     }
                 }
             } else {
-                // Group subjects by Semester (Sem 1 first, Sem 2 next, others following) and sort unlocked trial subjects to top
-                val sem1Subjects = subjectsList.filter { subject ->
-                    subject.id.contains("_english_1") || subject.id.contains("_psychology") || 
-                    subject.id.contains("_geography") || subject.id.contains("_critical_thinking") || 
-                    subject.id.contains("_physical_fitness") || subject.id == "freshman_nat_maths" || 
-                    subject.id == "freshman_nat_physics" || subject.id == "freshman_nat_history" || 
-                    subject.id == "freshman_soc_civics" || subject.id == "freshman_soc_anthropology" || 
-                    subject.id == "freshman_soc_global_trends" || subject.id == "freshman_soc_economics" || 
-                    subject.id == "freshman_soc_emerging_tech" || subject.id == "freshman_soc_entrepreneurship" ||
-                    (subject.packageId == "department" && (subject.id.contains("_1") || subject.id.contains("_dsa") || subject.id.contains("_oop") || subject.id.contains("_circuit_1") || subject.id.contains("_thermodynamics_1") || subject.id.contains("_constitutional_law")))
-                }.sortedBy { viewModel.isSubjectLocked(it) }
+                val currentPkg = progress.activePackageId ?: ""
+                val isSemesterBoundPackage = currentPkg.startsWith("freshman") || currentPkg == "department"
 
-                val sem2Subjects = subjectsList.filter { subject ->
-                    subject.id.contains("_applied_maths") || subject.id.contains("_english_2") || 
-                    subject.id.contains("_computer_programming") || (subject.packageId != "freshman_social" && subject.id.contains("_emerging_tech")) || 
-                    (subject.packageId != "freshman_social" && subject.id.contains("_anthropology")) || (subject.packageId != "freshman_social" && subject.id.contains("_civics")) || 
-                    subject.id.contains("_biology") || subject.id.contains("_chemistry") || 
-                    subject.id == "freshman_soc_inclusiveness" || subject.id == "freshman_soc_history" || 
-                    subject.id == "freshman_soc_maths" || subject.id == "freshman_soc_geography" ||
-                    (subject.packageId == "department" && !(subject.id.contains("_1") || subject.id.contains("_dsa") || subject.id.contains("_oop") || subject.id.contains("_circuit_1") || subject.id.contains("_thermodynamics_1") || subject.id.contains("_constitutional_law")))
-                }.sortedBy { viewModel.isSubjectLocked(it) }
+                if (isSemesterBoundPackage) {
+                    val sem1Subjects = subjectsList.filter { subject ->
+                        subject.id.contains("_english_1") || 
+                        subject.id == "freshman_nat_maths" || 
+                        subject.id == "freshman_nat_physics" || 
+                        subject.id == "freshman_nat_history" || 
+                        subject.id == "freshman_soc_civics" || 
+                        subject.id == "freshman_soc_anthropology" || 
+                        subject.id == "freshman_soc_global_trends" || 
+                        subject.id == "freshman_soc_economics" || 
+                        subject.id == "freshman_soc_emerging_tech" || 
+                        subject.id == "freshman_soc_entrepreneurship" ||
+                        (subject.packageId == "department" && (subject.id.contains("_1") || subject.id.contains("_dsa") || subject.id.contains("_oop") || subject.id.contains("_circuit_1") || subject.id.contains("_thermodynamics_1") || subject.id.contains("_constitutional_law")))
+                    }.sortedBy { viewModel.isSubjectLocked(it) }
 
-                val otherSubjects = subjectsList.filter { subject ->
-                    !sem1Subjects.contains(subject) && !sem2Subjects.contains(subject)
-                }.sortedBy { viewModel.isSubjectLocked(it) }
+                    val sem2Subjects = subjectsList.filter { subject ->
+                        subject.id.contains("_applied_maths") || 
+                        subject.id.contains("_english_2") || 
+                        subject.id.contains("_computer_programming") || 
+                        subject.id.contains("_psychology") ||
+                        subject.id.contains("_geography") ||
+                        subject.id.contains("_critical_thinking") ||
+                        subject.id.contains("_physical_fitness") ||
+                        (subject.packageId != "freshman_social" && subject.id.contains("_emerging_tech")) || 
+                        (subject.packageId != "freshman_social" && subject.id.contains("_anthropology")) || 
+                        (subject.packageId != "freshman_social" && subject.id.contains("_civics")) || 
+                        subject.id.contains("_biology") || 
+                        subject.id.contains("_chemistry") || 
+                        subject.id == "freshman_soc_inclusiveness" || 
+                        subject.id == "freshman_soc_history" || 
+                        subject.id == "freshman_soc_maths" || 
+                        subject.id == "freshman_soc_geography" ||
+                        (subject.packageId == "department" && !(subject.id.contains("_1") || subject.id.contains("_dsa") || subject.id.contains("_oop") || subject.id.contains("_circuit_1") || subject.id.contains("_thermodynamics_1") || subject.id.contains("_constitutional_law")))
+                    }.sortedBy { viewModel.isSubjectLocked(it) }
 
-                val hasSemesters = sem1Subjects.isNotEmpty() || sem2Subjects.isNotEmpty()
+                    val otherSubjects = subjectsList.filter { subject ->
+                        !sem1Subjects.contains(subject) && !sem2Subjects.contains(subject)
+                    }.sortedBy { viewModel.isSubjectLocked(it) }
 
-                if (hasSemesters && sem1Subjects.isNotEmpty()) {
-                    item(span = { GridItemSpan(maxLineSpan) }) {
-                        Row(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(top = 8.dp, bottom = 4.dp),
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            Surface(
-                                shape = RoundedCornerShape(8.dp),
-                                color = EmeraldPrimary,
-                                modifier = Modifier.padding(end = 12.dp)
-                            ) {
-                                Text(
-                                    text = "SEMESTER 1 COURSES",
-                                    modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
-                                    style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black),
-                                    color = Color.White
-                                )
-                            }
-                            HorizontalDivider(
-                                modifier = Modifier.weight(1f),
-                                color = if (isDarkTheme) Color(0xFF334155) else Color(0xFFE2E8F0),
-                                thickness = 1.dp
-                            )
-                        }
-                    }
-
-                    items(sem1Subjects) { subject ->
-                        val isDone = completedSubjectIds.contains(subject.id)
-                        val isLocked = viewModel.isSubjectLocked(subject)
-                        val progressVal = subjectProgressMap[subject.id] ?: if (isDone) 1f else 0f
-                        val context = LocalContext.current
-                        SubjectHexCard(
-                            subjectName = subject.name,
-                            iconName = subject.icon,
-                            isCompleted = isDone,
-                            isLocked = isLocked,
-                            semesterBadge = "Sem 1",
-                            progress = progressVal,
-                            isDarkTheme = isDarkTheme,
-                            currentLang = currentLang,
-                            onSubjectClick = {
-                                val activity = AdsManager.findActivity(context)
-                                if (activity != null) {
-                                    InterstitialAdManager.showIfAllowed(activity) {
-                                        viewModel.selectSubject(subject)
-                                    }
-                                } else {
-                                    viewModel.selectSubject(subject)
-                                }
-                            }
-                        )
-                    }
-                }
-
-                if (hasSemesters && sem2Subjects.isNotEmpty()) {
-                    item(span = { GridItemSpan(maxLineSpan) }) {
-                        Row(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(top = 16.dp, bottom = 4.dp),
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            Surface(
-                                shape = RoundedCornerShape(8.dp),
-                                color = Color(0xFF3B82F6),
-                                modifier = Modifier.padding(end = 12.dp)
-                            ) {
-                                Text(
-                                    text = "SEMESTER 2 COURSES",
-                                    modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
-                                    style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black),
-                                    color = Color.White
-                                )
-                            }
-                            HorizontalDivider(
-                                modifier = Modifier.weight(1f),
-                                color = if (isDarkTheme) Color(0xFF334155) else Color(0xFFE2E8F0),
-                                thickness = 1.dp
-                            )
-                        }
-                    }
-
-                    items(sem2Subjects) { subject ->
-                        val isDone = completedSubjectIds.contains(subject.id)
-                        val isLocked = viewModel.isSubjectLocked(subject)
-                        val progressVal = subjectProgressMap[subject.id] ?: if (isDone) 1f else 0f
-                        val context = LocalContext.current
-                        SubjectHexCard(
-                            subjectName = subject.name,
-                            iconName = subject.icon,
-                            isCompleted = isDone,
-                            isLocked = isLocked,
-                            semesterBadge = "Sem 2",
-                            progress = progressVal,
-                            isDarkTheme = isDarkTheme,
-                            currentLang = currentLang,
-                            onSubjectClick = {
-                                val activity = AdsManager.findActivity(context)
-                                if (activity != null) {
-                                    InterstitialAdManager.showIfAllowed(activity) {
-                                        viewModel.selectSubject(subject)
-                                    }
-                                } else {
-                                    viewModel.selectSubject(subject)
-                                }
-                            }
-                        )
-                    }
-                }
-
-                if (otherSubjects.isNotEmpty()) {
-                    if (hasSemesters) {
+                    if (sem1Subjects.isNotEmpty()) {
                         item(span = { GridItemSpan(maxLineSpan) }) {
                             Row(
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .padding(top = 16.dp, bottom = 4.dp),
+                                    .padding(top = 8.dp, bottom = 4.dp),
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
                                 Surface(
                                     shape = RoundedCornerShape(8.dp),
-                                    color = Color(0xFF8B5CF6),
+                                    color = EmeraldPrimary,
                                     modifier = Modifier.padding(end = 12.dp)
                                 ) {
                                     Text(
-                                        text = "ADDITIONAL SUBJECTS",
+                                        text = "SEMESTER 1 COURSES",
                                         modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
                                         style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black),
                                         color = Color.White
@@ -585,9 +486,123 @@ fun DashboardScreen(viewModel: StudyViewModel) {
                                 )
                             }
                         }
+
+                        items(sem1Subjects) { subject ->
+                            val isDone = completedSubjectIds.contains(subject.id)
+                            val isLocked = viewModel.isSubjectLocked(subject)
+                            val progressVal = subjectProgressMap[subject.id] ?: if (isDone) 1f else 0f
+                            val context = LocalContext.current
+                            SubjectHexCard(
+                                subjectName = subject.name,
+                                iconName = subject.icon,
+                                isCompleted = isDone,
+                                isLocked = isLocked,
+                                semesterBadge = "Sem 1",
+                                progress = progressVal,
+                                isDarkTheme = isDarkTheme,
+                                currentLang = currentLang,
+                                onSubjectClick = {
+                                    val activity = AdsManager.findActivity(context)
+                                    if (activity != null) {
+                                        InterstitialAdManager.showIfAllowed(activity) {
+                                            viewModel.selectSubject(subject)
+                                        }
+                                    } else {
+                                        viewModel.selectSubject(subject)
+                                    }
+                                }
+                            )
+                        }
                     }
 
-                    items(otherSubjects) { subject ->
+                    if (sem2Subjects.isNotEmpty()) {
+                        item(span = { GridItemSpan(maxLineSpan) }) {
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(top = 16.dp, bottom = 4.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Surface(
+                                    shape = RoundedCornerShape(8.dp),
+                                    color = Color(0xFF3B82F6),
+                                    modifier = Modifier.padding(end = 12.dp)
+                                ) {
+                                    Text(
+                                        text = "SEMESTER 2 COURSES",
+                                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
+                                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black),
+                                        color = Color.White
+                                    )
+                                }
+                                HorizontalDivider(
+                                    modifier = Modifier.weight(1f),
+                                    color = if (isDarkTheme) Color(0xFF334155) else Color(0xFFE2E8F0),
+                                    thickness = 1.dp
+                                )
+                            }
+                        }
+
+                        items(sem2Subjects) { subject ->
+                            val isDone = completedSubjectIds.contains(subject.id)
+                            val isLocked = viewModel.isSubjectLocked(subject)
+                            val progressVal = subjectProgressMap[subject.id] ?: if (isDone) 1f else 0f
+                            val context = LocalContext.current
+                            SubjectHexCard(
+                                subjectName = subject.name,
+                                iconName = subject.icon,
+                                isCompleted = isDone,
+                                isLocked = isLocked,
+                                semesterBadge = "Sem 2",
+                                progress = progressVal,
+                                isDarkTheme = isDarkTheme,
+                                currentLang = currentLang,
+                                onSubjectClick = {
+                                    val activity = AdsManager.findActivity(context)
+                                    if (activity != null) {
+                                        InterstitialAdManager.showIfAllowed(activity) {
+                                            viewModel.selectSubject(subject)
+                                        }
+                                    } else {
+                                        viewModel.selectSubject(subject)
+                                    }
+                                }
+                            )
+                        }
+                    }
+
+                    if (otherSubjects.isNotEmpty()) {
+                        items(otherSubjects) { subject ->
+                            val isDone = completedSubjectIds.contains(subject.id)
+                            val isLocked = viewModel.isSubjectLocked(subject)
+                            val progressVal = subjectProgressMap[subject.id] ?: if (isDone) 1f else 0f
+                            val context = LocalContext.current
+                            SubjectHexCard(
+                                subjectName = subject.name,
+                                iconName = subject.icon,
+                                isCompleted = isDone,
+                                isLocked = isLocked,
+                                semesterBadge = null,
+                                progress = progressVal,
+                                isDarkTheme = isDarkTheme,
+                                currentLang = currentLang,
+                                onSubjectClick = {
+                                    val activity = AdsManager.findActivity(context)
+                                    if (activity != null) {
+                                        InterstitialAdManager.showIfAllowed(activity) {
+                                            viewModel.selectSubject(subject)
+                                        }
+                                    } else {
+                                        viewModel.selectSubject(subject)
+                                    }
+                                }
+                            )
+                        }
+                    }
+                } else {
+                    // Non-semester packages (EUEE, COC, Exit Exam): Clean sorted list without semester headers or badges
+                    val sortedSubjects = subjectsList.sortedBy { viewModel.isSubjectLocked(it) }
+                    items(sortedSubjects) { subject ->
                         val isDone = completedSubjectIds.contains(subject.id)
                         val isLocked = viewModel.isSubjectLocked(subject)
                         val progressVal = subjectProgressMap[subject.id] ?: if (isDone) 1f else 0f
@@ -661,42 +676,6 @@ fun GreetingHeader(viewModel: StudyViewModel, username: String) {
                 }
             }
 
-            // Live 72-Hour Free Trial Countdown Badge
-            val activatedAt by viewModel.freeTrialActivatedAtMillis.collectAsState()
-            if (activatedAt > 0L) {
-                var remainingMs by remember { mutableStateOf(viewModel.getFreeTrialRemainingMillis()) }
-                LaunchedEffect(activatedAt) {
-                    while (true) {
-                        remainingMs = viewModel.getFreeTrialRemainingMillis()
-                        kotlinx.coroutines.delay(1000L)
-                    }
-                }
-                val hours = (remainingMs / (3600 * 1000)).toInt()
-                val minutes = ((remainingMs % (3600 * 1000)) / (60 * 1000)).toInt()
-                val seconds = ((remainingMs % (60 * 1000)) / 1000).toInt()
-
-                Surface(
-                    modifier = Modifier
-                        .clip(RoundedCornerShape(12.dp))
-                        .clickable { viewModel.showFreeTrialPaywall.value = true },
-                    color = if (remainingMs == 0L) Color(0xFFD32F2F) else if (hours < 12) Color(0xFFFF9800) else Color(0xFF00897B),
-                    shape = RoundedCornerShape(12.dp)
-                ) {
-                    Row(
-                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(4.dp)
-                    ) {
-                        Text(
-                            text = if (remainingMs == 0L) "⏳ Trial Expired" else "⏳ %02dh %02dm".format(hours, minutes),
-                            style = MaterialTheme.typography.labelSmall.copy(
-                                fontWeight = FontWeight.Bold,
-                                color = Color.White,
-                                fontSize = 11.sp
-                            )
-                        )
-                    }
-                }
             }
 
             Column(
@@ -794,6 +773,140 @@ fun GreetingHeader(viewModel: StudyViewModel, username: String) {
                         text = "$streakDays",
                         style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Black),
                         color = if (isDarkTheme) GoldLight else Color(0xFFC2410C)
+                    )
+                }
+            }
+
+            // Doughnut Free Trial Timer Badge next to streak flame
+            val trialActivatedAt by viewModel.freeTrialActivatedAtMillis.collectAsState()
+            if (trialActivatedAt > 0L) {
+                var remainingMs by remember { mutableStateOf(viewModel.getFreeTrialRemainingMillis()) }
+                var showTimerModal by remember { mutableStateOf(false) }
+
+                LaunchedEffect(trialActivatedAt) {
+                    while (true) {
+                        remainingMs = viewModel.getFreeTrialRemainingMillis()
+                        kotlinx.coroutines.delay(1000L)
+                    }
+                }
+
+                val totalDurationMs = 72L * 3600L * 1000L
+                val progressFraction = (remainingMs.toFloat() / totalDurationMs.toFloat()).coerceIn(0f, 1f)
+                val hoursLeft = (remainingMs / (1000 * 3600)).toInt()
+
+                Box(
+                    modifier = Modifier
+                        .size(36.dp)
+                        .clip(CircleShape)
+                        .background(if (isDarkTheme) Color(0xFF1E293B) else Color(0xFFF0FDF4))
+                        .border(1.dp, EmeraldPrimary.copy(alpha = 0.4f), CircleShape)
+                        .clickable { showTimerModal = true },
+                    contentAlignment = Alignment.Center
+                ) {
+                    CircularProgressIndicator(
+                        progress = { progressFraction },
+                        modifier = Modifier.fillMaxSize(),
+                        color = EmeraldPrimary,
+                        trackColor = if (isDarkTheme) Color(0xFF334155) else Color(0xFFE2E8F0),
+                        strokeWidth = 3.dp,
+                        strokeCap = StrokeCap.Round
+                    )
+                    Text(
+                        text = "${hoursLeft}h",
+                        style = MaterialTheme.typography.labelSmall.copy(
+                            fontWeight = FontWeight.Black,
+                            fontSize = 10.sp
+                        ),
+                        color = if (isDarkTheme) HolographicAqua else EmeraldDark
+                    )
+                }
+
+                if (showTimerModal) {
+                    val totalSec = (remainingMs / 1000).toInt()
+                    val h = totalSec / 3600
+                    val m = (totalSec % 3600) / 60
+                    val s = totalSec % 60
+                    val timerStr = String.format("%02dh : %02dm : %02ds", h, m, s)
+
+                    AlertDialog(
+                        onDismissRequest = { showTimerModal = false },
+                        containerColor = if (isDarkTheme) CardBgDark else Color.White,
+                        icon = {
+                            Icon(
+                                imageVector = Icons.Default.Timer,
+                                contentDescription = null,
+                                tint = EmeraldPrimary,
+                                modifier = Modifier.size(36.dp)
+                            )
+                        },
+                        title = {
+                            Text(
+                                text = "Free Trial Countdown",
+                                fontWeight = FontWeight.Black,
+                                fontSize = 18.sp,
+                                textAlign = TextAlign.Center,
+                                color = if (isDarkTheme) Color.White else IndigoSecondary
+                            )
+                        },
+                        text = {
+                            Column(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalAlignment = Alignment.CenterHorizontally
+                            ) {
+                                Text(
+                                    text = "72-Hour Full Pass Active",
+                                    fontSize = 13.sp,
+                                    color = TextMuted,
+                                    textAlign = TextAlign.Center
+                                )
+                                Spacer(modifier = Modifier.height(12.dp))
+                                Surface(
+                                    shape = RoundedCornerShape(12.dp),
+                                    color = EmeraldPrimary.copy(alpha = 0.1f),
+                                    border = BorderStroke(1.dp, EmeraldPrimary.copy(alpha = 0.3f)),
+                                    modifier = Modifier.padding(horizontal = 8.dp)
+                                ) {
+                                    Text(
+                                        text = timerStr,
+                                        modifier = Modifier.padding(horizontal = 20.dp, vertical = 10.dp),
+                                        style = MaterialTheme.typography.titleLarge.copy(
+                                            fontWeight = FontWeight.Black,
+                                            fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace,
+                                            fontSize = 20.sp
+                                        ),
+                                        color = EmeraldPrimary
+                                    )
+                                }
+                                Spacer(modifier = Modifier.height(12.dp))
+                                Text(
+                                    text = "Upgrade anytime to unlock lifetime unlimited access.",
+                                    fontSize = 11.sp,
+                                    color = TextMuted,
+                                    textAlign = TextAlign.Center
+                                )
+                            }
+                        },
+                        confirmButton = {
+                            Button(
+                                onClick = {
+                                    showTimerModal = false
+                                    viewModel.showFreeTrialPaywall.value = true
+                                },
+                                colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary),
+                                shape = RoundedCornerShape(10.dp),
+                                modifier = Modifier.fillMaxWidth()
+                            ) {
+                                Text("Upgrade to Premium", fontWeight = FontWeight.Bold)
+                            }
+                        },
+                        dismissButton = {
+                            TextButton(
+                                onClick = { showTimerModal = false },
+                                modifier = Modifier.fillMaxWidth()
+                            ) {
+                                Text("Close", color = TextMuted)
+                            }
+                        }
                     )
                 }
             }
