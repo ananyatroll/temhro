@@ -46,7 +46,7 @@ sealed interface MarkdownBlock {
 fun TamheroMarkdownView(
     text: String,
     isDark: Boolean,
-    isUser: Boolean,
+    isUser: Boolean = false,
     modifier: Modifier = Modifier
 ) {
     if (isUser) {

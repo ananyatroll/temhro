@@ -825,6 +825,19 @@ fun DarkThemedNotesReader(
     val isSatCourse = subjectName.contains("SAT", ignoreCase = true) || subjectName.contains("Aptitude", ignoreCase = true)
     val context = LocalContext.current
 
+    // Theme palette switcher: "dark", "warm_sepia", "clean_paper"
+    var notesTheme by remember { mutableStateOf("dark") }
+    val readerBg = when (notesTheme) {
+        "warm_sepia" -> Color(0xFFFBF0D9)
+        "clean_paper" -> Color(0xFFFAFAFA)
+        else -> ReaderBgDark
+    }
+    val readerTextColor = when (notesTheme) {
+        "warm_sepia" -> Color(0xFF432818)
+        "clean_paper" -> Color(0xFF18181B)
+        else -> Color.White
+    }
+
     // Date-based locking check
     val isLockedByDate = remember(note?.id) {
         val releaseDate = note?.releaseDate
@@ -860,7 +873,7 @@ fun DarkThemedNotesReader(
     }
 
     Surface(
-        color = ReaderBgDark,
+        color = readerBg,
         modifier = Modifier.fillMaxSize()
     ) {
         Column(
@@ -871,9 +884,6 @@ fun DarkThemedNotesReader(
         ) {
             val savedNotesSet by viewModel.savedNotesSet.collectAsState()
             val isSaved = note != null && savedNotesSet.contains(note.id)
-            val coroutineScope = rememberCoroutineScope()
-            var isDownloaded by remember(note?.id) { mutableStateOf(false) }
-            var downloadProgress by remember(note?.id) { mutableStateOf<Int?>(null) }
 
             // Header
             Row(
@@ -889,7 +899,7 @@ fun DarkThemedNotesReader(
                         Text(
                             text = subjectName.uppercase(),
                             style = MaterialTheme.typography.labelSmall,
-                            color = HolographicAqua,
+                            color = if (notesTheme == "dark") HolographicAqua else EmeraldDark,
                             fontWeight = FontWeight.Black
                         )
                         if (note != null && !isSatCourse && note.gradeLevel.isNotBlank()) {
@@ -917,42 +927,28 @@ fun DarkThemedNotesReader(
                             fontWeight = FontWeight.Bold,
                             fontSize = 18.sp
                         ),
-                        color = Color.White,
+                        color = readerTextColor,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis
                     )
                 }
 
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    // Download note for offline study
+                    // Theme Palette Switcher
                     IconButton(
                         onClick = {
-                            if (!isDownloaded && downloadProgress == null) {
-                                coroutineScope.launch {
-                                    for (p in 20..100 step 20) {
-                                        downloadProgress = p
-                                        kotlinx.coroutines.delay(80)
-                                    }
-                                    downloadProgress = null
-                                    isDownloaded = true
-                                }
+                            notesTheme = when (notesTheme) {
+                                "dark" -> "warm_sepia"
+                                "warm_sepia" -> "clean_paper"
+                                else -> "dark"
                             }
                         }
                     ) {
-                        if (downloadProgress != null) {
-                            CircularProgressIndicator(
-                                progress = { (downloadProgress ?: 0) / 100f },
-                                modifier = Modifier.size(20.dp),
-                                color = EmeraldPrimary,
-                                strokeWidth = 2.dp
-                            )
-                        } else {
-                            Icon(
-                                imageVector = if (isDownloaded) Icons.Default.CheckCircle else Icons.Default.Download,
-                                contentDescription = "Download note",
-                                tint = if (isDownloaded) EmeraldPrimary else Color.White
-                            )
-                        }
+                        Icon(
+                            imageVector = Icons.Default.Palette,
+                            contentDescription = "Theme palette",
+                            tint = readerTextColor
+                        )
                     }
 
                     // Save note button
@@ -967,13 +963,13 @@ fun DarkThemedNotesReader(
                         Icon(
                             imageVector = if (isSaved) Icons.Default.Bookmark else Icons.Default.BookmarkBorder,
                             contentDescription = "Save note",
-                            tint = if (isSaved) GoldAccent else Color.White
+                            tint = if (isSaved) GoldAccent else readerTextColor
                         )
                     }
 
                     Spacer(modifier = Modifier.width(4.dp))
                     IconButton(onClick = onClose) {
-                        Icon(Icons.Default.Close, contentDescription = "Close Note", tint = Color.White)
+                        Icon(Icons.Default.Close, contentDescription = "Close Note", tint = readerTextColor)
                     }
                 }
             }
@@ -984,7 +980,7 @@ fun DarkThemedNotesReader(
             LinearProgressIndicator(
                 progress = if (totalNotes > 0) (index + 1).toFloat() / totalNotes else 0f,
                 color = HolographicAqua,
-                trackColor = Color.DarkGray,
+                trackColor = if (notesTheme == "dark") Color.DarkGray else Color(0xFFE2E8F0),
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(6.dp)
@@ -1022,13 +1018,13 @@ fun DarkThemedNotesReader(
                                 Text(
                                     text = "Content Locked",
                                     style = MaterialTheme.typography.headlineSmall,
-                                    color = Color.White,
+                                    color = readerTextColor,
                                     fontWeight = FontWeight.Bold
                                 )
                                 Text(
                                     text = "This note will be available on ${note.releaseDate}",
                                     style = MaterialTheme.typography.bodyMedium,
-                                    color = Color.Gray,
+                                    color = if (notesTheme == "dark") Color.Gray else Color(0xFF64748B),
                                     textAlign = TextAlign.Center
                                 )
                                 val daysRemaining = try {
@@ -1056,13 +1052,13 @@ fun DarkThemedNotesReader(
                         Text(
                             text = note.title,
                             style = MaterialTheme.typography.displayMedium,
-                            color = Color.White,
+                            color = readerTextColor,
                             modifier = Modifier.padding(bottom = 16.dp)
                         )
 
                         com.example.ui.tools.ui.TamheroMarkdownView(
                             text = note.content,
-                            isDark = true,
+                            isDark = notesTheme == "dark",
                             modifier = Modifier.fillMaxWidth()
                         )
 
@@ -1077,7 +1073,7 @@ fun DarkThemedNotesReader(
                     ) {
                         Text(
                             text = if (selectedGrade != "All") "No notes found for $selectedGrade." else "No notes loaded.",
-                            color = Color.Gray,
+                            color = if (notesTheme == "dark") Color.Gray else Color(0xFF64748B),
                             style = MaterialTheme.typography.bodyMedium
                         )
                     }
@@ -1099,7 +1095,7 @@ fun DarkThemedNotesReader(
                     enabled = index > 0,
                     modifier = Modifier
                         .clip(CircleShape)
-                        .background(if (index > 0) CardBgDark else Color.Transparent)
+                        .background(if (index > 0) (if (notesTheme == "dark") CardBgDark else Color(0xFFE2E8F0)) else Color.Transparent)
                 ) {
                     Icon(
                         Icons.Default.ChevronLeft,
@@ -1123,7 +1119,7 @@ fun DarkThemedNotesReader(
                     Text(
                         text = "${index + 1} OF $totalNotes UNITS",
                         style = MaterialTheme.typography.labelSmall,
-                        color = Color.Gray,
+                        color = if (notesTheme == "dark") Color.Gray else Color(0xFF64748B),
                         fontWeight = FontWeight.Bold
                     )
                 }
@@ -1133,7 +1129,7 @@ fun DarkThemedNotesReader(
                     enabled = index < totalNotes - 1,
                     modifier = Modifier
                         .clip(CircleShape)
-                        .background(if (index < totalNotes - 1) CardBgDark else Color.Transparent)
+                        .background(if (index < totalNotes - 1) (if (notesTheme == "dark") CardBgDark else Color(0xFFE2E8F0)) else Color.Transparent)
                 ) {
                     Icon(
                         Icons.Default.ChevronRight,
