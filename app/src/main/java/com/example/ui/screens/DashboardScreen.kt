@@ -753,7 +753,7 @@ fun GreetingHeader(viewModel: StudyViewModel, username: String) {
             // Gamified Streak & XP Pill (Duolingo / Phantom Wallet Style)
             val answeredCount = viewModel.answeredQuestionsSet.collectAsState().value.size
             val readNotesCount = viewModel.readNotesSet.collectAsState().value.size
-            val totalXp = (answeredCount * 15) + (readNotesCount * 25) + 150
+            val totalXp = (answeredCount * 15) + (readNotesCount * 25)
             val streakDays = (answeredCount / 3).coerceAtLeast(1)
 
             val infiniteTransition = rememberInfiniteTransition(label = "streakPulse")

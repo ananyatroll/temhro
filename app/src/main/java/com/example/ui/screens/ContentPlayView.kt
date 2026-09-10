@@ -1052,7 +1052,7 @@ fun DarkThemedNotesReader(
                             }
                         }
                     } else {
-                        // Normal content display
+                        // Normal Markdown content display
                         Text(
                             text = note.title,
                             style = MaterialTheme.typography.displayMedium,
@@ -1060,11 +1060,10 @@ fun DarkThemedNotesReader(
                             modifier = Modifier.padding(bottom = 16.dp)
                         )
 
-                        Text(
+                        com.example.ui.tools.ui.TamheroMarkdownView(
                             text = note.content,
-                            style = MaterialTheme.typography.bodyLarge,
-                            color = TextLight,
-                            lineHeight = 26.sp
+                            isDark = true,
+                            modifier = Modifier.fillMaxWidth()
                         )
 
                         Spacer(modifier = Modifier.height(16.dp))

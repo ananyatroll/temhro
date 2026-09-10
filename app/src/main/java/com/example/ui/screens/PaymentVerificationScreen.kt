@@ -225,8 +225,10 @@ fun SleekPaymentVerificationScreen(
 
                         Divider(color = Color(0xFF334155))
 
+                        val manualPayText = com.example.ui.TranslationManager.get("manual_pay_p1", currentLang)
+                            .replace("300 ETB", "$reqAmount ETB")
                         Text(
-                            text = com.example.ui.TranslationManager.get("manual_pay_p1", currentLang),
+                            text = manualPayText,
                             style = MaterialTheme.typography.bodySmall.copy(fontStyle = androidx.compose.ui.text.font.FontStyle.Italic),
                             color = Color.Gray
                         )
@@ -257,8 +259,10 @@ fun SleekPaymentVerificationScreen(
                         modifier = Modifier.padding(16.dp),
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
+                        val step1Text = com.example.ui.TranslationManager.get("step1_p1", currentLang)
+                            .replace("300 ETB", "$reqAmount ETB")
                         Text(
-                            text = com.example.ui.TranslationManager.get("step1_p1", currentLang),
+                            text = step1Text,
                             style = MaterialTheme.typography.bodyMedium,
                             color = Color.White.copy(alpha = 0.9f),
                             textAlign = TextAlign.Center,
