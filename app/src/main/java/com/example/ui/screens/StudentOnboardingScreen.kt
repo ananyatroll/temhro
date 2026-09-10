@@ -270,6 +270,87 @@ fun StudentOnboardingScreen(viewModel: StudyViewModel) {
                 }
             }
 
+            // ------------------ TELEGRAM CHANNEL SUBSCRIPTION STEP ------------------
+            val context = androidx.compose.ui.platform.LocalContext.current
+            var hasClickedJoinTelegram by remember { mutableStateOf(false) }
+
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(bottom = 20.dp)
+                    .border(1.5.dp, if (hasClickedJoinTelegram) EmeraldPrimary else Color(0xFF0088CC), RoundedCornerShape(16.dp)),
+                shape = RoundedCornerShape(16.dp),
+                colors = CardDefaults.cardColors(containerColor = cardBg)
+            ) {
+                Column(modifier = Modifier.padding(16.dp)) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Box(
+                            modifier = Modifier
+                                .size(32.dp)
+                                .clip(CircleShape)
+                                .background(Color(0xFF0088CC)),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Icon(imageVector = Icons.Default.Send, contentDescription = "Telegram", tint = Color.White, modifier = Modifier.size(18.dp))
+                        }
+                        Spacer(modifier = Modifier.width(12.dp))
+                        Text(
+                            text = "JOIN OFFICIAL TELEGRAM",
+                            style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
+                            color = textPrimary
+                        )
+                    }
+
+                    Spacer(modifier = Modifier.height(10.dp))
+
+                    Text(
+                        text = "To stay updated with exam announcements, answer keys, and instant vouchers, subscribe to @temhiroapp_official on Telegram to continue.",
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = textSecondary,
+                        lineHeight = 18.sp
+                    )
+
+                    Spacer(modifier = Modifier.height(14.dp))
+
+                    Button(
+                        onClick = {
+                            hasClickedJoinTelegram = true
+                            try {
+                                val tgIntent = android.content.Intent(
+                                    android.content.Intent.ACTION_VIEW,
+                                    android.net.Uri.parse("https://t.me/temhiroapp_official")
+                                )
+                                context.startActivity(tgIntent)
+                            } catch (e: Exception) {
+                                e.printStackTrace()
+                            }
+                        },
+                        modifier = Modifier.fillMaxWidth().height(48.dp),
+                        shape = RoundedCornerShape(12.dp),
+                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF0088CC), contentColor = Color.White)
+                    ) {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Icon(imageVector = Icons.Default.Send, contentDescription = null, modifier = Modifier.size(18.dp))
+                            Spacer(modifier = Modifier.width(8.dp))
+                            Text("📢 Join @temhiroapp_official", fontWeight = FontWeight.Bold)
+                        }
+                    }
+
+                    if (hasClickedJoinTelegram) {
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.Center,
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            Icon(imageVector = Icons.Default.CheckCircle, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(16.dp))
+                            Spacer(modifier = Modifier.width(6.dp))
+                            Text("Joined! You can now complete your setup below.", style = MaterialTheme.typography.labelSmall, color = EmeraldPrimary, fontWeight = FontWeight.Bold)
+                        }
+                    }
+                }
+            }
+
             // ------------------ QUESTION 3: PREFERRED THEME ------------------
             Card(
                 modifier = Modifier
@@ -523,11 +604,12 @@ fun StudentOnboardingScreen(viewModel: StudyViewModel) {
             val isValid = name.trim().isNotEmpty() &&
                     goal.trim().isNotEmpty() &&
                     selectedClassLevel.trim().isNotEmpty() &&
-                    selectedLang.trim().isNotEmpty()
+                    selectedLang.trim().isNotEmpty() &&
+                    hasClickedJoinTelegram
 
             if (!isValid) {
                 Text(
-                    text = t("onboarding_validation_error"),
+                    text = if (!hasClickedJoinTelegram) "Please click 'Join @temhiroapp_official' above to continue." else t("onboarding_validation_error"),
                     style = MaterialTheme.typography.labelSmall,
                     color = if (selectedThemeDark) Color(0xFFFCA5A5) else Color(0xFFDC2626),
                     modifier = Modifier.padding(bottom = 8.dp)

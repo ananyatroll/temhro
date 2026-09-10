@@ -273,9 +273,52 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
             }
         }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), "department")
 
-    // Paywall Dialog Flows
+    // Paywall & Free Trial State Flows
     val showFreeTrialPaywall = MutableStateFlow(false)
     val paywallPackageIdForUpgrade = MutableStateFlow<String?>(null)
+    val showFreeTrialConfirmationDialog = MutableStateFlow(false)
+    val pendingTrialPackageId = MutableStateFlow<String?>(null)
+
+    val freeTrialActivatedAtMillis = MutableStateFlow(sharedPrefs.getLong("free_trial_activated_at", 0L))
+
+    fun isFreeTrialExpired(): Boolean {
+        val activatedAt = freeTrialActivatedAtMillis.value
+        if (activatedAt == 0L) return false
+        val durationMillis = 72L * 3600L * 1000L
+        return System.currentTimeMillis() > (activatedAt + durationMillis)
+    }
+
+    fun getFreeTrialRemainingMillis(): Long {
+        val activatedAt = freeTrialActivatedAtMillis.value
+        if (activatedAt == 0L) return 72L * 3600L * 1000L
+        val expiresAt = activatedAt + (72L * 3600L * 1000L)
+        val remaining = expiresAt - System.currentTimeMillis()
+        return if (remaining > 0) remaining else 0L
+    }
+
+    fun requestFreeTrialActivation(packageId: String) {
+        if (freeTrialActivatedAtMillis.value == 0L) {
+            pendingTrialPackageId.value = packageId
+            showFreeTrialConfirmationDialog.value = true
+        } else {
+            activateFreeTrialConfirmed(packageId)
+        }
+    }
+
+    fun activateFreeTrialConfirmed(packageId: String, context: android.content.Context? = null) {
+        val now = System.currentTimeMillis()
+        if (freeTrialActivatedAtMillis.value == 0L) {
+            freeTrialActivatedAtMillis.value = now
+            sharedPrefs.edit().putLong("free_trial_activated_at", now).apply()
+            context?.let { NotificationHelper.scheduleFreeTrialNotifications(it, now) }
+        }
+        showFreeTrialConfirmationDialog.value = false
+        pendingTrialPackageId.value = null
+        val cur = userProgress.value
+        viewModelScope.launch {
+            repository.updateUserProgress(cur.copy(activePackageId = packageId))
+        }
+    }
 
     // UI state flows
     val userProgress: StateFlow<UserProgress> = repository.userProgress
@@ -865,6 +908,11 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
 
         if (isApproved && isPurchased) {
             return false // Unlocked for purchased package
+        }
+
+        // If 72h free trial has expired, lock all trial subjects
+        if (isFreeTrialExpired()) {
+            return true
         }
 
         val id = subject.id

@@ -160,6 +160,19 @@ import androidx.lifecycle.viewmodel.compose.viewModel
                                             onDismiss = { viewModel.closeStudentTools() }
                                         )
                                     }
+
+                                    // Free Trial 72h Confirmation Modal Dialog
+                                    val showFreeTrialConfirmation by viewModel.showFreeTrialConfirmationDialog.collectAsState()
+                                    val pendingTrialPackageId by viewModel.pendingTrialPackageId.collectAsState()
+                                    if (showFreeTrialConfirmation && pendingTrialPackageId != null) {
+                                        val context = androidx.compose.ui.platform.LocalContext.current
+                                        com.example.ui.screens.FreeTrialConfirmationModal(
+                                            onDismiss = { viewModel.showFreeTrialConfirmationDialog.value = false },
+                                            onConfirm = {
+                                                viewModel.activateFreeTrialConfirmed(pendingTrialPackageId!!, context)
+                                            }
+                                        )
+                                    }
                                 }
 
                                 // Persistent Anchored Adaptive Bottom Banner

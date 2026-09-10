@@ -417,17 +417,45 @@ fun DashboardScreen(viewModel: StudyViewModel) {
                     }
                 }
             } else {
+                // Top-sort subjectsList so unlocked free-trial courses appear at the top
+                val sortedSubjects = remember(subjectsList, progress.purchasedPackageId, progress.paymentStatus, progress.activePackageId) {
+                    subjectsList.sortedBy { viewModel.isSubjectLocked(it) }
+                }
+
                 // Grid Items (each taking 1 column span by default)
-                items(subjectsList) { subject ->
+                items(sortedSubjects) { subject ->
                     val isDone = completedSubjectIds.contains(subject.id)
                     val isLocked = viewModel.isSubjectLocked(subject)
                     val progressVal = subjectProgressMap[subject.id] ?: if (isDone) 1f else 0f
                     val context = LocalContext.current
+                    
+                    val semesterBadgeText = when {
+                        subject.id.contains("_english_1") || subject.id.contains("_psychology") || 
+                        subject.id.contains("_geography") || subject.id.contains("_critical_thinking") || 
+                        subject.id.contains("_physical_fitness") || subject.id.contains("freshman_nat_maths") || 
+                        subject.id.contains("freshman_nat_physics") || subject.id.contains("freshman_nat_history") || 
+                        subject.id.contains("freshman_soc_civics") || subject.id.contains("freshman_soc_anthropology") || 
+                        subject.id.contains("freshman_soc_global_trends") || subject.id.contains("freshman_soc_economics") || 
+                        subject.id.contains("freshman_soc_emerging_tech") || subject.id.contains("freshman_soc_entrepreneurship") -> "Sem 1"
+                        
+                        subject.id.contains("_applied_maths") || subject.id.contains("_english_2") || 
+                        subject.id.contains("_computer_programming") || subject.id.contains("_emerging_tech") || 
+                        subject.id.contains("_anthropology") || subject.id.contains("_civics") || 
+                        subject.id.contains("_biology") || subject.id.contains("_chemistry") || 
+                        subject.id.contains("freshman_soc_inclusiveness") || subject.id.contains("freshman_soc_history") || 
+                        subject.id.contains("freshman_soc_maths") -> "Sem 2"
+                        
+                        subject.packageId == "department" -> if (subject.id.contains("_1") || subject.id.contains("_dsa") || subject.id.contains("_oop") || subject.id.contains("_os") || subject.id.contains("_circuit_1") || subject.id.contains("_thermodynamics_1") || subject.id.contains("_constitutional_law")) "Sem 1" else "Sem 2"
+                        
+                        else -> null
+                    }
+
                     SubjectHexCard(
                         subjectName = subject.name,
                         iconName = subject.icon,
                         isCompleted = isDone,
                         isLocked = isLocked,
+                        semesterBadge = semesterBadgeText,
                         progress = progressVal,
                         isDarkTheme = isDarkTheme,
                         currentLang = currentLang,
@@ -487,6 +515,44 @@ fun GreetingHeader(viewModel: StudyViewModel, username: String) {
                         tint = if (isDarkTheme) HolographicAqua else Color.White,
                         modifier = Modifier.size(24.dp)
                     )
+                }
+            }
+
+            // Live 72-Hour Free Trial Countdown Badge
+            val activatedAt by viewModel.freeTrialActivatedAtMillis.collectAsState()
+            if (activatedAt > 0L) {
+                var remainingMs by remember { mutableStateOf(viewModel.getFreeTrialRemainingMillis()) }
+                LaunchedEffect(activatedAt) {
+                    while (true) {
+                        remainingMs = viewModel.getFreeTrialRemainingMillis()
+                        kotlinx.coroutines.delay(1000L)
+                    }
+                }
+                val hours = (remainingMs / (3600 * 1000)).toInt()
+                val minutes = ((remainingMs % (3600 * 1000)) / (60 * 1000)).toInt()
+                val seconds = ((remainingMs % (60 * 1000)) / 1000).toInt()
+
+                Surface(
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(12.dp))
+                        .clickable { viewModel.showFreeTrialPaywall.value = true },
+                    color = if (remainingMs == 0L) Color(0xFFD32F2F) else if (hours < 12) Color(0xFFFF9800) else Color(0xFF00897B),
+                    shape = RoundedCornerShape(12.dp)
+                ) {
+                    Row(
+                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(4.dp)
+                    ) {
+                        Text(
+                            text = if (remainingMs == 0L) "⏳ Trial Expired" else "⏳ %02dh %02dm".format(hours, minutes),
+                            style = MaterialTheme.typography.labelSmall.copy(
+                                fontWeight = FontWeight.Bold,
+                                color = Color.White,
+                                fontSize = 11.sp
+                            )
+                        )
+                    }
                 }
             }
 
@@ -776,6 +842,7 @@ fun SubjectHexCard(
     iconName: String,
     isCompleted: Boolean,
     isLocked: Boolean = false,
+    semesterBadge: String? = null,
     progress: Float = 0f,
     isDarkTheme: Boolean = false,
     currentLang: String = "en",
@@ -840,6 +907,25 @@ fun SubjectHexCard(
                     }
                 )
         ) {
+            // Semester Badge pill in Top Left Corner
+            if (!semesterBadge.isNullOrEmpty()) {
+                Surface(
+                    shape = RoundedCornerShape(topStart = 16.dp, bottomEnd = 10.dp),
+                    color = if (semesterBadge.contains("1")) EmeraldPrimary.copy(alpha = 0.9f) else Color(0xFF3B82F6).copy(alpha = 0.9f),
+                    modifier = Modifier.align(Alignment.TopStart)
+                ) {
+                    Text(
+                        text = semesterBadge,
+                        style = MaterialTheme.typography.labelSmall.copy(
+                            fontWeight = FontWeight.Black,
+                            fontSize = 9.sp
+                        ),
+                        color = Color.White,
+                        modifier = Modifier.padding(horizontal = 7.dp, vertical = 3.dp)
+                    )
+                }
+            }
+
             // Circular Progress Bar in Top Right Corner showing material usage
             SubjectProgressIndicator(
                 progress = progress,

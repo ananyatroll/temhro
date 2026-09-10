@@ -125,4 +125,50 @@ object NotificationHelper {
             e.printStackTrace()
         }
     }
+
+    fun scheduleFreeTrialNotifications(context: Context, activatedAtMillis: Long) {
+        createNotificationChannel(context)
+        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as? android.app.AlarmManager ?: return
+        val trialDurationMillis = 72L * 3600L * 1000L
+        val expiresAt = activatedAtMillis + trialDurationMillis
+
+        // Milestones: 55h, 48h, 36h, 24h, 12h, 5h, 1h, 10m remaining
+        val milestones = listOf(
+            Pair(55L * 3600L * 1000L, "⏰ 55 Hours Remaining on your Free Trial! Explore your course before it locks."),
+            Pair(48L * 3600L * 1000L, "⏳ 48 Hours Remaining! 2 days left to try Tamhero's high-yield content."),
+            Pair(36L * 3600L * 1000L, "⚡ 36 Hours Remaining! Halfway through your Free Trial period."),
+            Pair(24L * 3600L * 1000L, "⚠️ 24 Hours Remaining! Only 1 day left on your Free Trial."),
+            Pair(12L * 3600L * 1000L, "🚨 12 Hours Remaining! Upgrade to Premium for 300 ETB to keep unlimited access."),
+            Pair(5L * 3600L * 1000L, "🔥 5 Hours Remaining! Your trial course will lock soon."),
+            Pair(1L * 3600L * 1000L, "🚨 1 Hour Remaining! Final chance before your Free Trial course locks."),
+            Pair(10L * 60L * 1000L, "⏰ 10 Minutes Remaining! Upgrade now for 300 ETB to retain full access.")
+        )
+
+        val now = System.currentTimeMillis()
+
+        milestones.forEachIndexed { index, (remainingMs, messageText) ->
+            val triggerTime = expiresAt - remainingMs
+            if (triggerTime > now) {
+                val intent = Intent(context, FreeTrialReceiver::class.java).apply {
+                    putExtra("msg", messageText)
+                    putExtra("id", 5000 + index)
+                }
+                val pendingIntent = PendingIntent.getBroadcast(
+                    context,
+                    5000 + index,
+                    intent,
+                    PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+                )
+                try {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        alarmManager.setExactAndAllowWhileIdle(android.app.AlarmManager.RTC_WAKEUP, triggerTime, pendingIntent)
+                    } else {
+                        alarmManager.set(android.app.AlarmManager.RTC_WAKEUP, triggerTime, pendingIntent)
+                    }
+                } catch (e: SecurityException) {
+                    e.printStackTrace()
+                }
+            }
+        }
+    }
 }

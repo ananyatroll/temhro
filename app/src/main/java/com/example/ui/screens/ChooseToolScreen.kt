@@ -239,24 +239,24 @@ fun ChooseToolScreen(viewModel: StudyViewModel) {
                     comingSoon = false
                 ),
                 PackageCardData(
-                    id = "freshman_natural",
-                    title = t("pkg_freshman_natural_title"),
-                    badge = t("status_free_trial"),
-                    description = t("pkg_freshman_natural_desc"),
-                    comingSoon = false
-                ),
-                PackageCardData(
-                    id = "freshman_social",
-                    title = t("pkg_freshman_social_title"),
-                    badge = t("status_free_trial"),
-                    description = t("pkg_freshman_social_desc"),
-                    comingSoon = false
-                ),
-                PackageCardData(
                     id = "aau_uat",
                     title = t("pkg_uat_title"),
                     badge = t("status_free_trial"),
                     description = t("pkg_uat_desc"),
+                    comingSoon = false
+                ),
+                PackageCardData(
+                    id = "freshman",
+                    title = "Freshman Package",
+                    badge = t("status_free_trial"),
+                    description = "Complete Ethiopian University Freshman Year courses & exam prep for Natural and Social streams.",
+                    comingSoon = false
+                ),
+                PackageCardData(
+                    id = "coc",
+                    title = "COC Exam Preparation",
+                    badge = t("status_free_trial"),
+                    description = "National Certificate of Competency (COC) review for Medical (Medicine, Dentistry, Pharmacy), Engineering, Architecture, Computer Science & Information Science, and Law.",
                     comingSoon = false
                 ),
                 PackageCardData(
@@ -271,27 +271,6 @@ fun ChooseToolScreen(viewModel: StudyViewModel) {
                     title = t("pkg_exit_title"),
                     badge = t("status_free_trial"),
                     description = t("pkg_exit_desc"),
-                    comingSoon = false
-                ),
-                PackageCardData(
-                    id = "coc_medical",
-                    title = t("coc_medical_title"),
-                    badge = t("status_free_trial"),
-                    description = t("pkg_coc_desc"),
-                    comingSoon = false
-                ),
-                PackageCardData(
-                    id = "coc_law",
-                    title = t("coc_law_title"),
-                    badge = t("status_free_trial"),
-                    description = t("pkg_coc_desc"),
-                    comingSoon = false
-                ),
-                PackageCardData(
-                    id = "coc_engineering",
-                    title = t("coc_engineering_title"),
-                    badge = t("status_free_trial"),
-                    description = t("pkg_coc_desc"),
                     comingSoon = false
                 )
             ).filter { it.title.lowercase().contains(searchQuery.lowercase()) || it.description.lowercase().contains(searchQuery.lowercase()) }
@@ -310,12 +289,11 @@ fun ChooseToolScreen(viewModel: StudyViewModel) {
                 }
             } else {
                 items(cardsList) { pkg ->
-                    val isEnrolled = if (pkg.id == "euee") {
-                        progress.activePackageId == "euee_natural" || progress.activePackageId == "euee_social"
-                    } else if (pkg.id == "freshman_natural" || pkg.id == "freshman_social") {
-                        progress.activePackageId == "freshman_natural" || progress.activePackageId == "freshman_social"
-                    } else {
-                        progress.activePackageId == pkg.id
+                    val isEnrolled = when (pkg.id) {
+                        "euee" -> progress.activePackageId == "euee_natural" || progress.activePackageId == "euee_social"
+                        "freshman" -> progress.activePackageId == "freshman_natural" || progress.activePackageId == "freshman_social"
+                        "coc" -> progress.activePackageId?.startsWith("coc_") == true
+                        else -> progress.activePackageId == pkg.id
                     }
 
                     val effectivePurchased = if (progress.purchasedPackageId.isNotEmpty()) {
@@ -722,7 +700,7 @@ fun EnrollmentConfirmationModal(
                     modifier = Modifier.padding(top = 4.dp, bottom = 12.dp)
                 )
 
-                if (packageId == "euee") {
+                if (packageId == "euee" || packageId == "freshman") {
                     Text(
                         text = t("modal_choose_stream"),
                         style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black, letterSpacing = 1.5.sp),
@@ -808,24 +786,138 @@ fun EnrollmentConfirmationModal(
                             }
                         }
                     }
-                    
-                    Text(
-                        text = t("euee_trial_desc"),
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = TextMuted,
-                        textAlign = TextAlign.Center,
-                        lineHeight = 18.sp,
-                        modifier = Modifier.padding(bottom = 20.dp)
-                    )
-                } else if (packageId.startsWith("freshman_") || packageId == "department" || packageId.startsWith("coc_")) {
-                    var selectedPlan by remember { mutableStateOf("sem1") } // "sem1", "sem2", "full_year"
+                }
 
-                    if (packageId.startsWith("freshman_") || packageId == "department") {
+                var selectedPlan by remember { mutableStateOf("sem1") } // "sem1", "sem2", "full_year"
+                var selectedCocField by remember { mutableStateOf("coc_medicine") }
+
+                if (packageId == "freshman" || packageId == "department") {
+                    Text(
+                        text = "CHOOSE STUDY PLAN",
+                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black, letterSpacing = 1.5.sp),
+                        color = GoldAccent,
+                        modifier = Modifier.padding(bottom = 8.dp)
+                    )
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(bottom = 16.dp),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        val plans = listOf(
+                            "sem1" to ("Sem 1" to "300 ETB"),
+                            "sem2" to ("Sem 2" to "300 ETB"),
+                            "full_year" to ("Full Year" to "500 ETB")
+                        )
+                        plans.forEach { (pKey, pInfo) ->
+                            val isSel = selectedPlan == pKey
+                            Surface(
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .clickable { selectedPlan = pKey },
+                                shape = RoundedCornerShape(10.dp),
+                                color = if (isSel) EmeraldPrimary.copy(alpha = 0.25f) else Color(0xFF1E293B),
+                                border = BorderStroke(1.dp, if (isSel) EmeraldPrimary else Color.Transparent)
+                            ) {
+                                Column(
+                                    modifier = Modifier.padding(vertical = 10.dp, horizontal = 4.dp),
+                                    horizontalAlignment = Alignment.CenterHorizontally
+                                ) {
+                                    Text(
+                                        text = pInfo.first,
+                                        style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
+                                        color = Color.White
+                                    )
+                                    Spacer(modifier = Modifier.height(2.dp))
+                                    Text(
+                                        text = pInfo.second,
+                                        style = MaterialTheme.typography.labelSmall,
+                                        color = if (isSel) GoldAccent else TextMuted
+                                    )
+                                }
+                            }
+                        }
+                    }
+                } else if (packageId == "coc") {
+                    var selectedCocMainCategory by remember { mutableStateOf("medical") } // "medical", "engineering", "architecture", "cs_is", "law"
+                    var selectedMedicalSubField by remember { mutableStateOf("coc_medicine") } // "coc_medicine", "coc_dentistry", "coc_pharmacy"
+
+                    Text(
+                        text = "SELECT YOUR COC CATEGORY",
+                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black, letterSpacing = 1.5.sp),
+                        color = GoldAccent,
+                        modifier = Modifier.padding(bottom = 8.dp)
+                    )
+
+                    val mainCategories = listOf(
+                        "medical" to "🩺 Medical",
+                        "engineering" to "🏗️ Engineering",
+                        "architecture" to "🏛️ Architecture",
+                        "cs_is" to "💻 Computer Science & Info",
+                        "law" to "⚖️ Law"
+                    )
+
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(bottom = 12.dp),
+                        verticalArrangement = Arrangement.spacedBy(6.dp)
+                    ) {
+                        mainCategories.forEach { (catKey, catLabel) ->
+                            val isSel = selectedCocMainCategory == catKey
+                            Surface(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clickable {
+                                        selectedCocMainCategory = catKey
+                                        if (catKey != "medical") {
+                                            selectedCocField = when (catKey) {
+                                                "engineering" -> "coc_engineering"
+                                                "architecture" -> "coc_architecture"
+                                                "cs_is" -> "coc_cs_is"
+                                                "law" -> "coc_law"
+                                                else -> "coc_medicine"
+                                            }
+                                        } else {
+                                            selectedCocField = selectedMedicalSubField
+                                        }
+                                    },
+                                shape = RoundedCornerShape(10.dp),
+                                color = if (isSel) EmeraldPrimary.copy(alpha = 0.25f) else Color(0xFF1E293B),
+                                border = BorderStroke(1.dp, if (isSel) EmeraldPrimary else Color.Transparent)
+                            ) {
+                                Row(
+                                    modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp),
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    horizontalArrangement = Arrangement.SpaceBetween
+                                ) {
+                                    Text(
+                                        text = catLabel,
+                                        style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
+                                        color = Color.White
+                                    )
+                                    Text(
+                                        text = "300 ETB",
+                                        style = MaterialTheme.typography.labelSmall,
+                                        color = GoldAccent
+                                    )
+                                }
+                            }
+                        }
+                    }
+
+                    // Nested Medical Field Sub-Selection
+                    if (selectedCocMainCategory == "medical") {
                         Text(
-                            text = "CHOOSE STUDY PLAN",
+                            text = "SELECT MEDICAL FIELD",
                             style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black, letterSpacing = 1.5.sp),
                             color = GoldAccent,
                             modifier = Modifier.padding(bottom = 8.dp)
+                        )
+                        val medicalSubFields = listOf(
+                            "coc_medicine" to "🩺 Medicine",
+                            "coc_dentistry" to "🦷 Dental Medicine",
+                            "coc_pharmacy" to "💊 Pharmacy"
                         )
                         Row(
                             modifier = Modifier
@@ -833,113 +925,85 @@ fun EnrollmentConfirmationModal(
                                 .padding(bottom = 16.dp),
                             horizontalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
-                            val plans = listOf(
-                                "sem1" to ("Sem 1" to "300 ETB"),
-                                "sem2" to ("Sem 2" to "300 ETB"),
-                                "full_year" to ("Full Year" to "500 ETB")
-                            )
-                            plans.forEach { (pKey, pInfo) ->
-                                val isSel = selectedPlan == pKey
+                            medicalSubFields.forEach { (mKey, mLabel) ->
+                                val isSel = selectedMedicalSubField == mKey
                                 Surface(
                                     modifier = Modifier
                                         .weight(1f)
-                                        .clickable { selectedPlan = pKey },
+                                        .clickable {
+                                            selectedMedicalSubField = mKey
+                                            selectedCocField = mKey
+                                        },
                                     shape = RoundedCornerShape(10.dp),
-                                    color = if (isSel) EmeraldPrimary.copy(alpha = 0.25f) else Color(0xFF1E293B),
-                                    border = BorderStroke(1.dp, if (isSel) EmeraldPrimary else Color.Transparent)
+                                    color = if (isSel) EmeraldPrimary.copy(alpha = 0.35f) else Color(0xFF1E293B),
+                                    border = BorderStroke(1.5.dp, if (isSel) EmeraldPrimary else Color.Transparent)
                                 ) {
                                     Column(
                                         modifier = Modifier.padding(vertical = 10.dp, horizontal = 4.dp),
                                         horizontalAlignment = Alignment.CenterHorizontally
                                     ) {
                                         Text(
-                                            text = pInfo.first,
-                                            style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
-                                            color = Color.White
-                                        )
-                                        Spacer(modifier = Modifier.height(2.dp))
-                                        Text(
-                                            text = pInfo.second,
-                                            style = MaterialTheme.typography.labelSmall,
-                                            color = if (isSel) GoldAccent else TextMuted
-                                        )
-                                    }
-                                }
-                            }
-                        }
-                    } else if (packageId.startsWith("coc_")) {
-                        Text(
-                            text = t("price_announced_telegram"),
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = GoldAccent,
-                            textAlign = TextAlign.Center,
-                            modifier = Modifier.padding(bottom = 16.dp)
-                        )
-                    }
-
-                    if (packageId == "department") {
-                        Text(
-                            text = "SELECT YOUR CURRENT STUDY YEAR",
-                            style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black, letterSpacing = 1.5.sp),
-                            color = GoldAccent,
-                            modifier = Modifier.padding(bottom = 8.dp)
-                        )
-                        Row(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(bottom = 12.dp),
-                            horizontalArrangement = Arrangement.spacedBy(8.dp)
-                        ) {
-                            years.forEach { yr ->
-                                val isSelected = selectedYear == yr
-                                Surface(
-                                    modifier = Modifier
-                                        .weight(1f)
-                                        .clickable {
-                                            selectedYear = yr
-                                            viewModel.saveDepartmentSetup(selectedDept, yr)
-                                        },
-                                    shape = RoundedCornerShape(10.dp),
-                                    color = if (isSelected) EmeraldPrimary.copy(alpha = 0.2f) else Color(0xFF1E293B),
-                                    border = BorderStroke(1.dp, if (isSelected) EmeraldPrimary else Color.Transparent)
-                                ) {
-                                    Column(
-                                        modifier = Modifier.padding(vertical = 12.dp, horizontal = 4.dp),
-                                        horizontalAlignment = Alignment.CenterHorizontally
-                                    ) {
-                                        Icon(
-                                            imageVector = if (isSelected) Icons.Default.CheckCircle else Icons.Default.RadioButtonUnchecked,
-                                            contentDescription = null,
-                                            tint = if (isSelected) EmeraldPrimary else Color.Gray,
-                                            modifier = Modifier.size(16.dp)
-                                        )
-                                        Spacer(modifier = Modifier.height(4.dp))
-                                        Text(
-                                            text = yr,
-                                            style = MaterialTheme.typography.bodySmall.copy(fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal),
-                                            color = Color.White
+                                            text = mLabel,
+                                            style = MaterialTheme.typography.bodySmall.copy(fontWeight = FontWeight.Bold),
+                                            color = Color.White,
+                                            textAlign = TextAlign.Center
                                         )
                                     }
                                 }
                             }
                         }
                     }
-                } else {
-                    val descText = "${t("other_trial_desc_prefix")}$packageName${t("other_trial_desc_suffix")}\n\n" +
-                            "${t("trial_includes_title")}\n" +
-                            "${t("trial_inc_1")}\n" +
-                            "${t("trial_inc_2")}\n" +
-                            "${t("trial_inc_3")}\n" +
-                            t("trial_inc_4")
-                    Text(
-                        text = descText,
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = TextMuted,
-                        textAlign = TextAlign.Start,
-                        lineHeight = 20.sp,
-                        modifier = Modifier.padding(bottom = 24.dp)
-                    )
                 }
+
+                if (packageId == "department") {
+                    Text(
+                        text = "SELECT YOUR CURRENT STUDY YEAR",
+                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black, letterSpacing = 1.5.sp),
+                        color = GoldAccent,
+                        modifier = Modifier.padding(bottom = 8.dp)
+                    )
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(bottom = 12.dp),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        years.forEach { yr ->
+                            val isSelected = selectedYear == yr
+                            Surface(
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .clickable {
+                                        selectedYear = yr
+                                        viewModel.saveDepartmentSetup(selectedDept, yr)
+                                    },
+                                shape = RoundedCornerShape(10.dp),
+                                color = if (isSelected) EmeraldPrimary.copy(alpha = 0.2f) else Color(0xFF1E293B),
+                                border = BorderStroke(1.dp, if (isSelected) EmeraldPrimary else Color.Transparent)
+                            ) {
+                                Column(
+                                    modifier = Modifier.padding(vertical = 12.dp, horizontal = 4.dp),
+                                    horizontalAlignment = Alignment.CenterHorizontally
+                                ) {
+                                    Icon(
+                                        imageVector = if (isSelected) Icons.Default.CheckCircle else Icons.Default.RadioButtonUnchecked,
+                                        contentDescription = null,
+                                        tint = if (isSelected) EmeraldPrimary else Color.Gray,
+                                        modifier = Modifier.size(16.dp)
+                                    )
+                                    Spacer(modifier = Modifier.height(4.dp))
+                                    Text(
+                                        text = yr,
+                                        style = MaterialTheme.typography.bodySmall.copy(fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal),
+                                        color = Color.White
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
+
+                val currentPriceETB = if (selectedPlan == "full_year") 500 else 300
 
                 Column(
                     modifier = Modifier.fillMaxWidth(),
@@ -951,11 +1015,10 @@ fun EnrollmentConfirmationModal(
                             if (packageId == "department" || packageId == "exit_exam") {
                                 viewModel.saveDepartmentSetup("", selectedYear)
                             }
-                            // Create product request for catalog tracking
                             val targetProductId = when {
-                                packageId == "freshman_natural" -> "freshman_natural_science_y1_sem1"
-                                packageId == "freshman_social" -> "freshman_social_science_y1_sem1"
-                                packageId.startsWith("coc_") -> packageId
+                                packageId == "freshman" -> "freshman_${selectedStream}_y1_${selectedPlan}"
+                                packageId == "euee" -> "euee_${selectedStream}"
+                                packageId == "coc" -> selectedCocField
                                 else -> packageId
                             }
                             val matchedProduct = com.example.data.ProductCatalog.get(targetProductId)
@@ -983,7 +1046,7 @@ fun EnrollmentConfirmationModal(
                             Icon(imageVector = Icons.Default.WorkspacePremium, contentDescription = null, modifier = Modifier.size(20.dp))
                             Spacer(modifier = Modifier.width(8.dp))
                             Text(
-                                text = t("btn_go_premium"),
+                                text = "Go Premium ($currentPriceETB ETB)",
                                 style = MaterialTheme.typography.titleMedium,
                                 fontWeight = FontWeight.Bold,
                                 maxLines = 1,
@@ -993,16 +1056,22 @@ fun EnrollmentConfirmationModal(
                     }
 
                     // 2. Free Trial Button
+                    val context = androidx.compose.ui.platform.LocalContext.current
                     Button(
                         onClick = {
-                            if (packageId == "euee") {
-                                onConfirm(if (selectedStream == "natural") "euee_natural" else "euee_social")
-                            } else {
-                                if (packageId == "department" || packageId == "exit_exam") {
-                                    viewModel.saveDepartmentSetup("", selectedYear)
+                            val targetPackageId = when (packageId) {
+                                "euee" -> if (selectedStream == "natural") "euee_natural" else "euee_social"
+                                "freshman" -> if (selectedStream == "natural") "freshman_natural" else "freshman_social"
+                                "coc" -> selectedCocField
+                                else -> {
+                                    if (packageId == "department" || packageId == "exit_exam") {
+                                        viewModel.saveDepartmentSetup("", selectedYear)
+                                    }
+                                    packageId
                                 }
-                                onConfirm(packageId)
                             }
+                            viewModel.activateFreeTrialConfirmed(targetPackageId, context)
+                            onConfirm(targetPackageId)
                         },
                         modifier = Modifier
                             .fillMaxWidth()
@@ -1031,6 +1100,74 @@ fun EnrollmentConfirmationModal(
                             style = MaterialTheme.typography.bodyMedium
                         )
                     }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun FreeTrialConfirmationModal(
+    onDismiss: () -> Unit,
+    onConfirm: () -> Unit
+) {
+    Dialog(onDismissRequest = onDismiss) {
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            shape = RoundedCornerShape(20.dp),
+            colors = CardDefaults.cardColors(containerColor = Color(0xFF0F172A))
+        ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(24.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+                    text = "⏰ 72-HOUR FREE TRIAL",
+                    style = MaterialTheme.typography.titleMedium.copy(
+                        fontWeight = FontWeight.Black,
+                        letterSpacing = 1.5.sp
+                    ),
+                    color = GoldAccent
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+                Text(
+                    text = "You are activating a 72-hour free trial.\n\nYou have exactly 72 hours (3 days) to explore your trial course. If you do not purchase the full package for 300 ETB, access will lock automatically after 72 hours.",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = Color.White,
+                    textAlign = TextAlign.Center,
+                    lineHeight = 20.sp
+                )
+                Spacer(modifier = Modifier.height(24.dp))
+                Button(
+                    onClick = onConfirm,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(48.dp),
+                    shape = RoundedCornerShape(12.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = EmeraldPrimary,
+                        contentColor = Color.White
+                    )
+                ) {
+                    Text(
+                        text = "I Understand & Activate",
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
+                Spacer(modifier = Modifier.height(8.dp))
+                TextButton(
+                    onClick = onDismiss,
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text(
+                        text = "Cancel",
+                        color = Color.LightGray
+                    )
                 }
             }
         }
