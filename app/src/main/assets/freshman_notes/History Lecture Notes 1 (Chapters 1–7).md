@@ -8,10 +8,10 @@ Unit One
 | 1.1. | The Nature |     | and Uses | of  | History |     |     |     |
 | ---- | ---------- | --- | -------- | --- | ------- | --- | --- | --- |
 A. Nature
-The term history is derived from the Greek wordhistoriawhich meant â€œinquiryâ€ or
-â€œan account of oneâ€Ÿs inquiries.â€ The first use of the term is attributed to one of
-the ancient Greek historians, Herodotus (c. 484â€“c. 420 B.C.E.), who is often held
-|     | to be | theâ€œfather | of  | writtenhistory.â€ |     |     |     |     |
+The term history is derived from the Greek wordhistoriawhich meant "inquiry" or
+"an account of oneâ€Ÿs inquiries." The first use of the term is attributed to one of
+the ancient Greek historians, Herodotus (c. 484–c. 420 B.C.E.), who is often held
+|     | to be | the"father | of  | writtenhistory." |     |     |     |     |
 | --- | ----- | ---------- | --- | ---------------- | --- | --- | --- | --- |
 What differentiates history from other disciplines is that while the latter study the
 interaction between humans and their environment in the present state, history
@@ -53,12 +53,12 @@ Historiography is the history of historical accounts, studying how knowledge of 
 past, either recent or distant, is obtained and transmitted. History emerged as an
 academic discipline in the second half of the nineteenth century first in Europe and
 subsequently in other parts of the world notably in the US. The German historian,
-Leopold Von Ranke (1795â€“1886), and his colleagues established history as an
+Leopold Von Ranke (1795–1886), and his colleagues established history as an
 independent discipline in Bonn with its own set of methods and concepts by which
 historians collect evidence of past events, evaluate that evidence, and present a
 meaningful discussion of the subject. Rankeâ€Ÿs greatest contribution to the scientific
-study of the past is such that he is considered as the â€œfather of modern
-historiographyâ€.
+study of the past is such that he is considered as the "father of modern
+historiography".
 The earliest known reference that we have on history of Ethiopia and the Horn is the
 PeriplusoftheErythreanSea, written in the first century A.D by an anonymous
 author. Another document describing Aksumâ€Ÿs trade and the then Aksumite kingâ€Ÿs
@@ -169,7 +169,7 @@ was in this period that history emerged as an academic discipline. The pursuit o
 historical studies as a full-time occupation began with the opening of the Department of
 Historyat thethenHaileSelassie IUniversity(HSIU).
 1.4. The Geographical Context of Human History in Ethiopia and the Horn
-ïƒ¼ The term â€œEthiopia and the Hornâ€ refers to that part of Northeast Africa which
+ïƒ¼ The term "Ethiopia and the Horn" refers to that part of Northeast Africa which
 nowcontains thecountries of Djibouti, Eritrea, EthiopiaandSomalia.
 ïƒ¼ The major physiographic features of the region are a massive highland complex
 of mountains and plateaus divided by the Great Rift Valley and surrounded by
@@ -276,14 +276,14 @@ also beenfamous inmetallurgy, weaving andother crafts.
 eternal or transcendental Supreme Entity, but special powers are attributed to
 naturalphenomenathat aredeclaredto besacred.
 Amongindigenous religious groups,
-ïƒ¼ Oromo Waaqeffannaa â€“ it have believed in existence of one supernatural power
+ïƒ¼ Oromo Waaqeffannaa – it have believed in existence of one supernatural power
 called Waaqaathat is believed to be source of life & nature, BeeliiBelelii/Alpha-
 Omega/ultimatethepowerintheuniverse.
 ïƒ¼ WolaytacalledGodasTosa&spirit asAyyana.
 ïƒ¼ Among the Hadiya the Supreme Being is known as Waa, who is believed to exist
 before everything (hundamissancho) or create world (qoccancho) and whose
 eyes are representedbyelincho (sun) &agana(moon).
-ïƒ¼ Yem worshipped Sky God/Haâ€™o. Soâ€Ÿala clan was considered as top in religious
+ïƒ¼ Yem worshipped Sky God/Ha'o. Soâ€Ÿala clan was considered as top in religious
 duties sinceit was incharge of themost important deity(Shashokam).
 ïƒ¼ Kafa called the Supreme Being as Yero; spirit as Eqo; and a person who hosts
 Eqois known asAlamoor medium and referred to aseke-nayo(person in service
@@ -337,18 +337,18 @@ andHararghe.
 Peoples in Ethiopia and the Horn practiced a number of conflict resolution mechanisms;
 | someof | them |     |     |     |
 | ------ | ---- | --- | --- | --- |
-ï‚§
+• 
 ShemgelennaamongtheAmhara,
-ï‚§ YajokaamongtheGurage,
-| ï‚§   | Seeraamongthe | Kambata,  |     |     |
+•  YajokaamongtheGurage,
+| •    | Seeraamongthe | Kambata,  |     |     |
 | --- | ------------- | --------- | --- | --- |
-| ï‚§   | Gumaaamong    | theOromo, |     |     |
-ï‚§
+| •    | Gumaaamong    | theOromo, |     |     |
+• 
 MakabantoamongtheAfar,
-ï‚§ Guduâ€™emaleamongtheSidama,
-| ï‚§   | Dayadamong    | theSomali,             |     |     |
+•  Gudu'emaleamongtheSidama,
+| •    | Dayadamong    | theSomali,             |     |     |
 | --- | ------------- | ---------------------- | --- | --- |
-| ï‚§   | Baytoamongthe | Tigraypeopleandothers. |     |     |
+| •    | Baytoamongthe | Tigraypeopleandothers. |     |     |
 These wisdoms worked effectively for centuries with less cost because first they were
 part of the culture andvalues of peoples that they espoused in common.Secondly, such
 conflict resolution mechanisms emphasis on inter-connectedness governed by a
@@ -364,7 +364,7 @@ Polities, Economy and Socio-Cultural Processes in Ethiopia and the Horn to the E
 | 3.1. Evolution | of States |     |     |     |
 Statemeans an autonomous political unit, encompassing many communities within its
 territoryandhavingagovernment withthepower to decreeandenforcelaws.
-ï‚· Thefirst states were theocraticstates, andthesocialandreligious affairs of their
+•  Thefirst states were theocraticstates, andthesocialandreligious affairs of their
 community were maintained & regulated by priests/shaman with voluntary
 contributions. As production became market oriented the priests were gradually
 replaced by chiefs who began collecting compulsory tributes known as
@@ -372,17 +372,17 @@ protection payments with which they maintained themselves, their supporters
 |     | andother followers. |     |     |     |
 | --- | ------------------- | --- | --- | --- |
 
-ï‚· Ethiopia and the Horn is one of few places in Africa where early state formation
+•  Ethiopia and the Horn is one of few places in Africa where early state formation
 | has          | takenplace.   |     |     |     |     |     |     |
 | ------------ | ------------- | --- | --- | --- | --- | --- | --- |
 | 3.2. Ancient | Polities      |     |     |     |     |     |     |
 | 3.2.1. North | and Northeast |     |     |     |     |     |     |
 A. Punt
-ï‚§ Punt was the earliest recorded state in Ethiopia and the Horn. It was
+•  Punt was the earliest recorded state in Ethiopia and the Horn. It was
 probably stretched from Swakim or Massawa to Straits of Babel Mandeb
 |     | (Gateof | Tears) | andCape | Gardafui. |     |     |     |
 | --- | ------- | ------ | ------- | --------- | --- | --- | --- |
-ï‚§ The evidence of Punt does not come from the Horn but in Egyptian
+•  The evidence of Punt does not come from the Horn but in Egyptian
 |          | hieroglyphicwritings.EgyptianPharaohs |          |         |             | sent to  | Punt. |     |
 | -------- | ------------------------------------- | -------- | ------- | ----------- | -------- | ----- | --- |
 | B. Damat | and Other                             | Cultural | Centers | in Northern | Ethiopia |       |     |
@@ -452,8 +452,8 @@ hierarchy of Ethiopian. Tesfa-Iyesus/Yekuno-Amlak (r. 1270-1285), who
 claimed decent from the last Aksumite king Dilnaâ€Ÿod, obtained military
 assistance from Shawa & his Amhara troops, attempted to engage the
 last king of Zagwe, Yetbarek in battle. Yekuno-Amlak declared himself as
-â€œMoâ€Ÿa Anbessa Ze-emnegede Yihuda, the conquering Lion of the Tribe of
-Judah.â€
+"Moâ€Ÿa Anbessa Ze-emnegede Yihuda, the conquering Lion of the Tribe of
+Judah."
 | 3.2.2. East, | Central, |        | Southern | and | Western   |     |     |     |     |     |     |     |     |     |
 | ------------ | -------- | ------ | -------- | --- | --------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 3.2.2.1.     | Bizamo,  | Damot, | Enarya   |     | and Gafat |     |     |     |     |     |     |     |     |     |
@@ -557,8 +557,8 @@ Europe and the Muslims of the Middle East was in favor of the
 | ------------- | ---------- | ----------------- | --- | --- | --- | ---------- | -------------- | --- | --- | --- |
 | 3.4. Economic | Formations |                   |     |     |     |            |                |     |     |     |
 A. Agriculture
-ï‚· Theancient states werebasedonthrivingplowagriculture inhighlandprovinces.
-ï‚· The northern subjects had ristrights in their respective provinces. Ristis a kind
+•  Theancient states werebasedonthrivingplowagriculture inhighlandprovinces.
+•  The northern subjects had ristrights in their respective provinces. Ristis a kind
 of communal birth right to land by members of the families and clans of families
 whose ancestors had settled and lived in the area over long periods of time. It is
 inherited from generation to generation in accordance to with customary law. All
@@ -573,12 +573,12 @@ right that became hereditary was called Riste-Gult as famous well placed
 | officials | usedto | transfertheir |     | positionto |     | their | offspring. |     |     |     |
 | --------- | ------ | ------------- | --- | ---------- | --- | ----- | ---------- | --- | --- | --- |
 B. Handicraft
-ï‚· These include beadwork, body scarification, tattoos, carving (on leather, wood
+•  These include beadwork, body scarification, tattoos, carving (on leather, wood
 and stone), farming implements and harvesting tools; housing, construction
 | methods, |     | furniture, | iconographyetc. |     |     |     |     |     |     |     |
 | -------- | --- | ---------- | --------------- | --- | --- | --- | --- | --- | --- | --- |
 C. Trade
-ï‚· The major socio-economic and political centers of earliest states seem to
+•  The major socio-economic and political centers of earliest states seem to
 have also been major trade centers with wide ranging contacts in various
 directions within the region itself and with merchants coming to the area
 | across              | theinternationalwater |     |     |     | bodies. |     |     |     |     |     |
@@ -618,9 +618,9 @@ Unit Four
 Politics, Economy and Socio-Cultural Processes from the Late Thirteenth to the
 | beginning | of            | the Sixteenth |     | Centuries        |     |         |     |     |     |
 | --------- | ------------- | ------------- | --- | ---------------- | --- | ------- | --- | --- | --- |
-| 4.1. The  | â€œRestorationâ€ |               | of  | the â€œSolomonicâ€Ÿâ€Ÿ |     | Dynasty |     |     |     |
+| 4.1. The  | "Restoration" |               | of  | the "Solomonicâ€Ÿâ€Ÿ |     | Dynasty |     |     |     |
 Yekuno-Amlakâ€Ÿs victory over the last Zagwe ruler and his enthronement as a king led to
-the â€œrevival or restoration of Solomonicâ€ dynasty and also marked the beginning of
+the "revival or restoration of Solomonic" dynasty and also marked the beginning of
 Ethiopiaâ€Ÿs medieval period. The Kibre-Negest is a national epic that glorifies a particular
 monarchical line and also indelibly associates Ethiopia with the Judeo-Christian
 tradition.
@@ -628,13 +628,13 @@ tradition.
 | ----------------- | --- | --- | ---------- | --- | --- | --- | --- | --- | --- |
 TherevisedEthiopianconstitutionof 1955 claimedthat theruling line
 descendedfrom Menelik I, thesonof Makeda, queenof Ethiopia, andKing
-Solomon.â€
+Solomon."
 From about 1270 until the deposition of Emperors Haile Sillasse I in 1974, all Ethiopian
 | monarchs | claimeddescent |     |     | from | thefamilyof | Yekuno-Amlak. |     |     |     |
 | -------- | -------------- | --- | --- | ---- | ----------- | ------------- | --- | --- | --- |
 4.2. Power Struggle, Consolidation, Territorial and Religious Expansion of the Christian
 Kingdom
-4.2.1. Succession Problem and the Establishment of â€œRoyal Prisonâ€Ÿ
+4.2.1. Succession Problem and the Establishment of "Royal Prisonâ€Ÿ
 Yekuno-Amlak ruled peacefully, and after his death the existence of power struggle civil
 war was reflected. This continuous succession problem was resolved around 1300,
 during the reign of Widim-Raâ€Ÿad (r. 1299-1314); when Amba-Gishen was established as
@@ -647,14 +647,14 @@ eldest son would be put on the throne and his brothers would be sent to Amba-Gis
 | -------------------- | --- | ----- | --- | ----------- | --------- | --- | --- | --- | --- |
 | 4.2.2. Consolidation |     |       | and | Territorial | Expansion |     |     |     |     |
 
-ï‚· The center of the â€œrestoredâ€ dynasty was at first in medieval Amhara (todayâ€Ÿs
+•  The center of the "restored" dynasty was at first in medieval Amhara (todayâ€Ÿs
 South Wallo) around Lake Haiq. But, it gradually shifted its center into Shawa,
 in to the districts like: Menz, Tegulet, Bulga, Yerer, Entoto, Menagesha,
 |     | Wachacha, | FuriandZequalla.From |     | 1270. |     |     |     |
 | --- | --------- | -------------------- | --- | ----- | --- | --- | --- |
-ï‚· Until the establishment of Gondar in 1636, the medieval monarchs spent their
+•  Until the establishment of Gondar in 1636, the medieval monarchs spent their
 reigninmobilecourt/rovingcapital.
-ï‚· Emperor Amde-Tsion (r.1314 to 1344). He was the first Solomonic king, who
+•  Emperor Amde-Tsion (r.1314 to 1344). He was the first Solomonic king, who
 embarked upon a policy of wider and rapid territorial expansion. His main
 motives of expansion were economic and political (to control the trade routes
 |     | andexpandterritories).He |     | madeterritorialexpansioninto: |     |     |     |     |
@@ -694,11 +694,11 @@ medievalDamot.
 | II. Religious | Movements       |          |     |     |     |     |     |
 | ------------- | --------------- | -------- | --- | --- | --- | --- | --- |
 | A.            | The Ewostatewos | Movement |     |     |     |     |     |
-ï‚· Ewostatewos main argument was Sabbath, should be strictly observed as
+•  Ewostatewos main argument was Sabbath, should be strictly observed as
 |     | holiday.Thenheleft |         | thecountryinto |     | Egypt. |     |     |
 | --- | ------------------ | ------- | -------------- | --- | ------ | --- | --- |
 | B.  | The Religious      | Reforms | of Zara-Yaqob  |     |        |     |     |
-ï‚· Zara-Yaqob (r. 1434-68) who was the son of Dawit ascended to the throne
+•  Zara-Yaqob (r. 1434-68) who was the son of Dawit ascended to the throne
 withdefinitepro-Sabbathconvictions
 
 4.3. Political and Socio-Economic Dynamics of Muslim Sultanates
@@ -710,14 +710,14 @@ aroundHarar in1367.
 defeat of Imam Ahmad; a growing threat from a new force-the Oromo forced the
 sultanatetochangeits capitalto Awsain1576/7, to the present Afarregion.
 4.3.2. Trade and the Expansion of Islam
-ï‚· Trade was not only used as means for expansion of Islam in the Muslim
+•  Trade was not only used as means for expansion of Islam in the Muslim
 Sultanates rather it was the base of their economy. The most known
 Muslim Sultanates during this period were Ifat (1285-1415) and Adal
 (1415-1577).
 4.4. Rivalry between the Christian Kingdom and the Muslim Sultanates
 ïƒ˜ Zeilawas themainoutlet for themedievalperiodlong distancetrade.
 ïƒ˜ The ambition to control this trade route and commodities that passed through
-Zeila, led to rivalry between the â€œSolomonicâ€ rulers and the Sultanate of Ifat. The
+Zeila, led to rivalry between the "Solomonic" rulers and the Sultanate of Ifat. The
 competitionamongthem becamethesource of conflict.
 ïƒ˜ The first recorded conflict between the Christian kingdom and Ifat took place in
 1328 when the sultan of Ifat Haqaddin I stopped merchants belonging to the
@@ -735,11 +735,11 @@ of King Yishaq (r.1413-30) in 1415 he was killed. After the death of Saâ€Ÿad
 and the control of Zeila, the Muslim sultanates in Ethiopia were weakened for a
 longtime.
 ïƒ˜ Tens of sons of Saâ€Ÿadaddin took refuge in Yemen and then came back from their
-exile to bear the title of â€œsultan of Adalâ€ rather than Ifat. For this reason, Muslim
+exile to bear the title of "sultan of Adal" rather than Ifat. For this reason, Muslim
 Sultanates fought each other rather than united. The expansion of the Christian
-kingdom to these Muslim Sultanates turned Ethiopian kings in to â€œKing of Kingsâ€Ÿ
+kingdom to these Muslim Sultanates turned Ethiopian kings in to "King of Kingsâ€Ÿ
 or emperor.Yet, Yishaqlost his life fighting somewhereinAdal.
-ïƒ˜ The â€œSolomonicâ€ dynasty reached its peak during the reign of Emperor Zare-
+ïƒ˜ The "Solomonic" dynasty reached its peak during the reign of Emperor Zare-
 Yaeâ€Ÿqob when the Christian kingdom gained some accesses to the Red Sea
 commerce and again maritime, imperial power become strong politically and
 religiously
@@ -757,21 +757,21 @@ interdependence in economic, social, cultural and political spheres laid the
 |      | groundfor |           | theformationof |     | modernEthiopia. |     |
 | ---- | --------- | --------- | -------------- | --- | --------------- | --- |
 | 4.5. | External  | Relations |                |     |                 |     |
-ï‚· Both Egypt and Ethiopia continued to act as protectors of minority
+•  Both Egypt and Ethiopia continued to act as protectors of minority
 Muslims in Ethiopia and minority Christians in Egypt respectively mainly
 as of the coming of the Mamluks to power in Egypt. Egypt also wanted to
 insuresecure flowof Nile (the AbayRiver) that originatedfrom Ethiopia.
 | 4.5.2. | Ethiopiaâ€Ÿs |     | Relations | with | Christian | Europe |
 | ------ | ---------- | --- | --------- | ---- | --------- | ------ |
-ï‚· The earliest known message to Ethiopia from a European monarch is the
+•  The earliest known message to Ethiopia from a European monarch is the
 letter of King Henry IV dated 1400 A.D. and addressed to the king of
 |     |     |     | Abyssinia, | PresterJohn. |     |     |
 | --- | --- | --- | ---------- | ------------ | --- | --- |
-ï‚· Alphonso de Paiva V of Argon received a delegation from Yishaq in the
+•  Alphonso de Paiva V of Argon received a delegation from Yishaq in the
 city of Valentia, in 1427. Yishaqâ€Ÿs delegation to Europe was to ask for
 |     |     |     | moreartisans | andmilitaryexperts. |     |     |
 | --- | --- | --- | ------------ | ------------------- | --- | --- |
-ï‚· Queen Elleni, ex-Muslim chief of Hadiya baptized about 1445 on marrying
+•  Queen Elleni, ex-Muslim chief of Hadiya baptized about 1445 on marrying
 King Zara-Yaqob (1434 - 68), had foreseen the danger of Ottoman
 expansion and played role in establishing military alliance with Portugal
 against Ottoman Turks. Around 1512 Queen Elleni, the mother and regent
@@ -786,28 +786,28 @@ Politics, Economy and Socio-Cultural Processes from Early Sixteenth to the End o
 | ---------- | --- | --------- | --- | -------- | --- | --- |
 5.1. Interaction and Conflicts between the Christian Kingdom and the Sultanate of
 Adal
-ï‚· Ahmad ibn Ibrahim al-Ghazi/Gragn was successful with his remarkable
+•  Ahmad ibn Ibrahim al-Ghazi/Gragn was successful with his remarkable
 leadership ability together with the assistance that he received from religious
 personalities whoconvincedMuslim leaders of Afar, SomaliandHarari.
-ï‚· The larger and professional Christian army was defeated at the battle of Shimbra
+•  The larger and professional Christian army was defeated at the battle of Shimbra
 Kure, near the preset day Mojo in 1529. After the victory, the Muslims occupied
 Dawaro, Shawa, Amhara, and Lasta. They continued north passing the Amhara
 plateau and by 1535, Ahmadâ€Ÿs empire stretched from Zeila to Massawa on the
 |     | coast | andincludingtheEthiopianinterior. |     |     |     |     |
 | --- | ----- | --------------------------------- | --- | --- | --- | --- |
-ï‚· Competition for supremacy over the Red Sea and the Indian Ocean between
+•  Competition for supremacy over the Red Sea and the Indian Ocean between
 Portugal and the Ottoman Turks gave the prolonged conflict between Christian
 |     | kingdom |          | andMuslim |                  | principalities | aglobaldimension. |
 | --- | ------- | -------- | --------- | ---------------- | -------------- | ----------------- |
-|     | ï‚· Turks | andArabs |           | encouragedAhmad. |                |                   |
-ï‚· Lebne-Dengelwas succeededbyhis sonGelawdiwos (r.1540-1559).
-ï‚· About four hundred Portuguese soldiers under the leadership of Christopher da
+|     | •  Turks | andArabs |           | encouragedAhmad. |                |                   |
+•  Lebne-Dengelwas succeededbyhis sonGelawdiwos (r.1540-1559).
+•  About four hundred Portuguese soldiers under the leadership of Christopher da
 
 Gama, youngest son of Vasco da Gama, came in January 1541 to fight on the
 sideof the Christiankingdom.
-ï‚· On February 25, 1543 while Ahmad was encamped near Lake Tana, he was
+•  On February 25, 1543 while Ahmad was encamped near Lake Tana, he was
 attackedandkilledafter afiercefighting.
-ï‚· Two women were powerful in the politics of the period: Seble-Wangel and Bati-
+•  Two women were powerful in the politics of the period: Seble-Wangel and Bati-
 Delwombera. Seblewongel participated in the war against Imam Ahmad in 1542
 when Christians lost 200 of the Portuguese soldiers and their commander
 Christopher Dagama. As a result, she advised the march to the south in order to
@@ -815,12 +815,12 @@ contact a Christian army under her son, Emperor Gelawdiwos (r.1540-59) for the
 battel of Woina-Dega. Similarly, Bati Del Wanbara was the wife of Imam Ahmad
 Al Ghazi. She was a daughter of a Muslim military commander of Adal known as
 Mahfuz.
-ï‚· Emir Nur bin Mujahin came at the helm of Adalâ€Ÿs power after the death of Imam
+•  Emir Nur bin Mujahin came at the helm of Adalâ€Ÿs power after the death of Imam
 Ahmad. In 1559, Gelawdiwos led a campaign into Adal and lost his life fighting
 Adalâ€Ÿs force under Emir Nur. The war did not continue as both sides were
 exhausted due to centuries old conflict. They were also felt threatened at the
 magnitudeof theOromo populationmovement.
-ï‚· Thus, theChristiankingdom retreatedfrom its center inpresent-dayShawato the
+•  Thus, theChristiankingdom retreatedfrom its center inpresent-dayShawato the
 north and established its center in Dembiya, north of Lake Tana. Likewise Emir
 Nur built a wallsurrounding Harar to defend it from the Oromo, who hadbegun to
 occupyHarar plateau.
@@ -900,12 +900,12 @@ of the attack bytheChristianarmyunder Zara-Yaqob(r.1434-1468).
 5.5. Peoples and States in Eastern, Central, Southern and Western Regions
 5.5.1 Cushitic States
 Gedeo
-ï‚· According to a tradition, the origin of the Gedeo is traced back to an
+•  According to a tradition, the origin of the Gedeo is traced back to an
 aboriginal clan called Murgga-Gosallo. Another tradition that might have to
 do with the Oromo practice of mass adoption known as guddifacha,
 traces the origin of the Gedeo, to Daraso, who was older brother of Gujo
 (Gujiâ€Ÿs ancestor) andBoro (Boranaâ€Ÿs ancestor).
-ï‚· the Gedeo hada culture called baalle, a traditionalgovernance system that
+•  the Gedeo hada culture called baalle, a traditionalgovernance system that
 workedwithageclasses andranking.
 Sidama
 ïƒ¼ governance led by the Mote (king) who exercised political and administrative
@@ -919,14 +919,14 @@ alsoperformedother rituals suchas circumcisionandmarriage.
 basedon the Sidamamoralcode,halale(the ultimate truth) to judge the right and
 wrong.
 Kambata
-ï‚· TheareaencompassedCushitic, OmoticandSemiticpeoples.
-ï‚· Four communities of separate origin coalesced to form the contemporary state
-of Kambata which means â€œthis is the placeâ€ (where we live). The first one,
+•  TheareaencompassedCushitic, OmoticandSemiticpeoples.
+•  Four communities of separate origin coalesced to form the contemporary state
+of Kambata which means "this is the place" (where we live). The first one,
 Kambata in the narrow sense, had its original homeland around Mount
 Hambericho in the heartland of Kambata territory. The other three namely the
 Dubamo, DongaandTembaro tracetheir homelandfrom Sidamahighlands.
-ï‚· Theethnogenesis of Kambataalso benefittedfrom OmoticandSemiticpeoples.
-ï‚· The Kambata had a traditional administrative institution called the Hambericho
+•  Theethnogenesis of Kambataalso benefittedfrom OmoticandSemiticpeoples.
+•  The Kambata had a traditional administrative institution called the Hambericho
 Council. The council had seven members each representing the seven clans in
 the region. With a king at the top, the council ruled Kambata until the late
 nineteenthcentury.
@@ -937,7 +937,7 @@ was largelyinhabitedbyCushitic-speakingpastoralcommunities.
 ïƒ˜ Zara-Yaqob made a political marriage. Accordingly, Princess Elleni, from Hadiya,
 whobecameanimportant historicalfigure, marriedEmperorZara-Yaqob.
 Konso /Xonso
-ïƒ¼ Theliteralmeaning of theterm is aâ€œheavilyforestedhill/areaâ€.
+ïƒ¼ Theliteralmeaning of theterm is a"heavilyforestedhill/area".
 ïƒ¼ The Konso people lived in walled villages namely Karati Turo and Takati which
 were further divided into wards (Kanta). There was no central authority who
 acted as sovereign power over the three regions. Each village was ruled by a
@@ -946,25 +946,25 @@ male members of thevillage.
 
 5.5.2 Semitic States
 The Emirate of Harar
-ï‚§ Harar is oneof theearliest Muslim centers intheregionof EthiopiaandtheHorn.
-ï‚§ Harar became the capital of Walasma of Adal replacing Dakkar until1577 when it
+•  Harar is oneof theearliest Muslim centers intheregionof EthiopiaandtheHorn.
+•  Harar became the capital of Walasma of Adal replacing Dakkar until1577 when it
 was shifted to Awsa due to the pressure from the Oromo and the famous Harar
 wallwas built to defendthe city.
-ï‚§ Harar becameawalledcitywhere thesultanateof theHararideveloped.
-ï‚§ Emir Ali ibn Daâ€Ÿud (r. 1647-1662,) in cooperation with the Oromo established a
+•  Harar becameawalledcitywhere thesultanateof theHararideveloped.
+•  Emir Ali ibn Daâ€Ÿud (r. 1647-1662,) in cooperation with the Oromo established a
 dynastywhichwas to rulefor nearlytwo centuries andahalf.
-ï‚§ Its economic power grew as it controlled trade routes from the Gulf of Aden
+•  Its economic power grew as it controlled trade routes from the Gulf of Aden
 ports of ZeilaandBerbera.
-ï‚§ Egyptians sent anexpeditionaryforcein1875andcontrolledtheemirate.
+•  Egyptians sent anexpeditionaryforcein1875andcontrolledtheemirate.
 Shawan Christian Kingdom
 ïƒ¼ Medieval Christian state centered in Shawa before it moved to the north during
 the wars between the Christian kingdom and Muslim sultanates and the Oromo
 expansionof thesixteenthcentury.
-ïƒ¼ â€œSolomonicâ€ dynasty of Shawa Amhara was formed by the Menz ruler Warada
+ïƒ¼ "Solomonic" dynasty of Shawa Amhara was formed by the Menz ruler Warada
 QalNegasiKristos (r.1696-1703).
 ïƒ¼ The dynasty became very strong under negus Sahle-Sellasie (r.1813-47), the
 grandfather of Emperor Menilek II. In his reign many travelers visited Shawa and
-heevensignedâ€œtreatyof friendship andcommerceâ€ withtheBritishin1841.
+heevensigned"treatyof friendship andcommerce" withtheBritishin1841.
 ïƒ¼ Shawaâ€Ÿs economy was mainly based on agriculture supplemented by trade and
 craft. Near the capital, Ankobar, there was an important trade center in Aleyu
 AmbaadministeredbytheShawancourt.
@@ -975,26 +975,26 @@ respectively, andLakeZiwayontheeast.
 ïƒ¼ Thestaplecrop inGuragelandisenset.
 5.5.3 Omotic States
 Kafa
-ï‚§ Emergedinfourteenthcentury.
-ï‚§ TherulingMinjo dynastyandthemedievalkingdom of Ennaryahadclosecontact.
+•  Emergedinfourteenthcentury.
+•  TherulingMinjo dynastyandthemedievalkingdom of Ennaryahadclosecontact.
 The Oromo expansion might have forced the ruling house of Ennarya to flee
 south of the Gojeb which as aresult brought Christianity and the royal title tato to
 Kafa.
-ï‚§ Kafaâ€Ÿs economy was based on the cultivation of enset on peasant farms
+•  Kafaâ€Ÿs economy was based on the cultivation of enset on peasant farms
 supportedbytrade.
-ï‚§ TheTato was assistedbyacouncilof sevenadvisors calledMickrecho.
-ï‚§ TheKafaareknownfor theirculture of diggingdeeptrenches calledKuripo.
+•  TheTato was assistedbyacouncilof sevenadvisors calledMickrecho.
+•  TheKafaareknownfor theirculture of diggingdeeptrenches calledKuripo.
 Wolayta
-ï‚§ The name Wolayta denotes a specific ethnic group in southern Ethiopia and their
+•  The name Wolayta denotes a specific ethnic group in southern Ethiopia and their
 powerfulkingdom whichfirst emergedas astateback inthethirteenthcentury.
-ï‚§ Kawo (king), assistedbyanadvisorycouncilof nobles calledBallimalla.
-ï‚§ Two successivedynasties ruledWolayta:theWolayta-MallaandtheTigre.
+•  Kawo (king), assistedbyanadvisorycouncilof nobles calledBallimalla.
+•  Two successivedynasties ruledWolayta:theWolayta-MallaandtheTigre.
 
-ï‚§ Founded in the thirteenth century, the Wolayta-Malla seems to have ruled until
+•  Founded in the thirteenth century, the Wolayta-Malla seems to have ruled until
 the end of the fifteenth century. It was then superseded by the Tigre dynasty, so
 called because it was supposedly founded by Tigrean migrants from northern
 Ethiopia.
-ï‚§ The kingdom lost political autonomy following its conquest by Emperor
+•  The kingdom lost political autonomy following its conquest by Emperor
 Menelikâ€Ÿs forces in1894.
 Yam
 ïƒ˜ The Yam or Yamma state was located along the eastern banks of the Gibe or to
@@ -1043,15 +1043,15 @@ small army. His forces were defeated, and he was killed and beheaded on Good
 Fridayin1559.
 ïƒ¼ Amir Nur was forced to retreat to Harar due to the internal power struggle
 betweenthem andbecauseof theOromo attacks of his basearea, Harar.
-5.6.2. The Gondar Period Political Developments: â€œClose Door Policy,â€ Reforms,
-â€œByzantine Politicsâ€
-ï‚§ The actual beginning of the Gondar period or â€œGondarine Periodâ€ was from its
+5.6.2. The Gondar Period Political Developments: "Close Door Policy," Reforms,
+"Byzantine Politics"
+•  The actual beginning of the Gondar period or "Gondarine Period" was from its
 foundation as a permanent capital in 1636 by Emperor Fasiledas (r.1632-67) that
-continuedup to thebeginning of â€œZemene-Mesafintâ€.
-ï‚§ The kingdom achieved its glory during the reigns of its first three successive
-emperors: Fasiledas (r.1632â€“67), Yohannes I (r.1667 â€“ 1682) and Iyasu I (r.1682
-â€“ 1706).
-ï‚§ Amongthemajor reforms during this periodwere;
+continuedup to thebeginning of "Zemene-Mesafint".
+•  The kingdom achieved its glory during the reigns of its first three successive
+emperors: Fasiledas (r.1632–67), Yohannes I (r.1667 – 1682) and Iyasu I (r.1682
+– 1706).
+•  Amongthemajor reforms during this periodwere;
 ïƒ¼ restorationof the Orthodox faith,
 ïƒ¼ establishment of the royal Prison of Amba Wahni to solve the rivalry
 problems byFasiledas.
@@ -1064,8 +1064,8 @@ taxes, andcustoms werereformed.
 ïƒ¼ After the Oromo population expanded in to the central and the northern
 part of Ethiopia, the Oromo warriors widely participated in central army of
 Gondar.
-ï‚§ After a period of Iyasu I, life in the court of Gondar affected by internal political
-instability and it has come to known as â€œByzantine politicsâ€. It was characterized
+•  After a period of Iyasu I, life in the court of Gondar affected by internal political
+instability and it has come to known as "Byzantine politics". It was characterized
 by and Gonder became the center of intrigues, short-lived monarchs,
 assassinations, instabilities, chaos, coups dâ€ŸÃ©tat and poising of kings by power
 claimants.The assassination of Iyasu the Great opened the beginning of
@@ -1076,9 +1076,9 @@ killed by Yostos, who was also poisoned and replaced by Dawit III, who himself
 was fallen to poisoning and replaced by Bakkaafaa. Bakkaafaa tried to bring
 stability with the support of his Oromo warriors and his formidable queen,
 Mentewab of Quara.
-ï‚§ From 1728 to 1768 the Gondarine court politics was dominated by the famous
+•  From 1728 to 1768 the Gondarine court politics was dominated by the famous
 QueenEtegeMentewab togetherwithher brother WaldaLeâ€Ÿul(1732-1767).
-ï‚§ At the death of Walda Le'ul, Mentwab was challenged by her Wallo Oromo
+•  At the death of Walda Le'ul, Mentwab was challenged by her Wallo Oromo
 daughter-in-law Wabi/Wubit Amito (her Baptized name was Bersabeh), with
 support of her brothers Brillee and Luboo. In reaction, Mentwab invited Ras
 Micka'el Sehul of Tigray to support her against the Wallo. Later after the death of
@@ -1090,55 +1090,55 @@ under throne name Takla-Haymanot II (1769-1777) on power. This opened the
 | waytotheEraof |              | Lords | orZemeneMasefent |     | (1769-1855). |     |
 | ------------- | ------------ | ----- | ---------------- | --- | ------------ | --- |
 | 5.6.3. Gondar | Achievements |       |                  |     |              |     |
-ï‚§ Gondar became the center of state administration, learning, commerce,
+•  Gondar became the center of state administration, learning, commerce,
 | education, | art | andcrafts | for morethantwo |     | centuries. |     |
 | ---------- | --- | --------- | --------------- | --- | ---------- | --- |
-ï‚§ The cultural achievements of the period led some writers to describe Gondarine
+•  The cultural achievements of the period led some writers to describe Gondarine
 | periodinhistoryas |     | EthiopianRenaissance. |     |     |     |     |
 | ----------------- | --- | --------------------- | --- | --- | --- | --- |
 Architecture
-ï‚§ When Gondar served as a permanent capital, for about one hundred fifty years
+•  When Gondar served as a permanent capital, for about one hundred fifty years
 Ethiopiankings built significant secular buildings likecastles, bridges, residences,
 bath, library, towers, fortifications and there are squared, round and unknown
 shape of churches. In the cities compound the most impressive building known
 as Fasil Gemb, there are different palaces corresponded to Emperor Fasiledas,
 Yohannes I, IyasuI, Dawit III, Bakkaafaaandregent QueenMentewab.
 Painting
-ï‚§
+• 
 With a wealth of religious paintings on manuscripts and on wood, ornaments,
 weapons and other accessories especially, the churches built by Queen Mintwab
 | wereknownbybeautifulpaintings, |     |     |     | cross | andanart | works. |
 | ------------------------------ | --- | --- | --- | ----- | -------- | ------ |
 Literature
-ï‚§
+• 
 Besides the Gospels, the Miracles of Mary, the Lives of Ethiopian Saints and the
 Litanies, and many other kinds of illuminated manuscripts were also produced.
 Gondaris alsoknownfor its traditionalmedicine, musicandpoetry.
 Trade &Urbanization
-ï‚§ In the early days Gondar was a commercial center that connected long distance
+•  In the early days Gondar was a commercial center that connected long distance
 trade routes of the southern region with Massawa and Matama in the Ethio-
 Sudanborder.
 5.6.4. Major Features of Era of Princes (1769-1855) and Yejju Dynasty (1786-1853)
 | A. The Meaning | and | Beginning | of Zemene | Mesafint |     |     |
 | -------------- | --- | --------- | --------- | -------- | --- | --- |
-ï‚·
+• 
 The princes were not in actual position of political power rather the political
 | power | was inthehandof |     | different | regionallords. |     |     |
 | ----- | --------------- | --- | --------- | -------------- | --- | --- |
 B. The Main Political Regions and the Features of Zemene Mesafint
-ï‚· The collaboration of the lords of Gojjam, Amhara, Lasta and Wallo that defeated
+•  The collaboration of the lords of Gojjam, Amhara, Lasta and Wallo that defeated
 | Ras Mikaâ€Ÿelat |     | thebattle | of Sarba-Kussain1771. |     |     |     |
 | ------------- | --- | --------- | --------------------- | --- | --- | --- |
-ï‚· Ali Gwangul( Ali I or Ali Talaq is considered as the founder of â€œYejju dynastyâ€ in
+•  Ali Gwangul( Ali I or Ali Talaq is considered as the founder of "Yejju dynasty" in
 1786.
-ï‚· The main political regions that Zemene-Mesafint lords ruled were Tigray, Semen,
+•  The main political regions that Zemene-Mesafint lords ruled were Tigray, Semen,
 Dembiya, Begemedir, Lasta, Yejju, Wallo, Gojjam and Shawa (act as an
 | independent | from | thesepolitics). |     |     |     |     |
 | ----------- | ---- | --------------- | --- | --- | --- | --- |
-ï‚· â€œYejju dynastyâ€ was the leading power during the â€œEra of the princesâ€ by
+•  "Yejju dynasty" was the leading power during the "Era of the princes" by
 | establishing | center | at  | Debre-tabor. |     |     |     |
 | ------------ | ------ | --- | ------------ | --- | --- | --- |
-ï‚· YejjuDynastyreachedits zenithunder GugsaMarso (r.1803-1825).
+•  YejjuDynastyreachedits zenithunder GugsaMarso (r.1803-1825).
 According to a number of historical accounts Zemene-Mesafint was characterized as
 follows:
 
@@ -1158,23 +1158,23 @@ heritages of Gondar.
 northernEthiopia.
 (cid:0)ï€  It was a period in which the prevalence of poverty, social, political and
 economiccrisis were intensified.
-(cid:0)ï€  Theendof â€œClose Dore policyâ€ andEthiopia's doorwas openedto Europe.
+(cid:0)ï€  Theendof "Close Dore policy" andEthiopia's doorwas openedto Europe.
 Unit Six
 Internal Interactions and External Relations in Ethiopia and the Horn, 1800-1941 (10
 hours)
 6.1. The Nature of Interactions among Peoples and States of Ethiopia and the Horn
 6.1.1. Peoples and States of Qabena, Gibe, Leqa, Aqoldi, Khomosha, and Bela-Shangul
 A. The State of Qabena:
-ï‚· Hadiya, Alaba, Kambata, Gurage and Silte constituted independent political
+•  Hadiya, Alaba, Kambata, Gurage and Silte constituted independent political
 entities intheperiod.
-ï‚· The Gurage had their political organization. Their leaders were known as Abegaz
+•  The Gurage had their political organization. Their leaders were known as Abegaz
 or Azmatch combined political and military authority. It became a centre of
 Muslim revivalist movement in the northeast of the Gibe River. Stirred by Muslim
 refugees from Wallo, and with possible connections even with Mahdists Sudan,
 the movement swept across a large part and was attended by a fast rate of
 Islamization.
 B. The Gibe States:
-ï‚· Towards the beginning of the 19th century, several monarchical states known
+•  Towards the beginning of the 19th century, several monarchical states known
 as mootummaa emerged among the Macca Oromo at the expense of the
 Gada system. Many factors accounted for the transformation of the Gada
 system. In the process, the war leaders of the Gadaa system (abba-duulaa)
@@ -1208,10 +1208,10 @@ v. Geeraa: formed by Tulluu Gunjii (1835-1838), followed by A/Baassoo and
 A/RaagooI(1838-1848).
 | C. The | Leeqaa States: |     |     |     |     |     |     |
 | ------ | -------------- | --- | --- | --- | --- | --- | --- |
-ï‚· Leeqaa-Naqamtee was founded by Bakaree Godaanaa in 1840, and reached
+•  Leeqaa-Naqamtee was founded by Bakaree Godaanaa in 1840, and reached
 |     | its height | underhis | successors |     |     | MorodaandKumsa. |     |
 | --- | ---------- | -------- | ---------- | --- | --- | --------------- | --- |
-ï‚· Leqa-Qellam was located in the south western of Wallagga. It was founded by
+•  Leqa-Qellam was located in the south western of Wallagga. It was founded by
 Tullu and became powerful under his son, Jote being centered at Gidaam and
 |     | controlling | theareas | aroundSayyo-DambiDoolloo. |     |     |     |     |
 | --- | ----------- | -------- | ------------------------- | --- | --- | --- | --- |
@@ -1240,45 +1240,45 @@ mainlines.
 
 | Map: Trade | Routes | of the Horn | in the Nineteenth | century |
 | ---------- | ------ | ----------- | ----------------- | ------- |
-ï‚§ Themainsources of lucrativetradeitems weresouthwesternregions.
-ï‚§ Items as exchange mediums included salt bars (amole), iron bars, wines,
+•  Themainsources of lucrativetradeitems weresouthwesternregions.
+•  Items as exchange mediums included salt bars (amole), iron bars, wines,
 cowriesâ€Ÿ shells, beads, pieces of cotton cloth (abujadid), Maria Theresa Thaler
 | (MTT) | etc |     |     |     |
 | ----- | --- | --- | --- | --- |
-ï‚§ Muslim merchants were the most dominant traveling from interior to the coast.
+•  Muslim merchants were the most dominant traveling from interior to the coast.
 Among these were Muslim Northern merchants/Jabarti and Muslim Oromo
 merchants of southwestern region known as Afqala. Similarly, the Argoba from
 the kingdom of Shawa were active merchants in the trade between Harar and the
 northernSomalicoast.
 | 6.2. Power  | Rivalry |               |             |            |
 | ----------- | ------- | ------------- | ----------- | ---------- |
-| ï‚· Themanwho |         | endedtheEraof | Princes was | KasaHailu. |
-ï‚· When Ras Ali II (Ali Alula/Ali Abba Bula) gave Quara to his mother Empress
+| •  Themanwho |         | endedtheEraof | Princes was | KasaHailu. |
+•  When Ras Ali II (Ali Alula/Ali Abba Bula) gave Quara to his mother Empress
 | Manan/Halima, |     | Kasamovedto | jungle andbecameabandit. |     |
 | ------------- | --- | ----------- | ------------------------ | --- |
-ï‚· Kasa rapidly defeated Goshu Zawde of Gojjam at Gur Amba on November 27,
+•  Kasa rapidly defeated Goshu Zawde of Gojjam at Gur Amba on November 27,
 
 1852;
-ï‚· BiruAlighaz, Aben, Yazew&Balewat Togusa(GorgoraBichen) onApril12, 1853;
-ï‚· Ali at Ayshal on 29 June, 1853 and Wube of Tigray at Darasge on 8 February,
+•  BiruAlighaz, Aben, Yazew&Balewat Togusa(GorgoraBichen) onApril12, 1853;
+•  Ali at Ayshal on 29 June, 1853 and Wube of Tigray at Darasge on 8 February,
 1855. Then Coptic bishop, Abuna Salama anointed Kasa on 9 February 1855, as
 King of Kings, Tewodros II.
-ï‚· In 1867, the growing oppositions from his rivals forced Emperor Tewodros, who
+•  In 1867, the growing oppositions from his rivals forced Emperor Tewodros, who
 had dreamt of uniting Ethiopia, to retreat and establish his last stronghold in
 Maqdela. In addition, in the military expedition of the British to Maqdela in the
 late1867, Bezbez KasaMercha(Yohannis IV) gaveguidanceandmaterialsupport
 to the British troops. He also received a large quantity of firearms from General
 Robert Napier, thecommander of Britishexpedition.
-ï‚· Following the death of emperor Tewodros in 1868, a war broke out for
+•  Following the death of emperor Tewodros in 1868, a war broke out for
 emperorship.Threecontenders forthethrone namelyWagshum Gobezeof Lasta,
 Ras Kasa Mercha of Tigray and Nigus Menilek of Shawa aspired to be emperors.
 Infact, they reignedinthat orderwiththe thronenames Takla-Giorgis (r.1868-71),
 Yohannis (r.1872-89) andMenilek II(r.1889-1913).
-ï‚· LikeTewodros, Yohannis facedchallenges from power contenders.
-ï‚· The strongest regional challenger of Emperor Yohannis was Menilek II of Shawa.
+•  LikeTewodros, Yohannis facedchallenges from power contenders.
+•  The strongest regional challenger of Emperor Yohannis was Menilek II of Shawa.
 Menilek was calling himself king of kings, expanding his territories towards Wallo
 andcontactingforeigncountries independently.
-ï‚· In 1878, peace initiatives came from Menilek because of the probably military
+•  In 1878, peace initiatives came from Menilek because of the probably military
 superiority of Yohannis. This was concluded at Liche Agreement on which
 Menilek agreed to pay tribute, drop the title of King of Kings, and stop his
 independent dealing with foreign powers. However, both Tekle-Haymanot and
@@ -1288,80 +1288,80 @@ from the Italians and Mahdists. However, despite the continuing challenges of
 regional forces, Yohannis was able to maintain his sovereignty until his death at
 MetemainthebattlewiththeMahdists in1889.
 6.3. The Making of Modern Ethiopian State
-ï‚§ The process of territorial expansion and making of modern Ethiopia involved the
+•  The process of territorial expansion and making of modern Ethiopia involved the
 conquest and the incorporation by imperial power of independent peoples and
 states from theearly1870s to 1900.
-ï‚§ The project of conquest driven by interest to control land and trade routes was
+•  The project of conquest driven by interest to control land and trade routes was
 not new to Menilek II. What made Menilek expansion new were the intensity and
 the degree of success. Besides, his conquest coincided with European powers
 colonial expansion in Africa with whom he concluded partition of territories. The
 control of resourceful centers that enabled the emperor to build military muscle
 as wellas thedeterminationof his generals countedforthe success.
-ï‚§ One caustive factor of territorial expansion to resource rich areas was the Great
+•  One caustive factor of territorial expansion to resource rich areas was the Great
 FaminekifuQen(Evil day) 1888-92. It was the most recalled drought, famine and
 epidemic in the history of Ethiopia and the Horn. The disaster forced Menelik II to
 marchtowrds southandsouthwest for resources.
-ï‚§ In 1875-76, Menilek made campaign towards the Gurage. The northern Gurage,
+•  In 1875-76, Menilek made campaign towards the Gurage. The northern Gurage,
 the Kistane peaceful submitted because of their religious affinity, geographical
 proximity and fear of surrounding Sooddoo Oromo. On the other hand, the
 
 western Gurage, led by Hasan Enjamo of Qabena which had elements of Hadiya-
 Gurage coalition, inflicted a number of defeats on the Shawan forces until
 Menilek's general, Ras GoobanaacrushedHasanâ€Ÿs forces in1888.
-ï‚§ In the western side of Gibe River, competition between the Gojjame and the
+•  In the western side of Gibe River, competition between the Gojjame and the
 Shawan was terminated with the defeat of the Gojjam forces at the battle of
 Imbaaboo on 6 June 1882. In fact, the Imbaaboo victory was Menilek's passport
 totheextensiveandrichregions of thesouthwest.
-ï‚§ Menilek encountered fierce resistance from the Arssi finally however, Shawan
+•  Menilek encountered fierce resistance from the Arssi finally however, Shawan
 forces led by Ras Darge Sahlasillase made the final assault on the Arssi at Azule
 on6 Sept.1886.
-ï‚§ Harari led by Emir Abdullahi (r.1885-1887defeated at Calanqoo, on 6 January
+•  Harari led by Emir Abdullahi (r.1885-1887defeated at Calanqoo, on 6 January
 1887. Menilekâ€Ÿs cousin, Dajjach (later ras) Makonnen Walda-Mikael was
 appointedagovernorof theprovince.
-ï‚§ Wolayta, the powerful southern kingdom, was incorporated after one of the
+•  Wolayta, the powerful southern kingdom, was incorporated after one of the
 bloodiest campaigns of thewholeprocess of expansionin1894.
-ï‚§ Kafa incorporated in 1897 and Ras Walda-Giorgis became the Governor of Kafa
+•  Kafa incorporated in 1897 and Ras Walda-Giorgis became the Governor of Kafa
 after thedefeat of Tato GakiSherocho.
-ï‚§ Empress Taytu (wife of emperor Menelik), apart from her roles in the
+•  Empress Taytu (wife of emperor Menelik), apart from her roles in the
 centralization process, she played significant roles in military affairs using their
 spirited personalities. Empress Taitu commanded her own contingent of about
 5000 infantry and 600 cavalrymen and accompanied her husband to the Battle of
 Adwa. She was considered as an intelligent, wise, and self-assured woman to
 whom Menilek owemuchforhis success.
-ï‚§ The process of centralization and establishing a unitary state continued by
+•  The process of centralization and establishing a unitary state continued by
 abolishing regional autonomies in the early decades of the 20th century. In the
 process, Wallo, Bagemedir, Gojjam andJimmawere reducedto mereprovinces.
 6.4. Modernization Attempts
-ï‚· The period from 1800-1941 also witnessed the attempts of imitating western
+•  The period from 1800-1941 also witnessed the attempts of imitating western
 culturewhichwas consisderdas markerof modernaization.
-ï‚· Military reform - It is apparent that Tewodrosâ€™s defeat by well trained and
+•  Military reform - It is apparent that Tewodros's defeat by well trained and
 equipped Egyptian troops at the battle of Debarki in 1848 forced him to reform
 his troops and to produce modern weapons that would withstand foreign military
-technology or to put the country â€œon an equal footing with European powers.â€ As
+technology or to put the country "on an equal footing with European powers." As
 a result, he introduced military titles, like Yasr Alaqa,Yamsa Alaqa, and Yashi
 Alaqa, tried to organize and replace the regional armies of Zemene-Mesafint with
 a national army, & salaried army and finally with the help of European
-missionaries & artisans tried to manufacture fire arms at his workshop, â€œGaffat
+missionaries & artisans tried to manufacture fire arms at his workshop, "Gaffat
 (near Debre-tabor). At Gafatt about 35 Cannon were produced known as
-â€œSebastopol." Healso triedto buildsmallnavyinLakeTana.
-ï‚· Administrative reforms of Tewodros more focused on the centralization of
+"Sebastopol." Healso triedto buildsmallnavyinLakeTana.
+•  Administrative reforms of Tewodros more focused on the centralization of
 power andsecuringfinancialbase.Hetriedto separate churchandthemonarchy.
 He reduced the churchland and the number of priest that brought him into
 conflict withtheEthiopianOrthodox Churchandit oncefacilitatedto his failure.
-ï‚· Socio-economicreforms, he began the construction of Ethiopian first embryonic
+•  Socio-economicreforms, he began the construction of Ethiopian first embryonic
 road network to link Debre tabor with Gondar, Gojjam, and Maqdela. He also
 made attempt to put an end of the slave trade. Attempted land reform,
 
 encourage more stable marriages, the use of Amharic become more developed,
 tried to establish traditional library at Meqdella, expanded the culture of
 expressedideas bywriting letters.
-ï‚· With regard to religion, he tried to solve the religious doctrines controversy that
+•  With regard to religion, he tried to solve the religious doctrines controversy that
 continued from the 17th century. His efforts were not sucssuful as he entered
 into combat withforignpowes andhis people inthe process of modernization.
-ï‚· Emperor Yohannes IV attempted to reform administration. He recognized and
+•  Emperor Yohannes IV attempted to reform administration. He recognized and
 allowed the then competent regional lords to execrcise power. These included
 Menelik IIof Shawa, AdalTessemaof Gojjam.
-ï‚· Modernization attempts during the reign of emperor Menelik included many
+•  Modernization attempts during the reign of emperor Menelik included many
 aspects. Particularly in the post Adwa period was marked by the establishment
 of a postal service and telecommunications/the telephone-telegraph system, the
 beginning of construction of railway line from Djibouti to Addis Ababa. The
@@ -1375,7 +1375,7 @@ relations) , and Tsehafe-Tizaz Gebreselase Weldemikael (Minister of Pen). His
 reign also witnessed the opening of a hotel in 1907 (Itege Hotel), a modern
 schools (Menelik II School in 1908) and also the foundation of Russian Red
 Cross hospitalin1906 andRussian-runhospital(Menelik IIHospital) in1910.
-ï‚· Lej Iyasu (1913-1916) had also made several reforms. He attempted to
+•  Lej Iyasu (1913-1916) had also made several reforms. He attempted to
 reorganize State finances. For the first time, Iyasu tried to put a distinction
 between state property and the monarchâ€Ÿs personal property. In 1915, he
 established Dire-Dawa Municipality and re-organized its police with salaries and
@@ -1383,10 +1383,10 @@ uniforms. He also avoided Quragna system, tried to amend Leba shay It was a
 method whereby unknown criminals were â€ždiscoveredâ€Ÿ), introduced a policy of
 auditory of governmental accounts, introduced city police/Tirnbulle/ and he also
 triedtointegrateEthiopianMuslims into theadministration.
-ï‚· During the period of Diarchy (r. 1916-1930) there were several modernization
+•  During the period of Diarchy (r. 1916-1930) there were several modernization
 attempts in broader scope. The two rulres namely ras Teferi (later emperor Haile-
 silassie) andempress Zewdituhaddifferent views towards westernculture.
-ï‚· Teferi had interest in modernization by which he wanted to boast the countryâ€™s
+•  Teferi had interest in modernization by which he wanted to boast the country's
 image on the international stage. This was marked by the entry of Ethiopia into
 the League of Nations and his grand tour to Europe in 1923 and 1924,
 respectively. Some remarkable reforms based on European model took place
@@ -1399,21 +1399,21 @@ missionin1934.
 6.5. Socio-Economic Issues/Developments
 6.5.1. Trade and Slave Trade
 
-ï‚· In 1923, slave trade was banned and in 1924, a decree was issued for
+•  In 1923, slave trade was banned and in 1924, a decree was issued for
 emancipation of slaves. In the 1920s, some freed slave children were kep under
 the leadership of Hakim Warqenhe Eshetie. However, slave trade continued
 unofficiallyrigthupt theprodof theItalianocuupation.
 6.5.2. Manufacturing
-ï‚§ Among modern manufacturing: Holleta Grain Mill and Massawa salt were set up
+•  Among modern manufacturing: Holleta Grain Mill and Massawa salt were set up
 in 1896 and 1904, respectively. Up to 1927, about 25 factories were established
 in Addis Ababa, Dire Dawa, Asmara and Massawa. These included cement
 factory, wood and clay, tanneries, soap and edible oil plants, ammunition
 factories, brewery, tobacco processing plants and grain mill. Most of them were
 establishedbyprivateentrepreneurs.
 6.5.3. Agriculture and land tenure
-ï‚§ The quest for land and surplus production were one factor of territorial expanion
+•  The quest for land and surplus production were one factor of territorial expanion
 byMenelik inthelate 19thcentury.
-ï‚§ The state institutionalized different forms of surplus expropriation and
+•  The state institutionalized different forms of surplus expropriation and
 mechanisms to ensure political control in the regions "peacefully" submited and
 the regios that fiecely resited. The former relatively enjoyed self-administration
 but subject to pay fixedtax (qurx-gibbir. The latter was placed under the naftegna
@@ -1423,19 +1423,19 @@ the naftegna-gabbar system were the creation of two classes of societies: the
 minorty landholder and the majrty landless. The landholders were largely
 governmnet agents while the land less were the locl society who were reduced to
 gabbar.
-ï‚§ The most influential factor of change in agriculture and land tenure was land
+•  The most influential factor of change in agriculture and land tenure was land
 measurement (the qaladsystem of the1909/10.
 6.5.4. Urbanization
-ï‚§ The period from the early 19th century to 194l marked the evolution of towns
+•  The period from the early 19th century to 194l marked the evolution of towns
 owing to different socio-economic as well as the demographic and ecological
 factors.
-ï‚§ Several towns located on the long-distance trade in western Ethiopia grew into
+•  Several towns located on the long-distance trade in western Ethiopia grew into
 both towns and political centers. In addition, the opening of railway road from
 Djibouti to Addis Ababa since 1917 was followed by the evolution several fast
 growing towns. Towns including Dire Dawa, Adama, Bishoftu, Metahara and
 others. Many centers that once served as "royal camps" evolved into towns. One
 of thetowns that grewfrom suchpeocess was Addis Ababa.
-ï‚§ Towns including Goba, Asalla, Arjo, and others were garrison that grew into
+•  Towns including Goba, Asalla, Arjo, and others were garrison that grew into
 towns. During the Italian rule (1936-41), several of the above towns grew in
 volume and other new towns evolved as the result of the socio-economic and
 politicalactivities of theperiod.
@@ -1474,8 +1474,8 @@ Treaty. It was drafted by Antonelli and signed on 2 May 1889, at Wuchale, Wollo
 between Emperor Menelik-II of Ethiopia and count Pietro Antonelli on behalf of
 Crispi of Italy. It has twenty articles and written both in Amharic and Italian
 languages. However, Article III and XVII have had major difference on the two
-languages versions. The Italian version of Article III, indicates the â€œeffective
-occupationâ€ of Italy to legitimize their further expansion towards the Marab River.
+languages versions. The Italian version of Article III, indicates the "effective
+occupation" of Italy to legitimize their further expansion towards the Marab River.
 While the Amharic version states that Ethiopia could use Italy to conduct its
 foreign affairs as optional Article XVII of the Italian version indicates Menelikâ€Ÿs
 foreign contacts must be through the agency of Italy. This happened because
@@ -1495,7 +1495,7 @@ boundaryagreements shapedmodernEthiopianboundary.
 
 | The | Battle of | Dabarki | (1848) |     |     |     |     |     |     |
 | --- | --------- | ------- | ------ | --- | --- | --- | --- | --- | --- |
-ï‚§ Debarki was fought between It was fought between Kassa Hailu (later Emperor
+•  Debarki was fought between It was fought between Kassa Hailu (later Emperor
 Tewodros II) of Quara and Egyptian forces in 1848. Although the forces led by
 Kassa Hailu lost the battle, the military imbalance particularly the modern artillery
 and disciplined Egyptian troops gave a lesson to Kassa to modernize his troops,
@@ -1524,7 +1524,7 @@ Massawa. Emperor Yohannes and Shaleqa later Ras Alula mobilized 20,000
 forces and fought the Egyptian at the battle of Gundet 16 November 1875.
 Egyptians were severely defeated. Egyptian again reorganized their forces and
 sent to avenge the defeat at Gundet. However, Ethiopian forces again defeated
-|     | them at   | thebattle |     | of Gura(7 | â€“ 9 March1876). |     |     |     |     |
+|     | them at   | thebattle |     | of Gura(7 | – 9 March1876). |     |     |     |     |
 | --- | --------- | --------- | --- | --------- | --------------- | --- | --- | --- | --- |
 | The | Battle of | Mattama   |     |           |                 |     |     |     |     |
 ïƒ¼ As indicated above Hewett Treaty caused clashes between Mahdist and
@@ -1533,7 +1533,7 @@ Ethiopian forces that lasted from 1885 to 1889. The first clash was at Kufit
 | --- | ---------------------------------------- | --- | --- | --- | --- | --- | ----- | --- | --- |
 ïƒ¼ In 1887, Mahdists led by Abu Anja, defeated NegusTekle Haymanotâ€Ÿs troops at
 Sar Wuha in Dembya. By the time, emperor Yohannis made national call:
-|     | Â«á‹¨áŠ¢á‰µá‹®áŒµá‹« |     | áˆ†á‹­!! |       |        | áˆ€áŒˆáˆ­: | 1áŠ›       | 2áŠ›       | 3áŠ›   |
+|     | «á‹¨áŠ¢á‰µá‹®áŒµá‹« |     | áˆ†á‹­!! |       |        | áˆ€áŒˆáˆ­: | 1áŠ›       | 2áŠ›       | 3áŠ›   |
 | --- | ------- | --- | ---- | ----- | ------ | ---- | -------- | -------- | ---- |
 |     |         | áˆ…á‹á‰¥ |      | áŠ¢á‰µá‹®áŒµá‹« | á‹¨á‰°á‰£áˆ‡á‰½á‹‰ |      | áŠ¥áŠ“á‰µáˆ… áŠ“á‰µá¤ | áŠ­á‰¥áˆ­áˆ… áŠ“á‰µá¤ | áˆšáˆµá‰µáˆ… |
 áŠ“á‰µá¤ 4áŠ› áˆáŒ…áˆ… áŠ“á‰µá¤ 5áŠ› áˆ˜á‰ƒá‰¥áˆ­áˆ… áŠ“á‰µá¢ áŠ¥áŠ•áŒá‹²áˆ… á‹¨áŠ¥áŠ“á‰µáŠ• áá‰…áˆ­á£ á‹¨á‹˜á‹‰á‹µáŠ• áŠ­á‰¥áˆ­á£ á‹¨áˆšáˆµá‰µáŠ•
@@ -1550,7 +1550,7 @@ inevitable war with Italians. This force led byFitawrariGebayehu Gurmu defeated
 
 the Italians at Ambalage and forced them to retreat to Mekelle. In January 1896,
 by the leadership ofRasMekonnen Ethiopian forces defeated Italians at Mekelle.
-The strategy was commonly called the â€œsiege of Mekelleâ€ and was considered to
+The strategy was commonly called the "siege of Mekelle" and was considered to
 be designed by Empress Tayitu. At Adwa,again, Ethiopian forces led by Emperor
 Menilek, Empress Taiytu and war generals like Ras Mikael, RasMakonnen, Ras
 Alula, RasMangasha, FitawrariGebeyehu, andNegusTakIa- Haymanot defeated
@@ -1569,49 +1569,49 @@ legations at Addis Ababa.
 ïƒ¼ The success of Ethiopians at Adwa had an enduring legacy in the relations
 between freedom fighters and colonizing powers. The victory of black people on
 white colonizes initiated entire African who was fighting against colonialism.
-Well-known Pan-Africans like Marcus Garveyinspiredhis followers in his â€œBack to
-Africaâ€ movement with a victory of Ethiopians. He used the phrase like â€œEthiopia
-thou land of our fathersâ€ and Ethiopianism becomes the symbol of anti-colonial
+Well-known Pan-Africans like Marcus Garveyinspiredhis followers in his "Back to
+Africa" movement with a victory of Ethiopians. He used the phrase like "Ethiopia
+thou land of our fathers" and Ethiopianism becomes the symbol of anti-colonial
 movements. Japan also used Ethiopiaâ€Ÿs experience when it fought against
 Russiain1904.
 6. 6. 3. Italian Occupation (1936-41) and the Patriotic Resistance Struggle
 6.6.3.1. Background of the War
-ï‚§ Italy eventually got its ideological strength in 1922, when Fascists led by Benito
+•  Italy eventually got its ideological strength in 1922, when Fascists led by Benito
 Mussolini held power in Italy. The Fascists who were committed to the principle
 of restoring the power and glory of the ancient Roman Empire decided to remove
 Italyâ€Ÿs humiliationat Adwa).
-ï‚§ Mussolini was only searching for small pretext, and then fortunately he found
+•  Mussolini was only searching for small pretext, and then fortunately he found
 Walwal incident. The Italians refused to give back Walwal and even attacked the
 Ethiopiansoldiers who werestationednearby.
-ï‚§ Italy demanded unreasonable apology and reparation from Ethiopia. Then
+•  Italy demanded unreasonable apology and reparation from Ethiopia. Then
 Ethiopia which refused to accept Italyâ€Ÿs demand took the matter into the League
 of Nations andaperiodof useless process toresolvetheconflict followed.
 6.6.3.2. The 1935 Invasion and After
-ï‚§ The Italians executed their aggression via two major fronts:The Northern and the
+•  The Italians executed their aggression via two major fronts:The Northern and the
 eastern Front. The war was started in the Northern Front when the Italians
 crossedtheMerebRiver on3Oct.
-ï‚§ In January 1936, Ethiopian counter offensive marched north through three fronts.
+•  In January 1936, Ethiopian counter offensive marched north through three fronts.
 RasEmiru H/Selasie led the western front,RasKassa Hailu (also commander of
 the entirefront) andRasSeyum Mengeshaledthe Central front andRasMulugeta
 Yigezu(War Minister) ledtheeasternfront.
 
-ï‚§ The Italians scored decisive victory at Amba Aradom in which the commander of
+•  The Italians scored decisive victory at Amba Aradom in which the commander of
 theEthiopianarmy,RasMulugetaYigezu, lost his life.
-ï‚§ The series of battles between the Ethiopian and Italian forces in the Northern
+•  The series of battles between the Ethiopian and Italian forces in the Northern
 Front culminated in Maychew on 31 March 1936. Although the Ethiopian army
 (especially members of theKeburZebegna) under the command of the Emperor
 put strong resistance against the Italians, they were not able to consummate the
 battlewithvictory.
-ï‚§ . On 2 May 1936, the Emperor fled the country and on 5 May 1936 the Italians
+•  . On 2 May 1936, the Emperor fled the country and on 5 May 1936 the Italians
 enteredAddis Ababa.
-ï‚§ The Ethiopian army in the Southern Front was better equipped and led by able
+•  The Ethiopian army in the Southern Front was better equipped and led by able
 leaders relative to the North. RasDesta Damitew (in the south) and Dejazmach
 Nesibu Zamanuel (in the southeast) were leaders of the Ethiopian troops in this
 Front.
-ï‚§ Mussolini announced to the people of Italy and the world about their control of
-Ethiopia using the phrase â€œEthiopia is Italian!â€ Then they immediately merge
+•  Mussolini announced to the people of Italy and the world about their control of
+Ethiopia using the phrase "Ethiopia is Italian!" Then they immediately merge
 Ethiopiawiththeir colonies of SomalilandandEritrea.
-ï‚§ They named the combination of their colonies as Italian East Africa (IEA). The
+•  They named the combination of their colonies as Italian East Africa (IEA). The
 newly formed Italian East Africa had six administrative regional divisions that
 dismissed former international boundaries. These were: Eritrea (including Tigray)
 (cid:0)ï€  its capital was Asmara; Amhara (including Begemidr, Gojjam, Wallo& Northern
@@ -1619,34 +1619,34 @@ Shewa) (cid:0)ï€  its capital was Gondar; Oromo & Sidama (including Southern
 Southwestern provinces)(cid:0)ï€  its capital was Jimma.; Harar(cid:0)its capital was Harar;
 Somalia (including Ogaden) (cid:0)its capital was Mogadishu; Addis Ababa (later
 changedtoShewa) (cid:0)it was capitalof the entirecolony.
-ï‚§ During the 5 years Italyâ€Ÿs control of this colony the following Italians were
+•  During the 5 years Italyâ€Ÿs control of this colony the following Italians were
 appointed as governors consecutively: Marshal Badoglio (till the end of May
 1936), Marshal Graziani (till Feb. 1937), and finally Amadio Umberto dâ€ŸAosta (the
 Dukeof Aosta).
-ï‚§ Italian administration of IEA was characterized by a top-heavy bureaucracy and
+•  Italian administration of IEA was characterized by a top-heavy bureaucracy and
 Corruption.
-ï‚§ They weakened & destroyed non-Italian foreign firms & replaced them with
+•  They weakened & destroyed non-Italian foreign firms & replaced them with
 governmentalenterprises that controlledtheindustry, trade&agriculture.
-ï‚§ The Italians were relatively successful in the sectors of trade and industry as
+•  The Italians were relatively successful in the sectors of trade and industry as
 comparedto theagriculturalsector.
 6.6.3.3. The Patriotic Resistance and Liberation
-ï‚§ The struggle continued but it suffered from serious internal weakness. The
+•  The struggle continued but it suffered from serious internal weakness. The
 resistance was handicapped by the Ethiopian collaborators called the Banda.
 Another weakness of the resistance movement was that it was divided and that
 there was no one national organization to coordinate the activities of the many
 bands dispersed in many parts of the country. Relations between guerrilla bands
 werecharacterizedbyparochialism andjealousy.
-ï‚§ The patriots carried on a stubborn resistance against Italian fascism, until
+•  The patriots carried on a stubborn resistance against Italian fascism, until
 suddenly they got external support from Britain in 1941. Ethiopian struggle for
 independence merged with World War II, when Italy declared war on France and
 Britainon10 June1940.
-ï‚§ In January 1941, Colonel Sanford and Major Wingate accompanied the Emperor
+•  In January 1941, Colonel Sanford and Major Wingate accompanied the Emperor
 
 from Sudan into Gojjam at the head of British and Ethiopian troops called the
 Gedeon force. General Cunningham led the attack from Kenya. Emperor Haile
 SellassieenteredAddis Ababaon5May1941.
 Unit Seven
-Internal Developments and External Relations, 1941â€“1994 (5 hours)
+Internal Developments and External Relations, 1941–1994 (5 hours)
 7.1. Post-1941 Imperial Period
 7.1.1. Political Scene: Restoration and Consolidation of Imperial Power and External
 Relations
@@ -1670,7 +1670,7 @@ racially, culturally, and economically inseparable from Ethiopia and
 Ogaden. Both Eritrea and Ogaden were part of the Ethiopian empire before
 they fell into Italian hands in 1890 and 1936 respectively. Britain insisted
 that Ogaden should be merged with the former Italian Somaliland and
-British Somaliland to form what they called â€œGreater Somaliaâ€. Similarly,
+British Somaliland to form what they called "Greater Somalia". Similarly,
 the western and northern lowlands of Eritrea were intended by the British
 to be part of Sudan. Further, they wanted to integrate the Tigrigna-
 speaking highlands of Eritrea with Tigray to form a separate state. As a
@@ -1714,22 +1714,22 @@ signedin1953.
 Americans took active part. The Imperial High Way Authority (IHA) was set up
 basedonthemodelof theUSBureauof Roads.
 7.1.2. Socio-economic Developments
-ï‚§ Peasants in the northern and central highland parts of Ethiopia held land in the
+•  Peasants in the northern and central highland parts of Ethiopia held land in the
 form ofrist.Ristwas a communal use of a land which a peasant (gebbar) could
 claim by virtue of birth from a real or imaginary founding father i.e. the first
 occupant. A hereditary claim to a rist land being inalienable, it was however
 subject to continuous division to accommodate claims of descendants from
 timeto time.
-ï‚§ In 1960s and 1970s commercial agriculture was expanding especially in
+•  In 1960s and 1970s commercial agriculture was expanding especially in
 southern Shawa, the Setit-Humera region on the Sudan border, and in the Awash
 valley.Themechanizationof farming intheseareas ledto evictionof tenants.
-ï‚§ The government attempted to enhance the productivity of small farmers through
+•  The government attempted to enhance the productivity of small farmers through
 launching comprehensive agricultural package programs. The most notable in
 this regard were the Chilalo Agricultural Development Unit (CADU) and Wolamo
 [sic] Agricultural Development Unit (WADU). CADU was launched in 1967 through
 the initiative of the Swedish International Development Authority (SIDA) while the
 WorldBank supportedWADU.
-ï‚§ Yet, much of Ethiopia remained traditional with a low living standard and Ethiopia
+•  Yet, much of Ethiopia remained traditional with a low living standard and Ethiopia
 was a least developed country in global terms. While the manufacturing sector
 contributed less than 5% of the national income, industrialization was spatially
 limited in the capital and its vicinity in addition only to Asmara and Dire Dawa and
@@ -1765,27 +1765,27 @@ for African unity and this increased his international stature which finally res
 in the birth of the Organization of African Unity at the summit of heads of African
 states heldinAddis Ababain1963.
 7.1.3. Opposition: Conspiracies, Revolts and the Downfall of the Monarchical Regime
-ï‚§ Various sectors of the society opposed the imperial rule before the 1974
+•  Various sectors of the society opposed the imperial rule before the 1974
 revolutionbroke out.
-ï‚§ One notable patriot who opposed the restoration of the emperor to the throne
+•  One notable patriot who opposed the restoration of the emperor to the throne
 after his exile was DejazmachBelay Zeleqe. The emperor made Belay governor
 of a southern province with the rank of Rasbecause he wanted to remove him
 from his base in Bichena in eastern Gojjam. However, Belay was finally hanged in
 public.
-ï‚§ BitwededNegash Bezabih plotted to assassinate the emperor and proclaim a
+•  BitwededNegash Bezabih plotted to assassinate the emperor and proclaim a
 republic in 1951. In the process, some military officers like Beqele Anasimos
 were attracted to the plot, but DejachGeresu Duki, another patriot, whom the
 plotters had unsuccessfully approached to recruit to their cause, exposed them.
 Finally, the plotters were tried and sentenced to various terms of imprisonment
 after beingarrestedduringoneof theirclandestinemeetings.
-ï‚§ The most fierce and sustained opposition to the emperor came fromBlattaTakle
+•  The most fierce and sustained opposition to the emperor came fromBlattaTakle
 Wolde-Hawaryat couched a plot in constitutionalist terms using Yohannis Iyasu
 as front andwiththe support of some contingents of thearmy.
-ï‚§ The most serious challenge to the emperorâ€Ÿs authority came in 1960 in
+•  The most serious challenge to the emperorâ€Ÿs authority came in 1960 in
 
 the form of a coup attempt. The abortive Coup d'etat of 1960 was led by
 theNewaybrothers, BrigadierGeneralMengistuandGirmame.
-ï‚§ The two brothers started detaining ministers and other members of the
+•  The two brothers started detaining ministers and other members of the
 nobility when the emperor traveled to Brazil. They also took over the radio
 station and spoke about the backwardness of the country than other
 newly independent African states. The crown prince Asfawosen was said
@@ -1797,16 +1797,16 @@ Selassie. Major General Mulugeta Buli was chosen as chief of staff of the
 armed forces while Brigadier-General Tsige Debu was to lead the Imperial
 Bodyguard and the Police Force, and Colonel Workneh Gebeyehu was
 securitychief.
-ï‚§ However, the army and the air force refused to side with the rebels and
+•  However, the army and the air force refused to side with the rebels and
 with the support of the Americans and the blessing of the patriarch, the
 loyalists ledbyGeneralMeridMengesha,RasAsrateKassaetcattacked.
-ï‚§ Finally, Girmame died fighting in the outskirts of the capital and Mengistu
+•  Finally, Girmame died fighting in the outskirts of the capital and Mengistu
 was capturedandhangedafter trial.
 A. Peasant Rebellions
-ï‚§ The post-liberation period also witnessed growing opposition among
+•  The post-liberation period also witnessed growing opposition among
 peasants indifferent parts of the countryagainst HaileSelassieâ€Ÿs regime.
 The Woyane Rebellion
-ï‚§ The first peasant resistance against imperial rule took place in Tigray, known
+•  The first peasant resistance against imperial rule took place in Tigray, known
 in history as the Woyane rebellion. Peasants felt victimized by corruption and
 greed of the territorial army unit stationed in the region and general
 administrative inefficiency led to banditry of peasants who possessed
@@ -1816,17 +1816,17 @@ cattle raids on Afar territory sparked the general rebellion. In October 1943,
 the imperial army under the command of Abebe Aregay with the support of
 theBritishRoyalAir Forcecrushedtherebellion.
 The Yejju Rebellion
-ï‚· In 1970 peasants revolted against the introduction of mechanized agriculture
+•  In 1970 peasants revolted against the introduction of mechanized agriculture
 that encroached on pastureland and killed QegnazmachAbate Haylu who was a
 member of the local nobility and direct beneficiary of the new development.
 Finallytherisingwas suppressedbythelocalmilitia.
 The Gojjam Peasant Rebellion
-ï‚· In 1968, another violent peasant uprising set off in Gojjam caused by the
+•  In 1968, another violent peasant uprising set off in Gojjam caused by the
 governmentâ€Ÿs attempt to implement new tax on agricultural produce which the
 parliament adopted in November 1967. Finally the rebellion was subdued by the
 combinedforces of thearmy, policeandnechlebashbytheendof 1968.
 The Gedeo Peasant Uprising
-ï‚· The major source of peasant discontent in Gedeo was land alienation. Then
+•  The major source of peasant discontent in Gedeo was land alienation. Then
 peasants refused to pay erbo(1/4 of agricultural produce payable to landlords),
 
 armed themselves with traditional weapons like spears, swords and arrows and
@@ -1835,7 +1835,7 @@ their lives in the fight while much of their property was destroyed. Finally, Af
 Nigus Eshete Geda, fined the elders locally called the hayicha accused of
 supportingtherebellion.
 The Bale Peasant Rebellion
-ï‚· The Bale peasant uprising, which lasted from 1963 to 1970, presented the most
+•  The Bale peasant uprising, which lasted from 1963 to 1970, presented the most
 serious challenge to the Ethiopian government. The causes of the uprising were
 multifaceted. The indigenous peasants largely became tenants on their own land
 after the introduction of the qalad that initiated land measurement in 1951.
@@ -1843,14 +1843,14 @@ Peasants also suffered from high taxation, religious and ethnic antagonism
 which reached to unprecedented level after the appointment of Warqu
 Enquselassie as governor of the territory in 1963. Further, the Somali government
 extended material and moral support to the rebels as part of its strategy of
-reestablishingaâ€œGreater Somaliaâ€.
-ï‚· The revolt broke out in El Kerre led by people like Kahin Abdi. It quickly spread to
+reestablishinga"Greater Somalia".
+•  The revolt broke out in El Kerre led by people like Kahin Abdi. It quickly spread to
 Wabe, Dallo and Ganale under the leadership of Waqo Gutu and othersThe
 rebellion ended in 1970s after some of its popular leaders including Waqo Gutu
 surrendered to government forces due to the mediation role played by General
 JagamaKello.
 B. Movements of Nations and Nationalities
-ï‚· On January 24 1963, the Mecha-Tulama Welfare Association (MTWA) was
+•  On January 24 1963, the Mecha-Tulama Welfare Association (MTWA) was
 formed with the objective of improving the welfare of the Oromo through the
 expansion of educational, communication and health facilities in Oromo land.
 Founding members of the association included Colonels Alemu Qitessa and
@@ -1858,10 +1858,10 @@ Colonel Qedida Guremessa, Lieutenant Mamo Mezemir, Beqele Nedhi, and Haile
 Mariam Gemeda. In the next two years, the association attracted large number of
 Oromo elites, including such high-ranking military officers as Brigadier General
 TaddesseBirru.
-ï‚· Meanwhile, leaders of the association plotted to assassinate the emperor on the
+•  Meanwhile, leaders of the association plotted to assassinate the emperor on the
 anniversary of his coronation in November 1966, but the plot foiled by the
 securityforces.
-ï‚· But the biggest military challenge to the imperial regime came from Eritrea. In
+•  But the biggest military challenge to the imperial regime came from Eritrea. In
 1958, a number of Eritrean exiles had founded the Eritrean Liberation Movement
 (ELM) in Cairo. In 1961, Hamid Idris Awate established Eritrean Liberation Front
 (ELF) or Jabahain Arabic.By 1966 the ELFchallengedimperial forces throughout
@@ -1876,13 +1876,13 @@ B. The Ethiopian Student Movement (ESM)
 ïƒ¼ Ethiopian student movement was building up in the center as a strong opposition
 
 against the regime. The parliamentâ€Ÿs rejection of tenancy reform bill in 1964
-triggeredstudent protest inthefollowing year demanding â€œLandto the Tillerâ€.
+triggeredstudent protest inthefollowing year demanding "Landto the Tiller".
 ïƒ¼ Factors that contributed to sharpening the studentsâ€Ÿ ideology include the 1960
 coup, studentsâ€Ÿ increased awareness of the countryâ€Ÿs socio-economic and
 political conditions vis a vis other African countries which they learned from
 scholarship students from different parts of Africa, and the Ethiopian University
 Service(EUS).In1964the emergenceof aradicalgroupof students withMarxist-
-Leninist leanings known as â€œthe Crocodilesâ€ marked the increased militancy of
+Leninist leanings known as "the Crocodiles" marked the increased militancy of
 thestudents.
 7.2. The Derg Regime (1974-1991)
 ïƒ¼ The mass uprising that finally put an end to the old regime came in February
@@ -1903,14 +1903,14 @@ particularlybuses andluxuryprivateautomobiles wereattacked.
 ïƒ¼ February 28 the cabinet of Prime Minister Aklilu Habte-Wold resigned. He was
 replacedbyEndalkachewMekonnin.
 ïƒ¼ TheDergwas officially formed on June 28 1974 when it held its first meeting at
-the headquarters of the Fourth Division. â€œDergâ€ a Geâ€Ÿez word for â€œCommitteeâ€
+the headquarters of the Fourth Division. "Derg" a Geâ€Ÿez word for "Committee"
 was the shorter name given to the Coordinating Committee of representatives
 from various militaryunits:the ArmedForces, the PoliceandtheTerritorialArmy.
 ïƒ¼ August 1, Endalkachew was imprisoned and replaced by Lej Mikael Emiru as
 prime minister. Meanwhile, the Dergcontinued arresting other members of the
 regime whom it considered obstacles to the revolution. The Dergalso tried to
-define its ideology and declared the motto, â€œYaleminim Damâ€ (â€œWithout any
-bloodshedâ€) â€œEthiopiaTiqdamâ€ (â€œEthiopiaFirstâ€).
+define its ideology and declared the motto, "Yaleminim Dam" ("Without any
+bloodshed") "EthiopiaTiqdam" ("EthiopiaFirst").
 ïƒ¼ Finally, on September 12, Emperor Haile-Selassie I was deposed and detained at
 the FourthDivisionheadquarters.
 ïƒ¼ The Dergthen proclaimed itself the Provisional Military Administrative Council

@@ -18,143 +18,143 @@ UNITS
 | Extensive | and      | Intensive |            | Properties |
 | Elements, | Compound |           | and        | Mixtures   |
 
-â€¢ Anything that has mass and takes
+•  Anything that has mass and takes
 What is Matter?
 up space
-â€¢ Solids:
-â€¢ Definite shape and volume
-â€¢ Close packing of molecules
-â€¢ Strong molecular forces
-â€¢ Liquids:
+•  Solids:
+•  Definite shape and volume
+•  Close packing of molecules
+•  Strong molecular forces
+•  Liquids:
 What are the 4 Physical
-â€¢ Definite volume but not
+•  Definite volume but not
 definite shape (assumes
 States of Matter?
 shape of container)
-â€¢ Slightly weaker molecular
+•  Slightly weaker molecular
 forces than solids (this is
 what allows liquids to flow)
-â€¢ Gas:
-â€¢ No definite shape or volume
-â€¢ Very weak molecular forces
+•  Gas:
+•  No definite shape or volume
+•  Very weak molecular forces
 (which allows gasses to be
 greatly compressed)
-â€¢ Plasma:
-â€¢ No definite shape or volume3
+•  Plasma:
+•  No definite shape or volume3
 
-â€¢ Characteristics and behaviors we
+•  Characteristics and behaviors we
 What are use to describe matter
 Properties?
-â€¢ There are 2 types of properties:
-â€¢ Physical
-â€¢ Chemical
-â€¢ Can be observed or measured
+•  There are 2 types of properties:
+•  Physical
+•  Chemical
+•  Can be observed or measured
 without changing the identity
 of the matter
-â€¢ Properties you notice when
+•  Properties you notice when
 using one of your five senses or
 What are Physical
 measurement tools
-â€¢ Feel â€“ mass, volume,
+•  Feel – mass, volume,
 Properties:
 texture, malleability
-â€¢ Sight â€“ color, luster, mass,
+•  Sight – color, luster, mass,
 volume, density
-â€¢ Hear
-â€¢ Smell
+•  Hear
+•  Smell
 4
-â€¢ Taste
+•  Taste
 
-â€¢
+• 
 Density: The amount
 of matter in a given
 volume.
-â€¢
+• 
 D=m/v(mass/volum
 e)
-â€¢
+• 
 Ice cubes float in
 water because they
 are less dense than
 liquid water
 
-â€¢
+• 
 Ductility :The ability to be pulled into a thin
 strand.
-â€¢
+• 
 Wire, Paper clip, Copper wire.
 
-â€¢
+• 
 Malleability: The ability to be pressed or
 pounded into a thin sheet
-â€¢
+• 
 Tin foil
 
-â€¢
+• 
 | Boiling     |          | Point:  | The   |
 | ----------- | -------- | ------- | ----- |
 | temperature |          | at      | which |
 | a substance |          | changes |       |
 | from        | a liquid | to a    | gas.  |
-â€¢
+• 
 | Water | to  | steam. |     |
 | ----- | --- | ------ | --- |
 
-â€¢
+• 
 | Melting     |           | point: | The     |
 | ----------- | --------- | ------ | ------- |
 | temperature |           | at     | which   |
 | a           | substance |        | changes |
 | from        | a solid   | to a   | liquid  |
-â€¢
+• 
 | Ice    | cube | melts | to a |
 | ------ | ---- | ----- | ---- |
 | puddle | of   | water |      |
 
-â€¢
+• 
 Electrical
 | conductivity: |         |             | How       |     |
 | ------------- | ------- | ----------- | --------- | --- |
 | well          |         | a           | substance |     |
 | allows        |         | electricity |           | to  |
 | flow          | through |             | it        |     |
-â€¢
+• 
 | Water       |     |        | conducts |     |
 | ----------- | --- | ------ | -------- | --- |
 | electricity |     |        | so never |     |
 | swim        |     | during |          | a   |
 | lightning   |     | storm  |          |     |
 
-â€¢
+• 
 Solubility: The ability to dissolve in another
 substance.
-â€¢
+• 
 Adding sugar to coffee.
 
-â€¢ A substances ability to combine
+•  A substances ability to combine
 with or change into a new
 substance
-â€¢ Common chemical properties:
+•  Common chemical properties:
 What are Chemical
-Properties? â€¢ Reactivity â€“ how likely a
+Properties? •  Reactivity – how likely a
 substance it to react with
 another substance to create
 something new
-â€¢ Reactive to oxygen
-â€¢ Reactive to air
-â€¢ Reactive to water
-â€¢ Flamability â€“ how likely a
+•  Reactive to oxygen
+•  Reactive to air
+•  Reactive to water
+•  Flamability – how likely a
 substance is to catch fire
-â€™
+'
 If it CHanges, it s CHemical
 
-â€¢
+• 
 | Changes  |     |         | to  | a   | substance |     |
 | -------- | --- | ------- | --- | --- | --------- | --- |
 | that     |     | results |     |     | in        | an  |
 | entirely |     |         | new |     | substance |     |
 forming.
-â€¢
+• 
 What is a Chemical
 | Chemical |     |      | changes |      |         | are |
 | -------- | --- | ---- | ------- | ---- | ------- | --- |
@@ -162,12 +162,12 @@ What is a Chemical
 Change?
 | than |     | physical |     | changes. |     |     |
 | ---- | --- | -------- | --- | -------- | --- | --- |
-â€¢
+• 
 Examples:
-â€¢
+• 
 |     | Color | change |     |     |     |     |
 | --- | ----- | ------ | --- | --- | --- | --- |
-â€¢
+• 
 |     | Light,   |     | heat      |     | or energy |     |
 | --- | -------- | --- | --------- | --- | --------- | --- |
 |     | released |     | (burning) |     |           |     |
@@ -175,7 +175,7 @@ Examples:
 
 Chemical Changes
 
-â€¢
+• 
 |       | The         | only       |           | sure  |           | way    |         | to  | know   | there      | has |
 | ----- | ----------- | ---------- | --------- | ----- | --------- | ------ | ------- | --- | ------ | ---------- | --- |
 |       | been        | a          | chemical  |       |           | change |         |     | is the | observance |     |
@@ -192,19 +192,19 @@ a. Exothermic - When
 energy is released do
 during the chemical
 change
-â€¢
+• 
 ex: wood burning
 b. Endothermic - Energy is
 absorbed causing a decrease
 in temperature of the
 reactant material.
-â€¢
+• 
 ex: cold pack in first aid
 17
 kit
 
 3. Change in Color:
-â€¢
+• 
 |        | Ex: |       | fruit    |     | changing |         |       |     |
 | ------ | --- | ----- | -------- | --- | -------- | ------- | ----- | --- |
 | color  |     | when  |          |     | it       | ripens, |       |     |
@@ -213,11 +213,11 @@ kit
 | your   |     | hair. |          |     |          |         |       |     |
 4. Formation of
 Bubbles:
-â€¢
+• 
 |     | This     |     | can | indicate |        |     | the |     |
 | --- | -------- | --- | --- | -------- | ------ | --- | --- | --- |
 |     | presence |     |     | of       | a gas. |     |     |     |
-â€¢
+• 
 |     | Bubbles |     |         |     | produced |       |     |     |
 | --- | ------- | --- | ------- | --- | -------- | ----- | --- | --- |
 |     | when    |     | boiling |     |          | water |     | 18  |
@@ -226,7 +226,7 @@ Bubbles:
 | 5. Formation | of  | a   |
 | ------------ | --- | --- |
 Precipitate:
-â€¢
+• 
 | When     | two |     |
 | -------- | --- | --- |
 | liquids  | are |     |
@@ -235,7 +235,7 @@ solid is produced
 
 Generally, Physical & Chemical Properties
 Properties can be broken down into two types - physical and chemical properties.
-Whatâ€™s
+What's
 the difference?
 Physical: properties of a pure Chemical: properties of a pure
 substance, we can see without substance that describe its ability to
@@ -257,16 +257,16 @@ Reactivity to air
 Melting (00C) & boiling point (1000C)
 6.
 7. Density
-| 8. Solubility in water â€“ | the ability to dissolve in water |     |     |     |     |     |     |     |
+| 8. Solubility in water – | the ability to dissolve in water |     |     |     |     |     |     |     |
 | ------------------------ | -------------------------------- | --- | --- | --- | --- | --- | --- | --- |
 ***Notice that Chemical Properties are
 Odor
 9.
 not as easy to notice as Physical
-| 10. Luster â€“ shine |     |     |     |     |     |     |     |     |
+| 10. Luster – shine |     |     |     |     |     |     |     |     |
 | ------------------ | --- | --- | --- | --- | --- | --- | --- | --- |
 Properties.
-| 11. Malleability â€“ | ability to be hammered into thin  |     |     |     |     |     |     |     |
+| 11. Malleability – | ability to be hammered into thin  |     |     |     |     |     |     |     |
 | ------------------ | --------------------------------- | --- | --- | --- | --- | --- | --- | --- |
 sheets
 
@@ -284,28 +284,28 @@ present.
 | their     | structure |             | (arrangement). |     |            |           |        |
 | Intensive |           | ~ Internal  |                |     |            |           |        |
 
-â€¢
+• 
 | Extensive   | properties: |            | Depend       |     | only | on the |
 | ----------- | ----------- | ---------- | ------------ | --- | ---- | ------ |
 | number      | of          | particles, |              | not | on   | their  |
 | composition | or          | internal   | arrangement. |     |      |        |
-â€¢
+• 
 Extensive ~ External
 
 Classifying Matter:
 Pure Substances and Mixtures
 
 Classifying Matter by Composition
-â€¢
+• 
 Another way to classify matter is to
 examine its composition.
-â€¢
+• 
 Composition includes:
-â€“
+–
 Types of particles
-â€“
+–
 Arrangement of the particles
-â€“
+–
 Attractions and attachments between the
 particles
 25
@@ -313,13 +313,13 @@ particles
 Classifying Matter
 
 Pure Substances
-â€¢
+• 
 | A sample | of  | matter   | that        | has | definite |
 | -------- | --- | -------- | ----------- | --- | -------- |
 | chemical | and | physical | properties. |     |          |
 
 Elements
-â€¢
+• 
 | Pure | substance | that      | cannot |     | be separated |     |
 | ---- | --------- | --------- | ------ | --- | ------------ | --- |
 | into | simpler   | substance |        | by  | physical     | or  |
@@ -388,8 +388,8 @@ HOMOGENEOUS
 | No Tyndall |       | effect    |        |          |
 | ---------- | ----- | --------- | ------ | -------- |
 | Very       | small | particles |        |          |
-| Particles  |       | donâ€™t     | settle |          |
-| Well-mixed |       | (uniform) |        | â€“ single |
+| Particles  |       | don't     | settle |          |
+| Well-mixed |       | (uniform) |        | – single |
 phase
 Transparent
 | Cannot |          | be separated |             | by filter |
@@ -409,7 +409,7 @@ Does NOT have uniform properties
 | Examples: |     |           | muddy |     | water, | Sand     |     | water, | oil    | and |
 | --------- | --- | --------- | ----- | --- | ------ | -------- | --- | ------ | ------ | --- |
 | water,    |     | sulfur    |       | and | iron,  | granite, |     | blood, | fresh- |     |
-| squeezed  |     | lemonadeâ€¦ |       |     |        |          |     |        |        |     |
+| squeezed  |     | lemonade... |       |     |        |          |     |        |        |     |
 
 c. Colloids
 | A colloid |           | is a      | mixture    | in  | which   |     | the particles |       |     |
@@ -424,10 +424,10 @@ HOMOGENEOUS
 |     | Tyndall      | effect |           |     |     |     |     |     |     |
 | --- | ------------ | ------ | --------- | --- | --- | --- | --- | --- | --- |
 |     | Medium-sized |        | particles |     |     |     |     |     |     |
-|     | Particles    | donâ€™t  | settle    |     |     |     |     |     |     |
+|     | Particles    | don't  | settle    |     |     |     |     |     |     |
 Non transparent, non uniform, cloudy (milky) but stable system
 .
-| Examples: |     | milk, | clouds, | smokeâ€¦ |     |     |     |     |     |
+| Examples: |     | milk, | clouds, | smoke... |     |     |     |     |     |
 | --------- | --- | ----- | ------- | ------ | --- | --- | --- | --- | --- |
 
 | 1. Mechanical |       | Separation: |     | (often |          | by  |
@@ -536,7 +536,7 @@ Measurement
 A quantitative observation
 Consists of 2 parts
 Number
-Unit â€“ tells the scale
+Unit – tells the scale
 being used
 
 A. Scientific Notation
@@ -560,7 +560,7 @@ Representing Large Numbers
 Representing Small Numbers
 To obtain a number between 1 and 10 we must move the
 decimal point.
-ï‚´
+• ´
 
 B. Units
 | Units   | provide | a scale      | on which | to represent | the |
@@ -608,7 +608,7 @@ Objectives
 | 1. To | learn | how | uncertainty |     |     | in  | a   |
 | ----- | ----- | --- | ----------- | --- | --- | --- | --- |
 measurement arises
-â€™
+'
 | 2. To       | learn | to indicate  | a           | measurement |            |         | s   |
 | ----------- | ----- | ------------ | ----------- | ----------- | ---------- | ------- | --- |
 | uncertainty |       | by using     | significant |             |            | figures |     |
@@ -635,12 +635,12 @@ Rules for Counting Significant Figures
 figures
 
 2. Zeros
-a. Leading zeros â€“ never count
-b. Captive zeros â€“ always count
-c. Trailing zeros â€“ count only if the number is written with a decimal
+a. Leading zeros – never count
+b. Captive zeros – always count
+c. Trailing zeros – count only if the number is written with a decimal
 point
 
-3. Exact numbers â€“ unlimited significant
+3. Exact numbers – unlimited significant
 figures
 Not obtained by measurement
 Determined by counting
@@ -654,7 +654,7 @@ Rules for Multiplication and Division
 | smallest |        | number |                | of significant |             | figures. |            |     |
 
 Rules for Addition and Subtraction
-| â€¢ The    | number | of significant |     | figures     | in      | the result |     |
+| •  The    | number | of significant |     | figures     | in      | the result |     |
 | -------- | ------ | -------------- | --- | ----------- | ------- | ---------- | --- |
 | is the   | same   | as in          | the | measurement |         | with       | the |
 | smallest |        | number         | of  | decimal     | places. |            |     |
@@ -680,7 +680,7 @@ Converting Units of Measurement
 | -------- | --- | ------- | --- | ---------- | --- | --- | -------- | --- | ----------- | -------- | --- | --- |
 | another  |     | by      | a   | method     |     |     | called   |     | dimensional |          |     |     |
 | analysis |     | using   |     | conversion |     |     | factors. |     |             |          |     |     |
-ï‚´
+• ´
 | Conversion |     |             | factors |     | are | ratios    |     | of  | the  | two | parts  |     |
 | ---------- | --- | ----------- | ------- | --- | --- | --------- | --- | --- | ---- | --- | ------ | --- |
 | of         | the | equivalence |         |     |     | statement |     |     | that |     | relate |     |
@@ -699,7 +699,7 @@ equivalence
 | lb means     | Pound    |         |     |
 | qt means     | Quarts   |         |     |
 
-ï‚´
+• ´
 
 Step 1: Find an equivalence statement that relates the two units.
 Step 2: Choose the conversion factor by looking at the direction of the
@@ -723,7 +723,7 @@ Step 4: Make sure you have the correct number of significant figures.
 | change  | (to | cancel      |     |     | the       | unwanted |            |     |     | units). |          |     |     |
 |         |     |             |     |     | 1 2   i n |          |            |     |     |         |          |     |     |
 =
-|     |     | 6 . | 8   f | t Â´ |     |     |     | i n |     |     |     |     |     |
+|     |     | 6 . | 8   f | t ´ |     |     |     | i n |     |     |     |     |     |
 | --- | --- | --- | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 -----
 1   f t
@@ -732,7 +732,7 @@ Step 4: Make sure you have the correct number of significant figures.
 | conversion |        | factor |     |          | to give   |     | the | quantity |           |     | with |     | the |
 | desired    | units. |        |     |          |           |     |     |          |           |     |      |     |     |
 |            |        |        |     |          | 1 2   i n |     |     |          |           |     |      |     |     |
-|            |        | 6.8 ft |     | Â´        |           | =   | 82  | i n      |           |     |      |     |     |
+|            |        | 6.8 ft |     | ´        |           | =   | 82  | i n      |           |     |      |     |     |
 |            |        |        |     |          | 1   f t   |     |     |          |           |     |      |     |     |
 
 | There       | are | three   | commonly    | used    |
@@ -775,13 +775,13 @@ o
 |     |     |     |     |     |     |     | F   | o   | C   |       |
 |     |     |     |     |     |     |     |     | 5 C |     |       |
 
-ï‚° ï‚°
+• ° • °
 
-â€¢
+• 
 | Density | is the | amount        | of matter | present | in a |
 | ------- | ------ | ------------- | --------- | ------- | ---- |
 | given   | volume | of substance. |           |         |      |
-â€¢
+• 
 3
 | Common | units | are g/cm | or g/mL. |     |     |
 | ------ | ----- | -------- | -------- | --- | --- |
@@ -815,9 +815,9 @@ elements.
 | letters   | in  | the  | alphabet. |          |     |           |             |     |       |      |     |     |
 
 A.  Abundances of Elements
-| â€¢ Nine | elements | account |     | for about | 98% | of the |
+| •  Nine | elements | account |     | for about | 98% | of the |
 | ------ | -------- | ------- | --- | --------- | --- | ------ |
-â€™
+'
 | earth | s crust, | oceans | and | atmosphere. |     |     |
 | ----- | -------- | ------ | --- | ----------- | --- | --- |
 
@@ -825,7 +825,7 @@ A.  Abundances of Elements
 | --------- | -------- | --- | ---- | ----- | ------ | --- |
 | matter    |          |     | are  |       | very   |     |
 | different |          |     | from | those |        | in  |
-â€™
+'
 | the      | earth |       | s crust.  |          |       |     |
 | -------- | ----- | ----- | --------- | -------- | ----- | --- |
 | In       | the   | human |           |          | body, |     |
@@ -837,7 +837,7 @@ A.  Abundances of Elements
 | Each | element |     | has     | a   | name | and      |     | a symbol. |     |       |     |     |
 | ---- | ------- | --- | ------- | --- | ---- | -------- | --- | --------- | --- | ----- | --- | --- |
 | The  | symbol  |     | usually |     |      | consists |     | of the    |     | first | one | or  |
-â€™
+'
 | two | letters |     | of the | element |     |     | s   | name. |     |     |     |     |
 | --- | ------- | --- | ------ | ------- | --- | --- | --- | ----- | --- | --- | --- | --- |
 ~
@@ -847,7 +847,7 @@ A.  Abundances of Elements
 |           |     |     |     | Krypton |        |     |     | Kr    |     |      |     |     |
 | --------- | --- | --- | --- | ------- | ------ | --- | --- | ----- | --- | ---- | --- | --- |
 | Sometimes |     |     | the |         | symbol |     | is  | taken |     | from |     | the |
-â€™
+'
 | element |           | s   | original |      | Latin |     | or  | Greek   | name. |     |     |     |
 | ------- | --------- | --- | -------- | ---- | ----- | --- | --- | ------- | ----- | --- | --- | --- |
 |         |           |     |          |      |       | ~   |     | ~       |       |     |     |     |
@@ -856,26 +856,26 @@ A.  Abundances of Elements
 |         |           |     |          | Lead |       | Pb  |     | Plumbum |       |     |     |     |
 
 Objectives
-â€™
+'
 | i. To    | learn      | about       | Dalton |     | s theory   | of atoms  |     |     |
 | -------- | ---------- | ----------- | ------ | --- | ---------- | --------- | --- | --- |
 | ii. To   | understand |             |        | and | illustrate | the       | law | of  |
 | constant |            | composition |        |     |            |           |     |     |
 | iii. To  | learn      |             | how    | a   | formula    | describes |     | a   |
-â€™
+'
 | compound |     | s   | composition |     |     |     |     |     |
 | -------- | --- | --- | ----------- | --- | --- | --- | --- | --- |
 
 | Law        | of Constant |          | Composition |        |          |          |       |
 | ---------- | ----------- | -------- | ----------- | ------ | -------- | -------- | ----- |
-| â€¢ A        | given       | compound |             | always | contains | the      | same  |
+| •  A        | given       | compound |             | always | contains | the      | same  |
 | proportion |             | by mass  |             | of the | elements | of which | it is |
 composed.
 
-â€™
+'
 |     | A.  | Dalton |     | s Atomic Theory |     |     |     |     |     |     |     |
 | --- | --- | ------ | --- | --------------- | --- | --- | --- | --- | --- | --- | --- |
-â€™
+'
 | Dalton |     | s Atomic |       | theory |     | states:  |     |           |     |     |     |
 | ------ | --- | -------- | ----- | ------ | --- | -------- | --- | --------- | --- | --- | --- |
 |        | All | elements |       | are    |     | composed |     | of atoms. |     |     |     |
@@ -893,7 +893,7 @@ p59
 Concept Check
 | 1.  | Which | of  | the | following |     | statements |     |
 | --- | ----- | --- | --- | --------- | --- | ---------- | --- |
-â€™
+'
 | regarding |     | Dalton |       | s atomic | theory | are | still |
 | --------- | --- | ------ | ----- | -------- | ------ | --- | ----- |
 | believed  |     | to be  | true? |          |        |     |       |
@@ -917,7 +917,7 @@ subscripts.
 Objectives
 | i.  | To  | learn | about | the | internal |     | parts |     | of an | atom |     |
 | --- | --- | ----- | ----- | --- | -------- | --- | ----- | --- | ----- | ---- | --- |
-â€™
+'
 | ii.  | To        | understand |           | Rutherford |           |        | s experiment |          |          |          |     |
 | ---- | --------- | ---------- | --------- | ---------- | --------- | ------ | ------------ | -------- | -------- | -------- | --- |
 | iii. | To        | describe   |           | some       | important |        |              |          | features |          | of  |
@@ -990,8 +990,8 @@ Most elements are very reactive.
 Elements are not generally found in uncombined
 form.
 Exceptions are:
-â€¢ Noble metals â€“ Gold, Platinum and Silver
-â€¢ Noble gases â€“ Group 8 (He, Ne, Ar, Kr, Xe & Rn)
+•  Noble metals – Gold, Platinum and Silver
+•  Noble gases – Group 8 (He, Ne, Ar, Kr, Xe & Rn)
 
 ii. Natural States of the Elements
 Diatomic Molecules
@@ -1024,7 +1024,7 @@ p79
 | --------- | -------- | ----- | ---- | ---------- | ------- | -------- | --------- | ---- |
 | form      | negative |       | ions | called     | anions. |          |           |      |
 | Anions    | are      | named |      | by using   |         | the root | of the    | atom |
-| name      | followed |       | by   | the suffix |         | â€“ide.    |           |      |
+| name      | followed |       | by   | the suffix |         | –ide.    |           |      |
 
 Ion Charges and the Periodic Table
 | The  | ion that     | a   | particular | atom  | will form | can be | predicted |
@@ -1032,9 +1032,9 @@ Ion Charges and the Periodic Table
 | from | the periodic |     | table.     |       |           |        |           |
 |      | Elements     |     | in Group   | 1 and | 2 form    | 1+ and | 2+ ions,  |
 respectively
-|     | Group | 7 atoms | form | anions | with 1â€“ | charges |     |
+|     | Group | 7 atoms | form | anions | with 1– | charges |     |
 | --- | ----- | ------- | ---- | ------ | ------- | ------- | --- |
-|     | Group | 6 atoms | form | anions | with 2â€“ | charges |     |
+|     | Group | 6 atoms | form | anions | with 2– | charges |     |
 
 Ion Charges and the Periodic Table
 
@@ -1102,21 +1102,21 @@ Patterns in Oxyanion Nomenclature
 | --- | ---- | ----------- | --- | --- | --- | ------------ | --- | --- | --- | --- | --- |
 
 B. Acid Nomenclature
-| â€¢   | If     | the           |     | anion        | in     | the  |      | acid |
+| •    | If     | the           |     | anion        | in     | the  |      | acid |
 | --- | ------ | ------------- | --- | ------------ | ------ | ---- | ---- | ---- |
 |     | ends   |               | in  | -ide,        | change |      |      | the  |
 |     | ending |               |     | to -icacid   |        | and  |      | add  |
 |     | the    | prefixhydro-. |     |              |        |      |      |      |
-|     | â€“      | HCl:          |     | hydrochloric |        |      | acid |      |
-|     | â€“      | HBr:          |     | hydrobromic  |        |      | acid |      |
-|     | â€“      | HI:           |     | hydroiodic   |        | acid |      |      |
-â€¢ If the anion ends in -ite, change the ending to -ous
+|     | –      | HCl:          |     | hydrochloric |        |      | acid |      |
+|     | –      | HBr:          |     | hydrobromic  |        |      | acid |      |
+|     | –      | HI:           |     | hydroiodic   |        | acid |      |      |
+•  If the anion ends in -ite, change the ending to -ous
 acid.
-â€“ HClO: hypochlorous acid
-â€“ HClO2: chlorous acid
-â€¢ If the anion ends in -ate, change the ending to -ic
+– HClO: hypochlorous acid
+– HClO2: chlorous acid
+•  If the anion ends in -ate, change the ending to -ic
 acid.
-â€“ HClO3:  chloric acid
+– HClO3:  chloric acid
 
 C. Nomenclature of Binary Molecular Compounds
 | The      | name   |           |        | of     | the     |       | element |     |
@@ -1136,17 +1136,17 @@ C. Nomenclature of Binary Molecular Compounds
 | The | ending |     | on  | the | second |     | element |     | is  | changed |     | to - |
 | --- | ------ | --- | --- | --- | ------ | --- | ------- | --- | --- | ------- | --- | ---- |
 ide.
-| â€“ CO |     | : carbon dioxide |     |     |     |     |     |     |     |     |     |     |
+| – CO |     | : carbon dioxide |     |     |     |     |     |     |     |     |     |     |
 | ---- | --- | ---------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 2
-| â€“ CCl |     | : carbon tetrachloride |     |     |     |     |     |     |     |     |     |     |
+| – CCl |     | : carbon tetrachloride |     |     |     |     |     |     |     |     |     |     |
 | ----- | --- | ---------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 4
 | If the  |     | prefix                  | ends  | witha  |     |      | oro    | and | the | name |            | of the |
 | ------- | --- | ----------------------- | ----- | ------ | --- | ---- | ------ | --- | --- | ---- | ---------- | ------ |
 | element |     | begins                  |       | with   |     | a    | vowel, | the | two |      | successive |        |
 | vowels  |     | are                     | often | elided |     | into | one.   |     |     |      |            |        |
-| â€“ N     | O   | :  dinitrogen pentoxide |       |        |     |      |        |     |     |      |            |        |
+| – N     | O   | :  dinitrogen pentoxide |       |        |     |      |        |     |     |      |            |        |
 2 5
 
 D. Nomenclature of Organic Compounds
@@ -1176,8 +1176,8 @@ REACTIONS
 Section 6.1
 Evidence for a Chemical Reaction
 What are the clues that a chemical change has taken place?
-â€¢ Chemical reactions often give a visual signal.
-â€¢ But reactions are not always visible.
+•  Chemical reactions often give a visual signal.
+•  But reactions are not always visible.
 Return to TOC
 
 Section 6.1
@@ -1185,22 +1185,22 @@ Evidence for a Chemical Reaction
 Some Clues That a Chemical Reaction Has Occurred
 | Colorless  | hydrochloric |          | acid |            |          |        |     |
 | ---------- | ------------ | -------- | ---- | ---------- | -------- | ------ | --- |
-|            |              |          |      | â€œA solid   | forms    | when   | a   |
+|            |              |          |      | "A solid   | forms    | when   | a   |
 | is added   | to a red     | solution | of   |            |          |        |     |
 |            |              |          |      | solution   | of       | sodium |     |
 | cobalt(II) | nitrate,     | turning  | the  |            |          |        |     |
 |            |              |          |      | dichromate | is added | to     | a   |
-| solution   | blue.â€       |          |      |            |          |        |     |
+| solution   | blue."       |          |      |            |          |        |     |
 |            |              |          |      | solution   | of       | lead   |     |
-nitrate.â€
+nitrate."
 Return to TOC
 
 SSeeccttioionn 6 3.2.1
 Chemical Equations
-| â€¢ Chemical |       | reactions   | involve | a rearrangement | of the |
+| •  Chemical |       | reactions   | involve | a rearrangement | of the |
 | ---------- | ----- | ----------- | ------- | --------------- | ------ |
 | ways       | atoms | are grouped |         | together.       |        |
-â€¢ A chemical equation represents a chemical reaction.
+•  A chemical equation represents a chemical reaction.
 â–ª Reactants are shown to the left of the arrow.
 | â–ª Products |     | are shown to the right of the arrow. |     |     |     |
 | ---------- | --- | ------------------------------------ | --- | --- | --- |
@@ -1208,10 +1208,10 @@ Return to TOC
 
 SSeeccttioionn 6 3.2.1
 Chemical Equations
-| â€¢ In      | a     | chemical |            | reaction |           | atoms     | are |      | not |     |
+| •  In      | a     | chemical |            | reaction |           | atoms     | are |      | not |     |
 | --------- | ----- | -------- | ---------- | -------- | --------- | --------- | --- | ---- | --- | --- |
 | created   |       | or       | destroyed. |          |           |           |     |      |     |     |
-| â€¢ All     | atoms |          | present    | in       | the       | reactants |     | must |     | be  |
+| •  All     | atoms |          | present    | in       | the       | reactants |     | must |     | be  |
 | accounted |       |          | for in     | the      | products. |           |     |      |     |     |
 â–ª
 |     | Same | number |     | of  | each | type | of  | atom |     | on  |
@@ -1224,9 +1224,9 @@ Return to TOC
 SSeeccttioionn 6 3.2.1
 Chemical Equations
 Balancing a Chemical Equation
-â€¢ Unbalanced Equation:
-â€¢ Balancing the Equation:
-â€¢ The balanced equation:
+•  Unbalanced Equation:
+•  Balancing the Equation:
+•  The balanced equation:
 | CH  | +  2O | â†’ CO | +  2H | O   |
 | --- | ----- | ---- | ----- | --- |
 | 4   |       | 2    | 2     | 2   |
@@ -1235,11 +1235,11 @@ Return to TOC
 SSeeccttioionn 6 3.2.1
 Chemical Equations
 Physical States
-â€¢ Physical states of compounds are often given in a
+•  Physical states of compounds are often given in a
 chemical equation. These are sometimes called
 descriptors.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 7
+Copyright © Cengage Learning. All rights reserved 7
 
 SSeeccttioionn 6 3.2.1
 Chemical Equations
@@ -1258,19 +1258,19 @@ b) H(g) + Cl(g) HCl(g)
 c) H (g) + Cl (g) HCl(g)
 2 2
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 9
+Copyright © Cengage Learning. All rights reserved 9
 
 SSeeccttioionn 6 3.3.3
 Balancing Chemical Equations
-| â€¢   | The      | principle |           | that | lies    | at   | the heart      | of the        | balancing |       |
+| •    | The      | principle |           | that | lies    | at   | the heart      | of the        | balancing |       |
 | --- | -------- | --------- | --------- | ---- | ------- | ---- | -------------- | ------------- | --------- | ----- |
 |     | process  |           | is        | that | atoms   |      | are            | conserved     |           | in a  |
 |     | chemical |           | reaction. |      |         |      |                |               |           |       |
-| â€¢   | Atoms    | are       | neither   |      | created |      | nor destroyed. |               |           |       |
-| â€¢   | The      | same      | number    |      | of      | each | type           | of atom       | is        | found |
+| •    | Atoms    | are       | neither   |      | created |      | nor destroyed. |               |           |       |
+| •    | The      | same      | number    |      | of      | each | type           | of atom       | is        | found |
 |     | among    | the       | reactants |      |         | and  | among          | the products. |           |       |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 6 3.3.3
 Balancing Chemical Equations
@@ -1290,7 +1290,7 @@ information from step 1.
 | --- | ----- | ---- | ----- | ------ |
 |     | 2     |      | 2     | 2      |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 6 3.3.3
 Balancing Chemical Equations
@@ -1300,7 +1300,7 @@ most complicated molecule.
 Equation is unbalanced by counting the atoms on both sides
 of the arrow.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 12
+Copyright © Cengage Learning. All rights reserved 12
 
 SSeeccttioionn 6 3.3.3
 Balancing Chemical Equations
@@ -1310,7 +1310,7 @@ most complicated molecule.
 We must balance the equation by adding more molecules of
 reactants and/or products.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 13
+Copyright © Cengage Learning. All rights reserved 13
 
 SSeeccttioionn 6 3.3.3
 Balancing Chemical Equations
@@ -1330,7 +1330,7 @@ or could be:
 | --- | --- | --- | --- | ----- | --- | --- | ----- | --- | --- | ---- | --- | --- | --- | --- | --- | --- | --- |
 |     |     |     | 2   |       |     | 2   |       |     | 2   |      |     |     |     |     |     |     |     |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 6 3.3.3
 Balancing Chemical Equations
@@ -1403,7 +1403,7 @@ most (the most accepted convention)?  Why?
 | --- | --- | ------------ | --- | --- | ---- | --- | ----- | --- |
 2 2
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 6 3.3.3
 Balancing Chemical Equations
@@ -1422,7 +1422,7 @@ equation.
 | Coefficients |         |     |     | can        |     | be fractions, |           |         |     | although |            |     | they |     |
 | are          | usually |     |     | given      |     | as            | lowest    | integer |     |          | multiples. |     |      |     |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 6 3.3.3
 Balancing Chemical Equations
@@ -1436,7 +1436,7 @@ Return to TOC
 SSeeccttioionn 6 3.3.4
 Balancing Chemical Equations
 Precipitation
-| â€¢ A           | reaction              | in which  | a solid | forms | is called | a   |
+| •  A           | reaction              | in which  | a solid | forms | is called | a   |
 | ------------- | --------------------- | --------- | ------- | ----- | --------- | --- |
 | precipitation |                       | reaction. |         |       |           |     |
 | â–ª             | Solid  =  precipitate |           |         |       |           |     |
@@ -1445,15 +1445,15 @@ Return to TOC
 SSeeccttioionn 6 3.3.4
 Balancing Chemical Equations
 What Happens When an Ionic Compound Dissolves in Water?
-â€¢ The ions separate and move around independently.
-â€¢ Strong electrolyte â€“ each unit of the substance that
+•  The ions separate and move around independently.
+•  Strong electrolyte – each unit of the substance that
 dissolves in water produces separated ions.
 Return to TOC
 
 SSeeccttioionn 6 3.3.4
 Balancing Chemical Equations
 What Happens When an Ionic Compound Dissolves in Water?
-| â€¢   | K CrO | (aq) | +  Ba(NO | ) (aq) | â†’ Products |
+| •    | K CrO | (aq) | +  Ba(NO | ) (aq) | â†’ Products |
 | --- | ----- | ---- | -------- | ------ | ---------- |
 |     | 2     | 4    |          | 3 2    |            |
 Return to TOC
@@ -1461,31 +1461,31 @@ Return to TOC
 SSeeccttioionn 6 3.3.4
 Balancing Chemical Equations
 How to Decide What Products Form
-| â€¢   | K CrO | (aq) | +  Ba(NO | ) (aq) | â†’ Products |
+| •    | K CrO | (aq) | +  Ba(NO | ) (aq) | â†’ Products |
 | --- | ----- | ---- | -------- | ------ | ---------- |
 |     | 2     | 4    |          | 3 2    |            |
 The mixed solution contains four types of ions: K+,
-â€¢
-|     | CrO                                                   | 2â€“, Ba2+, and NO |     | â€“.  |     |
+• 
+|     | CrO                                                   | 2–, Ba2+, and NO |     | –.  |     |
 | --- | ----------------------------------------------------- | ---------------- | --- | --- | --- |
 |     | 4                                                     |                  |     | 3   |     |
-| â€¢   | Determine the possible products from the ions in the  |                  |     |     |     |
+| •    | Determine the possible products from the ions in the  |                  |     |     |     |
 reactants. The possible ion combinations are:
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 6 3.3.4
 Balancing Chemical Equations
 How to Decide What Products Form
-| â€¢ Decide which is most likely to be the yellow solid  |     |     |     |     |     |
+| •  Decide which is most likely to be the yellow solid  |     |     |     |     |     |
 | ----------------------------------------------------- | --- | --- | --- | --- | --- |
 formed in the reaction.
-| â€¢ K     | CrO | (aq)   | reactant |     |     |
+| •  K     | CrO | (aq)   | reactant |     |     |
 | ------- | --- | ------ | -------- | --- | --- |
 |         | 2   | 4      |          |     |     |
-| â€¢ Ba(NO |     | ) (aq) | reactant |     |     |
+| •  Ba(NO |     | ) (aq) | reactant |     |     |
 3 2
-| â€¢ The possible combinations are KNO |     |     |              | and BaCrO | .   |
+| •  The possible combinations are KNO |     |     |              | and BaCrO | .   |
 | ----------------------------------- | --- | --- | ------------ | --------- | --- |
 |                                     |     |     |              | 3         | 4   |
 | â–ª                                   | KNO |     | white solid  |           |     |
@@ -1494,27 +1494,27 @@ formed in the reaction.
 | --- | ----- | --- | ------------ | --- | --- |
 4
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 6 3.3.4
 Balancing Chemical Equations
 Using Solubility Rules
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 26
+Copyright © Cengage Learning. All rights reserved 26
 
 SSeeccttioionn 6 3.3.4
 Balancing Chemical Equations
 Using Solubility Rules
-â€¢ Predicting Precipitates
+•  Predicting Precipitates
 â–ª Soluble solid
 â–ª Insoluble solid
 â–ª Slightly soluble solid
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 27
+Copyright © Cengage Learning. All rights reserved 27
 
 SSeeccttioionn 6 3.3.4
 Balancing Chemical Equations
-Letâ€™s Practice Determining Solubility
+Let's Practice Determining Solubility
 | Which of the following are soluble |     |     |        | in water? |     |
 | ---------------------------------- | --- | --- | ------ | --------- | --- |
 | Na                                 | CO  | yes | Cu(OH) |           | no  |
@@ -1545,7 +1545,7 @@ salts.
 |     | forms |     | and,       | if so, | to    | predict |     |        | the | identity |     | of the  |
 Return to TOC
 solid.
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 6 3.3.4
 Balancing Chemical Equations
@@ -1553,17 +1553,17 @@ Concept Check
 Which of the following ions form compounds
 | with Pb2+ | that are generally soluble |     |     | in water? |
 | --------- | -------------------------- | --- | --- | --------- |
-|           | a)                         | S2â€“ |     |           |
-|           | b)                         | Clâ€“ |     |           |
-|           | c)                         | NO  | â€“   |           |
+|           | a)                         | S2– |     |           |
+|           | b)                         | Cl– |     |           |
+|           | c)                         | NO  | –   |           |
 3
-|     | d)  | SO  | 2â€“  |     |
+|     | d)  | SO  | 2–  |     |
 | --- | --- | --- | --- | --- |
 4
 |     | e)  | Na+ |     |     |
 | --- | --- | --- | --- | --- |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 6 3.3.4
 Balancing Chemical Equations
@@ -1581,7 +1581,7 @@ nitrate solution. What precipitate, if any, will form?
 | d)  | No precipitate will form. |     |
 | --- | ------------------------- | --- |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 6 3.3.5
 Net Ionic Equations
@@ -1656,11 +1656,11 @@ SSeeccttioionn 6 3.3.6
 Balancing Chemical Equations
 2. Complete Ionic Equation
 â–ª All strong electrolytes are shown as ions.
-â–ª Notice: K+ and NO â€“ ions are present in
+â–ª Notice: K+ and NO – ions are present in
 3
 solution both before and after the reaction.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 35
+Copyright © Cengage Learning. All rights reserved 35
 
 SSeeccttioionn 6 3.3.6
 Balancing Chemical Equations
@@ -1668,7 +1668,7 @@ Balancing Chemical Equations
 â–ª Only those components of the solution
 that undergo a change.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 36
+Copyright © Cengage Learning. All rights reserved 36
 
 SSeeccttioionn 6 3.3.6
 Balancing Chemical Equations
@@ -1687,7 +1687,7 @@ Net Ionic Equation:
 Co2+(aq) + 2OHâˆ’(aq) â†’ Co(OH) (s)
 2
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 37
+Copyright © Cengage Learning. All rights reserved 37
 
 SSeeccttioionn 6 3.3.7
 Types of  Reactions
@@ -1707,46 +1707,46 @@ Return to TOC
 SSeecctitoionn 6 .33.7.1
 Arrhenius Acids and Bases
 Balancing Chemical Equations
-| â€¢ A      | strong |     | acid        | is one | in which  | virtually | every |
+| •  A      | strong |     | acid        | is one | in which  | virtually | every |
 | -------- | ------ | --- | ----------- | ------ | --------- | --------- | ----- |
 | molecule |        |     | dissociates |        | (ionizes) | in water  | to an |
 | H+       | ion    | and | an          | anion. |           |           |       |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 6 3.3.7.1
 Arrhenius Acids and Bases
 Balancing Chemical Equations
 Strong Acids Behave as Strong Electrolytes
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 40
+Copyright © Cengage Learning. All rights reserved 40
 
 SSeeccttioionn 6 3.3.7.1
 Arrhenius Acids and Bases
 Balancing Chemical Equations
-| â€¢ A        | strong                             | base     | is a      | metal | hydroxide |          | that | is  |
+| •  A        | strong                             | base     | is a      | metal | hydroxide |          | that | is  |
 | ---------- | ---------------------------------- | -------- | --------- | ----- | --------- | -------- | ---- | --- |
 | completely |                                    | soluble  | in water, |       | giving    | separate | OHâˆ’  |     |
 | ions       | and                                | cations. |           |       |           |          |      |     |
 | â–ª          | Most common examples: NaOH and KOH |          |           |       |           |          |      |     |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 6 3.3.7.1
 Arrhenius Acids and Bases
 Balancing Chemical Equations
-â€¢ The products of the reaction of a strong acid
+•  The products of the reaction of a strong acid
 and a strong base are water and a salt.
 â–ª Salt ïƒž Ionic compound
-â€¢ Net ionic equation
+•  Net ionic equation
 â–ª H+(aq) + OHâˆ’(aq) â†’ H O(l)
 2
-â€¢ Reaction of H+ and OHâˆ’ is called an acid-
+•  Reaction of H+ and OHâˆ’ is called an acid-
 base reaction.
 â–ª H+ ïƒž acidic ion
 â–ª OHâˆ’ ïƒž basic ion
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 42
+Copyright © Cengage Learning. All rights reserved 42
 
 SSeeccttioionn 6 3.3.7.1
 Arrhenius Acids and Bases
@@ -1763,11 +1763,11 @@ Summary of Strong Acids and Strong Bases
 |     | and         |        | anions). |           |         |     |       |     |           |      |       |             |     |      |
 | 3.  | A           | strong |          | base      | is      | a   | metal |     | hydroxide |      |       | compound    |     |      |
 |     | that        |        | is very  |           | soluble |     |       | in  | water     | (and |       | dissociates |     |      |
-â€“
+–
 |     | into |     | OH  | ions | and |     | cations). |     |     |     |     |     |     |     |
 | --- | ---- | --- | --- | ---- | --- | --- | --------- | --- | --- | --- | --- | --- | --- | --- |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 6 3.3.7.1
 Arrhenius Acids and Bases
@@ -1785,19 +1785,19 @@ Summary of Strong Acids and Strong Bases
 .
 water
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 6 3.3.7.1
 Arrhenius Acids and Bases
 Balancing Chemical Equations
 Summary of Strong Acids and Strong Bases
-|        |          |     | +    |     | â€“   |          |        |     |
+|        |          |     | +    |     | –   |          |        |     |
 | ------ | -------- | --- | ---- | --- | --- | -------- | ------ | --- |
 | 6. The | reaction |     | of H | and | OH  | is often | called | an  |
 +
 | acid-base |     | reaction, |     | where | H   | is the | acidic | ion |
 | --------- | --- | --------- | --- | ----- | --- | ------ | ------ | --- |
-â€“
+–
 | and | OH  | is the | basic | ion. |     |     |     |     |
 | --- | --- | ------ | ----- | ---- | --- | --- | --- | --- |
 Return to TOC
@@ -1805,33 +1805,33 @@ Return to TOC
 SSeeccttioionn 6 3.3.7.2
 Oxidation-Reduction Reaction
 Balancing Chemical Equations
-â€¢ Reactions between metals and nonmetals
+•  Reactions between metals and nonmetals
 involve a transfer of electrons from the metal
 to the nonmetal.
-â€¢ A reaction that involves a transfer of electrons.
+•  A reaction that involves a transfer of electrons.
 â–ª 2Mg(s) + O (g) â†’ 2MgO(s)
 2
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 46
+Copyright © Cengage Learning. All rights reserved 46
 
 SSeeccttioionn 6 3.3.7.2
 Oxidation-Reduction Reaction
 Balancing Chemical Equations
-â€¢ Transfer of electrons
+•  Transfer of electrons
 â–ª 2Li(s) + F (g) â†’ 2LiF(s)
 2
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 47
+Copyright © Cengage Learning. All rights reserved 47
 
 SSeeccttioionn 6 3.3.7.2
 Oxidation-Reduction Reaction
 Balancing Chemical Equations
 Formation of a Gas
-â€¢ Oxidationâ€“reduction reaction
-â€¢ Singleâ€“replacement reaction
+•  Oxidation–reduction reaction
+•  Single–replacement reaction
 â–ª A + BC â†’ B + AC
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 48
+Copyright © Cengage Learning. All rights reserved 48
 
 SSeeccttioionn 6 3.3.7.2
 Oxidation-Reduction Reaction
@@ -1840,53 +1840,53 @@ Concept Check
 | Which of the following best |     | describes what is  |     |
 | --------------------------- | --- | ------------------ | --- |
 happening in the following representation of an
-oxidationâ€“reduction reaction:
-| a) Metal Al gains 3 eâ€“ | and O2 â€“ | in Fe | O loses these 3eâ€“. |
+oxidation–reduction reaction:
+| a) Metal Al gains 3 e– | and O2 – | in Fe | O loses these 3e–. |
 | ---------------------- | -------- | ----- | ------------------ |
 2 3
-| b) Metal Al gains 3 eâ€“ | and Fe3+ | in Fe | O loses these 3eâ€“. |
+| b) Metal Al gains 3 e– | and Fe3+ | in Fe | O loses these 3e–. |
 | ---------------------- | -------- | ----- | ------------------ |
 2 3
-| c) Metal Al loses 3 eâ€“ | and O2 â€“ | in Fe | O gains these 3eâ€“. |
+| c) Metal Al loses 3 e– | and O2 – | in Fe | O gains these 3e–. |
 | ---------------------- | -------- | ----- | ------------------ |
 2 3
-| d) Metal Al loses 3 eâ€“ | and Fe3+ | in Fe | O gains these 3eâ€“. |
+| d) Metal Al loses 3 e– | and Fe3+ | in Fe | O gains these 3e–. |
 | ---------------------- | -------- | ----- | ------------------ |
 2 3
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 6 3.3.7.2
 Oxidation-Reduction Reaction
 Balancing Chemical Equations
-Characteristics of Oxidationâ€“Reduction Reactions
-1. A metalâ€“nonmetal reaction can always be
-assumed to be an oxidationâ€“reduction
+Characteristics of Oxidation–Reduction Reactions
+1. A metal–nonmetal reaction can always be
+assumed to be an oxidation–reduction
 reaction, which involves electron transfer.
 2. Two nonmetals can also undergo an
-oxidationâ€“reduction reaction. At this point we
+oxidation–reduction reaction. At this point we
 can recognize these cases only by looking for O
 2
 as a reactant or product. When two nonmetals
 react, the compound formed is not ionic.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 50
+Copyright © Cengage Learning. All rights reserved 50
 
 SSeeccttioionn 6 3.3.7.3
 Precipitation Reaction
 Balancing Chemical Equations
-â€¢ Formation of a solid when two solutions are
+•  Formation of a solid when two solutions are
 mixed.
-â€¢ Notice this is also a doubleâ€“displacement
+•  Notice this is also a double–displacement
 reaction.
 â–ª AB + CD â†’ AD + CB
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 51
+Copyright © Cengage Learning. All rights reserved 51
 
 SSeeccttioionn 6 3.3.7.4
 Acid-Base Reaction
 Balancing Chemical Equations
-â€¢ Involves an H+ ion that ends up in the product
+•  Involves an H+ ion that ends up in the product
 water.
 | H+(aq) | +  OHâˆ’(aq) |     |      |
 | ------ | ---------- | --- | ---- |
@@ -1901,39 +1901,39 @@ Return to TOC
 SSeeccttioionn 6 3.3.7.5
 Combustion Reactions
 Balancing Chemical Equations
-â€¢ Involve oxygen and produce energy (heat) so
+•  Involve oxygen and produce energy (heat) so
 rapidly that a flame results.
 â–ª CH (g) + 2O (g) â†’ CO (g) + 2H O(g)
 4 2 2 2
-â–ª Special class of oxidationâ€“reduction reactions.
+â–ª Special class of oxidation–reduction reactions.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 53
+Copyright © Cengage Learning. All rights reserved 53
 
 SSeeccttioionn 6 3.3.7.6
 Synthesis (Combination) Reactions
 Balancing Chemical Equations
-â€¢ A compound forms from simpler materials.
+•  A compound forms from simpler materials.
 | â–ª C(s)  +  O | (g)  â†’ | CO (g) | Only one product! |
 | ------------ | ------ | ------ | ----------------- |
 |              | 2      | 2      |                   |
-â–ª Special class of oxidationâ€“reduction reactions.
+â–ª Special class of oxidation–reduction reactions.
 Return to TOC
 
 SSeeccttioionn 6 3.3.7.7
 Decomposition Reactions
 Balancing Chemical Equations
-â€¢ Occurs when a compound is broken down
+•  Occurs when a compound is broken down
 into simpler substances.
 â–ª 2H O(l) â†’ 2H (g) + O (g) Only one reactant!
 2 2 2
-â–ª Special class of oxidationâ€“reduction reactions.
+â–ª Special class of oxidation–reduction reactions.
 Return to TOC
 
 Section 6.3
 Summary
 Balancing Chemical Equations
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 56
+Copyright © Cengage Learning. All rights reserved 56
 
 Section 9.1
 Information Given by Chemical Equations
@@ -1945,35 +1945,35 @@ Return to TOC
 CSheacptitoern 9 4.1
 Counting by Weighing
 Table of Contents
-â€¢ Objects do not need to have identical masses
+•  Objects do not need to have identical masses
 to be counted by weighing.
 â–ª All we need to know is the average mass of
 the objects.
-â€¢ To count the atoms in a sample of a given
+•  To count the atoms in a sample of a given
 element by weighing we must know the mass
 of the sample and the average mass for that
 element.
-Copyright Â© Cengage Learning. All rights reserved 2
+Copyright © Cengage Learning. All rights reserved 2
 
 CSheacptitoern 9 4.1
 Counting by Weighing
 Table of Contents
 Averaging the Mass of Different Objects
-â€¢ Two samples containing different types of
+•  Two samples containing different types of
 components (A and B), both contain the same
 number of components if the ratio of the
 sample masses is the same as the ratio of the
 masses of the individual components.
-Copyright Â© Cengage Learning. All rights reserved 3
+Copyright © Cengage Learning. All rights reserved 3
 
 CSheacptitoern 9 4.1
 Counting by Weighing
 Table of Contents
-â€¢ Elements occur in nature as mixtures of isotopes.
-â€¢ Carbon = 98.89% 12C
+•  Elements occur in nature as mixtures of isotopes.
+•  Carbon = 98.89% 12C
 1.11% 13C
 < 0.01% 14C
-Copyright Â© Cengage Learning. All rights reserved 4
+Copyright © Cengage Learning. All rights reserved 4
 
 CSheacptitoern 9 4.1
 Counting by Weighing
@@ -1983,29 +1983,29 @@ Average Atomic Mass for Carbon
 exact number
 (0.9889)(12 amu) + (0.0111)(13.0034 amu) =
 12.01 amu
-Copyright Â© Cengage Learning. All rights reserved 5
+Copyright © Cengage Learning. All rights reserved 5
 
 CSheacptitoern 9 4.2
 Table of Contents
-â€¢ Atoms have very tiny masses so scientists
+•  Atoms have very tiny masses so scientists
 made a unit to avoid using very small numbers.
-1 atomic mass unit (amu) = 1.66 ï‚´10â€“24 g
-â€¢ The average atomic mass for an element is the
+1 atomic mass unit (amu) = 1.66 • ´10–24 g
+•  The average atomic mass for an element is the
 weighted average of the masses of all the
 isotopes of an element.
-Copyright Â© Cengage Learning. All rights reserved 6
+Copyright © Cengage Learning. All rights reserved 6
 
 CSheacptitoern 9 4.2
 Table of Contents
 Average Atomic Mass for Carbon
-â€¢ Even though natural carbon does not
+•  Even though natural carbon does not
 contain a single atom with mass 12.01, for
 our purposes, we can consider carbon to
 be composed of only one type of atom with
 a mass of 12.01.
-â€¢ This enables us to count atoms of natural
+•  This enables us to count atoms of natural
 carbon by weighing a sample of carbon.
-Copyright Â© Cengage Learning. All rights reserved 7
+Copyright © Cengage Learning. All rights reserved 7
 
 CSheacptitoern 9 4.2
 Table of Contents
@@ -2015,9 +2015,9 @@ of carbon.
 The mass of 1 carbon atom = 12.01 amu.
 Use the relationship as a conversion factor.
 12.01 amu
-431 C atoms ï‚´ = 551.1786 xa 1m0u3 amu
+431 C atoms • ´ = 551.1786 xa 1m0u3 amu
 1 C atom
-Copyright Â© Cengage Learning. All rights reserved 8
+Copyright © Cengage Learning. All rights reserved 8
 
 CSheacptitoern 9 4.2
 Table of Contents
@@ -2025,20 +2025,20 @@ Exercise
 Calculate the mass (in amu) of 75 atoms of
 aluminum.
 26.98 amu
-75 atoms Al ï‚´ =
+75 atoms Al • ´ =
 1 Al atom
 2.0 x103 amu Al
-Copyright Â© Cengage Learning. All rights reserved 9
+Copyright © Cengage Learning. All rights reserved 9
 
 Chapter 9
 Table of Contents
-â€¢ The number equal to the number of carbon
+•  The number equal to the number of carbon
 atoms in 12.01 grams of carbon.
-â€¢ 1 mole of anything = 6.022 x 1023 units of that
-thing (Avogadroâ€™s number).
-â€¢ 1 mole C = 6.022 x 1023 C atoms = 12.01 g C
-Copyright Â© Cengage Learning. All rights reserved 10
-6 . 0 2 2 ï‚´
+•  1 mole of anything = 6.022 x 1023 units of that
+thing (Avogadro's number).
+•  1 mole C = 6.022 x 1023 C atoms = 12.01 g C
+Copyright © Cengage Learning. All rights reserved 10
+6 . 0 2 2 • ´
 1
 1
 m
@@ -2048,7 +2048,7 @@ o
 l C
 C a t o m s
 o r
-6 . 0 2 2 ï‚´
+6 . 0 2 2 • ´
 1
 1 0
 m
@@ -2062,33 +2062,33 @@ The Mole
 1 mol C 12.01 g C
 or
 12.01 g C 1 mol C
-6.022ï‚´1023 C atoms 12.01 g C
+6.022• ´1023 C atoms 12.01 g C
 or
-12.01 g C 6.022ï‚´1023 C atoms
+12.01 g C 6.022• ´1023 C atoms
 
 CSheacptitoern 9 4.3
 The Mole
 Table of Contents
-Copyright Â© Cengage Learning. All rights reserved 11
+Copyright © Cengage Learning. All rights reserved 11
 
 CSheacptitoern 9 4.3
 The Mole
 Table of Contents
-Avogadroâ€™s Number of various elements
+Avogadro's Number of various elements
 
 CSheacptitoern 9 4.3
 The Mole
 Table of Contents
-Copyright Â© Cengage Learning. All rights reserved 13
+Copyright © Cengage Learning. All rights reserved 13
 
 CSheacptitoern 9 4.3
 The Mole
 Table of Contents
-â€¢ A sample of an element with a mass equal to that
-elementâ€™s average atomic mass (expressed in g)
-contains one mole of atoms (6.022 Ã— 1023 atoms).
-â€¢ Comparison of 1-Mol Samples of Various Elements
-Copyright Â© Cengage Learning. All rights reserved 14
+•  A sample of an element with a mass equal to that
+element's average atomic mass (expressed in g)
+contains one mole of atoms (6.022 × 1023 atoms).
+•  Comparison of 1-Mol Samples of Various Elements
+Copyright © Cengage Learning. All rights reserved 14
 
 CSheacptitoern 9 4.3
 The Mole
@@ -2099,8 +2099,8 @@ Determine the number of copper atoms in a
 1 mole Cu 6.022x 1023 atoms Cu
 63.55 g Cu ------------ ----------------------------- =
 63.55 g Cu 1 mole Cu atoms
-6.022Ã—1023 Cu atoms
-Copyright Â© Cengage Learning. All rights reserved 15
+6.022×1023 Cu atoms
+Copyright © Cengage Learning. All rights reserved 15
 
 CSheacptitoern 9 4.3
 The Mole
@@ -2114,9 +2114,9 @@ c) 58.93 g
 d) 65.38 g
 e) 1.055 x 10-22 g
 1 mol Cu 63.55 g Cu
-1 Cu atom ï‚´ ï‚´ = 1.055ï‚´10âˆ’22 g Cu
-6.022ï‚´1023 Cu atoms 1 mol Cu
-Copyright Â© Cengage Learning. All rights reserved 16
+1 Cu atom • ´ • ´ = 1.055• ´10âˆ’22 g Cu
+6.022• ´1023 Cu atoms 1 mol Cu
+Copyright © Cengage Learning. All rights reserved 16
 
 CSheacptitoern 9 4.3
 The Mole
@@ -2131,7 +2131,7 @@ b) 13.49 g
 c) 197.0 g
 26.98 g Al 1 mole Al 1 mole Au
 d) 256.5 g
-Copyright Â© Cengage Learning. All rights reserved 17
+Copyright © Cengage Learning. All rights reserved 17
 
 CSheacptitoern 9 4.3
 The Mole
@@ -2142,76 +2142,76 @@ contains the greatest number of atoms?
 a) Magnesium
 b) Zinc
 c) Silver
-Copyright Â© Cengage Learning. All rights reserved 18
+Copyright © Cengage Learning. All rights reserved 18
 
 SSeeccttioionn 9 4.1.4
 Information Given by Chemical Equations
-| â€¢   | A balanced |     |     | chemical |             | equation    |     | gives | relative |     |
+| •    | A balanced |     |     | chemical |             | equation    |     | gives | relative |     |
 | --- | ---------- | --- | --- | -------- | ----------- | ----------- | --- | ----- | -------- | --- |
 |     | numbers    |     | (or | moles)   |             | of reactant |     | and   | product  |     |
 |     | molecules  |     |     | that     | participate |             | in  | a     | chemical |     |
 reaction.
-| â€¢   | The | coefficients |         |     | of  | a balanced    |     | equation |     | give |
+| •    | The | coefficients |         |     | of  | a balanced    |     | equation |     | give |
 | --- | --- | ------------ | ------- | --- | --- | ------------- | --- | -------- | --- | ---- |
 |     | the | relative     | numbers |     |     | of molecules. |     |          |     |      |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 9 4.1.4
 Information Given by Chemical Equations
 |     | C H | OH  | + 3O | â†’ 2CO | +  3H | O   |     |
 | --- | --- | --- | ---- | ----- | ----- | --- | --- |
 |     | 2   | 5   |      | 2     | 2     | 2   |     |
-â€¢ The equation is balanced.
-â€¢ All atoms present in the reactants are accounted for in
+•  The equation is balanced.
+•  All atoms present in the reactants are accounted for in
 the products.
-| â€¢ 1 molecule |     | of ethanol reacts with 3 molecules |     |     |     | of  |     |
+| •  1 molecule |     | of ethanol reacts with 3 molecules |     |     |     | of  |     |
 | ------------ | --- | ---------------------------------- | --- | --- | --- | --- | --- |
 oxygen to produce 2 molecules of carbon dioxide and 3
 molecules of water.
-| â€¢ 1 mole        | of ethanol reacts with 3 moles |     |                               |     | of oxygen to  |     |     |
+| •  1 mole        | of ethanol reacts with 3 moles |     |                               |     | of oxygen to  |     |     |
 | --------------- | ------------------------------ | --- | ----------------------------- | --- | ------------- | --- | --- |
 | produce 2 moles |                                |     | of carbon dioxide and 3 moles |     |               |     | of  |
 water.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 9 4.2.5
-Moleâ€“Mole Relationships
-â€¢ A balanced equation 2H O(l) â†’ 2H (g) + O (g)
+Mole–Mole Relationships
+•  A balanced equation 2H O(l) â†’ 2H (g) + O (g)
 2 2 2
 can predict the moles of
 product that a given
 number of moles of
 reactants will yield.
-â€¢ 2 mol of H O yields 2
+•  2 mol of H O yields 2
 2
 mol of H and 1 mol of
 2
 O .
 2
-â€¢ 4 mol of H O yields 4
+•  4 mol of H O yields 4
 2
 mol of H and 2 mol of
 2
 O .
 2
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 21
+Copyright © Cengage Learning. All rights reserved 21
 
 SSeeccttioionn 9 4.2.5
-Moleâ€“Mole Relationships
+Mole–Mole Relationships
 Mole Ratio
-| â€¢ The    | mole | ratio | allows    |      | us to  | convert |           | from |
+| •  The    | mole | ratio | allows    |      | us to  | convert |           | from |
 | -------- | ---- | ----- | --------- | ---- | ------ | ------- | --------- | ---- |
 | moles    | of   | one   | substance |      | in     | a       | balanced  |      |
 | equation |      | to    | moles     | of a | second |         | substance |      |
 in the equation.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 9 4.2.5
-Moleâ€“Mole Relationships
+Mole–Mole Relationships
 Example
 Consider the following balanced equation:
 Na SiF (s) + 4Na(s) â†’ Si(s) + 6NaF(s)
@@ -2220,17 +2220,17 @@ How many moles of NaF will be produced if 3.50
 moles of Na is reacted with excess Na SiF ?
 2 6
 Where are we going?
-â€¢ We want to determine the number of moles of NaF
+•  We want to determine the number of moles of NaF
 produced by Na with excess Na SiF .
 2 6
 What do we know?
-â€¢ The balanced equation.
-â€¢ We start with 3.50 mol Na.
+•  The balanced equation.
+•  We start with 3.50 mol Na.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 23
+Copyright © Cengage Learning. All rights reserved 23
 
 Section 9.2 Section 4.5
-Moleâ€“Mole Relationships
+Mole–Mole Relationships
 Example
 Consider the following balanced equation:
 |     | Na SiF | (s) + 4Na(s) â†’ Si(s) + 6NaF(s) |     |     |     |
@@ -2247,17 +2247,17 @@ R a t i o
 | 3 . 5 0 |   m o l   | N a |         |         |             |
 | ------- | --------- | --- | ------- | ------- | ----------- |
 |         |           |     | =   5 . | 2 5   m | o l   N a F |
-ï‚´
+• ´
 4 mol Na
-|      | ï‚­   |     |     |     |     |
+|      | • ­   |     |     |     |     |
 | ---- | --- | --- | --- | --- | --- |
 Starting
 Amount
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 9 4.2.5
-Moleâ€“Mole Relationships
+Mole–Mole Relationships
 Exercise
 Propane, C H , is a common fuel used in heating homes in rural
 3 8
@@ -2272,37 +2272,37 @@ b) 7.48 moles
 c) 3.74 moles
 d) 1.25 moles
 3 moles CO
-3.74 moles C H ï‚´ 2
+3.74 moles C H • ´ 2
 3 8 1 mole C H
 3 8
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 25
+Copyright © Cengage Learning. All rights reserved 25
 
 SSeeccttioionn 9 4.2.6
 Molar Mass
-Moleâ€“Mole Relationships
-â€¢ Mass in grams of one mole of the substance:
+Mole–Mole Relationships
+•  Mass in grams of one mole of the substance:
 Molar Mass of N = 14.01 g/mol
 Molar Mass of H O = 18.02 g/mol
 2
-(2 Ã— 1.008 g) + 16.00 g
+(2 × 1.008 g) + 16.00 g
 Molar Mass of Ba(NO ) = 261.35 g/mol
 3 2
-137.33 g + (2 Ã— 14.01 g) + (6 Ã— 16.00 g)
+137.33 g + (2 × 14.01 g) + (6 × 16.00 g)
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 26
+Copyright © Cengage Learning. All rights reserved 26
 
 Section 9.2
-Moleâ€“Mole Relationships
+Mole–Mole Relationships
 Calculations Using Molar Mass
-â€¢ Moles of a compound =
-â€¢ Mass of a sample (g) =
+•  Moles of a compound =
+•  Mass of a sample (g) =
 (moles of sample)(molar mass of compound)
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 27
+Copyright © Cengage Learning. All rights reserved 27
 m o l = g
 m o
-ï‚´
+• ´
 l a r
 m
 m
@@ -2349,12 +2349,12 @@ o l
 Section 4.6
 Molar Mass
 g
-g = mol ï‚´
+g = mol • ´
 mol
 
 SSeeccttioionn 9 4.2.6
 Molar Mass
-Moleâ€“Mole Relationships
+Mole–Mole Relationships
 Exercise
 What is the molar mass of nickel(II)
 carbonate?
@@ -2371,7 +2371,7 @@ Return to TOC
 
 SSeeccttioionn 9 4.2.6
 Molar Mass
-Moleâ€“Mole Relationships
+Mole–Mole Relationships
 Exercise
 Consider equal mole samples of N O,
 2
@@ -2390,21 +2390,21 @@ sample.
 | d) Al(NO      | ) , KCN, N |        | O   |
 |               | 3 3        |        | 2   |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 9 4.2.7
 Percent Composition of Compounds
-Moleâ€“Mole Relationships
-â€¢ Mass percent of an element:
-â€¢ For iron in iron(III) oxide, (Fe O ):
+Mole–Mole Relationships
+•  Mass percent of an element:
+•  For iron in iron(III) oxide, (Fe O ):
 2 3
 %
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 30
+Copyright © Cengage Learning. All rights reserved 30
 
 SSeeccttioionn 9 4.2.7
 Percent Composition of Compounds
-Moleâ€“Mole Relationships
+Mole–Mole Relationships
 Percent Composition
 | What is the % composition of C |     | H O  | ?   |     |
 | ------------------------------ | --- | ---- | --- | --- |
@@ -2431,7 +2431,7 @@ Return to TOC
 
 SSeeccttioionn 9 4.2.7
 Percent Composition of Compounds
-Moleâ€“Mole Relationships
+Mole–Mole Relationships
 Tetrodotoxin has the empirical formula C H N O Calculate the
 11 17 3 8.
 mass percentages (g/g) of the four element in this compound.
@@ -2465,18 +2465,18 @@ mole ratio(s).
 moles of the desired reactant or product.
 5. Convert from moles back to masses.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 33
+Copyright © Cengage Learning. All rights reserved 33
 
 SSeeccttioionn 9 4.3.8
 Mass Calculations
 Stoichiometry
-| â€¢ Stoichiometry |          | is        | the          | process | of           | using    | a   |
+| •  Stoichiometry |          | is        | the          | process | of           | using    | a   |
 | --------------- | -------- | --------- | ------------ | ------- | ------------ | -------- | --- |
 | balanced        | chemical |           | equation     |         | to determine |          |     |
 | the relative    |          | masses    | of reactants |         | and          | products |     |
 | involved        | in a     | reaction. |              |         |              |          |     |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 9 4.3.8
 Mass Calculations
@@ -2488,12 +2488,12 @@ How many grams of chromium(III) oxide can be
 produced from 15.0 g of solid chromium and
 excess oxygen gas?
 Where are we going?
-â€¢ We want to determine the mass of Cr O produced
+•  We want to determine the mass of Cr O produced
 2 3
 by Cr with excess O .
 2
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 35
+Copyright © Cengage Learning. All rights reserved 35
 
 SSeeccttioionn 9 4.3.8
 Mass Calculations
@@ -2505,13 +2505,13 @@ How many grams of chromium(III) oxide can be
 produced from 15.0 g of solid chromium and
 excess oxygen gas?
 What do we know?
-â€¢ The unbalanced equation.
-â€¢ We start with 15.0 g Cr.
-â€¢ We know the atomic masses of chromium (52.00
+•  The unbalanced equation.
+•  We start with 15.0 g Cr.
+•  We know the atomic masses of chromium (52.00
 g/mol) and oxygen (16.00 g/mol) from the periodic
 table.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 36
+Copyright © Cengage Learning. All rights reserved 36
 
 SSeeccttioionn 9 4.3.8
 Mass Calculations
@@ -2524,15 +2524,15 @@ How many grams of chromium(III) oxide can be
 produced from 15.0 g of solid chromium and
 excess oxygen gas?
 What do we need to know?
-â€¢ We need to know the balanced equation.
+•  We need to know the balanced equation.
 | 4Cr(s) + 3O |     | (g) â†’ 2Cr | O (s)  |
 | ----------- | --- | --------- | ------ |
 |             |     | 2         | 2 3    |
-â€¢ We need the molar mass of Cr O .
+•  We need the molar mass of Cr O .
 2 3
 152.00 g/mol
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 Section 9.3 Section 4.8
 Mass Calculations
@@ -2540,20 +2540,20 @@ How do we get there?
 |     | 4Cr(s) + 3O |     | (g) â†’ 2Cr |     | O (s)  |     |
 | --- | ----------- | --- | --------- | --- | ------ | --- |
 |     |             |     | 2         |     | 2 3    |     |
-â€¢ Convert the mass of Cr to moles of Cr.
+•  Convert the mass of Cr to moles of Cr.
 1   m o l   C r
-| 1 5 . 0                     |   g   C | r   ï‚´     |           |   =   0 . 2          | 8 8   m o l   C r |     |
+| 1 5 . 0                     |   g   C | r   • ´     |           |   =   0 . 2          | 8 8   m o l   C r |     |
 | --------------------------- | ------- | --------- | --------- | -------------------- | ----------------- | --- |
 |                             |         | 5 2 . 0 0 |   g   C r |                      |                   |     |
-| â€¢ Determine the moles of Cr |         |           |           | O produced by using  |                   |     |
+| •  Determine the moles of Cr |         |           |           | O produced by using  |                   |     |
 2 3
 the mole ratio from the balanced equation.
 |               |     | 2 mol Cr |     | O                   |     |     |
 | ------------- | --- | -------- | --- | ------------------- | --- | --- |
-| 0.288 mol Cr  |     | ï‚´        |     | 2 3  = 0.144 mol Cr |     | O   |
+| 0.288 mol Cr  |     | • ´        |     | 2 3  = 0.144 mol Cr |     | O   |
 |               |     | 4 mol Cr |     |                     |     | 2 3 |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 9 4.3.8
 Mass Calculations
@@ -2561,25 +2561,25 @@ How do we get there?
 |     |                     |     | 4Cr(s) + 3O |     |     | (g) â†’ 2Cr   |                | O (s)            |     |     |     |     |
 | --- | ------------------- | --- | ----------- | --- | --- | ----------- | -------------- | ---------------- | --- | --- | --- | --- |
 |     |                     |     |             |     |     | 2           |                | 2 3              |     |     |     |     |
-| â€¢   | Convert moles of Cr |     |             |     |     | O           | to grams of Cr |                  | O   | .   |     |     |
+| •    | Convert moles of Cr |     |             |     |     | O           | to grams of Cr |                  | O   | .   |     |     |
 |     |                     |     |             |     |     | 2 3         |                |                  | 2 3 |     |     |     |
 |     |                     |     |             |     |     | 152.00 g Cr |                | O                |     |     |     |     |
-|     | 0.144 mol Cr        |     |             | O   |   ï‚´ |             |                | 2 3  = 21.9 g Cr |     |     | O   |     |
+|     | 0.144 mol Cr        |     |             | O   |   • ´ |             |                | 2 3  = 21.9 g Cr |     |     | O   |     |
 |     |                     |     |             | 2   | 3   | 1 mol Cr    |                | O                |     |     | 2 3 |     |
 2 3
-| â€¢   | Conversion string: |     |     |     |          |     |     |             |     |     |     |     |
+| •    | Conversion string: |     |     |     |          |     |     |             |     |     |     |     |
 | --- | ------------------ | --- | --- | --- | -------- | --- | --- | ----------- | --- | --- | --- | --- |
 |     |                    |     |     |     | 2 mol Cr |     | O   | 152.00 g Cr | O   |     |     |     |
 1 mol Cr
 |           |     |     |     |     |     |     | 2 3 |     | 2   | 3            |     |     |
 | --------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------------ | --- | --- |
-| 15.0 g Cr |     | ï‚´   |     |     | ï‚´   |     | ï‚´   |     |     |  = 21.9 g Cr |     | O   |
+| 15.0 g Cr |     | • ´   |     |     | • ´   |     | • ´   |     |     |  = 21.9 g Cr |     | O   |
 2 3
 |     |     | 52.00 g Cr |     |     | 4 mol Cr |     |     | 1 mol Cr | O   |     |     |     |
 | --- | --- | ---------- | --- | --- | -------- | --- | --- | -------- | --- | --- | --- | --- |
 2 3
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 9 4.3.8
 Mass Calculations
@@ -2620,7 +2620,7 @@ C H
 | --- | -------------------- | --- | --- | --- | --- | -------- | --- | --- | --- |
 |     |                      |     |     |     | 6 6 |          |     | 2   |     |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 9 4.3.8
 Mass Calculations
@@ -2637,11 +2637,11 @@ b) 215 g
 c) 72.6 g
 d) 1.37 g
 1 mol HF 1 mol SnF 156.71 g SnF
-55.0 g HF ï‚´ ï‚´ 2 ï‚´ 2
+55.0 g HF • ´ • ´ 2 • ´ 2
 20.008 g HF 2 mol HF 1 mol SnF
 2
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 41
+Copyright © Cengage Learning. All rights reserved 41
 
 Section 9.3 Section 4.8
 Mass Calculations
@@ -2660,11 +2660,11 @@ c) 5.24 g
 d) 2.62 g
 |         |         |       |     | 1   m o     | l   P C | l     | 3   m o | l   H O   | 1 8 . 0 1 6 |   g   H O |
 | ------- | ------- | ----- | --- | ----------- | ------- | ----- | ------- | --------- | ----------- | --------- |
-| 2 0 . 0 |   g   P | C l   | ï‚´   |             |         | 3   ï‚´ |         | 2   ï‚´     |             | 2         |
+| 2 0 . 0 |   g   P | C l   | • ´   |             |         | 3   • ´ |         | 2   • ´     |             | 2         |
 |         |         | 3     |     | 1 3 7 . 3 2 |   g   P | C l   | 1   m o | l   P C l | 1   m o     | l   H O   |
 |         |         |       |     |             |         | 3     |         | 3         |             | 2         |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 Section 9.3 Section 4.8
 Mass Calculations
@@ -2681,7 +2681,7 @@ If 175 g of X reacts with diboron trioxide to produce 2.43 moles
 | a)   | Ge                             |     |           |           |             |         |                         |
 | b)   | Mg                             |     |           |           |             |         |                         |
 |      |                                |     |           |           | 6   m       | o l   X |                         |
-|      |                                |     | 2 . 4 3   | m o l   B | X   ï‚´       |         | =   1 4 . 6   m o l   X |
+|      |                                |     | 2 . 4 3   | m o l   B | X   • ´       |         | =   1 4 . 6   m o l   X |
 | c)   | Si                             |     |           | 4         | 3 1   m o l |   B X   |                         |
 4 3
 |     |     |     |     |     | #   g r a m s | 1 7 | 5   g   X |
@@ -2690,18 +2690,18 @@ d) C M o l a r   M a s s   =     =     =   1 2 . 0   g / m o l
 |     |     |     |     |     | #   m o l e s | 1 4 . | 6   m o l   X |
 | --- | --- | --- | --- | --- | ------------- | ----- | ------------- |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 9 4.4.9
 The Concept of Limiting Reactants
 Stoichiometric Mixture
-â€¢ Contains the relative amounts of reactants that
+•  Contains the relative amounts of reactants that
 matches the numbers in the balanced equation.
 | N (g)  +  3H | (g)  â†’ | 2NH | (g) |
 | ------------ | ------ | --- | --- |
 | 2            | 2      |     | 3   |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 9 4.4.9
 The Concept of Limiting Reactants
@@ -2710,58 +2710,58 @@ Limiting Reactant Mixture
 | ------------ | ------ | --- | --- |
 | 2            | 2      |     | 3   |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 9 4.4.9
 The Concept of Limiting Reactants
 Limiting Reactant Mixture
 N (g) + 3H (g) â†’ 2NH (g)
 2 2 3
-â€¢ Limiting reactant is the reactant that runs
+•  Limiting reactant is the reactant that runs
 out first and thus limits the amounts of
 product(s) that can form.
 â–ª H
 2
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 46
+Copyright © Cengage Learning. All rights reserved 46
 
 SSeeccttioionn 9 4.5.9
 Calculations Involving a Limiting Reactant
-â€¢ Determine which reactant is limiting to
+•  Determine which reactant is limiting to
 calculate correctly the amounts of products
 that will be formed.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 47
+Copyright © Cengage Learning. All rights reserved 47
 
 SSeeccttioionn 9 4.5.9
 Calculations Involving a Limiting Reactant
 Limiting Reactants
-â€¢ Methane and water will react to form
+•  Methane and water will react to form
 products according to the equation:
 | CH  | + H | O â†’ | 3H  | + CO |
 | --- | --- | --- | --- | ---- |
 |     | 4   | 2   |     | 2    |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 9 4.5.9
 Calculations Involving a Limiting Reactant
 Limiting Reactants
-â€¢ H O molecules are used up first, leaving two CH
+•  H O molecules are used up first, leaving two CH
 2 4
 molecules unreacted.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 49
+Copyright © Cengage Learning. All rights reserved 49
 
 SSeeccttioionn 9 4.5.9
 Calculations Involving a Limiting Reactant
 Limiting Reactants
-â€¢ The amount of products that can form is
+•  The amount of products that can form is
 limited by the water.
-â€¢ Water is the limiting reactant.
-â€¢ Methane is in excess.
+•  Water is the limiting reactant.
+•  Methane is in excess.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 50
+Copyright © Cengage Learning. All rights reserved 50
 
 SSeeccttioionn 9 4.5.10
 Calculations Involving a Limiting Reactant
@@ -2779,60 +2779,60 @@ of the desired product.
 using the molar mass (if this is required by the
 problem).
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 51
+Copyright © Cengage Learning. All rights reserved 51
 
 SSeeccttioionn 9 4.5.10
 Calculations Involving a Limiting Reactant
 Example
-â€¢ You know that chemical A reacts with
+•  You know that chemical A reacts with
 chemical B. You react 10.0 g of A with
 10.0 g of B.
 â–ª What information do you need to know
 in order to determine the mass of
 product that will be produced?
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 52
+Copyright © Cengage Learning. All rights reserved 52
 
 SSeeccttioionn 9 4.5.10
 Calculations Involving a Limiting Reactant
-Letâ€™s Think About It
-â€¢ Where are we going?
+Let's Think About It
+•  Where are we going?
 â–ª To determine the mass of product that will be
 produced when you react 10.0 g of A with 10.0
 g of B.
-â€¢ What do we need to know?
+•  What do we need to know?
 â–ª The mole ratio between A, B, and the product
 they form. In other words, we need to know
 the balanced reaction equation.
 â–ª The molar masses of A, B, and the product
 they form.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 53
+Copyright © Cengage Learning. All rights reserved 53
 
 SSeeccttioionn 9 4.5.10
 Calculations Involving a Limiting Reactant
-Example â€“ Continued
-â€¢ You react 10.0 g of A with 10.0 g of B. What mass of
+Example – Continued
+•  You react 10.0 g of A with 10.0 g of B. What mass of
 product will be produced given that the molar mass of
 A is 10.0 g/mol, B is 20.0 g/mol, and C is 25.0 g/mol?
 They react according to the equation:
 A + 3B â†’ 2C
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 54
+Copyright © Cengage Learning. All rights reserved 54
 
 Section 9.5
 Calculations Involving a Limiting Reactant
-Example â€“ Continued
-â€¢ You react 10.0 g of A with 10.0 g of B. What mass of
+Example – Continued
+•  You react 10.0 g of A with 10.0 g of B. What mass of
 product will be produced given that the molar mass of
 A is 10.0 g/mol, B is 20.0 g/mol, and C is 25.0 g/mol?
 They react according to the equation:
 A + 3B â†’ 2C
-â€¢ How do we get there?
+•  How do we get there?
 â–ª Convert known masses of reactants to moles.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 55
-1 0 . 0 g A ï‚´
+Copyright © Cengage Learning. All rights reserved 55
+1 0 . 0 g A • ´
 1
 1
 0
@@ -2845,73 +2845,73 @@ A
 = 1 . 0 0 m o l A
 Section 4.10
 1 mol B
-10.0 g B ï‚´ = 0.500 mol B
+10.0 g B • ´ = 0.500 mol B
 20.0 g B
 
 SSeeccttioionn 9 4.5.10
 Calculations Involving a Limiting Reactant
-Example â€“ Continued
-â€¢ You react 10.0 g of A with 10.0 g of B. What mass of
+Example – Continued
+•  You react 10.0 g of A with 10.0 g of B. What mass of
 product will be produced given that the molar mass of
 A is 10.0 g/mol, B is 20.0 g/mol, and C is 25.0 g/mol?
 They react according to the equation:
 A + 3B â†’ 2C
-â€¢ How do we get there?
+•  How do we get there?
 â–ª Determine which reactant is limiting.
 3 mol B
-1.00 mol A ï‚´ = 3.00 mol B required to
+1.00 mol A • ´ = 3.00 mol B required to
 1 mol A
 react with all of the A
 â–ª Only 0.500 mol B is available, so B is the limiting
 reactant.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 56
+Copyright © Cengage Learning. All rights reserved 56
 
 SSeeccttioionn 9 4.5.10
 Calculations Involving a Limiting Reactant
-Example â€“ Continued
-â€¢ You react 10.0 g of A with 10.0 g of B. What mass of
+Example – Continued
+•  You react 10.0 g of A with 10.0 g of B. What mass of
 product will be produced given that the molar mass of
 A is 10.0 g/mol, B is 20.0 g/mol, and C is 25.0 g/mol?
 They react according to the equation:
 A + 3B â†’ 2C
-â€¢ How do we get there?
+•  How do we get there?
 â–ª Compute the number of moles of C produced.
 2 mol C
-0.500 mol B ï‚´ = 0.333 mol C produced
+0.500 mol B • ´ = 0.333 mol C produced
 3 mol B
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 57
+Copyright © Cengage Learning. All rights reserved 57
 
 SSeeccttioionn 9 4.5.10
 Calculations Involving a Limiting Reactant
-Example â€“ Continued
-â€¢ You react 10.0 g of A with 10.0 g of B. What mass of
+Example – Continued
+•  You react 10.0 g of A with 10.0 g of B. What mass of
 product will be produced given that the molar mass of
 A is 10.0 g/mol, B is 20.0 g/mol, and C is 25.0 g/mol?
 They react according to the equation:
 A + 3B â†’ 2C
-â€¢ How do we get there?
+•  How do we get there?
 â–ª Convert from moles of C to grams of C using the
 molar mass.
 25.0 g C
-0.333 mol C ï‚´ = 8.33 g C
+0.333 mol C • ´ = 8.33 g C
 1 mol C
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 58
+Copyright © Cengage Learning. All rights reserved 58
 
 SSeeccttioionn 9 4.5.10
 Calculations Involving a Limiting Reactant
 Notice
-| â€¢   | We        | cannot |        | simply |          | add   | the total |          | moles |        | of all  | the |
+| •    | We        | cannot |        | simply |          | add   | the total |          | moles |        | of all  | the |
 | --- | --------- | ------ | ------ | ------ | -------- | ----- | --------- | -------- | ----- | ------ | ------- | --- |
 |     | reactants |        |        | to     | decide   |       | which     | reactant |       |        | mixture |     |
 |     | makes     |        | the    | most   | product. |       |           |          |       |        |         |     |
-| â€¢   | We        | must   |        | always |          | think | about     | how      | much  |        | product |     |
+| •    | We        | must   |        | always |          | think | about     | how      | much  |        | product |     |
 |     | can       | be     | formed |        | by       | using | what      | we       | are   | given, |         | and |
 |     | the       | ratio  | in     | the    | balanced |       | equation. |          |       |        |         |     |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 9 4.5.10
 Calculations Involving a Limiting Reactant
@@ -2938,7 +2938,7 @@ Limiting Reactant is always the smallest value!
 I is the LIMITING REACTANT and H is in EXCESS.
 2 2
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 60
+Copyright © Cengage Learning. All rights reserved 60
 
 SSeeccttioionn 9 4.5.10
 Calculations Involving a Limiting Reactant
@@ -2964,47 +2964,47 @@ d) 1.82 g
 | --- | -------- | ---------- | -------------- | --- | --- |
 |     |          | 3          | 3              | 3   |     |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 9 4.6.11
 Percent Yield
 Percent Yield
-â€¢ An important indicator of the efficiency of a
+•  An important indicator of the efficiency of a
 particular laboratory or industrial reaction.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 62
+Copyright © Cengage Learning. All rights reserved 62
 
 SSeeccttioionn 9 4.6.11
 Percent Yield
-| â€¢   | Theoretical |              |         |          | Yield      |          |     |           |         |     |          |     |
+| •    | Theoretical |              |         |          | Yield      |          |     |           |         |     |          |     |
 | --- | ----------- | ------------ | ------- | -------- | ---------- | -------- | --- | --------- | ------- | --- | -------- | --- |
 |     | â–ª           | The          | maximum |          |            | amount   |     | of        | a given |     | product  |     |
 |     |             | that         | can     |          | be         | formed   |     | when      |         | the | limiting |     |
 |     |             | reactant     |         | is       | completely |          |     | consumed. |         |     |          |     |
-| â€¢   | The         | Actual       |         | Yield    |            |          |     |           |         |     |          |     |
-|     | â€“           | amount       |         | actually |            | produced |     |           | of      | a   | reaction | is  |
+| •    | The         | Actual       |         | Yield    |            |          |     |           |         |     |          |     |
+|     | –           | amount       |         | actually |            | produced |     |           | of      | a   | reaction | is  |
 |     |             | usually      |         | less     | than       |          | the | maximum   |         |     | expected |     |
 |     |             | (theoretical |         |          | yield).    |          |     |           |         |     |          |     |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 Section 9.6 Section 4.11
 Percent Yield
 Percent Yield
-| â€¢   | The actual amount of a given product as  |     |     |     |     |     |     |     |     |
+| •    | The actual amount of a given product as  |     |     |     |     |     |     |     |     |
 | --- | ---------------------------------------- | --- | --- | --- | --- | --- | --- | --- | --- |
 the percentage of the theoretical yield.
 |     | A c t | u a l   y | i e l d |       |       |     |       |         |           |
 | --- | ----- | --------- | ------- | ----- | ----- | --- | ----- | ------- | --------- |
-|     |       |           |         | ï‚´ 1   | 0 0 % | = p | e r c | e n t   | y i e l d |
+|     |       |           |         | • ´ 1   | 0 0 % | = p | e r c | e n t   | y i e l d |
 | T h | e o r | e t i c a | l   y i | e l d |       |     |       |         |           |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 9 4.6.11
 Percent Yield
-Example â€“ Recall
-â€¢ You react 10.0 g of A with 10.0 g of B. What mass of
+Example – Recall
+•  You react 10.0 g of A with 10.0 g of B. What mass of
 product will be produced given that the molar mass of
 A is 10.0 g/mol, B is 20.0 g/mol, and C is 25.0 g/mol?
 They react according to the equation:
@@ -3012,16 +3012,16 @@ A + 3B â†’ 2C
 We determined that 8.33 g C should be produced.
 7.23 g of C is what was actually made in the lab. What
 is the percent yield of the reaction?
-â€¢ Where are we going?
+•  Where are we going?
 â–ª We want to determine the percent yield of the
 reaction.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 65
+Copyright © Cengage Learning. All rights reserved 65
 
 SSeeccttioionn 9 4.6.11
 Percent Yield
-Example â€“ Recall
-â€¢ You react 10.0 g of A with 10.0 g of B. What mass of
+Example – Recall
+•  You react 10.0 g of A with 10.0 g of B. What mass of
 product will be produced given that the molar mass of
 A is 10.0 g/mol, B is 20.0 g/mol, and C is 25.0 g/mol?
 They react according to the equation:
@@ -3029,15 +3029,15 @@ A + 3B â†’ 2C
 We determined that 8.33 g C should be produced.
 7.23 g of C is what was actually made in the lab. What
 is the percent yield of the reaction?
-â€¢ What do we know?
+•  What do we know?
 â–ª We know the actual and theoretical yields.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 66
+Copyright © Cengage Learning. All rights reserved 66
 
 SSeeccttioionn 9 4.6.11
 Percent Yield
-Example â€“ Recall
-â€¢ You react 10.0 g of A with 10.0 g of B. What mass of
+Example – Recall
+•  You react 10.0 g of A with 10.0 g of B. What mass of
 product will be produced given that the molar mass of
 A is 10.0 g/mol, B is 20.0 g/mol, and C is 25.0 g/mol?
 They react according to the equation:
@@ -3045,12 +3045,12 @@ A + 3B â†’ 2C
 We determined that 8.33 g C should be produced.
 7.23 g of C is what was actually made in the lab. What
 is the percent yield of the reaction?
-â€¢ How do we get there?
+•  How do we get there?
 7.23 g C
-ï‚´ 100% = 86.8%
+• ´ 100% = 86.8%
 8.33 g C
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 67
+Copyright © Cengage Learning. All rights reserved 67
 
 SSeeccttioionn 9 4.6.11
 Percent Yield
@@ -3079,7 +3079,7 @@ Step 3: Calculate % yield
 |           |     | theoretical |     |        |     |     | 143 g H |     | O   |        |     |          |     |
 2
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 9 4.6.11
 Percent Yield
@@ -3096,7 +3096,7 @@ b) 80.0%
 c) 89.8%
 d) 92.4%
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 69
+Copyright © Cengage Learning. All rights reserved 69
 
 SSeeccttioionn 9 4.6.11
 Percent Yield
@@ -3113,16 +3113,16 @@ b) 46.1 g
 c) 184 g
 d) 738 g
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 9 4.6.12
 Formulas of Compounds
 Percent Yield
 Empirical Formulas
-â€¢ The empirical formula of a compound is the
+•  The empirical formula of a compound is the
 simplest whole number ratio of the atoms
 present in the compound.
-â€¢ The empirical formula can be found from the
+•  The empirical formula can be found from the
 percent composition of the compound.
 Return to TOC
 
@@ -3130,16 +3130,16 @@ SSeeccttioionn 9 4.6.12
 Formulas of Compounds
 Percent Yield
 Formulas
-â€¢ Empirical formula = CH
+•  Empirical formula = CH
 â–ª Simplest whole-number ratio
-â€¢ Molecular formula = (empirical formula)
+•  Molecular formula = (empirical formula)
 n
 [n = integer]
-â€¢ Molecular formula = C H = (CH)
+•  Molecular formula = C H = (CH)
 6 6 6
 â–ª Actual formula of the compound
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 72
+Copyright © Cengage Learning. All rights reserved 72
 
 SSeeccttioionn 9 4.6.13
 Calculations of Empirical Formulas
@@ -3149,14 +3149,14 @@ A gaseous compound containing carbon and
 hydrogen was analyzed and found to consist of
 83.65% carbon by mass. Determine the empirical
 formula of the compound.
-â€¢ Obtain the mass of each element present (in
+•  Obtain the mass of each element present (in
 grams).
 Assume you have 100 g of the compound.
 83.65% C = 83.65 g C
-(100.00 â€“ 83.65)
+(100.00 – 83.65)
 16.35% H = 16.35 g H
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 73
+Copyright © Cengage Learning. All rights reserved 73
 
 Section 9.6 Section 4.13
 Calculations of Empirical Formulas
@@ -3165,15 +3165,15 @@ Steps for Determining the Empirical Formula of a Compound
 2. Determine the number of moles of each type
 of atom present.
 1   m o l   C
-| 8 3 . 6 | 5   g   C |   ï‚´             |   =   6 | . 9 6 5   | m o l   C |
+| 8 3 . 6 | 5   g   C |   • ´             |   =   6 | . 9 6 5   | m o l   C |
 | ------- | --------- | --------------- | ------- | --------- | --------- |
 |         |           | 1 2 . 0 1   g   | C       |           |           |
 1   m o l   H
-| 1 6 . 3 | 5   g   H |   ï‚´               |   =   1 | 6 . 2 2   m | o l   H |
+| 1 6 . 3 | 5   g   H |   • ´               |   =   1 | 6 . 2 2   m | o l   H |
 | ------- | --------- | ----------------- | ------- | ----------- | ------- |
 |         |           | 1 . 0 0 8   g   H |         |             |         |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttioionn 9 4.6.13
 Calculations of Empirical Formulas
@@ -3193,7 +3193,7 @@ to step 4.
 = 2.33
 6.965 mol
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 75
+Copyright © Cengage Learning. All rights reserved 75
 
 SSeeccttioionn 9 4.6.13
 Calculations of Empirical Formulas
@@ -3204,12 +3204,12 @@ the smallest integer that will convert all of
 them to whole numbers. This set of whole
 numbers represents the subscripts in the
 empirical formula.
-C: 1 ï‚´ 3 = 3
-H: 2.33 ï‚´ 3 = 7
+C: 1 • ´ 3 = 3
+H: 2.33 • ´ 3 = 7
 The empirical formula is C H .
 3 7
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 76
+Copyright © Cengage Learning. All rights reserved 76
 
 SSeeccttioionn 9 4.6.14
 Empirical Formula from the Percent Composition
@@ -3262,20 +3262,20 @@ Return to TOC
 SSeeccttioionn 9 4.6.15
 Molecular Formula
 Percent Yield
-â€¢ The molecular formula is the exact
+•  The molecular formula is the exact
 formula of the molecules present in a
 substance.
-â€¢ The molecular formula is always an
+•  The molecular formula is always an
 integer multiple of the empirical formula.
 Molecular formula = (empirical formula)
 n
 where n is a whole number
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 79
+Copyright © Cengage Learning. All rights reserved 79
 
 Section 9.6
 Percent Yield
-Continued Exampleâ€¦
+Continued Example...
 A gaseous compound containing carbon and
 hydrogen was analyzed and found to consist of
 83.65% carbon by mass. The molar mass of the
@@ -3285,10 +3285,10 @@ empirical formula to be C H . What is the molecular
 formula of the compound?
 Molar mass of C H = 43.086 g/mol
 3 7
-C H Ã— 2 = C H
+C H × 2 = C H
 3 7 6 14
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 80
+Copyright © Cengage Learning. All rights reserved 80
 4
 8
 3
@@ -3311,7 +3311,7 @@ Molecular Formula
 Percent Yield
 Flow Chart of the Relationships of Calculations
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 81
+Copyright © Cengage Learning. All rights reserved 81
 
 SSeeccttioionn 9 4.6.15
 Molecular Formula
@@ -3333,12 +3333,12 @@ molecular formula?
 |     |     |     | 3 5 | 2   |     |
 | --- | --- | --- | --- | --- | --- |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 ATOMIC STRUCTURE AND THE PERIODIC TABLE
 
 1.Lights and spectroscopy
-ï‚ž Spectroscopy-It is the study of
+• ž Spectroscopy-It is the study of
 dispersion of the light of an object into
 the colors that make it up. It is
 concerned with the absorption, emission
@@ -3347,62 +3347,62 @@ radiation by atoms or molecules.
 
 A. The characteristics of
 light.
-ï‚ž Rectilinear properties of light: light
+• ž Rectilinear properties of light: light
 moves in a straight line.
-ï‚ž Its frequency does not change when it
+• ž Its frequency does not change when it
 passes from one medium to another.
-ï‚ž It passes completely through
+• ž It passes completely through
 transparent objects, partially through
 translucent objects and not at all in
 opaque objects.
-ï‚ž Its speed changes when it goes from one
+• ž Its speed changes when it goes from one
 medium to another
 
 The dual nature of light
-ï‚ž Light has a wave nature and a particle nature.
-ï‚ž When we say wave nature we mean that light acts
+• ž Light has a wave nature and a particle nature.
+• ž When we say wave nature we mean that light acts
 like a wave. some common terms which are
 associated with this concept:
-ï‚ž Amplitude: - the height of the wave
-ï‚ž Frequency: - the number of waves to pass a point
+• ž Amplitude: - the height of the wave
+• ž Frequency: - the number of waves to pass a point
 per minute
-ï‚ž Wave speed: - how fast the wave is moving
-ï‚ž Wave length: - the distance between successive
+• ž Wave speed: - how fast the wave is moving
+• ž Wave length: - the distance between successive
 waves
-ï‚ž E(energy)=h(Planckâ€™s constant)v(velocity) =
+• ž E(energy)=h(Planck's constant)v(velocity) =
 hC(speed of light)/Î»( wave length)
-ï‚ž Where h=6.62x10-34J.S and C=3x108m/s
+• ž Where h=6.62x10-34J.S and C=3x108m/s
 
 b. Quantization and
 photons
-ï‚ž Quantization: process of converting the
+• ž Quantization: process of converting the
 sampled analogue signal into impulses
 of discrete values of amplitude.
-ï‚ž Energy is lost in small definite amounts
-called â€œquantumâ€
-ï‚ž E=nhv
-ï‚ž Where E is the energy, v is the
+• ž Energy is lost in small definite amounts
+called "quantum"
+• ž E=nhv
+• ž Where E is the energy, v is the
 frequency, n is a positive integer called
-the quantum number and h is Planckâ€™s
+the quantum number and h is Planck's
 constant.
 
 Quantum numbers
-| ï‚ž The principal quantum number (n) - |     | a positive  |
+| • ž The principal quantum number (n) - |     | a positive  |
 | ------------------------------------ | --- | ----------- |
-number having the values; 1, 2, 3â€¦
+number having the values; 1, 2, 3...
 | The azimuthal | quantum number(l)- | also  |
 | ------------- | ------------------ | ----- |
-ï‚ž
+• ž
 known as angular momentum or subsidiary
 quantum number and having values from 0 to
 n-1
 | The magnetic quantum number(m |     | )- also  |
 | ----------------------------- | --- | -------- |
-ï‚ž
+• ž
 l
 known as the orbital-orientation quantum
-number and having values from â€“l to +l
-| ï‚ž The electron spin quantum number(m |     | ) has  |
+number and having values from –l to +l
+| • ž The electron spin quantum number(m |     | ) has  |
 | ------------------------------------ | --- | ------ |
 s
 values of either +1/2 ( represented by â†‘) or -
@@ -3412,26 +3412,26 @@ values of either +1/2 ( represented by â†‘) or -
 hydrogen atom
 The spectrum of atomic hydrogen
 a.
-ï‚ž certain properties of the electron in a hydrogen
+• ž certain properties of the electron in a hydrogen
 atom are quantized.
-ï‚ž Bohr proposed three postulates for his model:
-ï‚ž The hydrogen atom has stationary states. A
+• ž Bohr proposed three postulates for his model:
+• ž The hydrogen atom has stationary states. A
 stationary state is a certain allowable energy level
 which is associated with a fixed circular orbit of the
 electron around the nucleus.
-ï‚ž The atom does not radiate energy in a stationary
+• ž The atom does not radiate energy in a stationary
 state.
-ï‚ž E =E -E =hv, where the subscripts f and I represent
+• ž E =E -E =hv, where the subscripts f and I represent
 ph f i
 the final and initial states respectively
 
 B. particles and waves
-ï‚ž wave-particle duality- this theory is that
+• ž wave-particle duality- this theory is that
 matter behaves both as particle or wave
 depending on the circumstances. What that
 means is that particles show behaviors like
 interference or diffraction.
-ï‚ž In reference to what we mentioned above
+• ž In reference to what we mentioned above
 we are not saying that matter displays
 different behavior in a macroscopic world
 in comparison to its behavior in a sub
@@ -3442,71 +3442,71 @@ shift so does our notice of the behaviors.
 electron atoms
 Orbital energies
 a.
-ï‚ž The energy of an electron in a hydrogen atom is
-determined by the quantum number â€˜nâ€™ and
+• ž The energy of an electron in a hydrogen atom is
+determined by the quantum number 'n' and
 increases as follows:
-ï‚ž 1s<2s<=2p<3s=3p=3d<4s=4p=4d=4f<â€¦
-ï‚ž In many electron atoms however, the shielding effect
-(electron-electron repulsion causes the energy of â€˜pâ€™
-sub shell to be higher than that of an â€˜sâ€™ sub shell of
-the same shell and the energy of a â€˜dâ€™ sub shell a to
-be higher than that of a â€˜pâ€™ sub shell of the same
+• ž 1s<2s<=2p<3s=3p=3d<4s=4p=4d=4f<...
+• ž In many electron atoms however, the shielding effect
+(electron-electron repulsion causes the energy of 'p'
+sub shell to be higher than that of an 's' sub shell of
+the same shell and the energy of a 'd' sub shell a to
+be higher than that of a 'p' sub shell of the same
 shell. The one with the lower energy is said to be
 more penetrating than the one with the higher
 energy.
 
 b. The building up
 principle
-ï‚ž The principle states that electrons always
+• ž The principle states that electrons always
 occupy the lowest energy orbital before
 occupying a higher one.
-ï‚ž Except for hydrogen, the energies of
-orbitalâ€™s with the same quantum number
-â€˜nâ€™ increases with â€˜lâ€™.
-ï‚ž When sub shells have the same energy the
+• ž Except for hydrogen, the energies of
+orbital's with the same quantum number
+'n' increases with 'l'.
+• ž When sub shells have the same energy the
 building up principle is not based on the
 order of their energies but the total energy.
-ï‚ž Some exceptions to the building up
+• ž Some exceptions to the building up
 principle are: 24Cr = [Ar]3d54s1 and 29Cu =
 [Ar]4s13d9
 
 4.A survey of periodic table
 Blocks, periods and groups
 a.
-ï‚ž Periods- the horizontal rows of
+• ž Periods- the horizontal rows of
 elements in the periodic table.
-ï‚ž elements in the same period have the
+• ž elements in the same period have the
 same number of shells.
-ï‚ž Periods 1, 2, 3 are short periods while 4,
+• ž Periods 1, 2, 3 are short periods while 4,
 5, 6 are long periods. Period 6 is the
 longest with more than 24 elements.
 Period 7 elements are radioactive or
 artificial elements.
 
 Groups/ Families-
-ï‚ž are the vertical columns in the periodic table.
+• ž are the vertical columns in the periodic table.
 There are 18 of them usually assigned to
 roman numbers.
-| IA- | VIIIA â€“ | main group (A group) |
+| IA- | VIIIA – | main group (A group) |
 | --- | ------- | -------------------- |
-ï‚ž
-| ï‚ž IB- | VIIIB â€“ | sub group (B group) |
+• ž
+| • ž IB- | VIIIB – | sub group (B group) |
 | ----- | ------- | ------------------- |
 
 Block
-ï‚ž S block elements â€“ the last element to
+• ž S block elements – the last element to
 enter s- orbital.
-ï‚ž p-block elements- the last electron enters
+• ž p-block elements- the last electron enters
 the p- orbital.
-ï‚ž d-block (transition) - its found between
+• ž d-block (transition) - its found between
 s and p block.
-ï‚ž f-block (rare earth metals)-The last
+• ž f-block (rare earth metals)-The last
 valence electron is being added to the f-
 orbital
 
 b.Periodicity of physical
 properties
-ï‚ž The periodicity of some physical properties in the periodic table
+• ž The periodicity of some physical properties in the periodic table
 is listed below:
 1. Atomic radius: the distance from the centre of an atom to the
 outer most edge. It is affected by 2 factors.
@@ -3514,7 +3514,7 @@ a. Number of protons- the greater the number of protons the
 smaller the atom.
 b. Number of electron shells- the greater the number of shells, the
 greater the atom.
-ï‚ž Atomic radius decreases as we go across a period from left to
+• ž Atomic radius decreases as we go across a period from left to
 right.
 2. Melting point: the point at which a given solid melts. Melting
 point decreases across a period from left to right. It increases
@@ -3524,16 +3524,16 @@ vaporize.
 
 c. Trends in chemical
 properties
-ï‚ž Some of the chemical periodic properties are:
-ï‚ž Metallic character: it depends on the ability of
+• ž Some of the chemical periodic properties are:
+• ž Metallic character: it depends on the ability of
 metallic elements to lose their outer valence
 electrons. It decreases across a period from left
 to right and decreases down a group.
-ï‚ž Electron negativity: itâ€™s the ability of a
+• ž Electron negativity: it's the ability of a
 substance to attract shared electrons of a
 covalent bond towards itself. It increases
 across a period and decreases down a group.
-ï‚ž Ionization energy: itâ€™s the amount of energy
+• ž Ionization energy: it's the amount of energy
 require to remove an electron from the valence
 shell of an atom. It increases across a period
 and decreases down a group.
@@ -3567,18 +3567,18 @@ Table of Contents
 | to         | each |     | other  |     | to form |     | molecules, |
 | determines |      |     | nearly |     | all of  | the | chemical   |
 | properties |      | we  | see.   |     |         |     |            |
-â€œ8â€
+"8"
 | And,    | as we     |     | shall | see, | the      | number |          |
 | ------- | --------- | --- | ----- | ---- | -------- | ------ | -------- |
 | is very | important |     |       | to   | chemical |        | bonding. |
 
 CChhaapptteerr 162
 Questions to Consider
-â€¢ What is meant by the term â€œchemical
-bondâ€?
-â€¢ Why do atoms bond with each other to
+•  What is meant by the term "chemical
+bond"?
+•  Why do atoms bond with each other to
 form Compounds?
-â€¢ How do atoms bond with each other to
+•  How do atoms bond with each other to
 form compounds?
 
 SSeeccttiioonn  162..11
@@ -3590,37 +3590,37 @@ A Chemical Bond
 | A         | bond   | will   |      | form     | if     | the      |     | energy  |     | of       | the |
 | aggregate |        |        | is   | lower    |        | than     |     | that    |     | of       | the |
 | separated |        | atoms. |      |          |        |          |     |         |     |          |     |
-| Bond      | energy |        |      | â€“ energy |        | required |     |         | to  | break    | a   |
+| Bond      | energy |        |      | – energy |        | required |     |         | to  | break    | a   |
 | chemical  |        | bond.  |      |          |        |          |     |         |     |          |     |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttiioonn 162..11
 Types of Chemical Bonds
 Ionic Bonding
-â€¢ Ionic compound results when a metal
+•  Ionic compound results when a metal
 reacts with a nonmetal.
-â€¢ Electrons are transferred.
+•  Electrons are transferred.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 7
+Copyright © Cengage Learning. All rights reserved 7
 
 SSeeccttiioonn  162..11
 Types of Chemical Bonds
 Covalent Bonding
-| â€¢ A | covalent | bond       | results | when | electrons |
+| •  A | covalent | bond       | results | when | electrons |
 | --- | -------- | ---------- | ------- | ---- | --------- |
 | are | shared   | by nuclei. |         |      |           |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttiioonn 162..11
 Types of Chemical Bonds
 Polar Covalent Bond
-â€¢ Unequal sharing of electrons between atoms in a
+•  Unequal sharing of electrons between atoms in a
 molecule.
-â€¢ One atom attracts the electrons more than the other
+•  One atom attracts the electrons more than the other
 atom.
-â€¢ Results in a charge separation in the bond (partial
+•  Results in a charge separation in the bond (partial
 positive and partial negative charge).
 Return to TOC
 
@@ -3630,8 +3630,8 @@ The ability of an atom in a molecule to
 attract shared electrons to itself.
 For a molecule HX, the relative
 electronegativities of the H and X atoms are
-determined by comparing the measured Hâ€“X bond
-energy with the â€œexpectedâ€ Hâ€“X bond energy.
+determined by comparing the measured H–X bond
+energy with the "expected" H–X bond energy.
 Return to TOC
 
 SSeeccttiioonn 162..22
@@ -3651,7 +3651,7 @@ attraction for an electron? Why?
 In a bond between fluorine and iodine, which
 has more attraction for an electron? Why?
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 13
+Copyright © Cengage Learning. All rights reserved 13
 
 SSeeccttiioonn 162..22
 Electronegativity
@@ -3660,31 +3660,31 @@ Return to TOC
 SSeeccttiioonn 162..22
 Electronegativity
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 15
+Copyright © Cengage Learning. All rights reserved 15
 
 SSeeccttiioonn  162..22
 Electronegativity
 Exercise
 Arrange the following bonds from most to least
 polar:
-| a)  | Nâ€“F    | Oâ€“F    | Câ€“F   |
+| a)  | N–F    | O–F    | C–F   |
 | --- | ------ | ------ | ----- |
-| b)  | Câ€“F    | Nâ€“O    | Siâ€“F  |
-| c)  | Clâ€“Cl  | Bâ€“Cl   | Sâ€“Cl  |
-| a)  | Câ€“F,   | Nâ€“F,   | Oâ€“F   |
-| b)  | Siâ€“F,  | Câ€“F,   | Nâ€“O   |
-| c)  | Bâ€“Cl,  | Sâ€“Cl,  | Clâ€“Cl |
+| b)  | C–F    | N–O    | Si–F  |
+| c)  | Cl–Cl  | B–Cl   | S–Cl  |
+| a)  | C–F,   | N–F,   | O–F   |
+| b)  | Si–F,  | C–F,   | N–O   |
+| c)  | B–Cl,  | S–Cl,  | Cl–Cl |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttiioonn  162..33
 Bond Polarity and Dipole Moments
 Dipole Moment
-| â€¢   | Property |          | of          | a molecule  |            |     | whose    |        | charge      | distribution |        |      |
+| •    | Property |          | of          | a molecule  |            |     | whose    |        | charge      | distribution |        |      |
 | --- | -------- | -------- | ----------- | ----------- | ---------- | --- | -------- | ------ | ----------- | ------------ | ------ | ---- |
 |     | can      | be       | represented |             |            | by  | a center |        | of positive |              | charge |      |
 |     | and      | a center |             | of negative |            |     | charge.  |        |             |              |        |      |
-| â€¢   | Use      | an       | arrow       | to          | represent  |     | a        | dipole | moment.     |              |        |      |
+| •    | Use      | an       | arrow       | to          | represent  |     | a        | dipole | moment.     |              |        |      |
 |     | â–ª Point  |          | to the      | negative    |            |     | charge   |        | center      | with         | the    | tail |
 |     | of       | the      | arrow       |             | indicating |     |          | the    | positive    | center       |        | of   |
 charge.
@@ -3694,23 +3694,23 @@ SSeeccttiioonn 162..33
 Bond Polarity and Dipole Moments
 Dipole Moment in a Water Molecule
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 18
+Copyright © Cengage Learning. All rights reserved 18
 
 SSeeccttiioonn 162..33
 Bond Polarity and Dipole Moments
-â€¢ The polarity of water affects its properties.
+•  The polarity of water affects its properties.
 â–ª Permits ionic compounds to dissolve in it.
 â–ª Causes water to remain liquid at higher temperature.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 19
+Copyright © Cengage Learning. All rights reserved 19
 
 SSeeccttiioonn 162..44
 Stable Electron Configurations and Charges on Ions
 Group 1 metals always form 1+ cations.
 Group 2 metals always form 2+ cations.
 Aluminum in Group 3 always forms a 3+ cation.
-Group 7 nonmetals form 1â€“ anions.
-Group 6 elements always form 2â€“ anions.
+Group 7 nonmetals form 1– anions.
+Group 6 elements always form 2– anions.
 Return to TOC
 
 SSeeccttiioonn 162..44
@@ -3718,7 +3718,7 @@ Stable Electron Configurations and Charges on Ions
 The Formation of Ions by Metals and
 Nonmetals
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 21
+Copyright © Cengage Learning. All rights reserved 21
 
 SSeeccttiioonn 162..44
 Stable Electron Configurations and Charges on Ions
@@ -3743,7 +3743,7 @@ Electron Configurations and Bonding
 | configuration |     |                                |               |     | of       | the | nonmetal |           |                  | achieves |       |     | the  |
 | electron      |     |                                | configuration |     |          |     | of       | the       | next             |          | noble |     | gas  |
 atom.
-| â€“   | The      |     | valence |       |         | orbital |     | of            | the | metal |     |     | are |
+| –   | The      |     | valence |       |         | orbital |     | of            | the | metal |     |     | are |
 | --- | -------- | --- | ------- | ----- | ------- | ------- | --- | ------------- | --- | ----- | --- | --- | --- |
 |     | emptied  |     |         | to    | achieve |         | the | configuration |     |       |     | of  | the |
 |     | previous |     |         | noble |         | gas.    |     |               |     |       |     |     |     |
@@ -3757,15 +3757,15 @@ Stable Electron Configurations and Charges on Ions
 | that           | completes |           | the    | valence-electron |         |     |
 | configurations |           | of both   | atoms. |                  |         |     |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttiioonn 162..44
 Stable Electron Configurations and Charges on Ions
 Predicting Formulas of Ionic Compounds
-â€¢ Chemical compounds are always electrically
+•  Chemical compounds are always electrically
 neutral.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 25
+Copyright © Cengage Learning. All rights reserved 25
 
 SSeeccttiioonn 162..44
 Stable Electron Configurations and Charges on Ions
@@ -3777,24 +3777,24 @@ b) 1s22s22p63s23p2
 c) 1s22s22p63s23p4
 d) 1s22s22p63s23p6
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 26
+Copyright © Cengage Learning. All rights reserved 26
 
 SSeeccttiioonn  162..55
 Ionic Bonding and Structures of Ionic Compounds
 Structures of Ionic Compounds
-| â€¢ Ions      | are | packed  | together | to maximize | the |
+| •  Ions      | are | packed  | together | to maximize | the |
 | ----------- | --- | ------- | -------- | ----------- | --- |
 | attractions |     | between | ions.    |             |     |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttiioonn 162..55
 Ionic Bonding and Structures of Ionic Compounds
 Structures of Ionic Compounds
-â€¢ Cations are always
+•  Cations are always
 smaller than the
 parent atom.
-â€¢ Anions are always
+•  Anions are always
 larger than the
 parent atom.
 Return to TOC
@@ -3806,9 +3806,9 @@ Which atom or ion has the smallest radius?
 a) O2+
 b) O+
 c) O
-d) O2â€“
+d) O2–
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 29
+Copyright © Cengage Learning. All rights reserved 29
 
 SSeeccttiioonn  162..55
 Ionic Bonding and Structures of Ionic Compounds
@@ -3840,7 +3840,7 @@ Return to TOC
 SSeeccttiioonn 162..55
 Ionic Bonding and Structures of Ionic Compounds
 Ionic Compounds Containing Polyatomic Ions
-â€¢ Polyatomic ions work in the same way as simple
+•  Polyatomic ions work in the same way as simple
 ions.
 â–ª The covalent bonds hold the polyatomic ion
 together so it behaves as a unit.
@@ -3849,9 +3849,9 @@ Return to TOC
 SSeeccttiioonn 162..66
 Lewis Structures
 Lewis Structure
-â€¢ Shows how valence electrons are arranged among
+•  Shows how valence electrons are arranged among
 atoms in a molecule.
-â€¢ Most important requirement
+•  Most important requirement
 â–ª Atoms achieve noble gas electron configuration (octet
 rule, duet rule).
 Return to TOC
@@ -3859,11 +3859,11 @@ Return to TOC
 SSeeccttiioonn 162..66
 Lewis Structures
 Writing Lewis Structures
-â€¢ Bonding pairs are shared between 2 atoms.
-â€¢ Unshared pairs (lone pairs) are not shared and
+•  Bonding pairs are shared between 2 atoms.
+•  Unshared pairs (lone pairs) are not shared and
 not involved in bonding.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 33
+Copyright © Cengage Learning. All rights reserved 33
 
 SSeeccttiioonn 162..66
 Lewis Structures
@@ -3903,7 +3903,7 @@ You have 8 available electrons
 4.B
 12 - 8 = 4 bonding electrons
 5.NB H:O:H
-8 â€“ 4 = 4 non-bonding electrons
+8 – 4 = 4 non-bonding electrons
 ..
 6.E
 H:O:H
@@ -3935,7 +3935,7 @@ You have 8 available electrons
 14 - 8 = 6 bonding electrons
 H
 5.NB ..
-8 â€“ 6 = 2 non-bonding electrons H:N:H
+8 – 6 = 2 non-bonding electrons H:N:H
 6.E
 H
 H
@@ -3970,7 +3970,7 @@ You have 16 available electrons
 24 - 16 = 8 bonding electrons
 5.NB
 O::C::O
-16 â€“ 8 = 8 non-bonding electrons
+16 – 8 = 8 non-bonding electrons
 6.E
 .. .. .. ..
 O::C::O O::C::O
@@ -4002,7 +4002,7 @@ You have 22 + 2 more available e-'s
 32 - 24 = 8 bonding electrons
 O
 ..
-5.NB 24 â€“ 8 = 16 non-bonding electrons O::C:O
+5.NB 24 – 8 = 16 non-bonding electrons O::C:O
 ..
 ..
 -2
@@ -4028,57 +4028,57 @@ HF
 CH
 4
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 39
+Copyright © Cengage Learning. All rights reserved 39
 
 Section 12.7
 Lewis Structures of Molecules with Multiple Bonds
-â€¢ Single bond â€“ covalent bond in which 1 pair of electrons
+•  Single bond – covalent bond in which 1 pair of electrons
 is shared by 2 atoms.
-Hâ€“H
-â€¢ Double bond â€“ covalent bond in which 2 pairs of
+H–H
+•  Double bond – covalent bond in which 2 pairs of
 electrons are shared by 2 atoms.
 O=C=O
-â€¢ Triple bond â€“ covalent bond in which 3 pairs of
+•  Triple bond – covalent bond in which 3 pairs of
 electrons are shared by 2 atoms.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 40
-N ï‚º N
+Copyright © Cengage Learning. All rights reserved 40
+N • º N
 Section 6.7
 
 Section 6.7 Section 12.7
 Lewis Structures of Molecules with Multiple Bonds
 Resonance
-â€¢ A molecule shows resonance when more than one
+•  A molecule shows resonance when more than one
 Lewis structure can be drawn for the molecule.
-|     |     | NO  | â€“ = 24eâ€“ |     |     |     |
+|     |     | NO  | – = 24e– |     |     |     |
 | --- | --- | --- | -------- | --- | --- | --- |
 3
 | O   | O   |     | O   |     | O   | O   |
 | --- | --- | --- | --- | --- | --- | --- |
 O
-| N   |     | ï‚«   | N   | ï‚«   | N   |     |
+| N   |     | • «   | N   | • «   | N   |     |
 | --- | --- | --- | --- | --- | --- | --- |
 O
 |     |     |     | O   |     | O   |     |
 | --- | --- | --- | --- | --- | --- | --- |
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved
+Copyright © Cengage Learning. All rights reserved
 
 SSeeccttiioonn 162..77
 Lewis Structures of Molecules with Multiple Bonds
 Some Exceptions to the Octet Rule
-â€¢ Boron tends to form compounds in which the boron
+•  Boron tends to form compounds in which the boron
 atom has fewer than eight electrons around it (it does
 not have a complete octet).
-BH = 6eâ€“
+BH = 6e–
 3
 H
 H B H
-â€¢ Molecules containing odd numbers of electrons like NO
+•  Molecules containing odd numbers of electrons like NO
 and NO .
 2
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 42
+Copyright © Cengage Learning. All rights reserved 42
 
 SSeeccttiioonn 162..77
 Lewis Structures of Molecules with Multiple Bonds
@@ -4092,7 +4092,7 @@ CO
 2
 CCl
 4
-CNâ€“
+CN–
 Return to TOC
 
 SSeeccttiioonn 162..77
@@ -4116,7 +4116,7 @@ c) CCl
 d) At least two of the above compounds exhibit
 resonance.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 44
+Copyright © Cengage Learning. All rights reserved 44
 
 SSeeccttiioonn 162..77
 Lewis Structures of Molecules with Multiple Bonds
@@ -4134,35 +4134,35 @@ are not a completely accurate way to draw molecules.
 d) Lewis structures are the most accurate way to draw molecules
 and are completely correct.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 45
+Copyright © Cengage Learning. All rights reserved 45
 
 SSeeccttiioonn 162..88
 Molecular Structure
-â€¢ Three dimensional arrangement of the atoms in
+•  Three dimensional arrangement of the atoms in
 a molecule.
 Bond Angle 180o ~120o ~109o
 Return to TOC
 
 SSeeccttiioonn 162..88
 Molecular Structure
-â€¢ Linear structure â€“ atoms in a line
+•  Linear structure – atoms in a line
 â–ª Carbon dioxide
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 47
+Copyright © Cengage Learning. All rights reserved 47
 
 SSeeccttiioonn 162..88
 Molecular Structure
-â€¢ Trigonal planar â€“ atoms in a triangle
+•  Trigonal planar – atoms in a triangle
 â–ª Boron trifluoride
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 48
+Copyright © Cengage Learning. All rights reserved 48
 
 SSeeccttiioonn 162..88
 Molecular Structure
-â€¢ Tetrahedral structure
+•  Tetrahedral structure
 â–ª Methane
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 49
+Copyright © Cengage Learning. All rights reserved 49
 
 SSeeccttiioonn 162..88
 Molecular Structure
@@ -4178,8 +4178,8 @@ Return to TOC
 SSSeeeccctttiioioonnn 1 612..298.9
 Molecular Structure
 VSEPR Model
-â€¢ VSEPR: Valence Shell Electron-Pair Repulsion.
-â€¢ The structure around a given atom is determined
+•  VSEPR: Valence Shell Electron-Pair Repulsion.
+•  The structure around a given atom is determined
 principally by minimizing electron pair
 repulsions.
 Return to TOC
@@ -4187,32 +4187,32 @@ Return to TOC
 SSSeeeccctttiioioonnn 1 612..298.9
 Molecular Structure
 Two Pairs of Electrons
-â€¢ BeCl
+•  BeCl
 2
-â€¢ 180Â°
-â€¢ Linear
+•  180°
+•  Linear
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 52
+Copyright © Cengage Learning. All rights reserved 52
 
 SSSeeeccctttiioioonnn 1 612..298.9
 Molecular Structure
 Three Pairs of Electrons
-â€¢ BF
+•  BF
 3
-â€¢ 120Â°
-â€¢ Trigonal planar
+•  120°
+•  Trigonal planar
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 53
+Copyright © Cengage Learning. All rights reserved 53
 
 SSSeeeccctttiioioonnn 1 612..298.9
 Molecular Structure
 Four Pairs of Electrons
-â€¢ CH
+•  CH
 4
-â€¢ 109.5Â°
-â€¢ Tetrahedral
+•  109.5°
+•  Tetrahedral
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 54
+Copyright © Cengage Learning. All rights reserved 54
 
 SSSeeeccctttiioioonnn 1 612..298.9
 Molecular Structure
@@ -4228,25 +4228,25 @@ surrounding atoms).
 4. Determine the name of the molecular structure
 from positions of the atoms.
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 55
+Copyright © Cengage Learning. All rights reserved 55
 
 SSSeeeccctttiioioonnn 1 612..298.9
 Molecular Structure
 Arrangements of Electron Pairs and the Resulting Molecular
 Structures for Two, Three, and Four Electron Pairs
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 56
+Copyright © Cengage Learning. All rights reserved 56
 
 SSSeeeccctttiioioonnn 1 612..218.010
 Molecular Structure
 Molecules with Double Bonds
-â€¢ When using the VSEPR model to predict the molecular
+•  When using the VSEPR model to predict the molecular
 geometry of a molecule, a double or triple bond is
 counted the same as a single electron pair.
 â–ª CO
 2
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 57
+Copyright © Cengage Learning. All rights reserved 57
 
 SSSeeeccctttiioioonnn 1 612..218.010
 Molecular Structure
@@ -4260,15 +4260,15 @@ SeO
 2
 O
 3
-HCN â€“ linear, 180o
-PH â€“ trigonal pyramid, 109.5o (107o)
+HCN – linear, 180o
+PH – trigonal pyramid, 109.5o (107o)
 3
-SeO â€“ bent, 120o
+SeO – bent, 120o
 2
-O â€“ bent, 120o
+O – bent, 120o
 3
 Return to TOC
-Copyright Â© Cengage Learning. All rights reserved 58
+Copyright © Cengage Learning. All rights reserved 58
 
 CHAPTER SEVEN
 EQUILIBRIUM CONCEPTS
@@ -4277,7 +4277,7 @@ ACID-BASE EQUILIBRIUM
 
 Objectives of the Chapter:
 Explain the dynamic nature of a chemical equilibrium
-Predict the response of a stressed equilibrium using Le ChÃ¢telierâ€™s
+Predict the response of a stressed equilibrium using Le ChÃ¢telier's
 principle
 Identify acids, bases based on the three acid-base concepts
 Calculate the pH and pOH of a given solution
@@ -4292,7 +4292,7 @@ acid or base
 | of a       | reaction   |         |             | arrow    |            | and      |     | product  |          | formulas |             |            | on       | the   |
 | right      | side.      |         |             |          |            |          |     |          |          |          |             |            |          |       |
 | By         | this       |         | convention, |          |            |          | and |          | the      |          | definitions |            |          | of    |
-| â€œreactantâ€ |            |         | and         |          | â€œproduct,â€ |          |     | a        | chemical |          |             |            | equation |       |
+| "reactant" |            |         | and         |          | "product," |          |     | a        | chemical |          |             |            | equation |       |
 | represents |            |         | the         | reaction |            |          | in  | question |          |          | as          | proceeding |          |       |
 | from       | left       | to      | right.      |          |            |          |     |          |          |          |             |            |          |       |
 | Reversible |            |         | reactions,  |          |            | however, |     |          | may      | proceed  |             |            | in       | both  |
@@ -4329,10 +4329,10 @@ equilibrium.
 forward and reverse
 reaction rates are equal.
 
-| Itâ€™s        | important |     |     |     | to      | emphasize  |            |     | that |               | chemical |      |     |
+| It's        | important |     |     |     | to      | emphasize  |            |     | that |               | chemical |      |     |
 | ----------- | --------- | --- | --- | --- | ------- | ---------- | ---------- | --- | ---- | ------------- | -------- | ---- | --- |
 | equilibria  |           |     | are |     |         | dynamic;   |            | a   |      | reaction      |          |      | at  |
-| equilibrium |           |     | has |     | not     | â€œstopped,â€ |            | but |      | is proceeding |          |      | in  |
+| equilibrium |           |     | has |     | not     | "stopped," |            | but |      | is proceeding |          |      | in  |
 | the         | forward   |     | and |     | reverse |            | directions |     |      | at            | the      | same |     |
 rate.
 | Physical |            | changes, |          |     |     | such | as phase     |     | transitions, |             |             |     | are |
@@ -4359,7 +4359,7 @@ rate.
 |               |          |     |     | Q        | =        |     |         |          |          |     |     |      |     |
 |               |          |     |     | c        |          |     | m       | n        |          |     |     |      |     |
 |               |          |     |     |          | [        | A]  | [B]     |          |          |     |     |      |     |
-â€¢ Where: The subscript  denotes the use of molar concentrations in the
+•  Where: The subscript  denotes the use of molar concentrations in the
 c
 expression.
 
@@ -4404,7 +4404,7 @@ Q =
 | The         | numerical |          |     | value  |              |     | of              | Q           | varies |            |     | as          | a      | reaction |     |
 | ----------- | --------- | -------- | --- | ------ | ------------ | --- | --------------- | ----------- | ------ | ---------- | --- | ----------- | ------ | -------- | --- |
 | proceeds    |           | towards  |     |        | equilibrium; |     |                 |             |        | therefore, |     |             |        | it       | can |
-| serve       | as        | a useful |     |        | indicator    |     |                 | of          | the    | reactionâ€™s |     |             |        | status.  |     |
+| serve       | as        | a useful |     |        | indicator    |     |                 | of          | the    | reaction's |     |             |        | status.  |     |
 | The         | constant  |          |     | value  |              | of  | Q               | exhibited   |        |            | by  | a           | system |          | at  |
 | equilibrium |           |          | is  | called |              | the |                 | equilibrium |        |            |     | constant,K: |        |          |     |
 |             |           | K = Q    |     |        |              |     | at equilibrium  |             |        |            |     |             |        |          |     |
@@ -4422,7 +4422,7 @@ Q =
 | according |     |          | to this |     | equation: |         |       |     |            |     |           |     |
 |           |     |          |         |     | 2NO       | g) => N |       | O   | (g)        |     |           |     |
 |           |     |          |         |     |           | 2(      |       | 2 4 |            |     |           |     |
-â–ª When 0.10 mol NO is added to a 1.0-L flask at 25Â°C, the concentration
+â–ª When 0.10 mol NO is added to a 1.0-L flask at 25°C, the concentration
 2
 changes so that at equilibrium, [NO ] = 0.016 M and [N O ] = 0.042 M.
 |     |         |          |           |         |     |        | 2   |             |     | 2 4      |          |        |
@@ -4618,7 +4618,7 @@ S
 | --- | --- | --- | --- | ----- | --- | --- | --- | --- | --- |
 |     |     |     |     | C     | 2   |     |     |     |     |
 
-|             |             | 7.3. Le Chatelierâ€™s |      |             |              |        |              |            | Principle    |            |          |     |         |        |        |     |
+|             |             | 7.3. Le Chatelier's |      |             |              |        |              |            | Principle    |            |          |     |         |        |        |     |
 | ----------- | ----------- | ------------------- | ---- | ----------- | ------------ | ------ | ------------ | ---------- | ------------ | ---------- | -------- | --- | ------- | ------ | ------ | --- |
 | A system    |             | at                  |      | equilibrium |              |        |              | is in      | a            | state      |          | of  | dynamic |        |        |     |
 | balance,    |             | with                |      | forward     |              | and    |              | reverse    |              | reactions  |          |     |         | taking |        |     |
@@ -4631,13 +4631,13 @@ S
 | reaction    |             | in                  | the  | direction   |              |        |              | of greater |              |            | rate     |     | (a      |        | shift) |     |
 | that        | will        | re-establish        |      |             |              | the    | equilibrium. |            |              |            |          |     |         |        |        |     |
 
-| This            | phenomenon |      |                |            |             | is        | summarized |              |           |        | by  |            | LeChÃ¢telierâ€™s |           |     |      |
+| This            | phenomenon |      |                |            |             | is        | summarized |              |           |        | by  |            | LeChÃ¢telier's |           |     |      |
 | --------------- | ---------- | ---- | -------------- | ---------- | ----------- | --------- | ---------- | ------------ | --------- | ------ | --- | ---------- | ------------- | --------- | --- | ---- |
 | principle:      |            |      | if             | an         | equilibrium |           |            |              |           | system |     |            | is stressed,  |           |     | the  |
 | system          |            | will |                | experience |             |           |            | a            | shift     |        | in  | response   |               |           | to  | the  |
 | stress          | that       |      | re-establishes |            |             |           |            | equilibrium. |           |        |     |            |               |           |     |      |
 | Reaction        |            |      |                | rates      |             | are       |            |              | affected  |        |     | primarily  |               |           |     | by   |
-| concentrations, |            |      |                |            | as          | described |            |              |           | by     | the | reactionâ€™s |               |           |     | rate |
+| concentrations, |            |      |                |            | as          | described |            |              |           | by     | the | reaction's |               |           |     | rate |
 | law,            | and        |      | temperature,   |            |             |           |            | as           | described |        | by  |            | the           | Arrhenius |     |      |
 equation.
 | Consequently, |     |     |     |     | changes |     |     |     | in       |     | concentration |     |     |       |     | and |
@@ -4696,7 +4696,7 @@ process:
 |      |          | N O    | (g)    =>    2NO |          |             | (g)    |                 |             | âˆ†H=+57.20 KJ |      |        |      |            |       |      |     |
 | ---- | -------- | ------ | ---------------- | -------- | ----------- | ------ | --------------- | ----------- | ------------ | ---- | ------ | ---- | ---------- | ----- | ---- | --- |
 |      |          | 2 4    |                  |          |             | 2      |                 |             |              |      |        |      |            |       |      |     |
-| For  | purposes |        | of               | applying |             |        | Le              | Chatelierâ€™s |              |      |        |      | principle, |       |      |     |
+| For  | purposes |        | of               | applying |             |        | Le              | Chatelier's |              |      |        |      | principle, |       |      |     |
 | heat | (q)      | may    |                  | be       | viewed      |        | as a            | reactant:   |              |      |        |      |            |       |      |     |
 |      |          |        | Heat    +   N    |          |             | O      | (g)    =>   2NO |             |              | (g)  |        |      |            |       |      |     |
 |      |          |        |                  |          |             | 2 4    |                 |             |              | 2    |        |      |            |       |      |     |
@@ -4711,7 +4711,7 @@ process:
 
 7.3.3.Effect of Change in
 Pressure
-| According |          |               | to       |             | Le          | Chatelierâ€™s |     |          |       |           | principle, |     |          |        | if    |      | the    |
+| According |          |               | to       |             | Le          | Chatelier's |     |          |       |           | principle, |     |          |        | if    |      | the    |
 | --------- | -------- | ------------- | -------- | ----------- | ----------- | ----------- | --- | -------- | ----- | --------- | ---------- | --- | -------- | ------ | ----- | ---- | ------ |
 | pressure  |          | at            |          | equilibrium |             |             |     |          | is    | increased |            |     |          |        | then  |      | the    |
 | reaction  |          | will          |          | proceed     |             |             | in  | that     |       | direction |            |     |          |        | where |      | the    |
@@ -4776,9 +4776,9 @@ Solution
 |             |     |     |     |     | 1x10-3M |     |     | 1x10-3M |         |     | 0   |     |
 | ----------- | --- | --- | --- | --- | ------- | --- | --- | ------- | ------- | --- | --- | --- |
 | Initial     |     | (M) |     |     |         |     |     |         |         |     |     |     |
-| Change      |     | (M) |     |     |         | â€“x  |     |         | â€“x      |     | +x  |     |
+| Change      |     | (M) |     |     |         | –x  |     |         | –x      |     | +x  |     |
 |             |     |     |     |     | 1x10-3M |     |     |         | 1x10-3M |     |     |     |
-| Equilibrium |     |     | (M) |     |         |     | â€“   | x       |         | â€“ x | +x  |     |
+| Equilibrium |     |     | (M) |     |         |     | –   | x       |         | – x | +x  |     |
 
 is 6.61x10-4
 | At equilibrium the concentration of I |     |     |     |     |     |     | M so that |     |     |
@@ -4795,7 +4795,7 @@ is 6.61x10-4
 | ------- | --- | ---------- | --- | --- | ---------- | --- | --- | -------- | --- |
 | Initial | (M) |            |     |     |            |     |     |          |     |
 |         |     | 3.39x10-4M |     |     | 3.39x10-4M |     |     | 3.39x10- |     |
-| Change  | (M) | â€“          |     |     | â€“          |     |     |          |     |
+| Change  | (M) | –          |     |     | –          |     |     |          |     |
 4M
 |     |     | 6.61x10-4M |     |     | 6.61x10-4M |     |     | 3.39x10- |     |
 | --- | --- | ---------- | --- | --- | ---------- | --- | --- | -------- | --- |
@@ -4875,10 +4875,10 @@ Solution:
 | ------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Initial | (M) |     |     |     |     |     |     |     |     |     |     |     |
 0
-| Change | (M) |     |     |     | â€“x  |     |     | +x  |     |     | +x  |     |
+| Change | (M) |     |     |     | –x  |     |     | +x  |     |     | +x  |     |
 | ------ | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 1 M
-| Equilibrium |     |     | (M) |     |     | â€“ x |     | X   |     |     |     | X   |
+| Equilibrium |     |     | (M) |     |     | – x |     | X   |     |     |     | X   |
 | ----------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 (x)(x)
 |     | [PCl | ][Cl | ]   |          |     |     |     |     |     |          |     |     |
@@ -4898,10 +4898,10 @@ x
 2
 |     |     | x + | 0.0211x |     | âˆ’ 0.0211 |     | =   | 0   |     |     |
 | --- | --- | --- | ------- | --- | -------- | --- | --- | --- | --- | --- |
-â€¢ The quadratic equation ax2+bx+c=0 form can be rearranged to solve for x:
-| âˆ’ b ï‚± | b 2 | âˆ’ 4 a c |       |         |         |           |           |             |           |     |
+•  The quadratic equation ax2+bx+c=0 form can be rearranged to solve for x:
+| âˆ’ b • ± | b 2 | âˆ’ 4 a c |       |         |         |           |           |             |           |     |
 | ----- | --- | ------- | ----- | ------- | ------- | --------- | --------- | ----------- | --------- | --- |
-|       |     |         |       | âˆ’ 0 . 0 | 2 1 1 ï‚± | ( 0 . 0 2 | 1 1 ) 2 âˆ’ | 4 ( 1 ) ( âˆ’ | 0 . 0 2 1 | 1 ) |
+|       |     |         |       | âˆ’ 0 . 0 | 2 1 1 • ± | ( 0 . 0 2 | 1 1 ) 2 âˆ’ | 4 ( 1 ) ( âˆ’ | 0 . 0 2 1 | 1 ) |
 | x =   |     |         | x =   |         |         |           |           |             |           |     |
 |       | 2 a |         |       |         |         |           | 2 ( 1 )   |             |           |     |
 |       |     | x       | = 0 . | 1 3 5   | M       |           |           |             |           |     |
@@ -5107,7 +5107,7 @@ w
 | Where | K   | is  | ion |     | product |     |     | of water, |     |     | which |     | is temperature |
 | ----- | --- | --- | --- | --- | ------- | --- | --- | --------- | --- | --- | ----- | --- | -------------- |
 w
-| dependent |     | at  | 250C, |     | K   | is  | 1   | ï‚´10-14. |     |     |     |     |     |
+| dependent |     | at  | 250C, |     | K   | is  | 1   | • ´10-14. |     |     |     |     |     |
 | --------- | --- | --- | ----- | --- | --- | --- | --- | ------- | --- | --- | --- | --- | --- |
 w
 
@@ -5117,7 +5117,7 @@ O+ OH-
 | the | concentration |     |     | of  | the | H   |     | and | ions | is  | equal. |
 | --- | ------------- | --- | --- | --- | --- | --- | --- | --- | ---- | --- | ------ |
 3
-|     | [H  | O+] = [OH-] = âˆš Kw |     |     |     |     |     | = 1 ï‚´10-7 | M, at 25oC |     |     |
+|     | [H  | O+] = [OH-] = âˆš Kw |     |     |     |     |     | = 1 • ´10-7 | M, at 25oC |     |     |
 | --- | --- | ------------------ | --- | --- | --- | --- | --- | --------- | ---------- | --- | --- |
 3
 | In acidic |     | solutions, |      |     | the  | concentration |     |          | of the | hydronium |     |
@@ -5238,7 +5238,7 @@ b
 | Example   |      |      | 7.10:     |     |     | Calculate |        |          | the |            | [H+] |     | in  |     | a 0.1     |     | M HCNO |     |
 | --------- | ---- | ---- | --------- | --- | --- | --------- | ------ | -------- | --- | ---------- | ---- | --- | --- | --- | --------- | --- | ------ | --- |
 | solution. |      | What |           |     | is  | the       | degree |          | of  | ionization |      |     |     |     | of cyanic |     | acid   | in  |
-| this      | same |      | solution? |     |     |           | (K     | =2ï‚´10-4) |     |            |      |     |     |     |           |     |        |     |
+| this      | same |      | solution? |     |     |           | (K     | =2• ´10-4) |     |            |      |     |     |     |           |     |        |     |
 1
 O+(aq)  +    CNO-(aq)
 | Solution: - |                                             |     |       | HCNO(aq) + H |                               |     |     | O(aq)             H |     |     |     |     |            |     |     |     |     |     |
@@ -5246,7 +5246,7 @@ O+(aq)  +    CNO-(aq)
 |             |                                             |     |       |              |                               |     |     | 2                   |     |     |     |     | 3          |     |     |     |     |     |
 |             | Initial     0.1m                            |     |       |              |                               |     |     |                     |     |     |     |     | 0 M        |     |     | 0 M |     |     |
 |             | Change      -x                              |     |       |              |                               |     |     |                     |     |     |     |     | +x         |     |     |     | +x  |     |
-|             | [     ]                                     |     | 0.1 â€“ |              | x                             |     |     |                     |     |     |     |     | x          |     |     |     | x   |     |
+|             | [     ]                                     |     | 0.1 – |              | x                             |     |     |                     |     |     |     |     | x          |     |     |     | x   |     |
 eq.
 |     |     |     |     |       |     |     |     |     |     |     |     | x   | 2   |     | x 2 |     |     |     |
 | --- | --- | --- | --- | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -5273,7 +5273,7 @@ eq.
 | solution. |     |     | What |     |     | is  | the | degree |     |     | of  |     | ionization |     |     | of NH |
 | --------- | --- | --- | ---- | --- | --- | --- | --- | ------ | --- | --- | --- | --- | ---------- | --- | --- | ----- |
 3
-| solution |     | in  | this |     | same |     | solution? |     |     | (K  | =   | 1.8ï‚´10-5) |     |     |     |     |
+| solution |     | in  | this |     | same |     | solution? |     |     | (K  | =   | 1.8• ´10-5) |     |     |     |     |
 | -------- | --- | --- | ---- | --- | ---- | --- | --------- | --- | --- | --- | --- | --------- | --- | --- | --- | --- |
 b
 | Solution: - |     |     |     | NH  |        |     | +H O |      |     |     |     | NH  | +   | +OH- |     |      |
@@ -5282,7 +5282,7 @@ b
 Initial         0.4 M                     0 M              0 M
 |     | Change       -x  |     |     |        |     |                      |     |     |     |     |     | +x                  |     |     | +x  |     |
 | --- | ---------------- | --- | --- | ------ | --- | -------------------- | --- | --- | --- | --- | --- | ------------------- | --- | --- | --- | --- |
-|     | [    ]           |     |     | (0.4 â€“ |     | x) M                 |     |     |     |     |     | x M             x M |     |     |     |     |
+|     | [    ]           |     |     | (0.4 – |     | x) M                 |     |     |     |     |     | x M             x M |     |     |     |     |
 Eq
 |     |     |     |     |     |     |     |     |     |     |     | x   | 2   |     | x 2 |     |     |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -5349,7 +5349,7 @@ completely in  solution, but  CH COOH,  a weak  acid,  ionizes
 3
 partially.
 
-According  to  Le  Chatelierâ€™s principle,  the  addition  of
+According  to  Le  Chatelier's principle,  the  addition  of
 -
 | CH COO | ions from CH |     | COONa to a solution of CH |     |     |     |     | COOH will  |     |
 | ------ | ------------ | --- | ------------------------- | --- | --- | --- | --- | ---------- | --- |
@@ -5377,7 +5377,7 @@ The  shift  in  equilibrium  caused  by  the  addition  of  a
 | compound  | having  |     | an  ion  | in  | common  |     | with  | the  | dissolved  |
 | --------- | ------- | --- | -------- | --- | ------- | --- | ----- | ---- | ---------- |
 substances is called the Common ion effect. It is a special case
-| of Le Chatelierâ€™s |     | principle. |     |     |     |     |     |     |     |
+| of Le Chatelier's |     | principle. |     |     |     |     |     |     |     |
 | ----------------- | --- | ---------- | --- | --- | --- | --- | --- | --- | --- |
 
 7.8. Buffer solutions
@@ -5414,7 +5414,7 @@ Now, to find the pH, Let us consider
 | --- | --- | --- | --- | ------- | ----- | --- | ----- | --- | --- | --- | ---- | --- | ----------- | --- |
 |     |     |     | +   |         |       | âˆ’   |       |     |     | 3   |      |     |             |     |
 |     | [   | H O |     | ] [ C H | C O O | ]   |       |     |     |     |      |     |             |     |
-â€“
+–
 | K   | =   | 3   |     |     | 3   |     | ionized, |     |     | so  | most |     | of CH | COO |
 | --- | --- | --- | --- | --- | --- | --- | -------- | --- | --- | --- | ---- | --- | ----- | --- |
 3
@@ -5423,7 +5423,7 @@ a
 | --- | --- | --- | --- | --- | ----- | --- | ---- | ---- | --- | ---- | --- | --- | ----- | --- |
 |     |     |     |     |     |       |     | will | come |     | from |     | the | salt. |     |
 3
-â€“
+–
 |     |     |     |     |     |       |       | Hence, |     | [CH |     | COO |     | ] = [Salt] |     |
 | --- | --- | --- | --- | --- | ----- | ----- | ------ | --- | --- | --- | --- | --- | ---------- | --- |
 |     |     |     |     | [ C | H C O | O H ] |        |     |     |     |     |     |            |     |
@@ -5452,14 +5452,14 @@ a
 [Base]
 
 Example 7.13: Calculate the pH of a buffer solution containing 0.1
-| M each | of acetic | acid | and sodium |     | acetate. | (K =1.8Ã—10â€“5) |     |     |     |
+| M each | of acetic | acid | and sodium |     | acetate. | (K =1.8×10–5) |     |     |     |
 | ------ | --------- | ---- | ---------- | --- | -------- | ------------- | --- | --- | --- |
 a
-| â€¢ What | will be  | the change | in      | pH     | on adding      |           |     |     |     |
+| •  What | will be  | the change | in      | pH     | on adding      |           |     |     |     |
 | ------ | -------- | ---------- | ------- | ------ | -------------- | --------- | --- | --- | --- |
 |        | (a) 0.01 | moles      | of HCl  | to 1.0 | L of solution? |           |     |     |     |
 |        | (b) 0.01 | moles      | of NaOH | to     | 1.0 L of       | solution? |     |     |     |
-â€¢ Assume that no change in volume occurs on the addition of HCl
+•  Assume that no change in volume occurs on the addition of HCl
 | or NaOH. |     |       |     |       |       |       |     |     |     |
 | -------- | --- | ----- | --- | ----- | ----- | ----- | --- | --- | --- |
 |          |     |       |     |       | [ S a | l t ] |     |     |     |
@@ -5478,7 +5478,7 @@ a
 H+
 | a)  | 0.01 | moles | of HCl |     | give | 0.01 |     | moles |     | of  |      | which |     | reacts |     |
 | --- | ---- | ----- | ------ | --- | ---- | ---- | --- | ----- | --- | --- | ---- | ----- | --- | ------ | --- |
-|     | with | 0.01  | moles  |     | of   | CH   |     | COOâ€“  |     | to  | form |       | CH  | COOH.  |     |
+|     | with | 0.01  | moles  |     | of   | CH   |     | COO–  |     | to  | form |       | CH  | COOH.  |     |
 |     |      |       |        |     |      |      | 3   |       |     |     |      |       |     | 3      |     |
 Therefore,
 |     |     | [ C | H C O | O   | âˆ’   | ] = | 0 . | 1 âˆ’ | 0 . | 0 1 | = 0 | . 0 | 9 M |     |     |
@@ -5494,12 +5494,12 @@ Therefore,
 0.11
 |     |                        |     |     |     | p   | H   | =                    | 4   | . 6 5 | 8   |     |     |     |     |     |
 | --- | ---------------------- | --- | --- | --- | --- | --- | -------------------- | --- | ----- | --- | --- | --- | --- | --- | --- |
-|     | Change in pH = 4.745 â€“ |     |     |     |     |     | 4.658 = 0.087 units. |     |       |     |     |     |     |     |     |
+|     | Change in pH = 4.745 – |     |     |     |     |     | 4.658 = 0.087 units. |     |       |     |     |     |     |     |     |
 Hence, pH will decrease!
 
 | (b) | On   | adding |       | 0.01       | moles |     | of   | NaOH  |     | to   | a litre |      | of  |       | solution, |     |
 | --- | ---- | ------ | ----- | ---------- | ----- | --- | ---- | ----- | --- | ---- | ------- | ---- | --- | ----- | --------- | --- |
-|     | 0.01 |        | moles | of         | OHâ€“   |     | will | react |     | with |         | 0.01 |     | moles |           | of  |
+|     | 0.01 |        | moles | of         | OH–   |     | will | react |     | with |         | 0.01 |     | moles |           | of  |
 |     | CH   | COOH.  |       | Therefore, |       |     |      |       |     |      |         |      |     |       |           |     |
 3
 |     |     |     | [ C | H C | O O | âˆ’   | ] = | 0 . 1 | +   | 0 . 0 | 1 = | 0   | . 1 | 1 M |     |     |
@@ -5515,7 +5515,7 @@ Hence, pH will decrease!
 0.09
 |     |                        |     |     |     |     | p   | H                    | = 4 | .   | 8 3 1 |     |     |     |     |     |     |
 | --- | ---------------------- | --- | --- | --- | --- | --- | -------------------- | --- | --- | ----- | --- | --- | --- | --- | --- | --- |
-|     | Change in pH = 4.831 â€“ |     |     |     |     |     | 4.745 = 0.086 units. |     |     |       |     |     |     |     |     |     |
+|     | Change in pH = 4.831 – |     |     |     |     |     | 4.745 = 0.086 units. |     |     |       |     |     |     |     |     |     |
 Hence, pH will increase!
 
 Chapter Eight
@@ -5536,7 +5536,7 @@ SeScteioctni 2o2n. 18.1
 Alkanes: Saturated Hydrocarbons
 Hydrocarbons
 â–ª Compounds composed of carbon and hydrogen.
-â–ª Saturated:  Câ€”C bonds are all single bonds.
+â–ª Saturated:  C—C bonds are all single bonds.
 | alkanes [C |     | H   | ]    |
 | ---------- | --- | --- | ---- |
 |            |     | n   | 2n+2 |
@@ -5558,7 +5558,7 @@ Hydrocarbons are made up of only hydrogen and carbon.
 SeScteicotni o2n2. 1
 Alkan8e.s1: Saturated Hydrocarbons
 Isomerism in Alkanes
-| â–ª Structural | isomerism |     | â€“    | occurs | when |           | two |
+| â–ª Structural | isomerism |     | –    | occurs | when |           | two |
 | ------------ | --------- | --- | ---- | ------ | ---- | --------- | --- |
 | molecules    | have      | the | same | atoms  | but  | different |     |
 bonds.
@@ -5568,7 +5568,7 @@ alkanes exhibit structural isomerism.
 
 SeScteicotni o2n2. 1
 Alkan8e.s1: Saturated Hydrocarbons
-â€¢ Structural isomers are molecules that have the
+•  Structural isomers are molecules that have the
 same molecular formula but different structures.
 
 SeScteicotni o2n2. 1
@@ -5604,12 +5604,12 @@ I
 SeScteicotni o2n2. 1
 Alkan8e.s1: Saturated Hydrocarbons
 Rules for Naming Alkanes
-1. For alkanes beyond butane, add â€“ane to the
+1. For alkanes beyond butane, add –ane to the
 Greek root for the number of carbons.
-| CH â€“CH | â€“CH | â€“CH | â€“CH | â€“CH | => hexane |
+| CH –CH | –CH | –CH | –CH | –CH | => hexane |
 | ------ | --- | --- | --- | --- | --------- |
 | 3      | 2   | 2   | 2   | 2   | 3         |
-2. Alkyl substituents:  drop the â€“ane and add â€“yl.
+2. Alkyl substituents:  drop the –ane and add –yl.
 | â–ª C H is ethane |     |     |     |     |     |
 | --------------- | --- | --- | --- | --- | --- |
 2 6
@@ -5627,7 +5627,7 @@ Alkan8e.s1: Saturated Hydrocarbons
 | lowest       |     | possible |                | number  |     | along  |              | chain.        |           |     |     |
 CH
 3
-| CH  | â€“CH | â€“CHâ€“CH |     | â€“CH | â€“CH |     |     |     |     |     |     |
+| CH  | –CH | –CH–CH |     | –CH | –CH |     |     |     |     |     |     |
 | --- | --- | ------ | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |     | 3   | 2      |     | 2   | 2   | 3   |     |     |     |     |     |
 1          2          3         4          5          6
@@ -5638,10 +5638,10 @@ Alkan8e.s1: Saturated Hydrocarbons
 | 4. Location |      | and          | name  | are | followed     |     | by  | root alkane |     |
 | ----------- | ---- | ------------ | ----- | --- | ------------ | --- | --- | ----------- | --- |
 | name.       |      | Substituents |       | in  | alphabetical |     |     | order       | and |
-| use         | diâ€“, | triâ€“,        | etc.  |     |              |     |     |             |     |
+| use         | di–, | tri–,        | etc.  |     |              |     |     |             |     |
 |             |      |              | CH CH |     |              |     |     |             |     |
 3  3
-|     | CH  | â€“CH | â€“CHâ€“CHâ€“CH |     | â€“CH |     |     |     |     |
+|     | CH  | –CH | –CH–CH–CH |     | –CH |     |     |     |     |
 | --- | --- | --- | --------- | --- | --- | --- | --- | --- | --- |
 |     |     | 3   | 2         |     | 2   | 3   |     |     |     |
 1          2          3        4         5          6
@@ -5705,7 +5705,7 @@ hv
 Section 22.1 Section
 Alkanes: Saturated Hydrocarbons
 8.1
-Unsaturated:  contains carbonâ€“
+Unsaturated:  contains carbon–
 carbon multiple bonds.
 |     | H   | H   |     |     | H   |     |     |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -5730,7 +5730,7 @@ Cyclic Alkanes
 â–ª
 | Carbon | atoms  | can    | form | rings | containing | only |
 | ------ | ------ | ------ | ---- | ----- | ---------- | ---- |
-| Câ€”C    | single | bonds. |      |       |            |      |
+| C—C    | single | bonds. |      |       |            |      |
 â–ª
 | General | formula: |     | C H  |     |      |     |
 | ------- | -------- | --- | ---- | --- | ---- | --- |
@@ -5744,7 +5744,7 @@ Alkanes whose carbon atoms are joined in rings
 are called cycloalkanes.
 They have the general formula C H where n
 n 2n
-= 3,4,â€¦
+= 3,4,...
 
 SeScteicotni o2n2. 1
 Alkan8e.s1: Saturated Hydrocarbons
@@ -5753,41 +5753,41 @@ The Chair and Boat Forms of Cyclohexane
 SeScteicotni o2n2. 2
 Alke8ne.2s and Alkynes
 â–ª Alkenes: hydrocarbons that contain at least one
-carbonâ€“carbon double bond.  [C H ]
+carbon–carbon double bond.  [C H ]
 n 2n
-| CH  | â€“CH=CH |     | propene |
+| CH  | –CH=CH |     | propene |
 | --- | ------ | --- | ------- |
 | 3   | 2      |     |         |
 â–ª
 Alkynes: hydrocarbons containing at least one
-carbonâ€“carbon triple bond. [C H ]
+carbon–carbon triple bond. [C H ]
 n n
-| CH â€“CH | â€“CÎžCâ€“CH |     | 2â€“pentyne |
+| CH –CH | –CÎžC–CH |     | 2–pentyne |
 | ------ | ------- | --- | --------- |
 | 3      | 2       | 3   |           |
 
 SeScteicotni o2n2. 2
 Alke8ne.2s and Alkynes
 Rules for Naming Alkenes
-1. Root hydrocarbon name ends in â€“ene.
+1. Root hydrocarbon name ends in –ene.
 C H is ethene
 2 4
 2. With more than 3 carbons, double bond is indicated by
-the lowestâ€“numbered carbon atom in the bond.
-CH =CHâ€“CH â€“CH
+the lowest–numbered carbon atom in the bond.
+CH =CH–CH –CH
 2 2 3
 1 2 3 4
-1â€“butene
+1–butene
 
 SeScteicotni o2n2. 2
 Alke8ne.2s and Alkynes
 Rules for Naming Alkynes
 â–ª
-Same as for alkenes except use â€“yne as suffix.
-| CH â€“CH | â€“CÎžCâ€“CH | â€“CH | â€“CH | â€“CH |     |
+Same as for alkenes except use –yne as suffix.
+| CH –CH | –CÎžC–CH | –CH | –CH | –CH |     |
 | ------ | ------- | --- | --- | --- | --- |
 | 3      | 2       | 2   | 2   | 2   | 3   |
-3â€“octyne
+3–octyne
 
 Section 22.2
 Alkenes and Alkynes
@@ -5821,7 +5821,7 @@ EXERCISE!
 Section 22.2
 Alkenes and Alkynes
 Addition Reactions
-â–ª Pi Bonds (which are weaker than the Câ€”C bonds),
+â–ª Pi Bonds (which are weaker than the C—C bonds),
 are broken, and new bonds are formed to the ï³
 atoms being added.
 27
@@ -5900,10 +5900,10 @@ H SO
 Aldehydes and Ketones contain the carbonyl (   C      O     )
 functional group.
 O
-| â€¢ aldehydes |     | have the general formula |     |     | R   C   H |     |     |     |
+| •  aldehydes |     | have the general formula |     |     | R   C   H |     |     |     |
 | ----------- | --- | ------------------------ | --- | --- | --------- | --- | --- | --- |
 O
-| â€¢ ketones    | have the general formula R   C   Râ€² |     |              |     |     |         |      |     |
+| •  ketones    | have the general formula R   C   Râ€² |     |              |     |     |         |      |     |
 | ------------ | ----------------------------------- | --- | ------------ | --- | --- | ------- | ---- | --- |
 |              | O                                   |     | O            |     |     |         | O    |     |
 | H   C   H    |                                     |     | H   C        | CH  |     | H C     | C CH |     |

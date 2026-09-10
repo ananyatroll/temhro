@@ -11,30 +11,30 @@ Understanding Disability
 and Vulnerability
 
 1.1. Definitions of disability and vulnerability
-â€¢ Disability is not uncommon and it is part of human diversity.
-â€¢ It is estimated that 15 % of the worldâ€™s population has a disability, a
+•  Disability is not uncommon and it is part of human diversity.
+•  It is estimated that 15 % of the world's population has a disability, a
 percentage that is expected to grow because of poor health care and nutrition
 early in life, growing elderly populations and violent civil conflicts.
-â€¢ Among the population of people with disabilities, approximately 80 % live
+•  Among the population of people with disabilities, approximately 80 % live
 in developing countries and are disproportionately represented among the
 poor.
-â€¢ For instance, of the total population of Ethiopia, 17.6% are estimated to live
+•  For instance, of the total population of Ethiopia, 17.6% are estimated to live
 with some sort of impairment (WHO and World Bank, 2011, p. 272).
 
-â€¢ Understanding the concept of disability varies between cultures and
+•  Understanding the concept of disability varies between cultures and
 | evolves | with | in  | a culture | over | time. |
 | ------- | ---- | --- | --------- | ---- | ----- |
-â€¢ People are using the two key terms, impairments and disability
+•  People are using the two key terms, impairments and disability
 interchangeably but there is a visible conceptual distinction between
 | these | terms | as described |     | below: |     |
 | ----- | ----- | ------------ | --- | ------ | --- |
 1.1.1. Impairment
-â€¢ Impairment is the â€œpurely factual absence of or loss of functioning in a
-body part.â€ it can be functional, psychological or physiological part of
+•  Impairment is the "purely factual absence of or loss of functioning in a
+body part." it can be functional, psychological or physiological part of
 body.
-â€¢ Hence, the term impairment is used to notify the physical condition of
+•  Hence, the term impairment is used to notify the physical condition of
 a person such as visual, physical, hearing, and intellectual disabilities.
-â€¢ It may result in activity limitation based on the degree/ severity, type
+•  It may result in activity limitation based on the degree/ severity, type
 | and | onset | of the | impairment. |     |     |
 | --- | ----- | ------ | ----------- | --- | --- |
 
@@ -50,38 +50,38 @@ Impairment
 continuous.
 
 1.1.2. Disability
-â€¢ The concept of disability is defined as â€œthe interaction between persons
+•  The concept of disability is defined as "the interaction between persons
 with impairments and attitudinal and environmental barriers that hinders
 their full and effective participation in a society on an equal basis with
-othersâ€ (UN CRPD, 2006).
-â€¢ Disability is, therefore, a negative reaction of people towards persons
-with impairments that results in â€œparticipation restriction.â€
-â€¢ Disability, as a concept is referred: as an umbrella term that include
+others" (UN CRPD, 2006).
+•  Disability is, therefore, a negative reaction of people towards persons
+with impairments that results in "participation restriction."
+•  Disability, as a concept is referred: as an umbrella term that include
 impairment, activity limitation and participation restriction.
-â€¢ Hence, Article 1 of the CRPD describes persons with disabilities as â€œthose
+•  Hence, Article 1 of the CRPD describes persons with disabilities as "those
 who have long-term physical, mental, intellectual, or sensory impairments
 which in interaction with various barriers may hinder their full and effective
-participation in society on an equal basis with others.â€
+participation in society on an equal basis with others."
 
 1.1.3. Vulnerability
-â€¢ On the other hand, the term vulnerability refers to state of
+•  On the other hand, the term vulnerability refers to state of
 | being          |            | exposed |       |            | to          | the    | possibility     |        | of  | being         | attacked |        | or  |
 | -------------- | ---------- | ------- | ----- | ---------- | ----------- | ------ | --------------- | ------ | --- | ------------- | -------- | ------ | --- |
 | harmed,        |            | either  |       | physically |             |        | or emotionally. |        |     |               |          |        |     |
-| â€¢ Accordingly, |            |         |       | vulnerable |             |        | groups          | belong |     | to the        | people   | who    |     |
+| •  Accordingly, |            |         |       | vulnerable |             |        | groups          | belong |     | to the        | people   | who    |     |
 | are            | physically |         |       | and        | emotionally |        |                 | hurt   | and | attacked      | as a     | result |     |
 | of             | various    |         | forms |            | of          | social | injustice       |        | and | malpractices. |          |        |     |
 
 Vulnerability is classified into four categories as described below:
 | A. Physical | Vulnerability: |     |               |     |     |     |         |      |         |     |     |     |
 | ----------- | -------------- | --- | ------------- | --- | --- | --- | ------- | ---- | ------- | --- | --- | --- |
-| â€¢ The       | physical       |     | vulnerability |     |     | of  | an area | also | depends |     | on  | its |
+| •  The       | physical       |     | vulnerability |     |     | of  | an area | also | depends |     | on  | its |
 geographic proximity to the source and origin of the disasters
 e.g. if an area lies near the coast lines, fault lines, unstable hills
 etc.
 | B. Economic | Vulnerability: |               |     |     |     |             |     |     |     |          |     |     |
 | ----------- | -------------- | ------------- | --- | --- | --- | ----------- | --- | --- | --- | -------- | --- | --- |
-| â€¢ Economic  |                | vulnerability |     |     | of  | a community |     | can | be  | assessed |     | by  |
+| •  Economic  |                | vulnerability |     |     | of  | a community |     | can | be  | assessed |     | by  |
 determining how varied its sources of income are, the ease of
 | access | and | control |     | over | means |     | of production |     | (e.g. | farmland, |     |     |
 | ------ | --- | ------- | --- | ---- | ----- | --- | ------------- | --- | ----- | --------- | --- | --- |
@@ -92,32 +92,32 @@ livestock, irrigation, capital etc.), adequacy of economic fall
 
 | C. Social | Vulnerability: |     |     |     |
 | --------- | -------------- | --- | --- | --- |
-â€¢ A socially vulnerable community has weak family structures, lack of
+•  A socially vulnerable community has weak family structures, lack of
 leadership for decision making and conflict resolution, unequal
 participation in decision making, weak or no community organizations,
 and the one in which people are discriminated on racial, ethnic, linguistic
 | or religious | basis. |     |     |     |
 | ------------ | ------ | --- | --- | --- |
 D. Attitudinal Vulnerability:
-â€¢ A community which has negative attitude towards change and lacks
+•  A community which has negative attitude towards change and lacks
 initiative in life resultantly become more and more dependent on external
 support.
-â€¢ This brings about disunity and individualism in the society. Thus, they
+•  This brings about disunity and individualism in the society. Thus, they
 become victims of conflicts, hopelessness and pessimism which reduce
 | their | capacity | of coping | with | a disaster. |
 | ----- | -------- | --------- | ---- | ----------- |
 
 | 1.2. | Causes |     | of impairments |     |     | and | vulnerability |     |     |     |     |
 | ---- | ------ | --- | -------------- | --- | --- | --- | ------------- | --- | --- | --- | --- |
-â€¢ The issue of disability/impairment is not yet being scientifically
+•  The issue of disability/impairment is not yet being scientifically
 understood and treated by the society particularly in the low-
 | income |     | countries |     | including |       | Ethiopia. |            |     |        |               |     |
 | ------ | --- | --------- | --- | --------- | ----- | --------- | ---------- | --- | ------ | ------------- | --- |
-| â€¢ As   | a   | result,   |     | the       | cause | of        | impairment |     | is not | appropriately |     |
+| •  As   | a   | result,   |     | the       | cause | of        | impairment |     | is not | appropriately |     |
 comprehended due to the reason that people still believe that
 | impairment |     |     | is  | caused | by curse, |     | sin and | wrath | of God. |     |     |
 | ---------- | --- | --- | --- | ------ | --------- | --- | ------- | ----- | ------- | --- | --- |
-â€¢ However, even though some causes of impairment are unknown,
+•  However, even though some causes of impairment are unknown,
 scientific research conducted on the issue confirmed that the
 | cause     |     | of  | impairment |     | is  | classified |     | into | 2 major | categories | as  |
 | --------- | --- | --- | ---------- | --- | --- | ---------- | --- | ---- | ------- | ---------- | --- |
@@ -125,10 +125,10 @@ scientific research conducted on the issue confirmed that the
 
 | 1.2.1. | Biological |     |     |     |     |     |     |     |
 | ------ | ---------- | --- | --- | --- | --- | --- | --- | --- |
-â€¢ Under this category of the cause of impairment, genetically induced
+•  Under this category of the cause of impairment, genetically induced
 | factors | are commonly |     | known | reasons. |     |     |     |     |
 | ------- | ------------ | --- | ----- | -------- | --- | --- | --- | --- |
-| â€¢ These | include:     |     |       |          |     |     |     |     |
+| •  These | include:     |     |       |          |     |     |     |     |
 - Abnormalities in genes and genetic inheritance that may cause
 | intellectual |     | disability, |     | down | syndrome | and | other | multiple |
 | ------------ | --- | ----------- | --- | ---- | -------- | --- | ----- | -------- |
@@ -141,24 +141,24 @@ Sometimes, diseases, illnesses, and over-exposure to x-rays can
 of impairment.
 
 1.2.2. Environmental
-â€¢ The adverse effect of poverty and starvation such malnutrition, lack of
+•  The adverse effect of poverty and starvation such malnutrition, lack of
 access to health care and treatment etc. may cause impairment to the child
 | during | pre- | and- | postnatal | period. |     |     |     |
 | ------ | ---- | ---- | --------- | ------- | --- | --- | --- |
-â€¢ The use of drugs, alcohol, tobacco, the exposure to certain toxic chemicals
+•  The use of drugs, alcohol, tobacco, the exposure to certain toxic chemicals
 and illnesses, toxoplasmosis, cytomegalovirus, rubella and syphilis by a
 pregnant mother can cause intellectual and other types of disability to the
 child.
-â€¢ Childhood diseases such as a whooping cough, measles, and chicken pox
+•  Childhood diseases such as a whooping cough, measles, and chicken pox
 | may    | lead | to meningitis |        | and encephalitis. |       |        |        |
 | ------ | ---- | ------------- | ------ | ----------------- | ----- | ------ | ------ |
-| â€¢ This | can  | cause         | damage | to the            | brain | of the | child. |
-â€¢ Toxic material such as lead and mercury can damage the brain too.
+| •  This | can  | cause         | damage | to the            | brain | of the | child. |
+•  Toxic material such as lead and mercury can damage the brain too.
 
-â€¢ Unfortunate life accident such as drowning, car accidents, falls,
+•  Unfortunate life accident such as drowning, car accidents, falls,
 landmines, war, etc. can result in people losing their sight, hearing,
 limbs and other vital parts of their body.
-â€¢ As in the case of impairment, among several examples of causes of
+•  As in the case of impairment, among several examples of causes of
 vulnerability, the following are the most known contributing factors to
 vulnerability:
 - Poor governance;
@@ -167,7 +167,7 @@ vulnerability:
 - Inequality and inadequate access to resource and livelihood.
 
 1.3. Types of impairments and vulnerable groups
-â€¢ Regardless of the existence of a number of types of impairments, the
+•  Regardless of the existence of a number of types of impairments, the
 commonly known and major kinds of impairments are listed below.
 1.3.1. Visual impairment (Generic terminology for blindness and low
 vision
@@ -216,16 +216,16 @@ skin)
 | -Deaf | blindness. |     |     |
 | ----- | ---------- | --- | --- |
 
-| â€¢ Then       |         |       | again,     |      | children,  |     |              |            | pregnant    |        |               |            | women, |       |     | elderly |        |         | people,  |     |
+| •  Then       |         |       | again,     |      | children,  |     |              |            | pregnant    |        |               |            | women, |       |     | elderly |        |         | people,  |     |
 | ------------ | ------- | ----- | ---------- | ---- | ---------- | --- | ------------ | ---------- | ----------- | ------ | ------------- | ---------- | ------ | ----- | --- | ------- | ------ | ------- | -------- | --- |
 | malnourished |         |       |            |      | people,    |     |              |            | and         | people |               |            | who    |       | are | ill     | or     | immune- |          |     |
 | compromised, |         |       |            |      |            | are | particularly |            |             |        |               | vulnerable |        |       |     | when    |        | a       | disaster |     |
 | strikes,     |         |       | and        |      | take       |     | a            | relatively |             |        |               | high       |        | share |     | of      | the    |         | disease  |     |
 | burden       |         |       | associated |      |            |     | with         |            | emergencies |        |               |            |        | (WHO, |     | 2020).  |        |         |          |     |
-| â€¢ In         | general |       |            | poor |            | and |              | socially   |             |        | disadvantaged |            |        |       |     | people  |        |         | are      | the |
+| •  In         | general |       |            | poor |            | and |              | socially   |             |        | disadvantaged |            |        |       |     | people  |        |         | are      | the |
 | most         |         | known |            |      | vulnerable |     |              |            | groups      |        |               | throughout |        |       |     | the     | world. |         |          |     |
 
-â€¢ The following features depict the common characteristics of the
+•  The following features depict the common characteristics of the
 vulnerable groups stated above:
 - Less physically or mentally capable (infants, older adults,
 people with disabilities);
@@ -238,25 +238,25 @@ their needs and potentials.
 
 1.4. Historical background of modalities moving towards
 inclusion
-â€¢ In the post industrial period legislations and litigations created opportunities
+•  In the post industrial period legislations and litigations created opportunities
 for children with disabilities to access education in public schools.
-â€¢ The following modalities were applied to teach children with disabilities.
+•  The following modalities were applied to teach children with disabilities.
 1.4.1. Specialized and or residential schools
-â€¢ These schools were established with an intention to provide educational
+•  These schools were established with an intention to provide educational
 services in specialized approach only for children with disabilities.
-â€¢ Consequently, schools for the deaf, schools for the blind etc. came into
+•  Consequently, schools for the deaf, schools for the blind etc. came into
 being as separate institutions throughout 19th and 20th century.
 
 1.4.2. Mainstreaming
-â€¢ In the 1960 and 70s special needs education classes were established in
+•  In the 1960 and 70s special needs education classes were established in
 public schools with an intention to create least restrictive environment for
 children with disabilities.
 1.4.3. Integration
-â€¢ The approach was introduced and applied in 1970s with an objective to
+•  The approach was introduced and applied in 1970s with an objective to
 integrating students with disabilities in general class setting without the
 change of regular school/education system.
-â€¢ In this situation, students with disabilities are required to fit the system.
-â€¢ This approach is characterized by the following realities:
+•  In this situation, students with disabilities are required to fit the system.
+•  This approach is characterized by the following realities:
 - System stays the same;
 - Round pegs for round holes;
 - Change the child to fit the system;
@@ -267,12 +267,12 @@ Integration
 
 1.4.4.Inclusive Education
 20th
-â€¢ This approach was applied as of the last quarter of century
+•  This approach was applied as of the last quarter of century
 focusing on regular education system change to fit the special
 educational needs of students with disabilities as discussed in the
 | next | section | in detail. |     |     |     |     |     |
 | ---- | ------- | ---------- | --- | --- | --- | --- | --- |
-â€¢
+• 
 | This | approach   | is characterized |     | by the | following |     | factors. |
 | ---- | ---------- | ---------------- | --- | ------ | --------- | --- | -------- |
 |      | - Flexible | system;          |     |        |           |     |          |
@@ -287,24 +287,24 @@ Children are different;
 Inclusive
 
 1.5. Evolution of the concept of disability
-â€¢ In order to understand how disability is currently viewed, it is
+•  In order to understand how disability is currently viewed, it is
 helpful to look at the way the concept of disability has evolved
 over time as described below.
 1.5.1.Traditional/Charity Model
-â€¢ Historically, disability was largely understood in mythological or
+•  Historically, disability was largely understood in mythological or
 religious terms, e.g. people with disabilities were considered to be
 possessed by devils or spirits; disability was also often seen as a
 punishment for past wrong doing.
-â€¢ These views are still present today in many traditional societies.
+•  These views are still present today in many traditional societies.
 
 1.5.2.Individual/Medical Model
-| â€¢ In    | the | nineteenth |          | and    | twentieth |     | centuries, |                  | developments |      | in  |
+| •  In    | the | nineteenth |          | and    | twentieth |     | centuries, |                  | developments |      | in  |
 | ------- | --- | ---------- | -------- | ------ | --------- | --- | ---------- | ---------------- | ------------ | ---- | --- |
 | science |     | and        | medicine | helped |           | to  | create     | an understanding |              | that |     |
 disability has a biological or medical basis, with impairments in
 body function and structure being associated with different health
 conditions.
-| â€¢ This | medical |     | model | views |     | disability |     | as a | problem | of  | the |
+| •  This | medical |     | model | views |     | disability |     | as a | problem | of  | the |
 | ------ | ------- | --- | ----- | ----- | --- | ---------- | --- | ---- | ------- | --- | --- |
 individual and is primarily focused on cure and the provision of
 | medical |     | care | by professionals. |     |     |     |     |     |     |     |     |
@@ -312,16 +312,16 @@ individual and is primarily focused on cure and the provision of
 
 1.5.3.Social Model/Human Rights-Based
 Model
-| â€¢ In | the | 1960s |     | and | 1970s, | the | individual |     | and | medical |     | view | of  |
+| •  In | the | 1960s |     | and | 1970s, | the | individual |     | and | medical |     | view | of  |
 | ---- | --- | ----- | --- | --- | ------ | --- | ---------- | --- | --- | ------- | --- | ---- | --- |
 disability was challenged and a range of social approaches were
 | developed, |     |     | e.g. | the | social | model | of  | disability. |     |     |     |     |     |
 | ---------- | --- | --- | ---- | --- | ------ | ----- | --- | ----------- | --- | --- | --- | --- | --- |
-â€¢ These approaches shifted attention away from the medical aspects
+•  These approaches shifted attention away from the medical aspects
 | of             | disability |     |     | and  | instead | focused |              | on  | the   | social | barriers |     | and |
 | -------------- | ---------- | --- | --- | ---- | ------- | ------- | ------------ | --- | ----- | ------ | -------- | --- | --- |
 | discrimination |            |     |     | that | people  | with    | disabilities |     | face. |        |          |     |     |
-â€¢
+• 
 Disability was redefined as a societal problem rather than an
 | individual |     |     | problem |     | and     | solutions |      | became  | focused |     | on  | removing |     |
 | ---------- | --- | --- | ------- | --- | ------- | --------- | ---- | ------- | ------- | --- | --- | -------- | --- |
@@ -330,10 +330,10 @@ Disability was redefined as a societal problem rather than an
 Activities
 1. Read the following short story and identify the phrase that clearly shows the
 meaning of impairment and disability.
-Ten-year-old Mesfinâ€™s eyes are damaged = ________________ due to an
+Ten-year-old Mesfin's eyes are damaged = ________________ due to an
 eye disease, and he develops difficulties in seeing =
 _________________________. His school refuses to take him back as they
-donâ€™t have the resources to support a child with visual impairment
+don't have the resources to support a child with visual impairment
 =_______________. There are no other schools in his community and
 therefore Mesfin cannot go to school = ______________________.
 
@@ -355,38 +355,38 @@ Concept of Inclusion
 
 | 2.1.  | Definition      | of Inclusion |            |      |             |
 | ----- | --------------- | ------------ | ---------- | ---- | ----------- |
-| â€¢ The | principle       | of inclusion | is simple. |      |             |
-| â€¢ It  | is the opposite | of exclusion | and        | also | alienation. |
-â€¢ It is the principle that says that whatever benefits accrue to
+| •  The | principle       | of inclusion | is simple. |      |             |
+| •  It  | is the opposite | of exclusion | and        | also | alienation. |
+•  It is the principle that says that whatever benefits accrue to
 members of a society are the heritage of all people, not just those
 | who | are able-bodied. |     |     |     |     |
 | --- | ---------------- | --- | --- | --- | --- |
-â€¢ Inclusion means that all people are entitled to full membership of
+•  Inclusion means that all people are entitled to full membership of
 | the | human family. |     |     |     |     |
 | --- | ------------- | --- | --- | --- | --- |
 
-| â€¢ Fundamentally, |     |     |     | inclusion | is the | principle |     | that: |     |     |
+| •  Fundamentally, |     |     |     | inclusion | is the | principle |     | that: |     |     |
 | ---------------- | --- | --- | --- | --------- | ------ | --------- | --- | ----- | --- | --- |
 - We are all entitled to participate fully in all aspects of society;
 |     | - We | all | have | the same  | rights | and         | responsibilities; |     |     |     |
 | --- | ---- | --- | ---- | --------- | ------ | ----------- | ----------------- | --- | --- | --- |
 |     | - We | all | have | something | to     | contribute. |                   |     |     |     |
-â€¢ It is the principle which demands valued recognition of all
+•  It is the principle which demands valued recognition of all
 | people      |              | and | the | entitlement |     | of all | meaningful |       |     | interaction, |
 | ----------- | ------------ | --- | --- | ----------- | --- | ------ | ---------- | ----- | --- | ------------ |
 | involvement |              |     | and | engagement  |     | in     | every      | part  | of  | the complex  |
 | and         | multifaceted |     |     | societies   | in  | which  | we         | live. |     |              |
 
-â€¢ Inclusion is the right of the individual and the responsibility of
+•  Inclusion is the right of the individual and the responsibility of
 | society | as a | whole. |     |
 | ------- | ---- | ------ | --- |
-â€¢ Inclusion requires the removal of barriers and social structures
+•  Inclusion requires the removal of barriers and social structures
 | which | impede( | restrict) | participation. |
 | ----- | ------- | --------- | -------------- |
-â€¢ It requires proactive policy making, lateral thinking and on-going
+•  It requires proactive policy making, lateral thinking and on-going
 commitment.
 
-| â€¢ The | principle |     | of  | inclusion | accepts | disability |     | as  | human |     |
+| •  The | principle |     | of  | inclusion | accepts | disability |     | as  | human |     |
 | ----- | --------- | --- | --- | --------- | ------- | ---------- | --- | --- | ----- | --- |
 diversity. Inclusion is not a one-time project, rather it is a
 | process | which |           | is  | ultimately  | intended | to pass |               | through |     | or  |
@@ -397,7 +397,7 @@ diversity. Inclusion is not a one-time project, rather it is a
 institutions; and
 - Evolving inclusive practice.
 
-â€¢ There are three dimensions need to be considered for the effective
+•  There are three dimensions need to be considered for the effective
 implementation of inclusive services that accommodate the special
 needs of persons with disabilities and other vulnerable groups:
 - Create non-discriminatory attitude within communities towards PWDs
@@ -410,7 +410,7 @@ environments for equal participation of PWDs and other vulnerable
 - Empower physical and psychosocial capacity of PWDs and other
 vulnerable groups.
 
-â€¢ In accordance with the analysis of WHO regarding environment in
+•  In accordance with the analysis of WHO regarding environment in
 reference to disability, it includes both the physical and service
 | environments | as          | listed | briefly       |     | below: |      |        |       |
 | ------------ | ----------- | ------ | ------------- | --- | ------ | ---- | ------ | ----- |
@@ -422,7 +422,7 @@ reference to disability, it includes both the physical and service
 | --------- | ------ | --- | -------- | --- | --- | --- | --- | --- |
 
 2.2. Principles of Inclusion
-â€¢ In accordance with UNESCO (2005) the following are four major
+•  In accordance with UNESCO (2005) the following are four major
 principles of inclusion:
 1. Inclusion is a process.
 It has to be seen as a never-ending search to find better ways of
@@ -443,31 +443,31 @@ creativity and problem solving.
 
 â–3. Inclusion is about the presence, participation and
 achievement of all persons.
-â– â€˜Presenceâ€™ is concerned with where persons are provided and
-how reliably and punctually they attend; â€˜participationâ€™ relates to
+â– 'Presence' is concerned with where persons are provided and
+how reliably and punctually they attend; 'participation' relates to
 the quality of their experiences and must incorporate the views of
-learners/and or workers and â€˜achievementâ€™ is about the outcomes
+learners/and or workers and 'achievement' is about the outcomes
 of learning across the curriculum, not just test and exam results.
 
 4. Inclusion invokes a particular emphasis on those who may be
 | at risk | of marginalization, |     | exclusion | or underachievement. |
 | ------- | ------------------- | --- | --------- | -------------------- |
-â–This indicates the moral responsibility to ensure that those â€˜at
-riskâ€™ are carefully monitored, and that steps are taken to ensure
+â–This indicates the moral responsibility to ensure that those 'at
+risk' are carefully monitored, and that steps are taken to ensure
 | their | presence, | participation | and | achievement. |
 | ----- | --------- | ------------- | --- | ------------ |
 
 5. It promotes the two dimensions of inclusion, equality and
 equity.
 Equality is equality of equals.
-Aristotle defined equality as â€œtreating equal people equally.â€
+Aristotle defined equality as "treating equal people equally."
 Whereas, equality refers to the provision of special support for
 the ones who were (are) neglected in the participation of socio-
 economic activities of the society they live in.
 
 | 2.3. | Rationale |     | for | Inclusion |     |     |     |
 | ---- | --------- | --- | --- | --------- | --- | --- | --- |
-â€¢ The following rationales justify why inclusion is needed to be applied as a
+•  The following rationales justify why inclusion is needed to be applied as a
 strategy to make the participation of PWDs and other vulnerable groups
 | visible | in          | all | aspects | of          | life of | the society. |     |
 | ------- | ----------- | --- | ------- | ----------- | ------- | ------------ | --- |
@@ -490,7 +490,7 @@ friendship, respect and understanding.
 
 2.3.3. Legal Foundations
 - All individuals have the right to learn and live together.
-- Human being shouldnâ€™t be devalued or discriminated
+- Human being shouldn't be devalued or discriminated
 against by being excluded or sent away because of their
 disability.
 - There are no legitimate reasons to separate children for
@@ -516,17 +516,17 @@ of diversity.
 
 |     | 2.4.Features  |           |             | and         |           | barriers |     |     | of            |       | inclusive   |          |            | environment |           |           |       |     |
 | --- | ------------- | --------- | ----------- | ----------- | --------- | -------- | --- | --- | ------------- | ----- | ----------- | -------- | ---------- | ----------- | --------- | --------- | ----- | --- |
-| â€¢   | Inclusive     |           | environment |             |           |          | is  |     | characterized |       |             |          |            | by          | the       | following |       |     |
+| •    | Inclusive     |           | environment |             |           |          | is  |     | characterized |       |             |          |            | by          | the       | following |       |     |
 |     | features      |           | that        |             | revolve   |          |     |     | around        |       |             |          | the        |             | formation |           |       | of  |
 |     | accommodative |           |             |             | and       | barrier  |     |     | free          |       | atmosphere. |          |            |             |           |           |       |     |
-| â€¢   | An            | inclusive |             | environment |           |          |     |     | is            | one   |             | in       | which      |             | members   |           | feel  |     |
+| •    | An            | inclusive |             | environment |           |          |     |     | is            | one   |             | in       | which      |             | members   |           | feel  |     |
 |     | respected     |           | by          | and         | connected |          |     |     | to            | one   |             | another. |            |             |           |           |       |     |
-| â€¢   | An            | inclusive |             | environment |           |          |     | is  | an            |       | environment |          |            |             | that      | welcomes  |       |     |
+| •    | An            | inclusive |             | environment |           |          |     | is  | an            |       | environment |          |            |             | that      | welcomes  |       |     |
 |     | all           | people,   |             | regardless  |           |          |     | of  |               | their |             |          | disability |             |           | and       | other |     |
 vulnerabilities.
-â€¢
+• 
 
-Features and barriers Contâ€™d â€¦
+Features and barriers Cont'd ...
 â–It recognizes and uses their skills and strengthens their abilities.
 â–An inclusive service environment is respectful, supportive, and
 equalizing.
@@ -536,9 +536,9 @@ individuals with disabilities and other vulnerable groups at all
 | levels | of services | and | community | life. |     |     |     |     |
 | ------ | ----------- | --- | --------- | ----- | --- | --- | --- | --- |
 â– An inclusive environment is a place which is adjusted to
-individualsâ€™ needs.
+individuals' needs.
 
-Contâ€™dâ€¦
+Cont'd...
 â–It acknowledges that individual differences among individuals
 are a source of richness and diversity, and not a problem, and that
 various needs and the individual pace of learning and
@@ -548,16 +548,16 @@ approaches.
 changes directed towards strengthening and encouraging different
 ways of participation of all members of the community.
 
-Contâ€™d â€¦
+Cont'd ...
 â–An inclusive environment is also directed towards developing
-| culture,       | policy       | and     | practice   |          | which | meet       | pupilsâ€™ |           | diversities, |     |
+| culture,       | policy       | and     | practice   |          | which | meet       | pupils' |           | diversities, |     |
 | -------------- | ------------ | ------- | ---------- | -------- | ----- | ---------- | ------- | --------- | ------------ | --- |
 | towards        | identifying  |         | and        | removing |       | obstacles  | in      | learning  |              | and |
 | participating, |              | towards | developing |          |       | a suitable |         | provision |              | and |
 | supporting     | individuals. |         |            |          |       |            |         |           |              |     |
 
-Contâ€™dâ€¦.
-â€¢ Regardless of these positive features and qualities of inclusion in
+Cont'd....
+•  Regardless of these positive features and qualities of inclusion in
 terms of the promotion of the issue of disability and vulnerability in
 public services, there are three types of barriers preventing persons
 with disabilities from participating in society on equal terms with
@@ -568,46 +568,46 @@ non-disabled people:
 | - Institutional |     | barriers.   |     |           |           |     |
 
 Social and attitudinal barriers
-â€¢ Attitudinal barriers, including prejudice and discrimination cause
+•  Attitudinal barriers, including prejudice and discrimination cause
 the biggest problems to persons with disabilities.
-â€¢ Disability is associated with shame, fear and/or pity, easily leading
+•  Disability is associated with shame, fear and/or pity, easily leading
 to isolation or overprotection.
-â€¢ Disability is often also seen as a curse and punishment of wrong
+•  Disability is often also seen as a curse and punishment of wrong
 doing and wrath of God.
 
-Contâ€™dâ€¦
-â€¢ PWDs are assumed as incapable/inadequate and dependent upon
+Cont'd...
+•  PWDs are assumed as incapable/inadequate and dependent upon
 others who deserve passion and charity.
-â€¢ In order to avoid discrimination, the family may keep the person
+•  In order to avoid discrimination, the family may keep the person
 with a disability hidden at home.
-â€¢ Negative language reflects and can reinforce prejudices.
+•  Negative language reflects and can reinforce prejudices.
 
 Environmental and technical barriers
-â€¢ Environmental barriers include natural or technical barriers that
+•  Environmental barriers include natural or technical barriers that
 | prevent | persons | with | disabilities | from | participation. |
 | ------- | ------- | ---- | ------------ | ---- | -------------- |
-â€¢
+• 
 PWDs encounter these barriers in areas such as: public transport,
 hospitals and clinics, schools and housing, shops and marketplaces,
 places of worship, media and communications etc. due to the physical
 | inaccessibility |     | of such | service | areas. |     |
 | --------------- | --- | ------- | ------- | ------ | --- |
-â€¢ Technical barriers include high steps and concrete platforms, narrow
+•  Technical barriers include high steps and concrete platforms, narrow
 entrances, lack of or too heavy doors, narrow cubicles, lack of light
 and handrails.
-â€¢ Natural barriers include uneven, rough or steep paths on muddy and/or
+•  Natural barriers include uneven, rough or steep paths on muddy and/or
 | slippery | ground. |     |     |     |     |
 | -------- | ------- | --- | --- | --- | --- |
 
 Institutional barriers
-â€¢ Institutional barriers are related to legislation, policies and action
+•  Institutional barriers are related to legislation, policies and action
 plans.
-â€¢ Even if policies and legislation take persons with disabilities into
+•  Even if policies and legislation take persons with disabilities into
 account, the challenge is that they often lack directives, strategies
 and guidelines for implementation.
-â€¢ In addition, the relevant ministries/ bureaus responsible may not
+•  In addition, the relevant ministries/ bureaus responsible may not
 be aware of these policies.
-â€¢ Consequently, persons with disabilities are frequently left out of
+•  Consequently, persons with disabilities are frequently left out of
 planning, implementation and management of different public
 services.
 
@@ -647,7 +647,7 @@ natal).
 | than | the | congenital |     |     | ones. |     |     |     |     |     |     |     |
 | ---- | --- | ---------- | --- | --- | ----- | --- | --- | --- | --- | --- | --- | --- |
 
-3.1.2. The Individualâ€™s Personality
+3.1.2. The Individual's Personality
 | â–The | individual |     |     | personality |     | can | be  | typically |     | positive | or  |
 | ---- | ---------- | --- | --- | ----------- | --- | --- | --- | --------- | --- | -------- | --- |
 negative, dependent or independent, goal-oriented or laissez-
@@ -667,7 +667,7 @@ Individual
 | âž¢If        | so, | he/she      |            | is   | more             | likely  | to              | feel       | defined | by      | his/her |
 | impairment |     |             | and        | thus |                  | it will | have            | a negative |         | impact. |         |
 
-|     | â–3.1.4. |     | The | Individualâ€™s |     |     |     | Current |     | Life | Circumstances |     |     |     |     |
+|     | â–3.1.4. |     | The | Individual's |     |     |     | Current |     | Life | Circumstances |     |     |     |     |
 | --- | ------- | --- | --- | ------------ | --- | --- | --- | ------- | --- | ---- | ------------- | --- | --- | --- | --- |
 â–The influence of this situation manifests through the following
 factors:
@@ -683,7 +683,7 @@ factors:
 |     | circumstances, |               |     | they     |     | often |     | blame   | their | impairment. |        |       |         |      |       |
 
 3.1.5. The Individual's Support System
-â–The individualâ€™s support from family, a significant other, friends, or
+â–The individual's support from family, a significant other, friends, or
 social groups contribute to minimize the impact of impairment on
 their overall personality
 â–Common effects of impairment/disability may include:
@@ -707,7 +707,7 @@ impairment.
 | â–Persons    |      |               | with    |             | disabilities |            |          |           |     | are   |            | diverse |     |             |           | and   |           | heterogeneous, |       |            |        |      |
 | ----------- | ---- | ------------- | ------- | ----------- | ------------ | ---------- | -------- | --------- | --- | ----- | ---------- | ------- | --- | ----------- | --------- | ----- | --------- | -------------- | ----- | ---------- | ------ | ---- |
 | while       |      | stereotypical |         |             |              |            | views    |           | of  |       | disability |         |     |             | emphasize |       |           |                |       | wheelchair |        |      |
-| users       |      | and           | a       | few         |              | other      |          | â€œclassicâ€ |     |       |            | groups  |     |             |           | such  |           | as             | blind |            | people |      |
+| users       |      | and           | a       | few         |              | other      |          | "classic" |     |       |            | groups  |     |             |           | such  |           | as             | blind |            | people |      |
 | and         | deaf |               | people. |             |              |            |          |           |     |       |            |         |     |             |           |       |           |                |       |            |        |      |
 | â–Disability |      |               |         | encompasses |              |            |          |           | the |       | child      |         |     | born        |           |       | with      |                | a     | congenital |        |      |
 | condition   |      |               | such    |             | as           |            | cerebral |           |     | palsy |            |         | or  | the         |           | young |           |                |       | soldier    |        | who  |
@@ -841,17 +841,17 @@ towards others and tend to use more adaptive coping strategies
 
 | 3.1.9. |     | The | Family |     | and |     | Disability |
 | ------ | --- | --- | ------ | --- | --- | --- | ---------- |
-â€¢ The family can be either an enabling or a disabling factor for a person
+•  The family can be either an enabling or a disabling factor for a person
 | with | a   | disabling |     | condition. |     |     |     |
 | ---- | --- | --------- | --- | ---------- | --- | --- | --- |
-â€¢ Although most people have a wide network of friends, the networks of
+•  Although most people have a wide network of friends, the networks of
 people with disabilities are more likely to be dominated by family
 members.
-â€¢ Even among people with disabilities who maintain a large network of
+•  Even among people with disabilities who maintain a large network of
 friends, family relationships often are most central and families often
 | provide |     | the main |     | sources | of  | support. |     |
 | ------- | --- | -------- | --- | ------- | --- | -------- | --- |
-â€¢ This support may be informational (providing advice or referrals), or
+•  This support may be informational (providing advice or referrals), or
 | emotional |     | (giving |     | love | and | support). |     |
 | --------- | --- | ------- | --- | ---- | --- | --------- | --- |
 
@@ -866,26 +866,26 @@ needs of their children with disabilities by making available
 | are amenable |     | to  | change |     | with | a supportive |     | environment. |     |
 | ------------ | --- | --- | ------ | --- | ---- | ------------ | --- | ------------ | --- |
 
-â€¢ In both of these situations, the person with the potentially
+•  In both of these situations, the person with the potentially
 disabling condition is not allowed to develop to his or her fullest
 potential.
-â€¢ Families may also not provide needed environmental services
+•  Families may also not provide needed environmental services
 | and resources. |     |     |     |     |     |     |     |     |
 | -------------- | --- | --- | --- | --- | --- | --- | --- | --- |
-â€¢ For example, families of deaf children frequently do not learn to
+•  For example, families of deaf children frequently do not learn to
 | sign,       | in  | the | process     | impeding     | their | children's | ability | to  |
 | ----------- | --- | --- | ----------- | ------------ | ----- | ---------- | ------- | --- |
 | communicate |     | as  | effectively | as possible. |       |            |         |     |
 
 3.2. Special Needs of Persons with Disabilities and other
 Vulnerable Groups
-â€¢ The special needs of PWDs are emanated from different factors.
-â€¢ These are:
+•  The special needs of PWDs are emanated from different factors.
+•  These are:
 - Personal experience of individuals with impairments;
 - Type of the impairment;
 - Severity /degree of the impairment; and
 - Onset of the impairment.
-â€¢ Hence, professionals as per their discipline should give response
+•  Hence, professionals as per their discipline should give response
 differently to the needs of PWDs considering these realities.
 
 â–Analyzing the human beings, Maslow has identified five categories of
@@ -895,14 +895,14 @@ needs, with different priority levels, in the following order:
 â–Social needs;
 â–Esteem; and
 â–Self-actualization (fulfillment).
-â–Maslowâ€™s model is also valid for persons with disabilities and other
+â–Maslow's model is also valid for persons with disabilities and other
 vulnerable groups, whose needs are regular and or similar to those of
 ordinary persons.
 â–It is obvious that survival is a priority need for PWDs due to the
 existing disabling condition such as lack of opportunity for personal
 hygiene, feeding and Adaptive Daily Living skills ( ADL).
 
-Abrahamâ€™s Maslow Hierarchy
+Abraham's Maslow Hierarchy
 
 â–Persons with disabilities and other vulnerable groups have socio-
 emotional, psychological, physical and social environmental and
@@ -957,7 +957,7 @@ small rural environments and to build broader social networks away
 | 3.3. | Disability |     |     | Inclusive |     |     | Intervention |     |     | and | Rehabilitation |     |     |     |
 | ---- | ---------- | --- | --- | --------- | --- | --- | ------------ | --- | --- | --- | -------------- | --- | --- | --- |
 Services
-â–A â€˜One-size-fits-allâ€™ approach to provide services for persons
+â–A 'One-size-fits-all' approach to provide services for persons
 | with | disabilities |     |     | and | vulnerable |     |     | groups | is  | no longer |     | enough. |     |     |
 | ---- | ------------ | --- | --- | --- | ---------- | --- | --- | ------ | --- | --------- | --- | ------- | --- | --- |
 â–Including people with disabilities in everyday activities and
@@ -1039,15 +1039,15 @@ combined, comprise the process and activity of rehabilitation:
 
 3.3.2. Strategies to Disability Inclusive Intervention and Rehabilitation
 A)Prevention
-â€¢ This includes primary Prevention (Action intended to avoid the causes of
+•  This includes primary Prevention (Action intended to avoid the causes of
 impairment), Secondary prevention (Early Intervention) and tertiary prevention
 (Rehabilitation).
 | B) Implementing |     |     | the Twin-track |     | Approach |
 | --------------- | --- | --- | -------------- | --- | -------- |
-â€¢ One of the strategies relevant for the implementation of inclusion in terms of
+•  One of the strategies relevant for the implementation of inclusion in terms of
 | disability |            | is Twin-track |          | approach. |     |
 | ---------- | ---------- | ------------- | -------- | --------- | --- |
-| â€¢ The      | twin-track |               | approach | involves: |     |
+| •  The      | twin-track |               | approach | involves: |     |
 (1) Ensuring all mainstream programs and services are inclusive and
 accessible to persons with disabilities and other vulnerable groups time; and
 (2) Providing targeted disability-specific support to persons with
@@ -1103,10 +1103,10 @@ education, self-employment, health care etc. through providing them
 E) Inclusiveness and Assistive Technology
 â–There are various organizational definitions for assistive technology:
 â‘ The international standard ISO 9999 defines AT (referring to AT as
-â€œtechnical aidâ€) as â€œany product, instrument, equipment or technical
+"technical aid") as "any product, instrument, equipment or technical
 system used by a disabled person, especially produced or generally
 available, preventing, compensating, monitoring, relieving or
-neutralizing the impairment, disability or handicapâ€.
+neutralizing the impairment, disability or handicap".
 
 | â–For | persons |     | with | disabilities | and | other | vulnerable | groups, |
 | ---- | ------- | --- | ---- | ------------ | --- | ----- | ---------- | ------- |
@@ -1148,7 +1148,7 @@ aspects of life for Persons with disabilities and other vulnerable
 groups.
 
 â–Assistive technology affords Persons with disabilities and other
-vulnerable groupsâ€™ greater equality of opportunity, by enhancing and
+vulnerable groups' greater equality of opportunity, by enhancing and
 | expanding | their | communication, | learning, | participation, | and |
 | --------- | ----- | -------------- | --------- | -------------- | --- |
 achievement with higher levels of independence, wellbeing, and
@@ -1214,7 +1214,7 @@ opportunity for PWDs and other vulnerable groups.
 â–Vocational Education and Training;
 â–Wage Subsidies;
 â–Workplace Accommodation Schemes;
-â–Workersâ€™ Compensation;
+â–Workers' Compensation;
 â–Quota Systems;
 â–Sheltered Workshops;
 â–Private Sector Initiatives;
@@ -1245,8 +1245,8 @@ Culture
 | ------------- | ---------- | --- | --- | --------- | --- | ------- | --------- | ------- | ---------- | --- | ------------- | -------- | --- |
 | accommodative |            |     |     | community |     |         | that      | ensures |            | the | belongingness |          | and |
 | social        | networking |     |     | among     |     | members |           | of the  | community. |     |               |          |     |
-â–Culture is â€œthe ideas, customs, and social behavior of a particular
-| people |     | or society.â€ |     |     |     |     |     |     |     |     |     |     |     |
+â–Culture is "the ideas, customs, and social behavior of a particular
+| people |     | or society." |     |     |     |     |     |     |     |     |     |     |     |
 | ------ | --- | ------------ | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 â–Culture plays a huge role in accommodating the diverse needs of
 | individuals |     |     | and | groups. |     |     |     |     |     |     |     |     |     |
@@ -1269,7 +1269,7 @@ diverse people in different forms of areas where people will work
 
 | 4.2. | Dimensions |     |     |     | of  | inclusive |     | culture |     |     |     |     |     |     |     |     |     |
 | ---- | ---------- | --- | --- | --- | --- | --------- | --- | ------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-â€¢ There are three dimensions/elements of an inclusive culture:
+•  There are three dimensions/elements of an inclusive culture:
 1. Universal design refers to the construction of structures,
 |     |     | spaces,       |     | services, |            |     | communications |         |         |     |      | and    | resources |              |     | that    | are |
 | --- | --- | ------------- | --- | --------- | ---------- | --- | -------------- | ------- | ------- | --- | ---- | ------ | --------- | ------------ | --- | ------- | --- |
@@ -1278,17 +1278,17 @@ diverse people in different forms of areas where people will work
 accommodation.
 |     | 2.  | Recruitment |     |     | (Training |     |     | and | Advancement |     |     |     | Opportunities) |     |     |     |     |
 | --- | --- | ----------- | --- | --- | --------- | --- | --- | --- | ----------- | --- | --- | --- | -------------- | --- | --- | --- | --- |
-â€¢ This dimension of inclusive culture refers to the promotion
+•  This dimension of inclusive culture refers to the promotion
 |     |     | of  | recruitment |     |       | and | training     |     |     | of  | PWDs      |     | for | a certain |             | position |     |
 | --- | --- | --- | ----------- | --- | ----- | --- | ------------ | --- | --- | --- | --------- | --- | --- | --------- | ----------- | -------- | --- |
 |     |     | and | advance     |     | their |     | professional |     |     |     | knowledge |     |     | and       | competence. |          |     |
 
-Contâ€™dâ€¦.
+Cont'd....
 | 3. Workplace |              | Accommodations |               |               |      | and            |          | Accessibility |     |              | (Policy    |     | &   |
 | ------------ | ------------ | -------------- | ------------- | ------------- | ---- | -------------- | -------- | ------------- | --- | ------------ | ---------- | --- | --- |
 | Practice)    | plays        |                | a critical    |               | role |                | in       | generating    |     |              | meaningful |     |     |
 | inclusion    | of people    |                | with          | disabilities. |      |                |          |               |     |              |            |     |     |
-|              | â€¢In addition |                | to            | recruitment,  |      |                | training |               | and | advancement, |            |     |     |
+|              | • In addition |                | to            | recruitment,  |      |                | training |               | and | advancement, |            |     |     |
 |              | workplace    |                | policies      |               | need | to             | be       | carefully     |     | planned      |            | for | the |
 |              | provision    |                | of reasonable |               |      | accommodations |          |               |     |              |            |     |     |
 
@@ -1386,7 +1386,7 @@ transferred from generation to generation.
 practices has potential to benefit both Indigenous and non-
 Indigenous learners.
 
-â€¢ In modern curriculum the following skills are needed
+•  In modern curriculum the following skills are needed
 to be included:
 âˆ’ Collaboration;
 âˆ’ Creativity;
@@ -1394,7 +1394,7 @@ to be included:
 âˆ’ Problem-solving;
 âˆ’ Inquiry;
 âˆ’ Multicultural literacy, etc.
-â€¢ Indigenous knowledge and practice should be carefully
+•  Indigenous knowledge and practice should be carefully
 treated avoiding harmful cultural beliefs.
 
 Activities
@@ -1432,15 +1432,15 @@ force, fear, hatred, anger, tension, violence, stress, anxiety and any
 | kind | of destructions. |     |     |     |     |
 | ---- | ---------------- | --- | --- | --- | --- |
 
-â€¢ Peace makes the mind quiet and calm prevents anxieties,
+•  Peace makes the mind quiet and calm prevents anxieties,
 worries, stress and fears, and awakens inner strength and
 confidence, develop freedom, happiness, love, joy, justice and
 gratitude.
-â€¢ Peace can be achieved through formal and informal inclusive
+•  Peace can be achieved through formal and informal inclusive
 education.
-â€¢ Inclusive education is a foundation for inclusiveness in all
+•  Inclusive education is a foundation for inclusiveness in all
 aspects of life.
-â€¢ It is important to realize the role of inclusive education in
+•  It is important to realize the role of inclusive education in
 creating a society which is peaceful, democratic and
 prosperous
 
@@ -1555,7 +1555,7 @@ conflict;
 | ---------- | --- | --- | --- | ------ | ---- | ---------- | -------- | --- | ---------- | --- | -------- | --- | --------- | --- | ---- |
 | governance |     |     |     | to the | best |            | interest |     | of people. |     |          |     |           |     |      |
 â–It means the rule of the people, by the people, for the people; and
-| where |     | â€œpeopleâ€ |     |     | is  | to  | mean |     | all | human |     | being, | regardless |     | of the |
+| where |     | "people" |     |     | is  | to  | mean |     | all | human |     | being, | regardless |     | of the |
 | ----- | --- | -------- | --- | --- | --- | --- | ---- | --- | --- | ----- | --- | ------ | ---------- | --- | ------ |
 diversities.
 â–It brings democratic values to education and can include self-
@@ -1630,17 +1630,17 @@ country.
 â–Gender;
 â–Culture;
 
-â€¢ All these diversities in all areas of life including work place
+•  All these diversities in all areas of life including work place
 | and | education |     |     | should | be  | respected |     | and | accepted |     | by  | all |
 | --- | --------- | --- | --- | ------ | --- | --------- | --- | --- | -------- | --- | --- | --- |
 members of the society with an intention to sustaining peace,
 | development |              |             | and | democracy. |       |             |             |     |          |        |        |     |
 | ----------- | ------------ | ----------- | --- | ---------- | ----- | ----------- | ----------- | --- | -------- | ------ | ------ | --- |
-| â€¢ Valuing   |              | diversities |     | recognizes |       |             | differences |     | between  |        | people |     |
+| •  Valuing   |              | diversities |     | recognizes |       |             | differences |     | between  |        | people |     |
 | and         | acknowledges |             |     | that       | these | differences |             | are | a valued | asset. |        |     |
-â€¢ Multicultural education is an important component of valuing
+•  Multicultural education is an important component of valuing
 diversity.
-â€¢ It respects diversity while teaching all children and youth to
+•  It respects diversity while teaching all children and youth to
 | become |     | effective |     | and | participating |     | members |     | of a | democratic |     |     |
 | ------ | --- | --------- | --- | --- | ------------- | --- | ------- | --- | ---- | ---------- | --- | --- |
 society.
@@ -1715,8 +1715,8 @@ in the areas of housing, employment, transport, cultural life and
 | access | to public | services. |
 | ------ | --------- | --------- |
 â–According to the Universal Declaration of Human Rights, of 1948
-Article (1), â€œAll human beings are born free and equal in dignity
-| and rights.â€ |     |     |
+Article (1), "All human beings are born free and equal in dignity
+| and rights." |     |     |
 | ------------ | --- | --- |
 
 â–However, this is far from being a reality for persons with disability throughout
@@ -1739,7 +1739,7 @@ those disability mainstreamed and disability specific policy and legal
 frameworks enshrined at the international and domestic levels.
 
 6.2. International legal frameworks in relation to inclusiveness
-â€¢ In addition to the general policy and legal frameworks developed at
+•  In addition to the general policy and legal frameworks developed at
 international and domestic levels for the promotion of basic rights of
 citizens, the following international instruments included provisions
 regarding PWDs.
@@ -1757,11 +1757,11 @@ Disability of 1993;
 â–The UN Convention on the Right of Persons with Disabilities of 2006.
 
 6.3. Domestic policy and legal frameworks in relation to inclusiveness
-â–If we talk about Ethiopiaâ€™s legal and policy documents, we find no disability
+â–If we talk about Ethiopia's legal and policy documents, we find no disability
 related instrument until 1971 of the imperial order to provide for the
 | establishment |     | of the | rehabilitation |     | agency. |     |     |
 | ------------- | --- | ------ | -------------- | --- | ------- | --- | --- |
-â–Hence, it is possible to speak confidently that â€˜disability was not a matter of
+â–Hence, it is possible to speak confidently that 'disability was not a matter of
 | law and | policy | before | 1991. |     |     |     |     |
 | ------- | ------ | ------ | ----- | --- | --- | --- | --- |
 â–Ethiopia has signed most of the international conventions and declarations to
@@ -1847,7 +1847,7 @@ impairment.
 
 | â–When     | additional |        |     | support |         | is  | appropriate |         | to  | meet     | the |
 | --------- | ---------- | ------ | --- | ------- | ------- | --- | ----------- | ------- | --- | -------- | --- |
-| studentâ€™s |            | needs, |     | the     | student |     | can         | receive | the | pull-out |     |
+| student's |            | needs, |     | the     | student |     | can         | receive | the | pull-out |     |
 program.
 | â–Methods    |     | and             | materials |     | are | adapted |              | to students' |     | learning |       |
 | ----------- | --- | --------------- | --------- | --- | --- | ------- | ------------ | ------------ | --- | -------- | ----- |
@@ -1932,11 +1932,11 @@ among Stakeholders
 | 8.1.           |        | Understanding |                 |            |             |     | the           | concepts  |     |     | of      |     | collaboration, |          |      |
 | -------------- | ------ | ------------- | --------------- | ---------- | ----------- | --- | ------------- | --------- | --- | --- | ------- | --- | -------------- | -------- | ---- |
 | partnership    |        |               |                 | and        | stakeholder |     |               |           |     |     |         |     |                |          |      |
-| â–Collaboration |        |               |                 | is         | defined     |     | as            | â€œthe      | act | of  | working |     |                | together | to   |
+| â–Collaboration |        |               |                 | is         | defined     |     | as            | "the      | act | of  | working |     |                | together | to   |
 | produce        |        |               | or create       |            | something   |     |               | according |     |     | to      | the | capacities     |          | and  |
 | abilities      |        |               | of individuals. |            |             |     |               |           |     |     |         |     |                |          |      |
 | â–A             | person |               | should          |            | not         | be  | discriminated |           |     |     | due     | to  | mismatch       |          | with |
-| other          |        | peopleâ€™s      |                 | abilities; |             |     | because       |           | he  | has | his     |     | own            | quality  | in   |
+| other          |        | people's      |                 | abilities; |             |     | because       |           | he  | has | his     |     | own            | quality  | in   |
 | other          |        | perspectives. |                 |            |             |     |               |           |     |     |         |     |                |          |      |
 
 | â–Collaboration |     |         |             |               |             | provides      |     | every       |             | team  |              | member    |        | equal |     |
@@ -1980,11 +1980,11 @@ principle:
 â–Establish clear common goals for the collaboration;
 â–Define your respective roles and who is accountable for what, but
 accept joint responsibility for the decisions and their outcomes;
-â–Take a problem-solving approach â€“ with a sense that all those in
+â–Take a problem-solving approach – with a sense that all those in
 the collaborative arrangement share ownership of the problem and
 its solution;
 â–Establish an atmosphere of trust and mutual respect for each
-otherâ€™s expertise;
+other's expertise;
 â–Aim for consensus decision-making;
 
 â–Ask for and give immediate and objective feedback to others in a
@@ -2007,7 +2007,7 @@ and advantages:
 â–Greater efficiency and less duplicated effort;
 â–Access to additional resources or lower costs through
 sharing resources such as office space, administration or
-other aspects of an organizationâ€™s operation;
+other aspects of an organization's operation;
 â–Improved service coordination across agencies, with better
 pathways or referral systems for service users;
 â–Team work culture building.
@@ -2039,7 +2039,7 @@ suppliers, unions, and the community from which the business draws
 
 â–Stakeholders are usually parties who have a stake in a project and
 have a great influence on its success or failure.
-â–The benefit of stakeholdersâ€™ participation in a given and project or
+â–The benefit of stakeholders' participation in a given and project or
 program can be measured by the following points
 â–Provide all stakeholders with full opportunities to share their views,
 needs and knowledge.
@@ -2088,10 +2088,10 @@ development
 |     | the | development |             |     |     | process |               | and | to         | share |     |        | equitably |     |     | in      | the       | fruits |     |
 |     | of  | any         | development |     |     |         | endeavors.    |     |            |       |     |        |           |     |     |         |           |        |     |
 
-â€¢ Participation has an intrinsic value for participants and a
+•  Participation has an intrinsic value for participants and a
 | catalyst |              | for | further | development. |        |                    |     |           |     |             |      |          |     |
 | -------- | ------------ | --- | ------- | ------------ | ------ | ------------------ | --- | --------- | --- | ----------- | ---- | -------- | --- |
-| â€¢ Due    | to           | the | reason  | that         | it:    |                    |     |           |     |             |      |          |     |
+| •  Due    | to           | the | reason  | that         | it:    |                    |     |           |     |             |      |          |     |
 |          | âˆ’ Encourages |     |         | a sense      |        | of responsibility; |     |           |     |             |      |          |     |
 |          | âˆ’ Guarantees |     |         | that         | a felt | need               | is  | involved; |     |             |      |          |     |
 |          | âˆ’ Ensures    |     | things  |              | are    | done               | the | right     |     | way;        | uses | valuable |     |

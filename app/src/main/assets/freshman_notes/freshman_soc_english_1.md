@@ -75,7 +75,7 @@ The content provided in these notes is for educational and informational purpose
 | Permanent situations: *Julie lives in London.* | Temporary situations: *Julie is living in Paris for a few months.* |
 | Habits: *I drink coffee every morning.* | Temporary/new habits: *I'm drinking too much coffee these days.* |
 | Future timetables: *My plane leaves at eight tonight.* | Definite future plans: *I'm meeting John after class today.* |
-| Future after 'when': *I'll call you when I get home.* | â€” |
+| Future after 'when': *I'll call you when I get home.* | — |
 
 ---
 
@@ -99,7 +99,7 @@ The content provided in these notes is for educational and informational purpose
 **Common Mistakes:**
 | Mistake | Correct | Why |
 | --- | --- | --- |
-| Steven has wrote a new book. | Steven has written a new book. | The past participle must be used â€” 'wrote' is past simple, 'written' is past participle. |
+| Steven has wrote a new book. | Steven has written a new book. | The past participle must be used — 'wrote' is past simple, 'written' is past participle. |
 | Did you have seen him before? | Have you seen him before? | The helping verb 'have' is used in the present perfect. |
 | I didn't have seen him before. | I haven't seen him before. | To make it negative, add not (n't) after 'have'. |
 | I am here since last week. | I have been here since last week. | The present perfect shows an action which continues to the present. |
@@ -174,22 +174,22 @@ The content provided in these notes is for educational and informational purpose
 
 **Use:**
 
-**USE 1 â€” Interrupted Action in the Past:** A longer action was interrupted by a shorter action.
+**USE 1 — Interrupted Action in the Past:** A longer action was interrupted by a shorter action.
 *I was watching TV when she called.*
 *While we were having the picnic, it started to rain.*
 
-**USE 2 â€” Specific Time as an Interruption:**
+**USE 2 — Specific Time as an Interruption:**
 *Last night at 6 PM, I was eating dinner.*
 *At midnight, we were still driving through the desert.*
 
-**USE 3 â€” Parallel Actions:** Both actions happening at the same time.
+**USE 3 — Parallel Actions:** Both actions happening at the same time.
 *I was studying while he was making dinner.*
 *While Ellen was reading, Tim was watching television.*
 
-**USE 4 â€” Atmosphere:** A series of parallel actions to describe a scene.
+**USE 4 — Atmosphere:** A series of parallel actions to describe a scene.
 *When I walked into the office, several people were busily typing, some were talking on the phones, the boss was yelling directions, and customers were waiting to be helped.*
 
-**USE 5 â€” Repetition and Irritation with 'always':**
+**USE 5 — Repetition and Irritation with 'always':**
 *She was always coming to class late.*
 *He was constantly talking. He annoyed everyone.*
 
@@ -226,12 +226,12 @@ The content provided in these notes is for educational and informational purpose
 
 **Use:**
 
-**USE 1 â€” Completed Action Before Something in the Past:**
+**USE 1 — Completed Action Before Something in the Past:**
 *I had never seen such a beautiful beach before I went to Kauai.*
 *I did not have any money because I had lost my wallet.*
 *She only understood the movie because she had read the book.*
 
-**USE 2 â€” Duration Before Something in the Past (Non-Continuous Verbs):**
+**USE 2 — Duration Before Something in the Past (Non-Continuous Verbs):**
 *We had had that car for ten years before it broke down.*
 *By the time Alex finished his studies, he had been in London for over eight years.*
 *They felt bad about selling the house because they had owned it for more than forty years.*
@@ -426,15 +426,15 @@ For a number of individual actions or repeated actions, use the past perfect sim
 
 **Form:** If/when + present simple, present simple
 
-**Use:** For general truths and facts â€” things that are always true.
+**Use:** For general truths and facts — things that are always true.
 *If you heat water to 100 degrees, it boils.*
-*Water boils when it reaches 100Â°C.*
+*Water boils when it reaches 100°C.*
 
 **Common Mistakes:**
 | Mistake | Correct | Why |
 | --- | --- | --- |
 | If you eat too much, you will get fat. | If you eat too much, you get fat. | We use the present simple in both clauses; it means the condition can be true at any time (it is a fact). |
-| Water boils when it will reach 100Â°C. | Water boils when it reaches 100Â°C. | 'If' means the same as 'when' in a zero conditional sentence. |
+| Water boils when it will reach 100°C. | Water boils when it reaches 100°C. | 'If' means the same as 'when' in a zero conditional sentence. |
 
 ---
 
@@ -528,7 +528,7 @@ For a number of individual actions or repeated actions, use the past perfect sim
 
 **Use:** To say someone didn't do something, but it would have been better to do it.
 *You should have told them the truth.*
-*You shouldn't have gone there â€” it was a mistake.*
+*You shouldn't have gone there — it was a mistake.*
 
 ### 5.5 Must / Have To
 
@@ -538,7 +538,7 @@ For a number of individual actions or repeated actions, use the past perfect sim
 **Past:** *I had to go.* (obligation)
 *He must have been here.* / *It must have been great.* (opinion about the past)
 
-### 5.6 Present Probability â€” Must / Can't / May / Might / Could
+### 5.6 Present Probability — Must / Can't / May / Might / Could
 
 **Must (sure something is true):**
 *They are really good, they must win.*
@@ -557,7 +557,7 @@ For a number of individual actions or repeated actions, use the past perfect sim
 
 **Note:** We DO NOT use "could not" to express probability.
 
-### 5.7 Past Probability â€” Must Have / Can't Have / Might Have / May Have
+### 5.7 Past Probability — Must Have / Can't Have / Might Have / May Have
 
 **Must have (sure something was true):**
 *They must have left early.*

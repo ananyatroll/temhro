@@ -6,7 +6,7 @@ The content provided in these notes is for educational and informational purpose
 
 # Entrepreneurship Notes (Combined)
 
-## Chapters I â€“ VI
+## Chapters I – VI
 
 ---
 
@@ -20,7 +20,7 @@ THE NATURE OF ENTREPRENEURSHIP
 
 # 1.2 Historical Origin of Entrepreneurship
 
-# 1.2 Historical Origin of Entrepreneurship Con'tâ€¦
+# 1.2 Historical Origin of Entrepreneurship Con't...
 
 # 1.3 Definitions of Entrepreneurship and Entrepreneur
 
@@ -32,9 +32,9 @@ The ability to pursue it on a sustainable basis.
 The ability to pursue it through systematic means.
 The acceptance of risk or failure.
 
-# Con'tâ€¦
+# Con't...
 
-# Con'tâ€¦
+# Con't...
 Definition of Entrepreneur from different perspectives i.e., from the economist, psychologist and capitalist philosopher's point of view.
 To an economist,  one who brings resource, labor, materials, and other assets into combination that makes their value greater than before.
 To a psychologist,  a person typically driven by certain forces need to obtain or attain something, to experiment, to accomplish or perhaps to escape the authority of others.
@@ -108,7 +108,7 @@ Negotiation Skills
 All these different people skills are interrelated.
 Here entrepreneurial performance results from a combination of industry knowledge, general management skills; people skills and personal motivation.
 
-# 1.6.1.3 Entrepreneurial Skills (Con'tâ€¦)
+# 1.6.1.3 Entrepreneurial Skills (Con't...)
 
 # 1.6.1.4 The Entrepreneurial Tasks
 
@@ -125,8 +125,8 @@ Government
 # 1.6.2 Entrepreneurship and Environment
 
 Business environment refers to the factors external to a business enterprise which influence its operations and determine its effectiveness.
-Business environÂ­ment may be healthy or unhealthy.
-Healthy business environment means the conditions are favorable to the growth of business whereas unhealthy environÂ­ment implies conditions hostile or unfavorable to business operations.
+Business environ­ment may be healthy or unhealthy.
+Healthy business environment means the conditions are favorable to the growth of business whereas unhealthy environ­ment implies conditions hostile or unfavorable to business operations.
 Business and its environment interact with each other.
 
 1.6.2.1 Phases of Business Environment
@@ -164,7 +164,7 @@ Unfavorable market fluctuations.
 Non-cooperative attitude of banks and financial institutions.
 Entrepreneurship is environmentally determined.
 
-# con'tâ€¦
+# con't...
 
 # 1.7 Creativity, Innovation and Entrepreneurship
 
@@ -228,7 +228,7 @@ Creativity, is the ability to develop new ideas and to discover new ways of look
 Innovation, is the ability to apply creative solution to those problems and opportunities in order to enhance people's lives or to enrich society.
 Entrepreneurship = creativity + innovation.
 
-# 1.7.3 From Creativity to Entrepreneurship Con'tâ€¦
+# 1.7.3 From Creativity to Entrepreneurship Con't...
 
 
 ---
@@ -266,9 +266,9 @@ Entrepreneurship Ch-2
 
 A business idea is a short and precise description of the basic operation of an intended business.
 Types of Business Idea
-Old Idea â€“an individual copies an existing business idea from someone.
-Old Idea with Modification â€“ the person accepts an old idea from someone and then modifies it in some way to fit a potential customer's demand.
-A New Idea â€“ This one involves the invention of something new for the first time
+Old Idea –an individual copies an existing business idea from someone.
+Old Idea with Modification – the person accepts an old idea from someone and then modifies it in some way to fit a potential customer's demand.
+A New Idea – This one involves the invention of something new for the first time
 
 Entrepreneurship Ch-2
 
@@ -298,7 +298,7 @@ Trade Fairs and Exhibitions
 
 Entrepreneurship Ch-2
 
-# Con'tâ€¦
+# Con't...
 
 Brainstorming
 Opening up your mind and thinking about many different ideas. You start with a word or a topic and then write down everything that comes to mind relating to that subject.
@@ -336,7 +336,7 @@ After we score the ideas, we sum the total and select the idea with the highest 
 
 Entrepreneurship Ch-2
 
-# Con'tâ€¦
+# Con't...
 While you answer the above questions, there are four important groups that you should talk to:
 Potential customers
 Competitors, suppliers and entities with financial resources
@@ -354,7 +354,7 @@ Communicates the entrepreneur's vision.
 It is a few sentences/paragraphs long, should not exceed two pages.
 BUSINESS MODEL
 It is the conceptual structure supporting the viability of a business, including its purpose, its goals and its ongoing plans for achieving them.
-Identifies sources of revenue, the intended customer base, products, details of financingâ€¦.
+Identifies sources of revenue, the intended customer base, products, details of financing....
 
 Entrepreneurship Ch-2
 
@@ -434,7 +434,7 @@ details about the patents, trademarks, copyrights, franchises, and licensing agr
 
 Entrepreneurship Ch-2
 
-# Con'tâ€¦
+# Con't...
 
 The Plan:
 Marketing Plan
@@ -446,7 +446,7 @@ Indicates the pattern of flow of responsibilities and duties amongst people in t
 
 Entrepreneurship Ch-2
 
-# Con'tâ€¦
+# Con't...
 
 4. Financial Plan
 Projected Sales
@@ -460,7 +460,7 @@ Projected Ratios
 
 Entrepreneurship Ch-2
 
-# Con'tâ€¦
+# Con't...
 
 Critical Risks
 This can further give confidence to the investors as they can calculate the risks involved in the business from their perspectives as well.
@@ -493,7 +493,7 @@ Size: Include number of employees and startup capital. It doesn't always reflect
 The economic/control  covers market share, independence and personalized management.
 Entrepreneurship Ch-3
 
-# Con'tâ€¦
+# Con't...
 
 Micro and small enterprises (MSEs) play an important role in both developed and developing economies.
 Ethiopia is no exception and MSEs could occupy a prominent position in the development of the Ethiopian economy.
@@ -547,7 +547,7 @@ A combination of the stated factors
 
 Entrepreneurship Ch-3
 
-# Con'tâ€¦
+# Con't...
 The general criteria are suggested by Small Business Administration (SBA).
 Owned and financed by one individual or a small group/ 15 or 20 owners  in a rare case/.
 The firm's operations are geographically localized.
@@ -576,7 +576,7 @@ Mobilization of Locals Resources/Symbols of National Identity
 
 Entrepreneurship Ch-3
 
-# Con'tâ€¦
+# Con't...
 Innovative and Productive /Simple Technology
 Less Dependence on Foreign Capital/ Export Promotion
 Promotion of Self Employment
@@ -611,10 +611,10 @@ Entrepreneurship Ch-3
 
 | Level | Description | Key Characteristics |
 | --- | --- | --- |
-| Start-up | Initial stage where individuals or groups legally establish enterprises after acquiring skills or innovation. | â€¢ Newly establishedâ€¢ Begin production/service legallyâ€¢ Operate under legal entity |
-| Growth | Enterprises become competitive and profitable using provided support. | â€¢ Competent in price, quality, and supplyâ€¢ Profitableâ€¢ Larger manpower and assets than start-upâ€¢ Uses bookkeeping system |
-| Maturity | Enterprises become fully profitable, self-reliant, and capable of reinvestment. | â€¢ Sustainable profitabilityâ€¢ Reinvest in businessâ€¢ Fulfill sector requirementsâ€¢ Utilize support effectively |
-| Growthâ€“Medium | Transition stage from small to medium enterprise with strong competitiveness. | â€¢ Competent in price, quality, and supplyâ€¢ Expanded capacityâ€¢ Operate at medium enterprise level using support |
+| Start-up | Initial stage where individuals or groups legally establish enterprises after acquiring skills or innovation. | •  Newly established•  Begin production/service legally•  Operate under legal entity |
+| Growth | Enterprises become competitive and profitable using provided support. | •  Competent in price, quality, and supply•  Profitable•  Larger manpower and assets than start-up•  Uses bookkeeping system |
+| Maturity | Enterprises become fully profitable, self-reliant, and capable of reinvestment. | •  Sustainable profitability•  Reinvest in business•  Fulfill sector requirements•  Utilize support effectively |
+| Growth–Medium | Transition stage from small to medium enterprise with strong competitiveness. | •  Competent in price, quality, and supply•  Expanded capacity•  Operate at medium enterprise level using support |
 
 Entrepreneurship Ch-3
 
@@ -711,7 +711,7 @@ Includes improper managerial control as well as shortage of capital.
 You don't have adequate funds to begin with; you will not be able to afford the facilities or personnel you need to start up the business correctly.
 You do possess adequate capital but do not manage your resources wisely, you may be unable to maintain adequate inventory or keep the balance needed to run the business.
 
-# Con'tâ€¦.
+# Con't....
 
 Entrepreneurship Ch-3
 
@@ -721,7 +721,7 @@ Fail to plan for the future
 Overinvest in fixed assets
 Hire the wrong people.
 
-# Con'tâ€¦
+# Con't...
 
 Entrepreneurship Ch-3
 
@@ -748,7 +748,7 @@ Political, economic, technological and socio-cultural factors.
 
 Entrepreneurship Ch-3
 
-# Con'tâ€¦
+# Con't...
 Adequate Credit Assistance
 Adequate and timely supply of credit
 Special financing programs such as lower interest rates
@@ -778,7 +778,7 @@ Entrepreneurship Ch-3
 
 ### Notes:
 
-# Con'tâ€¦
+# Con't...
 
 Entrepreneurship Ch-3
 
@@ -813,7 +813,7 @@ Make adjustments to the plan based on changes in the environment and market that
 
 Entrepreneurship Ch-3
 
-# Con'tâ€¦
+# Con't...
 
 Important considerations and strategies in recruiting and assembling an effective team and  creating an effective and positive organization culture.
 The entrepreneur's desired culture must match the business strategy outlined in the business plan.
@@ -822,7 +822,7 @@ The entrepreneur should be flexible enough to try different things.
 
 Entrepreneurship Ch-3
 
-# Con'tâ€¦
+# Con't...
 
 It is necessary to spend extra time in the hiring process.
 The entrepreneur needs to understand the significance of leadership in the organization.
@@ -969,7 +969,7 @@ The existing laws and directives in Ethiopia in the field of Intellectual Proper
 
 Entrepreneurship
 
-# Con'tâ€¦.
+# Con't....
 
 Patent Proclamation and the Implementing Regulation no. 123/95 together with the council of ministers' regulation no. 12/97.
 According to the proclamation to be granted a patent, an invention must fulfill three conditions-
@@ -982,7 +982,7 @@ Plant or animal varieties or essentially biological processes for the production
 
 Entrepreneurship
 
-# Con'tâ€¦.
+# Con't....
 
 Schemes, rules or methods for playing games or performing commercial and industrial    activities and computer programs.
 Discoveries, scientific theories and mathematical methods; and
@@ -993,7 +993,7 @@ To centrally deposit trademarks which are used by local and foreign enterprises 
 
 Entrepreneurship
 
-# Con'tâ€¦.
+# Con't....
 
 To distinguish the products or services of one enterprise from those of other enterprises and prevent consumers from being victims of unfair trade practices.
 To provide information on trademark ownership and right of use when disputes arise between parties.
@@ -1004,7 +1004,7 @@ The proclamation gives protection to:
 
 Entrepreneurship
 
-# Con'tâ€¦.
+# Con't....
 
 literary, artistic and scientific works which include books, pamphlets, articles, computer programs and other writings.
 speeches, lectures, addresses, sermons, and other oral works.
@@ -1017,7 +1017,7 @@ illustrations, maps, plans, sketches, and three-dimensional works related to geo
 
 Entrepreneurship
 
-# Con'tâ€¦.
+# Con't....
 
 derivative works and
 collection of works, collection of mere data (databases) whether readable by machine or other form.
@@ -1062,11 +1062,11 @@ Wants are shaped by one's society and are described in terms of objects that wil
 Entrepreneurship Ch-5
 
 4
-# Con'tâ€¦
+# Con't...
 
 Entrepreneurship Ch-5
 
-# Con'tâ€¦
+# Con't...
 Value: Customer value is the difference between the values the customer gains from owning and using a product and the costs of obtaining the product.
 
 Costs
@@ -1088,7 +1088,7 @@ Customer's point of view.  To better understand what it takes to satisfy a custo
 Customer value reflects benefits and costs.  Customer value is the difference between the benefits a customer sees from a market offering and the costs of obtaining those benefits.
 
 6
-# Con'tâ€¦
+# Con't...
 
 Entrepreneurship Ch-5
 
@@ -1131,11 +1131,11 @@ This concept lead to marketing myopia (a short-sighted view of marketing, which 
 
 Entrepreneurship Ch-5
 
-The idea that consumers will not buy enough of the organization's products unless the organization undertakes a large â€“ scale selling and promotion effort.
+The idea that consumers will not buy enough of the organization's products unless the organization undertakes a large – scale selling and promotion effort.
 Common features of this concept are;
 Typically practiced unsought goods ( goods that buyers do not think of buying like encyclopedia, insurance
 The organization must be good at tracking down prospects and selling them on product benefits
-Practiced when product is over capacity â€“ aim is to sell what they make rather than make what the market wants.
+Practiced when product is over capacity – aim is to sell what they make rather than make what the market wants.
 # 3. Selling concept
 
 Entrepreneurship Ch-5
@@ -1154,15 +1154,15 @@ Entrepreneurship Ch-5
 
 ### Notes:
 
-Selling â€“ focuses on needs of sellers, Inside-out perspective (focuses on existing products and uses heavy promotion and selling efforts),
-Marketing â€“ outside â€“in perspective (focuses on customer needs, values, and satisfaction),
+Selling – focuses on needs of sellers, Inside-out perspective (focuses on existing products and uses heavy promotion and selling efforts),
+Marketing – outside –in perspective (focuses on customer needs, values, and satisfaction),
 # Difference b/n selling and marketing concepts
 
 Entrepreneurship Ch-5
 
 ### Notes:
 
-The idea that the organization should determine the needs, wants, and interests of target markets and deliver the desired satisfactions more effectively and efficiently than competitors in a way that maintains or improves the consumer's and society's well â€“ being.
+The idea that the organization should determine the needs, wants, and interests of target markets and deliver the desired satisfactions more effectively and efficiently than competitors in a way that maintains or improves the consumer's and society's well – being.
 This concept is new marketing management philosophy
 It addresses the question of whether the pure marketing concept is adequate in age of environmental problems, resource shortages, rapid population growth, world-wide economic problems, neglected social services
 # 5. Societal Marketing Concept
@@ -1206,11 +1206,11 @@ There are three Functional Roles of Marketing Research.
 Descriptive Function - the gathering and presentation of statements of fact.
 Diagnostic (analytical) Function - The explanation of data.
 Predictive Function - Specification of how to use the descriptive and diagnostic research to predict the result of a planned marketing decision.
-# Con'tâ€¦
+# Con't...
 
 Entrepreneurship Ch-5
 
-# Con'tâ€¦.
+# Con't....
 5.6.1.2 Marketing Research Components
 Marketing researchers deal with many aspects which includes:
 Market size
@@ -1259,7 +1259,7 @@ Smart segmentation.
 Early warning of competitor moves
 Minimizing investment risks.
 Quicker, more efficient and cost-effective information
-# Con'tâ€¦
+# Con't...
 5.6.2.2 Ways to Undertake Marketing Intelligence
 Unfocused scanning: without any specific purpose in mind.
 Semi-focused scanning: no specific purpose, but does narrow the range of media that is scanned.
@@ -1293,7 +1293,7 @@ Is a process that enable an organization to concentrate its limited resources on
 Pricing Strategy
 Price Skimming: Many companies that invent new products initially set high prices to 'skim' revenues from the market.
 II. Penetration Pricing: Companies set a low initial price in order to penetrate the market quickly and deeply to attract a large number of buyers quickly and win a large market share.
-# Con'tâ€¦
+# Con't...
 
 Entrepreneurship Ch-5
 
@@ -1301,11 +1301,11 @@ III. Cost-plus pricing:  adding a standard mark-up to the cost of the product.
 IV. Mark-up pricing: certain percentage of the selling price is added to unit cost
 V.Competition-Based Pricing: Also called going-rate pricing .May price at the same level, above, or below the competition
 VI. Psychological Pricing;  A pricing approach that considers the psychology of prices and not simply the economics; the price is used to say something about the product.
-# Con'tâ€¦
+# Con't...
 
 Entrepreneurship Ch-5
 
-# Con'tâ€¦
+# Con't...
 
 2. Promotion Strategies
 Advertising: Paid form of non personal communication, about an organization or its products transmitted to a target audience through a mass/broadcast medium.
@@ -1315,7 +1315,7 @@ Sales promotion; Describes promotional methods using special short-term techniqu
 
 Entrepreneurship Ch-5
 
-# Con'tâ€¦
+# Con't...
 
 Entrepreneurship Ch-5
 
@@ -1324,7 +1324,7 @@ Company Factors: financial, human and technological capabilities of a company to
 Market Characteristics: Geography, market density, market size, target market
 Product Attributes: perishability, value and sophistication of the product
 Environmental Forces: those forces that affect the business-like competition, technology and culture.
-# Con'tâ€¦
+# Con't...
 
 Entrepreneurship Ch-5
 
@@ -1332,7 +1332,7 @@ Entrepreneurship Ch-5
 
 Entrepreneurship Ch-5
 
-# Con'tâ€¦
+# Con't...
 
 5.8.3 Strategic Activities needed for Quality Customer Service Delivery
 Plants should identify important strategic activities to ensure consistent, efficient and excellent customer service delivery.
@@ -1344,7 +1344,7 @@ Participatory Management.
 
 Entrepreneurship Ch-5
 
-# Con'tâ€¦
+# Con't...
 
 Entrepreneurship Ch-5
 
@@ -1358,7 +1358,7 @@ The value of one customer is infinite, and you cannot possibly calculate it.
 This includes, sales to him in his lifetime as well as to customers he generates for you through word of mouth.
 This means, your most precious asset is your customer.  But We think of   immediate profit and ignore the future profits expected over the lifetime of the customer.
 
-# Con'tâ€¦
+# Con't...
 
 Entrepreneurship Ch-5
 
@@ -1370,11 +1370,11 @@ There is no investment like investment in customer satisfaction.
 Treat the cost of satisfying a customer as an investment rather than as an expense.
 You will get unmatched returns through referrals, repeat purchases decreased operational costs and increased profits.
 
-# Con'tâ€¦
+# Con't...
 
 Entrepreneurship Ch-5
 
-# Con'tâ€¦
+# Con't...
 
 Entrepreneurship Ch-5
 5.8.4.3 Place Yourself in The Customer's Shoes
@@ -1418,7 +1418,7 @@ Entrepreneurship Ch- 6
 
 Entrepreneurship Ch- 6
 
-# Con'tâ€¦.
+# Con't....
 
 Working Capital
 It is short-term finance. Most small firms need working capital to bridge the gap between when they get paid, and when they must pay their suppliers and their overhead costs.
@@ -1427,7 +1427,7 @@ For example, a manufacturer or small firm selling to other businesses will have 
 
 Entrepreneurship Ch- 6
 
-# Con'tâ€¦.
+# Con't....
 
 Asset Finance
 It is medium to long term finance.
@@ -1473,7 +1473,7 @@ Conditions: The conditions surrounding a loan request also affect the owner's ch
 
 Entrepreneurship Ch- 6
 
-# Conâ€¦.
+# Con....
 
 II) Trade Credit: It is credit given by suppliers who sell goods on account. This credit is reflected on the entrepreneur's balance sheet as account payable and in most cases it must be paid in 30 to 90 or more days.
 III) Equipment Suppliers: Most equipment vendors encourage business owners to purchase their equipment by offering to finance the purchase.
@@ -1506,7 +1506,7 @@ Such type of lease is non-cancellable; the lessor's investment is assured.
 
 Entrepreneurship Ch- 6
 
-# Con'tâ€¦
+# Con't...
 
 Operating Lease: In operating lease, risks and rewards incidental to the ownership of asset are not transferred by the lessor to the lessee and the term of such lease is much less than the economic life of the asset and thus the total investment of the lessor is not recovered through lease rental during the primary period of lease. In case of operating lease, the lessor usually provides advice to the lessee for repair, maintenance and technical knowhow of the leased asset and that is why this type of lease is also known as service lease.
 Operating lease has the following features:
@@ -1529,7 +1529,7 @@ Recovery  of Investment:  In  case of finance  lease, the  lessor can  recover  
 
 Entrepreneurship Ch- 6
 
-# Con'tâ€¦.
+# Con't....
 
 High Potentiality of Growth: The demand for leasing is steadily increasing because it is one of the cost-efficient forms of financing. Economic growth can be maintained even during the period of depression. Thus, the growth potentiality of leasing is much higher as compared to other forms of business.
 Lessor suffers from certain limitations which are discussed below:
@@ -1564,7 +1564,7 @@ Entrepreneurship Ch- 6
 
  6.7.1 What is Micro Finance?
 Microfinance is a term used to describe financial services, such as loans, savings, insurance and fund transfers to entrepreneurs, small businesses and individuals who lack access to banking services  with  high  collateral  requirements.
- Essentially,  it  is  providing  loans,  credit,  access to savings accounts â€“ even insurance policies and money transfers to small business owners, entrepreneurs (many of whom live in the developing world), and those who would otherwise not have access to these resources.
+ Essentially,  it  is  providing  loans,  credit,  access to savings accounts – even insurance policies and money transfers to small business owners, entrepreneurs (many of whom live in the developing world), and those who would otherwise not have access to these resources.
 
 Entrepreneurship Ch- 6
 
@@ -1582,7 +1582,7 @@ The objective of the MFIs is basically poverty alleviation through the provision
 
 Entrepreneurship Ch- 6
 
-# Con'tâ€¦.
+# Con't....
 
 Entrepreneurship Ch- 6
 

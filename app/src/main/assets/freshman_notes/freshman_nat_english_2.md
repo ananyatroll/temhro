@@ -4,7 +4,7 @@ The content provided in these notes is for educational and informational purpose
 
 ---
 
-# Communicative English 2 â€” Combined Notes
+# Communicative English 2 — Combined Notes
 
 ---
 
@@ -144,7 +144,7 @@ These three verbs are modal verbs used to express ideas like ability, advice, an
 
 - **Should** is the most common way to give advice.
 - **Ought to** expresses obligation.
-- **Had better** expresses urgency, demand, threat, or worry â€” it includes the idea that something bad will happen if you do not follow the advice.
+- **Had better** expresses urgency, demand, threat, or worry — it includes the idea that something bad will happen if you do not follow the advice.
 
 ### Affirmative, Negative, and Question Forms
 
@@ -172,14 +172,14 @@ These three verbs are modal verbs used to express ideas like ability, advice, an
 
 ### Usage Summary
 
-**Should** â€” my opinion / giving advice
+**Should** — my opinion / giving advice
 - You should finish your homework before you go out.
 - I should read the script on the train tomorrow.
 
-**Ought to** â€” obligation
+**Ought to** — obligation
 - You ought to finish your homework before you go out. (it is your obligation)
 
-**Had better** â€” urgency, demand, threat, worry
+**Had better** — urgency, demand, threat, worry
 - There's someone moving about downstairs. We had better call the police, quickly.
 - He had better not be late again or he'll be in trouble.
 
@@ -445,7 +445,7 @@ Pattern: Subject + reporting verb + object pronoun + not + infinitive with to + 
 
 ### 1. Expository Writing
 
-The word expository contains the word "expose" â€” this type of writing exposes, or sets forth, facts. It is the most common writing genre. In an expository piece, a topic is introduced and laid out in logical order without reference to the author's personal opinions.
+The word expository contains the word "expose" — this type of writing exposes, or sets forth, facts. It is the most common writing genre. In an expository piece, a topic is introduced and laid out in logical order without reference to the author's personal opinions.
 
 Expository writing can be found in: textbooks, journalism (except opinion and editorial articles), business writing, technical writing, essays, and instructions.
 
@@ -558,11 +558,11 @@ Used to refer to a time that is in the past, and a situation that is ongoing int
 | Present Perfect Progressive | A: He has been speaking. N: He has not been speaking. Q: Has he been speaking? | Putting emphasis on the course or duration (not the result); action that recently stopped or is still going on | all day, for 4 years, since 1993, how long?, the whole week |
 | Past Perfect Simple | A: He had spoken. N: He had not spoken. Q: Had he spoken? | Action taking place before a certain time in the past; sometimes interchangeable with past perfect progressive | already, just, never, not yet, once, until that day |
 | Past Perfect Progressive | A: He had been speaking. N: He had not been speaking. Q: Had he been speaking? | Action taking place before a certain time in the past; putting emphasis on the duration or course of an action | for, since, the whole day, all day |
-| Future I Simple | A: He will speak. N: He will not speak. Q: Will he speak? | Action in the future that cannot be influenced; spontaneous decision; assumption with regard to the future | in a year, next â€¦, tomorrow, I think, probably, perhaps |
+| Future I Simple | A: He will speak. N: He will not speak. Q: Will he speak? | Action in the future that cannot be influenced; spontaneous decision; assumption with regard to the future | in a year, next ..., tomorrow, I think, probably, perhaps |
 | Future I Simple (going to) | A: He is going to speak. N: He is not going to speak. Q: Is he going to speak? | Decision made for the future; conclusion with regard to the future | in one year, next week, tomorrow |
 | Future I Progressive | A: He will be speaking. N: He will not be speaking. Q: Will he be speaking? | Action that is going on at a certain time in the future; action that is sure to happen in the near future | in one year, next week, tomorrow |
 | Future II Simple | A: He will have spoken. N: He will not have spoken. Q: Will he have spoken? | Action that will be finished at a certain time in the future | by Monday, in a week |
-| Future II Progressive | A: He will have been speaking. N: He will not have been speaking. Q: Will he have been speaking? | Action taking place before a certain time in the future; putting emphasis on the course of an action | for â€¦, the last couple of hours, all day long |
+| Future II Progressive | A: He will have been speaking. N: He will not have been speaking. Q: Will he have been speaking? | Action taking place before a certain time in the future; putting emphasis on the course of an action | for ..., the last couple of hours, all day long |
 | Conditional I Simple | A: He would speak. N: He would not speak. Q: Would he speak? | Action that might take place | if sentences type II, If I were you, I would go home. |
 | Conditional I Progressive | A: He would be speaking. N: He would not be speaking. Q: Would he be speaking? | Putting emphasis on the course/duration of the action | |
 | Conditional II Simple | A: He would have spoken. N: He would not have spoken. Q: Would he have spoken? | Action that might have taken place in the past | if sentences type III, If I had seen that, I would have helped. |

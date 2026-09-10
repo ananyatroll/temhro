@@ -43,7 +43,7 @@ When a physical quantity is expressed in terms of a certain unit, the numerical 
 **Physical Quantities**
 
 The value of a physical quantity is expressed as the product of a numerical value and a unit:
-Value of quantity = Number Ã— Unit
+Value of quantity = Number × Unit
 
 All physical quantities are described in terms of seven fundamental quantities:
 | Quantity | SI Unit |
@@ -56,7 +56,7 @@ All physical quantities are described in terms of seven fundamental quantities:
 | Amount of Substance | Mole (mol) |
 | Luminous Intensity | Candela (cd) |
 
-Other units are derived from these seven base units. For example: Volume = Length Ã— Width Ã— Height, or the unit of velocity is m/s.
+Other units are derived from these seven base units. For example: Volume = Length × Width × Height, or the unit of velocity is m/s.
 
 **Significant Figures**
 
@@ -80,7 +80,7 @@ Significant Figures in Computation:
 - When adding or subtracting, the result has the same number of decimal places as the measurement with the fewest decimal places
 - When multiplying or dividing, the result has the same number of significant figures as the measurement with the fewest significant figures
 
-Example: Find the volume of a block with dimensions 1.2 cm Ã— 3.23 cm Ã— 23 cm = 89.392 cmÂ³, rounded to 89 cmÂ³ (two significant figures)
+Example: Find the volume of a block with dimensions 1.2 cm × 3.23 cm × 23 cm = 89.392 cm³, rounded to 89 cm³ (two significant figures)
 
 **3. Coordinate System and Vectors**
 
@@ -115,7 +115,7 @@ The graphical method of adding vectors is based on the head-to-tail method (also
 
 Example: A student walks 3.0 km east and then 4.0 km north. The displacement is the straight line from the starting point to the ending point.
 
-When adding more than two vectors, follow the same process. For example, if a man walks 20 m east, then 20 m north, then 20âˆš2 m 45Â° south of west, then 20 m south, then 20 m west, and finally 20 m north, the total displacement is 20âˆš2 m at an angle of 45Â° north of west, with magnitude â‰ˆ 28.3 m.
+When adding more than two vectors, follow the same process. For example, if a man walks 20 m east, then 20 m north, then 20âˆš2 m 45° south of west, then 20 m south, then 20 m west, and finally 20 m north, the total displacement is 20âˆš2 m at an angle of 45° north of west, with magnitude â‰ˆ 28.3 m.
 
 The subtraction of vectors is just a special case of vector addition: -B is a vector of the same magnitude as B but points in the opposite direction. A - B = A + (-B).
 
@@ -149,48 +149,48 @@ Angular speed is defined as the angle (in radians) rotated per unit of time. Ï�
 
 **Centripetal Acceleration**
 
-The acceleration of an object moving with constant speed in a circular path is called centripetal acceleration. It is defined as the rate of change of tangential velocity. The centripetal acceleration ac = vtÂ² / r = rÏ‰Â². It always points toward the center of the circular path.
+The acceleration of an object moving with constant speed in a circular path is called centripetal acceleration. It is defined as the rate of change of tangential velocity. The centripetal acceleration ac = vt² / r = rÏ‰². It always points toward the center of the circular path.
 
 **Centripetal Force**
 
-From Newton's second law (F = ma), an object moving in a circular path with constant speed requires a net force toward the center of the circular path. This force is called centripetal force. Fc = mvtÂ² / r = mrÏ‰Â².
+From Newton's second law (F = ma), an object moving in a circular path with constant speed requires a net force toward the center of the circular path. This force is called centripetal force. Fc = mvt² / r = mrÏ‰².
 
 The centripetal force is not a new kind of force; it is the name given to whatever force or combination of forces is acting on the object toward the center of the circular path. In a vertical circle, the centripetal force is the net radial force.
 
 Example: A 0.20-kg object is whirled in a vertical circle of radius 0.70 m with a constant speed of 5.0 m/s. Find:
-(a) The centripetal acceleration: ac = 5Â² / 0.70 = 35.7 m/sÂ²
-(b) The magnitude of the centripetal force: Fc = 0.20 Ã— 35.7 = 7.1 N
+(a) The centripetal acceleration: ac = 5² / 0.70 = 35.7 m/s²
+(b) The magnitude of the centripetal force: Fc = 0.20 × 35.7 = 7.1 N
 
 ## 2.2 Newton's Law of Universal Gravitation
 
 Newton's universal law of gravitation states that every particle in the universe attracts every other particle with a force that is directly proportional to the product of the masses of the particles and inversely proportional to the square of the distance between them:
 
-F = G(mâ‚mâ‚‚) / rÂ²
+F = G(mâ‚mâ‚‚) / r²
 
-where G is the gravitational constant = 6.674 Ã— 10â»Â¹Â¹ NÂ·mÂ²/kgÂ².
+where G is the gravitational constant = 6.674 × 10â»¹¹ N·m²/kg².
 
 **Important points:**
 - The gravitational force is always attractive, directed along the line joining the two particles
 - The force on mâ‚ due to mâ‚‚ is equal in magnitude and opposite in direction to the force on mâ‚‚ due to mâ‚ (action-reaction pair)
-- The gravitational force is negligible for ordinary-sized objects (e.g., two 1.0 kg masses separated by 1.0 m exert only 6.67 Ã— 10â»Â¹Â¹ N on each other)
+- The gravitational force is negligible for ordinary-sized objects (e.g., two 1.0 kg masses separated by 1.0 m exert only 6.67 × 10â»¹¹ N on each other)
 - The gravitational force acts even through empty space
 
 Example: Find the gravitational force between the Sun and the Earth.
-Mass of the Sun = 1.99 Ã— 10Â³â° kg, Mass of the Earth = 5.98 Ã— 10Â²â´ kg, Distance = 1.50 Ã— 10Â¹Â¹ m
-F = (6.67 Ã— 10â»Â¹Â¹ Ã— 1.99 Ã— 10Â³â° Ã— 5.98 Ã— 10Â²â´) / (1.50 Ã— 10Â¹Â¹)Â² = 3.52 Ã— 10Â²Â² N
+Mass of the Sun = 1.99 × 10³â° kg, Mass of the Earth = 5.98 × 10²â´ kg, Distance = 1.50 × 10¹¹ m
+F = (6.67 × 10â»¹¹ × 1.99 × 10³â° × 5.98 × 10²â´) / (1.50 × 10¹¹)² = 3.52 × 10²² N
 
 Example: Two spheres each of mass 100 kg are placed with their centers 0.5 m apart. Find the gravitational force between them.
-F = (6.67 Ã— 10â»Â¹Â¹ Ã— 100 Ã— 100) / (0.5)Â² = 2.668 Ã— 10â»â¶ N
+F = (6.67 × 10â»¹¹ × 100 × 100) / (0.5)² = 2.668 × 10â»â¶ N
 
 **Acceleration Due to Gravity (g)**
 
-Near the Earth's surface, the acceleration of a freely falling body is approximately 9.8 m/sÂ², defined as g = GM/RÂ² where M is Earth's mass and R is Earth's radius.
+Near the Earth's surface, the acceleration of a freely falling body is approximately 9.8 m/s², defined as g = GM/R² where M is Earth's mass and R is Earth's radius.
 
 Variations in g:
-- With altitude: g decreases as height increases (g' = GM/(R+h)Â²)
-- With depth: g decreases as depth increases (g' = GM(R-d)/RÂ³)
+- With altitude: g decreases as height increases (g' = GM/(R+h)²)
+- With depth: g decreases as depth increases (g' = GM(R-d)/R³)
 - With latitude: g is slightly larger at the poles than at the equator due to Earth's rotation
-- On the Moon: g_moon â‰ˆ 1.62 m/sÂ² (about 1/6 of Earth's g)
+- On the Moon: g_moon â‰ˆ 1.62 m/s² (about 1/6 of Earth's g)
 
 ## 2.3 Gravitational Potential Energy
 
@@ -204,7 +204,7 @@ The negative sign means the potential energy is zero at infinite separation. As 
 
 The minimum velocity with which a body must be projected vertically upward from the Earth's surface so that it escapes the Earth's gravitational field is called escape velocity.
 
-Using conservation of energy: Â½mvÂ²esc = GMm/R, so:
+Using conservation of energy: ½mv²esc = GMm/R, so:
 
 vesc = âˆš(2GM/R) = âˆš(2gR) â‰ˆ 11.2 km/s
 
@@ -220,16 +220,16 @@ Kepler formulated three empirical laws from astronomical observations:
 
 **Law 3 (Law of Periods):** The square of the orbital period of a planet is proportional to the cube of the semimajor axis of its orbit.
 
-Tâ‚Â²/Tâ‚‚Â² = râ‚Â³/râ‚‚Â³
+Tâ‚²/Tâ‚‚² = râ‚³/râ‚‚³
 
 Example: The planet Mercury orbits the Sun with a period of 88.0 days. Find the period of the planet Uranus, whose orbital radius is 19.8 times that of Earth's orbit (1 AU).
-TÂ² = (88)Â² Ã— (19.8)Â³ = 6.77 Ã— 10âµ â†’ T = 823 days â‰ˆ 2.26 years
+T² = (88)² × (19.8)³ = 6.77 × 10âµ â†’ T = 823 days â‰ˆ 2.26 years
 
 ## 2.5 Work-Energy Theorem
 
 The work-energy theorem states that the net work done on an object equals the change in its kinetic energy:
 
-Wnet = KEf - KEi = Â½mvÂ² - Â½muÂ²
+Wnet = KEf - KEi = ½mv² - ½mu²
 
 where u is the initial speed and v is the final speed.
 
@@ -238,15 +238,15 @@ The work-energy theorem is a generalization of Newton's second law for situation
 ## 2.6 Work and Kinetic Energy
 
 Work done by a constant force is defined as:
-W = F Ã— d Ã— cosÎ¸
+W = F × d × cosÎ¸
 
 where Î¸ is the angle between the force and displacement vectors.
 
-- If Î¸ = 0Â°, W = Fd (positive work)
-- If Î¸ = 90Â°, W = 0 (no work done)
-- If Î¸ = 180Â°, W = -Fd (negative work, or retarding force)
+- If Î¸ = 0°, W = Fd (positive work)
+- If Î¸ = 90°, W = 0 (no work done)
+- If Î¸ = 180°, W = -Fd (negative work, or retarding force)
 
-Work is a scalar quantity. Its SI unit is the joule (J). 1 J = 1 N Ã— 1 m.
+Work is a scalar quantity. Its SI unit is the joule (J). 1 J = 1 N × 1 m.
 
 If a variable force F(x) acts along the x-axis, the work done is:
 W = âˆ« F(x) dx
@@ -254,14 +254,14 @@ W = âˆ« F(x) dx
 The area under the F(x) vs x curve gives the work done.
 
 Kinetic Energy is defined as:
-KE = Â½mvÂ²
+KE = ½mv²
 
 ## 2.7 Potential Energy
 
 Potential energy is the energy associated with the configuration of a system of objects that exert conservative forces on each other.
 
 **Elastic Potential Energy:**
-Uel = Â½kxÂ²
+Uel = ½kx²
 
 where k is the spring constant and x is the displacement from the equilibrium position.
 
@@ -318,10 +318,10 @@ Liquids and gases are collectively called fluids because they can flow.
 ## 3.2 Density and Pressure
 
 **Density (Ï):**
-Density is defined as mass per unit volume: Ï = m/V. The SI unit is kg/mÂ³.
+Density is defined as mass per unit volume: Ï = m/V. The SI unit is kg/m³.
 
 **Pressure (P):**
-Pressure is defined as force per unit area: P = F/A. The SI unit is the pascal (Pa). 1 Pa = 1 N/mÂ².
+Pressure is defined as force per unit area: P = F/A. The SI unit is the pascal (Pa). 1 Pa = 1 N/m².
 
 The pressure at a depth h in a fluid of density Ï is:
 P = Pâ‚€ + Ïgh
@@ -332,13 +332,13 @@ where Pâ‚€ is the atmospheric pressure at the surface.
 
 Pascal's principle states that a change in pressure applied to an enclosed fluid is transmitted undiminished to all portions of the fluid and to the walls of its container.
 
-This principle is the basis of hydraulic systems. If a force Fâ‚ is applied to a piston of area Aâ‚, the pressure increase Î”P = Fâ‚/Aâ‚ is transmitted to a second piston of area Aâ‚‚, producing a force Fâ‚‚ = Fâ‚ Ã— (Aâ‚‚/Aâ‚).
+This principle is the basis of hydraulic systems. If a force Fâ‚ is applied to a piston of area Aâ‚, the pressure increase Î”P = Fâ‚/Aâ‚ is transmitted to a second piston of area Aâ‚‚, producing a force Fâ‚‚ = Fâ‚ × (Aâ‚‚/Aâ‚).
 
 ## 3.4 Archimedes' Principle
 
 Archimedes' principle states that a body immersed in a fluid experiences an upward buoyant force equal to the weight of the fluid displaced by the body:
 
-Fb = Ïfluid Ã— Vsubmerged Ã— g
+Fb = Ïfluid × Vsubmerged × g
 
 An object will float if its density is less than the density of the fluid. The fraction submerged equals the ratio of the object's density to the fluid's density.
 
@@ -346,7 +346,7 @@ An object will float if its density is less than the density of the fluid. The f
 
 Bernoulli's equation relates pressure, fluid speed, and height in a moving fluid:
 
-Pâ‚ + Â½Ïvâ‚Â² + Ïgyâ‚ = Pâ‚‚ + Â½Ïvâ‚‚Â² + Ïgyâ‚‚
+Pâ‚ + ½Ïvâ‚² + Ïgyâ‚ = Pâ‚‚ + ½Ïvâ‚‚² + Ïgyâ‚‚
 
 This equation applies to steady, incompressible, non-viscous flow along a streamline. It shows that where the fluid speed is high, the pressure is low, and vice versa.
 
@@ -381,13 +381,13 @@ The ideal gas law relates pressure, volume, temperature, and amount of gas:
 
 PV = nRT
 
-where n is the number of moles and R = 8.314 J/(molÂ·K) is the universal gas constant.
+where n is the number of moles and R = 8.314 J/(mol·K) is the universal gas constant.
 
 **Molecular Kinetic Theory:** The average translational kinetic energy of a gas molecule is proportional to the absolute temperature:
 
-KEavg = Â½mvÂ²rms = (3/2)kT
+KEavg = ½mv²rms = (3/2)kT
 
-where k = 1.38 Ã— 10â»Â²Â³ J/K is Boltzmann's constant.
+where k = 1.38 × 10â»²³ J/K is Boltzmann's constant.
 
 The root-mean-square speed of gas molecules: vrms = âˆš(3kT/m) = âˆš(3RT/M)
 
@@ -418,7 +418,7 @@ where Î”U is the change in internal energy, Q is the heat added to the system
 | Isochoric | V | 0 | nCvÎ”T | nCvÎ”T |
 | Isobaric | P | PÎ”V | nCpÎ”T | nCvÎ”T |
 | Isothermal | T | nRT ln(Vâ‚‚/Vâ‚) | nRT ln(Vâ‚‚/Vâ‚) | 0 |
-| Adiabatic | â€” | -Î”U | 0 | nCvÎ”T |
+| Adiabatic | — | -Î”U | 0 | nCvÎ”T |
 
 **Internal Energy of an Ideal Gas:**
 U = nCvT (depends only on temperature)
@@ -458,12 +458,12 @@ The period: T = 2Ï€/Ï‰ = 2Ï€âˆš(m/k)
 The frequency: f = 1/T = (1/2Ï€)âˆš(k/m)
 
 Velocity: v(t) = -AÏ‰ sin(Ï‰t + Ï†)
-Acceleration: a(t) = -AÏ‰Â² cos(Ï‰t + Ï†) = -Ï‰Â²x
+Acceleration: a(t) = -AÏ‰² cos(Ï‰t + Ï†) = -Ï‰²x
 
 **Energy in SHM:**
-Total energy = KE + PE = Â½kAÂ² (constant)
-KE = Â½kAÂ² - Â½kxÂ²
-PE = Â½kxÂ²
+Total energy = KE + PE = ½kA² (constant)
+KE = ½kA² - ½kx²
+PE = ½kx²
 
 ## 4.6 Wave Motion
 
@@ -473,7 +473,7 @@ A wave is a disturbance that transfers energy from one point to another without 
 
 **Longitudinal Waves:** The particle displacement is parallel to the direction of wave propagation (e.g., sound waves, spring waves).
 
-**Wave Speed:** v = fÎ» (frequency Ã— wavelength)
+**Wave Speed:** v = fÎ» (frequency × wavelength)
 
 **The Wave Equation:**
 y(x,t) = A sin(kx - Ï‰t)
@@ -496,9 +496,9 @@ Electric charges produce electric fields, and other charges placed in these fiel
 
 **Coulomb's Law:** The electric force between two point charges qâ‚ and qâ‚‚ separated by a distance r is:
 
-F = kqâ‚qâ‚‚/rÂ²
+F = kqâ‚qâ‚‚/r²
 
-where k = 8.99 Ã— 10â¹ NÂ·mÂ²/CÂ² is Coulomb's constant.
+where k = 8.99 × 10â¹ N·m²/C² is Coulomb's constant.
 
 The force is attractive for unlike charges and repulsive for like charges. It acts along the line joining the two charges.
 
@@ -506,7 +506,7 @@ The force is attractive for unlike charges and repulsive for like charges. It ac
 E = F/qâ‚€
 
 The electric field produced by a point charge q at distance r:
-E = kq/rÂ²
+E = kq/r²
 
 **Superposition Principle:** The net electric field at a point due to a system of charges is the vector sum of the electric fields produced by each individual charge.
 

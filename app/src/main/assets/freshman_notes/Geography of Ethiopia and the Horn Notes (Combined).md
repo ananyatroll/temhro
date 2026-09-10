@@ -4,7 +4,7 @@ The content provided in these notes is for educational and informational purpose
 
 ---
 
-# Geography of Ethiopia and the Horn â€” Combined Lecture Notes
+# Geography of Ethiopia and the Horn — Combined Lecture Notes
 
 ---
 
@@ -86,13 +86,13 @@ The location of a country or a place on a map or a globe is expressed in two dif
 1. Astronomical location
 2. Relative location
 
-**Astronomical location**, also known as absolute or mathematical location, states location of places using the lines of latitudes and longitudes. Astronomically, Ethiopia is a landlocked country located between 3Â°N (Moyale) and 15Â°N (Bademe - the northernmost tip of Tigray) latitudes and 33Â°E (Akobo) to 48Â°E (the tip of Ogaden in the east) longitudes.
+**Astronomical location**, also known as absolute or mathematical location, states location of places using the lines of latitudes and longitudes. Astronomically, Ethiopia is a landlocked country located between 3°N (Moyale) and 15°N (Bademe - the northernmost tip of Tigray) latitudes and 33°E (Akobo) to 48°E (the tip of Ogaden in the east) longitudes.
 
 The latitudinal and longitudinal extensions are important in two ways:
 - the country experiences tropical climate and
 - a difference of one hour between the most easterly and most westerly points of the country. It is only for convenience that the 3 hours-time zone is used in all parts of the country
 
-**Relative location** expresses the location of countries or places with reference to the location of other countries (vicinal â€“ neighboring or adjacent), landmasses or water bodies.
+**Relative location** expresses the location of countries or places with reference to the location of other countries (vicinal – neighboring or adjacent), landmasses or water bodies.
 
 | Vicinal location | In relation to water bodies & land masses |
 | --- | --- |
@@ -100,7 +100,7 @@ The latitudinal and longitudinal extensions are important in two ways:
 
 The implications of the location of Ethiopia are described as follows:
 
-1. **Climate**: Ethiopia is located between 3Â°N and 15Â°N (between the Equator and Tropic of Cancer) implies that the country has a tropical climate, though modified by its altitude. The location of Ethiopia relative to the Indian Ocean, the Atlantic Ocean and the African and Asian landmass has also various bearings on the climate of Ethiopia.
+1. **Climate**: Ethiopia is located between 3°N and 15°N (between the Equator and Tropic of Cancer) implies that the country has a tropical climate, though modified by its altitude. The location of Ethiopia relative to the Indian Ocean, the Atlantic Ocean and the African and Asian landmass has also various bearings on the climate of Ethiopia.
 
 2. **Socio-cultural**: Ethiopia is one of the earliest recipients of the major world religions namely Christianity, Islam and Judaism due to its proximity to the Middle East, which was the origin of these religions. The linguistic and other cultural relationships, which Ethiopia shares with its neighbours, reflect the influence of location.
 
@@ -112,7 +112,7 @@ The implications of the location of Ethiopia are described as follows:
 
 ### Size of Ethiopia
 
-Ethiopia with a total area of approximately 1,106,000 kmÂ² is the 8th largest country in Africa and 25th in the World. It extends about 1,639 km East-West, and 1,577 km North-South.
+Ethiopia with a total area of approximately 1,106,000 km² is the 8th largest country in Africa and 25th in the World. It extends about 1,639 km East-West, and 1,577 km North-South.
 
 About 0.7% of the country is covered by water bodies. The size of Ethiopia affects both the natural and human environment of the country.
 
@@ -253,7 +253,7 @@ The geological time scale measures time on a scale involving four main units:
 | --- | --- | --- | --- | --- |
 | Cenozoic | Quaternary | 1.6 | Present | Major glaciers in North America and Europe (1.5) |
 |  | Tertiary | 70 | 1.6 | Rocky Mountains (65), individual continents take shape. |
-| Mesozoic | Cretaceous | 146 | 70 | Dinosaurs extinct (65), western interior seaway and marine reptiles (144 â€“ 65) |
+| Mesozoic | Cretaceous | 146 | 70 | Dinosaurs extinct (65), western interior seaway and marine reptiles (144 – 65) |
 |  | Jurassic | 208 | 146 | Pangaea (one land mass) begins to break up (200) |
 |  | Triassic | 225 | 208 | First mammals and dinosaurs |
 | Paleozoic | Permian | 290 | 225 | Greatest extinction on Earth (245) |
@@ -284,7 +284,7 @@ Two of the major techniques include:
 
 - **Carbon-14 Technique**: Upon the organism's death, carbon-14 begins to disintegrate at a known rate, and no further replacement of carbon from atmospheric carbon dioxide can take place. Carbon-14 has half-life of 5730 years.
 
-- **Potassium-Argon Technique**: The decay is widely used for dating rocks. Geologists are able to date entire rock samples in this way, because potassium-40 is abundant in micas, feldspars, and hornblendes. Leakage of argon is a problem if the rock has been exposed to temperatures above 125Â° C (257Â° F), because the age of the rock will then reflect the last episode of heating rather than the time of original rock formation.
+- **Potassium-Argon Technique**: The decay is widely used for dating rocks. Geologists are able to date entire rock samples in this way, because potassium-40 is abundant in micas, feldspars, and hornblendes. Leakage of argon is a problem if the rock has been exposed to temperatures above 125° C (257° F), because the age of the rock will then reflect the last episode of heating rather than the time of original rock formation.
 
 ### Geological Processes and the Resulting Landforms of Ethiopia and the Horn
 
@@ -352,7 +352,7 @@ The formation of the Rift Valley is said to be related with the theory of plate 
 
 The Red Sea and the Gulf of Aden were connected as a result of the rifting and faulting of the land bridge that separated them.
 
-At the same period (Pliocene), the Afar depression (including the Gulf of Zula) was down-faulted allowing the Red Sea water to penetrate far inside. Reversed tilting and volcanic activity, later (Pleistocene â€“ Quaternary period) blocked the connection and isolated the extension of the sea, allowing much of the water to evaporate. As a result, thick saline materials accumulated. During the same period, the area between the Danakil Depression and the Red Sea was uplifted to form the Afar Block Mountains.
+At the same period (Pliocene), the Afar depression (including the Gulf of Zula) was down-faulted allowing the Red Sea water to penetrate far inside. Reversed tilting and volcanic activity, later (Pleistocene – Quaternary period) blocked the connection and isolated the extension of the sea, allowing much of the water to evaporate. As a result, thick saline materials accumulated. During the same period, the area between the Danakil Depression and the Red Sea was uplifted to form the Afar Block Mountains.
 
 **The Spatial Extent of the Rift Valley:**
 
@@ -368,7 +368,7 @@ The formation of the Rift Valley has the following structural (physiographic) ef
 
 **Quaternary Volcanic Eruptions and Depositions:**
 
-Recent volcanic activities occurred in the Pliocene-Pleistocene Epochs. This is a continuation of the tectonic and volcanic processes that earlier affected the Rift Valley formation. It occurred in the form of renewed rifting/faulting and more volcanism. This activity was generally limited to the floor of the Rift Valley and the region south of Lake Tana, where the lava covers an area of more than 3,000kmÂ².
+Recent volcanic activities occurred in the Pliocene-Pleistocene Epochs. This is a continuation of the tectonic and volcanic processes that earlier affected the Rift Valley formation. It occurred in the form of renewed rifting/faulting and more volcanism. This activity was generally limited to the floor of the Rift Valley and the region south of Lake Tana, where the lava covers an area of more than 3,000km².
 
 Aden volcanics and recent faulting are more extensively developed in the Afar region. Because of their recent occurrence, the Aden volcanics have relatively well-preserved and visible morphological features.
 
@@ -424,7 +424,7 @@ The diversity in topography is accompanied by differences in other natural featu
 
 **Characteristics of Ethiopian highlands:**
 - Moderate and high amount of rainfall (>600 mm per year).
-- Lower mean annual temperature (<20Â°C).
+- Lower mean annual temperature (<20°C).
 - The climate is favourable for biotic life.
 - Rain-fed agriculture is possible.
 - Free from tropical diseases.
@@ -595,7 +595,7 @@ The Rift Valley is further subdivided into three physiographic sub-regions:
 3. the Chew Bahir Rift.
 
 **The Afar Triangle**
-The largest and widest part. It makes up 54% of the Rift Valley area. The area is generally of low altitude (300-700 meters). The depression, which hosts one of the most hostile environments on Earth (maximum temperatures can exceed 50Â°C during the summer wet season; Dallol, at the northern tip of Afar).
+The largest and widest part. It makes up 54% of the Rift Valley area. The area is generally of low altitude (300-700 meters). The depression, which hosts one of the most hostile environments on Earth (maximum temperatures can exceed 50°C during the summer wet season; Dallol, at the northern tip of Afar).
 
 The area is characterized by faulted depressions (grabens), volcanic hills, active volcanoes, volcanic ridges, lava fields and low lava platforms. Lakes (Abe, Asale, and Afrera) occupy some of these basins. A prominent feature in this region is the Denakil Depression (Kobar Sink). Separated from the Red Sea by a 200 meters high land barrier, much of it lies below sea level. A larger part of this is covered by thick and extensive salt plain. Lake Asale and Lake Afrera occupy the lowest parts of this sunken depression.
 
@@ -695,15 +695,15 @@ Unlike other river basins in the system, the Ghibe (Omo) flows southward. The Ab
 
 **Abay (Blue Nile)**
 
-The largest river both in volumetric discharge and coverage in the western drainage systems. Covers an area of 199,812 kmÂ², covering parts of Amhara, Oromia and Benishangul-Gumuz. Together with its tributaries, most of which are left-bank tributaries; it carries 65% of the annual water flow of the region.
+The largest river both in volumetric discharge and coverage in the western drainage systems. Covers an area of 199,812 km², covering parts of Amhara, Oromia and Benishangul-Gumuz. Together with its tributaries, most of which are left-bank tributaries; it carries 65% of the annual water flow of the region.
 
 Abay which rises from Lake Tana (some sources indicate its origin from Sekela, Choke mountain) flows about 1,450 km and joins the White Nile in Khartoum, Sudan to form the Nile River.
 
-More than 60 streams drain the Abay within elevation ranging between 500 - 4261 meters above sea level. The largest of these is Ghilgel Abay (Little Abay). Abay flows eastward, turns 180Â° to make a large bend and after cutting an impressive and deep gorge emerges out in the west.
+More than 60 streams drain the Abay within elevation ranging between 500 - 4261 meters above sea level. The largest of these is Ghilgel Abay (Little Abay). Abay flows eastward, turns 180° to make a large bend and after cutting an impressive and deep gorge emerges out in the west.
 
 **Tekeze**
 
-The Tekeze and its tributaries carry 12% of the annual water flow of the region, draining 82,350 kmÂ² of land surface, elevation ranging between 536-4517 m.a.s.l. Erosion in the basin resulted in large tablelands, plateau blocks and isolated mountain groups.
+The Tekeze and its tributaries carry 12% of the annual water flow of the region, draining 82,350 km² of land surface, elevation ranging between 536-4517 m.a.s.l. Erosion in the basin resulted in large tablelands, plateau blocks and isolated mountain groups.
 
 The basin has two main tributaries (Angereb and Goang) which rises in the central highlands of Ethiopia. Tekeze river is termed Atbara in Sudan, which is a tributary of the Nile. The total mean annual flow from the basin is estimated to be 8.2 billion metric cubes.
 
@@ -711,7 +711,7 @@ The basin has two main tributaries (Angereb and Goang) which rises in the centra
 
 The Baro-Akobo and Ghibe / Omo rivers drain the wettest highlands in the south and southwestern Ethiopia. They carry 17% and 6% of the annual water flow respectively.
 
-The Ghibe/Omo river basin drains an area of 79,000 kmÂ². Baro-Akobo river basin has an area of 75,912 kmÂ², covering parts of the Benishangul-Gumuz, Gambella, Oromia, and SNNPR.
+The Ghibe/Omo river basin drains an area of 79,000 km². Baro-Akobo river basin has an area of 75,912 km², covering parts of the Benishangul-Gumuz, Gambella, Oromia, and SNNPR.
 
 The total mean annual flow from the river basin is estimated to be 23.6 BCM. The Baro together with Akobo forms the Sobat River in South Sudan. The Ghibe/Omo River finally empties into the Chew-Bahir at the mouth of Lake Turkana (an elongated Rift Valley lake) thereby forming an inland drainage.
 
@@ -721,11 +721,11 @@ The basin which is mainly drained by Wabishebelle and Ghenale, slopes southeastw
 
 **Ghenale (Juba River)**
 
-Ghenale river basin has an area of 171,042 kmÂ², covering parts of Oromia, SNNPR, and Somali regions. Ghenale, which has fewer tributaries but carries more water than Wabishebelle, reaches the Indian Ocean. The basin flows estimated to be 5.8 BCM within elevation ranging between 171-4385 meters above sea level. In Somalia it is named the Juba River.
+Ghenale river basin has an area of 171,042 km², covering parts of Oromia, SNNPR, and Somali regions. Ghenale, which has fewer tributaries but carries more water than Wabishebelle, reaches the Indian Ocean. The basin flows estimated to be 5.8 BCM within elevation ranging between 171-4385 meters above sea level. In Somalia it is named the Juba River.
 
 **Wabishebelle**
 
-Wabishebelle with a total catchment area of 202,697 kmÂ², is the largest river in terms of catchment area. It drains parts of Oromia, Harari and the Somali regions. It is the longest river in Ethiopia. Despite its size, the Wabishebelle fails to reach the Indian Ocean where at the end of its journey it flows parallel to the coast before its water disappears in the sands, just near the Juba River.
+Wabishebelle with a total catchment area of 202,697 km², is the largest river in terms of catchment area. It drains parts of Oromia, Harari and the Somali regions. It is the longest river in Ethiopia. Despite its size, the Wabishebelle fails to reach the Indian Ocean where at the end of its journey it flows parallel to the coast before its water disappears in the sands, just near the Juba River.
 
 **The Rift Valley Drainage System**
 
@@ -738,7 +738,7 @@ The size of the drainage area is restricted by the outward sloping highlands, wh
 
 **The Awash River Basin**
 
-The only major river basin is that of the Awash. Awash river basin has a catchment area of 114,123 kmÂ² and has an average annual discharge of 4.9 BCM. The Awash River originates from Shewan plateau in central highlands of Ethiopia, and flows 1250 kms.
+The only major river basin is that of the Awash. Awash river basin has a catchment area of 114,123 km² and has an average annual discharge of 4.9 BCM. The Awash River originates from Shewan plateau in central highlands of Ethiopia, and flows 1250 kms.
 
 It covers parts of the Amhara, Oromia, Afar, Somali, Dire Dawa, and Addis Ababa City Administration. Awash is the most utilized river in the country. In the Rift Valley drainage systems, there is no one general flow direction, as the streams flow in all directions. Following the Rift Valley orientation, the Awash flows in a northeast direction.
 
@@ -757,7 +757,7 @@ Likewise, some of these lakes are interconnected. Lakes Ziway and Langano drain 
 
 ### The Ethiopian Rivers
 
-| River | Catchment Area (kmÂ²) | Annual Volume BCM | Terminus/Mouth | Major tributaries |
+| River | Catchment Area (km²) | Annual Volume BCM | Terminus/Mouth | Major tributaries |
 | --- | --- | --- | --- | --- |
 | Abay | 199,812 | 54.5 | Mediterranean | Dabus, Dedessa, Fincha, Guder, Muger, Jema, Beshilo |
 | Wabishebelle | 202,697 | 3.4 | Coast of Indian Ocean | Ramis Erer, Daketa Fafan |
@@ -793,7 +793,7 @@ Other types of lakes in Ethiopia are man-made such as Lakes Koka, Fincha and Mel
 
 Lake Abaya is the largest of all the lakes in the system. The southern tip of the Rift Valley forms the marshy land called the Chew Bahir which is drained by Segan and Woito. Shala and Ziway are the deepest and the shallowest lakes in the central Ethiopian Rift respectively.
 
-| Lake | Area (kmÂ²) | Max. Depth (m) | Lake | Area (kmÂ²) | Max. Depth (m) |
+| Lake | Area (km²) | Max. Depth (m) | Lake | Area (km²) | Max. Depth (m) |
 | --- | --- | --- | --- | --- | --- |
 | Tana | 3600 | 9 | Abijata | 205 | 14 |
 | Abaya | 1162 | 13.1 | Awassa | 129 | 10 |
@@ -908,7 +908,7 @@ Ethiopia's latitudinal location has bearings (relevance) on its temperature. Lat
 
 ### b. Inclination of the Earth's Axis
 
-The earth's rotation axis makes an angle of about 66Â½Â° with the plane of its orbit around the sun, or about 23Â½Â° from the perpendicular to the ecliptic plane. This inclination determines the location of the Tropics of Cancer, Capricorn and the Arctic and Antarctic Circles.
+The earth's rotation axis makes an angle of about 66½° with the plane of its orbit around the sun, or about 23½° from the perpendicular to the ecliptic plane. This inclination determines the location of the Tropics of Cancer, Capricorn and the Arctic and Antarctic Circles.
 
 As the earth revolves around the sun, this inclination produces a change in the directness of the sun's rays; which in turn causes the directness of the sun and differences in length of day and seasons.
 
@@ -919,12 +919,12 @@ An **equinox** is the instant of time when the sun strikes the plane of the Eart
 
 **Solstice** is an event when the overhead sun appears to cross northern or southern points relative to the celestial equator resulting in unequal length of days and nights in the hemispheres.
 
-- **The summer Solstice**: on June 21st, the northern hemisphere has maximum tilt towards the sun experiencing longest daylight of the year. The sun is at its highest position in the noonday sky, directly above 23Â½Â° in the Tropic of Cancer.
+- **The summer Solstice**: on June 21st, the northern hemisphere has maximum tilt towards the sun experiencing longest daylight of the year. The sun is at its highest position in the noonday sky, directly above 23½° in the Tropic of Cancer.
 - **The winter solstice**: 22nd of December is the day when the maximum southward inclination is attained in the Southern Hemisphere. In this event the sun travels shortest length causing longest night and shortest daylight.
 
 ### c. Altitude
 
-Altitude is the height of location above the sea level. Under normal conditions there is a general decrease in temperature with increasing elevation. The average rate at which temperature changes per unit of altitudinal change is known as lapse rate. The lapse rate is limited to the lower layer of the atmosphere named as troposphere. The normal lapse rate is 6.5Â°C per kilometer rise in altitude.
+Altitude is the height of location above the sea level. Under normal conditions there is a general decrease in temperature with increasing elevation. The average rate at which temperature changes per unit of altitudinal change is known as lapse rate. The lapse rate is limited to the lower layer of the atmosphere named as troposphere. The normal lapse rate is 6.5°C per kilometer rise in altitude.
 
 **Types of lapse rate:**
 
@@ -933,34 +933,34 @@ The temperature changes occurring in the rising or subsiding air mass are not th
 
 Vertical displacements of air are the major cause of adiabatic temperature changes. When air rises, it expands because there is less weight of air upon it. As long as the air in the parcel is unsaturated (the relative humidity is less than 100 percent), the rate of adiabatic cooling or warming remains constant.
 
-If the upward movement of air does not produce condensation, then the energy expended by expansion will cause the temperature of the mass to fall at the constant dry adiabatic lapse rate. The rate of heating or cooling is about 10Â°C for every 1000 m of change in elevation. This rate applies only to unsaturated air.
+If the upward movement of air does not produce condensation, then the energy expended by expansion will cause the temperature of the mass to fall at the constant dry adiabatic lapse rate. The rate of heating or cooling is about 10°C for every 1000 m of change in elevation. This rate applies only to unsaturated air.
 
 **ii. Wet Adiabatic lapse rate:**
 Due to the fact that the heat added during condensation starts cooling following the expansion, the air will no longer cool at the dry adiabatic rate. This is due to the latent heat in the water vapor carried by the air. The heat is released in the process of ascent (ascending), therefore affecting or lowering the rate of temperature change of the rising air.
 
-Hence, the rate at which rising or sinking saturated air changes its temperature is less than the dry adiabatic rate. Prolonged cooling of air invariably produces condensation, thereby liberating latent heat. Saturated air cools at a slower rate than air that is unsaturated. This process is called wet adiabatic temperature change. The rate of cooling of wet air is approximately 5Â°C per 1000 meters ascend.
+Hence, the rate at which rising or sinking saturated air changes its temperature is less than the dry adiabatic rate. Prolonged cooling of air invariably produces condensation, thereby liberating latent heat. Saturated air cools at a slower rate than air that is unsaturated. This process is called wet adiabatic temperature change. The rate of cooling of wet air is approximately 5°C per 1000 meters ascend.
 
 **iii. Environmental lapse rate or Atmospheric lapse rate:**
 This refers to the actual, observed change of temperature with altitude. The fact that air temperature is normally highest at low elevations next to the earth and decreases with altitude clearly indicates that most of the atmospheric heat is received directly from the earth's surface and only indirectly from the sun.
 
 The lower layer is warmer, not only because it is closest to the direct source of heat but also of its high density. It contains more water vapor and dust, which causes it to be a more efficient absorber of earth radiation than is the thinner, drier, cleaner air aloft.
 
-This decrease in temperature upward from the earth's surface normally prevails throughout the lower atmosphere called troposphere. The principal exception to the rule is the cause of temperature inversions. The rate of change is 6.5Â°C/1000 meters.
+This decrease in temperature upward from the earth's surface normally prevails throughout the lower atmosphere called troposphere. The principal exception to the rule is the cause of temperature inversions. The rate of change is 6.5°C/1000 meters.
 
 ### Spatiotemporal Distribution of Temperature
 
 The spatial distribution of temperature in Ethiopia is primarily determined by altitude and latitude. The location of Ethiopia at close proximity to equator, a zone of maximum insolation, resulted for every part of the country to experience overhead sun twice a year.
 
-However, in Ethiopia, as it is a highland country, tropical temperature conditions have no full spatial coverage. They are limited to the lowlands in the peripheries. Mean annual temperature varies from over 30Â°C in the tropical lowlands to less than 10Â°C at very high altitudes.
+However, in Ethiopia, as it is a highland country, tropical temperature conditions have no full spatial coverage. They are limited to the lowlands in the peripheries. Mean annual temperature varies from over 30°C in the tropical lowlands to less than 10°C at very high altitudes.
 
-The Bale Mountains are among highlands where lowest mean annual temperatures are recorded. The highest mean maximum temperature in the country is recorded in the Afar Depression. Moreover, lowlands of north-western, western and south-eastern Ethiopian experiences mean maximum temperatures of more than 30Â°C.
+The Bale Mountains are among highlands where lowest mean annual temperatures are recorded. The highest mean maximum temperature in the country is recorded in the Afar Depression. Moreover, lowlands of north-western, western and south-eastern Ethiopian experiences mean maximum temperatures of more than 30°C.
 
-| Altitude (meter) | Mean annual Temp (Â°C) | Description | Local Equivalent |
+| Altitude (meter) | Mean annual Temp (°C) | Description | Local Equivalent |
 | --- | --- | --- | --- |
 | 3,300 and above | 10 or less | Cool | Wurch |
-| 2,300 - 3,300 | 10 â€“ 15 | Cool Temperate | Dega |
-| 1,500 - 2,300 | 15 â€“ 20 | Temperate | Woina Dega |
-| 500 - 1,500 | 20 â€“ 25 | Warm Temperate | Kola |
+| 2,300 - 3,300 | 10 – 15 | Cool Temperate | Dega |
+| 1,500 - 2,300 | 15 – 20 | Temperate | Woina Dega |
+| 500 - 1,500 | 20 – 25 | Warm Temperate | Kola |
 | below 500 | 25 and above | Hot | Bereha |
 
 The temporal distribution of Ethiopian temperature is characterized by extremes. The major controls determining its distributions are latitude and cloud cover. However, some parts of the country enjoy a temperate climate.
@@ -978,8 +978,8 @@ Rainfall in Ethiopia is the result as influenced by the position of Intertropica
 Following the position of the overhead sun, the ITCZ shifts north and south of the equator. As the shift takes place, equatorial westerlies from the south and southwest invade most of Ethiopia bringing moist winds.
 
 - Formed because of the convergence of Equatorial easterlies with Northeast trade winds (the former one brings moist winds)
-- June (23Â½Â°N): ITCZ - central highlands, southeastern highlands and lowlands
-- September (0Â°): ITCZ - central highlands and western part of the country
+- June (23½°N): ITCZ - central highlands, southeastern highlands and lowlands
+- September (0°): ITCZ - central highlands and western part of the country
 - March: ITCZ - Afar and parts of Eritrean coastal areas
 - December: convergence of south easterlies with the Northern trade winds
 
@@ -1012,9 +1012,9 @@ Ethiopia ranked 5th out of 184 countries in terms of its risk of drought. In the
 
 ### Trends in Temperature Variability
 
-Over the last decades, Ethiopia has experienced climatic changes. Mean annual temperature has shown 0.2Â°C to 0.28Â°C rise per decade over the last 40-50 years. A rise in average temperature of about 1.3Â°C has been observed between 1960 and 2006.
+Over the last decades, Ethiopia has experienced climatic changes. Mean annual temperature has shown 0.2°C to 0.28°C rise per decade over the last 40-50 years. A rise in average temperature of about 1.3°C has been observed between 1960 and 2006.
 
-The rise has spatial and temporal variation. Higher rise in temperature was noted in drier areas in northeast and southeast part of the country. Notably the variability is higher in July-September. The number of 'hot days' and 'hot nights' has also shown increment. Consequently, the country's minimum temperature has increased with 0.37Â°C to 0.4Â°C per decade.
+The rise has spatial and temporal variation. Higher rise in temperature was noted in drier areas in northeast and southeast part of the country. Notably the variability is higher in July-September. The number of 'hot days' and 'hot nights' has also shown increment. Consequently, the country's minimum temperature has increased with 0.37°C to 0.4°C per decade.
 
 ### Trends in Rainfall Variability
 
@@ -1392,7 +1392,7 @@ The most used age groups are:
 - five-year age groups (0-4, 5-9, 10-14, ..., 60-64, 65 and above) and
 - broad age groups (0-14, 15-64, 65 and above)
 
-| Census year | 0 â€“ 14 | 15 â€“ 64 | 65 + | Youth dependency | Old age dependency | Total dependency |
+| Census year | 0 – 14 | 15 – 64 | 65 + | Youth dependency | Old age dependency | Total dependency |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1984 | 49.8 | 50.2 | 3.4 | 107.8 | 16.2 | 124.0 |
 | 1994 | 45.4 | 51.4 | 3.2 | 92.0 | 10.7 | 102.7 |
@@ -1529,7 +1529,7 @@ Based on varying concentrations of urban centers and urban populations the Minis
 **III. Tertiary urban clusters** include:
 - Nekemte Urban Cluster: Nekemte, Dembidolo, Gimbi, Metu, Assosa
 - Gode-Kebri Dar oasis city network
-- Semera-Mille â€“ Asaita oasis city network
+- Semera-Mille – Asaita oasis city network
 
 ### Growth Rate of Urban Centers
 
@@ -1639,7 +1639,7 @@ Ethiopia has great potential for fishing. However, at present there is no reliab
 Most fishing activities in Ethiopia take place in fresh waters, such as rivers, lakes and ponds. According to Ethiopian Wildlife Conservation Department, Ethiopia's fresh water bodies are known to have 101 species of fish, among which four are endemic to the country. In general, the Ethiopian fishing grounds could be classified as Lakes and Rivers.
 
 **Lakes fishery:**
-- estimated surface area - 7000 kmÂ²
+- estimated surface area - 7000 km²
 - about 79% of the total yearly fish production of the country.
 - The most important lakes include Lakes Tana, Ziway, Langano, Hawassa, Abaya and Chamo.
 - The annual maximum sustainable fish yields of our lakes are estimated to be above 35,000 tons. However, presently only 4,000 tons are produced annually.
@@ -1759,9 +1759,9 @@ Based on the dominant crops cultivated or animals reared and the main implements
 2. Grain-plough complex
 3. The Horticulture-Hoe complex
 4. Lowland mixed farming system
-5. Pastoral system â€“ practiced in arid and semi-arid areas
+5. Pastoral system – practiced in arid and semi-arid areas
 6. Shifting cultivation- cut and burn cultivation system
-7. Commercial agriculture â€“ modern practice
+7. Commercial agriculture – modern practice
 
 ### Major Problems of Ethiopian Agriculture
 

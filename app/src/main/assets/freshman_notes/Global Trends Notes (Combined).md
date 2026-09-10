@@ -20,7 +20,7 @@ Accordingly, for Goldstine, IR is defined as "relationships among the world's st
 
 However, others scholars defined IR broadly as a totality of relation between/among state and none-state actors, as well as, all types of movements (people, resource, idea/knowledge) that cross state boundaries to include international rivers.
 
-So, IR is concerned with "all exchanges, transactions/dealings, interactions, flows of resource/information, and actions of every kindâ€¦ among separate societies of the world" as states represent societies.
+So, IR is concerned with "all exchanges, transactions/dealings, interactions, flows of resource/information, and actions of every kind... among separate societies of the world" as states represent societies.
 
 As a discipline/field of study,
 
@@ -138,7 +138,7 @@ Domestically, government decisions and actions are supreme over other institutio
 
 Likewise, sovereignty infers to state's external autonomy in its international relations. There is no any power that can intervene in internal affairs of the state.
 
-Hence, in principle a state's government answers to no higher authority; it exercises both internal and external sovereignty over its territoryâ€”to make and enforce laws, to formulate and implement domestic and foreign policy, to collect taxes, and so forth.
+Hence, in principle a state's government answers to no higher authority; it exercises both internal and external sovereignty over its territory—to make and enforce laws, to formulate and implement domestic and foreign policy, to collect taxes, and so forth.
 
 **Non-state actors:** actors that cross national boundaries and frequently put influence and work with state over policy outcomes
 
@@ -529,7 +529,7 @@ Developed States use economic muscle/might to influence the behaviour of state a
 
 **3. Psychological Instrument:** states use this mechanism to positively/negatively influence the mind of one's own people and the other's to accept policies favourable to themselves.
 
-This technique primarily includes propaganda â€“ process of appealing to emotion rather than logical reason by creating fear, doubt, sympathy, anger, or a variety of other feelings to influence another state/s.
+This technique primarily includes propaganda – process of appealing to emotion rather than logical reason by creating fear, doubt, sympathy, anger, or a variety of other feelings to influence another state/s.
 
 **4. Military Instrument:** use or threat of military force, such as troop deployments, naval presence, or military exercises to deter aggression or force a desired outcome.
 
@@ -689,7 +689,7 @@ Other succeeding theories include:
 
 Is a hybrid theory containing elements of mercantilism, liberalism, and even Marxism. Yet, its closest association is with mercantilism.
 
-The basic argument of HST is: the root cause of the economic troubles that bedeviled Europe and much of the world in the Great Depression of the 1920s and 1930s was the absence of a benevolent hegemonâ€”that is, a dominant state willing and able to take responsibility for the smooth/fair operation of the International economic system as a whole.
+The basic argument of HST is: the root cause of the economic troubles that bedeviled Europe and much of the world in the Great Depression of the 1920s and 1930s was the absence of a benevolent hegemon—that is, a dominant state willing and able to take responsibility for the smooth/fair operation of the International economic system as a whole.
 
 **5. Structuralism:**
 
@@ -765,7 +765,7 @@ Globalization refers to the interconnectedness and interdependence of the world'
 
 The advents of modern transportation and information communication technology (ICT) are the catalyst of globalization.
 
-Hence, for David Harvey â€“ globalization is the time-space compression manifested by shrink the world into a small village.
+Hence, for David Harvey – globalization is the time-space compression manifested by shrink the world into a small village.
 
 Globalisation is a process that removes all national barriers for the free movement of international capital, including human, material and resources as well as cultures assimilation that promote societal building across the globe.
 
@@ -826,7 +826,7 @@ Is opposed reactions to hyper-globalism
 - The role of the nation state is still alive and its borders are effective.
 - The organs of the United Nations (UN) are instruments of powerful nation states and are designed to achieve their political aims.
 - The future of world politics will be related to national states and their operation.
-- There are anti-globalist movements â€“ a large number of people in the world are not comfortable with the idea of global governance. E.g. UN, IMF, WBâ€¦
+- There are anti-globalist movements – a large number of people in the world are not comfortable with the idea of global governance. E.g. UN, IMF, WB...
 - Powerful States are central actors and agents of globalization imposing their values and interests upon others.
 - States play central role in shaping and regulating economic activities in the processes of globalisation or international political economy.
 - Thus, this theory rejects the idea of global governance.

@@ -48,11 +48,11 @@ or false (denoted by F). Propositions are denoted by small letters
 Logicalconnectives
 Logical connectives
 (a) Conjunction
-When two propositions are joined with the connective â€and,â€ the
-proposition formed is a logical conjunction. â€œandâ€ is denoted by
-â€âˆ§â€. So, the logical conjunction of two propositions, p and q, is
+When two propositions are joined with the connective "and," the
+proposition formed is a logical conjunction. "and" is denoted by
+"âˆ§". So, the logical conjunction of two propositions, p and q, is
 written as:
-pâˆ§q read as â€œ p and q,â€ or â€œ p conjunction q â€. p and q are
+pâˆ§q read as " p and q," or " p conjunction q ". p and q are
 called the components of the conjunction. pâˆ§q is true if and only
 if p is true and q is true.
 p q pâˆ§q
@@ -78,11 +78,11 @@ pâˆ§r: 3 is an odd number and Addis Ababa is the capital city of
 Logicalconnectives
 Disjunction
 (b) disjunction
-When two propositions are joined with the connective â€or,â€ the
-proposition formed is a logical conjunction. â€œandâ€ is denoted by
-â€âˆ¨â€. So, the logical disnjunction of two propositions, p and q, is
+When two propositions are joined with the connective "or," the
+proposition formed is a logical conjunction. "and" is denoted by
+"âˆ¨". So, the logical disnjunction of two propositions, p and q, is
 written as:
-pâˆ¨q read as â€œ p or q,â€ or â€œ p disjunction q â€. p and q are called
+pâˆ¨q read as " p or q," or " p disjunction q ". p and q are called
 the components of the conjunction. pâˆ¨q is false if and only if p is
 false and q is false.
 p q pâˆ¨q
@@ -108,12 +108,12 @@ pâˆ¨r: 3 is an odd number or Addis Ababa is the capital city of
 Logicalconnectives
 Implication
 (c) Implication
-When two propositions are joined with the connective â€implies,â€
-the proposition formed is a logical implication. â€œimpliesâ€ is
-| denoted       | by â€ =â‡’ â€. | So, the logical | implication | of two |
+When two propositions are joined with the connective "implies,"
+the proposition formed is a logical implication. "implies" is
+| denoted       | by " =â‡’ ". | So, the logical | implication | of two |
 | ------------- | ---------- | --------------- | ----------- | ------ |
 | propositions, | p and q,   | is written      | as:         |        |
-p =â‡’ q read as â€œ p implies q,â€ p =â‡’ q is false if and only if p
+p =â‡’ q read as " p implies q," p =â‡’ q is false if and only if p
 | is true and | q is false. |     |        |     |
 | ----------- | ----------- | --- | ------ | --- |
 |             |             | p q | p =â‡’ q |     |
@@ -146,12 +146,12 @@ p =â‡’ r: 3 is an odd number implies Addis Ababa is the capital
 Logicalconnectives
 Bi-implication
 (d) Bi-implication
-When two propositions are joined with the connective â€bi-implies,â€
-the proposition formed is a logical bi-implication. â€œBi-implicationâ€
-| is denoted    | by â€â‡”â€.  | So, the logical | bi-implication | of two |
+When two propositions are joined with the connective "bi-implies,"
+the proposition formed is a logical bi-implication. "Bi-implication"
+| is denoted    | by "â‡”".  | So, the logical | bi-implication | of two |
 | ------------- | -------- | --------------- | -------------- | ------ |
 | propositions, | p and q, | is written      | as:            |        |
-p â‡” q read as â€œ p bi-implies q,â€ p â‡” is false if and only if p and q
+p â‡” q read as " p bi-implies q," p â‡” is false if and only if p and q
 | have different | truth | values. |       |     |
 | -------------- | ----- | ------- | ----- | --- |
 |                |       | p q     | p â‡” q |     |
@@ -183,12 +183,12 @@ p â‡” r: 3 is an odd number bi-implies Addis Ababa is the capital
 
 Logicalconnectives
 Negation
-Given any proposition p, we can form the proposition Â¬p called the
-negation of p. The truth value of Â¬p is F if p is T and T if p is F.
+Given any proposition p, we can form the proposition ¬p called the
+negation of p. The truth value of ¬p is F if p is T and T if p is F.
 Example
 | Let p:    | Addis Ababa | is the capital  | city of Ethiopia. | (True)  |
 | --------- | ----------- | --------------- | ----------------- | ------- |
-| Â¬p: Addis | Ababa is    | not the capital | city of Ethiopia. | (False) |
+| ¬p: Addis | Ababa is    | not the capital | city of Ethiopia. | (False) |
 
 
 Compound(orcomplex)propositions
@@ -199,7 +199,7 @@ Definition
 | ------------- | ----------- | --------- | ---------- | ------- | ----------- | ----------- | --- |
 | connective(s) |             | is called | a compound |         | statement.  |             |     |
 Example
-| pâˆ§(q | =â‡’  | r), pâˆ§(Â¬qâˆ¨r) |     |     |     |     |     |
+| pâˆ§(q | =â‡’  | r), pâˆ§(¬qâˆ¨r) |     |     |     |     |     |
 | ---- | --- | ------------ | --- | --- | --- | --- | --- |
 The possible truth values of a proposition are often listed in a
 table, called a truth table. If the compound proposition contains
@@ -223,7 +223,7 @@ truth values for the component propositions occurring in both P
 | and Q. | In this case | we write P â‰¡ | Q.  |     |
 | ------ | ------------ | ------------ | --- | --- |
 Example
-| Show that | P : p =â‡’ | q and Q : | Â¬q =â‡’ Â¬p | are equivalent. |
+| Show that | P : p =â‡’ | q and Q : | ¬q =â‡’ ¬p | are equivalent. |
 | --------- | -------- | --------- | -------- | --------------- |
 
 
@@ -231,8 +231,8 @@ Compound(orcomplex)propositions
 | Given the | conditional p =â‡’        | q.   |            |
 | --------- | ----------------------- | ---- | ---------- |
 | q =â‡’      | p is the converse       | of p | =â‡’ q.      |
-| Â¬p =â‡’     | Â¬q is the inverse       | of   | p =â‡’ q,    |
-| Â¬q =â‡’     | Â¬p is the contapositive |      | of p =â‡’ q. |
+| ¬p =â‡’     | ¬q is the inverse       | of   | p =â‡’ q,    |
+| ¬q =â‡’     | ¬p is the contapositive |      | of p =â‡’ q. |
 Example
 | If Kidist lives | in Addis Ababa, | then | she lives in Ethiopia. |
 | --------------- | --------------- | ---- | ---------------------- |
@@ -257,7 +257,7 @@ contradiction.
 A proposition that is neither a tautology nor a contradiction is
 called a contingency.
 Example
-| pâˆ¨Â¬p is | tautology, pâˆ§Â¬p | is contradiction, | p =â‡’ | q is |
+| pâˆ¨¬p is | tautology, pâˆ§¬p | is contradiction, | p =â‡’ | q is |
 | ------- | --------------- | ----------------- | ---- | ---- |
 contingency
 
@@ -280,13 +280,13 @@ presented below.
 
 
 Tautologyandcontradiction
-5. De Morganâ€™s Laws:
-(a) Â¬(pâˆ¨q) â‰¡ Â¬pâˆ§Â¬q,
-(b) Â¬(pâˆ§q) â‰¡ Â¬pâˆ¨Â¬q
+5. De Morgan's Laws:
+(a) ¬(pâˆ¨q) â‰¡ ¬pâˆ§¬q,
+(b) ¬(pâˆ§q) â‰¡ ¬pâˆ¨¬q
 6. Law of Contrapositive:
-p =â‡’ q â‰¡ Â¬q =â‡’ Â¬p.
+p =â‡’ q â‰¡ ¬q =â‡’ ¬p.
 7. Complement Law:
-Â¬(Â¬p) â‰¡ p.
+¬(¬p) â‰¡ p.
 
 
 | Open propositions | and quantifiers |     |     |
@@ -328,21 +328,21 @@ U = {âˆ’1,âˆ’1,0,,1}.
 Quantifiers
 Quantifiers
 1 Universal quantifier:
-| The phrases | â€for every | xâ€, â€for each | xâ€ and â€for | all xâ€ are |
+| The phrases | "for every | x", "for each | x" and "for | all x" are |
 | ----------- | ---------- | ------------- | ----------- | ---------- |
 universal quantifiers.
 | denoted | by âˆ€x, |     |     |     |
 | ------- | ------ | --- | --- | --- |
 If P(x) is an open proposition with universe U, then âˆ€x(P(x),
-is a quantified proposition and is read as â€for every x âˆˆU with
+is a quantified proposition and is read as "for every x âˆˆU with
 property P(x).
 2 Existential quantifier:
-| The phrases | â€for some          | xâ€, â€for at least | one xâ€ and | â€there |
+| The phrases | "for some          | x", "for at least | one x" and | "there |
 | ----------- | ------------------ | ----------------- | ---------- | ------ |
-| exists an   | xâ€ are existential | quantifiers.      |            |        |
+| exists an   | x" are existential | quantifiers.      |            |        |
 | denoted     | by âˆƒx,             |                   |            |        |
 If P(x) is an open proposition with universe U, then âˆƒx(P(x),
-is a quantified proposition and is read as â€for there existsâ€
+is a quantified proposition and is read as "for there exists"
 | x âˆˆU with | property P(x). |     |     |     |
 | --------- | -------------- | --- | --- | --- |
 
@@ -362,8 +362,8 @@ Write the following statements using quantifiers, and determine
 |           | (b) There     | is a real number   | x such     | that x2+5x      | +6 = 0 |
 |           | (c) he        | square of any real | number     | is nonnegative. |        |
 | Negation  | of quantified | proposition        |            |                 |        |
-|           | Â¬(âˆ€x)P(x)     | â‰¡ (âˆƒx)Â¬P(x)        |            |                 |        |
-|           | Â¬(âˆƒx)P(x)     | â‰¡ (âˆ€x)Â¬P(x)        |            |                 |        |
+|           | ¬(âˆ€x)P(x)     | â‰¡ (âˆƒx)¬P(x)        |            |                 |        |
+|           | ¬(âˆƒx)P(x)     | â‰¡ (âˆ€x)¬P(x)        |            |                 |        |
 
 
 Quantifiers
@@ -371,7 +371,7 @@ Example
 Let U = R.
 |           | x2)      | x2) |     |     |
 | --------- | -------- | --- | --- | --- |
-| Â¬(âˆƒx)(x < | â‰¡ (âˆ€x)(x | â‰¥   |     |     |
+| ¬(âˆƒx)(x < | â‰¡ (âˆ€x)(x | â‰¥   |     |     |
 Example
 | Symbolize | (translate) | the following | statements | involving |
 | --------- | ----------- | ------------- | ---------- | --------- |
@@ -395,13 +395,13 @@ quantifiers.
 Quantifiers
 | Quantifiers | Occurring            | in     | Combinations          |                    |                |
 | ----------- | -------------------- | ------ | --------------------- | ------------------ | -------------- |
-|             | (i) (âˆ€x)(âˆ€y)P(x,y)   |        | means                 | â€for all x and     | for all y      |
+|             | (i) (âˆ€x)(âˆ€y)P(x,y)   |        | means                 | "for all x and     | for all y      |
 |             | property             | P(x,y) | holds.                |                    |                |
-|             | (ii) (âˆƒx)(âˆƒy)P(x,y)  |        | means                 | â€there exists      | an x and there |
+|             | (ii) (âˆƒx)(âˆƒy)P(x,y)  |        | means                 | "there exists      | an x and there |
 |             | exists               | a y    | for which P(x,y)      | holds.             |                |
-|             | (iii) (âˆ€x)(âˆƒy)P(x,y) |        | means                 | â€for every x there | exists a y     |
+|             | (iii) (âˆ€x)(âˆƒy)P(x,y) |        | means                 | "for every x there | exists a y     |
 |             | such                 | that   | P(x,y) holds.         |                    |                |
-|             | (iv) (âˆƒx)(âˆ€y)P(x,y)  |        | means                 | â€there exists      | an x which     |
+|             | (iv) (âˆƒx)(âˆ€y)P(x,y)  |        | means                 | "there exists      | an x which     |
 |             | stands               | to     | every y with relation | P(x,y).            |                |
 Example
 | Determine | the truth        | value        | of the following. |     |     |
@@ -417,10 +417,10 @@ ArgumentandValidity
 Argument and Validity
 Definition
 An argument (logical deduction) is an assertion that a given set of
-statements p ,p ,Â·Â·Â· ,p , called hypotheses or premises, yield
+statements p ,p ,··· ,p , called hypotheses or premises, yield
 1 2 n
 another statement q, called the conclusion.
-Such a logical deduction is denoted by: p ,p ,Â·Â·Â· ,p (cid:96) q or
+Such a logical deduction is denoted by: p ,p ,··· ,p (cid:96) q or
 1 2 n
 p
 1
@@ -441,16 +441,16 @@ not in Africa. Therefore, Addis Ababa is not in Ethiopia. Write the
 | argument | form. |     |     |
 | -------- | ----- | --- | --- |
 Definition
-An argument form p 1 ,p 2 ,Â·Â·Â· ,p n (cid:96) q is said to be valid if q is true
-whenever all the premises p ,p ,Â·Â·Â· ,p are true; otherwise it is
+An argument form p 1 ,p 2 ,··· ,p n (cid:96) q is said to be valid if q is true
+whenever all the premises p ,p ,··· ,p are true; otherwise it is
 |     |     | 1   | 2 n |
 | --- | --- | --- | --- |
 invalid.
 Example
 | Investigate | the validity | of the        | following argument: |
 | ----------- | ------------ | ------------- | ------------------- |
-|             | (a) p =â‡’     | q,Â¬q (cid:96) | Â¬p                  |
-|             | (b) p =â‡’     | q,Â¬q =â‡’       | r (cid:96) p        |
+|             | (a) p =â‡’     | q,¬q (cid:96) | ¬p                  |
+|             | (b) p =â‡’     | q,¬q =â‡’       | r (cid:96) p        |
 
 
 ArgumentandValidity
@@ -460,9 +460,9 @@ p
 p =â‡’ q
 q
 2. Modes Tollens:
-Â¬q
+¬q
 p =â‡’ q
-Â¬p
+¬p
 3. Principle of Syllogism
 p =â‡’ q
 q =â‡’ r
@@ -480,13 +480,13 @@ pâˆ§q
 pâˆ§q
 p,q
 6. Modes Tollendo Ponens:
-Â¬p
+¬p
 pâˆ¨q
 q
 7. Modes Ponendo Tollens:
-Â¬(pâˆ§q)
+¬(pâˆ§q)
 p
-Â¬q
+¬q
 
 
 ArgumentandValidity
@@ -538,7 +538,7 @@ A = {a,e,i,o,u}
 
 
 Example
-N = {1,2,3,Â·Â·Â·}
+N = {1,2,3,···}
 |             | 4. Set-builder | Method:        | using an open | proposition. |
 | ----------- | -------------- | -------------- | ------------- | ------------ |
 | The general | form is        | A = {x : P(x)} | or A = {x     | | P(x)}      |
@@ -634,7 +634,7 @@ of all elements in A but not in B. This set is also called the
 
 Definition
 : Let A be a subset of a universal set U. The absolute complement
-(or simply complement) of A, denoted by A(cid:48) (or Ac or AÂ¯), is
+(or simply complement) of A, denoted by A(cid:48) (or Ac or A¯), is
 defined to be the set of all elements of U that are not in A. That is
 A(cid:48) = {x : x âˆˆ U âˆ§x âˆˆ/ A}
 Definition
@@ -655,7 +655,7 @@ Theorem
 | --- | ------------- | ---------------------------------- | ------------------- |
 |     | (AâˆªB)(cid:48) | A(cid:48)âˆ©B(cid:48), (Aâˆ©B)(cid:48) | A(cid:48)âˆªB(cid:48) |
 |     | (d)           | =                                  | =                   |
-|     | (DeMorganâ€™s   | law)                               |                     |
+|     | (DeMorgan's   | law)                               |                     |
 |     |               | B(cid:48) A(cid:48)                |                     |
 |     | (e) A âŠ† B     | =â‡’ âŠ†                               |                     |
 
@@ -709,11 +709,11 @@ Therealnumbersystemandarithmeticoperations
 | The real number | system |     |     |     |
 | --------------- | ------ | --- | --- | --- |
 Definition
-| The set | of natural numbers | is given | by N = {1,2,3,Â·Â·Â·}. |     |
+| The set | of natural numbers | is given | by N = {1,2,3,···}. |     |
 | ------- | ------------------ | -------- | ------------------- | --- |
 | The set | of integers is     | given by |                     |     |
 Z
-| = {Â·Â·Â·     | ,âˆ’3,âˆ’2,âˆ’1,0,1,2,3,Â·Â·Â·}. |                   |     |     |
+| = {···     | ,âˆ’3,âˆ’2,âˆ’1,0,1,2,3,···}. |                   |     |     |
 | ---------- | ----------------------- | ----------------- | --- | --- |
 | The set    | of rational numbers     | is given          | by  |     |
 | (cid:110)a |                         | (cid:111)         |     |     |
@@ -910,7 +910,7 @@ To solve a quadratic equation, the following properties can be
 used.
 The zero-Product Rule If a.b = 0 then a = 0 or b = 0.
 âˆš
-The square Root Theorem If x2 = d, then x = Â± d
+The square Root Theorem If x2 = d, then x = ± d
 
 Function
 EquationsandInequalities:LinearandQuadratic
@@ -923,7 +923,7 @@ Example
 | with a (cid:54)= | 0 is given | by        |             |          |             |         |
 âˆš
 b2âˆ’4ac
-âˆ’bÂ±
+âˆ’b±
 x =
 2a
 Example
@@ -966,13 +966,13 @@ Cartesian Product
 Definition
 | Suppose | A and B are | sets. The  | Cartesian      | product | of A and B,  |
 | ------- | ----------- | ---------- | -------------- | ------- | ------------ |
-| denoted | by AÃ—B,     | is the set | which contains | every   | ordered pair |
+| denoted | by A×B,     | is the set | which contains | every   | ordered pair |
 whose first coordinate is an element of A and second coordinate is
 | an element | of B. That | is,      |       |            |     |
 | ---------- | ---------- | -------- | ----- | ---------- | --- |
-|            | AÃ—B        | = {(a,b) | : a âˆˆ | Aandb âˆˆ B} |     |
+|            | A×B        | = {(a,b) | : a âˆˆ | Aandb âˆˆ B} |     |
 Example
-| Let A =    | {1,2} and | B = {x,y}. | Find AÃ—B | and | B Ã—A. |
+| Let A =    | {1,2} and | B = {x,y}. | Find A×B | and | B ×A. |
 | ---------- | --------- | ---------- | -------- | --- | ----- |
 | Definition | (Equality | of ordered | pairs)   |     |       |
 Two ordered pairs (a,b) and (c,d) are equal if and only if a = c
@@ -983,13 +983,13 @@ Function
 Reviewofrelationsandfunctions
 | Definition | (Relation) |     |     |     |
 | ---------- | ---------- | --- | --- | --- |
-Let A and B are sets, any subset of AÃ—B is called a relation from
+Let A and B are sets, any subset of A×B is called a relation from
 A into B.
 Example
 | Let A | = {1,3,5,7} | and B = {6,8}. | Let R be | the relation |
 | ----- | ----------- | -------------- | -------- | ------------ |
 1
-| â€less | thanâ€ from | A into B. Then |     |     |
+| "less | than" from | A into B. Then |     |     |
 | ----- | ---------- | -------------- | --- | --- |
 R = {(1,6),(1,8),(3,6),(3,8),(5,6),(5,8)}
 | 2 Let A   | = {1,2,3,4,5} | and B = {a,b,c}. | The | following are |
@@ -1031,7 +1031,7 @@ Example
 Remark
 | 1 A relation | R   | on a        | set A is called   |      |            |      |
 | ------------ | --- | ----------- | ----------------- | ---- | ---------- | ---- |
-|              | (a) | a universal | relation          | if R | = AÃ—A.     |      |
+|              | (a) | a universal | relation          | if R | = A×A.     |      |
 |              | (b) | identity    | relation if       | R =  | {(a,a) : a | âˆˆ A} |
 |              | (c) | void        | or empty relation | if   | R = âˆ….     |      |
 If R is a relation from A to B then the inverse of R, denoted
@@ -1079,7 +1079,7 @@ Remark
 | -------- | --------- | -------- | ------- | ---- | ------- | ----- | ---- |
 called the image of x, and x is called the pre-image of y under
 f.
-| The | symbol f(x) | is read | as â€f of | xâ€. |     |     |     |
+| The | symbol f(x) | is read | as "f of | x". |     |     |     |
 | --- | ----------- | ------- | -------- | --- | --- | --- | --- |
 
 Function
@@ -1111,7 +1111,7 @@ Definition
 |       | (b)   | The  | set B       | is called the | codomain  | of    | f.          |
 |       | (c)   | The  | set {f(x)   | : x âˆˆ A}      | is called | the   | range of f. |
 Example
-| Let A    | = {1,2,3} |              | and B | = {1,2,3,Â·Â·Â·10}. |     | Determine | Dom(f),       |
+| Let A    | = {1,2,3} |              | and B | = {1,2,3,···10}. |     | Determine | Dom(f),       |
 | -------- | --------- | ------------ | ----- | ---------------- | --- | --------- | ------------- |
 | Range(f) | and       | Codomain(f), |       | given that       | f   | : A â†’ B   | is a function |
 x2.
@@ -1305,16 +1305,16 @@ Polynomial function
 Definition
 | A polynomial | function |     | is a function |            | of the | form |     |
 | ------------ | -------- | --- | ------------- | ---------- | ------ | ---- | --- |
-|              |          |     | xn            | xnâˆ’1+Â·Â·Â·+a |        |      |     |
+|              |          |     | xn            | xnâˆ’1+···+a |        |      |     |
 |              | p(x)     | = a | +a            |            |        | x +a | ,   |
 |              |          |     | n             | nâˆ’1        |        | 1 0  |     |
-where n is non negative integer, a n ,a nâˆ’1 ,Â·Â·Â· ,a 0 are constants.
-| In a polynomial |              | function | p(x) | = a | xn+a | xnâˆ’1+Â·Â·Â·+a | x +a , |
+where n is non negative integer, a n ,a nâˆ’1 ,··· ,a 0 are constants.
+| In a polynomial |              | function | p(x) | = a | xn+a | xnâˆ’1+···+a | x +a , |
 | --------------- | ------------ | -------- | ---- | --- | ---- | ---------- | ------ |
 |                 |              |          |      | n   |      | nâˆ’1        | 1 0    |
 | where a         | (cid:54)= 0, |          |      |     |      |            |        |
 n
-| the        | constants  | a           | ,a ,Â·Â·Â· | ,a          | are called | coefficients | of the |
+| the        | constants  | a           | ,a ,··· | ,a          | are called | coefficients | of the |
 | ---------- | ---------- | ----------- | ------- | ----------- | ---------- | ------------ | ------ |
 |            |            | n           | nâˆ’1     | 0           |            |              |        |
 | polynomial |            | p,          |         |             |            |              |        |
@@ -1412,10 +1412,10 @@ If f be a polynomial function of degree n > 0 whose coefficients
 | ----------- | --------- | -------- | ------------- | -------- | -------- | --------------- |
 | complex     | number    | system.  |               |          |          |                 |
 | Theorem     | (The      | linear   | Factorization |          | Theorem) |                 |
-| If p(x)     | = a xn    | +a       | xnâˆ’1+Â·Â·Â·+a    |          | x +a     | is a polynomial |
+| If p(x)     | = a xn    | +a       | xnâˆ’1+···+a    |          | x +a     | is a polynomial |
 |             | n         | nâˆ’1      |               |          | 1 0      |                 |
 | function    | of degree | n        | â‰¥ 1, then     |          |          |                 |
-p(x) = a n (x âˆ’r 1 )(x âˆ’r 2 )Â·Â·Â·(x âˆ’r n ) where the r i are complex
+p(x) = a n (x âˆ’r 1 )(x âˆ’r 2 )···(x âˆ’r n ) where the r i are complex
 | numbers | (possible | real | and | not necessarily | distinct). |     |
 | ------- | --------- | ---- | --- | --------------- | ---------- | --- |
 
@@ -1430,13 +1430,13 @@ Example
 | ------- | ------------- | ------------ | ---------- | --------- |
 |         | (c) f(x) =    | 2x4+8x3+10x2 |            |           |
 | Theorem | (The Rational | Root         | Theorem)   |           |
-| Suppose | that f(x) =   | a xn +a      | xnâˆ’1+Â·Â·Â·+a | x +a is a |
+| Suppose | that f(x) =   | a xn +a      | xnâˆ’1+···+a | x +a is a |
 |         |               | n nâˆ’1        |            | 1 0       |
 polynomial function of degree n â‰¥ 1 with with integer coefficients.
 p
 If is a rational root of f where p and q have no common factor
 q
-other than Â±1 then p is a factor of a and q is a factor of a .
+other than ±1 then p is a factor of a and q is a factor of a .
 0 n
 Example
 | Find all | the zeros of | the function | p(x) = 2x3+3x2âˆ’23x | âˆ’12. |
@@ -1537,18 +1537,18 @@ Definition
 For a natural number n and a real number x, the nth power of x is
 defined as
 xn
-|     |     | =   | x.x.Â·Â·Â· .x                             |     |
+|     |     | =   | x.x.··· .x                             |     |
 | --- | --- | --- | -------------------------------------- | --- |
 |     |     |     | (cid:124) (cid:123)(cid:122) (cid:125) |     |
 ntimes
 In the expression xn, x is called the base and n is called the
 exponent.
 Example
-| 25 = 2Ã—2Ã—2Ã—2Ã—2       |         | = 32 |          |     |
+| 25 = 2×2×2×2×2       |         | = 32 |          |     |
 | -------------------- | ------- | ---- | -------- | --- |
-| (cid:18) 1 (cid:19)3 | 1 1     | 1    | âˆ’1Ã—âˆ’1Ã—âˆ’1 | 1   |
-| âˆ’ =                  | âˆ’ Ã—âˆ’ Ã—âˆ’ | =    |          | = âˆ’ |
-| 3                    | 3 3     | 3    | 3Ã—3Ã—3    | 27  |
+| (cid:18) 1 (cid:19)3 | 1 1     | 1    | âˆ’1×âˆ’1×âˆ’1 | 1   |
+| âˆ’ =                  | âˆ’ ×âˆ’ ×âˆ’ | =    |          | = âˆ’ |
+| 3                    | 3 3     | 3    | 3×3×3    | 27  |
 
 Function
 RealValuedfunctionsandtheirproperties
@@ -1669,7 +1669,7 @@ Out lines
 | Definitions and Examples |     |     |
 | ------------------------ | --- | --- |
 Matrix algebra(operations)
-| Determinant and   | itâ€™s Properties |     |
+| Determinant and   | it's Properties |     |
 | ----------------- | --------------- | --- |
 | Systems of Linear | Equations       |     |
 
@@ -1696,7 +1696,7 @@ Definition
 |          | a            | a .         | . . a           |              |
 |          | m1           | m2          | mn              |              |
 | The size | or order of  | a matrix    | with m rows and | n columns is |
-| mÃ—n      | (and read it | as m by n). |                 |              |
+| m×n      | (and read it | as m by n). |                 |              |
 
 Matrix,DeterminantandSystemsoflinearequations
 DefinitionsandExamples
@@ -1705,10 +1705,10 @@ DefinitionsandExamples
 case letters to denote its elements. In short, we write a matrix
 | as A = | (a     | ) or A    | = (a )       | or  | simply A | = (a ) | if the |
 | ------ | ------ | --------- | ------------ | --- | -------- | ------ | ------ |
-|        | ij     | mÃ—n       | ij           | m,n |          | ij     |        |
+|        | ij     | m×n       | ij           | m,n |          | ij     |        |
 | order  | is not | important | to emphasis. |     |          |        |        |
 ith
-The element a ij of a matrix A = (a ij ) mÃ—n is located in the
+The element a ij of a matrix A = (a ij ) m×n is located in the
 | row and | the | jth column. |     |     |     |     |     |
 | ------- | --- | ----------- | --- | --- | --- | --- | --- |
 Example
@@ -1718,16 +1718,16 @@ Example
 | (cid:18) |     | 1 (cid:19) |     |     |     |           |       |
 | -------- | --- | ---------- | --- | --- | --- | --------- | ----- |
 | âˆ’4       | 3   |            |     |     |     |           |       |
-| A =      |     | 3 and      | B = | ï£­ 2 | 4 ï£¸ | are a 2Ã—3 | and a |
+| A =      |     | 3 and      | B = | ï£­ 2 | 4 ï£¸ | are a 2×3 | and a |
 1 âˆ’1 6
 |              |              |     |     | âˆ’4  | 16  |     |     |
 | ------------ | ------------ | --- | --- | --- | --- | --- | --- |
-| 3Ã—2 matrices | respectively |     |     |     |     |     |     |
+| 3×2 matrices | respectively |     |     |     |     |     |     |
 Definition
-| A matrix with | a   | single column | (or | an nÃ—1 | matrix) | is called | a   |
+| A matrix with | a   | single column | (or | an n×1 | matrix) | is called | a   |
 | ------------- | --- | ------------- | --- | ------ | ------- | --------- | --- |
 column vector(or column matrix). A matrix with single row( or
-| 1Ã—n matrix) | is  | called a | row vector( | or  | row matrix). |     |     |
+| 1×n matrix) | is  | called a | row vector( | or  | row matrix). |     |     |
 | ----------- | --- | -------- | ----------- | --- | ------------ | --- | --- |
 
 Matrix,DeterminantandSystemsoflinearequations
@@ -1742,7 +1742,7 @@ Example
 11
 a row vector(matrix).
 Definition
-An mÃ—n matrix A = (a ) is said to be the zero (null) matrix if
+An m×n matrix A = (a ) is said to be the zero (null) matrix if
 ij
 | a ij = 0 | for all i,j. |     |     |     |
 | -------- | ------------ | --- | --- | --- |
@@ -1751,7 +1751,7 @@ Example
 | -------- | ------------ | ------------ | ------- | ------------ |
 |          |              |              | 0       | 0            |
 | (cid:18) | 0 0 (cid:19) |              |         |              |
-| O =      | is a 2Ã—2     | zero matrix, | O = ï£­ 0 | 0 ï£¸ is a 3Ã—2 |
+| O =      | is a 2×2     | zero matrix, | O = ï£­ 0 | 0 ï£¸ is a 3×2 |
 |          | 0 0          |              |         |              |
 |          |              |              | 0       | 0            |
 zero matrix.
@@ -1760,7 +1760,7 @@ Matrix,DeterminantandSystemsoflinearequations
 DefinitionsandExamples
 Definition
 A matrix A = (a ) is called a square matrix of order n( or an n
-ij mÃ—n
+ij m×n
 | square matrix) |     | if m=n. |     |     |
 | -------------- | --- | ------- | --- | --- |
 Example
@@ -1837,9 +1837,9 @@ Matrix algebra
 | Definition | (Scalar Multiplication) |       |                         |     |
 | ---------- | ----------------------- | ----- | ----------------------- | --- |
 | Let A =    | (a ) be a matrix,       | and Î± | is a scalar (a number). | The |
-ij mÃ—n
+ij m×n
 product of the scalar Î± with matrix A, denoted by Î±A, is defined by
-Î±A = (Î±a ij ) mÃ—n
+Î±A = (Î±a ij ) m×n
 Example
 |     | (cid:18) (cid:19) |     |     |     |
 | --- | ----------------- | --- | --- | --- |
@@ -1855,9 +1855,9 @@ Matrixalgebra(operations)
 Definition
 | Let A | = (a )     | and    | B = (b )   | be two matrices. | The sum of |
 | ----- | ---------- | ------ | ---------- | ---------------- | ---------- |
-|       | ij mÃ—n     |        | ij mÃ—n     |                  |            |
+|       | ij m×n     |        | ij m×n     |                  |            |
 | A and | B, denoted | by A+B | is defined | by               |            |
-|       |            |        | A+B = (a   | ij +b ij ) mÃ—n   |            |
+|       |            |        | A+B = (a   | ij +b ij ) m×n   |            |
 Example
 |       | (cid:18) |     | (cid:19) | (cid:18) | (cid:19) |
 | ----- | -------- | --- | -------- | -------- | -------- |
@@ -1870,7 +1870,7 @@ Matrix,DeterminantandSystemsoflinearequations
 Matrixalgebra(operations)
 Properties
 Theorem
-| Let A, | B, C be mÃ—n   | matrices       | and Î±, Î²         | be constants. | Then      |
+| Let A, | B, C be m×n   | matrices       | and Î±, Î²         | be constants. | Then      |
 | ------ | ------------- | -------------- | ---------------- | ------------- | --------- |
 |        | (a) + is      | commutative    |                  |               |           |
 |        | (b) + is      | associative    |                  |               |           |
@@ -1886,10 +1886,10 @@ Matrixalgebra(operations)
 | Multiplication | of Matrices |     |     |     |     |     |     |
 | -------------- | ----------- | --- | --- | --- | --- | --- | --- |
 Definition
-Let A = (a ij ) mÃ—n and B = (b ij ) nÃ—p matrices. Then the matrix
+Let A = (a ij ) m×n and B = (b ij ) n×p matrices. Then the matrix
 | product | AB is defined | as C | = (c ) | with | entries |     |     |
 | ------- | ------------- | ---- | ------ | ---- | ------- | --- | --- |
-ij mÃ—p
+ij m×p
 |     | c = | a b +a | b +a  | b     | +...+a | b     |     |
 | --- | --- | ------ | ----- | ----- | ------ | ----- | --- |
 |     | ij  | i1 1j  | i2 2j | i3 3j |        | in nj |     |
@@ -1938,10 +1938,10 @@ Matrixalgebra(operations)
 Definition
 | The transpose | of a matrix | A = (a ) | , is the matrix |
 | ------------- | ----------- | -------- | --------------- |
-ij mÃ—n
+ij m×n
 | At = (a | ) .    |     |     |
 | ------- | ------ | --- | --- |
-|         | ji nÃ—m |     |     |
+|         | ji n×m |     |     |
 Example
 |     | ï£«   |     | ï£¶   |
 | --- | --- | --- | --- |
@@ -2000,7 +2000,7 @@ obtained from the other by a sequence of elementary row
 operations.
 Definition (Row Echelon and Row Reduced Echelon Forms)
 A matrix A = (a ) is a row echelon form of a matrix if
-ij mÃ—n
+ij m×n
 (a) all the zero rows (if any) are at the bottom of rows
 of A
 (b) the first non zero entry in each non zero row is 1.
@@ -2014,7 +2014,7 @@ Matrix,DeterminantandSystemsoflinearequations
 Matrixalgebra(operations)
 Definition
 A matrix A = (a ) is a row reduced echelon form of a matrix if
-ij mÃ—n
+ij m×n
 (a) A is a row echelon form
 (b) If a column contains a leading 1, then all other
 entries in that column are zero
@@ -2065,8 +2065,8 @@ Example
 Notation: The inverse of an invertible matrix A is denoted as Aâˆ’1.
 
 Matrix,DeterminantandSystemsoflinearequations
-Determinantanditâ€™sProperties
-| Determinant | and itâ€™s | Properties |     |     |     |
+Determinantandit'sProperties
+| Determinant | and it's | Properties |     |     |     |
 | ----------- | -------- | ---------- | --- | --- | --- |
 The determinant is a function which assigns to each square matrix
 | A = (a | ) a number,    | and it is | denoted by det(A) | or |A|   | or âˆ†. |
@@ -2074,7 +2074,7 @@ The determinant is a function which assigns to each square matrix
 |        | ij n           |           |                   |          |       |
 |        | A. Determinant | of        | square matrix     | of order | 1 and |
 |        | order          | 2         |                   |          |       |
-|        |                | (i) For   | a 1Ã—1 matrix      | A = (a   | ),    |
+|        |                | (i) For   | a 1×1 matrix      | A = (a   | ),    |
 11
 |     |     | det(A) | = a . |     |     |
 | --- | --- | ------ | ----- | --- | --- |
@@ -2082,7 +2082,7 @@ The determinant is a function which assigns to each square matrix
 |     |     |          |              | (cid:18) | (cid:19) |
 | --- | --- | -------- | ------------ | -------- | -------- |
 |     |     |          |              | a        | b        |
-|     |     | (ii) For | a 2Ã—2 matrix | A =      | ,        |
+|     |     | (ii) For | a 2×2 matrix | A =      | ,        |
 |     |     |          |              | c        | d        |
 |     |     |          | (cid:12)     | (cid:12) |          |
 a b
@@ -2099,11 +2099,11 @@ Example
 |          |                 |                  | 1 4               |         | 3 6               |
 
 Matrix,DeterminantandSystemsoflinearequations
-Determinantanditâ€™sProperties
+Determinantandit'sProperties
 | Minors and | Cofactors |     |     |     |     |     |     |     |
 | ---------- | --------- | --- | --- | --- | --- | --- | --- | --- |
 Definition
-| Let A | = (a ) be | a matrix | and | A be | an nâˆ’1Ã—nâˆ’1 |     | sub matrix |     |
+| Let A | = (a ) be | a matrix | and | A be | an nâˆ’1×nâˆ’1 |     | sub matrix |     |
 | ----- | --------- | -------- | --- | ---- | ---------- | --- | ---------- | --- |
 |       | ij n      |          |     | ij   |            |     |            |     |
 of A obtained from A by deleting the ith row and the jth column.
@@ -2130,7 +2130,7 @@ Example
 | 11    | 12 22 32 |      |         |      |          |          |     |     |
 
 Matrix,DeterminantandSystemsoflinearequations
-Determinantanditâ€™sProperties
+Determinantandit'sProperties
 |     | B. Determinant |     | of square matrix | of order | n, n â‰¥ 3. |
 | --- | -------------- | --- | ---------------- | -------- | --------- |
 Definition
@@ -2152,7 +2152,7 @@ Example
 content...
 
 Matrix,DeterminantandSystemsoflinearequations
-Determinantanditâ€™sProperties
+Determinantandit'sProperties
 Properties of determinant
 | (a) If a      | matrix      | B results   | from      | a square       | matrix | A by          |      |
 | ------------- | ----------- | ----------- | --------- | -------------- | ------ | ------------- | ---- |
@@ -2171,7 +2171,7 @@ Properties of determinant
 |          |                 |          | det(A)       | = det(B)   |               |               |     |
 
 Matrix,DeterminantandSystemsoflinearequations
-Determinantanditâ€™sProperties
+Determinantandit'sProperties
 | (e) If A     | is a square    | matrix, | det(A)          | = det(At)       |             |
 | ------------ | -------------- | ------- | --------------- | --------------- | ----------- |
 | (f) If two   | rows(columns)  |         | of a            | square matrix A | are         |
@@ -2188,11 +2188,11 @@ Determinantanditâ€™sProperties
 det(A)
 
 Matrix,DeterminantandSystemsoflinearequations
-Determinantanditâ€™sProperties
+Determinantandit'sProperties
 | Adjoint of a matrix |     |     |     |     |
 | ------------------- | --- | --- | --- | --- |
 Definition
-| Let A be nÃ—n | matrix and | C denote | the | cofactor of a . The |
+| Let A be n×n | matrix and | C denote | the | cofactor of a . The |
 | ------------ | ---------- | -------- | --- | ------------------- |
 ij ij
 adjoint of A, denoted by adj(A), is the transpose of the matrix of
@@ -2208,7 +2208,7 @@ Corollary
 det(A)
 
 Matrix,DeterminantandSystemsoflinearequations
-Determinantanditâ€™sProperties
+Determinantandit'sProperties
 Example
 Find the inverse of each of the following matrices(if exist).
 |         | ï£«    | ï£¶   |         | ï£« ï£¶   |
@@ -2242,7 +2242,7 @@ SystemsofLinearEquations
 |         |        |          |       | AX       | = B   |     |          | (1) |
 |         |        |          |       | (cid:0)  |       |     | (cid:1)t |     |
 | where A | = (a   | )        | , X = | x        | x . . | . x | , and    |     |
-|         |        | ij mÃ—n   |       | 1        | 2     | n   |          |     |
+|         |        | ij m×n   |       | 1        | 2     | n   |          |     |
 | (cid:0) |        |          |       | (cid:1)t |       |     |          |     |
 | B =     | b b    | . .      | . b   |          |       |     |          |     |
 |         | 1      | 2        |       | m        |       |     |          |     |
@@ -2295,7 +2295,7 @@ SystemsofLinearEquations
 | Solving systems |          | of systems   | of linear    | equations    |                 |         |
 | --------------- | -------- | ------------ | ------------ | ------------ | --------------- | ------- |
 | Matrix          | Methods: | Gaussian     | Elimination, | Gauss-Jordan |                 | method, |
-| Cramerâ€™s        | rule,    | Inverse      | Method.      |              |                 |         |
+| Cramer's        | rule,    | Inverse      | Method.      |              |                 |         |
 |                 | 1.       | Gaussian     | Elimination: |              |                 |         |
 | The method      | of       | solving      | a system     | AX = B       | by transforming | the     |
 | augmented       | matrix   | M            | = (A|B) to   | its row      | echelon form    | using   |
@@ -2318,7 +2318,7 @@ x +2y +z = 3
 Matrix,DeterminantandSystemsoflinearequations
 SystemsofLinearEquations
 Theorem
-| Let A be | an invertible | nÃ—n | matrix, | A denote | the matrix |     |
+| Let A be | an invertible | n×n | matrix, | A denote | the matrix |     |
 | -------- | ------------- | --- | ------- | -------- | ---------- | --- |
 xi
 ith
@@ -2332,10 +2332,10 @@ vector B. If |A| =(cid:54) 0, the linear system AX = B, where
 | det(Axi | )       |               |          |        |                |     |
 | x =     | where i | = 1,2,3,...,n |          |        |                |     |
 i det(A)
-| 3.Cramerâ€™s | rule: |     |     |     |     |     |
+| 3.Cramer's | rule: |     |     |     |     |     |
 | ---------- | ----- | --- | --- | --- | --- | --- |
 Example
-| Using Cramerâ€™s | rule, | solve | the system | of linear | equations. |     |
+| Using Cramer's | rule, | solve | the system | of linear | equations. |     |
 | -------------- | ----- | ----- | ---------- | --------- | ---------- | --- |
 |                |       | 2x    | 1 âˆ’x 2 =   | 0         |            |     |
 |                |       | âˆ’x    | +2x âˆ’x     | = 0       |            |     |

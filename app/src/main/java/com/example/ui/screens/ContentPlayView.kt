@@ -96,6 +96,7 @@ fun ContentPlayView(viewModel: StudyViewModel) {
         FreeTrialPaywallDialog(
             packageId = paywallPackageId ?: "freshman_natural",
             currentLang = currentLang,
+            viewModel = viewModel,
             onDismiss = { viewModel.showFreeTrialPaywall.value = false },
             onUpgradePremium = {
                 viewModel.showFreeTrialPaywall.value = false
@@ -902,23 +903,6 @@ fun DarkThemedNotesReader(
                             color = if (notesTheme == "dark") HolographicAqua else EmeraldDark,
                             fontWeight = FontWeight.Black
                         )
-                        if (note != null && !isSatCourse && note.gradeLevel.isNotBlank()) {
-                            Surface(
-                                color = EmeraldPrimary.copy(alpha = 0.2f),
-                                shape = RoundedCornerShape(6.dp),
-                                border = androidx.compose.foundation.BorderStroke(1.dp, EmeraldPrimary.copy(alpha = 0.5f))
-                            ) {
-                                Text(
-                                    text = note.gradeLevel,
-                                    style = MaterialTheme.typography.labelSmall.copy(
-                                        fontWeight = FontWeight.Bold,
-                                        fontSize = 10.sp
-                                    ),
-                                    color = EmeraldPrimary,
-                                    modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
-                                )
-                            }
-                        }
                     }
                     Spacer(modifier = Modifier.height(2.dp))
                     Text(
@@ -2208,10 +2192,13 @@ data class VideoItem(
 fun FreeTrialPaywallDialog(
     packageId: String,
     currentLang: String = "en",
+    viewModel: StudyViewModel,
     onDismiss: () -> Unit,
     onUpgradePremium: () -> Unit
 ) {
     fun t(key: String): String = com.example.ui.TranslationManager.get(key, currentLang)
+
+    var selectedPlan by remember { mutableStateOf("full_year") } // "sem1", "sem2", "full_year"
 
     val displayedPackageName = when (packageId) {
         "freshman_natural" -> t("pkg_freshman_natural_title")
@@ -2293,15 +2280,88 @@ fun FreeTrialPaywallDialog(
                     color = TextMuted,
                     textAlign = TextAlign.Center,
                     lineHeight = 20.sp,
-                    modifier = Modifier.padding(bottom = 24.dp)
+                    modifier = Modifier.padding(bottom = 16.dp)
                 )
+
+                // Plan selection: Semester 1 (300 ETB), Semester 2 (300 ETB), Full Package (500 ETB)
+                Text(
+                    text = "CHOOSE YOUR PLAN",
+                    style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black, letterSpacing = 1.5.sp),
+                    color = GoldAccent,
+                    modifier = Modifier.padding(bottom = 8.dp)
+                )
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 20.dp),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    val plans = listOf(
+                        "sem1" to ("Semester 1" to "300 ETB"),
+                        "sem2" to ("Semester 2" to "300 ETB"),
+                        "full_year" to ("Full Package" to "500 ETB")
+                    )
+                    plans.forEach { (pKey, pInfo) ->
+                        val isSel = selectedPlan == pKey
+                        Surface(
+                            modifier = Modifier
+                                .weight(1f)
+                                .clickable { selectedPlan = pKey },
+                            shape = RoundedCornerShape(10.dp),
+                            color = if (isSel) EmeraldPrimary.copy(alpha = 0.25f) else Color(0xFF1E293B),
+                            border = BorderStroke(1.2.dp, if (isSel) EmeraldPrimary else Color.Transparent)
+                        ) {
+                            Column(
+                                modifier = Modifier.padding(vertical = 10.dp, horizontal = 4.dp),
+                                horizontalAlignment = Alignment.CenterHorizontally
+                            ) {
+                                Text(
+                                    text = pInfo.first,
+                                    style = MaterialTheme.typography.bodySmall.copy(
+                                        fontWeight = if (isSel) FontWeight.Bold else FontWeight.Medium,
+                                        fontSize = 11.sp
+                                    ),
+                                    color = Color.White,
+                                    textAlign = TextAlign.Center,
+                                    maxLines = 1
+                                )
+                                Spacer(modifier = Modifier.height(3.dp))
+                                Text(
+                                    text = pInfo.second,
+                                    style = MaterialTheme.typography.labelSmall.copy(
+                                        fontWeight = FontWeight.Bold,
+                                        fontSize = 10.sp
+                                    ),
+                                    color = if (isSel) GoldAccent else TextMuted
+                                )
+                            }
+                        }
+                    }
+                }
+
+                val currentPriceETB = if (selectedPlan == "full_year") 500 else 300
 
                 Column(
                     modifier = Modifier.fillMaxWidth(),
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     Button(
-                        onClick = onUpgradePremium,
+                        onClick = {
+                            val stream = if (packageId.contains("social")) "social_science" else "natural_science"
+                            val targetProductId = "freshman_${stream}_y1_${selectedPlan}"
+                            val matched = com.example.data.ProductCatalog.get(targetProductId)
+                                ?: com.example.data.Product(
+                                    id = targetProductId,
+                                    category = "freshman",
+                                    stream = stream,
+                                    academicYear = 1,
+                                    plan = selectedPlan,
+                                    amount = currentPriceETB,
+                                    shortLabel = if (selectedPlan == "full_year") "Full Academic Year" else "Semester ${if (selectedPlan == "sem1") "1" else "2"}"
+                                )
+                            viewModel.createPurchaseRequest(matched)
+                            onUpgradePremium()
+                        },
                         modifier = Modifier
                             .fillMaxWidth()
                             .height(50.dp)
@@ -2321,7 +2381,7 @@ fun FreeTrialPaywallDialog(
                             Icon(imageVector = Icons.Default.WorkspacePremium, contentDescription = null, modifier = Modifier.size(20.dp))
                             Spacer(modifier = Modifier.width(8.dp))
                             Text(
-                                text = t("btn_go_premium"),
+                                text = "${t("btn_go_premium")} ($currentPriceETB ETB)",
                                 style = MaterialTheme.typography.titleMedium,
                                 fontWeight = FontWeight.Bold,
                                 maxLines = 1,

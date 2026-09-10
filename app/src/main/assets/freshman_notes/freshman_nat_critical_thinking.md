@@ -9,101 +9,101 @@ LOGIC AND CRITICAL THINKING
 
 Contents
 CHAPTER ONE
-â€¢ Meaning and Nature of Philosophy
-â€“ Basic Features of Philosophy
-â€“ Core Fields of Philosophy
-â€“ Metaphysics and Epistemology
-â€“ Axiology and Logic
-â€“ Importance of Learning Philosophy
+•  Meaning and Nature of Philosophy
+– Basic Features of Philosophy
+– Core Fields of Philosophy
+– Metaphysics and Epistemology
+– Axiology and Logic
+– Importance of Learning Philosophy
 
 CHAPTER TWO
-â€¢ Basic Concepts of Logic: Arguments,
+•  Basic Concepts of Logic: Arguments,
 Premises and Conclusions
-â€“ Techniques of Recognizing Arguments.
-â€“ Recognizing Argumentative Passages
-â€“ Recognizing Non-argumentative Passages
-â€“ Types of Arguments: Deduction and Induction.
-â€“ Differentiating Deductive and Inductive Arguments..
-â€“ Evaluating Arguments
-â€“ Evaluating Deductive Arguments: Validity, Truth,
+– Techniques of Recognizing Arguments.
+– Recognizing Argumentative Passages
+– Recognizing Non-argumentative Passages
+– Types of Arguments: Deduction and Induction.
+– Differentiating Deductive and Inductive Arguments..
+– Evaluating Arguments
+– Evaluating Deductive Arguments: Validity, Truth,
 and Soundness
-â€“ Evaluating Inductive Arguments: Strength, Truth,
+– Evaluating Inductive Arguments: Strength, Truth,
 and Cogency
 
 CHAPTER THREE
-â€¢ LOGIC AND LANGUAGE
-â€“ Philosophy of Language
-â€“ Debates and History of Philosophy of Language
-â€“ Logic and Meaning
-â€“ The Functions of Language: Cognitive and Emotive
+•  LOGIC AND LANGUAGE
+– Philosophy of Language
+– Debates and History of Philosophy of Language
+– Logic and Meaning
+– The Functions of Language: Cognitive and Emotive
 Meanings
-â€“ The Intension and Extension of Terms
-â€“ Logic and Definition
-â€“ Meaning, Types, and Purposes of Definitions
-â€“ Techniques of Definition
-â€“ The Extensional (Denotative) Definitional Techniques
-â€“ The Intentional (Connotative) Definitional Techniques
-â€“ Criteria for Lexical Definitions
+– The Intension and Extension of Terms
+– Logic and Definition
+– Meaning, Types, and Purposes of Definitions
+– Techniques of Definition
+– The Extensional (Denotative) Definitional Techniques
+– The Intentional (Connotative) Definitional Techniques
+– Criteria for Lexical Definitions
 
-â€¢ CHAPTER FOUR
-â€¢ BASIC CONCEPTS OF CRITICAL
+•  CHAPTER FOUR
+•  BASIC CONCEPTS OF CRITICAL
 THINKING
-â€“ Meaning of Critical Thinking
-â€“ Standards of Critical Thinking
-â€“ Codes of Intellectual Conduct for Effective Discussion
-â€“ Principles of Good Argument
-â€“ Principles of Critical Thinking
-â€“ Characteristics of Critical Thinking
-â€“ Basic Traits of Critical Thinkers
-â€“ Basic Traits of Uncritical Thinkers
-â€“ Barriers to Critical Thinking
-â€“ Benefits of Critical Thinking
+– Meaning of Critical Thinking
+– Standards of Critical Thinking
+– Codes of Intellectual Conduct for Effective Discussion
+– Principles of Good Argument
+– Principles of Critical Thinking
+– Characteristics of Critical Thinking
+– Basic Traits of Critical Thinkers
+– Basic Traits of Uncritical Thinkers
+– Barriers to Critical Thinking
+– Benefits of Critical Thinking
 
 CHAPTER FIVE
-â€¢ INFORMAL FALLACIES
-â€“ Fallacy in General
-â€“ The Meaning of Fallacy
-â€“ Types of Fallacies
-â€“ Informal fallacies
-â€“ Fallacies of Relevance
-â€“ Fallacies of Weak Induction
-â€“ Fallacies of Presumption
-â€“ Fallacies of Ambiguity and Grammatical Analogy
-â€“ Fallacies of Ambiguity
-â€“ Fallacies of Grammatical Analogy .
+•  INFORMAL FALLACIES
+– Fallacy in General
+– The Meaning of Fallacy
+– Types of Fallacies
+– Informal fallacies
+– Fallacies of Relevance
+– Fallacies of Weak Induction
+– Fallacies of Presumption
+– Fallacies of Ambiguity and Grammatical Analogy
+– Fallacies of Ambiguity
+– Fallacies of Grammatical Analogy .
 
 CHAPTER SIX
-â€¢ CATEGORICAL PROPOSITIONS
-â€“ Standard-Forms of Categorical Proposition
-â€“ The Components of Categorical Propositions
-â€“ Attributes of Categorical Propositions: Quality, Quantity,
+•  CATEGORICAL PROPOSITIONS
+– Standard-Forms of Categorical Proposition
+– The Components of Categorical Propositions
+– Attributes of Categorical Propositions: Quality, Quantity,
 and Distribution
-â€“ Venn Diagrams and the Modern Square of Opposition
-â€“ Representing Categorical Propositions in Diagrams
-â€“ Squares of Opposition: Traditional and Modern Squares
+– Venn Diagrams and the Modern Square of Opposition
+– Representing Categorical Propositions in Diagrams
+– Squares of Opposition: Traditional and Modern Squares
 of Opposition
-â€“ The Traditional Square of Opposition
-â€“ Evaluating Immediate Inferences: Using Venn Diagrams
+– The Traditional Square of Opposition
+– Evaluating Immediate Inferences: Using Venn Diagrams
 and Square of Oppositions
-â€“ Logical Operations: Conversion, Obversion, and
+– Logical Operations: Conversion, Obversion, and
 Contraposition
 
 Teaching and Learning Methods
-â€¢
+• 
 Presentation
-â€“ lecture,
-â€“ question and answer,
-â€“ group discussion
-â€¢ Independent learning (Reading assignment)
-â€¢ Collaborative learning (group discussion, and debates)
+– lecture,
+– question and answer,
+– group discussion
+•  Independent learning (Reading assignment)
+•  Collaborative learning (group discussion, and debates)
 Methods of Assessment
-â€¢ Mid-term Examination: 40% (it will cover chapter one
+•  Mid-term Examination: 40% (it will cover chapter one
 and two at the end of week five)
-â€¢ Final-term Examination: 60% (it will cover from chapter
+•  Final-term Examination: 60% (it will cover from chapter
 three to chapter six) Total: 100%
 
 COURSE INTRODUCTION
-â€¢ This course is
+•  This course is
 ïƒ˜a philosophical inquiry that takes argumentation
 and reasoning as its basic objects of investigation
 and
@@ -115,84 +115,84 @@ reasoning and critical thinking
 responsible, and skillful thinking that focuses
 on deciding what to believe or do.
 
-â€¢ Critical thinking helps to
-â€“ Ask appropriate questions,
-â€“ Gather relevant information,
-â€“ Efficiently and creatively sort through this
+•  Critical thinking helps to
+– Ask appropriate questions,
+– Gather relevant information,
+– Efficiently and creatively sort through this
 information,
-â€“ Reason logically from this information, and
-â€“ Come to reliable and trustworthy conclusions
-â€¢ Generally, this course is designed to help you
+– Reason logically from this information, and
+– Come to reliable and trustworthy conclusions
+•  Generally, this course is designed to help you
 develop
-â€“ The ability to construct reliable and logically
+– The ability to construct reliable and logically
 defendable arguments and
-â€“ Rationally evaluate the arguments of others
+– Rationally evaluate the arguments of others
 
 CHAPTER ONE
 INTRODUCING PHILOSOPHY
-| â€¢ Philosophy  |     |     | is  | the  | study  |     | of  | general  |     |     | and  |
+| •  Philosophy  |     |     | is  | the  | study  |     | of  | general  |     |     | and  |
 | ------------- | --- | --- | --- | ---- | ------ | --- | --- | -------- | --- | --- | ---- |
 fundamental problems
-â€“ concerning  matters  such  as  existence,  knowledge,  truth,
+– concerning  matters  such  as  existence,  knowledge,  truth,
 beauty, law, justice, validity, mind, and language.
-| â€¢ Logic         | is  |   a  | branch  |     | of  philosophy  |     |        | which  |      | treated  |     |
+| •  Logic         | is  |   a  | branch  |     | of  philosophy  |     |        | which  |      | treated  |     |
 | --------------- | --- | ---- | ------- | --- | --------------- | --- | ------ | ------ | ---- | -------- | --- |
 | simultaneously  |     |      | as      | a   | field           | of  | study  |        | and  | as       | an  |
 instrument.
-â€¢ It study  arguments and the principles and
+•  It study  arguments and the principles and
 methods of right reasoning
-â€¢ As an instrument,  it help us to formulate our own
+•  As an instrument,  it help us to formulate our own
 | rational  |     | arguments  |     |     | and  | critically  |     | evaluate  |     |     | the  |
 | --------- | --- | ---------- | --- | --- | ---- | ----------- | --- | --------- | --- | --- | ---- |
-soundness of othersâ€˜ arguments.
+soundness of others' arguments.
 
 Meaning and Nature of Philosophy
-| â€¢   | It          | is  | difficult  |     |      | to  | define  |     |           | philosophy  |     |          |     | because  |      |     |
+| •    | It          | is  | difficult  |     |      | to  | define  |     |           | philosophy  |     |          |     | because  |      |     |
 | --- | ----------- | --- | ---------- | --- | ---- | --- | ------- | --- | --------- | ----------- | --- | -------- | --- | -------- | ---- | --- |
 |     | philosophy  |     |            |     | has  | no  |         | a   | specific  |             |     | subject  |     |          | but  | it  |
 primarily deals with issues
-| â€¢   | Etymologically,  |     |     |     |     | the  |     | word  |     |     | philosophy  |     |     | comes  |     |     |
+| •    | Etymologically,  |     |     |     |     | the  |     | word  |     |     | philosophy  |     |     | comes  |     |     |
 | --- | ---------------- | --- | --- | --- | --- | ---- | --- | ----- | --- | --- | ----------- | --- | --- | ------ | --- | --- |
 from two Greek words: philo and sophia, which
 mean love and wisdom, respectively.
-â€¢ Thus, the literal definition of philosophy is â€œlove
-|     | of  | wisdomâ€.  |     |     |     | But  |     | this  |     | is  | not  | sufficient  |     |     |     | to  |
+•  Thus, the literal definition of philosophy is "love
+|     | of  | wisdom".  |     |     |     | But  |     | this  |     | is  | not  | sufficient  |     |     |     | to  |
 | --- | --- | --------- | --- | --- | --- | ---- | --- | ----- | --- | --- | ---- | ----------- | --- | --- | --- | --- |
 understand philosophy
-| â€¢   | Pythagoras   |     |     |            | was  |       | the  |         | first  |         | to   | use      | the          |     | word   |     |
+| •    | Pythagoras   |     |     |            | was  |       | the  |         | first  |         | to   | use      | the          |     | word   |     |
 | --- | ------------ | --- | --- | ---------- | ---- | ----- | ---- | ------- | ------ | ------- | ---- | -------- | ------------ | --- | ------ | --- |
 |     | philosopher  |     |     |            | to   | call  | a    | person  |        |         | who  | clearly  |              |     | shows  |     |
 |     | a  marked    |     |     | curiosity  |      |       | in   | the     |        | things  |      | he       | experiences  |     |        |     |
 and analysis.
 
-| â€¢ Philosophy  |     |          | refers  | to   | the         | development  |         | of   |
+| •  Philosophy  |     |          | refers  | to   | the         | development  |         | of   |
 | ------------- | --- | -------- | ------- | ---- | ----------- | ------------ | ------- | ---- |
 | critical      |     | habits,  |         | the  | continuous  |              | search  | for  |
 truth, and the questioning of the apparent.
-| â€¢ The  | best  |     | way  | to  | learn  | and  | understand  |     |
+| •  The  | best  |     | way  | to  | learn  | and  | understand  |     |
 | ------ | ----- | --- | ---- | --- | ------ | ---- | ----------- | --- |
 philosophy is to philosophize; i.e.
-| â€“ To  | be  | confronted  |     | with  | philosophical  |     | questions,  | to  |
+| – To  | be  | confronted  |     | with  | philosophical  |     | questions,  | to  |
 | ----- | --- | ----------- | --- | ----- | -------------- | --- | ----------- | --- |
 use philosophical language,
-â€“ To become acquainted with differing philosophical
+– To become acquainted with differing philosophical
 positions and maneuvers,
-â€“ To read the philosophers themselves, and
-â€“ To grapple with the issues for oneself.
+– To read the philosophers themselves, and
+– To grapple with the issues for oneself.
 
-â€¢ The wisdom that philosophers seek is not the wisdom
+•  The wisdom that philosophers seek is not the wisdom
 of the expertise or technical skills of professionals
-â€¢ Philosophy involves reason, rational criticism,
+•  Philosophy involves reason, rational criticism,
 examination,
-â€¢ For Socrates philosophy is a pursuit of wisdom, i.e.
-â€“ The development of critical habits,
-â€“ The continuous search for truth, and
-â€“ The questioning of the apparent
-â€¢ Therefore, philosophy is a rational and critical
+•  For Socrates philosophy is a pursuit of wisdom, i.e.
+– The development of critical habits,
+– The continuous search for truth, and
+– The questioning of the apparent
+•  Therefore, philosophy is a rational and critical
 enterprise that tries to formulate and answer fundamental
 questions through:-
-â€“ an intensive application of reason
-â€“ an application that draws on analysis, comparison, and
+– an intensive application of reason
+– an application that draws on analysis, comparison, and
 evaluation.
 
 ïƒ˜ Philosophy has a constructive and critical side,
@@ -209,7 +209,7 @@ analysis, clarification, and evaluation of answers given to
 | basic  | metaphysical,  |     |     | epistemological,  |     |     | and  |     | axiological  |     |
 | ------ | -------------- | --- | --- | ----------------- | --- | --- | ---- | --- | ------------ | --- |
 questions.
-â€¢ Philosophy is an activity. It is not something
+•  Philosophy is an activity. It is not something
 | that  | can  | be  | easily  |     | mastered  |     | or  | learned  |     | in  |
 | ----- | ---- | --- | ------- | --- | --------- | --- | --- | -------- | --- | --- |
 schools
@@ -221,7 +221,7 @@ and the universe, (informal sense of philosophy or
 | 2) Philosophy  |     | is   | a  process  |         | of    | reflecting  |              | on  | and  |
 | -------------- | --- | ---- | ----------- | ------- | ----- | ----------- | ------------ | --- | ---- |
 | criticizing    |     | our  | most        | deeply  | held  |             | conceptions  |     | and  |
-belief(the formal sense of â€“ doing  philosophy)
+belief(the formal sense of – doing  philosophy)
 | ï¶ These  | two  | senses   | of  | philosophy-having  |              |     |     | and  | doing  |
 | -------- | ---- | -------- | --- | ------------------ | ------------ | --- | --- | ---- | ------ |
 | cannot   | be   | treated  |     | entirely           | independent  |     |     | of   | each   |
@@ -242,38 +242,38 @@ problems of human existence.
 e.g. -What is life and why am I here?
 -Where does knowledge come from, and can we have
 any assurances that anything is true?
-â€¢ Philosophy is better seen as asking the right questions
+•  Philosophy is better seen as asking the right questions
 rather than providing the correct answers.
 ï¶ Generally, Philosophy is the various theories or
 systems of thought developed by the great philosophers,
 such as Socrates, Plato and Aristotle,
 
 Core Fields of Philosophy
-â€¢ Philosophy has different primary and
+•  Philosophy has different primary and
 secondary branches.
-â€¢ This course deals only with the primary ones,
+•  This course deals only with the primary ones,
 namely
-â€“ Metaphysics,
-â€“ Epistemology,
-â€“ Axiology, and
-â€“ Logic.
+– Metaphysics,
+– Epistemology,
+– Axiology, and
+– Logic.
 
 Metaphysics
-â€¢ Metaphysics is derived from the Greek words â€œmetaâ€ means
+•  Metaphysics is derived from the Greek words "meta" means
 beyond, upon or after and physika, means physics.
-â€¢ Metaphysics studies the ultimate nature of reality or existence.
-â€¢ It deal with issues of reality, cause and effect relationship, and
+•  Metaphysics studies the ultimate nature of reality or existence.
+•  It deal with issues of reality, cause and effect relationship, and
 other related issues.
-â€¢ Some of the questions that Metaphysics primarily deals with
+•  Some of the questions that Metaphysics primarily deals with
 includes:
-â€“ What is reality? life? Time?
-â€“ What is mind, and what is its relation to the body?
-â€“ Is there a cause and effect relationship between
+– What is reality? life? Time?
+– What is mind, and what is its relation to the body?
+– Is there a cause and effect relationship between
 reality and appearance?
-â€“ Are human actions free, or predetermined by a
+– Are human actions free, or predetermined by a
 supernatural force?
 
-| â€¢ Metaphysical  |     |     |     | questions  |     |     | may  | be  | divided  |     |     | into  |
+| •  Metaphysical  |     |     |     | questions  |     |     | may  | be  | divided  |     |     | into  |
 | --------------- | --- | --- | --- | ---------- | --- | --- | ---- | --- | -------- | --- | --- | ----- |
 four subsets or aspects.
 i) Cosmological Aspect:
@@ -288,124 +288,124 @@ ii) Theological Aspect:
 | ïƒ˜Theology  |     |     | is  | that  | part  | of  | religious  |     |     | theory  |     | that  |
 | ---------- | --- | --- | --- | ----- | ----- | --- | ---------- | --- | --- | ------- | --- | ----- |
 deals with conceptions of and about God.
-ïƒ˜what is Godâ€™s relationship to human?â€–
+ïƒ˜what is God's relationship to human?â€–
 
 iii) Anthropological Aspect:
-â€¢ Anthropology deals with the study of human
+•  Anthropology deals with the study of human
 beings and asks questions like:-
-â€“ What is the relation between mind and body?
-â€“ Is mind more fundamental than body, with body
+– What is the relation between mind and body?
+– Is mind more fundamental than body, with body
 depending on mind, or vice versa?
-â€“ Are people born good, evil, or morally neutral?
-â€“ Do they have free will, or are their thoughts and
+– Are people born good, evil, or morally neutral?
+– Do they have free will, or are their thoughts and
 actions determined by their environment,
 inheritance, or a divine being?
 
 iv) Ontological Aspect:
-| â€¢ Ontology  | is  | the   | study      | of  | the  | nature    | of  |
+| •  Ontology  | is  | the   | study      | of  | the  | nature    | of  |
 | ----------- | --- | ----- | ---------- | --- | ---- | --------- | --- |
 | existence,  | or  | what  | it  means  |     | for  | anything  | to  |
 exist.
-â€“ Is reality orderly and lawful in itself, or is it
+– Is reality orderly and lawful in itself, or is it
 merely orderable by the human mind?
-â€“ Is it fixed and stable, or is change its central
+– Is it fixed and stable, or is change its central
 feature?
-â€“ Is this reality friendly, unfriendly, or neutral
+– Is this reality friendly, unfriendly, or neutral
 toward humanity?â€–
 
 Epistemology
-â€¢ Etymologically, epistemology â€• Greek words episteme,
+•  Etymologically, epistemology â€• Greek words episteme,
 meaning â€•knowledge, understanding, and logos, meaning
 â€•study of.
-â€¢ Epistemology is referred to as â€•theory of knowledge
-â€¢ Epistemology studies about the nature, scope, meaning, source,
+•  Epistemology is referred to as â€•theory of knowledge
+•  Epistemology studies about the nature, scope, meaning, source,
 and validity and possibility of knowledge. It deals with issues
 of knowledge, opinion, truth, falsity, reason, experience, and
 faith.
-â€¢ Thus, epistemology covers two areas: the content of thought
+•  Thus, epistemology covers two areas: the content of thought
 and thought itself.
-â€“ What is knowledge? What does it mean to know?
-â€“ What is the source of knowledge? Experience? Reason? Or both?
-â€“ How can we be sure that what we perceive through our senses is
+– What is knowledge? What does it mean to know?
+– What is the source of knowledge? Experience? Reason? Or both?
+– How can we be sure that what we perceive through our senses is
 correct?
-â€“ What makes knowledge different from belief or opinion?
-â€“ What is truth, and how can we know a statement is true?
+– What makes knowledge different from belief or opinion?
+– What is truth, and how can we know a statement is true?
 
-â€¢ The first issue in epistemology is asking whether
+•  The first issue in epistemology is asking whether
 reality can even be known.
-â€¢ In this regard, Skepticism(agnosticism) claiming
+•  In this regard, Skepticism(agnosticism) claiming
 that people cannot acquire reliable knowledge
 and that any search for truth is in vain.
-â€¢ A second issue foundational to epistemology is
+•  A second issue foundational to epistemology is
 whether all truth is relative, or whether some truths
 are absolute.
-â€“ Is all truth subject to change?
-â€“ Is it possible that what is true today may be false
+– Is all truth subject to change?
+– Is it possible that what is true today may be false
 tomorrow?
-â€¢ If the answer is â€œYesâ€ to the above questions, such
+•  If the answer is "Yes" to the above questions, such
 truths are relative
 
-â€¢ A major aspect of epistemology relates to the sources of
+•  A major aspect of epistemology relates to the sources of
 human knowledge.
-â€¢ Central to most peopleâ€˜s answer to that question is
+•  Central to most people's answer to that question is
 empiricism (Empirical knowledge i.e. knowledge
 obtained through the senses).
-â€¢ However, data obtained from the human senses could be
+•  However, data obtained from the human senses could be
 both incomplete and undependable.
-â€¢ Fatigue, frustration, and illness could distort and limit
+•  Fatigue, frustration, and illness could distort and limit
 sensory perception. In addition, there are sound and light
 waves that are inaudible and invisible to unaided human
 perception.
-â€¢ In general, sensory knowledge is built upon
+•  In general, sensory knowledge is built upon
 assumptions that must be accepted by faith in the
 dependability of human sensory mechanisms.
-â€¢ The advantage of empirical knowledge is that many
+•  The advantage of empirical knowledge is that many
 sensory experiences and experiments are open to
 both replication and public examination.
 
-â€¢ A second important source of human knowledge is
+•  A second important source of human knowledge is
 Reason(rationalism).it claim that the senses alone
 | cannot  |     | provide  |     | universal,  |     |     |     | valid  |     | judgments  |     |     | that  |
 | ------- | --- | -------- | --- | ----------- | --- | --- | --- | ------ | --- | ---------- | --- | --- | ----- |
 are consistent with one another
-â€¢ Also rationalism claims that humans are capable of
+•  Also rationalism claims that humans are capable of
 | arriving  |     | at  | certain  |     | knowledge  |     |     |     | independently  |     |     |     | of  |
 | --------- | --- | --- | -------- | --- | ---------- | --- | --- | --- | -------------- | --- | --- | --- | --- |
 sensory experience
-â€¢
+• 
 | A  third  |          | source  |     | of  human     |     |            | knowledge  |     |            |            | is  Intuition-  |       |     |
 | --------- | -------- | ------- | --- | ------------- | --- | ---------- | ---------- | --- | ---------- | ---------- | --------------- | ----- | --- |
 | i.e.      |   the    | direct  |     | apprehension  |     |            |            | of  | knowledge  |            |                 | that  | is  |
 | not       | derived  |         |     | from          |     | conscious  |            |     |            | reasoning  |                 |       | or  |
 immediate sense perception
-â€¢ The  weakness  of  intuition  is  that  it  is  not  a  safe
-| method     |     | when  |            | used  |     | alone.  |     |     |   But  |              | itâ€™s  | distinct  |     |
+•  The  weakness  of  intuition  is  that  it  is  not  a  safe
+| method     |     | when  |            | used  |     | alone.  |     |     |   But  |              | it's  | distinct  |     |
 | ---------- | --- | ----- | ---------- | ----- | --- | ------- | --- | --- | ------ | ------------ | ----- | --------- | --- |
 | advantage  |     |       | is  helps  |       | to  | bypass  |     |     | the    | limitations  |       |           | of  |
 human experience.
 
-â€¢ A fourth influential source of knowledge is Revelation.
+•  A fourth influential source of knowledge is Revelation.
 It is the prime importance in the field of religion.
-â€¢ It differs from all other sources of knowledge because it
+•  It differs from all other sources of knowledge because it
 presupposes a transcendent supernatural reality that
 breaks into the natural order.
-â€¢ Some people assert that a major disadvantage of
+•  Some people assert that a major disadvantage of
 revealed knowledge is that it must be accepted by faith
 and cannot be proved or disproved empirically.
-â€¢ A fifth source of human knowledge, though not a
+•  A fifth source of human knowledge, though not a
 philosophical position, is Authority. It comes from
 experts or has been sanctified over time as tradition.
 E.g. textbook, teacher, or reference work.
-â€¢ If authoritative knowledge is built upon a foundation of
+•  If authoritative knowledge is built upon a foundation of
 incorrect assumptions, then such knowledge will surely
 be distorted(one sided).
 
 Axiology
-â€¢ The term Axiology stems from two Greek words-
+•  The term Axiology stems from two Greek words-
 ïƒ˜Axios, meaning â€•value, worth,
 ïƒ˜Logos, meaning â€•reason/ theory/ symbol / science
 /study of.
-â€¢ Axiology is the philosophical study of value(the
+•  Axiology is the philosophical study of value(the
 worth of something).
 ïƒ˜ What is a value?
 ïƒ˜ Where do values come from?
@@ -416,13 +416,13 @@ knowledge?
 Aesthetics, and Social/Political Philosophy.
 
 1.Ethics
-â€¢ It is also known as Moral Philosophy, and it deals with
+•  It is also known as Moral Philosophy, and it deals with
 the philosophical study of moral principles, values, codes,
 and rules,
-â€¢ It used as standards for determining what kind of human
+•  It used as standards for determining what kind of human
 conduct/action is said to be good or bad, right or
 wrong.
-â€¢ Ethics raises various questions including:
+•  Ethics raises various questions including:
 ïƒ˜ What is good/bad? right/wrong?
 ïƒ˜ Is an action right because of its good end, or its right
 principle?
@@ -434,27 +434,27 @@ contract?
 ïƒ˜ Why we honor and obey moral rules? For the sake of our
 own individual benefits?, or for the sake of others?
 
-â€¢ Ethics can be grouped into three broad categories:
+•  Ethics can be grouped into three broad categories:
 Normative ethics, Meta-ethics, and Applied Ethics.
 Normative Ethics
-â€¢ It deals with moral rules, principles, standards and
+•  It deals with moral rules, principles, standards and
 goals to evaluate conducts, actions and decisions.
-| â€¢ Consequentialism  |     |          | or  |      | Teleological  |         |     | Ethics,  |      |
+| •  Consequentialism  |     |          | or  |      | Teleological  |         |     | Ethics,  |      |
 | ------------------- | --- | -------- | --- | ---- | ------------- | ------- | --- | -------- | ---- |
 | Deontological       |     | Ethics,  |     | and  | Virtue        | Ethics  |     | are      | the  |
 major examples of normative ethical studies.
 Meta-ethics
-â€¢ It deals with investigation of the meaning of ethical
+•  It deals with investigation of the meaning of ethical
 terms,  as  good  or  bad  and  right  or  wrong  than  with
 what we think is good or bad and right or wrong.
-â€¢ Moral Intuitionism/awareness, Moral Emotive, Moral
+•  Moral Intuitionism/awareness, Moral Emotive, Moral
 | Prescriptivism,  |      | Moral  |       | Nihilism,  |     | and  |               | Ethical  |     |
 | ---------------- | ---- | ------ | ----- | ---------- | --- | ---- | ------------- | -------- | --- |
 | Relativism       | are  | the    | main  | examples   |     | of   | meta-ethical  |          |     |
 studies
 
 Applied Ethics
-| â€¢ It         | attempts  |              | to     | explain,     |             | justify,   |       | apply      | moral      |     |
+| •  It         | attempts  |              | to     | explain,     |             | justify,   |       | apply      | moral      |     |
 | ------------ | --------- | ------------ | ------ | ------------ | ----------- | ---------- | ----- | ---------- | ---------- | --- |
 | rules,       |           | principles,  |        |              | standards,  |            | and   | positions  |            | to  |
 | specific     |           |              | moral  |              | problems,   |            | such  | as         | capital    |     |
@@ -462,38 +462,38 @@ Applied Ethics
 animal right, and so on.
 
 Aesthetics
-| â€¢ Aesthetics  |               | is  the     | theory             |        | of     | beauty.  | It        | studies  |       |
+| •  Aesthetics  |               | is  the     | theory             |        | of     | beauty.  | It        | studies  |       |
 | ------------- | ------------- | ----------- | ------------------ | ------ | ------ | -------- | --------- | -------- | ----- |
 | about         | the           | particular  |                    | value  |        | of  our  | artistic  |          | and   |
 | aesthetic     | experiences.  |             |                    | It     | deals  | with     | beauty,   |          | art,  |
 | enjoyment,    |               |             | sensory/emotional  |        |        |          |           | values,  |       |
 perception, and matters of taste and sentiment.
-â€¢ The following are typical Aesthetic questions:
-â€“ What is art? beauty? the relation between art and
+•  The following are typical Aesthetic questions:
+– What is art? beauty? the relation between art and
 beauty and truth?
-â€“ What is artistic creativity and how does it differ from
+– What is artistic creativity and how does it differ from
 scientific creativity?
-â€“
+–
 Does art have any moral value, and obligations or
 constraints?
 
 Social/Political Philosophy
-â€¢ It studies about the value judgments operating
+•  It studies about the value judgments operating
 in a civil society, be it social or political.
-â€¢ It primarily deal with:
-â€“ What form of government is best?
-â€“ What economic system is best?
-â€“ What makes an action/judgment just/unjust?
-â€“ Does society exist? If it does, how does it come to
+•  It primarily deal with:
+– What form of government is best?
+– What economic system is best?
+– What makes an action/judgment just/unjust?
+– Does society exist? If it does, how does it come to
 existence?
-â€“ How are civil society and government come to exist?
-â€“ Are we obligated to obey all laws of the State?
-â€“ What is the purpose of government?
+– How are civil society and government come to exist?
+– Are we obligated to obey all laws of the State?
+– What is the purpose of government?
 
 Logic
-â€¢ Logic is the study or theory of principles of right
+•  Logic is the study or theory of principles of right
 reasoning.
-â€¢ It deals with formulating the right principles of
+•  It deals with formulating the right principles of
 reasoning; and developing scientific methods of
 evaluating the validity and soundness of arguments.
 The following are among the various questions
@@ -507,7 +507,7 @@ argument?
 ï¶What is a fallacy?; What makes an argument fallacious?
 
 Importance of Learning Philosophy
-ï¶â€œThe unexamined life is not worth livingâ€.
+ï¶"The unexamined life is not worth living".
 ïƒ˜philosophy provides us with the tools we need
 | to  | critically  | examine  | our  |     | own  | lives  | as  | well  | as  |
 | --- | ----------- | -------- | ---- | --- | ---- | ------ | --- | ----- | --- |
@@ -518,67 +518,67 @@ by promoting the ideal of self-actualization.
 |     |               |              | is  | associated        |     |     | with         |     | self- |
 | --- | ------------- | ------------ | --- | ----------------- | --- | --- | ------------ | --- | ----- |
 |     | fulfillment,  | creativity,  |     | self-expression,  |     |     | realization  |     |       |
-of oneâ€˜s potential, and being everything one can be.
+of one's potential, and being everything one can be.
 |     | Although  | philosophy  |     | may  | not  | necessarily  |     | lead  | to  |
 | --- | --------- | ----------- | --- | ---- | ---- | ------------ | --- | ----- | --- |
 this
 
-| â€¢   | There          |     |     | are  |     |     | many  |        |     | characteristics  |     |              |     |     |     | of        | self- |     |
+| •    | There          |     |     | are  |     |     | many  |        |     | characteristics  |     |              |     |     |     | of        | self- |     |
 | --- | -------------- | --- | --- | ---- | --- | --- | ----- | ------ | --- | ---------------- | --- | ------------ | --- | --- | --- | --------- | ----- | --- |
 |     | actualization  |     |     |      |     |     | to    | whose  |     |                  |     | achievement  |     |     |     | studying  |       |     |
 philosophy has a primordial contribution.
 1) Intellectual and Behavioral Independence
-|     | â€“   | we            | can  |     | learn  |      |            | how   |     | to   | develop    |     |     | and             | integrate  |          |     | our  |
+|     | –   | we            | can  |     | learn  |      |            | how   |     | to   | develop    |     |     | and             | integrate  |          |     | our  |
 | --- | --- | ------------- | ---- | --- | ------ | ---- | ---------- | ----- | --- | ---- | ---------- | --- | --- | --------------- | ---------- | -------- | --- | ---- |
 |     |     | experiences,  |      |     |        |      | thoughts,  |       |     |      | feelings,  |     |     | and             |            | actions  |     | for  |
 |     |     | ourselves,    |      |     |        | and  |            | thus  |     | how  |            | to  | be  | intellectually  |            |          |     | and  |
 behaviorally independent.
 2) Reflective Self-Awareness
-|     | â€“   | Philosophy  |     |     |     | helps  |     |     | critically  |     |     |     | examine  |     | the  | essential  |     |     |
+|     | –   | Philosophy  |     |     |     | helps  |     |     | critically  |     |     |     | examine  |     | the  | essential  |     |     |
 | --- | --- | ----------- | --- | --- | --- | ------ | --- | --- | ----------- | --- | --- | --- | -------- | --- | ---- | ---------- | --- | --- |
 intellectual grounds of our lives
 
 3) Flexibility, Tolerance, and Open-Mindedness:
-â€“ we become more tolerant, open-minded, more
+– we become more tolerant, open-minded, more
 receptive, and more sympathetic to views that
 contend or clash with ours.
 4) Creative and Critical Thinking
-â€“ we can learn how to refine our powers of analysis,
+– we can learn how to refine our powers of analysis,
 our abilities to think critically, to reason, to evaluate,
 to theorize, and to justify.
 5) Conceptualized and well-thought-out value
 systems in morality, art, politics, and the like:
-â€“ studying philosophy provides us with an opportunity
+– studying philosophy provides us with an opportunity
 to formulate feasible evaluations of value; and
 thereby to find meaning in our lives.
 
 CHAPTER TWO
 BASIC CONCEPTS OF LOGIC
-â€¢ The word logic comes from Greek word logos, which means
+•  The word logic comes from Greek word logos, which means
 sentence, discourse, reason, truth and rule.
-â€¢ Logic in its broader meaning is the science, which evaluates
+•  Logic in its broader meaning is the science, which evaluates
 arguments and the study of correct reasoning.
-â€¢ It could be also defined as the study of methods and principles
+•  It could be also defined as the study of methods and principles
 of correct reasoning or the art of correct reasoning.
-â€¢ Logic can be defined in different ways.
-â€“ It is a science that evaluates arguments.
-â€“ It is the study of methods for evaluating whether the premises
+•  Logic can be defined in different ways.
+– It is a science that evaluates arguments.
+– It is the study of methods for evaluating whether the premises
 adequately support or provide a good evidence for the conclusions.
-â€“ It is a science that helps to develop the method and principles to
+– It is a science that helps to develop the method and principles to
 evaluate the arguments of others and construct arguments of own.
 ïƒ¼ Logic is the attempt to codify/organize the rules of
 rational thought.
 
-â€¢ Logicians explore the structure of arguments that preserve
+•  Logicians explore the structure of arguments that preserve
 truth or allow the optimal extraction of knowledge from
 evidence.
-â€¢ In logic, as an academic discipline, we study
-â€“ Reasoning itself:
-â€“ Forms of argument,
-â€“ General principles and
-â€“ Particular errors,
-â€“ Methods of arguing.
-â€¢ Logic can help us understand what is wrong or why
+•  In logic, as an academic discipline, we study
+– Reasoning itself:
+– Forms of argument,
+– General principles and
+– Particular errors,
+– Methods of arguing.
+•  Logic can help us understand what is wrong or why
 someone is arguing in a particular way. Logic is the organized
 body of knowledge, or science that evaluates arguments.
 ï¶ The aim of logic is to develop a system of methods and
@@ -588,16 +588,16 @@ principles that we may use as
 
 Benefit of Studying Logic
 Logic sharpens and refines our natural gifts to think,
-â€œ
+"
 reason and argue
 C. S. Layman
-â€ ( )
-â€¢ The study of logic is one of the best ways to refine oneâ€˜s
+" ( )
+•  The study of logic is one of the best ways to refine one's
 natural ability to think, reason and argue.
-â€¢ The following are some of the major benefits that we can
+•  The following are some of the major benefits that we can
 gain from the study of logic:
 ïƒ˜It helps us to develop the skill needed to construct
-sound (good) and fallacy-free arguments of oneâ€˜s
+sound (good) and fallacy-free arguments of one's
 own and to evaluate the arguments of others
 ïƒ˜It provides a fundamental defense against the
 prejudiced and uncivilized attitudes
@@ -615,37 +615,37 @@ language
 ïƒ˜It  enables  us  to  disclose  ill-conceived  policies  in  the
 political  sphere,  to  be  careful  of  disguises,  and  to
 distinguish the rational from irrational
-â€¢ Thus,  by  studying  logic,  we    able  to  increase  our
+•  Thus,  by  studying  logic,  we    able  to  increase  our
 confidence when we criticize the arguments of others and
 when we advance arguments of our own.
-â€¢ Generally,    the  goal  of  logic  is  to  produce  individuals
+•  Generally,    the  goal  of  logic  is  to  produce  individuals
 who  are  critical,  rational  and  reasonable  both  in  the
 sphere of public and private life.
 
 What is an Argument?
-â€¢ Argument is a systematic combination of two or more
+•  Argument is a systematic combination of two or more
 statements, which are classified as a premise/premises
 and conclusion.
-â€¢ From logical point of view, arguments is a group of
+•  From logical point of view, arguments is a group of
 statements(premise), which are claimed to provide
 support for, one of the other, the (conclusion).
-â€¢ But an argument has a very specific meaning in logic. It
+•  But an argument has a very specific meaning in logic. It
 does not mean, a mere verbal fight, as one might have with
-oneâ€˜s parent. Because :-
-â€¢ First, an argument is a group of statements. That is, the first
+one's parent. Because :-
+•  First, an argument is a group of statements. That is, the first
 requirement for a passage to be qualified as an argument is to
 combine two or more statements.
-â€¢ A statement is a declarative sentence that has a truth-value of either
+•  A statement is a declarative sentence that has a truth-value of either
 true or false
 
 Example:-
 a. Haile G/Selase is an Ethiopian athlete.
 b. Ethiopia was colonized by Germany.
 c. Ethiopia is a landlocked country
-â€¢ Statement (a) and (c) are true, because they describe things as they
-are and â€œTruthâ€ is their truth-value. Whereas statement (b) is false
-because it asserts what is not, and â€œFalsityâ€ its truth-value.
-â€¢ However, there are sentences that are not statements, and hence
+•  Statement (a) and (c) are true, because they describe things as they
+are and "Truth" is their truth-value. Whereas statement (b) is false
+because it asserts what is not, and "Falsity" its truth-value.
+•  However, there are sentences that are not statements, and hence
 should be used to construct an argument. E.g.
 A. Would you close the window? (Question)
 B. Right on! (Exclamation)
@@ -653,115 +653,115 @@ C. Give me your ID Card, Now! (Command)
 D. I suggest that you read philosophy texts. (Suggestion)
 E. Let us study together. (Proposal)
 
-â€¢ Unlike statements, none of the above sentences can be
+•  Unlike statements, none of the above sentences can be
 either true or false. Hence, none of them can be classified
 as statement. As a result, none of them can make up an
 argument.
-â€¢ Second, the statements that make up an argument are
+•  Second, the statements that make up an argument are
 divided into premise(s) and conclusion. That means, the
 mere fact that a passage contains two or more
 statements cannot guarantee the existence of an
 argument.
-â€¢ Hence, an argument is a group statement, which contains
+•  Hence, an argument is a group statement, which contains
 at least one premise and one and only one conclusion.
-â€¢ In other word an argument may contain more than one
+•  In other word an argument may contain more than one
 premise but only one conclusion.
 
-â€¢ Argument always attempts to justify a claim. Therefore:-
+•  Argument always attempts to justify a claim. Therefore:-
 ïƒ˜The  claim  that  the  statement  attempts  to  justify  is
 known as a conclusion of an argument; and
 | ïƒ˜ the statement or  |      |        |         | statements that supposedly justify  |     |     |      |           |     |     |      |
 | ------------------- | ---- | ------ | ------- | ----------------------------------- | --- | --- | ---- | --------- | --- | --- | ---- |
 |                     | the  | claim  | is/are  | known                               |     | as  | the  | premises  |     | of  | the  |
 argument.
-â€¢ An  argument  can  be    good  or  bad  depending  on  the
+•  An  argument  can  be    good  or  bad  depending  on  the
 logical and real ability of the premise(s) to support the
 conclusion.
-â€¢ Arguments  can  be  divided  into  deductive  and  inductive
+•  Arguments  can  be  divided  into  deductive  and  inductive
 arguments.
-| â€¢ A  | deductive  |     | argument  |     | is  | thought  |     | that  | the  | premises  |     |
+| •  A  | deductive  |     | argument  |     | is  | thought  |     | that  | the  | premises  |     |
 | ---- | ---------- | --- | --------- | --- | --- | -------- | --- | ----- | ---- | --------- | --- |
 provide a guarantee of the truth of the conclusion.
 
-â€¢ In a deductive argument, the premises are intended to
+•  In a deductive argument, the premises are intended to
 provide support for the conclusion that is so strong that, if
 the premises are true, it would be impossible for the
 conclusion to be false.
-â€¢ A deductive argument is an argument in which the
+•  A deductive argument is an argument in which the
 premises are claimed to support the conclusion in such a
 way that it is impossible for the premises to be true and
 the conclusion false.
-â€¢ An inductive argument is a thought that the premises
+•  An inductive argument is a thought that the premises
 provide reasons supporting the probable truth of the
 conclusion.
-â€¢ In an inductive argument, the premises are intended only
+•  In an inductive argument, the premises are intended only
 to be so strong that, if they are true, then it is unlikely that
 the conclusion is false.
 
-â€¢ An inductive argument is an argument in which the
+•  An inductive argument is an argument in which the
 premises are claimed to support the conclusion in such a way
 that it is improbable that the premises be true and the
 conclusion false.
-â€¢
+• 
 |      |             |          |     |      |      |        |       | sort  |     | of  |
 | ---- | ----------- | -------- | --- | ---- | ---- | ------ | ----- | ----- | --- | --- |
 | The  | difference  | between  |     | the  | two  | comes  | from  | the   |     |     |
 relation
 the author or expositor of the argument takes there
 to be between the premises and the conclusion.
-â€¢  If  the  author  of  the  argument  believes  that  the  truth  of  the
+•   If  the  author  of  the  argument  believes  that  the  truth  of  the
 |             | definitely  |      |     | establishes  |     |          |      |             |     |      |
 | ----------- | ----------- | ---- | --- | ------------ | --- | -------- | ---- | ----------- | --- | ---- |
 | premises    |             |      |     |              |     |          | the  | truth       | of  | the  |
 | conclusion  |             | due  | to  | definition,  |     | logical  |      | entailment  |     | or   |
 deductive.
 mathematical necessity, then the argument is
-â€¢ If the author of the argument does not think that the truth of
+•  If the author of the argument does not think that the truth of
 the premises definitely establishes the truth of the conclusion,
 but nonetheless believes that their truth provides good reason
 to  believe  the  conclusion  true,  then  the  argument  is
 inductive.
 
-â€¢ The deductiveness or inductiveness of an argument can
+•  The deductiveness or inductiveness of an argument can
 be determined by
-â€“ The particular indicator word it might use,
-â€“ The actual strength of the inferential relationship
+– The particular indicator word it might use,
+– The actual strength of the inferential relationship
 between its component statements
-â€“ Its argumentative form or structure.
-â€¢ A deductive argument can be evaluated by its validity
+– Its argumentative form or structure.
+•  A deductive argument can be evaluated by its validity
 and soundness.
-â€¢ An inductive argument can be evaluated by its strength
+•  An inductive argument can be evaluated by its strength
 and cogency
-â€¢ Deductive argument can be valid if it is impossible for
+•  Deductive argument can be valid if it is impossible for
 the premises to be true and the conclusion false.
-â€¢ Deductive argument can be invalid if it is possible for
+•  Deductive argument can be invalid if it is possible for
 the premises to be true and the conclusion false
 
-â€¢ Inductive argument can be strong , if it is improbable for
+•  Inductive argument can be strong , if it is improbable for
 the premises to be true and the conclusion false.
-â€¢ Inductive argument can be weak, if it is probable for the
+•  Inductive argument can be weak, if it is probable for the
 premises to be true and the conclusion false.
-â€¢ A deductive argument can be sound if it is valid and
+•  A deductive argument can be sound if it is valid and
 true.
-â€¢ A deductive argument can be unsound if it fails to be
+•  A deductive argument can be unsound if it fails to be
 valid and true.
-â€¢ An inductive argument can be cogent/convincing if it is
+•  An inductive argument can be cogent/convincing if it is
 strong and probably true,
-â€¢ An inductive argument can be uncogent if it fails to be
+•  An inductive argument can be uncogent if it fails to be
 strong and probably true.
 
 What is premise
-â€¢ Premise refers to the statement, which is claimed to provide a
+•  Premise refers to the statement, which is claimed to provide a
 logical support or evidence to the main point of the
 argument, which is known as conclusion.
-â€¢ It is a statement that set forth the reason or evidence, which is
+•  It is a statement that set forth the reason or evidence, which is
 given for accepting the conclusion of an argument.
-â€¢ Generally premise is claimed evidence.
+•  Generally premise is claimed evidence.
 What is conclusion
-â€¢ It is a statement, which is claimed to follow from the given
+•  It is a statement, which is claimed to follow from the given
 evidence (premise). In other words, the conclusion is the
 claim that an argument is trying to establish.
-â€¢ Example-1:
+•  Example-1:
 ïƒ˜All Ethiopians are Africans. (Premise 1)
 ïƒ˜Tsionawit is Ethiopian. (Premise2)
 ïƒ˜Therefore, Tsionawit is African. (Conclusion)
@@ -770,25 +770,25 @@ Example-2:
 ïƒ˜Some Africans are black.(Premise1)
 ïƒ˜ Zelalem is an African. (Premise-2)
 ïƒ˜Therefore, Zelalem is black. (Conclusion)
-â€¢ In the above arguments, the first two statements are
+•  In the above arguments, the first two statements are
 premises, because they are claimed to provide evidence
 for the third statement, whereas the third statement is a
 conclusion because it is claimed to follow from the
 given evidences.
-â€¢ The claim that the premises support the conclusion,
+•  The claim that the premises support the conclusion,
 (and/or that the conclusion follow from the premises),
-is indicated by the word â€œthereforeâ€
+is indicated by the word "therefore"
 
-â€¢ All arguments may be placed in one of two basic groups:
-â€“ those in which the premises really do support the
+•  All arguments may be placed in one of two basic groups:
+– those in which the premises really do support the
 conclusion (good or well-supported arguments)
-â€“ those in which they do not, even though they are
+– those in which they do not, even though they are
 claimed to. (bad or poorly-supported arguments)
-â€¢ For example, in the above two examples in the first
+•  For example, in the above two examples in the first
 argument, the premises really do support the conclusion,
 they give good reason for believing that the conclusion is
 true, and therefore, the argument is a good one.
-â€¢ But the premises of the second argument fail to support
+•  But the premises of the second argument fail to support
 the conclusion adequately. Even if they may be true, they
 do not provide good reason to believe that the conclusion
 is true. Therefore, it is bad argument, but it is still an
@@ -796,105 +796,105 @@ argument.
 
 How Can We Distinguish Premises From
 Conclusion And Vice Versa?
-â€¢ Sometimes identifying a conclusion from premises is very
+•  Sometimes identifying a conclusion from premises is very
 difficult
-â€¢ The first technique that can be used to identify premises
+•  The first technique that can be used to identify premises
 from a conclusion and vice versa is looking at an
 indicator word.
-â€¢ Arguments contain certain indicator words that provide
+•  Arguments contain certain indicator words that provide
 clues in identifying premises and conclusion.
-â€¢ Some of conclusion indicators includes:
-â€“ Therefore ,Wherefore, Accordingly, Provided that, It must be
+•  Some of conclusion indicators includes:
+– Therefore ,Wherefore, Accordingly, Provided that, It must be
 that, We may conclude, Entails that, Hence, It shows that,
 Thus , Consequently ,We may infer ,It implies that ,As a result
 ,So ,It follows that
 
-â€¢ In an argument, the statement that follows the
+•  In an argument, the statement that follows the
 indicator word can usually be identified as the
 conclusion. Example:
-â€“ Women are mammals.
-â€“ Zenebech is a woman.
-â€“ Therefore, Zenebech is a mammal.
-| â€¢ Based  |           | on    |     | the          | above          | rule,  |             | the  | conclusion  |              |            | of   |
+– Women are mammals.
+– Zenebech is a woman.
+– Therefore, Zenebech is a mammal.
+| •  Based  |           | on    |     | the          | above          | rule,  |             | the  | conclusion  |              |            | of   |
 | -------- | --------- | ----- | --- | ------------ | -------------- | ------ | ----------- | ---- | ----------- | ------------ | ---------- | ---- |
-| this     | argument  |       |     |              | is  â€œZenebech  |        |             |      | is          | a  mammalâ€.  |            |      |
+| this     | argument  |       |     |              | is  "Zenebech  |        |             |      | is          | a  mammal".  |            |      |
 | Because  |           |       | it  | follows      |                | the    | conclusion  |      |             |              | indicator  |      |
-| word     |           | i.e.  |     | â€œthereforeâ€  |                |        | and         |      | the         | other        |            | two  |
+| word     |           | i.e.  |     | "therefore"  |                |        | and         |      | the         | other        |            | two  |
 statements are premises.
-| â€¢ If  | an  | argument  |     |     | does  | not  | contain  |     |     | a   | conclusion  |     |
+| •  If  | an  | argument  |     |     | does  | not  | contain  |     |     | a   | conclusion  |     |
 | ----- | --- | --------- | --- | --- | ----- | ---- | -------- | --- | --- | --- | ----------- | --- |
 indicator, it may contain a premise indicator.
 
-â€¢ Here are some typical Premise Indicators: Since ,As
+•  Here are some typical Premise Indicators: Since ,As
 indicated by, Because , wing to, Seeing that, Given
 that , As , For , In that ,May be inferred from , In,
 as much as , For the reason that
-â€¢ In argument that contains any of the premise indicator
+•  In argument that contains any of the premise indicator
 words, a statement that follows the indicator word can
 usually be identified as a premise. Example:
-â€“ You should avoid any form of cheating on exams
+– You should avoid any form of cheating on exams
 because cheating on exams is punishable by the
 Senate Legislation of the University.
-â€¢ Based on the above rule, the premise of this argument
-is â€œcheating on exams is punishable by the Senate
-Legislation of the Universityâ€ because it follows the
-premise indicator word â€œbecauseâ€,
+•  Based on the above rule, the premise of this argument
+is "cheating on exams is punishable by the Senate
+Legislation of the University" because it follows the
+premise indicator word "because",
 
-â€¢ One premise indicator not included in the above list is â€œfor
-this reasonâ€. This indicator is special in that it comes
+•  One premise indicator not included in the above list is "for
+this reason". This indicator is special in that it comes
 immediately after the premise it indicates and before the
 conclusion.
-â€¢ In the middle place between the premise and the conclusion,
-â€œfor this reasonâ€ can be both premise and conclusion
+•  In the middle place between the premise and the conclusion,
+"for this reason" can be both premise and conclusion
 indicator.
-â€¢ The statement that comes before â€œfor this reasonâ€ is the
+•  The statement that comes before "for this reason" is the
 premise of an argument and the statement that comes after
-â€œfor this reasonâ€ is the conclusion.
-â€¢ Sometimes a single indicator can be used to identify more
+"for this reason" is the conclusion.
+•  Sometimes a single indicator can be used to identify more
 than one premise. Consider the following argument:
-â€“ Tsionawit is a faithful wife, for Ethiopian women are
+– Tsionawit is a faithful wife, for Ethiopian women are
 faithful wives and Tsionawit an Ethiopian.
-â€¢ The premise indicator â€œforâ€ goes with both premises
-â€œEthiopian women are faithful wivesâ€˜â€˜ and â€œTsionawit is an
-Ethiopianâ€. By process of elimination, â€œTsionawit is a faithful
-wifeâ€ is the conclusion.
+•  The premise indicator "for" goes with both premises
+"Ethiopian women are faithful wives'' and "Tsionawit is an
+Ethiopian". By process of elimination, "Tsionawit is a faithful
+wife" is the conclusion.
 
-| â€¢ Sometimes  |     |     | you  | may      | have  |            | an  | argument  |       | without  |       |
+| •  Sometimes  |     |     | you  | may      | have  |            | an  | argument  |       | without  |       |
 | ------------ | --- | --- | ---- | -------- | ----- | ---------- | --- | --------- | ----- | -------- | ----- |
 | conclusion   |     |     | and  | premise  |       | indicator  |     | word.     | When  |          | this  |
 occurs,  the  reader/  listener  must  ask  himself  or  herself
 such questions as:
-â€“ What single statement is claimed (implicitly) to follow from the
+– What single statement is claimed (implicitly) to follow from the
 others?
-â€“ What is the arguer trying to prove?
-â€“ What is the main point in the passage?
-â€¢ The  answers  to  these  questions  should  point  to  the
+– What is the arguer trying to prove?
+– What is the main point in the passage?
+•  The  answers  to  these  questions  should  point  to  the
 conclusion.
-â€¢ Example:
-â€“ Our  country  should  increase  the  quality  and  quantity
+•  Example:
+– Our  country  should  increase  the  quality  and  quantity
 |     | of            | its  | military.  |          | Ethnic  |            | conflicts  |      | are          | recently  |     |
 | --- | ------------- | ---- | ---------- | -------- | ------- | ---------- | ---------- | ---- | ------------ | --------- | --- |
 |     | intensified;  |      |            | boarder  |         | conflicts  |            | are  | escalating;  |           |     |
 international terrorist activities are increasing.
 
-â€¢ The main point of this argument is to show that the
+•  The main point of this argument is to show that the
 country should increase the size and quality of its
 military. The following is the standard form of this
 argument:
-â€“ Ethnic conflicts are recently intensified. (P-1)
-â€“ Boarder conflicts are escalating. (P-2)
-â€“ International terrorist activities are increasing.
+– Ethnic conflicts are recently intensified. (P-1)
+– Boarder conflicts are escalating. (P-2)
+– International terrorist activities are increasing.
 (P-3)
-â€“ Thus, the country should increase the quality and
+– Thus, the country should increase the quality and
 quantity of its military. (C)
 
-â€¢
+• 
 If  a  statement  has  nothing  to  do with  the  conclusion
 | or,     | for  |     | example,  |     |     | simply    |     |     | makes  |         |     | a   | passing  |     |          | comment,  |     |     | it   |
 | ------- | ---- | --- | --------- | --- | --- | --------- | --- | --- | ------ | ------- | --- | --- | -------- | --- | -------- | --------- | --- | --- | ---- |
 | should  |      |     | not       |     | be  | included  |     |     |        | within  |     |     | the      |     | context  |           |     | of  | the  |
 argument. Example:
-| â€“   | Socialized  |     |     |     | medicine  |     |     | is  | not  |     | recommended  |     |     |     |     |     | because  |     | it  |
+| –   | Socialized  |     |     |     | medicine  |     |     | is  | not  |     | recommended  |     |     |     |     |     | because  |     | it  |
 | --- | ----------- | --- | --- | --- | --------- | --- | --- | --- | ---- | --- | ------------ | --- | --- | --- | --- | --- | -------- | --- | --- |
 would  result  in  a  reduction  in  the  overall  quality  of
 |     | medical    |     |     | care  |     | available  |       |        |     | to    |     | the   |           | average  |     |     | citizen.    |          | In  |
@@ -902,11 +902,11 @@ would  result  in  a  reduction  in  the  overall  quality  of
 |     | addition,  |     |     |       | it  | might      | very  |        |     | well  |     |       | bankrupt  |          |     |     | the         | federal  |     |
 |     | treasury.  |     |     | This  |     | is  the    |       | whole  |     |       |     | case  |           | against  |     |     | socialized  |          |     |
 medicine in a nutshell.
-â€¢ The conclusion of this argument is â€œSocialized medicine
-| is  | not  | recommendedâ€  |     |     |     |     | and  |     | the  |     | two  |     | statements  |     |     |     | following  |     |     |
+•  The conclusion of this argument is "Socialized medicine
+| is  | not  | recommended"  |     |     |     |     | and  |     | the  |     | two  |     | statements  |     |     |     | following  |     |     |
 | --- | ---- | ------------- | --- | --- | --- | --- | ---- | --- | ---- | --- | ---- | --- | ----------- | --- | --- | --- | ---------- | --- | --- |
-the word, â€œbecauseâ€˜â€ are the premises
-â€¢ The last statement makes only a passing comment about
+the word, "because'" are the premises
+•  The last statement makes only a passing comment about
 the argument itself and is therefore neither a premise nor
 a conclusion.
 
@@ -924,12 +924,12 @@ something.
 Recognizing Argumentative Passages
 
 ï¶ In order to evaluate arguments we need to
-|     | â€“ understand the nature of arguments   |     |     |       |           |     |     |     |     |       |          |     |     |      |
+|     | – understand the nature of arguments   |     |     |       |           |     |     |     |     |       |          |     |     |      |
 | --- | -------------------------------------- | --- | --- | ----- | --------- | --- | --- | --- | --- | ----- | -------- | --- | --- | ---- |
-|     | â€“ understand                           |     |     | what  | argument  |     |     |     | is  | not,  | because  |     |     | not  |
+|     | – understand                           |     |     | what  | argument  |     |     |     | is  | not,  | because  |     |     | not  |
 all passages contain argument.
 
-â€¢ Two conditions must be fulfilled for a passage to
+•  Two conditions must be fulfilled for a passage to
 purport to prove something:
 | 1.  | At  | least  | one  |     | of  |     | the  | statements  |     |     |     | must  |     |     | claim  | to  |
 | --- | --- | ------ | ---- | --- | --- | --- | ---- | ----------- | --- | --- | --- | ----- | --- | --- | ------ | --- |
@@ -966,12 +966,12 @@ grounded in its language or structure.
 ï¶An inferential claim can be either explicit or
 implicit.
 An explicit inferential claim
-â€“ It exists if there is an indicator word that
+– It exists if there is an indicator word that
 asserts an explicit relationship between the
 premises and the conclusions. e.g.
-â€¢ Gemechu is my biological father, because
+•  Gemechu is my biological father, because
 my mother told so.
-ï¶the word â€œbecauseâ€ expresses the claim that
+ï¶the word "because" expresses the claim that
 evidence supports something.
 
 An implicit inferential claim
@@ -991,132 +991,132 @@ word is used to indicate a premise or a conclusion
 
 ï¶ .
 Example:
-â€“ Since Edison invented the phonograph, there have been many
+– Since Edison invented the phonograph, there have been many
 technological developments.
-â€“ Since Edison invented the phonograph, he deserves credit for a
+– Since Edison invented the phonograph, he deserves credit for a
 .
 major technological development
-â€¢ In the first passage the word â€œsinceâ€ is used in a
-temporal sense. It means â€œfrom the time that.â€ Thus,
+•  In the first passage the word "since" is used in a
+temporal sense. It means "from the time that." Thus,
 the 1st passage is not an argument. In the second passage
-â€œsinceâ€ is used in a logical sense, and so the passage is an
+"since" is used in a logical sense, and so the passage is an
 argument.
-â€¢ Therefore, in deciding whether a passage contains an
+•  Therefore, in deciding whether a passage contains an
 mentally
 argument one should try to insert some
 indicators words among the statements to see whether
 there is a flow of ideas among the statements.
 
 Recognizing Non-argumentative Passages
-â€¢ Non-argumentative passages are passages, which lack
+•  Non-argumentative passages are passages, which lack
 an inferential claim.
-â€¢ for a passage to be an argument, it should contain not
+•  for a passage to be an argument, it should contain not
 only premises and a conclusion but also an inferential
 claim or a reasoning process.
-â€¢ Some of the most important forms of non-argumentative
+•  Some of the most important forms of non-argumentative
 passages includes the following.
 1. Simple Non-inferential Passages
-â€¢ It contain statements that could be premises or
+•  It contain statements that could be premises or
 conclusions (or both), but what is missing is a claim that
 any potential premise supports a conclusion or that any
 potential conclusion is supported by premises.
-â€¢ It include statements of warnings, advice, belief or
+•  It include statements of warnings, advice, belief or
 opinion, loosely associated statements, and reports.
 
 2. Expository Passages
-â€¢ It begins with a topic sentence followed by one or
+•  It begins with a topic sentence followed by one or
 more sentences that develop the topic sentence. If the
 objective is not to prove the topic sentence but only
 to expand it or elaborate it, then there is no argument.
-â€¢ Expository passages differ from simple non-inferential
+•  Expository passages differ from simple non-inferential
 passages (such as warnings and pieces of advice) in that
 many of them can also be taken as arguments.
-â€¢ If the purpose of the subsequent sentences in the passage is
+•  If the purpose of the subsequent sentences in the passage is
 not only to flesh out the topic sentence but also to prove it,
 then the passage is an argument.
-â€¢ If the topic sentence makes a claim that many people do not
+•  If the topic sentence makes a claim that many people do not
 accept or have never thought about, then the purpose of the
 remaining sentences may be both to prove the topic
 sentence is true as well as to develop it, then the passage is
 an argument.
 
 3. Illustrations
-â€¢ It  is  an  expression  involving  one  or  more  examples
+•  It  is  an  expression  involving  one  or  more  examples
 that is intended to show what something means or
 how it is done.
-â€¢
+• 
 | Illustrations  |     |     | are  |     | often  |     | confused  |     |     |     | with  | arguments  |     |     |     |
 | -------------- | --- | --- | ---- | --- | ------ | --- | --------- | --- | --- | --- | ----- | ---------- | --- | --- | --- |
 because many illustrations contain indicator words
-such as â€œthusâ€.   Example:
-| â€“   | Chemical          |     | elements,  |     |                | as  | well  |            | as                       | compounds,  |        |         | can  |     | be  |
+such as "thus".   Example:
+| –   | Chemical          |     | elements,  |     |                | as  | well  |            | as                       | compounds,  |        |         | can  |     | be  |
 | --- | ----------------- | --- | ---------- | --- | -------------- | --- | ----- | ---------- | ------------------------ | ----------- | ------ | ------- | ---- | --- | --- |
 |     | represented       |     | by         |     | molecular      |     |       | formulas.  |                          |             | Thus,  | oxygen  |      |     | is  |
-|     | represented by â€œO |     |            |     | â€, water by â€œH |     |       |            | Oâ€, and sodium chloride  |             |        |         |      |     |     |
+|     | represented by "O |     |            |     | ", water by "H |     |       |            | O", and sodium chloride  |             |        |         |      |     |     |
 |     |                   |     |            |     | 2              |     |       |            | 2                        |             |        |         |      |     |     |
-by â€œNaClâ€.
-â€¢ This passage is not an argument, because it makes no
-claim that anything is being proved. The word â€œthusâ€
+by "NaCl".
+•  This passage is not an argument, because it makes no
+claim that anything is being proved. The word "thus"
 | indicates  |     | how  |           | something  |     |      |     | is  | done       |     | -  namely,  |      |     | how  |     |
 | ---------- | --- | ---- | --------- | ---------- | --- | ---- | --- | --- | ---------- | --- | ----------- | ---- | --- | ---- | --- |
 | chemical   |     |      | elements  |            |     | and  |     |     | compounds  |     |             | can  |     |      | be  |
 represented by formulas.
 
-â€¢ Illustrations  can  be  taken  as  arguments.  Such  arguments  are
+•  Illustrations  can  be  taken  as  arguments.  Such  arguments  are
 often called arguments from example. Here is an instance of
 one:
-â€“ Although  most  forms  of  cancer,  if  untreated,  can  cause
+– Although  most  forms  of  cancer,  if  untreated,  can  cause
 death,  not  all  cancers  are  life-threatening.  For  example,
 |     | basal  |     | cell  | carcinoma,  |     | the  | most  | common  |     | of  all  | skin  |
 | --- | ------ | --- | ----- | ----------- | --- | ---- | ----- | ------- | --- | -------- | ----- |
 cancers,  can  produce  disfigurement,  but  it  almost  never
 results in death.
 4. Explanations
-| â€¢ It      | is  | an  | expression  |        |      | that       | attempts  |     | to          | clarify,  | or    |
+| •  It      | is  | an  | expression  |        |      | that       | attempts  |     | to          | clarify,  | or    |
 | --------- | --- | --- | ----------- | ------ | ---- | ---------- | --------- | --- | ----------- | --------- | ----- |
 | describe  |     |     | such        | alike  | why  | something  |           |     | is  happen  |           | that  |
 way or why something is what it is.
-â€¢ Example:
-â€“ Cows  digest  grass  while  humans  cannot,  because  their
+•  Example:
+– Cows  digest  grass  while  humans  cannot,  because  their
 digestive systems contain enzyme not found in humans.
 
-| â€¢ Every  | explanation  |     | is  | composed  |     | of  | two  | distinct  |     |
+| •  Every  | explanation  |     | is  | composed  |     | of  | two  | distinct  |     |
 | -------- | ------------ | --- | --- | --------- | --- | --- | ---- | --------- | --- |
 components:
-â€“ Explanandum:-  it  is  the  statement  that  describes  the
+– Explanandum:-  it  is  the  statement  that  describes  the
 event or phenomenon to be explained,
-â€“ Explanans:-  is  the  statement  or  group  of  statements
+– Explanans:-  is  the  statement  or  group  of  statements
 that purports to do the explaining.
-â€¢ In  the  above  example,  the  explanandum  is  the  statement
-| â€œCows      | digest      | grass  | while    |     | humans     | cannotâ€  |     | and      | the  |
+•  In  the  above  example,  the  explanandum  is  the  statement
+| "Cows      | digest      | grass  | while    |     | humans     | cannot"  |     | and      | the  |
 | ---------- | ----------- | ------ | -------- | --- | ---------- | -------- | --- | -------- | ---- |
-| explanans  | is  â€œtheir  |        | [cowsâ€Ÿ]  |     | digestive  | systems  |     | contain  |      |
-enzyme not found in humans.â€
-â€¢ The  purpose  of  explanans  is  to  show  why  something  is
+| explanans  | is  "their  |        | [cowsâ€Ÿ]  |     | digestive  | systems  |     | contain  |      |
+enzyme not found in humans."
+•  The  purpose  of  explanans  is  to  show  why  something  is
 the  case,  whereas  in  an  argument,  the  purpose  of  the
 premises is to prove that something is the case.
 
-â€¢ Moreover, in explanation, we precede backward from fact
+•  Moreover, in explanation, we precede backward from fact
 to the cause whereas in argument we move from premise
 to the conclusion.
-â€¢ Thus, to distinguish explanations from arguments, first
+•  Thus, to distinguish explanations from arguments, first
 identify the statement that is either the explanandum or the
 conclusion
-â€¢ However, some passages can be interpreted as both
+•  However, some passages can be interpreted as both
 explanations and arguments.
-â€¢ Example:
-â€“ Women become intoxicated by drinking a smaller
+•  Example:
+– Women become intoxicated by drinking a smaller
 amount of alcohol than men because men metabolize
 part of the alcohol before it reaches the bloodstream,
 whereas women do not.
 
 Conditional Statements
-ïƒ˜ They are an â€œif . . . then . . .â€ statements.
+ïƒ˜ They are an "if . . . then . . ." statements.
 ïƒ˜ Every conditional statement is made up of two component
 statements.
 ïƒ˜ antecedent (if-clause), The component statement immediately
-following the â€œifâ€
-ïƒ˜ consequent (then-clause) the one following the â€œthenâ€
+following the "if"
+ïƒ˜ consequent (then-clause) the one following the "then"
 ïƒ˜ However, there is an occasion that the order of antecedent
 and consequent is reversed.
 ïƒ˜ Conditional statements are not arguments, because in a
@@ -1128,10 +1128,10 @@ consequent.
 
 ïƒ˜ A  conditional  statement  may  serve  as  either  the  premise
 or the conclusion (or both) of an argument. examples:
-â€“ If he is selling our national secretes to enemies, then
+– If he is selling our national secretes to enemies, then
 he is a traitor.
-â€“ He is selling our national secretes to enemies.
-â€“ Therefore, he is a traitor.
+– He is selling our national secretes to enemies.
+– Therefore, he is a traitor.
 | ïƒ˜ The  | relation  | between  | conditional  | statements  | and  |
 | ------ | --------- | -------- | ------------ | ----------- | ---- |
 arguments may now be summarized as follows:
@@ -1147,8 +1147,8 @@ may be re-expressed to form an argument.
 (and many other fields) because they express the
 relationship between necessary and sufficient
 conditions. example
-â€“ If X is a dog, then X is an animal.
-â€“ If X is not an animal, then X is not a dog.
+– If X is a dog, then X is an animal.
+– If X is not an animal, then X is not a dog.
 ïƒ˜ The first statement says that being a dog is a sufficient
 condition for being an animal, and the second that being
 an animal is a necessary condition for being a dog.
@@ -1165,7 +1165,7 @@ arguments; and the inferential contents of conditional
 statements may be re-expressed to form arguments.
 ïƒ˜ Therefore, in deciding whether a passage contains an
 argument, you should look for three things:
-| a)  | Indicator words such as â€œtherefore,â€ â€œsince,â€ â€œbecause,â€  |     |     |     |     |     |     |     |     |     |     |     |
+| a)  | Indicator words such as "therefore," "since," "because,"  |     |     |     |     |     |     |     |     |     |     |     |
 | --- | --------------------------------------------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 and so on;
 | b)     | An inferential relationship between the statements; and   |       |     |             |     |         |            |     |     |       |       |     |
@@ -1180,20 +1180,20 @@ more of the premises.
 indicator words, the conclusion is the first statement.
 
 Differentiating Deductive and Inductive Arguments
-â€¢ There are three factors that influence the decision
+•  There are three factors that influence the decision
 about the deductiveness or inductiveness of an
-argumentâ€˜s inferential claim. These are:
+argument's inferential claim. These are:
 1) The occurrence of special indicator words,
 2) The actual strength of the inferential link between
 premises and conclusion, and
 3) The character or form of argumentation the arguers use.
-â€¢ Words like â€œcertainly", 'necessarilyâ€, â€œabsolutelyâ€,
-and â€œdefinitelyâ€ indicate that the argument should be
+•  Words like "certainly", 'necessarily", "absolutely",
+and "definitely" indicate that the argument should be
 taken as deductive.
-â€¢ words like, â€œprobableâ€, â€œimprobableâ€ â€œplausibleâ€
-â€œimplausibleâ€, â€˜â€˜likely", â€œunlikelyâ€ and â€œreasonable to
-concludeâ€ suggest that an argument is inductive.
-â€¢ The occurrence of an indicator word is not a certain
+•  words like, "probable", "improbable" "plausible"
+"implausible", ''likely", "unlikely" and "reasonable to
+conclude" suggest that an argument is inductive.
+•  The occurrence of an indicator word is not a certain
 guarantee for the deductiveness or inductiveness of an
 argument unless it is supported by the other features
 
@@ -1202,14 +1202,14 @@ from the premises, the argument is clearly deductive
 ïƒ˜ If the conclusion of an argument does not follow with strict
 necessity but does follow probably, it is usually best to
 interpret it as inductive argument.
-â€¢ Example-1:
-â€“ All Ethiopian people love their country.
-â€“ Debebe is an Ethiopian.
-â€“ Therefore, Debebe loves his country
-â€¢ Example-2:
-â€“ The majority of Ethiopian people are poor.
-â€“ Alamudin is an Ethiopian.
-â€“ Therefore, Alamudin is poor.
+•  Example-1:
+– All Ethiopian people love their country.
+– Debebe is an Ethiopian.
+– Therefore, Debebe loves his country
+•  Example-2:
+– The majority of Ethiopian people are poor.
+– Alamudin is an Ethiopian.
+– Therefore, Alamudin is poor.
 
 ïƒ˜
 The  character  or  form  of  argumentation  the  arguers  use
@@ -1249,19 +1249,19 @@ two premises and one conclusion.
 categorical, hypothetical, and disjunctive
 syllogism.
 
-â€¢ Categorical syllogism: It is consisting of exactly two
+•  Categorical syllogism: It is consisting of exactly two
 premises and one conclusion and the statement begins with
-words like â€œallâ€,â€ â€œnoâ€ and â€œsomeâ€. Example:
-â€¢ All Egyptians are Muslims.
-â€¢ No Muslim is a Christian.
-â€¢ Hence, no Egyptian is a Christian
-â€¢ Hypothetical syllogism: It has a conditional statement for
+words like "all"," "no" and "some". Example:
+•  All Egyptians are Muslims.
+•  No Muslim is a Christian.
+•  Hence, no Egyptian is a Christian
+•  Hypothetical syllogism: It has a conditional statement for
 one or both of its premises. Example:
 .
-â€“ If you study hard, then you will graduate with Distinction
-â€¢ Disjunctive syllogism: it is a syllogism having a
-disjunctive statement. (i.e. an â€œeither â€¦ orâ€ statement.)
-â€¢ e.g.
+– If you study hard, then you will graduate with Distinction
+•  Disjunctive syllogism: it is a syllogism having a
+disjunctive statement. (i.e. an "either ... or" statement.)
+•  e.g.
 Rewina is either Ethiopian or Eritrean.
 Rewina is not Eritrean.
 Therefore, Rewina is Ethiopian.
@@ -1310,8 +1310,8 @@ sign,  a  trademark,  a  cautionary  mark,  a  symbol,)  to  a
 knowledge  of  the  thing  or  situation  symbolized  by  the
 Example:
 sign.
-ïƒ˜The  package  material  says  that  â€œkeep  it  out  of  the
-|     | reach  | of  | children.â€  |     |     | Therefore,  |     |     | this  | package  |     | must  |     |
+ïƒ˜The  package  material  says  that  "keep  it  out  of  the
+|     | reach  | of  | children."  |     |     | Therefore,  |     |     | this  | package  |     | must  |     |
 | --- | ------ | --- | ----------- | --- | --- | ----------- | --- | --- | ----- | -------- | --- | ----- | --- |
 consist of some sort of medicine
 ïƒ˜An argument based on causation is an argument
@@ -1355,7 +1355,7 @@ from  the  particular  to  the  particular  or  even  from  the
 particular to the general.
 ïƒ˜ For example, here is a deductive argument that proceeds
 from the particular to the general:
-| â€“ Three  |     | is  a  | prime  | number.  |     | Five  | is  a  | prime  | number.  |     |
+| – Three  |     | is  a  | prime  | number.  |     | Five  | is  a  | prime  | number.  |     |
 | -------- | --- | ------ | ------ | -------- | --- | ----- | ------ | ------ | -------- | --- |
 Seven is a prime number. Therefore, all odd numbers
 between two and eight are prime numbers.
@@ -1367,29 +1367,29 @@ Therefore, the next emerald to be found will be
 green.
 ïƒ˜Here is an deductive argument that proceeds
 from particular to general
-ïƒ˜The members of Mohammedâ€™s family are
+ïƒ˜The members of Mohammed's family are
 Kedija, Kemal and Leyla. Kedija wears glasses.
 Kemal wears glasses. Leyla wears glasses.
-Therefore, all members of Mohammedâ€™s family
+Therefore, all members of Mohammed's family
 wear glasses.
 
 CHAPTER THREE
 LOGIC AND LANGUAGE
 Philosophy of Language
-â€¢ According to Semiotics(the study of sign processes in
+•  According to Semiotics(the study of sign processes in
 communication), language is the manipulation and use
 of symbols in order to draw attention to signified content.
-â€¢ Philosophy of language is the reasoned inquiry into the
+•  Philosophy of language is the reasoned inquiry into the
 nature, origins, and usage of language.
-â€¢ Philosophy of language has been concerned with four
+•  Philosophy of language has been concerned with four
 central problems: the nature of meaning, language use,
 language cognition, and the relationship between
 language, logic and reality.
-â€¢ It poses questions like
-â€“ What is meaning? How does language refer to the real
+•  It poses questions like
+– What is meaning? How does language refer to the real
 world?
-â€“ Is language learned or is it innate?
-â€“ How does the meaning of a sentence emerge out of its parts?
+– Is language learned or is it innate?
+– How does the meaning of a sentence emerge out of its parts?
 
 | ïƒ˜ Ordinary  |             | language  |        | serves  | various    | functions  |         | in  |
 | ----------- | ----------- | --------- | ------ | ------- | ---------- | ---------- | ------- | --- |
@@ -1422,7 +1422,7 @@ Expressive (Emotive) Function
 | individuals  |     | to  | express  | their  |     | feelings  | or  | emotions.  |     |
 | ------------ | --- | --- | -------- | ------ | --- | --------- | --- | ---------- | --- |
 Both positive and negative feelings. examples
-ïƒ¼ She is smart                  â€”
+ïƒ¼ She is smart                  —
 ïƒ¼ I like my English teacher
 ïƒ¼ I hate him.
 ïƒ¼ I dislike Abebe.
@@ -1431,12 +1431,12 @@ B. Directive Function
 ïƒ˜ It gives direction to the speaker or writer in order to pass
 orders, commands or instructions to others.
 Examples:
-ïƒ¼ What is your name? â€”
+ïƒ¼ What is your name? —
 ïƒ¼ Leave me alone!
-ïƒ¼ Do not close that door! â€”
+ïƒ¼ Do not close that door! —
 ïƒ¼Give me your pen!
 C. Cognitive (Informative) Function
-ïƒ˜ It used to convey information about the worldâ€™s objective
+ïƒ˜ It used to convey information about the world's objective
 realities. For Example:
 ïƒ¼Ethiopia has its own prestigious airlines. (True)
 ïƒ¼The capital city of the regional state of Afar is
@@ -1463,10 +1463,10 @@ statement.
 names, and descriptive phrases.
 
 Proper Names     Common Names    Descriptive Phrases
-â€¢ Ayele                      house
+•  Ayele                      house
 The first president of Ethiopia
-â€¢ John                        Person          The king of England
-â€¢ South Ethiopia        Animal         Those who study hard
+•  John                        Person          The king of England
+•  South Ethiopia        Animal         Those who study hard
 | ïƒ˜Words         |     | that  | are          | not  | terms          |           | include  |     | verbs,         |     | non- |
 | -------------- | --- | ----- | ------------ | ---- | -------------- | --------- | -------- | --- | -------------- | --- | ---- |
 | substantive    |     |       | adjectives,  |      |                | adverbs,  |          |     | prepositions,  |     |      |
@@ -1487,9 +1487,9 @@ the term connotes.
 | --- | --------- | ------------ | -------- | --- | --------- | --- | --- | -------- | ----- | ------- | ------------ | ---- | ----- | --- |
 |     | consists  |              | of  the  |     | members   |     |     | of  the  |       | class   | that         | the  | term  |     |
 denotes.  Examples:
-ïƒ˜ â€œInventorâ€  means  a  person  who  is,  clever,  intuitive,
+ïƒ˜ "Inventor"  means  a  person  who  is,  clever,  intuitive,
 creative and imaginative.
-|     | ïƒ˜ â€œInventorâ€  |     |     | means  |     | such  |     | as  Thomas  |     | Edison,  |     | Alexander  |     |     |
+|     | ïƒ˜ "Inventor"  |     |     | means  |     | such  |     | as  Thomas  |     | Edison,  |     | Alexander  |     |     |
 | --- | ------------- | --- | --- | ------ | --- | ----- | --- | ----------- | --- | -------- | --- | ---------- | --- | --- |
 Graham Bell, and Samuel F.B. Morse.
 | ïƒ˜   | The  | meaning  |     | of  | the  |     | first  | example  |     | is  | based  |     | on  | its  |
@@ -1511,21 +1511,21 @@ everybody agrees.
 |        | human       |       | beings  |           | die  |             | and      | others  |     |              | are      | born  |      | or     | it    | is  |
 |        | presumably  |       |         | constant  |      |             | because  |         |     | it           | denotes  |       | all  | human  |       |     |
 beings, past, present, or future.
-| ïƒ˜Denotation  |     |     |     | of  | a   | term  |     | doesnâ€™t  |     |     | remain  |     | the  |     | same  |     |
+| ïƒ˜Denotation  |     |     |     | of  | a   | term  |     | doesn't  |     |     | remain  |     | the  |     | same  |     |
 | ------------ | --- | --- | --- | --- | --- | ----- | --- | -------- | --- | --- | ------- | --- | ---- | --- | ----- | --- |
 from time to time? For example,
-ïƒ˜â€˜the  current  king  of  Ethiopia.  Is  there  any  king  in
+ïƒ˜'the  current  king  of  Ethiopia.  Is  there  any  king  in
 |     | Ethiopia  |     |     | now?  | No.  |     | Therefore,  |     |     | this  |     | term  | denotes  |     |     | an  |
 | --- | --------- | --- | --- | ----- | ---- | --- | ----------- | --- | --- | ----- | --- | ----- | -------- | --- | --- | --- |
 empty extension.
 
 ïƒ˜An  empty  extension  is  said  to  denote:  the  empty  or
-â€œnullâ€ class - the class that has no members.
+"null" class - the class that has no members.
 | ïƒ˜You  | may  | recognize  |     |     |     | from  |     | the  | above  |     |     | example  |     |     |     | that  |
 | ----- | ---- | ---------- | --- | --- | --- | ----- | --- | ---- | ------ | --- | --- | -------- | --- | --- | --- | ----- |
 emperor Haile Sillasie was the king of Ethiopia in the
 past.
-| ïƒ˜Therefore,  |     | â€˜the  |     | current  |     |     | king  |     | of  | Ethiopiaâ€™,  |     |     |     | changed  |     |     |
+| ïƒ˜Therefore,  |     | 'the  |     | current  |     |     | king  |     | of  | Ethiopia',  |     |     |     | changed  |     |     |
 | ------------ | --- | ----- | --- | -------- | --- | --- | ----- | --- | --- | ----------- | --- | --- | --- | -------- | --- | --- |
 over the passage of time.
 | ïƒ˜Thereby,  |     | things   |     | that  |        | do  | not        |     | have  |     | current     |     |     | objective  |          |     |
@@ -1541,7 +1541,7 @@ serve as a living testimony for their existence.
 | ïƒ˜Our        |     | knowledge  |     |      |     | of   | these  |        | things  |     | is     | based  |         | on  | their  |
 | ----------- | --- | ---------- | --- | ---- | --- | ---- | ------ | ------ | ------- | --- | ------ | ------ | ------- | --- | ------ |
 | properties  |     |            |     | and  |     | but  | not    | based  |         | on  | their  |        | living  |     | class  |
-membersâ€™ characteristics.
+members' characteristics.
 ïƒ˜However, the intentional meaning of a term serves
 | as        | the  |     | criteria  |     |       | for  | deciding  |      |              | what  |     | the  |     | extension  |     |
 | --------- | ---- | --- | --------- | --- | ----- | ---- | --------- | ---- | ------------ | ----- | --- | ---- | --- | ---------- | --- |
@@ -1567,17 +1567,17 @@ intension but not always.
 consecutive term, then the attribute of the particular object
 decreases. Decreasing extension is the reverse of this
 order. Example:
-â€“ Increasing Intension: Africa, East Africa,
+– Increasing Intension: Africa, East Africa,
 Ethiopia, Addis Ababa.
-â€“ Decreasing Intension: Addis Ababa, Ethiopia,
+– Decreasing Intension: Addis Ababa, Ethiopia,
 East Africa, Africa.
-â€“ Increasing Extension: Addis Ababa, Ethiopia,
+– Increasing Extension: Addis Ababa, Ethiopia,
 East Africa, Africa.
-â€“ Decreasing Extension: Africa, East Africa,
+– Decreasing Extension: Africa, East Africa,
 Ethiopia, Addis Ababa.
 
-â€¢ Definitions and Their Purposes
-ïƒ˜ Many logicians define the term â€˜definitionâ€™ as a group of
+•  Definitions and Their Purposes
+ïƒ˜ Many logicians define the term 'definition' as a group of
 words that assigns a meaning to some words or group
 of words.
 ïƒ˜Accordingly, every definition consists of two parts: the
@@ -1586,20 +1586,20 @@ definiendum and the definiens.
 words that is supposed to be defined, and the Latin term
 definiens is the word or group of words that does the
 defining or gives a meaning to the definiendum.
-â€¢
+• 
 Example:
 ïƒ˜diffident means lacking confidence in oneself.
-ïƒ˜In this definition, the term â€˜â€˜diffidentâ€™â€™ is the definiendum,
-and everything that comes the word â€œmeansâ€ (lacking
+ïƒ˜In this definition, the term ''diffident'' is the definiendum,
+and everything that comes the word "means" (lacking
 confidence in oneself; characterized by modest reserve) is
 the definiens.
-â€¢
+• 
 
 | ïƒ˜   | The      |     | most  |          | important  |     |     | objective  |      |     |        | of  |     | definition  |       |      | is  | to   |
 | --- | -------- | --- | ----- | -------- | ---------- | --- | --- | ---------- | ---- | --- | ------ | --- | --- | ----------- | ----- | ---- | --- | ---- |
 |     | provide  |     |       | meaning  |            |     |     | for        | the  |     | terms  |     |     |             | that  | are  |     | not  |
 clearly understood in the context of other terms.
-â€¢ Purposes of Definitions in logic
+•  Purposes of Definitions in logic
 ïƒ˜Definition helps us
 |     | ïƒ¼To  |     | avoid  |     | confusion  |     |     | or  | misleading  |     |     |     |     | use  | of  words  |     |     | and  |
 | --- | ---- | --- | ------ | --- | ---------- | --- | --- | --- | ----------- | --- | --- | --- | --- | ---- | ---------- | --- | --- | ---- |
@@ -1646,7 +1646,7 @@ phenomenon or things in the area of archeological
 | --- | ----------- | --- | --- | ---- | ---- | --------------- | ------ | --- | --- | --- | --- | -------- | --- | --- | --- | --------- | --- | ------ | --- | ---- | --- |
 |     | behaviors,  |     |     |      | new  |                 | kinds  |     |     | of  |     | fashion  |     |     |     | clothes,  |     |        |     | new  |     |
 dances, new food inventions, etc
-â€¢ Example:
+•  Example:
 ïƒ˜ A  few  years  ago  the  attempt  was  made  at  a  certain
 |     | zoo  | to  |     | crossbreed  |     |     |     | male  |     |     | tiger  |     | and  |     | female  |     |     |     | lion  |     | by  |
 | --- | ---- | --- | --- | ----------- | --- | --- | --- | ----- | --- | --- | ------ | --- | ---- | --- | ------- | --- | --- | --- | ----- | --- | --- |
@@ -1655,7 +1655,7 @@ biologists. As a result of this, the offspring was born
 | --- | ----- | --- | ----- | --- | --- | ------ | --- | ---- | --- | --- | ------- | --- | --- | --- | ------ | --- | --- | ------ | --- | --- | ----- |
 suggests a need for assigning a new name.
 ïƒ˜
-|     | So,  | they  |     |     | may  |     | call  |     | the  |     | new  |     | offspring  |     |     |     |     | â€˜â€˜Tigonâ€™â€™  |     |     |     |
+|     | So,  | they  |     |     | may  |     | call  |     | the  |     | new  |     | offspring  |     |     |     |     | ''Tigon''  |     |     |     |
 | --- | ---- | ----- | --- | --- | ---- | --- | ----- | --- | ---- | --- | ---- | --- | ---------- | --- | --- | --- | --- | ---------- | --- | --- | --- |
 taking the first three letters from tiger (tig) and the
 last two letters from lion (on).
@@ -1663,16 +1663,16 @@ last two letters from lion (on).
 ïƒ˜ Another  use  of  stipulative  definitions  is  to  set  up
 Secret Codes.  It was (and still is) common to give a
 secret code for the military invasion.
-â€¢
+• 
 Examples:
-| ïƒ˜ â€˜â€˜Operation  |     | Barbarosaâ€™â€™  |     |     | was  | the  | name  | the  |
+| ïƒ˜ ''Operation  |     | Barbarosa''  |     |     | was  | the  | name  | the  |
 | -------------- | --- | ------------ | --- | --- | ---- | ---- | ----- | ---- |
 code Germans gave to the invasion of Russia;
 ïƒ˜
-| â€˜â€˜Operation  |     | Desert  |     | Stormâ€™â€™  |     | was  | the  | code  |
+| ''Operation  |     | Desert  |     | Storm''  |     | was  | the  | code  |
 | ------------ | --- | ------- | --- | -------- | --- | ---- | ---- | ----- |
 name given to the military invasion of Iraq.
-| ïƒ˜ â€œOperation  |     | Sun  | Setâ€  | was  |     | the  | code  | name  |
+| ïƒ˜ "Operation  |     | Sun  | Set"  | was  |     | the  | code  | name  |
 | ------------- | --- | ---- | ----- | ---- | --- | ---- | ----- | ----- |
 given to the military victory of Ethiopia armed
 | force  | against  | Eritrea,  |     | which  |     | is  | the  | most  |
@@ -1695,14 +1695,14 @@ of word to its context.
 meaning.
 | ïƒ˜Some  |     | words    |     | that     | are  | subjected  |     |     | to  | ambiguous  |     |     |             | usage  |     |
 | ------ | --- | -------- | --- | -------- | ---- | ---------- | --- | --- | --- | ---------- | --- | --- | ----------- | ------ | --- |
-| are:   |     | lightâ€,  |     | â€œbankâ€,  |      | â€œsoundâ€,   |     |     |     | â€œrightâ€    |     |     | ,  â€œraceâ€,  |        |     |
-â€œ
-| â€˜â€˜madâ€™â€™, â€œdefuseâ€ , â€œhumanityâ€ |     |     |     |     |     |     |     |     |         |     | Examples |     |     |     |     |
+| are:   |     | light",  |     | "bank",  |      | "sound",   |     |     |     | "right"    |     |     | ,  "race",  |        |     |
+"
+| ''mad'', "defuse" , "humanity" |     |     |     |     |     |     |     |     |         |     | Examples |     |     |     |     |
 | ------------------------------ | --- | --- | --- | --- | --- | --- | --- | --- | ------- | --- | -------- | --- | --- | --- | --- |
 |                                |     |     |     |     |     |     |     |     |  ,etc.  |     |          |     |     | :   |     |
-ïƒ˜ â€˜â€˜Light,â€™â€™ can mean light in weight or radiant energy.
+ïƒ˜ ''Light,'' can mean light in weight or radiant energy.
 ïƒ˜
- â€˜â€˜Bankâ€™â€™  can  mean  a  finical  institution  or  the  edge  of
+ ''Bank''  can  mean  a  finical  institution  or  the  edge  of
 river.
 
 ï¶ A word is vague
@@ -1713,8 +1713,8 @@ word.
 | ï¶ If  | it  is  | impossible  |     |     | to  | tell  | whether  |     | the  | word  |
 | ----- | ------- | ----------- | --- | --- | --- | ----- | -------- | --- | ---- | ----- |
 applies to them or not.
-ï¶ Words such as â€œloveâ€, â€happinessâ€,  â€œpeaceâ€, â€œfreshâ€,
-| â€œnormalâ€,  |     | â€œrichâ€,  |     | â€poorâ€,  |     | â€œpollutedâ€  |     | etc  | are  | vague  |
+ï¶ Words such as "love", "happiness",  "peace", "fresh",
+| "normal",  |     | "rich",  |     | "poor",  |     | "polluted"  |     | etc  | are  | vague  |
 | ---------- | --- | -------- | --- | -------- | --- | ----------- | --- | ---- | ---- | ------ |
 words.
 ï¶
@@ -1729,12 +1729,12 @@ is or how we counted as rich.
 | ---------- | --- | --- | ------ | --- | ---- | ------------ | --- | --- | --- | -------- | --- | --- | --- | --- |
 term.
 ïƒ˜Its use is to reduce vagueness of the term.
-ïƒ˜For example, the word â€˜poorâ€™ is a vague word.
+ïƒ˜For example, the word 'poor' is a vague word.
 | Suppose       |     |     | you  |               | are  | an  | administrator  |      |     |       |     | of        | one  |     |
 | ------------- | --- | --- | ---- | ------------- | ---- | --- | -------------- | ---- | --- | ----- | --- | --------- | ---- | --- |
 | humanitarian  |     |     |      | organization  |      |     |                | and  |     | want  |     | to  give  |      | a   |
 direct financial assistance to the poor.
-| ïƒ˜Therefore,  |       |     | we      |     | may     | define   |     |          | Poor  |          | as:  | â€œPoorâ€  |     |     |
+| ïƒ˜Therefore,  |       |     | we      |     | may     | define   |     |          | Poor  |          | as:  | "Poor"  |     |     |
 | ------------ | ----- | --- | ------- | --- | ------- | -------- | --- | -------- | ----- | -------- | ---- | ------- | --- | --- |
 | means        |       | a   | person  |     | having  |          | a   | monthly  |       |          |      | income  |     | of  |
 | less         | than  |     | Birr    |     | 150     | .  This  |     | is       | an    | example  |      |         | of  | a   |
@@ -1744,9 +1744,9 @@ prÃ©cising definition.
 | ----------- | --- | --- | --- | ----------- | --- | --- | ----- | ----- | --- | --------- | --- | -------- | --- | ------------- | --- | --- | ------- | --- | --- |
 | systematic  |     |     |     | context     |     |     | such  |       | as  | science,  |     |          |     | mathematics,  |     |     |         |     |     |
 medicine or law. Examples:-
-|     | ïƒ˜â€˜â€˜forceâ€™â€™,  |     |     |     | â€˜â€˜energyâ€™â€™,  |     |     |     |     | â€˜â€˜acidâ€™â€™,  |     |     |     |     | â€˜â€˜elementâ€™â€™,  |     |     |     |     |
+|     | ïƒ˜''force'',  |     |     |     | ''energy'',  |     |     |     |     | ''acid'',  |     |     |     |     | ''element'',  |     |     |     |     |
 | --- | ------------ | --- | --- | --- | ------------ | --- | --- | --- | --- | ---------- | --- | --- | --- | --- | ------------- | --- | --- | --- | --- |
-â€˜â€˜numberâ€ â€œequalityâ€™â€™, â€˜â€˜contractâ€™â€™, and â€˜â€˜agentâ€™â€™
+''number" "equality'', ''contract'', and ''agent''
 | ïƒ˜A  |     | prÃ©cising  |     |     | definition  |     |     |     | differs  |     |     | from  |     | a   |     | stipulative  |     |     |     |
 | --- | --- | ---------- | --- | --- | ----------- | --- | --- | --- | -------- | --- | --- | ----- | --- | --- | --- | ------------ | --- | --- | --- |
 definition in that
@@ -1762,7 +1762,7 @@ definition is not at all arbitrary.
 legitimate for the context within which the term
 is to be employed.
 
-â€¢ D. Theoretical Definition
+•  D. Theoretical Definition
 ïƒ˜A  theoretical  definition  assigns  a  meaning  to  a  word
 | by  | suggesting  |     |     | a   | theory  |     |     | that  |     | gives  |     | a  certain  |     |     |
 | --- | ----------- | --- | --- | --- | ------- | --- | --- | ----- | --- | ------ | --- | ----------- | --- | --- |
@@ -1771,34 +1771,34 @@ characterization to the entities that the term denotes.
 | ----------- | ------ | ------- | ------------ | --- | ------ | --- | ------------ | ---- | --- | ------ | --- | ------- | ---- | --- |
 | conceiving  |        |         | (imagining)  |     |        |     | theoretical  |      |     | (that  |     | is,     | non- |     |
 experimental or non- practical) entity.
-ïƒ˜Fore example there is no any way to see or view â€œheatâ€
+ïƒ˜Fore example there is no any way to see or view "heat"
 except in theoretical way.
 | ïƒ˜Not      | all  | theoretical  |     |        | definitions  |     |     |              | are  | associated  |     |       | with  |     |
 | --------- | ---- | ------------ | --- | ------ | ------------ | --- | --- | ------------ | ---- | ----------- | --- | ----- | ----- | --- |
 | science.  |      | Many         |     | terms  |              |     | in  | philosophy,  |      |             |     | such  |       | as  |
-â€˜â€˜substanceâ€™â€™,  â€˜â€˜formâ€™â€™,  â€˜â€˜causeâ€™â€™,  â€˜â€˜changeâ€™â€™,  â€˜â€˜ideaâ€™â€™,
-| â€˜â€˜goodâ€™â€™,  |     | and  | â€˜â€˜mindâ€™â€™,  |     |     | have  |     | been  |     | given  |     | theoretical  |     |     |
+''substance'',  ''form'',  ''cause'',  ''change'',  ''idea'',
+| ''good'',  |     | and  | ''mind'',  |     |     | have  |     | been  |     | given  |     | theoretical  |     |     |
 | ---------- | --- | ---- | ---------- | --- | --- | ----- | --- | ----- | --- | ------ | --- | ------------ | --- | --- |
 definitions.
 
-â€¢
+• 
 
 | ïƒ˜Most  | of     | the  | major  | philosophers  |      |           | in  history  |              | have  |     |
 | ------ | ------ | ---- | ------ | ------------- | ---- | --------- | ------------ | ------------ | ----- | --- |
 | given  | these  |      | terms  | their         | own  | peculiar  |              | theoretical  |       |     |
 definitions, examples:
-| ïƒ¼ â€˜â€˜Goodâ€™â€™  |     |     | means  | the  | greatest  |     | happiness  |     | of  | the  |
+| ïƒ¼ ''Good''  |     |     | means  | the  | greatest  |     | happiness  |     | of  | the  |
 | ----------- | --- | --- | ------ | ---- | --------- | --- | ---------- | --- | --- | ---- |
 greatest number provided the     underpinnings
 for his utilitarian theory of ethics.
-| ïƒ¼ â€œSubstanceâ€  |     |     |     | means  |     | something  |     | that  |     | up  |
+| ïƒ¼ "Substance"  |     |     |     | means  |     | something  |     | that  |     | up  |
 | -------------- | --- | --- | --- | ------ | --- | ---------- | --- | ----- | --- | --- |
 supports different qualities.
-| ïƒ¼ â€œJusticeâ€  |     |     | means  | to  | give  | each  | individual what  |     |     |     |
+| ïƒ¼ "Justice"  |     |     | means  | to  | give  | each  | individual what  |     |     |     |
 | ------------ | --- | --- | ------ | --- | ----- | ----- | ---------------- | --- | --- | --- |
 he or she deserves his or her due.
 
-â€¢
+• 
 
 |     |        E.                                  |             | Persuasive Definition     |     |     |             |     |     |            |     |     |              |     |
 | --- | ------------------------------------------ | ----------- | ------------------------- | --- | --- | ----------- | --- | --- | ---------- | --- | --- | ------------ | --- |
@@ -1807,7 +1807,7 @@ he or she deserves his or her due.
 over a certain issue;
 |     | ïƒ¼   | changing or influencing the attitude of others  |     |     |     |     |     |     |     |     |     |     |     |
 | --- | --- | ----------------------------------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-towards oneâ€™s own point of view and to win the
+towards one's own point of view and to win the
 acceptance of audience.
 | ïƒ˜   | The         |            | method  |           | employed  |      |              | to        | develop  |      |          | persuasive  |     |
 | --- | ----------- | ---------- | ------- | --------- | --------- | ---- | ------------ | --------- | -------- | ---- | -------- | ----------- | --- |
@@ -1822,9 +1822,9 @@ the definiendum.
 | ïƒ˜ Here  |     | are  | some  | examples  |     | of  | opposing  |     | pairs  | of  |
 | ------- | --- | ---- | ----- | --------- | --- | --- | --------- | --- | ------ | --- |
 persuasive definitions:
-ïƒ˜ â€˜â€˜Abortionâ€™â€™ means the ruthless murdering of
+ïƒ˜ ''Abortion'' means the ruthless murdering of
 innocent human beings.
-| ïƒ˜   | â€˜â€˜Abortionâ€™â€™  |     |            | means  | a        | safe  | and  | established  |     |        |
+| ïƒ˜   | ''Abortion''  |     |            | means  | a        | safe  | and  | established  |     |        |
 | --- | ------------- | --- | ---------- | ------ | -------- | ----- | ---- | ------------ | --- | ------ |
 |     | surgical      |     | procedure  |        | whereby  |       |      | a  woman     |     | is     |
 relieved of an unwanted burden
@@ -1848,7 +1848,7 @@ of a class:
 |     | kinds      |     | of     | definitions,  |     |       | namely,  |              |           | demonstrative  |        |               |            |     | or  |
 |     | ostensive  |     |        | definitions,  |     |       |          | enumerative  |           |                |        | definitions,  |            |     |     |
 and definition by subclass respectively
-â€¢ Demonstrative (Ostensive) Definition
+•  Demonstrative (Ostensive) Definition
 | ïƒ˜   | It  | assigns  |     | a   | meaning  |     |     | to  | a   | term  |     | by  | pointing  |     |     |
 | --- | --- | -------- | --- | --- | -------- | --- | --- | --- | --- | ----- | --- | --- | --------- | --- | --- |
 physically to the thing or object to be defined.
@@ -1861,17 +1861,17 @@ things or complete
 | --- | ----------- | --- | --- | ---------- | --- | --- | ----------- | --- | --- | --------- | --- | --- | --- | ------- | --- |
 a term by showing the object physically.
 
-â€¢ Examples:
-|     | ïƒ¼â€˜â€˜Chairâ€™â€™  |     |     |     | means  |     | this  |     | and  |     | this  |     | and  | thisâ€”as  |     | you  |     |
+•  Examples:
+|     | ïƒ¼''Chair''  |     |     |     | means  |     | this  |     | and  |     | this  |     | and  | this—as  |     | you  |     |
 | --- | ----------- | --- | --- | --- | ------ | --- | ----- | --- | ---- | --- | ----- | --- | ---- | -------- | --- | ---- | --- |
 point to a number of chairs, one after the other.
-|     | ïƒ¼ â€˜â€˜Houseâ€™â€™  |     |     |     | means  |     |     | this  |     |     | oneâ€”using  |     |     |     | a  picture  |     |     |
+|     | ïƒ¼ ''House''  |     |     |     | means  |     |     | this  |     |     | one—using  |     |     |     | a  picture  |     |     |
 | --- | ------------ | --- | --- | --- | ------ | --- | --- | ----- | --- | --- | ---------- | --- | --- | --- | ----------- | --- | --- |
 demonstrating a house.
 | ïƒ˜   | Demonstrative  |     |     |              |     | definitions  |     |     |     |       | differ  |     | from  |              | the  | other  |     |
 | --- | -------------- | --- | --- | ------------ | --- | ------------ | --- | --- | --- | ----- | ------- | --- | ----- | ------------ | ---- | ------ | --- |
 |     | kinds          |     | of  | definitions  |     |              |     |     | in  |       | that    |     | the   | definiens    |      |        | is  |
-|     | constituted    |     |     |              | at  | least        |     | in  |     | part  |         | by  | a     | gestureâ€”the  |      |        |     |
+|     | constituted    |     |     |              | at  | least        |     | in  |     | part  |         | by  | a     | gesture—the  |      |        |     |
 gesture of pointing.
 ïƒ˜ Since the definiens in any definition is a group of
 |     | words,  |     | however,  |     |     |     | a   | gesture,  |     |     |     | such  |     | as  | pointing,  |     |     |
@@ -1879,11 +1879,11 @@ gesture of pointing.
 must count as a word.
 ïƒ˜
 While this conclusion may appear strange at first,
-|     | it  is  | supported  |       |     |            | by  | the  |     | fact  |          | that  |     | the          | â€˜â€˜wordsâ€™â€™  |     |     | in  |
+|     | it  is  | supported  |       |     |            | by  | the  |     | fact  |          | that  |     | the          | ''words''  |     |     | in  |
 | --- | ------- | ---------- | ----- | --- | ---------- | --- | ---- | --- | ----- | -------- | ----- | --- | ------------ | ---------- | --- | --- | --- |
 |     | many    |            | sign  |     | languages  |     |      |     |       | consist  |       |     | exclusively  |            |     |     | of  |
 gestures.
-â€¢
+• 
 
 Enumerative Definition
 ïƒ˜ It the members of the class that the definiendum denotes
@@ -1897,9 +1897,9 @@ be either partial or complete.
 ïƒ˜ It is carried out through listing some or all of the
 objects or entities symbolized by the definiendum.
 Examples:
-ïƒ¼ â€˜â€˜Actorâ€™â€™ means a person such as Nick Nolte, Al Pacino, or
+ïƒ¼ ''Actor'' means a person such as Nick Nolte, Al Pacino, or
 Richard Gere.
-ïƒ¼ â€œAthleteâ€ means a person such as Hail G/sillassie,
+ïƒ¼ "Athlete" means a person such as Hail G/sillassie,
 Kenensia Bekele, Derartu Tulu, etc.
 
 Definition by Subclass
@@ -1910,14 +1910,14 @@ denoted by the term.
 | ïƒ˜   | Definition  |     | by  | subclass  |     |     | assigns  |     | a   | meaning  |     | to  a  |
 | --- | ----------- | --- | --- | --------- | --- | --- | -------- | --- | --- | -------- | --- | ------ |
 term by naming either partial or complete.
-â€¢ Examples:
-|     | ïƒ¼ â€˜â€˜Treeâ€™â€™  |     | means  |     | an  | oak,  | pine,  |     | elm,  | spruce,  |     | maple,  |
+•  Examples:
+|     | ïƒ¼ ''Tree''  |     | means  |     | an  | oak,  | pine,  |     | elm,  | spruce,  |     | maple,  |
 | --- | ----------- | --- | ------ | --- | --- | ----- | ------ | --- | ----- | -------- | --- | ------- |
 and the like.
-|     | ïƒ¼ â€˜â€˜Flowerâ€™â€™  |     |     | means  |     | a  rose,  |     | lily,  |     | daisy,  | geranium,  |     |
+|     | ïƒ¼ ''Flower''  |     |     | means  |     | a  rose,  |     | lily,  |     | daisy,  | geranium,  |     |
 | --- | ------------- | --- | --- | ------ | --- | --------- | --- | ------ | --- | ------- | ---------- | --- |
 zinnia, and the like.
-|     | ïƒ¼  â€œProfessional  |     |     |     | personâ€  |     | means  |     | a   | person  | such  | as  a  |
+|     | ïƒ¼  "Professional  |     |     |     | person"  |     | means  |     | a   | person  | such  | as  a  |
 | --- | ----------------- | --- | --- | --- | -------- | --- | ------ | --- | --- | ------- | ----- | ------ |
 doctor, or an architect.
 
@@ -1934,16 +1934,16 @@ being defined.
 ïƒ˜ Operational Definition, and
 ïƒ˜ Definition by Genus and Difference.
 
-â€¢ A. Synonymous Definition
-â€¢ A synonymous definition is one in which
+•  A. Synonymous Definition
+•  A synonymous definition is one in which
 ïƒ˜ The definiens is a single word that connotes the same
 attributes as the definiendum.
 ïƒ˜ The definiens connotes exactly the same attributes
 as the definiendum.
-â€¢ Examples:
-ïƒ¼ â€˜â€˜Physicianâ€™â€™ means doctor.
-ïƒ¼ â€˜â€˜Intentionalâ€ means willful.
-ïƒ¼ â€˜â€˜Observeâ€™â€™ means see.
+•  Examples:
+ïƒ¼ ''Physician'' means doctor.
+ïƒ¼ ''Intentional" means willful.
+ïƒ¼ ''Observe'' means see.
 ïƒ˜Therefore, we can interchangeably use the
 definiens and the definiendum of synonymous
 definitions.
@@ -1951,7 +1951,7 @@ definitions.
        B. Etymological Definition
 | ïƒ˜ An  |       |     | etymological  |     |            |     |     | definition  |      |     |         | assigns  |       |     | a   | meaning   |     |     | to  a  |
 | ----- | ----- | --- | ------------- | --- | ---------- | --- | --- | ----------- | ---- | --- | ------- | -------- | ----- | --- | --- | --------- | --- | --- | ------ |
-|       | word  |     |               | by  | revealing  |     |     |             | the  |     | wordâ€™s  |          | root  |     | or  | ancestry  |     |     | in     |
+|       | word  |     |               | by  | revealing  |     |     |             | the  |     | word's  |          | root  |     | or  | ancestry  |     |     | in     |
 both its own language and other languages.
 ïƒ˜That
 |     |     |     |     | is  | why  |     | most  |     |     | ordinary  |     |     | English  |     |     | words  |     | have  |     |
@@ -1959,15 +1959,15 @@ both its own language and other languages.
 ancestors  either  in  Old  or  Middle  English  as  well  as
 are derived or come from some other language such as
 Greek, Latin, or French, etc.
-â€¢ Examples:
+•  Examples:
 ïƒ˜The
-|     |     |         |     | word  |          | â€œDemocracyâ€  |     |      |     |            | is  | derived  |     | from  |        | the  | two     | Greek  |      |
+|     |     |         |     | word  |          | "Democracy"  |     |      |     |            | is  | derived  |     | from  |        | the  | two     | Greek  |      |
 | --- | --- | ------- | --- | ----- | -------- | ------------ | --- | ---- | --- | ---------- | --- | -------- | --- | ----- | ------ | ---- | ------- | ------ | ---- |
-|     |     | words,  |     |       | â€™demosâ€™  |              |     | and  |     | â€˜cratesâ€™,  |     | which    |     |       | means  |      | people  |        | and  |
+|     |     | words,  |     |       | 'demos'  |              |     | and  |     | 'crates',  |     | which    |     |       | means  |      | people  |        | and  |
 power respectively.
-ïƒ˜ The  English  word  â€˜â€˜Licenseâ€™â€™  is  derived  from  the  Latin
+ïƒ˜ The  English  word  ''License''  is  derived  from  the  Latin
 verb licere, which means to be permitted, and
-|     | ïƒ˜The  |     |     | English  |     |     |     | word  |     | â€˜â€˜Captainâ€™â€™  |     |     |     | derives  |     |     | from  |     | the  |
+|     | ïƒ˜The  |     |     | English  |     |     |     | word  |     | ''Captain''  |     |     |     | derives  |     |     | from  |     | the  |
 | --- | ----- | --- | --- | -------- | --- | --- | --- | ----- | --- | ------------ | --- | --- | --- | -------- | --- | --- | ----- | --- | ---- |
 Latin noun caput which means head.
 
@@ -1979,40 +1979,40 @@ Operational Definition
 | carried      |          | out           |             | by  | performing  |             |             |     | the  | actions,    |      |     |
 | operations,  |          |               | activities  |     |             | and         | procedures  |     |      | that        | the  |     |
 word implies .
-| ïƒ˜ It   | can  | be              | identified  |     | by  | words       |     | â€œif  | and  | only        |     | ifâ€  |
+| ïƒ˜ It   | can  | be              | identified  |     | by  | words       |     | "if  | and  | only        |     | if"  |
 | ------ | ---- | --------------- | ----------- | --- | --- | ----------- | --- | ---- | ---- | ----------- | --- | ---- |
-| which  |      | is  equivalent  |             |     | to  | â€˜necessary  |     |      | and  | sufficient  |     |      |
+| which  |      | is  equivalent  |             |     | to  | 'necessary  |     |      | and  | sufficient  |     |      |
 condition
-.â€™
-â€¢  Examples:
-ïƒ¼ One  substance  is  â€˜â€˜Harder  thanâ€™â€™  another  if  and  only  if
+.'
+•   Examples:
+ïƒ¼ One  substance  is  ''Harder  than''  another  if  and  only  if
 one scratches the other when the two are rubbed together.
-ïƒ¼ A  solution  is  an  â€˜â€˜Acidâ€™â€™  if  and  only  if  litmus  paper  turns
+ïƒ¼ A  solution  is  an  ''Acid''  if  and  only  if  litmus  paper  turns
 red when dipped into it.
 
 D. Definition by Genus and Difference
 It assigns a meaning to a term by identifying
 ïƒ˜
-two things: one â€˜genusâ€™ term and one or more
-â€˜differenceâ€™ words.
-| ïƒ˜In     | logic,  |      | â€˜â€˜genusâ€™â€™  |              |     | means  |     |     | a      | relatively  |     |             |     | larger  |     |     |
+two things: one 'genus' term and one or more
+'difference' words.
+| ïƒ˜In     | logic,  |      | ''genus''  |              |     | means  |     |     | a      | relatively  |     |             |     | larger  |     |     |
 | ------- | ------- | ---- | ---------- | ------------ | --- | ------ | --- | --- | ------ | ----------- | --- | ----------- | --- | ------- | --- | --- |
-| class,  |         | and  |            | â€˜â€˜speciesâ€™â€™  |     |        |     |     | means  |             | a   | relatively  |     |         |     |     |
+| class,  |         | and  |            | ''species''  |     |        |     |     | means  |             | a   | relatively  |     |         |     |     |
 smaller subclass or smaller of the genus.
-| ïƒ˜For  | instance,  |     |     |     | if  you  |     | may  |     | speak  |     | â€˜animalâ€™  |     |     |     | as  | a   |
+| ïƒ˜For  | instance,  |     |     |     | if  you  |     | may  |     | speak  |     | 'animal'  |     |     |     | as  | a   |
 | ----- | ---------- | --- | --- | --- | -------- | --- | ---- | --- | ------ | --- | --------- | --- | --- | --- | --- | --- |
-genus, and â€˜mammalâ€™ as species or if you take
-| â€˜mammalâ€™  |     |     |     | as  | genus  |     |     | and  |     | â€˜felineâ€™  |     |     | can  |     |     | be  |
+genus, and 'mammal' as species or if you take
+| 'mammal'  |     |     |     | as  | genus  |     |     | and  |     | 'feline'  |     |     | can  |     |     | be  |
 | --------- | --- | --- | --- | --- | ------ | --- | --- | ---- | --- | --------- | --- | --- | ---- | --- | --- | --- |
 species.
-| ïƒ˜Again,  |     | if  |     | you  | take      |     | â€˜felineâ€™  |     |     | as   | genus,  |     |     | â€˜tigerâ€™  |     |      |
+| ïƒ˜Again,  |     | if  |     | you  | take      |     | 'feline'  |     |     | as   | genus,  |     |     | 'tiger'  |     |      |
 | -------- | --- | --- | --- | ---- | --------- | --- | --------- | --- | --- | ---- | ------- | --- | --- | -------- | --- | ---- |
 | (which   |     | is  |     | the  | subclass  |     |           |     | of  | the  | class   |     |     | of       |     | cat  |
 family), can be the species.
 
-| ïƒ˜Where         |     |     | as  |     |     | the  |      | â€˜â€˜specific  |     |     |     |     | difference,â€™â€™  |     |     |     |     |       | or  |
+| ïƒ˜Where         |     |     | as  |     |     | the  |      | ''specific  |     |     |     |     | difference,''  |     |     |     |     |       | or  |
 | -------------- | --- | --- | --- | --- | --- | ---- | ---- | ----------- | --- | --- | --- | --- | -------------- | --- | --- | --- | --- | ----- | --- |
-| â€˜â€˜differenceâ€  |     |     |     |     | is  |      | the  | attribute   |     |     |     | or  | attributes     |     |     |     |     | that  |     |
+| ''difference"  |     |     |     |     | is  |      | the  | attribute   |     |     |     | or  | attributes     |     |     |     |     | that  |     |
 distinguish the various species within a genus.
 | ïƒ˜For           |     | example,  |     |     |         |        | the  |          | specific  |     |        |           | difference  |          |     |            |     | that  |      |
 | -------------- | --- | --------- | --- | --- | ------- | ------ | ---- | -------- | --------- | --- | ------ | --------- | ----------- | -------- | --- | ---------- | --- | ----- | ---- |
@@ -2021,12 +2021,12 @@ distinguish the various species within a genus.
 | attributes     |     |           |     | of  |         | being  |      |          | large,    |     |        | striped,  |             |          |     | ferocious  |     |       |      |
 (aggressive), and so on.
 ïƒ˜Therefore, these aforementioned qualities of tiger
-| are  | called  |     |     | the  |     |     | â€˜specific  |     |     |     | differenceâ€™  |     |     |     | or  |     | simply  |     |     |
+| are  | called  |     |     | the  |     |     | 'specific  |     |     |     | difference'  |     |     |     | or  |     | simply  |     |     |
 | ---- | ------- | --- | --- | ---- | --- | --- | ---------- | --- | --- | --- | ------------ | --- | --- | --- | --- | --- | ------- | --- | --- |
-â€˜differenceâ€™ of tiger.
+'difference' of tiger.
 | ïƒ˜When  |     |     | the  |     | genus  |     |     | is  |     | qualified,  |     |     |     | we  |     | get  |     | the  |     |
 | ------ | --- | --- | ---- | --- | ------ | --- | --- | --- | --- | ----------- | --- | --- | --- | --- | --- | ---- | --- | ---- | --- |
-â€˜speciesâ€™ (that is, the word to be defined).
+'species' (that is, the word to be defined).
 
 |      | definition  |     |     | by  | genus  | and  | difference  |     |     | is  easy  | to  |
 | ---- | ----------- | --- | --- | --- | ------ | ---- | ----------- | --- | --- | --------- | --- |
@@ -2038,10 +2038,10 @@ construct.
 narrow it down so that it means the same thing as
 the term being defined. Example
    Species              Difference                Genus
-â€¢    Ice                       means                    frozen water.
-â€¢   Husband            means                    married  man.
-â€¢  Mother                means                    female parent
-â€¢   Tiger                    means
+•     Ice                       means                    frozen water.
+•    Husband            means                    married  man.
+•   Mother                means                    female parent
+•    Tiger                    means
 a large, stripped and
        ferocious feline
 
@@ -2077,7 +2077,7 @@ In other words, the definiens of a synonymous
 | --- | ----------- | --- | ----- | -------- | --- | --- | ---- | --- | --- | --- | --- | ---- |
 definiendum.
 
-â€¢ Criteria for Lexical Definitions
+•  Criteria for Lexical Definitions
 | Rule1:A  |     | Lexical  |     | definition  |     | should  |     | match  | to  | the  |
 | -------- | --- | -------- | --- | ----------- | --- | ------- | --- | ------ | --- | ---- |
 standards of proper grammar.
@@ -2088,12 +2088,12 @@ standards of proper grammar.
 meaning of terms.
 ïƒ˜ Examples:  Consider  the  following  definitions  that  are
 grammatically incorrect are as follows:
-ïƒ¼ Vacation is when you donâ€™t have to go to work or school.
-ïƒ¼ Furious means if youâ€™re angry at someone.
+ïƒ¼ Vacation is when you don't have to go to work or school.
+ïƒ¼ Furious means if you're angry at someone.
 ïƒ˜  The corrected versions are:
-ïƒ¼ â€˜â€˜Vacationâ€™â€™  means  a  period  during  which  activity  is
+ïƒ¼ ''Vacation''  means  a  period  during  which  activity  is
 suspended from work or school.
-ïƒ¼ â€˜â€˜Furiousâ€™â€™   means a condition of being angry.
+ïƒ¼ ''Furious''   means a condition of being angry.
 
 |   Rule  |     | 2:A  |     | lexical  |     |     | definition  |     |     |     |     | should  |     |     | convey  |     |     |     | or  |
 | ------- | --- | ---- | --- | -------- | --- | --- | ----------- | --- | --- | --- | --- | ------- | --- | --- | ------- | --- | --- | --- | --- |
@@ -2104,19 +2104,19 @@ the word being defined.
 | ----------- | --- | --- | ----- | --- | -------- | --- | ---------- | --- | --- | --- | ---- | ---- | ------------ | --- | --- | --- | ---------- | --- | --- |
 | things      |     | as  | the   |     | members  |     |            |     |     | of  | the  |      | relevant     |     |     |     | group.     |     |     |
 Example:
-ïƒ˜ â€˜â€˜Human beingâ€™â€™ means a featherless biped.
+ïƒ˜ ''Human being'' means a featherless biped.
 | ïƒ˜ This     |     | definition  |             |     |     | fails  |       | to  |              | says  |     | nothing  |        |     | about  |     |         |     | the  |
 | ---------- | --- | ----------- | ----------- | --- | --- | ------ | ----- | --- | ------------ | ----- | --- | -------- | ------ | --- | ------ | --- | ------- | --- | ---- |
 | important  |     |             | attributes  |     |     |        | that  |     | distinguish  |       |     |          | human  |     |        |     | beings  |     |      |
 from the other.
 | ïƒ˜A  | correct  |     |     | and  |     | adequate  |     |     |     |     | definition  |     |     |     | would  |     |     |     | be  |
 | --- | -------- | --- | --- | ---- | --- | --------- | --- | --- | --- | --- | ----------- | --- | --- | --- | ------ | --- | --- | --- | --- |
-â€œHuman beingâ€ means â€œthe rational animal that has
-| the  | capacity  |     |     | to  | reason  |     |     | and  |     | to  | speakâ€  |     |     | and  |     | not  |     | as  | a   |
+"Human being" means "the rational animal that has
+| the  | capacity  |     |     | to  | reason  |     |     | and  |     | to  | speak"  |     |     | and  |     | not  |     | as  | a   |
 | ---- | --------- | --- | --- | --- | ------- | --- | --- | ---- | --- | --- | ------- | --- | --- | ---- | --- | ---- | --- | --- | --- |
 featherless biped.
 
-| â€¢ Rule  |     | 3:  | A  lexical  |     |     | definition  |     | should  |     |     | be  | neither  |     |
+| •  Rule  |     | 3:  | A  lexical  |     |     | definition  |     | should  |     |     | be  | neither  |     |
 | ------- | --- | --- | ----------- | --- | --- | ----------- | --- | ------- | --- | --- | --- | -------- | --- |
 too broad nor narrow.
 ïƒ˜If  a  definition  is  too  broad,  the  definiens  includes
@@ -2140,20 +2140,20 @@ things to which the definiens does not.
 ïƒ˜In a too narrow definition the definiendum is greater than
 the definiens.
 Examples: The following definitions are broad
-ïƒ¼ â€˜â€˜Birdsâ€™â€™ means any warm-blooded animals having
+ïƒ¼ ''Birds'' means any warm-blooded animals having
 wings.
-ïƒ¼ â€œPenâ€ means an instrument used for writing.
-ïƒ˜In the first example, the phrase â€œany warm-blooded animal
-having wingsâ€ would include bats, and bats are not birds.
-ïƒ˜In the second example, the phrase â€œan instrument used for
-writing â€œ includes things like chalk, pencil, marker, pen,
+ïƒ¼ "Pen" means an instrument used for writing.
+ïƒ˜In the first example, the phrase "any warm-blooded animal
+having wings" would include bats, and bats are not birds.
+ïƒ˜In the second example, the phrase "an instrument used for
+writing " includes things like chalk, pencil, marker, pen,
 etc.
 
 Examples: The following definitions are narrow
-| ïƒ¼â€˜â€˜Birdâ€™â€™  |     |     | means  | warm-blooded,  |     | feathered  |     | animal  | that  |
+| ïƒ¼''Bird''  |     |     | means  | warm-blooded,  |     | feathered  |     | animal  | that  |
 | ---------- | --- | --- | ------ | -------------- | --- | ---------- | --- | ------- | ----- |
 can fly.
-ïƒ¼â€œGunâ€  means  a  tool  used  in  the  battle  for  defending
+ïƒ¼"Gun"  means  a  tool  used  in  the  battle  for  defending
 |     | the enemy.  |     |     |     |     |     |     |     |     |
 | --- | ----------- | --- | --- | --- | --- | --- | --- | --- | --- |
 ïƒ˜These two definitions would be too narrow.
@@ -2165,7 +2165,7 @@ which cannot fly.
 using a few attributes, that is, the definiens fails it
 include different attribute of gun.
 
-| â€¢   | Rule  |     | 4:  |     | A   | lexical  |     |     | definition  |     |     |     |     | should  |     | avoid  |     |     |
+| •    | Rule  |     | 4:  |     | A   | lexical  |     |     | definition  |     |     |     |     | should  |     | avoid  |     |     |
 | --- | ----- | --- | --- | --- | --- | -------- | --- | --- | ----------- | --- | --- | --- | --- | ------- | --- | ------ | --- | --- |
 circularity
 | ïƒ˜A  |     | circular  |     |     | definition  |     |     | presents  |     |     |     | the  |     | meaning  |     |     | of  | a   |
@@ -2175,10 +2175,10 @@ meaning in the definiens, or by using grammatical
 |     | variation  |     |     | of  |     | the  | same  | word  |     |     | (the  |     | definiendum)  |     |     |     |     | in  |
 | --- | ---------- | --- | --- | --- | --- | ---- | ----- | ----- | --- | --- | ----- | --- | ------------- | --- | --- | --- | --- | --- |
 the definiens. Examples:
-|     | ïƒ˜â€˜â€˜Religious  |     |     |     |     | â€™â€™  | means  | any  |     | one  |     | engaged  |     |     | in  | religious  |     |     |
+|     | ïƒ˜''Religious  |     |     |     |     | ''  | means  | any  |     | one  |     | engaged  |     |     | in  | religious  |     |     |
 | --- | ------------- | --- | --- | --- | --- | --- | ------ | ---- | --- | ---- | --- | -------- | --- | --- | --- | ---------- | --- | --- |
 activity.
-ïƒ˜â€˜â€˜Scientistâ€™â€™ means anyone who engages in science.
+ïƒ˜''Scientist'' means anyone who engages in science.
 | ïƒ˜A  |     | circular  |     |     | definition  |     |     | cannot  |     |     |     | provide any  |     |     |     | useful  |     |     |
 | --- | --- | --------- | --- | --- | ----------- | --- | --- | ------- | --- | --- | --- | ------------ | --- | --- | --- | ------- | --- | --- |
 additional information to the word being defined
@@ -2192,8 +2192,8 @@ when it can be affirmative.
 | Of  | the  | following  |     | two  | definitions,  |     | the  | first  | one  |
 | --- | ---- | ---------- | --- | ---- | ------------- | --- | ---- | ------ | ---- |
 negative, and the second affirmative: Example
-ïƒ¼â€˜â€˜Concordâ€™â€™ means the absence of discord.
-ïƒ¼â€œConcordâ€™â€™ means harmony.
+ïƒ¼''Concord'' means the absence of discord.
+ïƒ¼"Concord'' means harmony.
 | ïƒ˜ Thus,  | definition  |     | should  |     | explain  | what  | a   | term  | does  |
 | -------- | ----------- | --- | ------- | --- | -------- | ----- | --- | ----- | ----- |
 mean rather than what it does not mean.
@@ -2201,11 +2201,11 @@ mean rather than what it does not mean.
 | ---------- | --- | ------- | ------ | ------------ | --- | ----------- | -------------- | --- | ------ |
 | negative.  |     | For     | them,  | a  negative  |     | definition  |                | is  | quite  |
 appropriate. Example
-ïƒ¼â€˜â€˜Baldâ€™â€™ means lacking hair.
-ïƒ¼â€˜â€˜Darknessâ€™â€™ means the absence of light.
-ïƒ¼ â€œDeathâ€ means the end of life
+ïƒ¼''Bald'' means lacking hair.
+ïƒ¼''Darkness'' means the absence of light.
+ïƒ¼ "Death" means the end of life
 
-| â€¢   | Rule6:A    |     |     |     | lexical  |     |              | definition  |     |     |           | should  |     |     |         | not  |     |     | be  |
+| •    | Rule6:A    |     |     |     | lexical  |     |              | definition  |     |     |           | should  |     |     |         | not  |     |     | be  |
 | --- | ---------- | --- | --- | --- | -------- | --- | ------------ | ----------- | --- | --- | --------- | ------- | --- | --- | ------- | ---- | --- | --- | --- |
 |     | expressed  |     |     |     | in       |     | figurative,  |             |     |     | obscure,  |         |     |     | vague,  |      |     |     | or  |
 ambiguous language.
@@ -2217,11 +2217,11 @@ phrase used in the imaginative way.
 |     | a   | picture  |     | (describes  |     |     |     | the  | thing  |     | in  | a   |     | particular  |     |     |     | way)  |     |
 | --- | --- | -------- | --- | ----------- | --- | --- | --- | ---- | ------ | --- | --- | --- | --- | ----------- | --- | --- | --- | ----- | --- |
 instead of exposing the essential meaning of a term.
-| ïƒ˜Example1:  |     |     |     |     |     | If  | you  | define  |     | â€˜architectureâ€™  |     |     |     |     |     | as  | frozen  |     |     |
+| ïƒ˜Example1:  |     |     |     |     |     | If  | you  | define  |     | 'architecture'  |     |     |     |     |     | as  | frozen  |     |     |
 | ----------- | --- | --- | --- | --- | --- | --- | ---- | ------- | --- | --------------- | --- | --- | --- | --- | --- | --- | ------- | --- | --- |
 music, you are expressing it in figurative language.
 ïƒ˜Example
-|     |         |     |      |     | 2:   | If  | you   | define  |             |     | â€˜camelâ€™  |     |     | as  | ship  |             | of  |     | the  |
+|     |         |     |      |     | 2:   | If  | you   | define  |             |     | 'camel'  |     |     | as  | ship  |             | of  |     | the  |
 | --- | ------- | --- | ---- | --- | ---- | --- | ----- | ------- | ----------- | --- | -------- | --- | --- | --- | ----- | ----------- | --- | --- | ---- |
 |     | desert  |     | you  |     | are  |     | also  |         | expressing  |     |          |     | it  | in  |       | figurative  |     |     |      |
 language.
@@ -2231,23 +2231,23 @@ language.
 | ------- | --- | --- | ---------- | --- | --- | --- | -------------- | --- | --- | --- | --------- | --- | --- | --- |
 expression. One source of obscurity is excessively technical
 language. Examples
-|     | â€˜â€˜Bunnyâ€™â€™  |     |     | means  |     | a   | mammalian  |     |     | of  | the  |     | family  |     |
+|     | ''Bunny''  |     |     | means  |     | a   | mammalian  |     |     | of  | the  |     | family  |     |
 | --- | ---------- | --- | --- | ------ | --- | --- | ---------- | --- | --- | --- | ---- | --- | ------- | --- |
 ïƒ˜
 |     | Leporidae  |     | of  | the  | order  |     | Lagomorpha  |     |     | whose  |     | young  |     | are  |
 | --- | ---------- | --- | --- | ---- | ------ | --- | ----------- | --- | --- | ------ | --- | ------ | --- | ---- |
 born furless and blind.
-ïƒ˜â€˜â€˜Bunnyâ€™â€™  means  a  rabbit.  The  problem  lies  not  with
+ïƒ˜''Bunny''  means  a  rabbit.  The  problem  lies  not  with
 technical language as such but with needlessly technical
-|     | language.  |     | Because  |     |     | â€˜â€˜bunnyâ€™â€™  |     | is  | very  |     | much  |     | a   | no  |
+|     | language.  |     | Because  |     |     | ''bunny''  |     | is  | very  |     | much  |     | a   | no  |
 | --- | ---------- | --- | -------- | --- | --- | ---------- | --- | --- | ----- | --- | ----- | --- | --- | --- |
 technical term, no technical definition is needed.
 ïƒ˜A definition is vague if it lacks precision or if its meaning
-is unclearâ€”that is, if there is no way of telling exactly what
+is unclear—that is, if there is no way of telling exactly what
 class of things the definiens refers to.
 
-â€¢ Example:
-| ïƒ¼â€˜â€˜Democracyâ€™â€™  |     | means  |     | a   | kind  | of  | government  |     | where  | the  |
+•  Example:
+| ïƒ¼''Democracy''  |     | means  |     | a   | kind  | of  | government  |     | where  | the  |
 | --------------- | --- | ------ | --- | --- | ----- | --- | ----------- | --- | ------ | ---- |
 people are in control.
 ïƒ˜This definition fails to identify the people who are
@@ -2257,10 +2257,10 @@ what they are in control of.
 | ïƒ˜  A  | definition  |     | is  ambiguous  |     |     |     | if  it  | lends  | itself  | to  |
 | ----- | ----------- | --- | -------------- | --- | --- | --- | ------- | ------ | ------- | --- |
 more than one different interpretation.
-â€¢ Example:
-|     | Triangleâ€™â€™  | means  |     | a  figure  |     | composed  |     | of  three  | straight  |     |
+•  Example:
+|     | Triangle''  | means  |     | a  figure  |     | composed  |     | of  three  | straight  |     |
 | --- | ----------- | ------ | --- | ---------- | --- | --------- | --- | ---------- | --------- | --- |
-ïƒ¼â€˜â€˜
+ïƒ¼''
 lines in which all the angles are equal to 1800.
 ïƒ˜ Does this mean that each angle separately is equal to 1800
 or that the angles taken together are equal to 1800?
@@ -2275,13 +2275,13 @@ facetious  (inappropriate)  language  and  any  other  kind  of
 |                                                  |     |        |       |                |     |            |     | :   |
 | ------------------------------------------------ | --- | ------ | ----- | -------------- | --- | ---------- | --- | --- |
 | language that is liable to influence attitudes.  |     |        |       |                |     | Examples   |     |     |
-| ïƒ¼â€˜â€˜Communismâ€™â€™                                   |     | means  | that  | â€˜â€˜brilliantâ€™â€™  |     | invention  |     | of  |
+| ïƒ¼''Communism''                                   |     | means  | that  | ''brilliant''  |     | invention  |     | of  |
 Karl Marx and other foolish political visionaries.
 ïƒ˜ The intended meaning is the opposite of what is meant by
 brilliant. This is what we call a sarcastic use of language.
 ïƒ˜Dear learner, again look at the following examples:
-ïƒ¼  â€œEthiopiaâ€ is a country of illiterate and hungry people.
-ïƒ¼  â€œAfricansâ€ are uncivilized and have no history.
+ïƒ¼  "Ethiopia" is a country of illiterate and hungry people.
+ïƒ¼  "Africans" are uncivilized and have no history.
 
 |   Rule  |     |     | 8:  | A  lexical  |     |     | definition  |     |     |     | should  |     |     | indicate  |     |     |     | the  |
 | ------- | --- | --- | --- | ----------- | --- | --- | ----------- | --- | --- | --- | ------- | --- | --- | --------- | --- | --- | --- | ---- |
@@ -2291,20 +2291,20 @@ context to which the definiens pertains
 | --- | ------------ | --- | ---------- | --- | ------ | --- | --- | ---------- | --- | -------- | --- | --------- | --- | --- | ---------- | --- | --- | ---- |
 |     | definiendum  |     |            |     | means  |     |     | different  |     |          |     | meanings  |     |     |            |     | in  | the  |
 different context. Examples:
-ïƒ¼â€˜â€˜Strikeâ€™â€™ means (in baseball) a pitch at which a
+ïƒ¼''Strike'' means (in baseball) a pitch at which a
 batter swings and misses.
-|     | ïƒ¼â€˜â€˜Strikeâ€™â€™  |     |     |     | means  |     |     | (in  | fishing)  |     |     | a   | pull  |     | and  |     | a   | line  |
+|     | ïƒ¼''Strike''  |     |     |     | means  |     |     | (in  | fishing)  |     |     | a   | pull  |     | and  |     | a   | line  |
 | --- | ------------ | --- | --- | --- | ------ | --- | --- | ---- | --------- | --- | --- | --- | ----- | --- | ---- | --- | --- | ----- |
 made by a fish in taking the bait.
-| ïƒ˜In        |     | the  |     | above     | definitions  |     |     |      |     | at  term   |     | â€œstrikeâ€  |           |     |     | has  |        | two  |
+| ïƒ˜In        |     | the  |     | above     | definitions  |     |     |      |     | at  term   |     | "strike"  |           |     |     | has  |        | two  |
 | ---------- | --- | ---- | --- | --------- | ------------ | --- | --- | ---- | --- | ---------- | --- | --------- | --------- | --- | --- | ---- | ------ | ---- |
 | different  |     |      |     | meanings  |              |     | in  | the  |     | different  |     |           | contexts  |     |     |      | given  |      |
 above (baseball and fishing).
 
-â€¢ CHAPTER FOUR
-â€¢ 4.1.BASIC CONCEPTS OF CRITICAL
+•  CHAPTER FOUR
+•  4.1.BASIC CONCEPTS OF CRITICAL
 THINKING
-â€¢ 4.1.1. Meaning of Critical Thinking
+•  4.1.1. Meaning of Critical Thinking
 ïƒ˜
 Critical thinking can be defined as
 | ïƒ˜A  | wide  | range  |     | of  cognitive  |     | skills  | and  | intellectual  |     |     |
@@ -2344,11 +2344,11 @@ conclusions.
 critical thinking as
 ïƒ¼an active, persistent, and careful consideration of a
 belief or supposed form of knowledge
-ï‚§ â€˜activeâ€™ ,refers think things through for yourself, raise
+•  'active' ,refers think things through for yourself, raise
 questions yourself, find relevant information yourself
 and so on, rather than learning in a largely passive way
 from someone else.
-ï‚§ â€˜persistentâ€™ and â€˜careful considerationâ€™-- Dewey
+•  'persistent' and 'careful consideration'-- Dewey
 contrasting critical thinking with the kind of unreflective
 thinking we all sometimes engage in .
 ïƒ˜ For example, we sometimes jump to a conclusion or make a
@@ -2361,7 +2361,7 @@ believing something and the implications of our beliefs.
 |     | 1.An  | attitude  |     | of  | being  |     | disposed  |     | to  consider  |     |     | in  a  |
 | --- | ----- | --------- | --- | --- | ------ | --- | --------- | --- | ------------- | --- | --- | ------ |
 thoughtful way the problems and subjects that come
-within the range of oneâ€™s experience;
+within the range of one's experience;
 |     | 2.Knowledge  |     |     | of  the  |     | methods  |     | of  logical  |     | enquiry  |     | and  |
 | --- | ------------ | --- | --- | -------- | --- | -------- | --- | ------------ | --- | -------- | --- | ---- |
 reasoning; and
@@ -2371,14 +2371,14 @@ reasoning; and
 | ------------- | --- | --- | ----------- | --- | --- | --------- | --- | ----- | --- | -------- | --- | --- |
 .
 deciding what to believe or do
-ïƒ¼So  â€˜deciding  what  to  .  .  .  doâ€™,  or  decision-making  is
-| an  | important  |     | part  |     | of  | critical  |     | thinking  |     | in  | Ennisâ€™s  |     |
+ïƒ¼So  'deciding  what  to  .  .  .  do',  or  decision-making  is
+| an  | important  |     | part  |     | of  | critical  |     | thinking  |     | in  | Ennis's  |     |
 | --- | ---------- | --- | ----- | --- | --- | --------- | --- | --------- | --- | --- | -------- | --- |
 conception.
-â€¢
+• 
 
 ïƒ˜ For Richard Paul Critical thinking is Mode of thinking
-about any subject, content or problem â€“ in which the
+about any subject, content or problem – in which the
 thinker improves the quality of his or her thinking by
 skillful thinking and imposing intellectual standards upon
 them. Paul associates critical thinking with reflecting on
@@ -2386,31 +2386,31 @@ thoughts.
 ïƒ˜ Michael Scriven has defined critical thinking as skilled
 and active interpretation and evaluation of observations
 and communications, information and argumentation.
-ïƒ¼ interpretationâ€˜ of texts, speech, film, graphics, actions
+ïƒ¼ interpretation' of texts, speech, film, graphics, actions
 and e body language helps to construct and select the
 best alternatives
 ïƒ¼evaluating the truth, probability or reliability of claims.
 Evaluation is the process of determining the merit,
-quality, worth, or value of somethingâ€˜
+quality, worth, or value of something'
 
 ïƒ˜According to Scriven to be critical, thinking has
 to meet certain standards like clarity, relevance,
 reasonableness and so on.
 | ïƒ˜Critical  |                    |     | thinking  |     | is         | sometimes  |     |       | referred  |       |     | to  | as   |
 | ---------- | ------------------ | --- | --------- | --- | ---------- | ---------- | --- | ----- | --------- | ----- | --- | --- | ---- |
-|            | â€˜criticocreativeâ€™  |     |           |     | thinking.  |            |     | This  |           | word  |     | is  | the  |
+|            | 'criticocreative'  |     |           |     | thinking.  |            |     | This  |           | word  |     | is  | the  |
 combination of two words: critical and creative.
 | ïƒ˜This  |     | is  | because  |     | critical  |     | thinking  |     |     | is  | a   | kind  | of  |
 | ------ | --- | --- | -------- | --- | --------- | --- | --------- | --- | --- | --- | --- | ----- | --- |
-evaluative thinking â€“ which
-ïƒ¼involves both criticism and creative thinking â€“
+evaluative thinking – which
+ïƒ¼involves both criticism and creative thinking –
 and
 |     | ïƒ¼particularly  |     |     | concerned  |           |     | with  |     | the  |            | quality  |     | of  |
 | --- | -------------- | --- | --- | ---------- | --------- | --- | ----- | --- | ---- | ---------- | -------- | --- | --- |
 |     | reasoning      |     |     | or         | argument  |     | that  |     | is   | presented  |          |     | in  |
 support of a belief, or a course of action.
 
-â€¢ Standards of Critical Thinking
+•  Standards of Critical Thinking
 ïƒ˜To identify a critical thinking from the uncritical, we
 refer to some standards.
 ïƒ˜The most important intellectual standards are clarity,
@@ -2426,17 +2426,17 @@ free of obscurity and vagueness.
 | ------- | --------- | --- | ------ | ----- | --- | ------ | --- | -------- | ------ | -------------- | ---- | --------- | --- |
 | though  |           | we  | think  |       | we  | have   |     | precise  |        | understanding  |      |           | of  |
 them.
-â€¢ 3. Accuracy: refers to correct/genuine information.
+•  3. Accuracy: refers to correct/genuine information.
 ïƒ˜ Decision based on wrong and false information will
 likely to result in distorting realities.
 
-â€¢ 4.
+•  4.
 Relevance: refers to the connections of ideas
 | ïƒ˜Critical  |     | thinkers  |     | carefully  |     | choose  | only  | the  |
 | ---------- | --- | --------- | --- | ---------- | --- | ------- | ----- | ---- |
 information that has logical relation with the ideas at
 hands
-â€¢
+• 
 5.  Consistency:-  refers  to  the  quality  of  having  the
 same opinions or standards.
 ïƒ˜Logic
@@ -2453,7 +2453,7 @@ both or all be true) about a particular matter.
 | ----------- | --- | --------------- | --- | --- | ------ | --------- | ------- | ---- |
 thing and doing another.
 
-| â€¢   | 6.            |     | Logical  |     |      |     |       | Correctness:-  |     |           |     |     |     |               |      | When  |     |           | the  |
+| •    | 6.            |     | Logical  |     |      |     |       | Correctness:-  |     |           |     |     |     |               |      | When  |     |           | the  |
 | --- | ------------- | --- | -------- | --- | ---- | --- | ----- | -------------- | --- | --------- | --- | --- | --- | ------------- | ---- | ----- | --- | --------- | ---- |
 |     | combinations  |     |          |     |      |     |       | of             |     | thoughts  |     |     |     |               | are  |       |     | mutually  |      |
 |     | supporting    |     |          |     | and  |     | make  |                |     | sense     |     |     | in  | combination,  |      |       |     |           | the  |
@@ -2462,20 +2462,20 @@ thinking is logical.
 | --- | ---------- | --- | ------ | --- | ---------- | --- | ----- | --- | --- | --- | ---- | --- | --------- | ------- | --- | --- | --- | ----------- | ----- |
 |     | therefore  |     |        |     | we         |     | need  |     |     | to  | use  |     | accurate  |         |     |     |     | and         | well  |
 supported beliefs.
-| â€¢   | 7.   | Completeness |     |             |     |     |     |     | eep   |     | and      |     |     | complete  |      |     |              | thinking  |     |
+| •    | 7.   | Completeness |     |             |     |     |     |     | eep   |     | and      |     |     | complete  |      |     |              | thinking  |     |
 | --- | ---- | ------------ | --- | ----------- | --- | --- | --- | --- | ----- | --- | -------- | --- | --- | --------- | ---- | --- | ------------ | --------- | --- |
 |     |      |              |     |             |     |     |     | :   | D     |     |          |     |     |           |      |     |              |           |     |
 |     | are  | more         |     | preferable  |     |     |     |     | than  |     | shallow  |     |     |           | and  |     | superficial  |           |     |
 thinking. Thinking is better when it is deep rather
 than shallow, thorough rather than superficial.
-| â€¢   | 8.  | Fairness  |     |     |     | :-  |     |         |     |     |       |     |     |          |     |     |     |             |     |
+| •    | 8.  | Fairness  |     |     |     | :-  |     |         |     |     |       |     |     |          |     |     |     |             |     |
 | --- | --- | --------- | --- | --- | --- | --- | --- | ------- | --- | --- | ----- | --- | --- | -------- | --- | --- | --- | ----------- | --- |
 |     |     |           |     |     |     |     |     | Refers  |     |     | open  |     |     | minded,  |     |     |     | impartial,  |     |
 and free of distorting biases and preconceptions.
 
-â€“ Principles of Good Argument
+– Principles of Good Argument
 The Structural Principle
-â€¢ 1.
+•  1.
 | ïƒ˜   | An          | argument  |     |               | should  |     | meet  |     | the  | fundamental  |              |     |     |
 | --- | ----------- | --------- | --- | ------------- | ------- | --- | ----- | --- | ---- | ------------ | ------------ | --- | --- |
 |     | structural  |           |     | requirements  |         |     |       | of  |      | a            | well-formed  |     |     |
@@ -2492,7 +2492,7 @@ premises, in the case of deductive arguments, or
 premises, in the case of inductive arguments.
 
 The Relevance Principle
-â€¢ 2.
+•  2.
 ïƒ˜An argument should set forth only reasons whose
 | truth  | provides  | some  |     | evidence  | for  | the  | truth  | of  | the  |
 | ------ | --------- | ----- | --- | --------- | ---- | ---- | ------ | --- | ---- |
@@ -2500,35 +2500,35 @@ conclusion.
 | ïƒ˜The  | premises  |     | of  | a  good  | argument  |     | must  |     | be  |
 | ----- | --------- | --- | --- | -------- | --------- | --- | ----- | --- | --- |
 relevant to the truth or merit of the conclusion.
-â€¢ 3. The Acceptability Principle
+•  3. The Acceptability Principle
 | ïƒ˜The  | reasons  | set  | forth  | in  support  |     | of  a  | conclusion  |     |     |
 | ----- | -------- | ---- | ------ | ------------ | --- | ------ | ----------- | --- | --- |
 must be acceptable.
 
-â€¢ 4. The Sufficiency Principle
+•  4. The Sufficiency Principle
 | ïƒ˜   | An        | argument  |     |       | should      |           | attempt  |      |          | to          | provide  |     |      |
 | --- | --------- | --------- | --- | ----- | ----------- | --------- | -------- | ---- | -------- | ----------- | -------- | --- | ---- |
 |     | relevant  |           |     | and   | acceptable  |           |          |      | reasons  |             |          | of  | the  |
 |     | right     | kind,     |     | that  |             | together  |          | are  |          | sufficient  |          |     | in   |
 |     | number    |           |     | and   |             | weight    |          | to   |          | justify     |          |     | the  |
 acceptance of the conclusion.
-â€¢ 5. The Rebuttal Principle
+•  5. The Rebuttal Principle
 | ïƒ˜   | An        | argument  |     |      |              | should  | be  |          | with  |     | effective   |     |     |
 | --- | --------- | --------- | --- | ---- | ------------ | ------- | --- | -------- | ----- | --- | ----------- | --- | --- |
 |     | rebuttal  |           | to  | all  | anticipated  |         |     | serious  |       |     | criticisms  |     |     |
 that may be brought against it.
 
-â€“ Principles of Critical Thinking
-â€¢  1. The Fallibility Principle
+– Principles of Critical Thinking
+•   1. The Fallibility Principle
 | ïƒ˜   | Each   | participant  |     |     |          | in  | a   | discussion  |             |     | of   | a   | disputed  |     |       |
 | --- | ------ | ------------ | --- | --- | -------- | --- | --- | ----------- | ----------- | --- | ---- | --- | --------- | --- | ----- |
 |     | issue  | should       |     | be  | willing  |     |     |             | to  accept  |     | the  |     | fact      |     | that  |
 he or she is imperfect.
-| ïƒ˜   | One   | must  | acknowledge  |     |     |      |     |       | that  | oneâ€™s       |     | own  |           | initial  |     |
+| ïƒ˜   | One   | must  | acknowledge  |     |     |      |     |       | that  | one's       |     | own  |           | initial  |     |
 | --- | ----- | ----- | ------------ | --- | --- | ---- | --- | ----- | ----- | ----------- | --- | ---- | --------- | -------- | --- |
 |     | view  | may   | not          |     | be  | the  |     | most  |       | defensible  |     |      | position  |          |     |
 on the question.
-â€¢ 2. The Truth Seeking Principle
+•  2. The Truth Seeking Principle
 | ïƒ˜   | Each  | participant  |     |     |     | should  |     |     | be  | committed  |     |     |     | to  | the  |
 | --- | ----- | ------------ | --- | --- | --- | ------- | --- | --- | --- | ---------- | --- | --- | --- | --- | ---- |
 task of seriously searching for the truth
@@ -2538,14 +2538,14 @@ task of seriously searching for the truth
 |     | positions  |         | seriously  |     |          |     | and  |     | look         | for  | insights  |              |     | in  | the  |
 positions of others.
 
-â€¢ 3. The Clarity Principle
+•  3. The Clarity Principle
 | ïƒ˜It  | requires  |     | that  | the  | formulations  |     |     | of  all  | positions,  |     |
 | ---- | --------- | --- | ----- | ---- | ------------- | --- | --- | -------- | ----------- | --- |
 defenses, and attacks should be free of any kind
 | of  | linguistic confusion  |     |     |     |     | and  | clearly  | separated  |     | from  |
 | --- | --------------------- | --- | --- | --- | --- | ---- | -------- | ---------- | --- | ----- |
 other positions and issues.
-â€¢ 4. The Burden of Proof Principle
+•  4. The Burden of Proof Principle
 ïƒ˜This principle requires that the burden of proof for
 | any  |     | position  |     | usually  |     | rests  | on  | the  | participant  |     |
 | ---- | --- | --------- | --- | -------- | --- | ------ | --- | ---- | ------------ | --- |
@@ -2553,10 +2553,10 @@ who sets forth the position.
 | ïƒ˜If  | an  | opponent  |     | asks  | the  | proponent  |     | should  |     | provide  |
 | ---- | --- | --------- | --- | ----- | ---- | ---------- | --- | ------- | --- | -------- |
 an argument for that position.
-â€¢
+• 
 
-â€¢ 5. The Principle of Charity
-ïƒ˜If a participantâ€™s argument is reformulated by an
+•  5. The Principle of Charity
+ïƒ˜If a participant's argument is reformulated by an
 opponent, it should be carefully expressed in its
 strongest possible version that is consistent with
 what is believed to be the original intention of the
@@ -2568,7 +2568,7 @@ arguer.
 possible, given the opportunity to amend it.
 
 .
-| â€¢   | 6          | The Suspension of Judgment Principle   |            |     |       |     |                 |           |            |     |       |       |     |     |        |           |            |       |     |
+| •    | 6          | The Suspension of Judgment Principle   |            |     |       |     |                 |           |            |     |       |       |     |     |        |           |            |       |     |
 | --- | ---------- | -------------------------------------- | ---------- | --- | ----- | --- | --------------- | --------- | ---------- | --- | ----- | ----- | --- | --- | ------ | --------- | ---------- | ----- | --- |
 | ïƒ˜   | This       |                                        | principle  |     |       |     |                 | requires  |            |     | that  |       | if  | no  |        | position  |            |       | is  |
 |     | defended   |                                        |            |     | by a  |     | good            |           | argument,  |     |       |       | or  |     | if     | two or    |            | more  |     |
@@ -2640,7 +2640,7 @@ balance view.
 than being controlled by them, and thinking before
 acting.
 
-â€“ Basic Traits of Uncritical Thinkers
+– Basic Traits of Uncritical Thinkers
 ïƒ˜Some traits of uncritical thinkers includes:-
 ïƒ¼Believe they know more than they do, ignore their
 limitations, and assume their views are error-free.
@@ -2654,15 +2654,15 @@ reactions. And tend to follow their feelings
 and
 ïƒ¼Are unwilling to pay attention to others' views. At the
 first sign of disagreement, they tend to think, "How can I
-refute this?â€œ
+refute this?"
 ïƒ¼Ignore the need for balance and give preference to views
 that support their established views.
 
-â€¢ Key intellectual traits of critical thinkers and
+•  Key intellectual traits of critical thinkers and
 the relevant traits of uncritical thinkers
 ïƒ˜First, critical thinkers have a passionate drive
 for clarity, precision, accuracy, and other critical
-thinking standards while uncritical thinkerâ€™s are
+thinking standards while uncritical thinker's are
 unclear, imprecise, and inaccurate.
 ïƒ˜In addition to this, critical thinkers are sensitive to
 ways in which critical thinking can be skewed
@@ -2700,7 +2700,7 @@ world, whereas uncritical thinkers lack awareness of their
 own biases and preconceptions.
 ïƒ˜Fifth, critical thinkers think independently and are not
 afraid to disagree with group opinion whereas uncritical
-thinkers tend to engage in â€œgroupthinkâ€ uncritically
+thinkers tend to engage in "groupthink" uncritically
 following the beliefs and values of the crowd.
 ïƒ˜Moreover, critical thinkers have the intellectual courage
 to face and assess fairly ideas that challenge even their
@@ -2710,31 +2710,31 @@ resist ideas that challenge their basic beliefs..
 despite obstacles or difficulties whereas uncritical thinkers
 are often relatively indifferent to truth and lack curiosity.
 
-â€¢ Barriers to Critical Thinking
+•  Barriers to Critical Thinking
 ïƒ˜Egocentrism, Sociocentrism, Unwarranted Assumptions
 and Stereotypes, Relativistic Thinking and Wishful
 Thinking are some of the barriers to Critical Thinking
-â€¢ 1. Egocentrism
+•  1. Egocentrism
 ïƒ˜Egocentrism is the tendency to see reality as centered on
 oneself.
 ïƒ˜Egocentrics are selfish, self-absorbed people who view
 their interests, ideas, and values as superior to everyone
-elseâ€™s.
+else's.
 ïƒ˜Two common forms Egocentrism are self-interested
 thinking and the superiority bias.
 ïƒ˜Self-interested thinking is the tendency to accept and
-defend beliefs that harmonize with oneâ€™s self-interest.
+defend beliefs that harmonize with one's self-interest.
 Almost no one is immune to self-interested thinking.
 ïƒ˜For example, most doctors support legislation making it more difficult
 for them to be sued for malpractice because they do not want to
 punish for mistakes committed in the workplace.
 
-| â€¢   | superiority  |     |     |     | bias  |      |     | (also        |     | known  |          |     | as  | illusory  |     |     |
+| •    | superiority  |     |     |     | bias  |      |     | (also        |     | known  |          |     | as  | illusory  |     |     |
 | --- | ------------ | --- | --- | --- | ----- | ---- | --- | ------------ | --- | ------ | -------- | --- | --- | --------- | --- | --- |
 |     | superiority  |     |     |     | or    | the  |     | better-than  |     |        | average  |     |     | effect)   |     | is  |
 the tendency to overrate oneself - to see oneself
 as better in some respect than one actually is.
-â€¢ 2. Sociocentrism
+•  2. Sociocentrism
 | ïƒ˜   | It is group-centered thinking and it can hinder  |     |     |           |     |     |     |     |           |     |     |              |     |     |     |     |
 | --- | ------------------------------------------------ | --- | --- | --------- | --- | --- | --- | --- | --------- | --- | --- | ------------ | --- | --- | --- | --- |
 |     | rational                                         |     |     | thinking  |     |     |     | by  | focusing  |     |     | excessively  |     |     |     | on  |
@@ -2745,7 +2745,7 @@ the group.
 |     | Sociocentrism  |      |          |     |      |           |       | are  |           | group      |     |     | bias  |        |        | and  |
 conformism.
 
-| ïƒ˜   | Group  |        | bias      |     | is  | the     | tendency  |             |     | to    | see  | oneâ€™s   | own   |     |
+| ïƒ˜   | Group  |        | bias      |     | is  | the     | tendency  |             |     | to    | see  | one's   | own   |     |
 | --- | ------ | ------ | --------- | --- | --- | ------- | --------- | ----------- | --- | ----- | ---- | ------- | ----- | --- |
 |     | group  |        | (nation,  |     |     | tribe,  |           | sect,       |     | peer  |      | group,  | and   |     |
 |     | the    | like)  |           | as  |     | being   |           | inherently  |     |       |      | better  | than  |     |
@@ -2775,18 +2775,18 @@ weather patterns,
 the instruments are accurate, and so forth.
 
 4. Relativistic Thinking
-â€¢
+• 
 ïƒ˜ Relativism is the view that truth is a matter of opinion. It
 is strongest challenges to critical thinking.
 ïƒ˜ There is no objective or absolute standard of truth.
 ïƒ˜ There are two popular forms of relativism: subjectivism
 and cultural relativism.
-â€¢ A. Subjectivism
+•  A. Subjectivism
 ïƒ˜ It is the view that truth is a matter of individual
 opinion.
 ïƒ˜ Whatever an individual believes is true, is true for that
-person, and there is no such thing as â€œobjectiveâ€ or
-â€œabsoluteâ€ truth, i.e., truth that exists independent of
+person, and there is no such thing as "objective" or
+"absolute" truth, i.e., truth that exists independent of
 .
 what anyone believes
 
@@ -2795,8 +2795,8 @@ wrong  and  Obang  believes  that  abortion  is  not  always
 | wrong.  | According  |          |     | to   | subjectivism,  |         | abortion  | is   | always  |
 | ------- | ---------- | -------- | --- | ---- | -------------- | ------- | --------- | ---- | ------- |
 | wrong   | for        | Abdella  |     | and  | not            | always  | wrong     | for  | Obang.  |
-Both beliefs are true â€“ for them.
-â€¢ B. Cultural Relativism
+Both beliefs are true – for them.
+•  B. Cultural Relativism
 ïƒ˜ It  believe  that  truth  is  a  matter  of  social  or  cultural
 | opinion.What  |     |     | is  | true  | is  whatever  |     | most  | people  | in  a  |
 | ------------- | --- | --- | --- | ----- | ------------- | --- | ----- | ------- | ------ |
@@ -2816,7 +2816,7 @@ believes is morally right and good.
 ïƒ˜  Moral subjectivism comes in two major forms: moral
 subjectivism and cultural moral relativism.
 Wishful Thinking
-â€¢ 5.
+•  5.
 ïƒ˜ It  refers  to  a  state  of  believing  something  not  because
 you  had  good  evidence  for  it  but  simply  because  you
 wished it were true.
@@ -2824,8 +2824,8 @@ wished it were true.
 | --------- | --------- | --- | -------- | --- | ---- | ------------------------ | --- | --- | --- | --- | --- |
 to render the universe less hostile and more predictable.
 
-â€¢ Benefits of Critical Thinking
-â€¢ Critical Thinking: Skills and Dispositions
+•  Benefits of Critical Thinking
+•  Critical Thinking: Skills and Dispositions
 ïƒ˜Critical thinking teaches
 | ïƒ˜how  | to  | raise  | and  |     | identify  |     |     | fundamental  |     |     | questions  |     |     |
 | ----- | --- | ------ | ---- | --- | --------- | --- | --- | ------------ | --- | --- | ---------- | --- | --- |
@@ -2846,16 +2846,16 @@ assumptions, implications
 | ïƒ˜Critical   |     |       | thinking  |      | is        | what   | university  |           |     | is        | all          | about.  |
 | ----------- | --- | ----- | --------- | ---- | --------- | ------ | ----------- | --------- | --- | --------- | ------------ | ------- |
 | University  |     |       | is        | not  | only      | about  |             | teaching  |     | students  |              | with    |
-| facts.      |     | Itâ€™s  | about     |      | teaching  |        | students    |           |     | to        | think(think  |         |
+| facts.      |     | It's  | about     |      | teaching  |        | students    |           |     | to        | think(think  |         |
 critically).
-â€¢ Critical Thinking in the Classroom
+•  Critical Thinking in the Classroom
 ïƒ˜Students  learn  a  variety  of  skills  that  can  greatly
 | improve  |     |     | their  | classroom  |     |     | performance.  |     |     |     | These  | skills  |
 | -------- | --- | --- | ------ | ---------- | --- | --- | ------------- | --- | --- | --- | ------ | ------- |
 include:
 ïƒ˜Understanding the arguments and beliefs of others
 ïƒ˜Critically evaluating those arguments and beliefs
-|     | ïƒ˜Developing  |     |     | and  |     | defending  |     |     | oneâ€™s  |     | own  | well- |
+|     | ïƒ˜Developing  |     |     | and  |     | defending  |     |     | one's  |     | own  | well- |
 | --- | ------------ | --- | --- | ---- | --- | ---------- | --- | --- | ------ | --- | ---- | ----- |
 supported arguments and beliefs
 
@@ -2880,8 +2880,8 @@ Reasoning
 &
 Fallacies
 
-3.1. The Meaning of â€˜Fallacyâ€™
-| ïƒ˜In  |     | ordinary  |     |     | language  |     |     | usage,  |     | the  | term  | â€˜fallacyâ€™  |     |     |
+3.1. The Meaning of 'Fallacy'
+| ïƒ˜In  |     | ordinary  |     |     | language  |     |     | usage,  |     | the  | term  | 'fallacy'  |     |     |
 | ---- | --- | --------- | --- | --- | --------- | --- | --- | ------- | --- | ---- | ----- | ---------- | --- | --- |
 refers to a mistaken or false belief.
 | ïƒ˜However,  |     |     |     | from  |     | the  | logician  |     | point  |     | of  | view,  |     | the  |
@@ -2927,8 +2927,8 @@ fallacy:
 ïƒ¼All mammals are animals.
 ïƒ¼Therefore, all tigers are mammals
 ïƒ˜ The above argument has the following form: Letter A,
-B, and C represents â€œtigersâ€, â€œanimalsâ€, and
-â€œmammalsâ€ ,respectively.
+B, and C represents "tigers", "animals", and
+"mammals" ,respectively.
 All A are B.
 All C are B.
 Therefore, all A are C.
@@ -2953,9 +2953,9 @@ structure or form of the argument.
 chlorophyll.
 
 ïƒ˜This argument has the following form: Letter A,
-| B,  | and  | C  represents  | â€œfactoriesâ€,  |     | â€œplantsâ€  |     | and  |
+| B,  | and  | C  represents  | "factories",  |     | "plants"  |     | and  |
 | --- | ---- | -------------- | ------------- | --- | --------- | --- | ---- |
-â€œchlorophyllâ€, respectively.
+"chlorophyll", respectively.
                            All A are B.
                            All B are C.
                           Therefore, All A are C.
@@ -2965,12 +2965,12 @@ the argument itself is valid.
 | ----- | ---- | --------- | --- | -------- | --- | ------ | --- |
 has true premises and false conclusion
 
-ïƒ˜ The word â€œplantâ€ is used in two different senses. In the
+ïƒ˜ The word "plant" is used in two different senses. In the
 first premise it means a building where something is
 manufactured, and in the second it means a life form.
 ïƒ˜ Hence, the argument has the following invalid form:
 (Remember that, two letters are used to indicate the
-different meaning of the word â€˜plantâ€™).
+different meaning of the word 'plant').
 All A are B.
 All C are D.
 Therefore, All A are D.
@@ -3064,13 +3064,13 @@ subject matter of the conclusion.
 ïƒ˜ Premises of an argument are full of threat, intimidation,
 scary words, etc.
 ïƒ˜ Thus, in this fallacy attempt is made to persuade others
-of oneâ€™s point of view by using threat of force, or
+of one's point of view by using threat of force, or
 psychological intimidation in any form,
 ïƒ˜ Indicating that some kind of unfortunate consequence
 will occur upon those who challenge to disagree with
 the idea presented in the argument.
 Examples:
-â€˜â€˜Meet ETVâ€™â€™ is the best show on ETV; and if you do
+''Meet ETV'' is the best show on ETV; and if you do
 ïƒ¼
 not believe it, I am going to call my big brother over
 here and he is going to beat you up.
@@ -3111,13 +3111,13 @@ between traffic Police and illegal driver; offices between
 employer and vacancy candidates; and the likes.
 Examples:
 ïƒ¼ A student to his instructor: Professor, this paper deserves
-at least a â€˜Bâ€™ grade. I stayed up all the night working on it.
-And if I do not get a â€˜Bâ€™, I will be on academic probation.
+at least a 'B' grade. I stayed up all the night working on it.
+And if I do not get a 'B', I will be on academic probation.
 
-ïƒ˜ The conclusion of this argument is â€œthis paper deserves
-at  least  a  â€˜Bâ€™  grade.â€  And  the  student  tries  to  support
-his conclusion using pitiable ideas such as â€˜I stayed up
-all the night â€˜and â€˜I will be in academic probationâ€™.
+ïƒ˜ The conclusion of this argument is "this paper deserves
+at  least  a  'B'  grade."  And  the  student  tries  to  support
+his conclusion using pitiable ideas such as 'I stayed up
+all the night 'and 'I will be in academic probation'.
 | ïƒ˜ The  | information  |     | the  | arguer  |     | has  | given  | might  |     | seem  |
 | ------ | ------------ | --- | ---- | ------- | --- | ---- | ------ | ------ | --- | ----- |
 relevant  and  might  even  get  the  audience  to  consider
@@ -3154,7 +3154,7 @@ acceptance for his/her conclusion.
 |     | propagandists,  |     |             |     |     | demagogues,  |       |           |     | preachers,  |     |          | advertisement  |     |       |     |     |
 workers and so forth.
 
-| ïƒ˜   | direct    | approach  |     |     |     |            | consist  |     |     | in               | the  |     | handling  |     |     |     | of  |     | oneâ€™s  |
+| ïƒ˜   | direct    | approach  |     |     |     |            | consist  |     |     | in               | the  |     | handling  |     |     |     | of  |     | one's  |
 | --- | --------- | --------- | --- | --- | --- | ---------- | -------- | --- | --- | ---------------- | ---- | --- | --------- | --- | --- | --- | --- | --- | ------ |
 |     | audience  |           |     |     | by  | appealing  |          |     |     | inappropriately  |      |     |           |     |     |     | to  |     | that   |
 love.
@@ -3201,14 +3201,14 @@ B. Appeal to Vanity
 | leaders,  |     | etc.  |           | and  | informs  |            |     | the  | audiences     |     | that  |            | if  | you  |
 buy and use the item you also will be admired.
 Examples:
-ïƒ¼â€œWho is going to wear this new fashion T-shirt worn
+ïƒ¼"Who is going to wear this new fashion T-shirt worn
 by the famous artist Gosaye for the new Ethiopian
-Millennium?â€
-ïƒ¼â€œWho is going to buy this new fashion Shoes, a shoe
+Millennium?"
+ïƒ¼"Who is going to buy this new fashion Shoes, a shoe
 |     |       |     |     |      |         |     | Haile  |     | G/  | Sellassie  |     |     | in  | the  |
 | --- | ----- | --- | --- | ---- | ------- | --- | ------ | --- | --- | ---------- | --- | --- | --- | ---- |
 |     | used  | by  |     | the  | famous  |     |        |     |     |            |     |     |     |      |
-London Marathon.â€
+London Marathon."
 | ïƒ˜ In        | the  | above  |       |     | examples  |     |         | T-  | shirt    | and  |         | shoe  |     | are  |
 | ----------- | ---- | ------ | ----- | --- | --------- | --- | ------- | --- | -------- | ---- | ------- | ----- | --- | ---- |
 | associated  |      |        | with  |     | the       |     | famous  |     | persons  |      | Gosaye  |       |     | and  |
@@ -3238,7 +3238,7 @@ Hominem)
 ïƒ˜ This fallacy always involves two arguers.
 | ïƒ˜ One  | can  | commit  |     | this  | fallacy  |     | if  someone  |     |     | refuses  | to  |
 | ------ | ---- | ------- | --- | ----- | -------- | --- | ------------ | --- | --- | -------- | --- |
-consider  his  or  her  opponentâ€™s  argument  on  its  merit
+consider  his  or  her  opponent's  argument  on  its  merit
 alone,  and  instead  attacks  his  or  her  opponent  on  the
 ground  of his belief, motive, religion, character, practice.
 ïƒ˜
@@ -3248,7 +3248,7 @@ The argument against the person occurs in three forms:
 circumstantial, and the tu quoque (You Too).
 4.1 Ad hominem abusive
 ïƒ˜
-Here  the  second  person  responds  to  the  first  personâ€™s
+Here  the  second  person  responds  to  the  first  person's
 | argument  |     | by  | verbally  |     | abusing  |     | the  | first  | person  |     | and  |
 | --------- | --- | --- | --------- | --- | -------- | --- | ---- | ------ | ------- | --- | ---- |
 discredits  the  character  of  the  opponent;  deny  his  or  her
@@ -3261,7 +3261,7 @@ gambler, and conservative.
 | --- | ----------- | --- | ---- | ------ | ---------- | --- | ---- | --- | ------ | ---- | ------------ | ----------- | --- | --- | -------------- | --- | ----- | ---------- | ----- |
 |     | irrelevant  |     |      |        | to         |     | the  |     | truth  |      | or           | falsehood   |     |     | of             |     | what  |            | that  |
 |     | person      |     |      | says,  |            |     | or   | to  |        | the  | correctness  |             |     | or  | incorrectness  |     |       |            |       |
-of that personâ€™s reasoning.
+of that person's reasoning.
 Examples:
 ïƒ¼How a stingy person can tell us about charity. Hence,
 |     |     | let  |     | us  | stop  |     | discussing  |     |     |     | about  |     | these  |     | issue  |     |     | raised  | by  |
@@ -3277,26 +3277,26 @@ the claim or argument itself.
 ïƒ˜ Instead  of  focusing  on  verbal  abuse  on  his  or  her
 | opponent,   |     | the       | respondent  |     | attempts      |     | to  | discredit  |          | the  |
 | ----------- | --- | --------- | ----------- | --- | ------------- | --- | --- | ---------- | -------- | ---- |
-| opponentâ€™s  |     | argument  |             | by  |   mentioning  |     |     |   to       | certain  |      |
+| opponent's  |     | argument  |             | by  |   mentioning  |     |     |   to       | certain  |      |
 circumstances that affect the opponent.
 ïƒ˜
-| It  | involves  |     | substituting  |     | an  | attack  |     | on  | personâ€™s  |     |
+| It  | involves  |     | substituting  |     | an  | attack  |     | on  | person's  |     |
 | --- | --------- | --- | ------------- | --- | --- | ------- | --- | --- | --------- | --- |
-circumstances  such  as  the  personâ€™s  religion,  political
+circumstances  such  as  the  person's  religion,  political
 | affiliation,  |     | ethnic  |     | background,  |     | position,  |     |     | etc  | for  |
 | ------------- | --- | ------- | --- | ------------ | --- | ---------- | --- | --- | ---- | ---- |
 evidences in an argument.
-ïƒ˜ It  has the  form â€œof  course  Mr. X  argues  this  way;  just
-look at the circumstance that affects him.â€
+ïƒ˜ It  has the  form "of  course  Mr. X  argues  this  way;  just
+look at the circumstance that affects him."
 ïƒ˜ Examples:
 ïƒ¼ Dr.  Tewodros  advocates  a  policy  of  increasing  financial
 spending  for  higher  education.    But  that  is  not  innocent
 advocacy,  for  the  reason  that  he  is  a  college  professor  and
 would benefit financially from such a policy.
 
-| 4.3.  |     | Tu  |     | quoque  |     |     |     | (â€˜â€˜you  |     | tooâ€™â€™):  |     | it  | is  | pronounced  |     |     |     | as  |
+| 4.3.  |     | Tu  |     | quoque  |     |     |     | (''you  |     | too''):  |     | it  | is  | pronounced  |     |     |     | as  |
 | ----- | --- | --- | --- | ------- | --- | --- | --- | ------- | --- | -------- | --- | --- | --- | ----------- | --- | --- | --- | --- |
-â€œtoo kwo_kwayâ€
+"too kwo_kway"
 
 | ïƒ˜   | The                                               |     | tu  | quoque  |     |        |     | (you  |      | too)       | fallacy  |     |     | begins  |     | the      | same  |     |
 | --- | ------------------------------------------------- | --- | --- | ------- | --- | ------ | --- | ----- | ---- | ---------- | -------- | --- | --- | ------- | --- | -------- | ----- | --- |
@@ -3304,17 +3304,17 @@ would benefit financially from such a policy.
 |     | argument, except that the second arguer attempts  |     |     |         |     |        |     |       |      |            |          |     |     |         |     |          |       | to  |
 make the first appear to be hypocritical or arguing in
 bad faith.
-ïƒ˜ â€œYou  also  or  you  do  it,  tooâ€  implies  that  personâ€™s
+ïƒ˜ "You  also  or  you  do  it,  too"  implies  that  person's
 action  are  not  consistent  (contradicts)  with  that  for
 which he or she is arguing.
 ïƒ˜ In  this  you  too  fallacy,  the  second  arguer  usually
 |     | accomplishes  |     |     |     |     |      | this  |        | by  | citing  |     | features  |     |           | in  the  |       | life  | or   |
 | --- | ------------- | --- | --- | --- | --- | ---- | ----- | ------ | --- | ------- | --- | --------- | --- | --------- | -------- | ----- | ----- | ---- |
 |     | behavior      |     |     |     | of  | the  |       | first  |     | arguer  |     | that      |     | conflict  |          | with  |       | the  |
-latterâ€™s conclusion. In effect, the second arguer says,
-|     | â€˜â€˜How  |     |     | dare  |     | you  |     | argue  |     | that  |     | I  should  |     |     | stop  | doing  |     | X;  |
+latter's conclusion. In effect, the second arguer says,
+|     | ''How  |     |     | dare  |     | you  |     | argue  |     | that  |     | I  should  |     |     | stop  | doing  |     | X;  |
 | --- | ------ | --- | --- | ----- | --- | ---- | --- | ------ | --- | ----- | --- | ---------- | --- | --- | ----- | ------ | --- | --- |
-why, you do (or have done) X yourself.â€™â€™
+why, you do (or have done) X yourself.''
 
  Examples:
 |     | ïƒ¼   | Child  |     |     | to  | parent:  |     |     | Your  |     | argument  |     |     | that  | I   | should  |     | stop  |     |
@@ -3325,7 +3325,7 @@ candy when you were a kid.
 
 | ïƒ˜   | Obviously,  |     |     |     |     | whether  |     |     |     | the  |     | parent    |     | stole     |     | candy  |          |     | is  |
 | --- | ----------- | --- | --- | --- | --- | -------- | --- | --- | --- | ---- | --- | --------- | --- | --------- | --- | ------ | -------- | --- | --- |
-|     | irrelevant  |     |     |     | to  | whether  |     |     |     | the  |     | parentâ€™s  |     | premises  |     |        | support  |     |     |
+|     | irrelevant  |     |     |     | to  | whether  |     |     |     | the  |     | parent's  |     | premises  |     |        | support  |     |     |
 the conclusion that the child should not steal candy.
 | ïƒ˜   | This     |     | is  | committed  |     |     |               |          | when  |            |      | one         | of  | the      | arguers   |       |      | (the   |     |
 | --- | -------- | --- | --- | ---------- | --- | --- | ------------- | -------- | ----- | ---------- | ---- | ----------- | --- | -------- | --------- | ----- | ---- | ------ | --- |
@@ -3342,7 +3342,7 @@ overweight?
 ïƒ˜ Determining  what  kind  of  person  someone  is  includes
 determining whether that person is trustworthy.
 ïƒ˜ Thus  personal  comments  are  often  relevant  in  evaluating
-|     | whether  |     |     | a   |     | personâ€™s  |     |     | proclamations  |     |     |     |     |     | or  |     | statements,  |     |     |     |
+|     | whether  |     |     | a   |     | person's  |     |     | proclamations  |     |     |     |     |     | or  |     | statements,  |     |     |     |
 | --- | -------- | --- | --- | --- | --- | --------- | --- | --- | -------------- | --- | --- | --- | --- | --- | --- | --- | ------------ | --- | --- | --- |
 unsupported by evidence, warrant our belief.
 | ïƒ˜   | Examples  |     |     |     | of  | such  |     | statements  |     |     |     | include  |     |     | promises  |     |     |     | to  | do  |
@@ -3356,21 +3356,21 @@ in support of a product or service.
 |     |           | convicted  |      |       |            | on   | ten         |            | counts  |      | of       |        | perjury,  |       |      | and    |     | he        | hates  |      |
 |     |           | Belay      |      | with  |            | a    | passion     |            |         | and  |          | would  |           | love  |      |        | to  | see       | him    |      |
 |     |           | sent       | to   |       | jail.      |      | Therefore,  |            |         |      | you      |        | should    |       |      | not    |     | believe   |        |      |
-Geremewâ€™s testimony.
+Geremew's testimony.
 
 ïƒ˜ This argument commits no fallacy. The conclusion is
-not that you should reject Geremewâ€™sâ€™ argument but
+not that you should reject Geremew's' argument but
 rather that you should reject his testimony.
 ïƒ˜ Testimony is not argument, and the fact that the
 witness is a known liar and has a motive to lie now
 is relevant to whether we should believe him.
 ïƒ˜ Furthermore, note that the conclusion is not that
-Geremewâ€™s statement is literally false but rather that
+Geremew's statement is literally false but rather that
 we should not believe the statement.
 ïƒ˜ It is quite possible that Geremew really did see
 Belay set fire to the building and that
 
-ïƒ˜Geremewâ€™s statement to that effect is true. But
+ïƒ˜Geremew's statement to that effect is true. But
 if our only reason for believing this statement
 is the mere fact that Mickey has made it, then
 | given  |     | the  | circumstances,  |     |     |     |     | we  | are  | not  | justified  |     |     |
@@ -3399,7 +3399,7 @@ instance whose circumstance by accident or to a situation to
 which it cannot be applied.
 ïƒ˜ The general rule is cited in the premises and then wrongly
 applied to the specific case mentioned in the conclusion.
-Because of the â€œaccidentalâ€™ features of the specific case, the
+Because of the "accidental' features of the specific case, the
 general rule does not fit or is misplaced.
 Examples:
 ïƒ¼ Freedom of speech is a constitutionally guaranteed right.
@@ -3411,16 +3411,16 @@ you should not refuse when your doctor invites you for bed.
 6. Straw Man Fallacy
 | ïƒ˜   | The       |     | straw   |     | man         |            | fallacy  |     | is        | committed   |     |      |     | when  |          | an         | arguer  |     |
 | --- | --------- | --- | ------- | --- | ----------- | ---------- | -------- | --- | --------- | ----------- | --- | ---- | --- | ----- | -------- | ---------- | ------- | --- |
-|     | distorts  |     |         | an  | opponentâ€™s  |            |          |     | argument  |             |     | for  |     | the   | purpose  |            |         | of  |
+|     | distorts  |     |         | an  | opponent's  |            |          |     | argument  |             |     | for  |     | the   | purpose  |            |         | of  |
 |     | more      |     | easily  |     |             | attacking  |          |     | it,       | demolishes  |     |      |     | the   |          | distorted  |         |     |
-argument,  and  then  concludes  that  the  opponentâ€™s  real
+argument,  and  then  concludes  that  the  opponent's  real
 argument has been demolished.
 ïƒ˜ By  so  doing,  the  arguer  is  said  to  have  set  up  a  straw
 |     | man  |     | and  | knocked  |     |     | it  | down,  |     | only  |     | to  | conclude  |     |     | that  |     | the  |
 | --- | ---- | --- | ---- | -------- | --- | --- | --- | ------ | --- | ----- | --- | --- | --------- | --- | --- | ----- | --- | ---- |
 real man (opposing argument) has been knocked down
 as  well.  In  short,  this  fallacy  occurs  when  the  arguer
-attack misrepresentation of the opponentâ€™s view.
+attack misrepresentation of the opponent's view.
 Example:
 ïƒ¼Mengesha: It would be a good idea to ban advertising
 |     |     | beer            |     | and  |     | wine  |            | on  | radio  |            | and  |     | television.  |     |         |     | These  |     |
@@ -3437,7 +3437,7 @@ dialogue.
 3. The third is that each is advocating a position opposed to that
 of the other party.
 ïƒ˜ In the above example, you can observe that Tsegaye attempts
-to oppose Mengashaâ€™s idea but with a distorted form.
+to oppose Mengasha's idea but with a distorted form.
 ïƒ¼ Mary: We must not betray the principles of justice and
 democracy. Suspected terrorists must be granted basic
 rights as well as legal representation and access to a fair
@@ -3464,16 +3464,16 @@ increasing at an alarming rate lately.
 death penalty immediately.
 
 ïƒ˜ At  least  two  correct  conclusions  are  implied  by  the
-|     | premises        |     |     | of  | the     |     | argument.  |             |     |         | Either  |     |     | â€œwe       |      | should  |               |     | provide  |     |
+|     | premises        |     |     | of  | the     |     | argument.  |             |     |         | Either  |     |     | "we       |      | should  |               |     | provide  |     |
 | --- | --------------- | --- | --- | --- | ------- | --- | ---------- | ----------- | --- | ------- | ------- | --- | --- | --------- | ---- | ------- | ------------- | --- | -------- | --- |
 |     | increased       |     |     |     | police  |     |            | protection  |     |         |         |     | in  |           | the  |         | invulnerable  |     |          |     |
-|     | neighborhoodsâ€  |     |     |     |         |     | or         | â€œwe         |     | should  |         |     |     | initiate  |      |         | programs      |     |          | to  |
-eliminate the cause of the crimes.â€
+|     | neighborhoods"  |     |     |     |         |     | or         | "we         |     | should  |         |     |     | initiate  |      |         | programs      |     |          | to  |
+eliminate the cause of the crimes."
 ïƒ˜ The  punishment  for  theft  and  robbery  should  be  very
 serious. But it does not support the claim that the death
 penalty, therefore, reinstating the death penalty is not a
 logical conclusion at all.
-|     | ïƒ¼KKC  |              |     | University  |      |      |             | has             |     | a    | lot  |              | of  | problems.  |          |     |       | Studentsâ€™  |     |      |
+|     | ïƒ¼KKC  |              |     | University  |      |      |             | has             |     | a    | lot  |              | of  | problems.  |          |     |       | Students'  |     |      |
 | --- | ----- | ------------ | --- | ----------- | ---- | ---- | ----------- | --------------- | --- | ---- | ---- | ------------ | --- | ---------- | -------- | --- | ----- | ---------- | --- | ---- |
 |     |       | services     |     |             | and  |      | facilities  |                 |     | are  |      | inadequate.  |     |            |          |     | Many  |            | of  | the  |
 |     |       | instructors  |     |             |      | are  |             | inexperienced.  |     |      |      |              |     | It         | follows  |     |       | that,      |     | the  |
@@ -3492,9 +3492,9 @@ in other ways like:
 |     |             | countries,  |     |     |              | developing  |     |     |     |              | the  |     |     | capacity  |      |       |     | of         |        | the  |
 administration of the university, and the like.
 ïƒ˜In general, the fallacy of missing the point is called
-|     | ignoratio  |     |     |     | elenchi  |     | which  |     |     | means  |     |     |     | â€˜â€˜ignorance  |     |     |     |     | of  | the  |
+|     | ignoratio  |     |     |     | elenchi  |     | which  |     |     | means  |     |     |     | ''ignorance  |     |     |     |     | of  | the  |
 | --- | ---------- | --- | --- | --- | -------- | --- | ------ | --- | --- | ------ | --- | --- | --- | ------------ | --- | --- | --- | --- | --- | ---- |
-proof.â€™â€™
+proof.''
 | ïƒ˜   | This          |     | means  |        |     | the  | arguer      |          | is  | ignorant  |       |     |           |         | of  | the  |       | logical  |        |        |
 | --- | ------------- | --- | ------ | ------ | --- | ---- | ----------- | -------- | --- | --------- | ----- | --- | --------- | ------- | --- | ---- | ----- | -------- | ------ | ------ |
 |     | implications  |     |        |        |     | of   | his         | or  her  |     | own       |       |     | premises  |         |     |      | and,  |          |        | as  a  |
@@ -3521,7 +3521,7 @@ is not appreciative.
 
 ïƒ˜ This argument commits the fallacy of red-herring
 because the arguer diverts the subject or topic of the
-argument for â€œnew education policy appreciativeâ€ to
+argument for "new education policy appreciative" to
 marry an orphanage girl and get a good wife_ a topic
 which is irrelevance to the topic or the subject under
 discussion.
@@ -3601,7 +3601,7 @@ arguing that some thing is true because no one has proved to be false,
 and arguing that some thing is false because no one has proved to be
 true.
 Examples:
-Nobody has ever proved to me thereâ€™s a God, so I know there is no
+Nobody has ever proved to me there's a God, so I know there is no
 God.
 After centuries of trying no one has been able to prove that God does
 not exist.
@@ -3657,11 +3657,11 @@ Example: Members of the jury, you have heard the prosecution
 present its case against the defendant. Nothing, however, has been
 proved beyond a reasonable doubt.
 Therefore, under the law, the defendant is not guilty. This argument
-commits no fallacy because â€˜â€˜not guiltyâ€™â€™ means, in the legal sense,
+commits no fallacy because ''not guilty'' means, in the legal sense,
 that guilt beyond a reasonable doubt has not been proved. The
 defendant may indeed have committed the crime of which he or she
 is accused, but if the prosecutor fails to prove guilt beyond a
-reasonable doubt, the defendant is considered â€˜â€˜not guilty.â€™â€™
+reasonable doubt, the defendant is considered ''not guilty.''
 
 3. Hasty Generalization (Converse Accident)
 The fallacy of hasty generalization is just the opposite of accident.
@@ -3674,11 +3674,11 @@ I have met two persons in Hawassa town so far, and they were
 both nice to me. So, all people I will meet in Hawassa will be nice
 to me.
 Freshman Governance and Development Studies students of 2009
-are one â€“ hundred sixty in number. Blood is taken out of three
+are one – hundred sixty in number. Blood is taken out of three
 students and upon examination of all, three students are found to
-have their blood type â€œBâ€. Therefore, on the basis of this, I
+have their blood type "B". Therefore, on the basis of this, I
 conclude that the rest of the students will also have the same
-blood type, which is â€œBâ€.
+blood type, which is "B".
 
 Examples:
 Ten milligrams of substance Z was fed to four mice and within
@@ -3710,11 +3710,11 @@ while accident proceeds from the general to the particular
 | --- | ----- | --------- | --- | ----- | --- | --- | ----- | --- | --- | -------- | --- | -------- | --- | ---- | ---- |
 conclusion deals with something particular),
 4. The Fallacy of False Cause
-| â€¢   |  The     | fallacy  |           | of  | false  |      |     | cause       |     | commits  |          | when  |     | the  | link  |
+| •    |  The     | fallacy  |           | of  | false  |      |     | cause       |     | commits  |          | when  |     | the  | link  |
 | --- | -------- | -------- | --------- | --- | ------ | ---- | --- | ----------- | --- | -------- | -------- | ----- | --- | ---- | ----- |
 |     | between  |          | premises  |     |        | and  |     | conclusion  |     |          | depends  |       |     | on   | some  |
 imagined causal connection that probably does not exist.
-â€¢ In  this  fallacy,  when  the  arguer  in  his  or  her  argument
+•  In  this  fallacy,  when  the  arguer  in  his  or  her  argument
 oversimplified the cause of a certain event, makes a kind
 of confusion between the cause and effect, or identifies a
 certain event as the cause of another event merely on the
@@ -3726,28 +3726,28 @@ Propter Hoc Fallacy, Non Causa pro Causa Fallacy, and
 Oversimplified cause.
 A. Post Hoc Ergo Propter Hoc Fallacy (Post Hoc Fallacy)
 The Latin expression Post Hoc Ergo Propter Hoc Fallacy traditionally
-refers to â€œafter this, therefore because of this, or after this, therefore the
-consequence of thisâ€. Sometimes this fallacy is called Post Hoc Fallacy.
+refers to "after this, therefore because of this, or after this, therefore the
+consequence of this". Sometimes this fallacy is called Post Hoc Fallacy.
 The post hoc ergo propter hoc fallacy occurs when it is concluded that one
 event causes another simply because the proposed cause occurred before
 the proposed effect.
 Post hoc fallacy presupposes just because one event precedes another
 event. The first event causes the second. That is event Y is caused by event
-X because event â€œYâ€ follows event â€œXâ€, or X precedes Y in time. This is
+X because event "Y" follows event "X", or X precedes Y in time. This is
 way of reasoning has the following form:
-event â€œXâ€ occurs before event â€œYâ€; therefore, event â€œXâ€ is the cause for
-event â€œYâ€.
+event "X" occurs before event "Y"; therefore, event "X" is the cause for
+event "Y".
 
-â€¢ Examples:
-â€“ During  the  last  two  months,  the  football  team  has  worn
+•  Examples:
+– During  the  last  two  months,  the  football  team  has  worn
 red  ribbons  in  their  hairs,  and  the  team  was  defeated.
 Therefore, to prevent defeats in the future, the team should
 get rid of those red ribbons.
-â€“ Every  time  I  wash  the  car,  it  starts  to  rain  shortly
+– Every  time  I  wash  the  car,  it  starts  to  rain  shortly
 |     |     | afterwards.  |     |     |     | Therefore,  |     |     |     | my  |     | car-washing  |     |     | activities  |     |     | are  |
 | --- | --- | ------------ | --- | --- | --- | ----------- | --- | --- | --- | --- | --- | ------------ | --- | --- | ----------- | --- | --- | ---- |
 causing outbursts of precipitation in the clouds.
-| â€¢   | The  |     | above  |     |     | two  |     | arguments  |     |     |     | commit  |     | the  |     | post  |     | hoc  |
+| •    | The  |     | above  |     |     | two  |     | arguments  |     |     |     | commit  |     | the  |     | post  |     | hoc  |
 | --- | ---- | --- | ------ | --- | --- | ---- | --- | ---------- | --- | --- | --- | ------- | --- | ---- | --- | ----- | --- | ---- |
 fallacy.  This  is  because  of  the  fact  that  the  arguer
 |     | wrongly  |     |     | thinks  |     |     |     | those  | actions  |     |     |     | which  |     | come  |     | before  |     |
@@ -3763,7 +3763,7 @@ the cause for outburst of precipitation in the clouds.
 
 B. Non Causa Pro Causa Fallacy
 The Latin phrase Non causa pro causa fallacy has been
-traditionally interpreted as â€œnot the cause for the causeâ€.
+traditionally interpreted as "not the cause for the cause".
 This variety is committed when what is taken to be the
 cause of something is not really the cause at all and the
 mistake is based on something other than mere temporal
@@ -3821,7 +3821,7 @@ events happen, after one other event as a result of the first cause.
 This fallacy is occurred when a certain argument rests on chains of
 events and the arguer fails to provide sufficient reasons why this
 chain of events committed. In other words, it is committed when
-one affirms an unjustifiable â€œchain reactionâ€ of causes which, if it is
+one affirms an unjustifiable "chain reaction" of causes which, if it is
 allowed to continue leads inevitably to disaster.
 Example:
 I know the impetus for the whole tragedy in her life. She was
@@ -3852,13 +3852,13 @@ important differences between two things or more things
 compared are not real similar in the relevant respects or
 when the analogy is not strong enough to support the
 conclusion. This fallacy has the following form:
-Object â€œAâ€ has attributes a, b, c, and z.
-Object â€œBâ€ has attributes a, b, c.
+Object "A" has attributes a, b, c, and z.
+Object "B" has attributes a, b, c.
 Therefore, object B probably has attributes z also.
 
 Examples:
-Kebedeâ€™s new car is bright blue in color and has leather upholstery
-and gets excellent gas mileage. Tayeâ€™s new car is also bright blue in
+Kebede's new car is bright blue in color and has leather upholstery
+and gets excellent gas mileage. Taye's new car is also bright blue in
 color and has leather upholstery. Therefore, it probably gets
 excellent gas mileage, too.
 I do not see what all the argument is about guns. Of course gun
@@ -3869,7 +3869,7 @@ argument, the color of a car and the choice of upholstery have
 nothing to do with gasoline consumption. In the second example
 whereas you can see the following structure:
 Guns are like cricket bats in that both can be used to kill people.
-Whenever an object â€œXâ€ is similar to an object â€œyâ€ in one respect, it
+Whenever an object "X" is similar to an object "y" in one respect, it
 is similar in all -respects
 Objects that are similar to each other in all respects should be
 treated identically
@@ -3927,14 +3927,14 @@ questionable.
 ïƒ¼ When we look at the first argument, it ignores an important
 premise which is needed to make the argument acceptable. In
 the argument, proof is not given on the truth of the prime
-ministerâ€™s speech. Even though the arguer does not give
+minister's speech. Even though the arguer does not give
 proof, he or she begs us to accept it as true as if it does not
 need proof.
 ïƒ¼ On the other hand, in the second argument, the arguer has
 really said the same thing twice to say that capital
-punishment is â€œjustifiedâ€ means the same thing as to say that
+punishment is "justified" means the same thing as to say that
 it is
-ïƒ¼ â€œlegitimateâ€ and â€œappropriateâ€ because premise and
+ïƒ¼ "legitimate" and "appropriate" because premise and
 conclusion means the same thing. But the arguer fails to give
 as real reasons why capital punishment is justified for the
 indicated crimes.
@@ -3947,16 +3947,16 @@ question that is really two or more questions is asked and a
 single answer is then applied to both questions.
 Examples:
 1. Have you stopped cheating on exams?
-Let us suppose the respondent answers â€˜â€˜Yesâ€™â€™ to the
+Let us suppose the respondent answers ''Yes'' to the
 question. The following argument comes out:
 You were asked whether you have stopped cheating on
-exams. You answered â€˜â€˜Yesâ€™â€™ to the question. Therefore, it
+exams. You answered ''Yes'' to the question. Therefore, it
 follows that you have cheated in the past.
 
 On the other hand, let us suppose that the respondent
-answers â€˜â€˜Noâ€™â€™ to the question. And we then have the
+answers ''No'' to the question. And we then have the
 following arguments: You were asked whether you have
-stopped cheating on exams. You answered â€˜â€˜No.â€™â€™
+stopped cheating on exams. You answered ''No.''
 Therefore, you continue to cheat.
 Obviously, the above question is really two questions: Did
 you cheat on exams in the past? If you did cheat in the
@@ -3968,10 +3968,10 @@ same error in the following argument.
 
 The Fallacy of False Dichotomy
 .
-The fallacy of false dichotomy can be also known as â€œfalse bifurcationâ€,
-false dilemma, black and white thinking, and â€œeitherâ€¦orâ€¦fallacyâ€.
+The fallacy of false dichotomy can be also known as "false bifurcation",
+false dilemma, black and white thinking, and "either...or...fallacy".
 This fallacy is committed when the premise of an argument is an
-eitherâ€¦ orâ€¦ statement or a disjunctive statement that presents two
+either... or... statement or a disjunctive statement that presents two
 alternatives as if they were jointly exhaustive (as if no third alternative
 was possible).
 To make more precise, the fallacy of false dichotomy is occurred when a
@@ -4046,43 +4046,43 @@ law of gravity is a law.
 ï± Therefore, the law of gravity can be repealed by the
 legislative authority.
 These two arguments commit the fallacy of equivocation.
-In both examples, the same words (â€˜oddâ€™ and â€˜lawâ€™ in the first
+In both examples, the same words ('odd' and 'law' in the first
 and in the second argument, respectively) are used in two
 different senses. In example one, in the first premise the word
-â€œoddâ€ means â€˜strangeâ€™, while in the second premise it implies a
-â€œnumber that is not divisible by twoâ€. Likewise, the second
-argument equivocates on the word â€˜â€˜law.â€™â€™ In the first premise it
-means â€œstatutory lawâ€, and in the second premise it means â€œlaw
-of natureâ€.
+"odd" means 'strange', while in the second premise it implies a
+"number that is not divisible by two". Likewise, the second
+argument equivocates on the word ''law.'' In the first premise it
+means "statutory law", and in the second premise it means "law
+of nature".
 All stars are in orbit in outer space.
 Sarah Flamingo is a star.
 Therefore, Sarah Flamingo is in orbit in outer space.
 
 This argument would be said to be an equivocation because the
-term â€˜starâ€™ is used ambiguously. In the first premise, â€˜starâ€™ is
-most plausibly taken to mean â€˜distant, luminous celestial body.â€™
-Then there is a shift of meaning. In the second premise, â€˜starâ€™
-would most plausibly be taken to mean â€˜entertainment
-celebrity.â€™ Because of this meaning shift, the argument could be
+term 'star' is used ambiguously. In the first premise, 'star' is
+most plausibly taken to mean 'distant, luminous celestial body.'
+Then there is a shift of meaning. In the second premise, 'star'
+would most plausibly be taken to mean 'entertainment
+celebrity.' Because of this meaning shift, the argument could be
 taken to be valid when in fact it may not be valid.
 In some cases equivocation can be associated with the shift of
 meaning of a relative term as it occurs in different contexts. For
-example, â€œsmallâ€™â€™, â€˜â€˜goodâ€™â€™, â€˜â€˜badâ€™â€™, â€˜â€˜lightâ€™â€™, â€˜â€˜heavyâ€™â€™,
-â€˜â€˜difficultâ€™â€™, â€˜â€˜easyâ€™â€™, â€˜â€˜tallâ€™â€™, â€˜â€˜shortâ€™â€™, and so on are relative
+example, "small'', ''good'', ''bad'', ''light'', ''heavy'',
+''difficult'', ''easy'', ''tall'', ''short'', and so on are relative
 terms that shift their meanings in different contexts. A short
 basketball player may not be a short man.
 Look at the following example:
 4. A mouse is an animal. Therefore, a large mouse is a large
 animal.
 This argument illustrates the ambiguous use of a relative term.
-The word â€˜â€˜largeâ€™â€™ means different things depending on the
+The word ''large'' means different things depending on the
 context.
 
 B. Amphiboly Fallacy
 The fallacy of amphiboly is caused by the error in grammatical construction of
 statements that can be interpreted in two more distinctly different ways without
 making clear which meaning is intended. In other words, it is a structural defect in a
-statement due to mistake in grammar or punctuationâ€”a missing comma, a dangling
+statement due to mistake in grammar or punctuation—a missing comma, a dangling
 modifier, an ambiguous antecedent of a pronoun, or some other careless
 arrangement of words. Because of this ambiguity, the statement may be understood
 in two clearly distinguishable ways. The arguer typically selects the unintended
@@ -4092,33 +4092,33 @@ Solomon told Dawit that he had made a mistake. It follows that Solomon has at le
 the courage to admit his own mistakes.
 Our engineering school teaches told us how to build a house in three years.
 Both of the arguments commit fallacy of amphiboly. In the first argument the
-pronoun â€˜â€˜heâ€™â€™ has an ambiguous antecedent; it can refer either to Solomon or Dawit.
+pronoun ''he'' has an ambiguous antecedent; it can refer either to Solomon or Dawit.
 Perhaps Solomon told Dawit that Dawit had made a mistake.
 In the second argument, because of the very that the arguer made a kind of a
 mistakes or errors in constructing this argument; he or she commits the fallacy of
 amphiboly. We can interpret this argument in two ways. On the one hand, it has a
-meaning that says â€œour school teaches told us how to build a house in three years
-teaching periodâ€ or on other hand, it has a meaning that says â€œour school teaches
-told us how to build a house with in three years construction periodâ€.
+meaning that says "our school teaches told us how to build a house in three years
+teaching period" or on other hand, it has a meaning that says "our school teaches
+told us how to build a house with in three years construction period".
 
 Two areas where cases of amphiboly cause serious problems involve
 contracts and wills. The drafters of these documents often express their
 intentions in terms of ambiguous statements, and alternate interpretations of
 these statements then lead to different conclusions.
 Examples:
-Mrs. Sosna stated in her will, â€˜â€˜I leave my 500-carat diamond necklace and
-my pet car to Hana and Bethlehem.â€™â€™ Therefore, we conclude that Hana gets
+Mrs. Sosna stated in her will, ''I leave my 500-carat diamond necklace and
+my pet car to Hana and Bethlehem.'' Therefore, we conclude that Hana gets
 the necklace and Bethlehem gets the car.
-Mr. Markos signed a contract that reads, â€˜â€˜In exchange for painting my
+Mr. Markos signed a contract that reads, ''In exchange for painting my
 house, I promise to pay Asenafi $5000 and give him my new Cadillac only
-if he finishes the job by May 1.â€™â€™ Therefore, since Asenafi did not finish
+if he finishes the job by May 1.'' Therefore, since Asenafi did not finish
 until May 10, it follows that he gets neither the $5000 nor the Cadillac.
 In the first example, the conclusion obviously favors Hana. Bethlehem is
 almost certain to argue that the gift of the necklace and Bethlehem should
 be shared equally by her and
 Hana. Mrs. Hana could have avoided the dispute by adding either
-â€˜â€˜respectivelyâ€™â€™ or
-â€˜â€˜collectivelyâ€™â€™ to the end of the sentence.
+''respectively'' or
+''collectively'' to the end of the sentence.
 In the second example, the conclusion favors Mr. Markos. Asenafi will
 argue that the condition that he finishes by May 1 affected only the Cadillac
 and that he therefore is entitled to the $5000. The dispute could have been
@@ -4151,8 +4151,8 @@ Therefore, the paragraph is well written.
 Each  atom  in  a  piece  of  chalk  is  invisible.  Therefore,  the
 chalk is invisible.
 In  these  arguments  the  attributes  that  are  transferred  from
-the parts onto the whole are designated by the words â€˜â€˜well
-written,â€™â€™  and  â€˜â€˜invisible,â€™â€™  respectively.  In  each  case  the
+the parts onto the whole are designated by the words ''well
+written,''  and  ''invisible,''  respectively.  In  each  case  the
 | transference  |     | is  | illegitimate,  |     |     | and  | so  | the  | argument  |     | is  |
 | ------------- | --- | --- | -------------- | --- | --- | ---- | --- | ---- | --------- | --- | --- |
 fallacious.
@@ -4197,7 +4197,7 @@ parts.
 represents something different from its parts. In each case
 | the  | attribute,  |     | designated  |     |     | respectively  |     | by  | the  | terms  |
 | ---- | ----------- | --- | ----------- | --- | --- | ------------- | --- | --- | ---- | ------ |
-â€˜â€˜visible,â€™â€™  and  â€˜â€˜wealthiestâ€™â€™  is  illegitimately  transferred
+''visible,''  and  ''wealthiest''  is  illegitimately  transferred
 from the whole or class onto the parts or members.
 As  with  the  fallacy  of  composition,  however,  this  kind  of
 transference  is  not  always  illegitimate.  The  following

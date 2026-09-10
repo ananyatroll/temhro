@@ -70,7 +70,7 @@ Generally, Ethics is:
 
 **B. What is Morality?**
 
-Etymological definition â€“ derived from Latin word moralitas - "manner, character, proper behaviour".
+Etymological definition – derived from Latin word moralitas - "manner, character, proper behaviour".
 
 Refers to the concept of human action which pertains to matters of right and wrong, good and evil
 
@@ -412,7 +412,7 @@ Kant provides three versions of the categorical imperative:
 
 **4. William David Ross's Prima Facie Duties or Moral Guidelines**
 
-The Scottish philosopher, Sir William David Ross (1877â€“1971) made significant contributions to moral philosophy
+The Scottish philosopher, Sir William David Ross (1877–1971) made significant contributions to moral philosophy
 
 The term prima facie means 'at a first sight' or 'on the surface'.
 
@@ -463,7 +463,7 @@ The Cyrenaics, or egoistic hedonists is founded by Aristippus, (c. 435-356 B.C.E
 
 For instance, Knowledge, according to the Cyrenaics, is rooted in the fleeting sensations of the moment, and it is therefore futile to attempt the formulation of a system of moral values in which the desirability of present pleasures is weighed against the pain they may cause in the future
 
-Unlike the egoistic hedonists, the Epicureans, or rational hedonists founded by the Hellenistic period philosopher Epicurus, (341â€”271 BCE), contended that the true pleasure is attainable only by reason.
+Unlike the egoistic hedonists, the Epicureans, or rational hedonists founded by the Hellenistic period philosopher Epicurus, (341—271 BCE), contended that the true pleasure is attainable only by reason.
 
 They stressed the virtues of self-control and prudence.
 
@@ -507,7 +507,7 @@ In theories of ethics altruism is the antithesis of egoism.
 
 Utilitarianism (Latin utilis, "useful"), in ethics, the doctrine that what is useful is good, and consequently, that the ethical value of conduct is determined by the utility of its results
 
-In the 18th and 19th centuries such British philosophers as Jeremy Bentham (1748â€”1832) and John Stuart Mill (1806-1873) advocated the doctrine of universalistic hedonism, better known as utilitarianism.
+In the 18th and 19th centuries such British philosophers as Jeremy Bentham (1748—1832) and John Stuart Mill (1806-1873) advocated the doctrine of universalistic hedonism, better known as utilitarianism.
 
 Utilitarianism is both the ethical and political doctrine.
 
@@ -591,7 +591,7 @@ They argued that moral values are strictly human inventions, a position that has
 There are two distinct forms of moral relativism.
 
 - Individual relativism, which holds that individual people create their own moral standards.
-- Cultural relativism which maintains that morality is grounded in the approval of one's society â€“ and not simply in the preferences of individual people
+- Cultural relativism which maintains that morality is grounded in the approval of one's society – and not simply in the preferences of individual people
 
 This view was advocated by Sextus, and in more recent centuries by Michel Montaigne and William Graham Sumner.
 
@@ -699,7 +699,7 @@ The following are therefore some of the fundamental codes of ethics universally 
 - Punctuality:
 - Honesty and Integrity:
 - Confidentiality:
-- Impartiality (nonâ€“Partiality)
+- Impartiality (non–Partiality)
 - Fairness:
 - Responsiveness:
 - Efficiency and Effectiveness
@@ -730,7 +730,7 @@ Almost all people, to a greater or lesser extent, are capable of experiencing fe
 
 Studying ethics, then, involves attempting to find valid reasons for the moral arguments that we make.
 
-Most people already have general ideas â€“ or what philosophers call 'intuitions' or 'presumptions' â€“ about what they think is 'right' or 'wrong'.
+Most people already have general ideas – or what philosophers call 'intuitions' or 'presumptions' – about what they think is 'right' or 'wrong'.
 
 But a philosophical approach to ethics requires people to think critically about the moral ideas that they hold, to support or refute those ideas with convincing arguments, and to be able to articulate and explain the reasons and assumptions on which those arguments are based.
 
@@ -760,7 +760,7 @@ It is important and useful to develop the ability to test your own arguments and
 
 There are three main ways of testing a moral argument:
 
-1. **Factual accuracy.** The 18th century philosopher David Hume (1711â€”1776) argued that we should not derive an 'ought' from an 'is'. This means that we cannot say that something is wrong or right simply based on how things are. The accuracy of the factual content of a discussion is very important.
+1. **Factual accuracy.** The 18th century philosopher David Hume (1711—1776) argued that we should not derive an 'ought' from an 'is'. This means that we cannot say that something is wrong or right simply based on how things are. The accuracy of the factual content of a discussion is very important.
 
 2. **Consistency.** Arguments need to be consistent.
 
@@ -900,7 +900,7 @@ Within the family, he argued, a particular altruism operates that encourages peo
 
 In contrast, civil society was seen as a sphere of 'universal egoism' in which individuals place their own interests before those of others.
 
-The state as an ethical community underpinned by mutual sympathy â€“ 'universal altruism'.
+The state as an ethical community underpinned by mutual sympathy – 'universal altruism'.
 
 The drawback of idealism, however, is that it fosters an uncritical reverence for the state and, by defining the state in ethical terms, fails to distinguish clearly between institutions that are part of the state and those that are outside the state.
 
@@ -1135,8 +1135,8 @@ In practice, this boils down to an attempt to eradicate poverty and reduce socia
 
 The twin features of a social democratic state are:
 
-- **Keynesianism** â€“ The advocacy of monetary and fiscal programs by government to increase employment and spending. The aim of Keynesian economic policies is to 'manage' or 'regulate' capitalism with a view to promoting growth and maintaining full employment
-- **Social welfare** â€“ 'welfare states' responsibilities have extended to the promotion of social well-being amongst their citizens. In this sense, the social-democratic state is an 'enabling state', dedicated to the principle of individual empowerment.
+- **Keynesianism** – The advocacy of monetary and fiscal programs by government to increase employment and spending. The aim of Keynesian economic policies is to 'manage' or 'regulate' capitalism with a view to promoting growth and maintaining full employment
+- **Social welfare** – 'welfare states' responsibilities have extended to the promotion of social well-being amongst their citizens. In this sense, the social-democratic state is an 'enabling state', dedicated to the principle of individual empowerment.
 
 **D. Collectivized States**
 
@@ -1335,7 +1335,7 @@ The criteria for membership have been linked to shared territory, common culture
 
 Participation occupies a key position in citizenship.
 
-Nonetheless, individuals differ in what approaches they find important â€“ some people focus on their private affairs while others actively participate in the life of the society
+Nonetheless, individuals differ in what approaches they find important – some people focus on their private affairs while others actively participate in the life of the society
 
 There are two approaches in this regard; minimalists and maximalists.
 
@@ -1395,7 +1395,7 @@ Likewise, liberals deem internal factors as the primary reasons that determine p
 
 They provide little consideration to the environmental factors in the process of shaping the self. Beyond this, liberalists claims that the individual person shapes all other social aggregations, including the state.
 
-Therefore, citizenship and other political institutions in a given State are means that are accepted only conditionally â€“ i.e., as long as they, in the individual's calculations, foster the maximization of the citizen's preferences/benefits.
+Therefore, citizenship and other political institutions in a given State are means that are accepted only conditionally – i.e., as long as they, in the individual's calculations, foster the maximization of the citizen's preferences/benefits.
 
 Under this thought, the role of the State is to protect and create convenient environment to help citizens enjoy and exercise of their rights; the State has an instrumental function
 
@@ -1469,9 +1469,9 @@ All in all, the two defining features of communitarian perspective are:
 
 **Critics of Communitarian Theory of Citizenship**
 
-Communitarianism is hostile towards individual rights and autonomy â€“ even that it is authoritarian since it melts the self into the society
+Communitarianism is hostile towards individual rights and autonomy – even that it is authoritarian since it melts the self into the society
 
-Other critics argue that communities are dominated by power elites or that one group within a community will force others to abide by its values  â€¦etc
+Other critics argue that communities are dominated by power elites or that one group within a community will force others to abide by its values  ...etc
 
 **3. Citizenship in Republican Thought**
 
@@ -1722,7 +1722,7 @@ Israel and Great Britain are countries with unwritten constitutions
 
 A constitution may be regarded as flexible or rigid depending on the complexity of the requirements stated in the provision for amendment procedures.
 
-**A. Flexible constitution** â€“ is one which can be easily changed by ordinary process legislative action. Flexible constitutions have simpler requirements or procedures for amendment
+**A. Flexible constitution** – is one which can be easily changed by ordinary process legislative action. Flexible constitutions have simpler requirements or procedures for amendment
 
 **B. Rigid constitutions** - rigid constitutions provide a series of procedural requirements for amendment. In the case of rigid constitutions, special procedures should be followed to amend the constitution.
 
@@ -1760,7 +1760,7 @@ The followings are some amendment procedures:
 
 - absolute majority (2/3 vote) in parliament
 - absolute majority in parliament + 2/3 support of regional legislatures for Federal States
-- National referendum â€“ direct voting by citizens to support or reject a constitutional amendment or major national issues.
+- National referendum – direct voting by citizens to support or reject a constitutional amendment or major national issues.
 
 ### Constitutionalism
 
@@ -1774,7 +1774,7 @@ It is another name for the concept of a limited and civilised government.
 
 In a democratic country the process of making constitution involves:
 
-- drafting â€“ discussion â€“ improving â€“ ratification (adoption)
+- drafting – discussion – improving – ratification (adoption)
 
 In Autocrats, monarchs and dictatorial rulers unilaterally draft and introduce constitution without involving the republic.
 
@@ -1905,19 +1905,19 @@ Democracy is a form of government organized according to principles of:
 
 Democracy has three aspects: Social, economic and political. Democracy remains incomplete unless all these three aspects are present in a society
 
-**Social aspect** â€“ this refers to removal of discrimination on the basis of class, caste, creed, color and sex. All men and women, rich or poor, regardless of any class or caste prejudices are socially equal, and should be treated as such
+**Social aspect** – this refers to removal of discrimination on the basis of class, caste, creed, color and sex. All men and women, rich or poor, regardless of any class or caste prejudices are socially equal, and should be treated as such
 
 **Economic aspect**- this refers to the equitable distribution of wealth in society and abolition of glorying disparities on the basis of wealth. Economic democracy recognizes the right to work, leisure, and fair wages and unrestricted right to the enjoyment of life.
 
-**Political aspects** â€“ this refers to the provision of political rights namely, the right to vote, the right to contest elections and the right to hold public offices.
+**Political aspects** – this refers to the provision of political rights namely, the right to vote, the right to contest elections and the right to hold public offices.
 
 ### Types of Democracy
 
 Historically, democracies have been Direct as well as Indirect (representative)
 
-**Direct Democracy** â€“ this type of democracy existed in the Greek and Roman city states in the ancient world. Now it has become a thing of the past. Direct democracy can exist only in petty states inhabited by a few thousand people who can easily meet at a place, deliberate and formulate policies on the spot. In the modern age direct democracy survives in the institutions of Referendum and Initiative.
+**Direct Democracy** – this type of democracy existed in the Greek and Roman city states in the ancient world. Now it has become a thing of the past. Direct democracy can exist only in petty states inhabited by a few thousand people who can easily meet at a place, deliberate and formulate policies on the spot. In the modern age direct democracy survives in the institutions of Referendum and Initiative.
 
-**Indirect (Representative) Democracy** â€“ Modern states are huge in size and population.
+**Indirect (Representative) Democracy** – Modern states are huge in size and population.
 
 Direct Democracy is therefore inconceivable. Instead, the people govern these states indirectly, through the popularly elected representatives.
 
@@ -1925,7 +1925,7 @@ Representative (Indirect) Democracy- is associated with two basic systems of gov
 
 **Parliamentary democracy:** In this form of government the parliament has a central role: the executive is headed by a prime minister or a cabinet leader and is dependent on the confidence of the parliament; the head of state usually has little or no executive powers but only a representative function.
 
-**Presidential democracy** â€“ the executive is headed by the head of state him/herself, who is directly elected by the people and does not depend on the parliament's confidence.
+**Presidential democracy** – the executive is headed by the head of state him/herself, who is directly elected by the people and does not depend on the parliament's confidence.
 
 Hobbes, Locke, Jefferson, Tocqueville are some scholars who helped to crystallize the concept of representative democracy or indirect democracy.
 
@@ -1954,9 +1954,9 @@ In fact, according to him, the civil society was created partly to safeguard and
 
 The following reflects the ways of attaining rights.
 
-- **Legal rights** â€“ These are rights written down in codes of law. They are legally permitted right; exercised by all.
-- **Moral rights** â€“ These are rights that emanate from the consensus of two or more bodies. The basic principles of moral rights are justice and impartiality.
-- **Human rights** â€“ These are natural rights. They do not emanate from government will or from individual conventions.
+- **Legal rights** – These are rights written down in codes of law. They are legally permitted right; exercised by all.
+- **Moral rights** – These are rights that emanate from the consensus of two or more bodies. The basic principles of moral rights are justice and impartiality.
+- **Human rights** – These are natural rights. They do not emanate from government will or from individual conventions.
 
 ### Basic features of Human Rights
 
@@ -1969,8 +1969,8 @@ The following reflects the ways of attaining rights.
 
 Some other evidences of change in the transition towards maintaining natural law rights were:
 
-- Teachings of Thomas Aquinas (1224 â€“ 1274)
-- Teachings of Hugo Groitus (1583 â€“ 1645)
+- Teachings of Thomas Aquinas (1224 – 1274)
+- Teachings of Hugo Groitus (1583 – 1645)
 - The signing of Magna Carta in 1215
 - The English petition of Rights of 1628
 - The English Bill of Rights of 1689
@@ -1980,9 +1980,9 @@ Some other evidences of change in the transition towards maintaining natural law
 
 Human rights are classified into three generations:
 
-- **First Generation Rights** include civil and political rightsâ€¦ liberty rights
-- **Second Generation rights** â€“ are economic, social and cultural rights â€¦ equality rights
-- **Third Generation rights** â€“ Solidarity rights â€¦ Fraternity Rights
+- **First Generation Rights** include civil and political rights... liberty rights
+- **Second Generation rights** – are economic, social and cultural rights ... equality rights
+- **Third Generation rights** – Solidarity rights ... Fraternity Rights
 
 ### The Rule of Law
 
@@ -2000,7 +2000,7 @@ On the other contrary, the absence of the rule of law would result in some probl
 
 - The relation between the people and the government would be unhealthy. A government that ignores the rule of law would be unpopular
 - Where there is no the rule of law there is no justice. The absence of justice would in turn result in instability
-- The people would not feel secure. This would inhibit people's effort and commitment in doing their day â€“ to â€“ day work
+- The people would not feel secure. This would inhibit people's effort and commitment in doing their day – to – day work
 - There will be corruption
 
 The rule of law comprises political, constitutional, legal and human rights issues.
@@ -2012,10 +2012,10 @@ Any democratic society which seeks to foster and promote human rights, has to re
 There are certain sources of the rule of law:
 
 - **Constitution**
-- **Domestic laws** â€“ These are specific laws. These domestic laws have great value in maintaining the rule of law. Domestic laws are of two types:
-  - civil law â€“ these are laws related to administrative
-  - Criminal law â€“ this is a body of law that is related to criminal acts like theft, corruption, killing etc.
-- **International laws** â€“ such laws regulate the relationship that exists between countries of the world.
+- **Domestic laws** – These are specific laws. These domestic laws have great value in maintaining the rule of law. Domestic laws are of two types:
+  - civil law – these are laws related to administrative
+  - Criminal law – this is a body of law that is related to criminal acts like theft, corruption, killing etc.
+- **International laws** – such laws regulate the relationship that exists between countries of the world.
 
 ---
 

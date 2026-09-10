@@ -328,13 +328,43 @@ fun TamheroMarkdownView(
 }
 
 /**
+ * Sanitizes broken encoding/mojibake characters commonly found in converted course notes.
+ */
+fun sanitizeMarkdownText(text: String): String {
+    if (text.isEmpty()) return text
+    return text
+        .replace("â€¢", "• ")
+        .replace("ï‚§", "• ")
+        .replace("ï‚·", "• ")
+        .replace("ï‚", "• ")
+        .replace("â€“", "–")
+        .replace("â€”", "—")
+        .replace("â€œ", "\"")
+        .replace("â€\u009d", "\"")
+        .replace("â€\u009c", "\"")
+        .replace("â€˜", "'")
+        .replace("â€™", "'")
+        .replace("â€¦", "...")
+        .replace("Ã—", "×")
+        .replace("Â°", "°")
+        .replace("Â±", "±")
+        .replace("cmÂ³", "cm³")
+        .replace("mÂ²", "m²")
+        .replace("Â", "")
+        .replace("\u000C", "")
+}
+
+/**
  * Parses raw text lines into typed Markdown blocks.
  */
 fun parseMarkdownBlocks(rawText: String): List<MarkdownBlock> {
-    val lines = rawText.lines()
+    val cleanText = sanitizeMarkdownText(rawText)
+    val lines = cleanText.lines()
     val blocks = mutableListOf<MarkdownBlock>()
     var i = 0
     val total = lines.size
+
+    val bulletRegex = Regex("""^(?:[-*+•–—]|\u2022)\s+(.*)$""")
 
     while (i < total) {
         val line = lines[i]
@@ -393,10 +423,10 @@ fun parseMarkdownBlocks(rawText: String): List<MarkdownBlock> {
             continue
         }
 
-        // 6. Bullet Item: "- ", "* ", "+ ", "• "
-        val isBullet = (trimmed.startsWith("- ") || trimmed.startsWith("* ") || trimmed.startsWith("+ ") || trimmed.startsWith("• "))
-        if (isBullet) {
-            val bulletText = trimmed.substring(2).trim()
+        // 6. Bullet Item: "- ", "* ", "+ ", "• ", "– ", "— "
+        val bulletMatch = bulletRegex.find(trimmed)
+        if (bulletMatch != null) {
+            val bulletText = bulletMatch.groupValues[1].trim()
             blocks.add(MarkdownBlock.BulletItem(bulletText))
             i++
             continue
@@ -452,17 +482,18 @@ fun parseMarkdownInline(
     accentColor: Color,
     isDark: Boolean
 ): AnnotatedString {
+    val cleanText = sanitizeMarkdownText(text)
     return buildAnnotatedString {
         var i = 0
-        val len = text.length
+        val len = cleanText.length
 
         while (i < len) {
             // Bold Italic: ***text***
-            if (i + 2 < len && text[i] == '*' && text[i + 1] == '*' && text[i + 2] == '*') {
-                val end = text.indexOf("***", i + 3)
+            if (i + 2 < len && cleanText[i] == '*' && cleanText[i + 1] == '*' && cleanText[i + 2] == '*') {
+                val end = cleanText.indexOf("***", i + 3)
                 if (end != -1) {
                     withStyle(SpanStyle(fontWeight = FontWeight.Bold, fontStyle = FontStyle.Italic, color = baseColor)) {
-                        append(text.substring(i + 3, end))
+                        append(cleanText.substring(i + 3, end))
                     }
                     i = end + 3
                     continue
@@ -470,11 +501,11 @@ fun parseMarkdownInline(
             }
 
             // Bold: **text**
-            if (i + 1 < len && text[i] == '*' && text[i + 1] == '*') {
-                val end = text.indexOf("**", i + 2)
+            if (i + 1 < len && cleanText[i] == '*' && cleanText[i + 1] == '*') {
+                val end = cleanText.indexOf("**", i + 2)
                 if (end != -1) {
                     withStyle(SpanStyle(fontWeight = FontWeight.Bold, color = baseColor)) {
-                        append(text.substring(i + 2, end))
+                        append(cleanText.substring(i + 2, end))
                     }
                     i = end + 2
                     continue

@@ -226,7 +226,9 @@ fun SleekPaymentVerificationScreen(
                         Divider(color = Color(0xFF334155))
 
                         val manualPayText = com.example.ui.TranslationManager.get("manual_pay_p1", currentLang)
-                            .replace("300 ETB", "$reqAmount ETB")
+                            .replace(Regex("""300\s*ETB""", RegexOption.IGNORE_CASE), "$reqAmount ETB")
+                            .replace(Regex("""Birrii\s*300""", RegexOption.IGNORE_CASE), "Birrii $reqAmount")
+                            .replace(Regex("""300\s*ብር""", RegexOption.IGNORE_CASE), "$reqAmount ብር")
                         Text(
                             text = manualPayText,
                             style = MaterialTheme.typography.bodySmall.copy(fontStyle = androidx.compose.ui.text.font.FontStyle.Italic),
@@ -260,7 +262,9 @@ fun SleekPaymentVerificationScreen(
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         val step1Text = com.example.ui.TranslationManager.get("step1_p1", currentLang)
-                            .replace("300 ETB", "$reqAmount ETB")
+                            .replace(Regex("""300\s*ETB""", RegexOption.IGNORE_CASE), "$reqAmount ETB")
+                            .replace(Regex("""Birrii\s*300""", RegexOption.IGNORE_CASE), "Birrii $reqAmount")
+                            .replace(Regex("""300\s*ብር""", RegexOption.IGNORE_CASE), "$reqAmount ብር")
                         Text(
                             text = step1Text,
                             style = MaterialTheme.typography.bodyMedium,

@@ -8,14 +8,14 @@ Anthropology of Ethiopian
 
 Societies and Culture
 
-Chapter One
+Chapter One
 
 1. Introducing Anthropology and its Subject Matter
 1.1. Concepts in Anthropology
 îŽ¢ Anthropology is a combination of two Greek words
 
-î˜â€˜Anthroposâ€™ - human being/mankind
-î˜â€˜Logosâ€™ - study/scienceâ€™
+î˜'Anthropos' - human being/mankind
+î˜'Logos' - study/science'
 
 îŽ¢ Man has two characteristics: biological and cultural
 îŽ¢ Anthropology
@@ -36,7 +36,7 @@ is
 the  comparative  study  of  humans  as  a  group,  from  its  first
 appearance on earth to its present stage of development.
 
-îŽ¢ Anthropology is a science which:
+îŽ¢ Anthropology is a science which:
 
 î¶  Investigates the strategies for living
 î¶  Examines the characteristics of human beings
@@ -58,7 +58,7 @@ o Anthropology has its roots in the works and ideas of the great ancient
 and  medieval  Greek,  Roman,  and  Hebrew  philosophers  &  social
 thinkers - who were interested in the nature, origin and destiny of man.
 
-îŽ¢ To trace its roots;
+îŽ¢ To trace its roots;
 
 î˜ Anthropology  as  an  academic  discipline  was  born  during  the  19th
 century,  out  of  the  Enlightenment  -   the  eighteenth  century  social  and
@@ -70,7 +70,7 @@ the Darwinian theory of Evolution.
 
 after the First World War.
 
-îŽ¢ Anthropology was beginning as a profession by the late 1870s â€“ due
+îŽ¢ Anthropology was beginning as a profession by the late 1870s – due
 
 to the expansion of western colonial powers
 
@@ -78,11 +78,11 @@ to the expansion of western colonial powers
 
 primarily in museums.
 
-îŽ¢ Early  anthropologists  studied  small  communities  named  as,  â€œ
+îŽ¢ Early  anthropologists  studied  small  communities  named  as,  "
 
-traditionalâ€, â€œnon-industrializedâ€ or â€œsimple societiesâ€
+traditional", "non-industrialized" or "simple societies"
 
-îŽ¢ Ethnography â€“ a detail description of the social  and cultural features of a
+îŽ¢ Ethnography – a detail description of the social  and cultural features of a
 
 certain group of people or society.
 
@@ -111,7 +111,7 @@ account in the form of a book, article, or film.
 
 ethnic groups across time and space.
 
-îŽ¢ It examines, interprets, analyzes, and compares the results of ethnographic
+îŽ¢ It examines, interprets, analyzes, and compares the results of ethnographic
 
 accounts of different societies.
 
@@ -123,7 +123,7 @@ generalizations about society and culture.
 
 is  to  uncover  general  cultural
 
-principles, the â€œrulesâ€ that govern human behavior.
+principles, the "rules" that govern human behavior.
 
 îŽ¢ In Ethiopia, professional anthropologists studying culture and society on an
 
@@ -141,7 +141,7 @@ areas
 
 existence
 
-îŽ¢ It touches all aspect of human conditions as far as there is a relation
+îŽ¢ It touches all aspect of human conditions as far as there is a relation
 
 between human beings and natural environment
 
@@ -169,7 +169,7 @@ attractiveness, food preferences, and human sexuality.
 
 like  the  standards  of
 
-îŽ¢ The  major  sources  of  biological  variations  are  derived  from  the  interrelated
+îŽ¢ The  major  sources  of  biological  variations  are  derived  from  the  interrelated
 
 effects of natural selection, geographical isolation and genetic mutations.
 
@@ -196,7 +196,7 @@ allows  to  address  fundamental  questions  regarding  our  distant  origin,  c
 stage  of  growth,  forms  of  adaptation,  and  predict  future  direction  of
 development.
 
-îŽ¢ Human  genetics  concerns  to  investigate  how  and  why  the  physical  traits  of
+îŽ¢ Human  genetics  concerns  to  investigate  how  and  why  the  physical  traits  of
 
 contemporary human populations vary throughout the world.
 
@@ -224,7 +224,7 @@ increased
 consumption of animal protein and more animal protein in turn changes the human
 diet and anatomy.
 
-îŽ¢ The use of clothing allows human bodies to survive in environments they wouldnâ€™t
+îŽ¢ The use of clothing allows human bodies to survive in environments they wouldn't
 
 îŽ¢ Paleo-anthropologists  are  concerned  with  how  bio-cultural  evolutionary  factors
 
@@ -232,7 +232,7 @@ normally survive in.
 
 shaped humanity through time.
 
-îŽ¢ Humanity stands for human species and has the following characteristics:
+îŽ¢ Humanity stands for human species and has the following characteristics:
 
 î˜Bipedalism (walking on two legs);
 î˜Relatively small teeth for primates of our size;
@@ -259,7 +259,7 @@ Cosmologies and Human Origins
 
 we live on.
 
-îŽ¢ These  beliefs  are  transmitted  from  generation  to  generation  through  ritual,
+îŽ¢ These  beliefs  are  transmitted  from  generation  to  generation  through  ritual,
 
 education, laws, art, and language.
 
@@ -269,7 +269,7 @@ Western Traditions of Origins
 explanations for human origins.
 
 îŽ¢ Prometheus: humans are created out of water and earth.
-îŽ¢ Thales of Miletus (c.636â€“546BC): argued that life originated in the sea and that
+îŽ¢ Thales of Miletus (c.636–546BC): argued that life originated in the sea and that
 humans  initially  were  fishlike,  eventually  moving  onto  dry  land  and  evolving  in  to
 mammals.
 
@@ -278,15 +278,15 @@ mammals.
 the Biblical Book of Genesis
 
 îŽ¢ This Judaic tradition describes how God created the cosmos.
-îŽ¢ It  begins  with  â€œIn  the  beginning  God  created  the  heaven  and  the  earthâ€  and
+îŽ¢ It  begins  with  "In  the  beginning  God  created  the  heaven  and  the  earth"  and
 describes how creation took six days during which light, heaven, earth, vegetation,
 sun, moon, stars, birds, fish, animals, and humans originated.
 
-îŽ¢ In Europe, before the Renaissance â€“ it was the only framework for understanding
+îŽ¢ In Europe, before the Renaissance – it was the only framework for understanding
 
-humanityâ€™s position in the universe.
+humanity's position in the universe.
 
-Evolutionary Perspectives on Human Origin
+Evolutionary Perspectives on Human Origin
 îŽ¢ As opposed to cosmological explanations, today anthropologists rely on scientific
 
 views of evolution to explain human origins.
@@ -312,11 +312,11 @@ and
 for  his  theory  of  natural  selection  in  the  evolution  of  species  and  the  idea  of
 survival of the fittest.
 
-îŽ¢ Darwinâ€™s ideas set the foundation for a new study: the study of humans as living,
+îŽ¢ Darwin's ideas set the foundation for a new study: the study of humans as living,
 
 evolving creatures in many ways no different from the rest of animal life.
 
-îŽ¢ Anthropologists study humanity as a biological phenomenon by raising questions
+îŽ¢ Anthropologists study humanity as a biological phenomenon by raising questions
 
 like:
 î¼ What species are we most and least like?
@@ -328,7 +328,7 @@ the chimpanzees and gorillas?
 
 î¼ Is our species still evolving?
 
-îŽ¢ The answers to the above and many other questions â€“ will found in the study of
+îŽ¢ The answers to the above and many other questions – will found in the study of
 
 evolution, the change through time of the properties of a living species.
 
@@ -339,7 +339,7 @@ culture/physical remains (artifacts, features and eco -facts) they left behind.
 
 ornaments, arrowheads, coins, and fragments of pottery
 
-îŽ¢ Features are like artifacts made or modified by past people, but they cannot
+îŽ¢ Features are like artifacts made or modified by past people, but they cannot
 
 be readily carried away from the site.
 
@@ -367,7 +367,7 @@ stone tools (the first artifacts), around 2.5 million years ago - prehistory.
 
 and about whom historical documents have been written.
 
-îŽ¢ It  takes  advantage  of  the  fact  that  about  6,000  years  ago,  some  human  groups
+îŽ¢ It  takes  advantage  of  the  fact  that  about  6,000  years  ago,  some  human  groups
 
 invented language and began to write down things.
 
@@ -391,7 +391,7 @@ practice in its social and cultural context, across space and time.
 15
 îŽ¢ Structural/Descriptive Linguistics:- studies the structure of linguistic patterns.
 
-îŽ¢ It examines sound systems, grammatical systems, and the meanings attached to
+îŽ¢ It examines sound systems, grammatical systems, and the meanings attached to
 
 words in specific languages to understand the structure and set of rules
 
@@ -401,7 +401,7 @@ putting words and sounds together for the purpose of communicating.
 
 îŽ¢ For them even if there are thousands of languages, structurally all are similar and
 making  it  possible  for  everyone  to  grasp  and  learn  languages  other  than  our
-â€˜mother tongueâ€™.
+'mother tongue'.
 
 îŽ¢ Ethno-linguistics  (cultural  linguistics):  examines  the  relationship  between
 
@@ -419,13 +419,13 @@ world around them.
 
 have diverged over time.
 
-îŽ¢ It focuses on the comparison and classifications of different languages to
+îŽ¢ It focuses on the comparison and classifications of different languages to
 
 differentiate the historical links between them.
 
 îŽ¢ Socio-linguistics:- linguistic variation within a given language.
 îŽ¢ No language is a homogeneous system in which everyone speaks just like
-everyone else â€“ due to geography, as in regional dialects and accents.
+everyone else – due to geography, as in regional dialects and accents.
 îŽ¢ Linguistic anthropology focuses on the evolution of languages and it tries
 to understand languages variation in their structures, units, and grammatical
 formations.
@@ -438,7 +438,7 @@ formations.
 
 a way of life of a group of people.
 
-îŽ¢ Socio-cultural  anthropology  describes,  analyzes,  interprets,  and  explains
+îŽ¢ Socio-cultural  anthropology  describes,  analyzes,  interprets,  and  explains
 
 social, cultural and material life of contemporary human societies.
 
@@ -469,7 +469,7 @@ Comparative/cross-cultural
 
 approaches to  study culture and human societies.
 
-o It is sub-divided into many other specialized fields like: Medical Anthropology,
+o It is sub-divided into many other specialized fields like: Medical Anthropology,
 Urban  Anthropology,  Economic  Anthropology,  Political  Anthropology,
 Development Anthropology, Anthropology of Religion, Ecological Anthropology
 and others
@@ -504,7 +504,7 @@ place
 
 î¼Relativistic - does not make value judgment
 
-î˜Insiders' views - Emic Perspective
+î˜Insiders' views - Emic Perspective
 
 î¼How people perceive themselves and understand their world
 î˜Micro-focus : focuses on small-scale society or community
@@ -526,7 +526,7 @@ communities living in isolated areas
 
 development and obsolete cultural practices in museums.
 
-1.7. The Relationship between Anthropology and Other Disciplines
+1.7. The Relationship between Anthropology and Other Disciplines
 îŽ¢ Anthropology  is  similar  with  other  social  sciences  such  as  sociology,
 psychology,  political  sciences,  economics,  history,  etc  in  terms  of  their
 emphasis on human society.
@@ -546,20 +546,20 @@ variability
 î¼ Helps us to fight against ethnocentrism and Prejudice
 î¼ Used as a tool for development
 
-Unit Two
+Unit Two
 Human Culture and Ties that Connect
 
 2.1. Conceptualizing Culture
 îŽ¢ Anthropologists and sociologists define culture in different ways.
 
-î¼  Edward  Tylor  -  culture  as  â€œa  complex  whole  which  includes  knowledge,  belief,
+î¼  Edward  Tylor  -  culture  as  "a  complex  whole  which  includes  knowledge,  belief,
 art, morals, law, custom, and any other capabilities and habits acquired by man
-as a member of societyâ€.
+as a member of society".
 
-î¼ B. Malinowski  - culture â€œas cumulative creation of man".
-î¼ Robert Bierstedt - â€œCulture is the complex whole that consists of everything we
+î¼ B. Malinowski  - culture "as cumulative creation of man".
+î¼ Robert Bierstedt - "Culture is the complex whole that consists of everything we
 
-think and do and have as members of society.â€
+think and do and have as members of society."
 
 îŽ¢ Culture  is  a  moral,  intellectual  and  spiritual  discipline  for  advancement,  in
 
@@ -573,16 +573,16 @@ members of the group.
 
 generation to another.
 
-2.2. Characteristic Features of Culture
+2.2. Characteristic Features of Culture
 
 îŽ¢ Culture is Learned
 
 î˜ It is not transmitted genetically rather; it is acquired through the process of
 
-learning or interacting with oneâ€™s environment
+learning or interacting with one's environment
 
 î˜This process of acquiring culture after we born is called enculturation - the
-process by which an individual learns the rules and values of oneâ€™s culture.
+process by which an individual learns the rules and values of one's culture.
 
 îŽ¢ Culture is Shared
 
@@ -601,7 +601,7 @@ culture that comes to stand for something else.
 
 symbol and what it symbolizes.
 
-îŽ¢ Culture is All-Encompassing
+îŽ¢ Culture is All-Encompassing
 
 î˜It comprises material and non-material aspects of human lives.
 î˜It is the sum total of human creation: intellectual, technical, artistic, physical
@@ -629,14 +629,14 @@ humans unique
 
 time passes modifying or changing the old ways.
 
-2.3. Aspects/Elements of Culture
+2.3. Aspects/Elements of Culture
 
 îŽ¢ Two of the most basic aspects of culture are material and nonmaterial culture
 2.3.1. Material Culture
 îŽ¢ It  consists  of  man-made  objects  like  tools,  implements,  furniture,  automobiles,
 buildings,  dams,  roads,  bridges,  and  in  fact,  the  physical  substance  which  has
 been changed and used by man.
-2.3.2. Non â€“ Material Culture
+2.3.2. Non – Material Culture
 îŽ¢ It consists of the words the people use or the language they speak, the beliefs
 they  hold,  values  and  virtues  they  cherish,  habits  they  follow,  rituals  and
 practices that they do and the ceremonies they observe.
@@ -650,9 +650,9 @@ of acting, feeling and thinking
 
 bad, beautiful or ugly.
 
-îŽ¢ Beliefs  -  are  cultural  conventions  that  concern  true  or  false  assumptions,
-specific descriptions of the nature of the universe and humanityâ€™s place in it.
-îŽ¢ Norms - are shared rules or guidelines that define how people â€œoughtâ€ to behave
+îŽ¢ Beliefs  -  are  cultural  conventions  that  concern  true  or  false  assumptions,
+specific descriptions of the nature of the universe and humanity's place in it.
+îŽ¢ Norms - are shared rules or guidelines that define how people "ought" to behave
 
 under certain circumstances.
 
@@ -666,7 +666,7 @@ seat for an elderly people inside a bus/taxi.
 
 insist on conformity.
 
-î¼ A  person  who  steals,  rapes,  and  kills  has  violated  some  of  societyâ€™s  most
+î¼ A  person  who  steals,  rapes,  and  kills  has  violated  some  of  society's  most
 
 important mores.
 
@@ -682,7 +682,7 @@ Particularity
 
 î˜Universal (found in every culture),
 
-î˜General (common to several but not all human groups),
+î˜General (common to several but not all human groups),
 î˜Particular (unique to certain cultural traditions).
 
 Universality
@@ -707,7 +707,7 @@ A. Ethnocentrism
 îŽ¢ It  is the tendency to see the behaviors, beliefs, values, and norms of one's  own
 group as the only right way of living and to judge others by those standards.
 
-îŽ¢ The  belief  that  our  own  societyâ€™s  ways  are  the  correct,  normal,  better  ways,  for
+îŽ¢ The  belief  that  our  own  society's  ways  are  the  correct,  normal,  better  ways,  for
 
 acting, thinking, feeling and behaving.
 
@@ -734,7 +734,7 @@ logic;
 
 î¶ Accepting that each body of custom has inherent dignity and meaning;
 
-î¶ Knowing that a person's own culture is only one among many; and
+î¶ Knowing that a person's own culture is only one among many; and
 î¶ Recognizing that what is moral, ethical, acceptable, in one culture may not
 
 be so in another
@@ -759,7 +759,7 @@ other cultures.
 society and incorporated into the culture of the recipient group.
 î¼ It is direct when two cultures trade, intermarry, war
 
-î¼ It is forced when one culture subjugates another and imposes its customs
+î¼ It is forced when one culture subjugates another and imposes its customs
 î¼ It  is  indirect  when  items  or  traits  move  from  one  group  to  another  via  other
 
 group without any firsthand contact
@@ -785,7 +785,7 @@ dependent.
 
 transportation and communication.
 
-î˜Long-distance  communication  is  easier,  faster,  and  cheaper  than  ever,  and
+î˜Long-distance  communication  is  easier,  faster,  and  cheaper  than  ever,  and
 
 extends to remote areas.
 
@@ -814,7 +814,7 @@ experience when they came across the society different from their own culture.
 31
 îŽ¢ It is a feeling of confusion and anxiety caused by contacts with another culture.
 
-îŽ¢ The disorientation and frustration of those who find themselves among people
+îŽ¢ The disorientation and frustration of those who find themselves among people
 
 who do not share their basic values and beliefs.
 
@@ -840,7 +840,7 @@ the 1950s.
 
 Hobben, Fredrick Gamst and Jack Bauer.
 
-B. Enset Culture Area
+B. Enset Culture Area
 îŽ¢ It covers a vast region in the southern part of the country.
 îŽ¢  Enset  cultivating  regions  of  the  present  day  SNNPRS  such  as  the
 
@@ -861,7 +861,7 @@ Somali in the Southeast and Borena in Southern Ethiopia.
 
 occupying the pastoral culture area.
 
-2.9.1. Marriage
+2.9.1. Marriage
 2.9. Ties That Connect: Marriage, Family and Kinship
 îŽ¢ Marriage  is  defined  as  a  sexual  union  between  a  man  and  a  woman  such  that
 children  born  to  the  woman  are  considered  the  legitimate  offspring  of  both
@@ -887,7 +887,7 @@ incest taboos.
 
 the immediate family: mother-sons, father-daughters, and brother-sisters.
 
-2.9.1.2. Mate Selection: Whom Should You Marry?
+2.9.1.2. Mate Selection: Whom Should You Marry?
 A. Exogamy
 îŽ¢ This  is  the  rule  by  which  a  man  is  not  allowed  to  marry  someone  from  his  own
 
@@ -920,24 +920,24 @@ nationality, religion, race, community, social class etc).
 
 India and Nepal are also endogamous.
 
-C. Preferential Cousin Marriage
+C. Preferential Cousin Marriage
 îŽ¢ Two different types of preferential cousins marriages are:
-îŽ¢ Cross Cousins: are children of siblings of the opposite sex- that is oneâ€™s motherâ€™s
+îŽ¢ Cross Cousins: are children of siblings of the opposite sex- that is one's mother's
 
-brothersâ€™ children and oneâ€™s fatherâ€™s sistersâ€™ children.
+brothers' children and one's father's sisters' children.
 
 îŽ¢ It is the most common form of preferential cousin marriage
 îŽ¢ Parallel Cousins: when marriage takes place between the children of the siblings
 
 of the same sex
 
-îŽ¢ Children of siblings of the same sex, namely the children of oneâ€™s motherâ€™s sister
+îŽ¢ Children of siblings of the same sex, namely the children of one's mother's sister
 
-and oneâ€™s father brother.
+and one's father brother.
 
-îŽ¢ The  mate  may  come  either  from  oneâ€™s  fatherâ€™s  brotherâ€™s  children  or  mother's
+îŽ¢ The  mate  may  come  either  from  one's  father's  brother's  children  or  mother's
 
-sisterâ€™s children.
+sister's children.
 
 D. Levirate and Sororate Marriage
 îŽ¢ The  levirate  -  is  the  custom  whereby  a  widow  is  expected  to  marry  the
@@ -945,9 +945,9 @@ D. Levirate and Sororate Marriage
 brother or close relative of her dead husband.
 î¼  Children belong legally to the dead brother rather than to the actual genitor.
 î¼ Serves  as  a  form  of  social  security  for  the  widow  and  her  children  and
-preserved the rights of her husbandâ€™s family to her sexuality and future children.
+preserved the rights of her husband's family to her sexuality and future children.
 
-îŽ¢ The  Sororate,  when  a  wife  dies  the  husband  marry  the  sister  or  close
+îŽ¢ The  Sororate,  when  a  wife  dies  the  husband  marry  the  sister  or  close
 
 relative of his deceased wife.
 î¼  If the deceased spouse has no sibling, the family of the deceased is obliged to
@@ -971,7 +971,7 @@ Advantages
 î¼ Seen as a sign of prestige
 î¼ More children - valuable for future economic and political assets.
 
-Disadvantages
+Disadvantages
 
 î¼ Jealousy among the co-wives
 î¼ Psychological and  social problems
@@ -982,7 +982,7 @@ Advantages
 parties involved:
 î¼ Rights of sexual access,
 î¼ Legal rights to children,
-î¼ Rights of the spouses to each otherâ€™s economic goods and services.
+î¼ Rights of the spouses to each other's economic goods and services.
 
 îŽ¢ Bride Price/ Bride Wealth - is the compensation given upon marriage by the family
 
@@ -992,31 +992,31 @@ of the groom to the family of the bride.
 
 î¼  Security or insurance for the good treatment of the wife
 î¼ Stabilize marriage by reducing the possibility of divorce
-î¼ Compensation  to  the  brideâ€™s  lineage  for  the  loss  of  her  economic  potential  and
+î¼ Compensation  to  the  bride's  lineage  for  the  loss  of  her  economic  potential  and
 
 her childbearing capacity
 
 î¼ A symbol of the union between two large groups of kin.
 
-îŽ¢ Bride Service  - is the labor service provided for the parents of the bride (wife) by
+îŽ¢ Bride Service  - is the labor service provided for the parents of the bride (wife) by
 
 the bridegroom (husband).
 
 îŽ¢ Dowry - involves a transfer of goods or money in the opposite direction, from the
 
-bride's family to the groomâ€™s family.
+bride's family to the groom's family.
 2.9.1.5 Post-Marital Residence
 î±Patrilocal Residence: the married couple lives with or near the relatives of the
 
-husbandâ€™s father.
+husband's father.
 
 î±Matrilocal Residence: the married couple lives with or near the relatives of the
 
 wife.
 
-î±Avunculocal  Residence:  the  married  couple  lives  with  or  near  the  husbandâ€™s
+î±Avunculocal  Residence:  the  married  couple  lives  with  or  near  the  husband's
 
-motherâ€™s brother.
+mother's brother.
 
 î±Ambilocal/Bilocal  Residence:  the  married  couple  has  a  choice  of  living  with
 
@@ -1026,7 +1026,7 @@ relatives of the wife or relatives of the husband.
 
 residence away from the relatives of either spouse.
 
-2.9.2. Family
+2.9.2. Family
 
 îŽ¢ An intimate kin based group that consists of at least a parent-child nucleus.
 
@@ -1044,13 +1044,13 @@ Types of Family Structure
 
 îŽ¢ Extended Family: a family in small- scale, traditional societies .
 
-îŽ¢ It may constitute a husband, his wife/wives, his wifeâ€™s/ wivesâ€™ children and/or
+îŽ¢ It may constitute a husband, his wife/wives, his wife's/ wives' children and/or
 
 the wives and children of his sons
 
 îŽ¢ It consist of two or more families that are linked by blood ties.
 
-2.9.2.1 Functions Marriage and Family
+2.9.2.1 Functions Marriage and Family
 
 îŽ¢ Biological Function: regulate sexual relations  and reproductive function.
 îŽ¢ Economic Function: economic co-operation between men and women and
@@ -1069,12 +1069,12 @@ marriage and other ties.
 
 îŽ¢ It is a kind of social relationship that ties people.
 îŽ¢ In any society every individual belongs to two different nuclear families.
-îŽ¢ The family in which he was born and reared - â€˜family of orientationâ€™.
-îŽ¢ The family to which he establishes relation through marriage -   â€˜family of
+îŽ¢ The family in which he was born and reared - 'family of orientation'.
+îŽ¢ The family to which he establishes relation through marriage -   'family of
 
-procreationâ€™.
+procreation'.
 
-îŽ¢ Kinship can be created through three ways:
+îŽ¢ Kinship can be created through three ways:
 
 î¼ Through blood: the principle of consanguinity.
 î¼ Through marriage: the principle of affinity.
@@ -1101,7 +1101,7 @@ descent.
 either through men or women.
 î¼no fixed rule to trace the succession and inheritance
 
-Unit Three
+Unit Three
 3. Marginalized, Minorities, and Vulnerable Groups
 
 3.1. Definition of Concepts
@@ -1125,7 +1125,7 @@ in different societies and cultures.
 
 parts of Ethiopia.
 
-îŽ¢ Vulnerability  refers  to  the  state  of  being  exposed  to  physical  or  emotional
+îŽ¢ Vulnerability  refers  to  the  state  of  being  exposed  to  physical  or  emotional
 
 injuries.
 
@@ -1159,7 +1159,7 @@ marriage,  abduction/forced  marriage,  domestic  violence  and  female  genital
 
 cutting/mutilation.
 
-3.3. Marginalized Occupational Groups
+3.3. Marginalized Occupational Groups
 îŽ¢ These include: tanners, potters, weavers and ironsmiths.
 îŽ¢ Craft-workers  such  as  potters  and  tanners  are  considered  as  impure  and
 excluded  from  social  interactions,  ownership  of  economic  resources  ,  and
@@ -1184,7 +1184,7 @@ production and exchanges.
 î¼ In some cultures they are not allowed to cultivate crops.
 î¼ They have a limited access to land and land ownership
 
-îŽ¢ Social  Marginalization  -  excluded  from  intermarriage,  share  burial  places
+îŽ¢ Social  Marginalization  -  excluded  from  intermarriage,  share  burial  places
 
 with others and membership of associations  like iddirs.
 î¼When  marginalized  groups  are  allowed  to  participate  in  social  events,
@@ -1209,7 +1209,7 @@ forms of attack, physical injuries and emotional harms.
 îŽ¢ They  are among vulnerable groups exposed to harm due to their age.
 îŽ¢ Both boys and girls are exposed to some harm and abuse
 
-îŽ¢ Girls are exposed to double marginalization and discrimination because
+îŽ¢ Girls are exposed to double marginalization and discrimination because
 
 of the gender.
 
@@ -1226,7 +1226,7 @@ are the two major drivers of the practice.
 
 and above.
 
-îŽ¢ Peopleâ€™s attitude towards older persons is changing over time
+îŽ¢ People's attitude towards older persons is changing over time
 îŽ¢ Older persons have been considered as custodians of tradition, culture,
 and  history  they  are  crucial  in  mentoring  younger  people,  resolving
 disputes, and restoring peace across Ethiopian cultures.
@@ -1236,7 +1236,7 @@ disputes, and restoring peace across Ethiopian cultures.
 
 new employment opportunities lead to so many changes.
 
-îŽ¢ Ageism  refers  to  stereotyping,  prejudice,  and  discrimination  against
+îŽ¢ Ageism  refers  to  stereotyping,  prejudice,  and  discrimination  against
 people  based  on  their  age.  They  are  excluded  from  social,  cultural,
 political and economic interactions in their communities.
 
@@ -1250,14 +1250,14 @@ targeting religious and ethnic minorities in the world.
 
 in different parts of the world.
 
-Unit Four
+Unit Four
 Identity, Inter-Ethnic Relations and Multiculturalism in Ethiopia
 
 4.1. Identity, Ethnicity and Race
-4.1.1. Ethnicity: Whatâ€™s in a name?
-îŽ¢ After the end of WWII words like â€œethnicityâ€, â€œethnic groupsâ€ â€œethnic conflictâ€ and
+4.1.1. Ethnicity: What's in a name?
+îŽ¢ After the end of WWII words like "ethnicity", "ethnic groups" "ethnic conflict" and
 
-â€œnationalismâ€ becomes common.
+"nationalism" becomes common.
 
 îŽ¢ During  the  1980s  and  early  1990s,  there  is  an  explosion  in  the  growth  of
 attention  on  ethnicity,  ethnic  phenomenon  and  nationalism  across  different
@@ -1275,7 +1275,7 @@ particularly since the Second World War.
 
 most of them are ethnic conflicts.
 
-îŽ¢ In  many  parts  of  the  world,  nation  building  -  the  creation  of  political
+îŽ¢ In  many  parts  of  the  world,  nation  building  -  the  creation  of  political
 cohesion and national identity in former colonies - is high on the political
 agenda.
 
@@ -1300,21 +1300,21 @@ and Eastern Europe and
 
 shows the contested nature of Ethnicity.
 
-4.1.2. Conceptualizing Ethnicity
-îŽ¢ It  derived  from  the  Greek  term  â€˜ethnosâ€™  which  means  â€œa  group  of  people  bound
+4.1.2. Conceptualizing Ethnicity
+îŽ¢ It  derived  from  the  Greek  term  'ethnos'  which  means  "a  group  of  people  bound
 
-together by the same manners, customs or other distinctive featuresâ€
+together by the same manners, customs or other distinctive features"
 
 îŽ¢ The word ethnicity is the most difficult concept to define.
 
-îŽ¢ Most  of  the  founding  fathers  of  anthropology  and  sociology  didnâ€™t  granted
+îŽ¢ Most  of  the  founding  fathers  of  anthropology  and  sociology  didn't  granted
 
 attention for the concept ethnicity.
 
 îŽ¢ Max Weber was the first influential sociologist who tried to define the concepts of
-ethnicity and ethnic group in his work entitled â€œEconomy and Societyâ€, in 1922.
+ethnicity and ethnic group in his work entitled "Economy and Society", in 1922.
 
-îŽ¢ According to Weber, an â€œethnic groupâ€ is based on the belief in common descent
+îŽ¢ According to Weber, an "ethnic group" is based on the belief in common descent
 shared  by  its  members,  extending  beyond  kinship,  political  solidarity  vis-a-vis
 other  groups,  and  common  customs,  language,  religion,  values,  morality,  and
 etiquette.
@@ -1327,13 +1327,13 @@ type or of customs.
 
 people with shared communality.
 
-îŽ¢ Weberâ€™s argument is that: â€œethnic membership does not constitute a group;
+îŽ¢ Weber's argument is that: "ethnic membership does not constitute a group;
 it  only  facilitates  group  formation  of  any  kind,  particularly  in  the  political
 sphere.
 
 îŽ¢ On  the  other  hand,  it  is  primarily  the  political  community,  no  matter  how
 
-artificially organized that inspires the belief in common ethnicityâ€
+artificially organized that inspires the belief in common ethnicity"
 
 îŽ¢ Any  cultural  trait  in  common  can  provide  a  basis  for  and  resources  for
 ethnic  closure:  language,  ritual,  economic  way  of  life,  lifestyle  more
@@ -1344,8 +1344,8 @@ generally, and the division of labor.
 of the behavior of others is a fundamental pre-requisite for any group.
 
 îŽ¢ The next contribution comes from the influential works of the Norwegian
-anthropologist,  named  Frederik  Barth  in  his  work  entitled  â€œEthnic  Groups
-and Boundariesâ€(1969).
+anthropologist,  named  Frederik  Barth  in  his  work  entitled  "Ethnic  Groups
+and Boundaries"(1969).
 
 îŽ¢ Barth  began  with  what  actors  believe  or  think:  ascriptions  and  self-
 
@@ -1355,7 +1355,7 @@ ascriptions.
 in  terms  of  his  basic,  most  general  identity,  determined  by  his  origin  and
 background.
 
-îŽ¢  To  the  extent  that  actors  use  ethnic  identities  to  categorize  themselves
+îŽ¢  To  the  extent  that  actors  use  ethnic  identities  to  categorize  themselves
 and  others  for  purposes  of  interaction,  they  form  ethnic  groups  in  this
 organizational sense.
 
@@ -1378,43 +1378,43 @@ life, and
 
 performance is judged.
 
-îŽ¢ Since belonging to an ethnic category implies being a certain kind of
+îŽ¢ Since belonging to an ethnic category implies being a certain kind of
 person, having that identity helps to be judged and to judge oneself,
 by those standards that are relevant to that identity.
 
-îŽ¢ Before Barth, cultural difference was explained from the inside out â€“
+îŽ¢ Before Barth, cultural difference was explained from the inside out –
 social groups possess different cultural characteristics, which make
 them  unique  and  distinct  (common  language,  lifestyle,  descent,
 religion, physical markers, history, eating habits, etc.).
 
 îŽ¢ Culture was perceived as a relatively or firmly stable, persistent and
 
-intact and it was understood in terms of a groupâ€™s property
+intact and it was understood in terms of a group's property
 
 îŽ¢ Nonetheless, Barth defined and explained ethnicity from the outside
 
 in.
 
-îŽ¢ It is not the â€˜possessionâ€™ of cultural characteristics that makes social
+îŽ¢ It is not the 'possession' of cultural characteristics that makes social
 54
 groups  distinct  but  rather  it  is  the  social  interaction  with  other
 groups  that  makes  that  difference  possible,  visible  and  socially
 meaningful.
 
-îŽ¢ The  difference
+îŽ¢ The  difference
 
 is  created,  developed  and  maintained  only  through
 interaction with others (i.e., Ethiopianess is created and becomes culturally
 and  politically  meaningful  only  through  the  encounter  with  Kenyaness,
 Sudanness, Somalianess, etc.).
 
-îŽ¢ Hence,  Barthâ€™s  work  has  transformed  and  shifted  the  study  of  ethnic
+îŽ¢ Hence,  Barth's  work  has  transformed  and  shifted  the  study  of  ethnic
 difference  from  the  study  of  cultural  contents  (language,  religion,  and
 customs) to the study of the interaction processes.
 
 îŽ¢ Cultural  differences  do  not  create  ethnic  collectivities:  the  social  contact
-with  others  leads  to  the  definition  and  categorization  of  an  â€œusâ€  and
-â€œthemâ€.
+with  others  leads  to  the  definition  and  categorization  of  an  "us"  and
+"them".
 
 îŽ¢ In  spite  of  the  difference  in  scholarly  views,  the  'basic  Anthropological
 
@@ -1427,7 +1427,7 @@ involves a dialectical interplay between similarity and difference.
 
 reproduced during interaction.
 
-î¼Ethnicity is collective and individual, externalized in social interaction and
+î¼Ethnicity is collective and individual, externalized in social interaction and
 in  personal  self-
 
 internalized
@@ -1437,12 +1437,12 @@ identification.
 
 4.3. Ethnic Groups and Ethnic Identity
 4.3.1. Ethnic Group
-îŽ¢ Different  scholars  tried  to  conceptualize  the  term  â€˜ethnic  groupâ€™  from  different
+îŽ¢ Different  scholars  tried  to  conceptualize  the  term  'ethnic  group'  from  different
 
 perspectives.
-î˜Anderson  (1983),  described  ethnic  groups  as  â€œan  imagined  communityâ€  that
+î˜Anderson  (1983),  described  ethnic  groups  as  "an  imagined  community"  that
 
-possesses a â€œcharacter and qualityâ€.
+possesses a "character and quality".
 
 î˜Schermerhorn  (1996),  conceptualize  ethnic  group  as  a  unit  of  population
 having  unique  characteristics  in  relation  with  others,  binding  with  common
@@ -1453,15 +1453,15 @@ language, myth of origin, and history of ethnic allegiance.
 between groups and dealing with ethnic groups in total isolation is as absurd
 as one hand clapping.
 
-îŽ¢ Barth  (1969),  define  ethnic  groups  as  a  self-defined  group  based  on
+îŽ¢ Barth  (1969),  define  ethnic  groups  as  a  self-defined  group  based  on
 subjective factors and fundamental cultural values chosen by members from
 their  past  history  or  present  existing  conditions  in  which  members  are  in
 contact with other  ethnic groups.
 
-îŽ¢ By considering the various definitions Hutchinson and Smithâ€™s (1996) identified
+îŽ¢ By considering the various definitions Hutchinson and Smith's (1996) identified
 
 six main features that define an ethnic group. This includes;
-î¼ A  common  proper  name,  to  identify  and  express  the  â€œessenceâ€  of  the
+î¼ A  common  proper  name,  to  identify  and  express  the  "essence"  of  the
 
 community;
 
@@ -1478,9 +1478,9 @@ heroes, events, and their commemoration;
 
 group, only its symbolic attachment to the ancestral land and
 
-î¼ A sense of solidarity on the part of the ethnicâ€™s population.
+î¼ A sense of solidarity on the part of the ethnic's population.
 
-4.3.2. Ethnic Identity
+4.3.2. Ethnic Identity
 îŽ¢ There is no widely agreed upon definition of ethnic identity.
 îŽ¢ Ethnic  identity  is  an  affiliative  construct,  where  an  individual  is  viewed  by
 
@@ -1505,7 +1505,7 @@ behavior appropriate to these feelings.
 ethnic  origin,  locate  themselves  psychologically  in  relation  to  one  or  more  social
 systems.
 
-îŽ¢ Locating  oneself  in  relation  to  a  community  and  society  is  not  only  a
+îŽ¢ Locating  oneself  in  relation  to  a  community  and  society  is  not  only  a
 
 psychological phenomenon, but also a social phenomenon.
 
@@ -1534,7 +1534,7 @@ youth organizations and
 
 picnics, concerts, public lectures, rallies, dances, etc.
 
-îŽ¢ The internal aspects refer to images, ideas, attitudes, and feelings.
+îŽ¢ The internal aspects refer to images, ideas, attitudes, and feelings.
 
 îŽ¢ These are interconnected with the external behavior.
 
@@ -1559,15 +1559,15 @@ and genetic attributes and specific geographic regions.
 îŽ¢ Human beings adapt to their environments through an evolutionary process.
 
 îŽ¢ Human  species  adapts  mainly  through  cultural  means;  we  survive  our
-environments  not  because  weâ€™ve  adapted  to  them  biologically,  but  with  artifacts
+environments  not  because  we've  adapted  to  them  biologically,  but  with  artifacts
 and complex behavior.
 
-îŽ¢ Adaptation is a process (behavioral and biological) that increases the likelihood
+îŽ¢ Adaptation is a process (behavioral and biological) that increases the likelihood
 
 of survival for an organism.
 
 îŽ¢ In humans adaptation include complex behavior like making tools.
-îŽ¢ These behaviors arenâ€™t passed on genetically but rather culturally.
+îŽ¢ These behaviors aren't passed on genetically but rather culturally.
 îŽ¢ Some of bodily adaptations are pretty easily visible, and some are only visible
 
 when you look very closely at the genes.
@@ -1584,13 +1584,13 @@ Africa and Asia.
 natural selection favored darker skins in areas that received extensive and more
 intensive sunlight.
 
-îŽ¢ Biological adaptations arenâ€™t instantaneous.
+îŽ¢ Biological adaptations aren't instantaneous.
 îŽ¢ They  take  place  over  the  span  of  generations,  so  an  African  moving  to  Europe
-wonâ€™t evolve lighter skin, nor will an European travelling to Africa evolve darker
+won't evolve lighter skin, nor will an European travelling to Africa evolve darker
 61
 skin.
 
-îŽ¢ Another biological adaptation in human beings is the difference of stature
+îŽ¢ Another biological adaptation in human beings is the difference of stature
 
 between arctic and East African people.
 
@@ -1601,13 +1601,13 @@ efficient at retaining body heat.
 îŽ¢ Generally,  homo  sapiens  sapiens  does  feature  geographically  based
 differences within the species. But there are two very important points;
 
-îŽ¢ First, these genetic differences donâ€™t mean a lot, biologically.
+îŽ¢ First, these genetic differences don't mean a lot, biologically.
 
 î¼ The  genes  shows  no  significant  species-level  differences,  only  very  minor
 
 visible ones like skin color, shape of nose, or hair texture.
 
-î¼ Biologically speaking, these differences arenâ€™t important.
+î¼ Biologically speaking, these differences aren't important.
 î¼ For most physical anthropologists race is nearly meaningless when applied to
 
 humanity.
@@ -1616,11 +1616,11 @@ humanity.
 
 reality of some geographically specific human adaptations
 
-îŽ¢ Second  -  cultural  behavior  isnâ€™t  genetically  linked  to  those  geographical
+îŽ¢ Second  -  cultural  behavior  isn't  genetically  linked  to  those  geographical
 
 differences.
 
-îŽ¢ Most of human behavior isnâ€™t biologically determined or filtered in through
+îŽ¢ Most of human behavior isn't biologically determined or filtered in through
 
 the natural environment - most of it is culturally learned.
 
@@ -1628,12 +1628,12 @@ the natural environment - most of it is culturally learned.
 
 culture.
 
-îŽ¢ Itâ€™s culture that really drives behavior, not the genes.
+îŽ¢ It's culture that really drives behavior, not the genes.
 îŽ¢ The  ancient  belief  that  human  races  have  innate  behavioral  traits  is
 
 wrong.
 
-îŽ¢ One  of  the  main  reasons  that  the  race  concept  really  doesnâ€™t  apply  to
+îŽ¢ One  of  the  main  reasons  that  the  race  concept  really  doesn't  apply  to
 
 humans is that defining human races is almost impossible:
 î¼To what race do you assign a person born from a Native American and
@@ -1641,9 +1641,9 @@ humans is that defining human races is almost impossible:
 a native African marriage?
 
 î¼Do you create a new race in this case?
-î¼whatâ€™s â€œblackâ€ or â€œwhiteâ€? Is a Greek person black or white?
+î¼what's "black" or "white"? Is a Greek person black or white?
 
-The History of Human Racial Typing
+The History of Human Racial Typing
 îŽ¢ Humans classify their neighbors in various ways for a long time.
 îŽ¢ Some of the first records of humans classifying come from ancient Egypt
 
@@ -1662,12 +1662,12 @@ and developing racial classifications of their own.
 
 based only on that factor.
 
-îŽ¢ Additionally,  these  unknown  people  werenâ€™t  Christian  and  didnâ€™t  share
+îŽ¢ Additionally,  these  unknown  people  weren't  Christian  and  didn't  share
 European culture and values, so the Europeans labeled them Savages.
 
 îŽ¢ The less European-looking is the more Savage.
 
-îŽ¢ Many racial supremacists still believe that cultural behavior correlates with
+îŽ¢ Many racial supremacists still believe that cultural behavior correlates with
 
 skin color, nose shape, hair texture or what you have.
 
@@ -1689,17 +1689,17 @@ behavior.
 
 îŽ¢ Many  thought  traits  like  intellect,  values  and  morals  were  products  of
 
-oneâ€™s race.
+one's race.
 
-îŽ¢ This wrong idea, is derived from the application of Darwinâ€™s principles of
+îŽ¢ This wrong idea, is derived from the application of Darwin's principles of
 
 biological evolution to societies - Social Darwinism
 
 îŽ¢ Social  Darwinism  is  the  idea  that  as  societies  and  nations  evolved  and
 competed, the morally superior societies would prevail as the less-moral,
-â€œsavageâ€ societies were weeded out.
+"savage" societies were weeded out.
 
-îŽ¢ With behavioral characteristics â€œlinkedâ€ to genetic characteristics, in the
+îŽ¢ With behavioral characteristics "linked" to genetic characteristics, in the
 minds of many in the 19th and early 20th centuries even advocated for
 state  regulation  of  marriages,  family  size  and  whether  to  allow  an
 individual to reproduce.
@@ -1713,13 +1713,13 @@ The Grand Illusion: Race, turns out, is arbitrary
 human  species  into  various  races,  such  as  Caucasian,  Black  African,
 Asian, and so on.
 
-îŽ¢ The  problem  is  that  the  physical  traits  used  to  identify  arenâ€™t  binary
+îŽ¢ The  problem  is  that  the  physical  traits  used  to  identify  aren't  binary
 
 opposites like black or white with no middle ground.
 
-îŽ¢ Theyâ€™re continuous traits, meaning that a whole spectrum exists between
+îŽ¢ They're continuous traits, meaning that a whole spectrum exists between
 
-â€œblackâ€ and â€œwhiteâ€ skin designations.
+"black" and "white" skin designations.
 
 îŽ¢ Any attempt to classify human races raises a number of questions.
 
@@ -1728,20 +1728,20 @@ respects,  what  do  you  do  with  people  who  look  partly  Asian  and  partl
 European?
 
 îŽ¢ A  Study  by  Harvard  Anthropologist  named  Lewontin  in  1972  concluded
-that  â€œHuman  racial  classification  is  of  no  social  value  and  is  positively
-destructive of social and human relations.â€
+that  "Human  racial  classification  is  of  no  social  value  and  is  positively
+destructive of social and human relations."
 
-îŽ¢ For most professional anthropologists today, human â€œraceâ€ is an outdated
+îŽ¢ For most professional anthropologists today, human "race" is an outdated
 
 concept.
 
 Why is everyone Different? Human Cultural Diversity/Variation
 
-îŽ¢ Although all humans are of the same species, they donâ€™t all act the same;
+îŽ¢ Although all humans are of the same species, they don't all act the same;
 
 human behavior varies tremendously worldwide.
 
-îŽ¢ If race  doesnâ€™t  control  a  personâ€™s  characteristics,  what  does account for human
+îŽ¢ If race  doesn't  control  a  person's  characteristics,  what  does account for human
 
 behavioral variation? The answer is culture.
 
@@ -1755,8 +1755,8 @@ the  culture  of
 
 foragers  have  certain
 characteristics,  and  they  value  certain  things  because  they  have  evolved  in  a
-particular ecological envâ€™t different from highland Scots, whose own culture is
-an adaptation to their unique envâ€™t.
+particular ecological env't different from highland Scots, whose own culture is
+an adaptation to their unique env't.
 
 the  Amazonian
 
@@ -1765,20 +1765,20 @@ Racial Classification: A Short Historical Overview
 îŽ¢  In  this  regard,  race  was  used  both  as  a  system  of  human  classification  and
 
 social stratification as follows:
-î¼ Europeaeus:  White;  muscular;  hair  â€“  long,  flowing;  eyes  blue  â€“  Acute,
+î¼ Europeaeus:  White;  muscular;  hair  –  long,  flowing;  eyes  blue  –  Acute,
 
 inventive, gentle, and governed by laws.
 
 68
-î¼ Americanus:  Reddish;  erect;  hair  â€“  black,  straight,  thick;  wide  nostrils,  merry,
+î¼ Americanus:  Reddish;  erect;  hair  –  black,  straight,  thick;  wide  nostrils,  merry,
 
 free, and regulated by custom.
 
-î¼ Asiaticus: Sallow (yellow); hair black; eyes dark â€“ Haughty, avaricious, severe,
+î¼ Asiaticus: Sallow (yellow); hair black; eyes dark – Haughty, avaricious, severe,
 
 and ruled by opinions.
 
-î¼ Africanus: Black; hair â€“ black, frizzled; skin silky; nose flat; lips tumid, negligent,
+î¼ Africanus: Black; hair – black, frizzled; skin silky; nose flat; lips tumid, negligent,
 
 and governed by the will of their masters.
 
@@ -1809,7 +1809,7 @@ town/village/tribal or ethnic group),
 
 î¼ 10% is between any two groups, even those that are geographically close and
 
-î¼5% is between geographically distant groups such as two towns/villages
+î¼5% is between geographically distant groups such as two towns/villages
 
 from different continents.
 
@@ -1821,7 +1821,7 @@ same race when compared to people of different races.
 
 scientific validity.
 
-îŽ¢ But, based on the social construction perspective â€˜Raceâ€™ is human groups
+îŽ¢ But, based on the social construction perspective 'Race' is human groups
 defined  by  itself  or  others  as  distinct  by  virtue  of  perceived  common
 physical characteristics that are held to be inherent.
 
@@ -1830,10 +1830,10 @@ physical characteristics that are held to be inherent.
 relation between race and ethnicity.
 
 îŽ¢ Scholars like van den Berghe (1983) regard "race" relations as a special
-case of ethnicity. He describes race as â€œa special marker of ethnicityâ€ that
+case of ethnicity. He describes race as "a special marker of ethnicity" that
 uses biological characteristics as an ethnic marker.
 
-îŽ¢ Contrary to this, other scholars argued that while there is much overlap
+îŽ¢ Contrary to this, other scholars argued that while there is much overlap
 
 between race and ethnicity, they are distinct concepts.
 
@@ -1841,9 +1841,9 @@ between race and ethnicity, they are distinct concepts.
 ethnic identity by proposing that a blood relationship was necessary for
 racial identification but not for ethnic identification.
 
-îŽ¢ John Rex  (1973) explained  that â€œa far wider set of situations are based
+îŽ¢ John Rex  (1973) explained  that "a far wider set of situations are based
 upon  cultural  differentiation  of  groups  in  the  form  ethnic  groups  than
-those which are commonly called racial groupsâ€.
+those which are commonly called racial groups".
 
 îŽ¢ Gerald  Berreman (1981) differeniated  ethnicity from race in that, racial
 stratification  is  associated  with  birth-ascribed  status  based  on  physical
@@ -1853,7 +1853,7 @@ and cultural characteristics defined by outside groups.
 
 defines its cultural characteristics itself.
 
-4.5. Theories of Ethnicity
+4.5. Theories of Ethnicity
 îŽ¢ There    are  three  basic  anthropological  approaches  for  understanding  ethnicity
 and these theories broadly reflect changes of approach in anthropology over the
 past 20 years.
@@ -1867,74 +1867,74 @@ Description
 
 Perspective
 Primordialist Approach  Ethnicity  is  fixed  at  birth.  Ethnic  identification  is
-based  on  deep,  â€˜primordialâ€™  attachments  to  a  group
+based  on  deep,  'primordial'  attachments  to  a  group
 or culture
-â€œhistoricalâ€  and
-Ethnicity,  based  on  peopleâ€™s
-â€œsymbolicâ€  memory  is  something  created  and  used
+"historical"  and
+Ethnicity,  based  on  people's
+"symbolic"  memory  is  something  created  and  used
 and exploited by leaders and others in the pursuit of
 their own interests.
 
 Instrumentalist
 Approach
 
-Constructivist Approach Ethnic  identity  is  not  something  people  â€œpossessâ€
-but something they â€œconstructâ€ in specific social and
+Constructivist Approach Ethnic  identity  is  not  something  people  "possess"
+but something they "construct" in specific social and
 historical contexts to their own interests.
 It is fluid and subjective.
 
-4.5.1. The Primordial Model of Ethnicity
+4.5.1. The Primordial Model of Ethnicity
 îŽ¢ It is the oldest and popular theory in anthropology until the mid-1970s.
 îŽ¢ Primordial  theorists  view  human  society  as  a  conglomeration  of  distinct  social
 
 groups.
 
-îŽ¢ At birth a person â€œbecomesâ€ a member of a particular group.
-îŽ¢ Ethnicity is â€œfixedâ€ and an unchangeable part of oneâ€™s identity.
+îŽ¢ At birth a person "becomes" a member of a particular group.
+îŽ¢ Ethnicity is "fixed" and an unchangeable part of one's identity.
 îŽ¢ The roots of Primordialist thinking can be traced back to the German Romantic
 
 philosophers.
 
-îŽ¢ Especially  Herder  (1744â€“1803),  proclaimed  the  primacy  of  emotions  and
+îŽ¢ Especially  Herder  (1744–1803),  proclaimed  the  primacy  of  emotions  and
 
 language, and defined society a deep-seated, mythical community.
 
 îŽ¢ He argued that every people had its own values, customs, language and spirit and
 
-bound one closely with oneâ€™s people.
+bound one closely with one's people.
 
-îŽ¢ Primordialism  is  an  â€œobjectivist  theoryâ€  which  argues  â€œultimately  there  is  some
+îŽ¢ Primordialism  is  an  "objectivist  theory"  which  argues  "ultimately  there  is  some
 
-real, tangible, foundation for ethnic identification.â€
+real, tangible, foundation for ethnic identification."
 
 73
 îŽ¢ Clifford  Geertz  (1973),  articulated  ethnicity  as  a  natural  phenomenon  with  its
 
 foundations deriving mainly from kinship, locality and culture.
 
-îŽ¢ Isaacs (1974) further illustrated the concept of primordial ties as a means
+îŽ¢ Isaacs (1974) further illustrated the concept of primordial ties as a means
 of explaining the power and persistence of ethnic identity, which he called
-â€˜basic group identityâ€™.
+'basic group identity'.
 
-îŽ¢  Isaacsâ€™s  basic  group  identity  was  linked  to  ethnic  identity,  which  was
+îŽ¢  Isaacs's  basic  group  identity  was  linked  to  ethnic  identity,  which  was
 argued  to  be  assigned  at  birth  and  more  fundamental  and  natural  than
 other social links.
 
 îŽ¢ Anthony  Smith  (1986),  theorized  the  defining  elements  of  ethnic
-identification  as  psychological  and  emotional,  emerging  from  a  personâ€™s
+identification  as  psychological  and  emotional,  emerging  from  a  person's
 historical and cultural backgrounds.
 
-îŽ¢ He  illustrated  that  the  â€˜coreâ€™  of  ethnicity  resides  in  the  myths,  memories,
+îŽ¢ He  illustrated  that  the  'core'  of  ethnicity  resides  in  the  myths,  memories,
 values,  symbols  and  the  characteristic  styles  of  particular  historic
 configurations
 
-îŽ¢ Smith concluded that, â€˜primordialismâ€™ makes two distinct claims.
-îŽ¢ First, ethnicity is â€œnatural and innateâ€ never change over time, and
-îŽ¢ Second,  ethnicity  is  â€œancient  and  perennialâ€.  It  is  an  ascribed  status  and
+îŽ¢ Smith concluded that, 'primordialism' makes two distinct claims.
+îŽ¢ First, ethnicity is "natural and innate" never change over time, and
+îŽ¢ Second,  ethnicity  is  "ancient  and  perennial".  It  is  an  ascribed  status  and
 
 ethnic membership is fixed and permanent.
 
-4.5.2. Instrumentalist (Situational) Theory of Ethnicity
+4.5.2. Instrumentalist (Situational) Theory of Ethnicity
 îŽ¢ Instrumentalists  view  ethnicity  as  depending  on  rational  calculations  of
 advantage  and  stimulated  by  political  mobilization  under  the  leadership  of
 actors whose main motives are non-ethnic.
@@ -1953,20 +1953,20 @@ further their own ends and stay in power.
 
 îŽ¢ In  this  regard,  ethnicity  is  created  in  the  dynamics  of  elite  competition
 
-within the boundaries determined by political and economic realitiesâ€
+within the boundaries determined by political and economic realities"
 
 îŽ¢ Ethnic  groups  are  seen  as  a  product  of  political  myths,  created  and
 
 manipulated by culture elites in their pursuit of advantages and power.
 
-îŽ¢ Cohen  (1974),  the  leading  advocator  of  this  perspective,  â€œplaced  greater
+îŽ¢ Cohen  (1974),  the  leading  advocator  of  this  perspective,  "placed  greater
 emphasis  on  the  ethnic  group  as  a  collectively  organized  strategy  for  the
-protection of economic and political interestsâ€.
+protection of economic and political interests".
 
 îŽ¢ Ethnic  groups  share  common  interests,  and  in  pursuit  of  these  interests  they
-develop  â€œbasic  organizational  functions:  such  as  distinctiveness  or  boundaries
+develop  "basic  organizational  functions:  such  as  distinctiveness  or  boundaries
 (ethnic identity); communication; authority structure; decision making procedure;
-ideology; and socializationâ€.
+ideology; and socialization".
 
 îŽ¢ Accordingly,  Daniel  Bell  (1975)  and  Jeffrey  Ross  (1982)  emphasize  the  political
 
@@ -1974,7 +1974,7 @@ advantage of ethnic membership choice.
 
 îŽ¢ Hence,  ethnicity  is  "a  group  option  in  which  resources  are  mobilized  for  the
 purpose of pressuring the political system to allocate public goods for the benefit
-of the members of a self-differentiating collectivityâ€œ.
+of the members of a self-differentiating collectivity".
 
 4.5.3. Social Constructivist Theory of Ethnicity
 
@@ -1982,7 +1982,7 @@ of the members of a self-differentiating collectivityâ€œ.
 
 negotiated and constructed in everyday living.
 
-îŽ¢ It regards ethnicity as a process, which continues to unfold.
+îŽ¢ It regards ethnicity as a process, which continues to unfold.
 
 îŽ¢ Ethnicity  is  constructed  in  the  process  of  feeding,  clothing,  sending  to  school  and
 
@@ -1997,22 +1997,22 @@ exists objectively as it were "out there".
 individuals, where it focuses on the interpersonal and behavioral aspects of ethnicity
 .
 
-îŽ¢ However, this does not mean that all â€œsubjectivistsâ€ reject all objective aspects of
+îŽ¢ However, this does not mean that all "subjectivists" reject all objective aspects of
 
 ethnicity.
 
-îŽ¢ Barth is the leading figure of this approach and he viewed ethnic identity as an â€œ
-individualistic  strategyâ€  in  which  individuals  move  from  one  identity  to  another  to
-â€œadvance their personal economic and political interests, or to minimize their losses
-â€.
+îŽ¢ Barth is the leading figure of this approach and he viewed ethnic identity as an "
+individualistic  strategy"  in  which  individuals  move  from  one  identity  to  another  to
+"advance their personal economic and political interests, or to minimize their losses
+".
 
-îŽ¢ Following  Barth,  ethnic
+îŽ¢ Following  Barth,  ethnic
 
 identity  forms  through  boundary  maintenance  and
 
 interaction between individuals.
 
-îŽ¢ Depending on each social interaction, a personâ€™s ethnic identity can be perceived
+îŽ¢ Depending on each social interaction, a person's ethnic identity can be perceived
 
 or presented in various ways.
 
@@ -2035,7 +2035,7 @@ are permeable and osmotic.
 
 and ethnic identities are constructed, deconstructed and reconstructed.
 
-Unit Five
+Unit Five
 Customary and Local Governance Systems and Peace
 Making
 
@@ -2057,9 +2057,9 @@ the Oromo Gaada since the 1950s.
 on  the  Oromo  political  system  -  the  Gaada  system,  particularly  focusing  on  the
 Borena Oromo.
 
-îŽ¢ Gadaa system is â€˜an age grading institution of the Oromo that has a complex
+îŽ¢ Gadaa system is 'an age grading institution of the Oromo that has a complex
 
-system of administration, law making and dispute settlementâ€™.
+system of administration, law making and dispute settlement'.
 
 îŽ¢ It  is  a  highly  celebrated  institution  of  egalitarian  (democratic)  system  of
 
@@ -2082,11 +2082,11 @@ eight years to revising, adapting, making and publicizing the customary law
 
 such as the Jaarsa Biyyaa (elders of the soil/land).
 
-The Gedeo Baalle
+The Gedeo Baalle
 îŽ¢ The Gedeo have an indigenous system of governance called Baalle.
 
 îŽ¢ The customary law of the Gedeo is called Seera.
-îŽ¢ The Yaâ€™a, the general assembly, is the highest body of governance.
+îŽ¢ The Ya'a, the general assembly, is the highest body of governance.
 îŽ¢ The Baalle is a complex system which has three administrative hierarchies:
 
 î¼ Abba Gada, the leader of the Baalle
@@ -2100,13 +2100,13 @@ Hayyicha and finally to the Abba Gada.
 
 îŽ¢ In general, the Gedeo system of governance has the following major institutions: the
 
-yaâ€™a , the Seera, the Abba Gada, and council of elders.
+ya'a , the Seera, the Abba Gada, and council of elders.
 
 îŽ¢ There  are  some  similarities  between  the  Oromo  Gaada  and  the  Gedeo  Baalle
 
 system and this is a good example of cross-cultural similarities in Ethiopia.
 
-î¼ Both have grading system and periodic transfer of power
+î¼ Both have grading system and periodic transfer of power
 î¼ The role of religion is high in the two systems.
 
 îŽ¢ Similarities are also observed in the naming of indigenous institutions.
@@ -2124,11 +2124,11 @@ Dere Woga of the Gamo
 îŽ¢ The Gamo are among Omotic peoples of southern Ethiopia.
 îŽ¢ They organized into several local administrations known as deres.
 
-îŽ¢ Based  on  anthropological  findings,  there  were  more  than  40  deres
+îŽ¢ Based  on  anthropological  findings,  there  were  more  than  40  deres
 
 across the Gamo highlands.
 
-îŽ¢ Each dere had its own kaâ€™o (king) and halaqa (elected leader).
+îŽ¢ Each dere had its own ka'o (king) and halaqa (elected leader).
 
 îŽ¢ The
 
@@ -2147,7 +2147,7 @@ disputes that cannot be solved at the lower levels.
 
 o Minor cases and disputes are resolved by the dere cima, council of elders.
 
-îŽ¢ The indigenous governance of the Gamo is embedded in the Gamo belief
+îŽ¢ The indigenous governance of the Gamo is embedded in the Gamo belief
 system that telling a lie and hiding the truth are considered as a taboo.
 
 5.2 Intra and Inter-ethnic Conflict Resolution Institutions
@@ -2170,7 +2170,7 @@ peacemaking across regions and cultures in Ethiopia.
 
 institutions of conflict resolution in Ethiopia.
 
-îŽ¢ Common aspects including the following:
+îŽ¢ Common aspects including the following:
 
 î¼ High involvement of elders at different stages
 î¼ Preference and respect for elders known for their qualities including;
@@ -2196,7 +2196,7 @@ These are:
 î¼ Customary  law:    refers  to  a  body  of  rules,  norms,  and  a  set  of  moral  values
 that serve as a wider framework for human conduct and social interactions.
 
-î¼ For  example  the  Sera  of  the  Sidama,  the  dere  woga  of  the  Gamo,  the  Seera
+î¼ For  example  the  Sera  of  the  Sidama,  the  dere  woga  of  the  Gamo,  the  Seera
 
 Addaa of the Oromo; Gordena Sera of Kestane Gurage.
 
@@ -2221,7 +2221,7 @@ govern  issues  including  inheritance,  property  ownership,  marriage  and
 86
 divorce, conflict resolution and gender division of labor.
 
-î¼The  Dere  Cima:  elders  of  the  land/country  -  includes  notable  and
+î¼The  Dere  Cima:  elders  of  the  land/country  -  includes  notable  and
 
 respected elders experienced in resolving disputes.
 
@@ -2250,7 +2250,7 @@ Strengths and Limitations of Customary Justice Institutions
 
 participate in the process;
 
-î¼ Decisions are easily enforced through community-based sanctions
+î¼ Decisions are easily enforced through community-based sanctions
 î¼ Restoring  community  cohesion,  social  relations,  collective  spirit  and  social
 
 solidarity
@@ -2277,7 +2277,7 @@ some parts of Ethiopia.
 îŽ¢ Abbo  Gereb,  the  father  of  the  river  Gerewo,  is  a  dispute  resolution  institution  in
 Rayya and Wajirat district, Southern Tigray that address inter-ethnic conflicts.
 
-îŽ¢ Abbo Gereb serves to settle disputes between individuals or groups from highland
+îŽ¢ Abbo Gereb serves to settle disputes between individuals or groups from highland
 
 Tigray and lowland Afar.
 
@@ -2297,47 +2297,47 @@ Afar, Issa, Tigrayans and Argobba.
 
 the Issa and Gereb among the Tigrayans.
 
-5.4. Womenâ€™s Role in Conflict Resolution and Peacemaking
+5.4. Women's Role in Conflict Resolution and Peacemaking
 îŽ¢ Ethiopian women participate in the process of dispute settlement in exceptional
 
 cases.
 
 îŽ¢ Women  participate  in  dispute  settlement  processes  when  cases  are  related  to
 
-marriage and womenâ€™s issues.
+marriage and women's issues.
 
 îŽ¢ Some  times  women  are  participating  in  indigenous  systems  of  governance,
 
 conflict resolution, and peacemaking activities.
 
-îŽ¢ They  are  not  completely  excluded  from  conflict  resolution  and  peacemaking
+îŽ¢ They  are  not  completely  excluded  from  conflict  resolution  and  peacemaking
 
 activities.
 
 îŽ¢ In  some  societies,  women  use  their  own  institutions  to  exercise  power,  protect
 their rights, and actively participate in peacemaking activities. Three examples are;
 
-îŽ¢ Womenâ€™s Peacemaking Sticks
+îŽ¢ Women's Peacemaking Sticks
 îŽ¢ Sidama women have two instruments of power:
 
-î¼The Yakka is womenâ€™s association or unity group.
+î¼The Yakka is women's association or unity group.
 î¼The Siqqo is a stick that symbolizes peace and women honor
 
 îŽ¢ Don Kachel: Agnuak women peacemaking institution
 
-î¼ Don Kachel, â€˜let us all live in peaceâ€™, is a peacemaking institution.
+î¼ Don Kachel, 'let us all live in peace', is a peacemaking institution.
 î¼ The peace-making movement is initiated by Jaye, a group of wise and elderly
 
 Agnuak women.
 
 î¼ The  Jaye  start  a  peace-making  movement  based  on  information  gathered
 
-through womenâ€™s networking.
+through women's networking.
 
 î¼ The Jaye call the disputing parties for a meeting to settle the dispute.
 î¼ After examining the arguments the Jaye give their verdict.
 
-îŽ¢ Womenâ€™s institution of reconciliation: Raya-Azebo, Tigray
+îŽ¢ Women's institution of reconciliation: Raya-Azebo, Tigray
 
 î¼ Debarte is a reconciliation  institution of highly respected Elderly women
 î¼ It is important in avoiding harms associated with the culture of revenge.
@@ -2363,7 +2363,7 @@ and State Legal Systems
 
 systems in a given society or country.
 
-îŽ¢ It indicates the co-existence of multiple legal systems working side-by-side
+îŽ¢ It indicates the co-existence of multiple legal systems working side-by-side
 
 in the same society. It is evident in the Ethiopian context.
 
@@ -2395,7 +2395,7 @@ justice
 
 institutions, and religious courts.
 
-Unit Six
+Unit Six
 Indigenous Knowledge Systems (IKS) and Practices
 
 6.1. Definition of concepts
@@ -2421,7 +2421,7 @@ holistic view of how to use natural resources based on traditional
 
 ethical perspectives.
 
-îŽ¢ IKS refers â€œ a total of knowledge and practices, whether explicit or implicit,
+îŽ¢ IKS refers " a total of knowledge and practices, whether explicit or implicit,
 used  in  the  management  of  socioeconomic,  ecological  and  spiritual
 problems of life, stored in the collective memory and communicated orally
 among members of the community and to the future generations.
@@ -2437,14 +2437,14 @@ livelihood
 and  skills  constitutive  of  their  meaning,  belief  systems,
 constructions and expression that distinguish them from other groups.
 
-îŽ¢ However,  the  concept  â€œindigenousâ€  is  a  social  and  historical  construct
+îŽ¢ However,  the  concept  "indigenous"  is  a  social  and  historical  construct
 
 with high political, social, and economic stakes.
 
 îŽ¢ The World Bank's (2003) definition of indigenous peoples includes:
 î¼Close attachment to ancestral territories and natural resources;
 
-î¼Presence of customary social and political institutions;
+î¼Presence of customary social and political institutions;
 î¼Subsistence oriented economic systems;
 î¼Indigenous language, and
 î¼Self-identification and identification by others as members of a distinct
@@ -2467,7 +2467,7 @@ accepted by the community as their member;
 
 î¼Historical continuity with pre-colonial and/or pre-settler societies;
 
-î¼Strong link to territories and surrounding natural resources;
+î¼Strong link to territories and surrounding natural resources;
 î¼Distinct social, economic or political systems;
 î¼Distinct language, culture and beliefs;
 î¼Formation of non-dominant groups of society; and
@@ -2478,7 +2478,7 @@ distinctive peoples and communities.
 Indigenous Knowledge (IK)
 îŽ¢ There is no universally agreed single definition for indigenous knowledge.
 
-îŽ¢ According  to  Warren,  indigenous  knowledge  is  the  local  knowledge  â€“
+îŽ¢ According  to  Warren,  indigenous  knowledge  is  the  local  knowledge  –
 knowledge  that  is  unique  to  a  given  culture  or  society.  Since  every
 population is unique in terms of its environment, resources and tools IK will
 also be unique.
@@ -2491,7 +2491,7 @@ international  knowledge  system  generated  by
 
 universities, research institutions and private firms.
 
-îŽ¢ It  is  the  basis  for  local-level  decision  making  in  agriculture,  health  care,  food
+îŽ¢ It  is  the  basis  for  local-level  decision  making  in  agriculture,  health  care,  food
 preparation,  education,  natural-resource  management,  and  a  host  of  other
 activities in rural communities.
 
@@ -2521,7 +2521,7 @@ knowledge  or  wisdom',
 technical  knowledge',
 knowledge', and others.
 
-îŽ¢ All these terms have similar concepts and refer to how members of a community
+îŽ¢ All these terms have similar concepts and refer to how members of a community
 perceive and understand their environment and resources, particularly the way they
 convert those resources through labor.
 
@@ -2544,7 +2544,7 @@ living in those communities.
 î¼Tacit knowledge , not easily codifiable.
 î¼Transmitted orally, or through imitation and demonstration.
 
-î¼ Experiential rather than theoretical knowledge. Experience and trial and error,
+î¼ Experiential rather than theoretical knowledge. Experience and trial and error,
 tested  in  the  rigorous  laboratory  of  survival  of  local  communities  constantly
 reinforce IK.
 
@@ -2561,18 +2561,18 @@ well  as  lost;  though  it  is  often  perceived  by  external  observers  as  
 somewhat static.
 
  Significance of Indigenous Knowledge
-îŽ¢ Until recently, the development of a communityâ€™s conception of knowledge was
+îŽ¢ Until recently, the development of a community's conception of knowledge was
 
 influenced by the philosophy and methods of western science.
 
 îŽ¢ Today,  scholars  and  public  policy  makers  are  recognizing  the  importance  of
 99
 various  local  or  culture-based  knowledge  systems  in  addressing  the  pressing
-problems of development and the environmentâ€.
+problems of development and the environment".
 
 îŽ¢ The knowledge of local people is an enabling component of development.
 
-îŽ¢ IKS enable people to develop strategies for handling household and communal
+îŽ¢ IKS enable people to develop strategies for handling household and communal
 
 activities.
 
@@ -2592,7 +2592,7 @@ best solution to a development challenges.
 
 understand and communicate better with local people.
 îŽ¢ In general, IK is an important part of the lives of the poor.
-îŽ¢ IK is a key element of the â€œsocial capitalâ€ of the poor; their main asset to invest in
+îŽ¢ IK is a key element of the "social capital" of the poor; their main asset to invest in
 
 the struggle for survival.
 
@@ -2601,7 +2601,7 @@ the struggle for survival.
 
 new projects or addressing specific problems and wider disasters.
 
-îŽ¢ Instead  of  relying  on  imported  Western  technologies,  people  in  the  developing
+îŽ¢ Instead  of  relying  on  imported  Western  technologies,  people  in  the  developing
 
 nations can combine indigenous and Western technology.
 
@@ -2628,7 +2628,7 @@ alleviation, and peaceful coexistence.
 
 alleviation that are locally manageable and meaningful.
 
-îŽ¢ It increases and enhances livelihood options through;
+îŽ¢ It increases and enhances livelihood options through;
 
 î¼Revitalize agriculture,
 î¼Increase food security,
@@ -2637,7 +2637,7 @@ alleviation that are locally manageable and meaningful.
 
 îŽ¢ Efficiency,  effectiveness,  and  sustainability  are  key  determinants  of  the  quality  of
 
-devâ€™t work, harnessing IK has a clear devâ€™t contribution.
+dev't work, harnessing IK has a clear dev't contribution.
 
 îŽ¢ Significant improvements in development project quality are observed when IK is
 
@@ -2654,7 +2654,7 @@ the key to sustainable social and economic development.
 about  indigenous  institutions  and  practices  and  the  necessary  ways  to  adapt
 modern techniques to the local practices.
 
-îŽ¢ A study of 121 rural water projects in 49 countries found that 70 percent succeeded
+îŽ¢ A study of 121 rural water projects in 49 countries found that 70 percent succeeded
 when  the  beneficiaries  participated  in  project  design,  compared  to  10  percent
 success rate among programs where they did not.
 
@@ -2683,8 +2683,8 @@ influence of modem technology and education.
 
 disseminated, just like Western knowledge.
 
-îŽ¢ IK  is  the  key  to  local-level  development  and  all  the  expertise  for  third  world
-development  shouldnâ€™t  come  from  developed  nations,  academic  institutions,
+îŽ¢ IK  is  the  key  to  local-level  development  and  all  the  expertise  for  third  world
+development  shouldn't  come  from  developed  nations,  academic  institutions,
 multinational corporations or NGOs''
 
 îŽ¢ Regarding the challenges and limitations of IK, Amare (2009) states:
@@ -2698,7 +2698,7 @@ and international markets, the imposition of educational and religious systems
 affect indigenous beliefs, values, customs, know-how and practices.
 
 îŽ¢ There  is  historical  and  contemporary  evidence  that  indigenous  peoples
-have  also  committed  environmental  sinsâ€™  through  over-grazing,  over-
+have  also  committed  environmental  sins'  through  over-grazing,  over-
 hunting, or over-cultivation of the land.
 
 îŽ¢ Like  scientific  knowledge,  sometimes  the  knowledge  which  local  people
@@ -2710,7 +2710,7 @@ rely on is wrong or even harmful.
 inaccurate  information  can  be  dangerous  and  be  a  barrier  to  improving
 the wellbeing of indigenous people.
 
-îŽ¢ Indigenous  peoples  fear  that  their  IK  will  be  misused  and  lacking  the  power  to
+îŽ¢ Indigenous  peoples  fear  that  their  IK  will  be  misused  and  lacking  the  power  to
 
 prevent such abuses, they choose to keep quiet.
 
@@ -2730,7 +2730,7 @@ indigenous  cultures  and
 methodologies  as  backward  or  outdated  and  they  promote  one  national  culture
 and language at the expense of minority.
 
-îŽ¢ Local  peopleâ€™s  perceptions  of  local  species  and  of  their  own  traditional  systems
+îŽ¢ Local  people's  perceptions  of  local  species  and  of  their  own  traditional  systems
 
 may need to be rebuilt.
 
@@ -2739,7 +2739,7 @@ may need to be rebuilt.
 themselves  and  have  become  dependent  on  external  solutions  to  their  local
 problems.
 
-Thank You !!!
+Thank You !!!
 
 ---
 

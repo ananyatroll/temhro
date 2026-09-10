@@ -1015,16 +1015,24 @@ fun EnrollmentConfirmationModal(
                             if (packageId == "department" || packageId == "exit_exam") {
                                 viewModel.saveDepartmentSetup("", selectedYear)
                             }
+                            val streamSuffix = if (selectedStream == "natural") "natural_science" else "social_science"
                             val targetProductId = when {
-                                packageId == "freshman" -> "freshman_${selectedStream}_y1_${selectedPlan}"
+                                packageId == "freshman" -> "freshman_${streamSuffix}_y1_${selectedPlan}"
                                 packageId == "euee" -> "euee_${selectedStream}"
                                 packageId == "coc" -> selectedCocField
                                 else -> packageId
                             }
                             val matchedProduct = com.example.data.ProductCatalog.get(targetProductId)
-                            if (matchedProduct != null) {
-                                viewModel.createPurchaseRequest(matchedProduct)
-                            }
+                                ?: com.example.data.Product(
+                                    id = targetProductId,
+                                    category = packageId,
+                                    stream = streamSuffix,
+                                    academicYear = 1,
+                                    plan = selectedPlan,
+                                    amount = currentPriceETB,
+                                    shortLabel = if (selectedPlan == "full_year") "Full Academic Year" else "Semester ${if (selectedPlan == "sem1") "1" else "2"}"
+                                )
+                            viewModel.createPurchaseRequest(matchedProduct)
                             onUpgradePremium()
                         },
                         modifier = Modifier

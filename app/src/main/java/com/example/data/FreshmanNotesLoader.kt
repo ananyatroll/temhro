@@ -73,7 +73,9 @@ object FreshmanNotesLoader {
     }
 
     /**
-     * Parses markdown text into individual chapter SubjectNotes.
+     * Parses markdown text into individual section SubjectNotes.
+     * Each note represents a single section (e.g., 1.1, 1.2), allowing
+     * the reader to show one section per page with Next/Previous navigation.
      */
     fun parseMarkdownToChapters(subjectId: String, rawMarkdown: String): List<SubjectNote> {
         val lines = rawMarkdown.lines()
@@ -119,7 +121,7 @@ object FreshmanNotesLoader {
             }
         }
 
-        // Deduplicate candidates that are on adjacent lines (e.g. # CHAPTER ONE followed by Chapter One)
+        // Deduplicate candidates that are on adjacent lines
         val filteredCandidates = mutableListOf<ChapterCandidate>()
         for (cand in candidates) {
             val last = filteredCandidates.lastOrNull()
@@ -128,41 +130,121 @@ object FreshmanNotesLoader {
             }
         }
 
-        if (filteredCandidates.isEmpty()) {
-            // Fallback: entire file as one note
-            notes.add(
-                SubjectNote(
-                    id = "${subjectId}_c1",
-                    subjectId = subjectId,
-                    unit = "Chapter 1",
-                    title = "Course Lecture Notes",
-                    content = rawMarkdown.trim(),
-                    gradeLevel = "Freshman"
-                )
-            )
-            return notes
+        val effectiveChapters = if (filteredCandidates.isNotEmpty()) {
+            filteredCandidates
+        } else {
+            listOf(ChapterCandidate(0, "Chapter 1", "Course Lecture Notes"))
         }
 
-        for (idx in filteredCandidates.indices) {
-            val current = filteredCandidates[idx]
-            val startLine = current.lineIndex
-            val endLine = if (idx + 1 < filteredCandidates.size) filteredCandidates[idx + 1].lineIndex else lines.size
+        val secRegex1 = Regex("""^(?:#{1,4}\s*)?(\d+\.\d+)(?:[\.\:\s]+)(.*)$""")
+        val secRegex2 = Regex("""^\*\*(\d+(?:\.\d+)?)[\.\:\s]+([^*]+)\*\*""")
+        val secRegex3 = Regex("""^#{2,3}\s+([^#\n]+)$""")
 
-            val chapterText = lines.subList(startLine, endLine).joinToString("\n").trim()
-            if (chapterText.isNotBlank()) {
-                val cleanTitle = current.titleName.replace(Regex("""^Chapter\s*\d+\s*[-:]?\s*""", RegexOption.IGNORE_CASE), "").trim()
-                val displayTitle = if (cleanTitle.isNotBlank()) cleanTitle else current.unitName
+        data class SectionCandidate(
+            val lineIndex: Int,
+            val tag: String,
+            val title: String
+        )
 
-                notes.add(
-                    SubjectNote(
-                        id = "${subjectId}_c${idx + 1}",
-                        subjectId = subjectId,
-                        unit = current.unitName,
-                        title = displayTitle,
-                        content = chapterText,
-                        gradeLevel = "Freshman"
+        var noteCount = 0
+
+        for (cIdx in effectiveChapters.indices) {
+            val currentChap = effectiveChapters[cIdx]
+            val startLine = currentChap.lineIndex
+            val endLine = if (cIdx + 1 < effectiveChapters.size) effectiveChapters[cIdx + 1].lineIndex else lines.size
+            val chapterLines = lines.subList(startLine, endLine)
+            val chapterNum = cIdx + 1
+
+            val sections = mutableListOf<SectionCandidate>()
+
+            for (j in chapterLines.indices) {
+                val l = chapterLines[j].trim()
+                if (l.isEmpty() || j == 0) continue
+
+                var tag = ""
+                var sTitle = ""
+
+                val m1 = secRegex1.find(l)
+                if (m1 != null) {
+                    tag = m1.groupValues[1]
+                    sTitle = m1.groupValues[2].trim().trimStart('-', ':', '–', '—').trim()
+                } else {
+                    val m2 = secRegex2.find(l)
+                    if (m2 != null && !l.startsWith("**Note", ignoreCase = true)) {
+                        val numPart = m2.groupValues[1]
+                        tag = if (numPart.contains(".")) numPart else "$chapterNum.$numPart"
+                        sTitle = m2.groupValues[2].trim()
+                    } else if (l.startsWith("## ") || l.startsWith("### ")) {
+                        val m3 = secRegex3.find(l)
+                        if (m3 != null && !m3.groupValues[1].contains("chapter", ignoreCase = true)) {
+                            tag = "$chapterNum.${sections.size + 1}"
+                            sTitle = m3.groupValues[1].trim()
+                        }
+                    }
+                }
+
+                if (tag.isNotBlank() && sTitle.isNotBlank()) {
+                    val lastSec = sections.lastOrNull()
+                    if (lastSec == null || j - lastSec.lineIndex > 4) {
+                        sections.add(SectionCandidate(j, tag, sTitle))
+                    }
+                }
+            }
+
+            // Fallback for topics without explicit sections (e.g. Emerging Tech or narrative subjects)
+            if (sections.isEmpty()) {
+                var chunkStart = 0
+                var sIdx = 1
+                for (j in 1 until chapterLines.size) {
+                    val l = chapterLines[j].trim()
+                    val isTopicHeader = l.length in 4..60 &&
+                            !l.startsWith("•") && !l.startsWith("–") && !l.startsWith("-") &&
+                            (j > 0 && chapterLines[j - 1].trim().isEmpty()) &&
+                            (j + 1 < chapterLines.size && chapterLines[j + 1].trim().isEmpty())
+                    if ((isTopicHeader && (j - chunkStart > 30)) || (j - chunkStart > 120 && l.isEmpty())) {
+                        sections.add(
+                            SectionCandidate(
+                                lineIndex = chunkStart,
+                                tag = "$chapterNum.$sIdx",
+                                title = if (isTopicHeader) l else "Section $chapterNum.$sIdx"
+                            )
+                        )
+                        chunkStart = j
+                        sIdx++
+                    }
+                }
+                if (chunkStart < chapterLines.size) {
+                    sections.add(
+                        SectionCandidate(
+                            lineIndex = chunkStart,
+                            tag = "$chapterNum.$sIdx",
+                            title = "Section $chapterNum.$sIdx"
+                        )
                     )
-                )
+                }
+            }
+
+            // Create a SubjectNote for each detected section
+            for (sIdx in sections.indices) {
+                val sec = sections[sIdx]
+                val secStart = sec.lineIndex
+                val secEnd = if (sIdx + 1 < sections.size) sections[sIdx + 1].lineIndex else chapterLines.size
+                val secContent = chapterLines.subList(secStart, secEnd).joinToString("\n").trim()
+
+                if (secContent.isNotBlank()) {
+                    noteCount++
+                    val displayTitle = if (sec.title.startsWith(sec.tag)) sec.title else "${sec.tag} - ${sec.title}"
+                    notes.add(
+                        SubjectNote(
+                            id = "${subjectId}_c${cIdx + 1}_s${sIdx + 1}",
+                            subjectId = subjectId,
+                            unit = currentChap.unitName,
+                            title = displayTitle,
+                            content = secContent,
+                            gradeLevel = "Freshman"
+                        )
+                    )
+                }
             }
         }
 

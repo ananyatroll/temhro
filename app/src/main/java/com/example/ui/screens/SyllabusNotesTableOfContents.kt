@@ -61,30 +61,11 @@ fun SyllabusNotesTableOfContents(
             activeSubject?.id?.startsWith("freshman_") == true ||
             subjectName.contains("Freshman", ignoreCase = true)
 
-    val gradeOptions = when {
-        isSatCourse -> emptyList()
-        isFreshmanCourse -> listOf("Chapter 1", "Chapter 2", "Chapter 3", "Chapter 4")
-        else -> listOf("Grade 9", "Grade 10", "Grade 11", "Grade 12")
+    LaunchedEffect(Unit) {
+        viewModel.selectedGradeFilter.value = "All"
     }
 
-    LaunchedEffect(gradeOptions) {
-        if (gradeOptions.isNotEmpty() && (selectedGrade == "All" || !gradeOptions.contains(selectedGrade))) {
-            viewModel.selectedGradeFilter.value = gradeOptions.first()
-        }
-    }
-
-    val filteredNotes = remember(notesList, searchQuery) {
-        if (searchQuery.isBlank()) {
-            notesList
-        } else {
-            val q = searchQuery.trim().lowercase()
-            notesList.filter { note ->
-                note.unit.lowercase().contains(q) ||
-                note.title.lowercase().contains(q) ||
-                note.content.lowercase().contains(q)
-            }
-        }
-    }
+    val filteredNotes = notesList
 
     // Generalized Unit & Chronologically Ordered Sections Data Structure
     val groupedUnits = remember(filteredNotes, notesList, readNotes) {
@@ -155,13 +136,11 @@ fun SyllabusNotesTableOfContents(
 
             TocUnitItem(
                 unitNumber = uNum,
-                unitHeaderTitle = if (displayUnitTitle.startsWith("Unit", ignoreCase = true)) displayUnitTitle else "Unit $uNum: $displayUnitTitle",
+                unitHeaderTitle = if (displayUnitTitle.startsWith("Unit", ignoreCase = true) || displayUnitTitle.startsWith("Chapter", ignoreCase = true)) displayUnitTitle else (if (isFreshmanCourse) "Chapter $uNum: $displayUnitTitle" else "Unit $uNum: $displayUnitTitle"),
                 sections = sections
             )
         }
     }
-
-    var collapsedUnits by remember { mutableStateOf(setOf<Int>()) }
 
     Surface(
         color = if (isDark) ReaderBgDark else Color(0xFFF8FAFC),
@@ -214,7 +193,7 @@ fun SyllabusNotesTableOfContents(
                             overflow = TextOverflow.Ellipsis
                         )
                         Text(
-                            text = "Table of Contents • ${groupedUnits.size} Units (${notesList.size} Lessons)",
+                            text = "${groupedUnits.size} Chapters • ${notesList.size} Sections",
                             style = MaterialTheme.typography.bodySmall,
                             color = EmeraldPrimary,
                             fontWeight = FontWeight.Medium
@@ -223,99 +202,15 @@ fun SyllabusNotesTableOfContents(
                 }
             }
 
-
-
-            // Grade Level Selector Row (Grade 9, 10, 11, 12)
-            if (gradeOptions.isNotEmpty()) {
-                Surface(
-                    color = if (isDark) Color(0xFF0F172A) else Color(0xFFF1F5F9),
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .horizontalScroll(rememberScrollState())
-                            .padding(horizontal = 16.dp, vertical = 10.dp),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        gradeOptions.forEach { grade ->
-                            val isSelected = selectedGrade.equals(grade, ignoreCase = true)
-                            Surface(
-                                shape = RoundedCornerShape(12.dp),
-                                color = if (isSelected) EmeraldPrimary else (if (isDark) CardBgDark else Color.White),
-                                border = BorderStroke(
-                                    1.dp,
-                                    if (isSelected) EmeraldPrimary else (if (isDark) Color.White.copy(alpha = 0.15f) else Color(0xFFCBD5E1))
-                                ),
-                                modifier = Modifier
-                                    .clickable {
-                                        viewModel.selectedGradeFilter.value = grade
-                                    }
-                            ) {
-                                Text(
-                                    text = grade,
-                                    style = MaterialTheme.typography.labelMedium.copy(
-                                        fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
-                                        fontSize = 13.sp
-                                    ),
-                                    color = if (isSelected) Color.White else (if (isDark) Color.White else IndigoSecondary),
-                                    modifier = Modifier.padding(horizontal = 14.dp, vertical = 8.dp)
-                                )
-                            }
-                        }
-                    }
-                }
-            }
-
-            // Search Bar
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp, vertical = 8.dp)
-            ) {
-                OutlinedTextField(
-                    value = searchQuery,
-                    onValueChange = { searchQuery = it },
-                    placeholder = {
-                        Text(
-                            "Search units, lessons, topics...",
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = Color.Gray
-                        )
-                    },
-                    leadingIcon = {
-                        Icon(Icons.Default.Search, contentDescription = null, tint = EmeraldPrimary)
-                    },
-                    trailingIcon = {
-                        if (searchQuery.isNotEmpty()) {
-                            IconButton(onClick = { searchQuery = "" }) {
-                                Icon(Icons.Default.Close, contentDescription = "Clear search", tint = Color.Gray)
-                            }
-                        }
-                    },
-                    singleLine = true,
-                    shape = RoundedCornerShape(12.dp),
-                    colors = OutlinedTextFieldDefaults.colors(
-                        focusedContainerColor = if (isDark) CardBgDark else Color.White,
-                        unfocusedContainerColor = if (isDark) CardBgDark else Color.White,
-                        focusedBorderColor = EmeraldPrimary,
-                        unfocusedBorderColor = if (isDark) Color.White.copy(alpha = 0.12f) else Color(0xFFE2E8F0),
-                        focusedTextColor = if (isDark) Color.White else Color.Black,
-                        unfocusedTextColor = if (isDark) Color.White else Color.Black
-                    ),
-                    modifier = Modifier.fillMaxWidth()
-                )
-            }
-
             LazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(horizontal = 16.dp),
-                contentPadding = PaddingValues(top = 4.dp, bottom = 40.dp)
+                contentPadding = PaddingValues(top = 12.dp, bottom = 40.dp)
             ) {
                 // "Continue where you left off" Card
                 val hasRecentStudy = lastStudiedSubjectId == activeSubject?.id && !lastStudiedUnit.isNullOrBlank()
-                if (hasRecentStudy && searchQuery.isBlank()) {
+                if (hasRecentStudy) {
                     item {
                         Card(
                             shape = RoundedCornerShape(14.dp),
@@ -443,9 +338,10 @@ fun SyllabusNotesTableOfContents(
                     }
                 } else {
                     items(groupedUnits, key = { it.unitNumber }) { unit ->
-                        val isExpanded = !collapsedUnits.contains(unit.unitNumber)
                         val completedSectionsCount = unit.sections.count { it.isRead }
                         val isAllRead = unit.sections.isNotEmpty() && completedSectionsCount == unit.sections.size
+                        val firstNoteInUnit = unit.sections.firstOrNull()
+                        val firstNoteIndex = firstNoteInUnit?.rawIndexInMaster ?: 0
 
                         Card(
                             shape = RoundedCornerShape(14.dp),
@@ -459,202 +355,106 @@ fun SyllabusNotesTableOfContents(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .padding(vertical = 6.dp)
+                                .clickable {
+                                    if (firstNoteInUnit != null) {
+                                        viewModel.recordNoteStudied(firstNoteInUnit.note)
+                                    }
+                                    viewModel.openNoteUnit(firstNoteIndex)
+                                }
                         ) {
-                            Column(
+                            Row(
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .padding(14.dp)
+                                    .padding(16.dp),
+                                verticalAlignment = Alignment.CenterVertically
                             ) {
-                                // Unit Header Row
-                                Row(
+                                // Unit index badge
+                                Box(
                                     modifier = Modifier
-                                        .fillMaxWidth()
-                                        .clip(RoundedCornerShape(8.dp))
-                                        .clickable {
-                                            collapsedUnits = if (isExpanded) {
-                                                collapsedUnits + unit.unitNumber
-                                            } else {
-                                                collapsedUnits - unit.unitNumber
-                                            }
-                                        },
-                                    verticalAlignment = Alignment.CenterVertically
+                                        .size(46.dp)
+                                        .clip(RoundedCornerShape(12.dp))
+                                        .background(
+                                            if (isAllRead) EmeraldPrimary.copy(alpha = 0.2f)
+                                            else (if (isDark) Color(0xFF1E293B) else Color(0xFFEEF2F6))
+                                        )
+                                        .border(
+                                            1.dp,
+                                            if (isAllRead) EmeraldPrimary else Color.Transparent,
+                                            RoundedCornerShape(12.dp)
+                                        ),
+                                    contentAlignment = Alignment.Center
                                 ) {
-                                    // Unit index badge
-                                    Box(
-                                        modifier = Modifier
-                                            .size(42.dp)
-                                            .clip(RoundedCornerShape(10.dp))
-                                            .background(
-                                                if (isAllRead) EmeraldPrimary.copy(alpha = 0.2f)
-                                                else (if (isDark) Color(0xFF1E293B) else Color(0xFFEEF2F6))
-                                            )
-                                            .border(
-                                                1.dp,
-                                                if (isAllRead) EmeraldPrimary else Color.Transparent,
-                                                RoundedCornerShape(10.dp)
-                                            ),
-                                        contentAlignment = Alignment.Center
-                                    ) {
-                                        if (isAllRead) {
-                                            Icon(
-                                                imageVector = Icons.Default.CheckCircle,
-                                                contentDescription = "Completed",
-                                                tint = EmeraldPrimary,
-                                                modifier = Modifier.size(22.dp)
-                                            )
-                                        } else {
-                                            Text(
-                                                text = "${unit.unitNumber}",
-                                                style = MaterialTheme.typography.titleMedium.copy(
-                                                    fontWeight = FontWeight.Bold
-                                                ),
-                                                color = if (isDark) Color.White else IndigoSecondary
-                                            )
-                                        }
-                                    }
-
-                                    Spacer(modifier = Modifier.width(12.dp))
-
-                                    Column(modifier = Modifier.weight(1f)) {
-                                        Row(
-                                            verticalAlignment = Alignment.CenterVertically,
-                                            horizontalArrangement = Arrangement.spacedBy(6.dp)
-                                        ) {
-                                            Text(
-                                                text = "UNIT ${unit.unitNumber}".uppercase(),
-                                                style = MaterialTheme.typography.labelSmall.copy(
-                                                    fontWeight = FontWeight.Black,
-                                                    fontSize = 10.sp,
-                                                    letterSpacing = 1.sp
-                                                ),
-                                                color = EmeraldPrimary
-                                            )
-                                            Text(
-                                                text = "• ${unit.sections.size} ${if (unit.sections.size == 1) "Section" else "Sections"}",
-                                                style = MaterialTheme.typography.labelSmall,
-                                                color = Color.Gray
-                                            )
-                                            if (completedSectionsCount > 0) {
-                                                Text(
-                                                    text = "($completedSectionsCount/${unit.sections.size})",
-                                                    style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
-                                                    color = EmeraldPrimary
-                                                )
-                                            }
-                                        }
-
-                                        Spacer(modifier = Modifier.height(2.dp))
-
+                                    if (isAllRead) {
+                                        Icon(
+                                            imageVector = Icons.Default.CheckCircle,
+                                            contentDescription = "Completed",
+                                            tint = EmeraldPrimary,
+                                            modifier = Modifier.size(24.dp)
+                                        )
+                                    } else {
                                         Text(
-                                            text = unit.unitHeaderTitle,
+                                            text = "${unit.unitNumber}",
                                             style = MaterialTheme.typography.titleMedium.copy(
                                                 fontWeight = FontWeight.Bold,
-                                                fontSize = 15.sp
+                                                fontSize = 18.sp
                                             ),
-                                            color = if (isDark) Color.White else IndigoSecondary,
-                                            maxLines = 2,
-                                            overflow = TextOverflow.Ellipsis
-                                        )
-                                    }
-
-                                    IconButton(
-                                        onClick = {
-                                            collapsedUnits = if (isExpanded) {
-                                                collapsedUnits + unit.unitNumber
-                                            } else {
-                                                collapsedUnits - unit.unitNumber
-                                            }
-                                        },
-                                        modifier = Modifier.size(32.dp)
-                                    ) {
-                                        Icon(
-                                            imageVector = if (isExpanded) Icons.Default.ExpandLess else Icons.Default.ExpandMore,
-                                            contentDescription = if (isExpanded) "Collapse" else "Expand",
-                                            tint = if (isDark) Color.White else Color.Gray
+                                            color = if (isDark) Color.White else IndigoSecondary
                                         )
                                     }
                                 }
 
-                                // Sections List inside the Unit
-                                if (isExpanded) {
-                                    Spacer(modifier = Modifier.height(10.dp))
-                                    HorizontalDivider(
-                                        color = if (isDark) Color.White.copy(alpha = 0.08f) else Color(0xFFF1F5F9)
-                                    )
-                                    Spacer(modifier = Modifier.height(4.dp))
+                                Spacer(modifier = Modifier.width(14.dp))
 
-                                    unit.sections.forEachIndexed { secIdx, section ->
-                                        Surface(
-                                            color = Color.Transparent,
-                                            modifier = Modifier
-                                                .fillMaxWidth()
-                                                .clip(RoundedCornerShape(8.dp))
-                                                .clickable {
-                                                    viewModel.recordNoteStudied(section.note)
-                                                    viewModel.openNoteUnit(section.rawIndexInMaster)
-                                                }
-                                                .padding(vertical = 6.dp, horizontal = 4.dp)
-                                        ) {
-                                            Row(
-                                                modifier = Modifier.fillMaxWidth(),
-                                                verticalAlignment = Alignment.CenterVertically
-                                            ) {
-                                                Surface(
-                                                    color = if (section.isRead) EmeraldPrimary.copy(alpha = 0.15f)
-                                                    else (if (isDark) Color(0xFF334155) else Color(0xFFE2E8F0)),
-                                                    shape = RoundedCornerShape(6.dp)
-                                                ) {
-                                                    Text(
-                                                        text = section.sectionTag,
-                                                        style = MaterialTheme.typography.labelSmall.copy(
-                                                            fontWeight = FontWeight.Bold,
-                                                            fontSize = 11.sp
-                                                        ),
-                                                        color = if (section.isRead) EmeraldPrimary else (if (isDark) Color.White else IndigoSecondary),
-                                                        modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
-                                                    )
-                                                }
-
-                                                Spacer(modifier = Modifier.width(10.dp))
-
-                                                Column(modifier = Modifier.weight(1f)) {
-                                                    Text(
-                                                        text = section.displayTitle,
-                                                        style = MaterialTheme.typography.bodyMedium.copy(
-                                                            fontWeight = FontWeight.Medium,
-                                                            fontSize = 13.sp
-                                                        ),
-                                                        color = if (isDark) Color.White else IndigoSecondary,
-                                                        maxLines = 2,
-                                                        overflow = TextOverflow.Ellipsis
-                                                    )
-                                                }
-
-                                                if (section.isRead) {
-                                                    Icon(
-                                                        imageVector = Icons.Default.Check,
-                                                        contentDescription = "Read",
-                                                        tint = EmeraldPrimary,
-                                                        modifier = Modifier.size(16.dp)
-                                                    )
-                                                } else {
-                                                    Icon(
-                                                        imageVector = Icons.Default.ChevronRight,
-                                                        contentDescription = "Read Lesson",
-                                                        tint = EmeraldPrimary.copy(alpha = 0.6f),
-                                                        modifier = Modifier.size(18.dp)
-                                                    )
-                                                }
-                                            }
-                                        }
-                                        if (secIdx < unit.sections.size - 1) {
-                                            HorizontalDivider(
-                                                color = if (isDark) Color.White.copy(alpha = 0.04f) else Color(0xFFF8FAFC),
-                                                modifier = Modifier.padding(vertical = 2.dp)
+                                Column(modifier = Modifier.weight(1f)) {
+                                    Row(
+                                        verticalAlignment = Alignment.CenterVertically,
+                                        horizontalArrangement = Arrangement.spacedBy(6.dp)
+                                    ) {
+                                        Text(
+                                            text = (if (isFreshmanCourse) "CHAPTER ${unit.unitNumber}" else "UNIT ${unit.unitNumber}").uppercase(),
+                                            style = MaterialTheme.typography.labelSmall.copy(
+                                                fontWeight = FontWeight.Black,
+                                                fontSize = 10.sp,
+                                                letterSpacing = 1.sp
+                                            ),
+                                            color = EmeraldPrimary
+                                        )
+                                        Text(
+                                            text = "• ${unit.sections.size} ${if (unit.sections.size == 1) "Section" else "Sections"}",
+                                            style = MaterialTheme.typography.labelSmall,
+                                            color = Color.Gray
+                                        )
+                                        if (completedSectionsCount > 0) {
+                                            Text(
+                                                text = "($completedSectionsCount/${unit.sections.size})",
+                                                style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
+                                                color = EmeraldPrimary
                                             )
                                         }
                                     }
+
+                                    Spacer(modifier = Modifier.height(4.dp))
+
+                                    Text(
+                                        text = unit.unitHeaderTitle,
+                                        style = MaterialTheme.typography.titleMedium.copy(
+                                            fontWeight = FontWeight.Bold,
+                                            fontSize = 15.sp
+                                        ),
+                                        color = if (isDark) Color.White else IndigoSecondary,
+                                        maxLines = 2,
+                                        overflow = TextOverflow.Ellipsis
+                                    )
                                 }
+
+                                Spacer(modifier = Modifier.width(8.dp))
+
+                                Icon(
+                                    imageVector = Icons.Default.ChevronRight,
+                                    contentDescription = "Open Chapter",
+                                    tint = EmeraldPrimary,
+                                    modifier = Modifier.size(24.dp)
+                                )
                             }
                         }
                     }

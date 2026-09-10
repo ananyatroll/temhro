@@ -9,11 +9,11 @@ Biology
 CHAPTER 1
 INTRODUCTION
 Chapter 1: Introduction
-â€¢ This chapter is intended to familiarize students with basic
+•  This chapter is intended to familiarize students with basic
 concepts of biological science, the nature and origin of life,
 | scientific |     |     | methods | and     | the | subject |      | matter  | of biology. |
 | ---------- | --- | --- | ------- | ------- | --- | ------- | ---- | ------- | ----------- |
-| â€¢ At       | the | end | of this | chapter |     | you     | will | be able | to:         |
+| •  At       | the | end | of this | chapter |     | you     | will | be able | to:         |
 âœ“
 | Define    |     | the | term       | biology |         |     |         |     |     |
 | --------- | --- | --- | ---------- | ------- | ------- | --- | ------- | --- | --- |
@@ -21,96 +21,96 @@ concepts of biological science, the nature and origin of life,
 | âœ“ Explain |     | the | origin     | and     | nature  |     | of life |     |     |
 
 1.1 The meaning and scope of biology
-â€¢ Biological Sciences is the study of life and living organisms.
-â€¢ It is also called as â€Biologyâ€, which is composed of two Greek
-| words         | â€˜bioâ€˜ | means   |     | life    | and    | â€˜logosâ€˜ | means          |        | study | of. |       |     |
+•  Biological Sciences is the study of life and living organisms.
+•  It is also called as "Biology", which is composed of two Greek
+| words         | 'bio' | means   |     | life    | and    | 'logos' | means          |        | study | of. |       |     |
 | ------------- | ----- | ------- | --- | ------- | ------ | ------- | -------------- | ------ | ----- | --- | ----- | --- |
-| â€¢ The         | term  | biology |     | was     | coined | by      | Pierre-Antoine |        |       | de  | Monet | and |
+| •  The         | term  | biology |     | was     | coined | by      | Pierre-Antoine |        |       | de  | Monet | and |
 | Jean-Baptiste |       |         | de  | Lamarck |        | in the  | late           | 1700s. |       |     |       |     |
-â€¢
+• 
 Earlier study of living things was restricted to the pure Science
 | like | Botany |      | and    | Zoology |     | that     | together |          | comprise |     | the Biology, |     |
 | ---- | ------ | ---- | ------ | ------- | --- | -------- | -------- | -------- | -------- | --- | ------------ | --- |
 | but  | as the | time | passed |         | new | branches |          | evolved. |          |     |              |     |
 
-1.1 The meaning and scopeâ€¦Contâ€™d
-â€¢
+1.1 The meaning and scope...Cont'd
+• 
 | New     | technologies |            |            | developed |            | in          | pure      | subjects |     |     | as well | as in |
 | ------- | ------------ | ---------- | ---------- | --------- | ---------- | ----------- | --------- | -------- | --- | --- | ------- | ----- |
 | applied | fields       |            | contribute |           | to the     | development |           |          |     | of  | a very  | broad |
 | concept |              | of science |            | called    | Biological |             | Sciences. |          |     |     |         |       |
-â€¢
+• 
 Biological Sciences is an extensive study covering the minute
 | workings |       | of       | chemical |     | substances |     | inside |        | living |               | cells | to the |
 | -------- | ----- | -------- | -------- | --- | ---------- | --- | ------ | ------ | ------ | ------------- | ----- | ------ |
 | broad    | scale | concepts |          | of  | ecosystems |     | and    | global |        | environmental |       |        |
 changes.
 
-1.1 The meaning and scopeâ€¦Contâ€™d
-â€¢
+1.1 The meaning and scope...Cont'd
+• 
 | It is     | also | concerned    |     |     | with   |     | the   | physical |     |      | characteristics |     | and |
 | --------- | ---- | ------------ | --- | --- | ------ | --- | ----- | -------- | --- | ---- | --------------- | --- | --- |
 | behaviors |      | of organisms |     |     | living |     | today |          | and | long | ago.            |     |     |
-â€¢ How they came into existence and what relation they possess
+•  How they came into existence and what relation they possess
 | with | each | other | and |     | their | environments? |     |     |     |     |     |     |     |
 | ---- | ---- | ----- | --- | --- | ----- | ------------- | --- | --- | --- | --- | --- | --- | --- |
-â€¢ Biological sciences closely study concepts like details of the
+•  Biological sciences closely study concepts like details of the
 | human       | brain, |     | the | composition  |     |     |     | of     | our | genes, |     | and even | the |
 | ----------- | ------ | --- | --- | ------------ | --- | --- | --- | ------ | --- | ------ | --- | -------- | --- |
 | functioning |        | of  | our | reproductive |     |     |     | system |     |        |     |          |     |
-â€¢
+• 
 Therefore, Biology is the science of Living Things. That is why
 | Biology | is  | sometimes |     |     | known |     | as  | Life | Science. |     |     |     |     |
 | ------- | --- | --------- | --- | --- | ----- | --- | --- | ---- | -------- | --- | --- | --- | --- |
 
-1.1 The meaning and scopeâ€¦Contâ€™d
-| â€¢ What | is  | life science? |     |     |     |     |     |     |     |
+1.1 The meaning and scope...Cont'd
+| •  What | is  | life science? |     |     |     |     |     |     |     |
 | ------ | --- | ------------- | --- | --- | --- | --- | --- | --- | --- |
-â€¢
-| It can      | be  | defined  | as â€œa    | systematic |              | study | of living | beings    | or  |
+• 
+| It can      | be  | defined  | as "a    | systematic |              | study | of living | beings    | or  |
 | ----------- | --- | -------- | -------- | ---------- | ------------ | ----- | --------- | --------- | --- |
-| study       | of  | natureâ€. |          |            |              |       |           |           |     |
-| â€¢ Teaching  |     | of life  | Science  | basically  |              | deals | with      | providing |     |
+| study       | of  | nature". |          |            |              |       |           |           |     |
+| •  Teaching  |     | of life  | Science  | basically  |              | deals | with      | providing |     |
 | information |     | about    | the      | latest     | developments |       | in the    | field     | of  |
 | Biological  |     | sciences | all over | the        | world.       |       |           |           |     |
 
 1.2 The origin and nature of life
-| â€¢   | What |     | is  | life? |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
+| •    | What |     | is  | life? |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
 | --- | ---- | --- | --- | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-â€¢
+• 
 |     | One       |     | of  |     | the | biggest |     |     | and    | most |     | important |     |     | of       |     | emergent |     |
 | --- | --------- | --- | --- | --- | --- | ------- | --- | --- | ------ | ---- | --- | --------- | --- | --- | -------- | --- | -------- | --- |
 |     | phenomena |     |     |     | is  | that    | of  | the | origin |      | or  | emergence |     |     | of life. |     |          |     |
-â€¢ The mystery of life's origin is still a big debating issue in
+•  The mystery of life's origin is still a big debating issue in
 |     | science.  |        |      | We  | really      |          | want |          | to     | know | much   |        | more  |            | than | what |          | it is, |
 | --- | --------- | ------ | ---- | --- | ----------- | -------- | ---- | -------- | ------ | ---- | ------ | ------ | ----- | ---------- | ---- | ---- | -------- | ------ |
 |     | we        | want   |      |     | to know     |          | why  |          | it is, | we   | are    | really |       | asking,    |      | in   | physical |        |
 |     | terms,    |        |      | why | a           | specific |      | material |        |      | system |        | is an | organism   |      |      | and      | not    |
 |     | something |        |      |     | else.       |          |      |          |        |      |        |        |       |            |      |      |          |        |
-| â€¢   | To        | answer |      |     | this        | why      |      | question |        | we   | need   |        | to    | understand |      |      | how      | life   |
+| •    | To        | answer |      |     | this        | why      |      | question |        | we   | need   |        | to    | understand |      |      | how      | life   |
 |     | might     |        | have |     | originated. |          |      |          |        |      |        |        |       |            |      |      |          |        |
 
-1.2 The origin and natureâ€¦.Contâ€™d
-| â€¢ There  | are       | a   | number  | of   | theories | about |     | the      | origin | of  | life.     |     |
+1.2 The origin and nature....Cont'd
+| •  There  | are       | a   | number  | of   | theories | about |     | the      | origin | of  | life.     |     |
 | -------- | --------- | --- | ------- | ---- | -------- | ----- | --- | -------- | ------ | --- | --------- | --- |
-| â€¢ The    | evolution |     | of      | life | on earth |       | has | involved |        | the | following |     |
+| •  The    | evolution |     | of      | life | on earth |       | has | involved |        | the | following |     |
 | sequence |           | of  | events. |      |          |       |     |          |        |     |           |     |
-â€¢ The first living things to appear were the simplest creatures,
+•  The first living things to appear were the simplest creatures,
 | single-celled  |        |      | organisms. |      | From  |        | these | came     |      | more            | complex, |     |
 | -------------- | ------ | ---- | ---------- | ---- | ----- | ------ | ----- | -------- | ---- | --------------- | -------- | --- |
 | multi-cellular |        |      | organisms. |      |       |        |       |          |      |                 |          |     |
-| â€¢ Becoming     |        | more | complex    |      | meant |        | more  | than     | just | an              | increase | in  |
+| •  Becoming     |        | more | complex    |      | meant |        | more  | than     | just | an              | increase | in  |
 | cell           | number |      | but        | more | cells | showed |       | cellular |      | specialization, |          |     |
 where certain cells within the multi-cellular organism carried
 | out | specific |     | tasks. |     |     |     |     |     |     |     |     |     |
 | --- | -------- | --- | ------ | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-1.2 The origin and natureâ€¦.Contâ€™d
-â€¢
+1.2 The origin and nature....Cont'd
+• 
 Millions, even billions of years of changes of organisms led to
 | the     | living | things       |     | we now   | call        | plants |        | and              | animals. |        |      |             |      |
 | ------- | ------ | ------------ | --- | -------- | ----------- | ------ | ------ | ---------------- | -------- | ------ | ---- | ----------- | ---- |
-| â€¢ Since | this   | basic        |     | sequence |             | of     | events |                  | is in    | accord |      | with        | that |
+| •  Since | this   | basic        |     | sequence |             | of     | events |                  | is in    | accord |      | with        | that |
 | agreed  |        | upon         | by  | most     | geologists, |        |        | paleontologists, |          |        |      | biologists, |      |
 | and     | even   | theologians, |     |          |             | one    | might  |                  | conclude |        | that | Moses,      |      |
 Aristotle, and Darwin were all keen observers and naturalists
@@ -118,27 +118,27 @@ Aristotle, and Darwin were all keen observers and naturalists
 | --- | ---- | ---- | --- | ------------ | --- | ------ | --- | --- | ---- | -------- | --- | -------- | --- |
 story.
 
-1.2 The origin and natureâ€¦.Contâ€™d
-â€¢
+1.2 The origin and nature....Cont'd
+• 
 |     | Those | who    |     | believe       |     | that |     | the | world | was | created |     |     | in six | days | are |
 | --- | ----- | ------ | --- | ------------- | --- | ---- | --- | --- | ----- | --- | ------- | --- | --- | ------ | ---- | --- |
 |     | often | called |     | creationists. |     |      |     |     |       |     |         |     |     |        |      |     |
-â€¢ Their method of inquiry is based on the belief that the Bible is
+•  Their method of inquiry is based on the belief that the Bible is
 |     | to be       |       | accepted |     |         | as a  | completely |          |       | accurate |        |      | accounting |            |      | of all |
 | --- | ----------- | ----- | -------- | --- | ------- | ----- | ---------- | -------- | ----- | -------- | ------ | ---- | ---------- | ---------- | ---- | ------ |
 |     | about       | which |          | it  | speaks. |       |            |          |       |          |        |      |            |            |      |        |
-| â€¢   | Scientists, |       |          | on  | the     | other |            |          | hand, | utilize  |        | what |            | they       | call | the    |
+| •    | Scientists, |       |          | on  | the     | other |            |          | hand, | utilize  |        | what |            | they       | call | the    |
 |     | scientific  |       | method,  |     |         | which |            | allows   |       | them     | to     | test |            | hypotheses |      | and    |
 |     | theories    |       | and      | to  | develop |       |            | concepts |       | and      | ideas. |      |            |            |      |        |
 
-1.2 The origin and natureâ€¦.Contâ€™d
-| â€¢ Summary |     | of  | Theories |     | on Origin |     | of life |     |     |     |
+1.2 The origin and nature....Cont'd
+| •  Summary |     | of  | Theories |     | on Origin |     | of life |     |     |     |
 | --------- | --- | --- | -------- | --- | --------- | --- | ------- | --- | --- | --- |
-â€¢
+• 
 | Several | attempts |     |      | have      | been | made | from | time | to time | to explain |
 | ------- | -------- | --- | ---- | --------- | ---- | ---- | ---- | ---- | ------- | ---------- |
 | the     | origin   | of  | life | on earth. |      |      |      |      |         |            |
-â€¢ As a result, there are several theories which offer their own
+•  As a result, there are several theories which offer their own
 | explanation |     |     | on   | the | possible |     | mechanism |     | of origin | of life. |
 | ----------- | --- | --- | ---- | --- | -------- | --- | --------- | --- | --------- | -------- |
 | Following   |     | are | some |     | of them: |     |           |     |           |          |
@@ -147,7 +147,7 @@ different forms of life that occur today on planet earth have been
 | created | by  | God, | the | almighty. |     |     |     |     |     |     |
 | ------- | --- | ---- | --- | --------- | --- | --- | --- | --- | --- | --- |
 
-1.2 The origin and natureâ€¦.Contâ€™d
+1.2 The origin and nature....Cont'd
 | 2.  | Theory        | of Spontaneous |           |             |      | Generation: |               |       | this | theory  |            | assumed |        |
 | --- | ------------- | -------------- | --------- | ----------- | ---- | ----------- | ------------- | ----- | ---- | ------- | ---------- | ------- | ------ |
 |     | that          | living         | organisms |             |      | could       |               | arise |      |         | suddenly   |         | and    |
@@ -161,8 +161,8 @@ different forms of life that occur today on planet earth have been
 |     | catastrophe |            | resulting |           | from |     | some   |     | kind |       | of       | geological |      |
 disturbance.
 
-1.2 The origin and natureâ€¦.Contâ€™d
-â€¢ According to this theory, since each catastrophe completely
+1.2 The origin and nature....Cont'd
+•  According to this theory, since each catastrophe completely
 destroyed the existing life, each new creation consisted of life
 | form | different |     |     | from | that of | previous |     |     | ones. |     |     |     |     |
 | ---- | --------- | --- | --- | ---- | ------- | -------- | --- | --- | ----- | --- | --- | --- | --- |
@@ -176,7 +176,7 @@ contemporary scientists. The theory did not gain any support.
 | This | theory |     |     | lacks | evidence, | hence |     | it  | was | discarded. |     |     |     |
 | ---- | ------ | --- | --- | ----- | --------- | ----- | --- | --- | --- | ---------- | --- | --- | --- |
 
-1.2 The origin and natureâ€¦.Contâ€™d
+1.2 The origin and nature....Cont'd
 5. Theory of Chemical Evolution: this theory is also known as
 | Materialistic | Theory |     | or Physico-chemical |     | Theory. | According |
 | ------------- | ------ | --- | ------------------- | --- | ------- | --------- |
@@ -189,7 +189,7 @@ Oparin, a Russian scientist in 1923 and J.B.S Haldane, an English
 scientist, in 1928.
 
 Nature and characteristics of life
-â€¢ Life is defined as a "condition" that distinguishes animals and
+•  Life is defined as a "condition" that distinguishes animals and
 | plants |     | from      | inorganic |     | materials |     |     | and    | dead         | organisms. |     |       |
 | ------ | --- | --------- | --------- | --- | --------- | --- | --- | ------ | ------------ | ---------- | --- | ----- |
 | âž¢ Life | is  | comprised |           | of  | processes |     |     | and is | a maintained |            |     | state |
@@ -197,7 +197,7 @@ Nature and characteristics of life
 The most sophisticated form of life is man as a result of this we
 | focuses |     | upon |     | the nature |     | of  | the | life and | death |     | of man. |     |
 | ------- | --- | ---- | --- | ---------- | --- | --- | --- | -------- | ----- | --- | ------- | --- |
-â€¢ Man demonstrates three lives or aspects of life: Life of the
+•  Man demonstrates three lives or aspects of life: Life of the
 | body       | (physical), |      |     | life  | of the        |     | mind | and | life  | of the | spirit. |     |
 | ---------- | ----------- | ---- | --- | ----- | ------------- | --- | ---- | --- | ----- | ------ | ------- | --- |
 | âœ“ Physical |             | life | is  | basic | existence     |     |      |     |       |        |         |     |
@@ -206,12 +206,12 @@ The most sophisticated form of life is man as a result of this we
 | Spiritual |     | entity |     | contributes |     |     | maximum |     | living |     |     |     |
 | --------- | --- | ------ | --- | ----------- | --- | --- | ------- | --- | ------ | --- | --- | --- |
 
-Nature and characteristicsâ€¦Contâ€™d
-â€¢
+Nature and characteristics...Cont'd
+• 
 Physiology: The existence of life physical is demonstrated by
 | the presence |         | of functions  |          |     |     |     |
 | ------------ | ------- | ------------- | -------- | --- | --- | --- |
-| â€¢ Living     | tissues | and organisms | exhibit: |     |     |     |
+| •  Living     | tissues | and organisms | exhibit: |     |     |     |
 A. Irritability: the ability to be excited or detect stimuli and to
 | respond        | thereto |               |               |              |       |     |
 | -------------- | ------- | ------------- | ------------- | ------------ | ----- | --- |
@@ -219,7 +219,7 @@ A. Irritability: the ability to be excited or detect stimuli and to
 | multiplication |         | and           | duplication,  | regeneration |       | and |
 differentiation
 
-Nature and characteristicsâ€¦Contâ€™d
+Nature and characteristics...Cont'd
 | C.  | Adaptability: |         |               | permitting |                | both  | change   |            | and      | maintenance |     |       | of  |
 | --- | ------------- | ------- | ------------- | ---------- | -------------- | ----- | -------- | ---------- | -------- | ----------- | --- | ----- | --- |
 |     | balances      |         | (homeostasis) |            |                |       |          |            |          |             |     |       |     |
@@ -228,7 +228,7 @@ Nature and characteristicsâ€¦Contâ€™d
 |     | while         | by      | tissues       |            | after          | death | of       | the        | organism |             | so  | there | is  |
 |     | another       | mystery |               |            | of life        | which | we       | understand |          | only        | in  | part. |     |
 
-Nature and characteristicsâ€¦Contâ€™d
+Nature and characteristics...Cont'd
 E. Excretion: excretion and osmoregulation regulation are two
 |             | important |        |      | homeostatic    |         |          | processes |            |        | occurring |         | in           | living | cells, |      |
 | ----------- | --------- | ------ | ---- | -------------- | ------- | -------- | --------- | ---------- | ------ | --------- | ------- | ------------ | ------ | ------ | ---- |
@@ -240,21 +240,21 @@ E. Excretion: excretion and osmoregulation regulation are two
 respiration.
 
 1.3 Scientific Methods
-| â€¢ What | is a scientific |     | method? |     |     |     |     |     |
+| •  What | is a scientific |     | method? |     |     |     |     |     |
 | ------ | --------------- | --- | ------- | --- | --- | --- | --- | --- |
-â€¢
+• 
 | It is        | a process | for        | experimentation |                 | that          | is used      | to   | explore |
 | ------------ | --------- | ---------- | --------------- | --------------- | ------------- | ------------ | ---- | ------- |
 | observations |           | and        | answer          | questions.      | It is         | an empirical |      | method  |
 | of acquiring |           | knowledge. |                 | It is also      | the technique |              | used | in the  |
 | construction |           | and        | testing         | of a scientific | hypothesis.   |              |      |         |
-â€¢ The scientific method has five basic steps, plus one feedback
+•  The scientific method has five basic steps, plus one feedback
 step:
 âœ“ Make an observation.
 âœ“ Ask a question.
 âœ“ Form a hypothesis, or testable explanation.
 
-1.3 Scientific Methodsâ€¦Contâ€™d
+1.3 Scientific Methods...Cont'd
 | âœ“ Make | a prediction    |     | based | on  | the hypothesis. |     |     |     |     |
 | ------ | --------------- | --- | ----- | --- | --------------- | --- | --- | --- | --- |
 | âœ“ Test | the prediction. |     |       |     |                 |     |     |     |     |
@@ -262,54 +262,54 @@ step:
 | Iterate: | use | the | results |     | to make | new | hypotheses |     | or  |
 | -------- | --- | --- | ------- | --- | ------- | --- | ---------- | --- | --- |
 predictions.
-| â€¢ Observation |     | - Quantitative |     |     | and qualitative |     | measurements |      | of  |
+| •  Observation |     | - Quantitative |     |     | and qualitative |     | measurements |      | of  |
 | ------------- | --- | -------------- | --- | --- | --------------- | --- | ------------ | ---- | --- |
 | the world.    |     |                |     |     |                 |     |              |      |     |
-| â€¢ Inference   |     | - Deriving     |     | new | knowledge       |     | based        | upon | old |
+| •  Inference   |     | - Deriving     |     | new | knowledge       |     | based        | upon | old |
 knowledge.
-| â€¢ Hypotheses |     | â€“A suggested |     | explanation. |     |     |     |     |     |
+| •  Hypotheses |     | –A suggested |     | explanation. |     |     |     |     |     |
 | ------------ | --- | ------------ | --- | ------------ | --- | --- | --- | --- | --- |
 
-1.3 Scientific Methodsâ€¦Contâ€™d
-â€¢ Rejected Hypothesis - An explanation that has been ruled out
+1.3 Scientific Methods...Cont'd
+•  Rejected Hypothesis - An explanation that has been ruled out
 | through |     | experimentation. |     |     |     |     |     |     |     |
 | ------- | --- | ---------------- | --- | --- | --- | --- | --- | --- | --- |
-â€¢
+• 
 | Accepted    |         | Hypothesis | -     | An explanation  |     | that | has | not   | been ruled |
 | ----------- | ------- | ---------- | ----- | --------------- | --- | ---- | --- | ----- | ---------- |
 | out         | through | excessive  |       | experimentation |     |      | and | makes | verifiable |
 | predictions |         | that are   | true. |                 |     |      |     |       |            |
-â€¢ Experiment - A test that is used to rule out a hypothesis or
+•  Experiment - A test that is used to rule out a hypothesis or
 | validate |     | something | already | known. |     |     |     |     |     |
 | -------- | --- | --------- | ------- | ------ | --- | --- | --- | --- | --- |
-â€¢ Scientific Method - The process of scientific investigation.
-â€¢
+•  Scientific Method - The process of scientific investigation.
+• 
 Theory - A widely accepted hypothesis that stands the test of
 | time. | Often | tested, | and | usually | never | rejected. |     |     |     |
 | ----- | ----- | ------- | --- | ------- | ----- | --------- | --- | --- | --- |
 
-1.3 Scientific Methodsâ€¦Contâ€™d
-â€¢
+1.3 Scientific Methods...Cont'd
+• 
 | The scientific | method              |     | is based | primarily | on the | testing | of  |
 | -------------- | ------------------- | --- | -------- | --------- | ------ | ------- | --- |
 | hypotheses     | by experimentation. |     |          |           |        |         |     |
-â€¢ This involves a control, or subject that does not undergo the
+•  This involves a control, or subject that does not undergo the
 | process in | question. |     |     |     |     |     |     |
 | ---------- | --------- | --- | --- | --- | --- | --- | --- |
-â€¢ A scientist will also seek to limit variables to one or another
+•  A scientist will also seek to limit variables to one or another
 | very small | number, | single | or minimum | number | of variables. |     |     |
 | ---------- | ------- | ------ | ---------- | ------ | ------------- | --- | --- |
 
-1.3 Scientific Methodsâ€¦Contâ€™d
-| â€¢ The      | procedure  |         |        | is  | to form    | a hypothesis |             | or     | prediction    |        | about |     |
+1.3 Scientific Methods...Cont'd
+| •  The      | procedure  |         |        | is  | to form    | a hypothesis |             | or     | prediction    |        | about |     |
 | ---------- | ---------- | ------- | ------ | --- | ---------- | ------------ | ----------- | ------ | ------------- | ------ | ----- | --- |
 | what       | you        | believe |        | or  | expect     | to see       | and         | then   | do everything |        |       | you |
 | can        | to violate |         | that,  |     | or falsify | the          | hypotheses. |        |               |        |       |     |
-| â€¢ Although |            | this    | may    |     | seem       | unintuitive, |             | the    | process       | serves |       | to  |
+| •  Although |            | this    | may    |     | seem       | unintuitive, |             | the    | process       | serves |       | to  |
 | establish  |            | more    | firmly |     | what       | is and       | what        | is not | true.         |        |       |     |
 
-1.3 Scientific Methodsâ€¦Contâ€™d
-â€¢ Summary of the scientific method
+1.3 Scientific Methods...Cont'd
+•  Summary of the scientific method
 Step 1: Observe behavior or other phenomena
 Step 2: Form a tentative answer or explanation (a hypothesis/guess
 a reason)
@@ -364,20 +364,20 @@ ketones or compounds which give these substances on
 hydrolysis.
 
 Where do Carbohydrates originate?
-â€¢ As glucose in
+•  As glucose in
 plants!
-â€¢ Glucose
-â€“ Most abundant
+•  Glucose
+– Most abundant
 carbohydrate
-â€“ Produced by plants
+– Produced by plants
 (& other
 photosynthetic
 microorganisms)
 via photosynthesis
-â€¢ Simple or complex
+•  Simple or complex
 
-Contâ€™dâ€¦
-This is the general equation for photosynthesisâ€”the
+Cont'd...
+This is the general equation for photosynthesis—the
 process of capturing sunlight energy and converting it to
 chemical energy.
 | Reactions   | involving  | carbohydrates |         |               |             |
@@ -403,7 +403,7 @@ units.
 | ------ | ------------- | ---- | ---------------- | ------------- | --------- | ------- | --- |
 | carbon | sugars        | like | glucose          | and fructose. |           |         |     |
 
-Contâ€™dâ€¦
+Cont'd...
 Glucose
 | â–   | Glucose   |               |         | is          | the       | most |       | important  |     |           | carbohydrate |          |              |     | fuel    | in   |
 | --- | --------- | ------------- | ------- | ----------- | --------- | ---- | ----- | ---------- | --- | --------- | ------------ | -------- | ------------ | --- | ------- | ---- |
@@ -419,7 +419,7 @@ maltose.
 | --- | ------- | --- | --- | ------ | --------- | --- | --- | --- | --------------- | --- | --- | --- | ---- | --- | --- | --- |
 |     | glucose |     |     | units. |           |     |     |     |                 |     |     |     |      |     |     |     |
 
-Contâ€™dâ€¦
+Cont'd...
 Galactose
 â– Galactose molecules look very similar to glucose molecules.
 | â–   | They      | can | also | exist  |      | in Î± | and     | Î² forms. |     |      |     |     |              |     |     |
@@ -491,7 +491,7 @@ Starch is often produced in plants as a way of storing energy.
 | completely |     |     | insoluble |     |     | in  | water. |     |     |     |     |     |     |     |
 | ---------- | --- | --- | --------- | --- | --- | --- | ------ | --- | --- | --- | --- | --- | --- | --- |
 
-Contâ€™dâ€¦
+Cont'd...
 Glycogen
 â–ª Glycogen is the main storage
 polysaccharide of animal and
@@ -517,7 +517,7 @@ energy store.
 2.2 Lipids
 | â– Lipids |     | comprise |     |     | very | heterogeneous |     |     |     |     |
 | -------- | --- | -------- | --- | --- | ---- | ------------- | --- | --- | --- | --- |
-ï‚— Lipids are organic
+• — Lipids are organic
 | group     |     |         | of  | compounds |     |         | which |          | are  |                      |
 | --------- | --- | ------- | --- | --------- | --- | ------- | ----- | -------- | ---- | -------------------- |
 | insoluble |     |         | in  | water     | but | soluble |       | in       | non- | molecules essential  |
@@ -558,21 +558,21 @@ Waxes
 | V. They         |     | also       | dissolve |            | the | vitamins, |           |          | which |     |
 | are fat-soluble |     |            | and      | assist     |     | their     | digestion |          |       |     |
 
-Contâ€™dâ€¦
+Cont'd...
 Storage lipids, e.g., triacylglycerols, make up the fats and oils
 â–
 used by most organisms as stored forms of energy.
-ï‚— T riglycerol
-ï‚— Fat molecules
-ï‚— Structure = 3 fatty acids chains linked to glycerol
-ï‚— Functions = long term energy storage and insulation for
+• — T riglycerol
+• — Fat molecules
+• — Structure = 3 fatty acids chains linked to glycerol
+• — Functions = long term energy storage and insulation for
 animals
-ï‚— Can be saturated or unsaturated.
+• — Can be saturated or unsaturated.
 Glycerol
 3 fatty
 acids
 
-Contâ€™dâ€¦
+Cont'd...
 A lipid called a triglyceride is a fat if it is solid at room
 â–
 | temperature |     |     | and | an  | oil | if it is liquid |     | at  | room | temperature. |     |     |     |
@@ -597,34 +597,34 @@ store smaller and multiple droplets of lipids spreading in the
 
 Phospholipids
 Structure: 2 fatty acids chains + phosphate head
-ï‚—
-| Fatty acid chains = non-polar = | hydrophobic |     | â€œwater fearingâ€ |
+• —
+| Fatty acid chains = non-polar = | hydrophobic |     | "water fearing" |
 | ------------------------------- | ----------- | --- | --------------- |
-ï‚—
-| ï‚— Phosphate head = polar = | hydrophilic | â€œwater lovingâ€ |     |
+• —
+| • — Phosphate head = polar = | hydrophilic | "water loving" |     |
 | -------------------------- | ----------- | -------------- | --- |
-ï‚— Function: make up cell membranes
+• — Function: make up cell membranes
 phospholipid bilayer
 
 Steroids
 âž¢ Structure: 4 fused Carbon rings
-ï‚— examples:
-ï‚— cholesterol â€“ Function =control the fluidity of the cell membrane
-ï‚— hormones â€“ Function = regulate processes in the body (such as
+• — examples:
+• — cholesterol – Function =control the fluidity of the cell membrane
+• — hormones – Function = regulate processes in the body (such as
 pregnancy)
-ï‚— vitamins (A, B, D) â€“ Function = supports metabolism and cell
+• — vitamins (A, B, D) – Function = supports metabolism and cell
 processes.
 
 Waxes
 â– Solid at room temp
 â– Insoluble in water
 â– Function:
-ï‚— Protective covering for
+• — Protective covering for
 animals and plants
-ï‚— Examples:
-ï‚— Beeswax
-ï‚— Earwax
-ï‚— Cuticle of leaf (keeps water in)
+• — Examples:
+• — Beeswax
+• — Earwax
+• — Cuticle of leaf (keeps water in)
 
 2.3 Proteins
 | A protein |     | is  | a   | compound |     |     | made | of  | small | carbon | compounds |     |
@@ -738,9 +738,9 @@ c
 What is cell ?
 â–
 Cell is fundamental, structural and functional unit of all organisms.
-ï‚—
+• —
 A cell is the smallest unit that can perform all the functions necessary for life.
-ï‚—
+• —
 3.1. The Cell Theory
 All known living things are made up of one or more cells.
 The cell is the fundamental unit of structure and function in all living organisms.
@@ -782,7 +782,7 @@ membrane
 DNA
 â–ª Directs protein synthesis
 â–ª Gives code or instruction
-Hence the nucleus indirectly governs most cellular activities and serves as the cellâ€˜s master.
+Hence the nucleus indirectly governs most cellular activities and serves as the cell's master.
 RNA: 3 types, Involved in proteins synthesis
 Generally, the nucleus may be:
 Rounded e.g. in hepatocytes.
@@ -823,7 +823,7 @@ contains dark particles called ribosomes that produce protein
 under the direction of nuclear DNA. Some ribosomes are free dispersed throughout the cytosol.
 ER also contains enzymes required for the synthesis of almost all the lipids.
 Smooth Endoplasmic Reticulum:
-does not have ribosomes, it looks smoothâ€˜ and does not produce proteins
+does not have ribosomes, it looks smooth' and does not produce proteins
 serves in packaging and discharging site for protein
 molecules
 All new proteins and fats pass from ER gathered in the smooth ER
@@ -849,7 +849,7 @@ be released for muscle contraction
 c
 
 iii. Lysosomes:
-serve as the intracellular â€œdigestive systemâ€.
+serve as the intracellular "digestive system".
 Are membrane-enclosed sacs containing powerful hydrolytic enzymes capable of digesting
 and removing unwanted cellular debris and foreign materials
 Plays a great role during phagocytosis.
@@ -869,7 +869,7 @@ Then. H O is decomposed into harmless water and oxygen by catalase
 c
 
 v. Mitochondria
-are the â€œpower housesâ€ of a cell
+are the "power houses" of a cell
 Are site of oxidative
 phosphorylation (respiration)
 are unusual organelles in two
@@ -914,7 +914,7 @@ Pressure.
 c
 
 ix. Cytoskeleton
-â–ª is a complex protein network that act as the â€œbone and muscleâ€ of the cell.
+â–ª is a complex protein network that act as the "bone and muscle" of the cell.
 â–ª provides distinct shape, size to the cell
 â–ª has at least four distinct elements: Microtubules, Microfilaments, Intermediate filaments and
 Microtubular lattice
@@ -951,7 +951,7 @@ selectively permeable.
 is a fluid lipid bilayer embedded
 â–ª
 with proteins.
-appears as â€œtrilaminarâ€ layer
+appears as "trilaminar" layer
 â–ª
 structure having two
 dark layers separated by a light
@@ -1042,31 +1042,31 @@ c
 
 3.1.4 Transport across the cell membranes
 The plasma membrane is selectively permeable. This govern the transport
-ï‚—
+• —
 system.
 There are 4 basic mechanisms:
-ï‚—
+• —
 1. Diffusion and facilitated diffusion
 2. osmosis
 3. active transport
 4. bulk transport
 Two forces are involved in facilitating movement across the plasma
-ï‚—
+• —
 membrane:
-1. Forces that do not require the cell to expend energy for movement â€“
+1. Forces that do not require the cell to expend energy for movement –
 passive force
 2. Forces requiring energy (as ATP) to be expended to transport across the
-membrane â€“ active force
+membrane – active force
 c
 
 Diffusion
 Diffusion is the net movement of
-ï‚—
+• —
 molecules (or ions) from a region of
 their high concentration to a region
 of their lower concentration.
 Diffusion factors
-ï‚—
+• —
 1. permeability of the membrane
 2. surface area of the membrane
 3. molecular weight of the substance
@@ -1083,8 +1083,8 @@ Concentration gradient (A) and difussion (B)
 c
 
 Carrier- Mediated Transport
-ï‚— Utilizes protein as carrier
-ï‚— Has three features
+• — Utilizes protein as carrier
+• — Has three features
 1. Specificity: are specific for the transport
 â–ª
 2. Saturation: a given time only a limited amount of a
@@ -1118,7 +1118,7 @@ induce swelling or shrinking of the cell.
 Active transport
 indirectly serves as the energy source for the
 â–ª is energy consuming transport of molecules or ions cotransport of glucose and amino acids across
-(ATPâ€”energy source)
+(ATP—energy source)
 the membrane (intestine and kidney cell).
 â–ª is against its natural tendency to diffuse in the
 opposite direction.
@@ -1198,7 +1198,7 @@ fashion.
 | ------ | ------ | ------- | ---- | --- | -------- | ---- | ---- | -------- | --- | ------- | -------- | --- | --- | -------- | --- | --- |
 | times  | faster |         | than |     | it would |      | have | been     |     | without |          |     | it. |          |     |     |
 
-ENZYMESâ€¦
+ENZYMES...
 | â–enzymes |     |         | bind | with |      | particular |     |             | reactants |     |     | until | the |     | chemical |     |
 | -------- | --- | ------- | ---- | ---- | ---- | ---------- | --- | ----------- | --------- | --- | --- | ----- | --- | --- | -------- | --- |
 | reaction |     | occurs, |      |      | then | free       |     | themselves. |           |     |     |       |     |     |          |     |
@@ -1238,7 +1238,7 @@ orientation of the enzyme required for catalytic activity can
 | enzymes |     | may |     | be  | described |     |     |     | as follows |     |     |     |     |     |     |     |     |
 | ------- | --- | --- | --- | --- | --------- | --- | --- | --- | ---------- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-Contâ€™dâ€¦
+Cont'd...
 Simple enzymes: are made up of only protein
 â–
 (polypeptide). They contain no chemical groups other than
@@ -1246,7 +1246,7 @@ amino acid residues. Digestive enzymes such as pepsin, and
 trypsin are of this nature.
 Conjugate Enzymes: It is an enzyme which is formed of
 â–
-two parts â€“ a protein part called apoenzyme (e.g.,
+two parts – a protein part called apoenzyme (e.g.,
 flavoprotein) and a non-protein part named cofactor.
 The complete conjugate enzyme, consisting of an apoenzyme
 âž¢
@@ -1260,11 +1260,11 @@ Isoenzymes (Isozymes): At one time it was believed that
 an organism has only a single enzyme for a given step of a
 metabolic reaction
 
-Contâ€™dâ€¦
+Cont'd...
 Classification of Enzymes on the basis of the reactions
 they catalyze
 
-Contâ€™dâ€¦
+Cont'd...
 
 4.2.2 Mechanisms of enzyme action
 â– Mechanisms of enzyme catalysis vary, but are all similar in
@@ -1285,7 +1285,7 @@ crucial factor is a reduction of energy barrier(s) separating
 surface).
 | â– The  | combination |         |     | formed    | by  | an       | enzyme |     | and | its | substrates |     | is  |
 | ------ | ----------- | ------- | --- | --------- | --- | -------- | ------ | --- | --- | --- | ---------- | --- | --- |
-| called | the         | enzymeâ€“ |     | substrate |     | complex. |        |     |     |     |            |     |     |
+| called | the         | enzyme– |     | substrate |     | complex. |        |     |     |     |            |     |     |
 
 4.2.3 Factors affecting enzymatic activities
 The activity of an enzyme is affected by its environmental
@@ -1312,21 +1312,21 @@ Since enzymes catalyse reactions by randomly colliding with
 substrate molecules, increasing temperature increases the
 rate of reaction, forming more product.
 
-Contâ€™dâ€¦
+Cont'd...
 pH is a measure of the hydrogen ion (H+) concentration,
-ï‚—
+• —
 and therefore a good indicator of the hydroxide ion (OH-)
 concentration.
 Lower pH values mean higher H+ concentrations and
-ï‚—
+• —
 lower OH- concentrations.
 H+ and OH- ions are charged and therefore interfere with
-ï‚—
+• —
 hydrogen and ionic bonds that hold together an enzyme,
 since they will be attracted or repelled by the charges
 created by the bonds.
 Substrate and enzyme concentration
-ï‚—
+• —
 Changing the enzyme and substrate concentrations affect
 âž¢
 the rate of reaction of an enzyme catalysed reaction.
@@ -1335,7 +1335,7 @@ Controlling these factors in a cell is one way that an
 organism regulates its enzyme activity and so its
 metabolism.
 
-Contâ€™dâ€¦
+Cont'd...
 Enzyme concentration
 â–
 Increasing enzyme concentration will increase the rate of
@@ -1354,14 +1354,14 @@ Enzyme activity can be inhibited in various ways.
 Inhibition could be reversible or irreversible.
 âž¢
 
-Contâ€™dâ€¦
+Cont'd...
 Activators: Allosteric control can involve stimulation of
 enzyme action as well as inhibition.
 An activator molecule can be bound to an allosteric site and
-ï‚—
+• —
 induce a reaction at the active site.
 by changing its shape to fit a substrate that could not induce
-ï‚—
+• —
 the change by itself.
 Irreversible inhibition
 Irreversible inhibitors usually covalently modify an enzyme,
@@ -1374,19 +1374,19 @@ inactivation.
 
 4.3 Bioenergetics and biosynthesis
 4.3.1. Cellular respiration
-â€¢ Most living organisms obtain energy by breaking down organic
+•  Most living organisms obtain energy by breaking down organic
 molecules (catabolism) during cellular respiration.
-â€¢ This catabolic process can be divided into 3 phases.
-â€¢ Phase I - Breakdown of large complex biomolecules like
+•  This catabolic process can be divided into 3 phases.
+•  Phase I - Breakdown of large complex biomolecules like
 polysaccharides, proteins and lipids into their respective building
 blocks (hydrolysis). The chemical reactions occurring during this
 stage do not release much energy.
-â€¢ Phase II - These building blocks are usually oxidized to a common
+•  Phase II - These building blocks are usually oxidized to a common
 intermediate, acetyl - CoA. Additionally, pyruvate or other citric acid
 cycle intermediates may also be formed (in glycolysis and other
 pathways).
-Phase III â€“ This consists of the citric acid cycle (i.e. oxidation of
-â€¢
+Phase III – This consists of the citric acid cycle (i.e. oxidation of
+• 
 acetyl - CoA to CO2, formation of NADH and FADH2) followed
 by electron transport and oxidative phosphorylation. Energy
 released by electron transport to O2 is coupled to ATP synthesis.
@@ -1410,18 +1410,18 @@ and structural proteins in many cellular processes, including
 biosynthetic reactions, motility, and cell division.
 
 Substrate level phosphorylation, oxidative
-ï‚—
+• —
 phosphorylation in cellular respiration, and
 photophosphorylation in photosynthesis are three
 major mechanisms of ATP biosynthesis.
 Metabolic processes that use ATP as an energy source
-ï‚—
+• —
 convert it back into its precursors.
 ATP is therefore continuously recycled in organisms.
-ï‚—
+• —
 
 One molecule of ATP contains three phosphate
-ï‚—
+• —
 groups, and it is produced by a wide variety of
 enzymes, including ATP synthase, from adenosine
 diphosphate (ADP) or adenosine monophosphate
@@ -1430,10 +1430,10 @@ ATP consists of a base, in this case adenine (red), a ribose (magenta) and a pho
 
 4.3.1.1 Anaerobic Respiration
 Anaerobic respiration is a form of respiration using
-ï‚—
+• —
 electron acceptors other than oxygen.
 Anaerobic metabolic processes do not require oxygen.
-ï‚—
+• —
 Glycolysis
 Glycolysis (from glycose, an older term for glucose + -lysis
 â–
@@ -1445,27 +1445,27 @@ the high-energy compounds ATP (adenosine triphosphate)
 and NADH (reduced nicotinamide adenine dinucleotide).
 
 Glycolysis does not require or consume oxygen.
-ï‚—
+• —
 The terms "aerobic glycolysis" and "anaerobic
-ï‚—
+• —
 glycolysis" refer to glycolysis in the presence or
 absence of oxygen, respectively.
 Glycolysis occurs, with variations, in nearly all
-ï‚—
+• —
 organisms, both aerobic and anaerobic.
 The wide occurrence of glycolysis indicates that it is
-ï‚—
+• —
 one of the most ancient known metabolic pathways.
 It occurs in the cytosol of the cell.
-ï‚—
+• —
 
 The entire glycolysis pathway can be separated into two phases:
-1. The Preparatory Phase â€“ in which ATP is consumed and is hence also
+1. The Preparatory Phase – in which ATP is consumed and is hence also
 known as the investment phase
 â‘ The first five steps are regarded as the preparatory (or investment)
 phase, since they consume energy to convert the glucose into two
 three-carbon sugar phosphates (G3P).
-2. The Pay Off Phase â€“ in which ATP is produced.
+2. The Pay Off Phase – in which ATP is produced.
 â‘ Characterized by a net gain of the energy-rich molecules ATP and
 NADH.
 â‘ This yields 2 NADH molecules and 4 ATP molecules, leading to a net
@@ -1488,14 +1488,14 @@ Glycolysis involves ten enzymatic reactions as described below
 
 4.3.1.2 TCA cycle and ETC:
 Aerobic respiration
-â€¢ One fate of pyruvate is that it enters to TCA cycle for complete oxidation.
+•  One fate of pyruvate is that it enters to TCA cycle for complete oxidation.
 But there are intermediate processes: The Oxidation of Pyruvate to
 form Acetyl CoA for Entry Into the Krebs Cycle
-ï‚— 2 NADH's are generated (1 per pyruvate)
-ï‚— 2 CO2 are released (1 per pyruvate)
+• — 2 NADH's are generated (1 per pyruvate)
+• — 2 CO2 are released (1 per pyruvate)
 
 The Krebs Cycle (citric acid cycle, TCA cycle)
-ï‚—
+• —
 is considered as central pathway of aerobic metabolism, as
 â‘
 it serves two purposes-bioenergetics and biosynthesis
@@ -1506,14 +1506,14 @@ acetyl group in acetyl - CoA to CO2, resulting in release of energy
 pathways of amino acids, pyrimidines, purines etc
 Example:- Î±-ketoglutarate and oxaloacetate are used for synthesis of a
 number of amino acids like glutamic acid, asparatic acid etc
-â€¢ Acetyl - CoA is the starting material for fatty acid biosynthesis.
+•  Acetyl - CoA is the starting material for fatty acid biosynthesis.
 
 The TCA cycle
 
 4.3.1.3.Electron Transport Chain
-ï‚— In aerobic respiration, electron transport is the final step in the
+• — In aerobic respiration, electron transport is the final step in the
 break-down of glucose.
-ï‚— It also is the point at which most of the ATP is produced. High-
+• — It also is the point at which most of the ATP is produced. High-
 energy electrons and hydrogen ions from NADH and FADH2
 produced in the Krebs cycle are used to convert ADP to ATP.
 
@@ -1542,7 +1542,7 @@ macromolecules.
 | --- | ---------- | --- | --- | --- | --- | ----- | --- | -------- | --- | --- | --- | --- | ---------- | --- | --- | --- | --- | --- |
 nucleotide.
 
-Contâ€™dâ€¦
+Cont'd...
 | The | prerequisite |     |     | elements |     |     | for |     | biosynthesis |     |     | include: |     |
 | --- | ------------ | --- | --- | -------- | --- | --- | --- | --- | ------------ | --- | --- | -------- | --- |
 â–
@@ -1584,7 +1584,7 @@ I. Photosynthesis
 | where |     | does |     | the | stored |     |     | energy |     | in  | food | originate? |     |     |     |     |
 | ----- | --- | ---- | --- | --- | ------ | --- | --- | ------ | --- | --- | ---- | ---------- | --- | --- | --- | --- |
 
-Contâ€™dâ€¦
+Cont'd...
 All of this energy can be traced back to the process of
 â–
 photosynthesis and light energy from the sun.
@@ -1633,7 +1633,7 @@ Photoautotrophs
 | -------------- | --- | --- | --- | ---------- | --- | -------------- | ----- | --- | --- | --- | --- | ---- | --- | ----- |
 | to manufacture |     |     |     | their      | own |                | food. |     |     |     |     |      |     |       |
 
-Contâ€™dâ€¦
+Cont'd...
 | âž¢ Heterotrophs:    |            |     |           | are       | organisms,     |          |             | such     |            | as     | animals,   |         |     | fungi,   |     | and |
 | ------------------ | ---------- | --- | --------- | --------- | -------------- | -------- | ----------- | -------- | ---------- | ------ | ---------- | ------- | --- | -------- | --- | --- |
 | most               | other      |     | bacteria, |           | they           | must     |             | rely     | on         | the    |            | sugars  |     | produced |     |     |
@@ -1655,7 +1655,7 @@ the energy in solar radiation (the photo part) as high energy
 | --------- | --- | --- | ------------------ | --- | ------------- | ------ | --- | --- | ----- | --- | --- | --- | ------------ | --- | --- | --- |
 | molecules |     |     | (the ''synthesis'' |     |               | part). |     |     |       |     |     |     |              |     |     |     |
 
-Contâ€™dâ€¦
+Cont'd...
 Other variant of photosynthesis
 | â– Commonly |       |         |          | known |            |                 | photosynthetic |     |            |            |     | processes |                 |     | is  | the      | one |
 | ---------- | ----- | ------- | -------- | ----- | ---------- | --------------- | -------------- | --- | ---------- | ---------- | --- | --------- | --------------- | --- | --- | -------- | --- |
@@ -1680,7 +1680,7 @@ In this transfer, the CO2 is "reduced," or receives electrons,
 | ----------- | --- | --- | ------ | --- | --- | ----------- | --- | --- | ----------- | ----- | --- | ---- | -------------- | ----- | --- | ---------- | --- |
 | Ultimately, |     |     | oxygen |     |     | is produced |     |     |             | along |     | with | carbohydrates. |       |     |            |     |
 
-Contâ€™dâ€¦
+Cont'd...
 | On  |     | the | other |     | hand, |     | anoxygenic |     |     | photosynthesis |     |     |     |     | uses |
 | --- | --- | --- | ----- | --- | ----- | --- | ---------- | --- | --- | -------------- | --- | --- | --- | --- | ---- |
 â–
@@ -1729,7 +1729,7 @@ Plastids
 | genome,       |     | or     |     | collection |      |         | of  | genes, |
 | contained     |     | within |     | circular   |      | DNA     |     |        |
 
-Contâ€™dâ€¦
+Cont'd...
 Pigments
 | â– Pigments |           |           | are       | molecules |        |     | that | bestow |             |           | color |     | on plants,  |             | algae |     |
 | ---------- | --------- | --------- | --------- | --------- | ------ | --- | ---- | ------ | ----------- | --------- | ----- | --- | ----------- | ----------- | ----- | --- |
@@ -1757,7 +1757,7 @@ Chlorophylls
 | which | perform |     |     | anoxygenic |     |     | photosynthesis. |     |     |     |     |     |     |     |     |     |
 | ----- | ------- | --- | --- | ---------- | --- | --- | --------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-Contâ€™dâ€¦
+Cont'd...
 | 2.Carotenoids:   |             |         |        |     | these        |      |        | red,             |          | orange   |          |     | or     | yellow-coloured |             |        |      |
 | ---------------- | ----------- | ------- | ------ | --- | ------------ | ---- | ------ | ---------------- | -------- | -------- | -------- | --- | ------ | --------------- | ----------- | ------ | ---- |
 | pigments         |             |         | absorb |     | bluish-green |      |        |                  | light.   |          | Examples |     |        | of              | carotenoids |        |      |
@@ -1777,7 +1777,7 @@ Antennae
 | constitutes |       |          |            | antennae. |             |     | These |     |      | structures |       |        |          | effectively |     | capture   |     |
 | light       |       | energy   |            | from      |             | the | sun,  | in  | the  | form       |       | of     | photons. |             |     |           |     |
 
-Contâ€™dâ€¦
+Cont'd...
 Reaction centers: the pigments and proteins, which convert
 light energy to chemical energy and begin the process of electron
 transfer, are known as reaction centers.
@@ -1805,7 +1805,7 @@ The "electron hole" in the original chlorophyll pigment is filled by
 taking an electron from water. As a result, oxygen is released into
 the atmosphere.
 
-Contâ€™dâ€¦
+Cont'd...
 | â– light-independent |       |      |            |        |        | reactions |     |         |     | (also   | called |           | dark |         | reactions |       |      |
 | ------------------- | ----- | ---- | ---------- | ------ | ------ | --------- | --- | ------- | --- | ------- | ------ | --------- | ---- | ------- | --------- | ----- | ---- |
 | and                 | known |      |            | as the | Calvin |           |     | cycle): |     | Light   |        | reactions |      |         | produce   |       |      |
@@ -1834,7 +1834,7 @@ These sugars are then used to make glucose or are recycled to
 | initiate | the Calvin | cycle again. |     |
 | -------- | ---------- | ------------ | --- |
 
-Contâ€™dâ€¦
+Cont'd...
 Alternative Pathways
 | â– The        | environment |         |     | in which |     | an     | organism        |     | lives | can | impact |        | the |
 | ------------ | ----------- | ------- | --- | -------- | --- | ------ | --------------- | --- | ----- | --- | ------ | ------ | --- |
@@ -1856,7 +1856,7 @@ photosynthesis.
 | -------------- | --- | --- | --- | -------- | --- | --- | --- | -------- | --- | --- | --- | ------ | --- |
 conversion.
 
-Contâ€™dâ€¦
+Cont'd...
 | C4  | plants |     | one | adaptive |     |     | pathway |     |     | that |     | helps |     | plants |     | maintain |     |
 | --- | ------ | --- | --- | -------- | --- | --- | ------- | --- | --- | ---- | --- | ----- | --- | ------ | --- | -------- | --- |
 â–
@@ -1884,7 +1884,7 @@ pathway.
 | simultaneously |     |     |     | minimizing |     |     |     | water |     | loss. |     |     |     |     |     |     |     |
 | -------------- | --- | --- | --- | ---------- | --- | --- | --- | ----- | --- | ----- | --- | --- | --- | --- | --- | --- | --- |
 
-Contâ€™dâ€¦
+Cont'd...
 |     | CAM | plants |     | Another |     |     |     | adaptive |     | pathway |     |     | used | by  | some |     | plants |
 | --- | --- | ------ | --- | ------- | --- | --- | --- | -------- | --- | ------- | --- | --- | ---- | --- | ---- | --- | ------ |
 â–
@@ -1937,7 +1937,7 @@ These diseases, of which there are many subtypes, are known as
 | not | function |     | properly. |     |     |     |     |     |     |     |     |
 | --- | -------- | --- | --------- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-Contâ€™dâ€¦
+Cont'd...
 There are numerous examples of inherited metabolic
 â–
 disorders, classified based on the type of food-related
@@ -1959,7 +1959,7 @@ Amino acid disorders; examples include Tay-Sachs disease,
 phenylketonuria, tyrosinemia, maple syrup urine disease, and
 homocystinuria.
 
-Contâ€™dâ€¦
+Cont'd...
 Other causes of metabolic disorders
 Metabolic disorders can be due to other factors, such as a
 â–
@@ -1982,7 +1982,7 @@ lung
 Sepsis (life-threatening bacterial blood infection) .
 âž¢
 
-Contâ€™dâ€¦
+Cont'd...
 Risk factors of metabolic disorders
 | â– A       | number |            | of factors |     | increase |     | the | risk | of developing |
 | --------- | ------ | ---------- | ---------- | --- | -------- | --- | --- | ---- | ------------- |
@@ -2009,7 +2009,7 @@ certain chronic medical conditions, such as lung or kidney disease
 â–ª Insulin resistance: a situation in which a body cannot use insulin
 properly.
 
-Contâ€™dâ€¦
+Cont'd...
 Diagnosis of metabolic disorders
 â– Metabolic syndrome is more effectively diagnosed by testing
 different blood markers (specific markers of insulin resistance),
@@ -2038,7 +2038,7 @@ women
 | taking | glucose-lowering |     |     |     |     | medications |     |     | .   |     |     |     |     |     |     |
 | ------ | ---------------- | --- | --- | --- | --- | ----------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-Contâ€™dâ€¦
+Cont'd...
 |     | The | treatment |     |     | approach |     |     | for | metabolic |     |     | disorders |     | depends |     | on  |
 | --- | --- | --------- | --- | --- | -------- | --- | --- | --- | --------- | --- | --- | --------- | --- | ------- | --- | --- |
 â–
@@ -2063,7 +2063,7 @@ Contâ€™dâ€¦
 |     | surgery         |     |         | to  | relieve          |     |           | pain |     | or   |             | symptoms, |     |              | vitamin |     |
 |     | supplementation |     |         |     | and              |     | etc.      |      |     |      |             |           |     |              |         |     |
 
-Contâ€™dâ€¦
+Cont'd...
 Potential complications of metabolic disorders
 | Complications |     |     |     | of untreated |     |     | metabolic |     |     | disorders |     | can | be  |
 | ------------- | --- | --- | --- | ------------ | --- | --- | --------- | --- | --- | --------- | --- | --- | --- |
@@ -2113,27 +2113,27 @@ organisms.
 
 5.1. Basic Principles of Mendelian genetics and patterns of
 inheritance
-â€¢ The way in which traits are passed from one generation to the
+•  The way in which traits are passed from one generation to the
 next, and sometimes skip generations was first explained by
 Gregor Mendel.
-â€¢ By experimenting with pea plant breeding, Mendel developed
+•  By experimenting with pea plant breeding, Mendel developed
 three principles of inheritance that described the transmission
 of genetic traits, before anyone knew genes existed.
-â€¢ Mendel's insight greatly expanded the understanding of
+•  Mendel's insight greatly expanded the understanding of
 genetic inheritance, and led to the development of new
 experimental methods.
 
-â€¢ Five Mendel's conclusions for the establishment of his rules.
-â€“ 1. Characters are unitary. That is, they are discrete (purple vs.
+•  Five Mendel's conclusions for the establishment of his rules.
+– 1. Characters are unitary. That is, they are discrete (purple vs.
 white, tall vs. dwarf).
-â€“ 2. Genetic characteristics have alternate forms, each inherited
+– 2. Genetic characteristics have alternate forms, each inherited
 from one of two parents. Today, we call these alleles.
-â€“ 3. One allele is dominant over the other. The phenotype reflects
+– 3. One allele is dominant over the other. The phenotype reflects
 the dominant allele.
-â€“ 4. Gametes are created by random segregation. Heterozygotic
+– 4. Gametes are created by random segregation. Heterozygotic
 individuals produce gametes with an equal frequency of the two
 alleles.
-â€“ 5. Different traits have independent assortment. In modern terms,
+– 5. Different traits have independent assortment. In modern terms,
 genes are unlinked
 
 5.2 Molecular genetics and inheritance
@@ -2151,49 +2151,49 @@ genes are unlinked
 | âœ“   | DNA         |          | comes    |      | in the     |     | form     |      | of       | a long,  |       | linear |         | molecule |        |
 |     | referred    |          | to       | as a | strand.    |     |          |      |          |          |       |        |         |          |        |
 
-| â€¢ DNA | molecules | are | replicated | during | cell division. |
+| •  DNA | molecules | are | replicated | during | cell division. |
 | ----- | --------- | --- | ---------- | ------ | -------------- |
-â€¢ When a cell divides, the two new cells contain all the same
+•  When a cell divides, the two new cells contain all the same
 | DNA | that the | original | cell had. |     |     |
 | --- | -------- | -------- | --------- | --- | --- |
 Structure of DNA and chromosome
 âž¢ Chromosome is a thread- like structure that is made up of DNA
 (deoxyribonucleic acid) and histone (a set of globular (30 ) proteins).
 âž¢ While DNA is the molecule that stores genetic information whereas
-histone is the core of a chromosome around which chromosomeâ€˜s DNA
+histone is the core of a chromosome around which chromosome's DNA
 wrapped is the loosely organized form of chromosome throughout the
 nucleus in loops when the cell is not dividing is called Chromatin.
 
-| â€¢ DNA-is |         | made | up            | two  | strands  | of polynucleotides |           | joined |     |
+| •  DNA-is |         | made | up            | two  | strands  | of polynucleotides |           | joined |     |
 | -------- | ------- | ---- | ------------- | ---- | -------- | ------------------ | --------- | ------ | --- |
 | together |         | and  | twisted       | into | a double | helix.             |           |        |     |
-| â€¢ the    | strands | are  | anti-parallel |      | to each  | other.             |           |        |     |
-| â€¢ The    | basic   | unit | of            | DNA  | strand   | is a nucleotide    | (monomers |        | of  |
+| •  the    | strands | are  | anti-parallel |      | to each  | other.             |           |        |     |
+| •  The    | basic   | unit | of            | DNA  | strand   | is a nucleotide    | (monomers |        | of  |
 DNA).
-â€¢
+• 
 | There | are | four     | types | of           | nucleotides:- |     |     |     |     |
 | ----- | --- | -------- | ----- | ------------ | ------------- | --- | --- | --- | --- |
-|       | â€¢   | Adenine  | (A) â€“ | containing   | nucleotide    |     |     |     |     |
-|       | â€¢   | Guanine  | (G)   | â€“ containing | nucleotide    |     |     |     |     |
-|       | â€¢   | Cytosine | (C)   | - containing | nucleotide    |     |     |     |     |
-â€¢ Thymine (T) â€“ containing nucleotide (in DNA, or Uracil (U) nucleotide in RNA)
+|       | •    | Adenine  | (A) – | containing   | nucleotide    |     |     |     |     |
+|       | •    | Guanine  | (G)   | – containing | nucleotide    |     |     |     |     |
+|       | •    | Cytosine | (C)   | - containing | nucleotide    |     |     |     |     |
+•  Thymine (T) – containing nucleotide (in DNA, or Uracil (U) nucleotide in RNA)
 
-| â€¢ All | nucleotides   |       | have:        |     |        |     |     |
+| •  All | nucleotides   |       | have:        |     |        |     |     |
 | ----- | ------------- | ----- | ------------ | --- | ------ | --- | --- |
-|       | â€¢ a phosphate |       | group,       |     |        |     |     |
-|       | â€¢ a pentose   | sugar | (deoxyribose |     | in DNA |     |     |
-â€¢ and ribose sugar in RNA) and one of four nitrogen bases- adenine, cytosine guanine
+|       | •  a phosphate |       | group,       |     |        |     |     |
+|       | •  a pentose   | sugar | (deoxyribose |     | in DNA |     |     |
+•  and ribose sugar in RNA) and one of four nitrogen bases- adenine, cytosine guanine
 |     | and either | thymine | (DNA) |     | or uracil (RNA). |     |     |
 | --- | ---------- | ------- | ----- | --- | ---------------- | --- | --- |
-â€¢ Bonds between the sugar in one nucleotide and the phosphate
+•  Bonds between the sugar in one nucleotide and the phosphate
 | group | in the | next | hold | the | nucleotides | together. |     |
 | ----- | ------ | ---- | ---- | --- | ----------- | --------- | --- |
-â€¢ The nucleotides in one strand are paired with the nucleotides
+•  The nucleotides in one strand are paired with the nucleotides
 | in       | the other  | strand | according |     | to the | base pairing- | rule. |
 | -------- | ---------- | ------ | --------- | --- | ------ | ------------- | ----- |
-| â€¢ sugar- | phosphateâ€˜ |        | backbone. |     |        |               |       |
+| •  sugar- | phosphate' |        | backbone. |     |        |               |       |
 
-| â€¢ DNA    | is a very  | stable | molecule | at normal | temperature. |             | The |
+| •  DNA    | is a very  | stable | molecule | at normal | temperature. |             | The |
 | -------- | ---------- | ------ | -------- | --------- | ------------ | ----------- | --- |
 | hydrogen | bonds      | hold   | the two  | strands   | together     | in position |     |
 | through  | the bases. |        |          |           |              |             |     |
@@ -2211,31 +2211,31 @@ conservatively.
 | original | molecule. |     |     |     |     |     |     |     |
 | -------- | --------- | --- | --- | --- | --- | --- | --- | --- |
 
-â€¢ Enzymes are involved in this process and the main stages are:
-â€“ 1. DNA helicase enzyme - break H-bonds to reveal two single
+•  Enzymes are involved in this process and the main stages are:
+– 1. DNA helicase enzyme - break H-bonds to reveal two single
 strands and unwind (open) the helix DNA
-â€“ 2. DNA polymerase follows the helicase enzyme along each
+– 2. DNA polymerase follows the helicase enzyme along each
 single-stranded region, which acts as a template for the synthesis
 of a new strand.
-â€“ 3. DNA polymerase assembles free DNA nucleotides into new
+– 3. DNA polymerase assembles free DNA nucleotides into new
 strands alongside each of the template strands. The base sequence
 in each of these new strands is complementary to its template
 strand because of base- pairing rule, A-T, C-G.
-â€“ 4. Two-identical DNA molecules to each other and the original
+– 4. Two-identical DNA molecules to each other and the original
 one is resulted. Each contains one strand from the original (old)
 and one newly synthesized.
 
 Cell division
-â€¢ Cell division is the process by which a parent cell divides into
+•  Cell division is the process by which a parent cell divides into
 | two | or more | daughter | cells. |     |     |     |
 | --- | ------- | -------- | ------ | --- | --- | --- |
-â€¢ In eukaryotes, there are two distinct types of cell division:
+•  In eukaryotes, there are two distinct types of cell division:
 I. mitosis:- one cell divides in to two identical daughter cells.
 II. Meiosis results in four haploid daughter cells by undergoing
 | one round | of DNA | replication |     | followed | by two | divisions. |
 | --------- | ------ | ----------- | --- | -------- | ------ | ---------- |
-â€¢ Homologous chromosomes are separated in the first division.
-| â€¢ sister | chromatids | are | separated | in the | second | division. |
+•  Homologous chromosomes are separated in the first division.
+| •  sister | chromatids | are | separated | in the | second | division. |
 | -------- | ---------- | --- | --------- | ------ | ------ | --------- |
 
 5.3 Protein synthesis
@@ -2247,7 +2247,7 @@ II. Meiosis results in four haploid daughter cells by undergoing
 âž¢
 | Events | during        |         | protein | synthesis |             |     |     |     |     |
 | ------ | ------------- | ------- | ------- | --------- | ----------- | --- | --- | --- | --- |
-| i.     | Transcription |         | â€“ DNA   |           | RNA (mRNA)  |     |     |     |     |
+| i.     | Transcription |         | – DNA   |           | RNA (mRNA)  |     |     |     |     |
 | ii.    | mRNA          | travels | from    | nucleus   | to ribosome |     |     |     |     |
 iii. iii. Free amino acids are transported from cytoplasm to ribosome by
 |     | transfer | RNA | (tRNA) | molecules |     |     |     |     |     |
@@ -2256,21 +2256,21 @@ iv. iv. Ribosome read mRNA code and assembles amino acids presented
 |     | by tRNA | into | a protein | by  | a process | = translation |     |     |     |
 | --- | ------- | ---- | --------- | --- | --------- | ------------- | --- | --- | --- |
 
-â€¢ Hence, a gene is a sequence of base triplets in the DNA molecule
+•  Hence, a gene is a sequence of base triplets in the DNA molecule
 that carries a code for a protein.
-â€“
+–
 1. Since there are 4 bases, there is 43 = 64 possible triplet codes
-â€“ 2. Only one strands of a DNA molecule carries the code for
+– 2. Only one strands of a DNA molecule carries the code for
 proteins
-â€“ 3. Most amino acids have more than one code, only methionine
+– 3. Most amino acids have more than one code, only methionine
 and tryptophan have one code.
-â€“ 4. Three triplets (TAA, TAG, and TGA) do not code for amino
+– 4. Three triplets (TAA, TAG, and TGA) do not code for amino
 acids and they are called stop codons. stop codes signify the end
 of the coding sequence
-â€“ 5. Degenerate code â€“ the DNA code is non-overlapping codes
-â€“ 6. The genetic code is also a universal code i.e. the triplet code
+– 5. Degenerate code – the DNA code is non-overlapping codes
+– 6. The genetic code is also a universal code i.e. the triplet code
 TAT in the DNA code for amino acid tyrosine in human,
-redwood tree, bacterium or in any organism E.g. ACC â€“
+redwood tree, bacterium or in any organism E.g. ACC –
 threonine, GGG-glycine
 
 Mutations
@@ -2282,55 +2282,55 @@ Mutations
 |        |       |       | âœ“ Substitution- |     |       | one      | base | is               | replaced | by other   | base  |     |     |
 |        |       |       | âœ“ Addition-a    |     |       | base     | is   | missed           |          | out during |       | DNA |     |
 replication.
-|     |                |     | âœ“ Deletions |          |            | â€“ an extra     | base      |     | is added.  |              |           |     |     |
+|     |                |     | âœ“ Deletions |          |            | – an extra     | base      |     | is added.  |              |           |     |     |
 | --- | -------------- | --- | ----------- | -------- | ---------- | -------------- | --------- | --- | ---------- | ------------ | --------- | --- | --- |
 |     | 2. Chromosomal |     |             |          | Mutations- |                | situation |     | where      | part         | /segment/ |     | of  |
 |     | a chromosome   |     |             | sequence |            | of             | DNA       | is  | disturbed/ | a chromosome |           |     | is  |
 |     | missed/added.  |     |             | Types    |            | of chromosomal |           |     | mutations: |              |           |     |     |
 
-â€¢ Euploidy/polyploidy/-is a condition where an organism/ a cell
+•  Euploidy/polyploidy/-is a condition where an organism/ a cell
 | has           | one complete                                           |      | set of      | extra                     | chromosomes/an |               | exact  | multiple |      |
 | ------------- | ------------------------------------------------------ | ---- | ----------- | ------------------------- | -------------- | ------------- | ------ | -------- | ---- |
-| of a          | complete                                               | set. | E.g â€“       | Triploid                  | ,Tetraploid    |               |        |          |      |
-| â€¢ Aneuploidy  |                                                        | â€“ is | a condition |                           | where          | an organism/a |        | cell     | lost |
+| of a          | complete                                               | set. | E.g –       | Triploid                  | ,Tetraploid    |               |        |          |      |
+| •  Aneuploidy  |                                                        | – is | a condition |                           | where          | an organism/a |        | cell     | lost |
 | from          | or added                                               | to   | one or      | more                      | chromosomes    |               | to/the | normal   | set  |
 | of chromosome |                                                        |      |             |                           |                |               |        |          |      |
-| â€“             | 2 n+1 = trisomy/47 chromosomes, e.g. Downâ€˜s syndrome   |      |             |                           |                |               |        |          |      |
-| â€“             | 2n-1 = monosomics                                      |      |             | â€“ turner syndrome/45chr.  |                |               |        |          |      |
-| â€“             | 2n+1+1 = double trisomy                                |      |             |                           |                |               |        |          |      |
-| â€“             | 2n-2 â€“ nullisomic, organisms that loss one homologous  |      |             |                           |                |               |        |          |      |
+| –             | 2 n+1 = trisomy/47 chromosomes, e.g. Down's syndrome   |      |             |                           |                |               |        |          |      |
+| –             | 2n-1 = monosomics                                      |      |             | – turner syndrome/45chr.  |                |               |        |          |      |
+| –             | 2n+1+1 = double trisomy                                |      |             |                           |                |               |        |          |      |
+| –             | 2n-2 – nullisomic, organisms that loss one homologous  |      |             |                           |                |               |        |          |      |
 chromosome.
 Reading assignment on genetic engineering????
 
 ABO blood groups and Rh Factors
-â€¢ ABO Blood Type: An individual's red blood cells will contain
+•  ABO Blood Type: An individual's red blood cells will contain
 proteins of type A, or B, or both, or neither. The body produces
 | antibodies | that     | will attack | any   | foreign  | type.     |     |
 | ---------- | -------- | ----------- | ----- | -------- | --------- | --- |
-| â€¢ Alleles  | of types | I and       | I are | dominant | over type | i.  |
+| •  Alleles  | of types | I and       | I are | dominant | over type | i.  |
 |            |          | A           | B     |          |           |     |
 
-| â€¢ Rh      | Factor | (D    | antigen):  | The    | Rh     | factor,  | the | second | most  |
+| •  Rh      | Factor | (D    | antigen):  | The    | Rh     | factor,  | the | second | most  |
 | --------- | ------ | ----- | ---------- | ------ | ------ | -------- | --- | ------ | ----- |
 | important |        | blood | group      | system | after  | the      | ABO | blood  | group |
 | system,   | was    | first | discovered | in     | Rhesus | monkeys. |     |        |       |
-â€“ The Rh factor is inherited independently from the ABO blood type.
-| â€“   | Genotypes | for | the Rh factor | are +/+, | +/-, | and -/-. |     |     |     |
+– The Rh factor is inherited independently from the ABO blood type.
+| –   | Genotypes | for | the Rh factor | are +/+, | +/-, | and -/-. |     |     |     |
 | --- | --------- | --- | ------------- | -------- | ---- | -------- | --- | --- | --- |
-â€“ People who are +/+ or +/- possess the Rh(D) antigen and test as Rh
+– People who are +/+ or +/- possess the Rh(D) antigen and test as Rh
 positive.
-â€“ People who are -/- do not posess the Rh(D) antigen and test as Rh
+– People who are -/- do not posess the Rh(D) antigen and test as Rh
 negative.
 
 | Rh  | Sensitization: |          |             |     |        | One | interesting |     |         | medical      |           |     | scenario   |     | involves |     |     |
 | --- | -------------- | -------- | ----------- | --- | ------ | --- | ----------- | --- | ------- | ------------ | --------- | --- | ---------- | --- | -------- | --- | --- |
 | an  | Rh             | negative |             |     | mother |     | who         |     | carries | an           | Rh        |     | positive   |     | baby.    |     |     |
-| â€¢   | The            | baby     |             | of  | an     | Rh  | positive    |     |         | father       |           | and | an         | Rh  | negative |     |     |
+| •    | The            | baby     |             | of  | an     | Rh  | positive    |     |         | father       |           | and | an         | Rh  | negative |     |     |
 |     | mother         |          | can         | be  | +/-    | or  | -/-.)       |     |         |              |           |     |            |     |          |     |     |
-| â€¢   | If             | the      | baby        |     | is     |     | +/-,        | the |         | first        | pregnancy |     |            |     | causes   |     | Rh  |
+| •    | If             | the      | baby        |     | is     |     | +/-,        | the |         | first        | pregnancy |     |            |     | causes   |     | Rh  |
 |     | sensitization  |          |             |     | in     | the | mother,     |     |         | because      |           |     | she        | is  | exposed  |     | to  |
 |     | foreign        |          | proteins    |     |        | and | builds      |     | up      | antibodies   |           |     | against    |     | them.    |     |     |
-| â€¢   | Future         |          | pregnancies |     |        |     | can         |     | be      | increasingly |           |     | difficult, |     |          | as  | the |
+| •    | Future         |          | pregnancies |     |        |     | can         |     | be      | increasingly |           |     | difficult, |     |          | as  | the |
 |     | mother's       |          | antibodies  |     |        |     | attack      |     | the     | baby.        |           |     |            |     |          |     |     |
 
 Introduction to Evolution
@@ -2387,19 +2387,19 @@ on spiritual matters that cannot be seen, touched or measured
 effectively.
 | Types | of creationism |     | theory |     |     |     |     |
 | ----- | -------------- | --- | ------ | --- | --- | --- | --- |
-âž¢ Gap creation â€“ discusses a large gap between the formation of
+âž¢ Gap creation – discusses a large gap between the formation of
 the earth and the creation of all the animals and plants. The
 | gap | could | be billions | or millions | of year. |     |     |     |
 | --- | ----- | ----------- | ----------- | -------- | --- | --- | --- |
 âž¢
-Progressive creation â€“ accepts the Big Bangs as the origin of
+Progressive creation – accepts the Big Bangs as the origin of
 
-â–ª Evolutionary creationism (Theistic evolution) â€“ This view of
+â–ª Evolutionary creationism (Theistic evolution) – This view of
 |     | evolution |      | maintains |     | that   | God |      | â€žinventedâ€Ÿ |     | evolution | and     | takes |
 | --- | --------- | ---- | --------- | --- | ------ | --- | ---- | ---------- | --- | --------- | ------- | ----- |
 |     | some      | form | of        | an  | active |     | part | in         | the | ongoing   | process | of    |
 evolution.
-â–ª Intelligent design â€“ a theory states that life developed (formed)
+â–ª Intelligent design – a theory states that life developed (formed)
 due to a combination of natural forces and the intervention of
 |     | a supernatural |     |            | being. |     |        |     |     |     |     |     |     |
 | --- | -------------- | --- | ---------- | ------ | --- | ------ | --- | --- | --- | --- | --- | --- |
@@ -2437,9 +2437,9 @@ This theory is also called abiogenesis; states life originates from
 
 | â‘   | The        | primitive |     |      | atmosphere |     |        |     | of  | the    |     | earth |     | was | a   | reducing |     |     |
 | --- | ---------- | --------- | --- | ---- | ---------- | --- | ------ | --- | --- | ------ | --- | ----- | --- | --- | --- | -------- | --- | --- |
-|     | atmosphere |           |     | â€“ no | free       |     | oxygen |     | (no | oxygen |     | gas). |     |     |     |          |     |     |
+|     | atmosphere |           |     | – no | free       |     | oxygen |     | (no | oxygen |     | gas). |     |     |     |          |     |     |
 â‘ There was an appropriate supply of energy, such as lightening or
-|     | ultraviolet |       | light |         | (Uv     | â€“     | rays). |     |         |     |           |           |     |     |        |     |        |     |
+|     | ultraviolet |       | light |         | (Uv     | –     | rays). |     |         |     |           |           |     |     |        |     |        |     |
 | --- | ----------- | ----- | ----- | ------- | ------- | ----- | ------ | --- | ------- | --- | --------- | --------- | --- | --- | ------ | --- | ------ | --- |
 | â‘   | This        | would |       | provide |         |       | the    |     | energy  |     | for       | reactions |     |     | that   |     | would  |     |
 |     | synthesize  |       | a     | wide    |         | range |        | of  | organic |     | compounds |           |     |     | (amino |     | acids, |     |
@@ -2457,7 +2457,7 @@ gases could have undergone a series of chemical reactions and
 |     | absorb |         | and       |         | assimilate |         |     | organic |        |           | compounds |             |         | (amino    |          | acids,  |     | DNA   |
 | --- | ------ | ------- | --------- | ------- | ---------- | ------- | --- | ------- | ------ | --------- | --------- | ----------- | ------- | --------- | -------- | ------- | --- | ----- |
 |     | and    |         | others)   |         | and        | leading |     | to      | the    | first     | true      |             | cells.  |           |          |         |     |       |
-| âœ“   | J.     | Haldane |           |         | â€“ proposed |         |     | that    |        | the       | chemical  |             |         | reactions |          |         | of  | these |
+| âœ“   | J.     | Haldane |           |         | – proposed |         |     | that    |        | the       | chemical  |             |         | reactions |          |         | of  | these |
 |     | gases  |         | were      |         | occurred   |         |     | in the  |        | primitive |           | sea         |         | by        | solar    | energy  |     | and   |
 |     | the    | sea     | became    |         |            | a â€žhot  |     | dilute  |        | soupâ€Ÿ     |           | of          | organic |           | monomers |         |     | and   |
 |     | small  |         | polymers. |         |            |         |     |         |        |           |           |             |         |           |          |         |     |       |
@@ -2472,12 +2472,12 @@ applied electrical sparks repeatedly through a mixture of gases
 |     | variety |     | and | more |     | complex |     | organic |     | molecules |     | were | formed |     |
 | --- | ------- | --- | --- | ---- | --- | ------- | --- | ------- | --- | --------- | --- | ---- | ------ | --- |
 including:
-|     | â€¢ amino   |     | acids |     | - to | form | proteins |             |       |     |         |        |     |     |
+|     | •  amino   |     | acids |     | - to | form | proteins |             |       |     |         |        |     |     |
 | --- | --------- | --- | ----- | --- | ---- | ---- | -------- | ----------- | ----- | --- | ------- | ------ | --- | --- |
-|     | â€¢ pentose |     | sugar |     | - to | form | nucleic  |             | acids |     |         |        |     |     |
-|     | â€¢ hexose  |     | sugar |     | -    | need | for      | respiration |       | and | to form | starch |     | and |
+|     | •  pentose |     | sugar |     | - to | form | nucleic  |             | acids |     |         |        |     |     |
+|     | •  hexose  |     | sugar |     | -    | need | for      | respiration |       | and | to form | starch |     | and |
 cellulose.
-|          | â€¢ Hydrogen |            |     | cyanide |       |     | (HCN)-          | starting |     | point | for | synthesizes |     | of  |
+|          | •  Hydrogen |            |     | cyanide |       |     | (HCN)-          | starting |     | point | for | synthesizes |     | of  |
 | -------- | ---------- | ---------- | --- | ------- | ----- | --- | --------------- | -------- | --- | ----- | --- | ----------- | --- | --- |
 | nitrogen |            | containing |     |         | bases |     | in nucleotides. |          |     |       |     |             |     |     |
 â‘ This experiment gave strong evidence to support the Oparin-
@@ -2504,7 +2504,7 @@ is also called â€žtheory of transformationâ€Ÿ or Lamarckism. The two
 | --- | --- | ----------- | --- | ------ | -------- | --- | --- | ------ | --- | --- | --- | --- | --- | --- | --- |
 |     | â–   | Inheritance |     |        | acquired |     |     | traits |     |     |     |     |     |     |     |
 
-â–ª Use and disuse â€“ Lamarck suggested that a structure or process
+â–ª Use and disuse – Lamarck suggested that a structure or process
 in organism that can be used continuous will become enlarged or
 | more | developed | but any | structure | that | is not. |     |     |
 | ---- | --------- | ------- | --------- | ---- | ------- | --- | --- |
@@ -2516,7 +2516,7 @@ in organism that can be used continuous will become enlarged or
 other birds because penguins do not use their wings to fly disuse
 theory.
 
-â– Inheritance of Acquired traits â€“ Lamarck believed that traits
+â– Inheritance of Acquired traits – Lamarck believed that traits
 | changed | (acquired |     |     | during | an  | organismâ€Ÿs |     |     | lifetime | could | be  |
 | ------- | --------- | --- | --- | ------ | --- | ---------- | --- | --- | -------- | ----- | --- |
 passed on to its offsprings. Example: - Giraffes that had acquired
@@ -2539,7 +2539,7 @@ passed on to its offsprings. Example: - Giraffes that had acquired
 |     | islands |      |     | and noted |     | there   |              | were | many |     | similarities |     |     | between |     | them |
 | --- | ------- | ---- | --- | --------- | --- | ------- | ------------ | ---- | ---- | --- | ------------ | --- | --- | ------- | --- | ---- |
 |     | but     | have |     | some      |     | obvious | differences. |      |      |     |              |     |     |         |     |      |
-â‘ Darwin concluded that an â€œancestral finchâ€ had colonized the
+â‘ Darwin concluded that an "ancestral finch" had colonized the
 Islands from mainland and been able to adapt to the different
 |     | conditions |     |     | on  | the | islands |     | and | evolve |     | into | different |     |     | species. |     |
 | --- | ---------- | --- | --- | --- | --- | ------- | --- | --- | ------ | --- | ---- | --------- | --- | --- | -------- | --- |
@@ -2548,22 +2548,22 @@ E.g. He suggested that some finches had evolved into insect eaters
 (pointed peak), other in to seedeaters (crushing peak). Darwin
 | summarized |     | his | observations |     | in  | two main | ideas: |     |     |
 | ---------- | --- | --- | ------------ | --- | --- | -------- | ------ | --- | --- |
-â€¢ all species tend to produce more offsprings than can possibly
+•  all species tend to produce more offsprings than can possibly
 | survive | (Fecundity) |             |       |        |     |             |             |       |     |
 | ------- | ----------- | ----------- | ----- | ------ | --- | ----------- | ----------- | ----- | --- |
-| â€¢ there | is          | a variation | among |        | the | offsprings. |             |       |     |
+| •  there | is          | a variation | among |        | the | offsprings. |             |       |     |
 | From    | these       | observation |       | Darwin |     | deduced     | (concluded) | that: |     |
-â€¢ There will be a â€œstruggle for existenceâ€ between members of a
-| species | because |     | they | are | over | â€“ reproduced |     | and resources | are |
+•  There will be a "struggle for existence" between members of a
+| species | because |     | they | are | over | – reproduced |     | and resources | are |
 | ------- | ------- | --- | ---- | --- | ---- | ------------ | --- | ------------- | --- |
 limited.
-â€¢ Some members of a species will be better adapted than others to
+•  Some members of a species will be better adapted than others to
 
 â– Darwin proposed: - Those members of a species, which are best
 |     | adapted |             | to        |     | their      | environment, |       |      |        | will       | survive |          |     | and   | reproduce |     |     | in  |
 | --- | ------- | ----------- | --------- | --- | ---------- | ------------ | ----- | ---- | ------ | ---------- | ------- | -------- | --- | ----- | --------- | --- | --- | --- |
 |     | greater |             | number    |     |            | than         | other |      | less   | adapted    |         | (died    |     | out). |           |     |     |     |
-| C.  | Neo     | â€“           | Darwinism |     |            | Theory       |       |      |        |            |         |          |     |       |           |     |     |     |
+| C.  | Neo     | –           | Darwinism |     |            | Theory       |       |      |        |            |         |          |     |       |           |     |     |     |
 | â–   | Charles |             | Darwin    |     |            | knew         |       | very | little |            | about   | genetics |     |       | and       |     | did | not |
 |     | propose |             | how       |     | variations |              |       | in   | the    | population |         |          | was |       | passed    |     | to  | the |
 |     | next    | generation. |           |     |            |              |       |      |        |            |         |          |     |       |           |     |     |     |
@@ -2579,23 +2579,23 @@ environment.
 
 | The | following | will | happen |     |     |     |     |     |     |
 | --- | --------- | ---- | ------ | --- | --- | --- | --- | --- | --- |
-â€¢ Those individuals with the advantageous allele of a gene will
+•  Those individuals with the advantageous allele of a gene will
 | survive | to  | reproduce |     | in greater | number | than | other | types |     |
 | ------- | --- | --------- | --- | ---------- | ------ | ---- | ----- | ----- | --- |
-â€¢ Advantageous allele pass to their offsprings in greater numbers
+•  Advantageous allele pass to their offsprings in greater numbers
 | than | other | genes | (alleles). |     |     |     |     |     |     |
 | ---- | ----- | ----- | ---------- | --- | --- | --- | --- | --- | --- |
-â€¢ The frequency of the advantageous allele will be higher in the
+•  The frequency of the advantageous allele will be higher in the
 | next | generation |     | of a population. |     |     |     |     |     |     |
 | ---- | ---------- | --- | ---------------- | --- | --- | --- | --- | --- | --- |
-â€¢ Mutations are important in introducing variation into population.
+•  Mutations are important in introducing variation into population.
 | Any | mutation |     | could | produce | an allele | which: |     |     |     |
 | --- | -------- | --- | ----- | ------- | --------- | ------ | --- | --- | --- |
-â€¢ increase in frequency if they are beneficial in their effect, may
+•  increase in frequency if they are beneficial in their effect, may
 increase slowly, stable or decrease if they are neutral and decrease
 and could disappear if they are harmful (disadvantages) in their
 effects.
-â€¢ Neo-Darwinism is a modification of Darwinâ€Ÿs original theory that
+•  Neo-Darwinism is a modification of Darwinâ€Ÿs original theory that
 takes into account:- genetics and ethology (behavioural pattens
 | can  | also | be    | advantageous |        | or not). | E.g.     | Young    | geese | â€žimprintâ€Ÿ |
 | ---- | ---- | ----- | ------------ | ------ | -------- | -------- | -------- | ----- | --------- |
@@ -2625,13 +2625,13 @@ cause infectious disease :-
 destructive enzymes ).
 
 â‘Terminologies related to infection and disease
-â€¢ Incubation period:- is the interval b/n initial infection & the first
+•  Incubation period:- is the interval b/n initial infection & the first
 appearance of signs & symptoms
-â€¢ Symptom: A change in body function that is felt by a patient as a
+•  Symptom: A change in body function that is felt by a patient as a
 result of disease
-â€¢ Sign: A change in a body that can be measured or observed as a
+•  Sign: A change in a body that can be measured or observed as a
 result of disease.
-â€¢ Syndrome: A specific group of signs and symptoms that
+•  Syndrome: A specific group of signs and symptoms that
 accompany a disease
 
 ï† Zoonoses :- are a diseases that occur primarily in animals and can
@@ -2658,8 +2658,8 @@ localized near the site of entry - e.g. skin, respiratory or the GI tract
 b)Systemic (disseminated) infection:-an infection throughout the
 | body     | by     | blood | and/or  | lymph     |             |
 | -------- | ------ | ----- | ------- | --------- | ----------- |
-| â€¢ Reach  | target |       | organ   | or tissue | & replicate |
-| â€“ Neural |        | &     | viremia | spread    |             |
+| •  Reach  | target |       | organ   | or tissue | & replicate |
+| – Neural |        | &     | viremia | spread    |             |
 â‘ Systemic infection: Bacteremia: bacteria in the blood
 ï†Sepsis: toxic inflammatory condition arising from the spread
 of microbes, especially bacteria or their toxins
@@ -2696,10 +2696,10 @@ the time.
 
 | A.  | Horizontal |              |        | transmission-Person-to-person |        |        |               |            |              |             | transmission |     |
 | --- | ---------- | ------------ | ------ | ----------------------------- | ------ | ------ | ------------- | ---------- | ------------ | ----------- | ------------ | --- |
-|     | â€“          | Respiratory  |        |                               | route: | e.g.   | Tuberculosis, |            |              | Influenza,  |              |     |
-|     | â€“          | Conjunctival |        |                               | route: |        | Enterovirus,  |            |              | HSV         |              |     |
-|     | â€“          | Fecal        | route: |                               | e.g.   | Amoeba |               | , Giardia, |              | Rotaviruses |              |     |
-|     | â€“          | Sexual       |        | route:                        | e.g.   |        | Gonorrhea,    |            | Trichomonas, |             |              | HIV |
+|     | –          | Respiratory  |        |                               | route: | e.g.   | Tuberculosis, |            |              | Influenza,  |              |     |
+|     | –          | Conjunctival |        |                               | route: |        | Enterovirus,  |            |              | HSV         |              |     |
+|     | –          | Fecal        | route: |                               | e.g.   | Amoeba |               | , Giardia, |              | Rotaviruses |              |     |
+|     | –          | Sexual       |        | route:                        | e.g.   |        | Gonorrhea,    |            | Trichomonas, |             |              | HIV |
 B. Vertical transmission---is the transfer of Pathogen from mother
 |     | to fetus/baby. |     |              |     | Congenital, |     | Transplacental   |     |     | &   | Transmammarian |     |
 | --- | -------------- | --- | ------------ | --- | ----------- | --- | ---------------- | --- | --- | --- | -------------- | --- |
@@ -2732,16 +2732,16 @@ worms
 | âž¢ Gram-negative bacteria |     |     |     | appear pink after the staining  |     |     |     |     |
 | ------------------------ | --- | --- | --- | ------------------------------- | --- | --- | --- | --- |
 procedure.
-| â€“ E.g.   | Salmonella |         | typhi, | which  | causes | typhoid | fever, | and |
+| – E.g.   | Salmonella |         | typhi, | which  | causes | typhoid | fever, | and |
 | -------- | ---------- | ------- | ------ | ------ | ------ | ------- | ------ | --- |
 | Yersinia |            | pestis, | which  | causes | plague |         |        |     |
 
 âž¢ Gram-positive bacteria appear purple after the Gram staining
 procedure.
-â€“ E.g. Staphylococcus aureus, which causes skin, respiratory, &
+– E.g. Staphylococcus aureus, which causes skin, respiratory, &
 | wound | infections, |     |     |     |     |
 | ----- | ----------- | --- | --- | --- | --- |
-â€“ Clostridium tetani, which produces a toxin that can be lethal for
+– Clostridium tetani, which produces a toxin that can be lethal for
 humans.
 â‘ Among trillions of strains of bacteria, & few of these cause
 diseases in humans. Examples: bacterial meningitis ,pneumonia,
@@ -2777,7 +2777,7 @@ bat or bird droppings).
 
 4
 . Protozoans
-â€¢
+• 
 | âž¢ Unicellular, | heterotrophic |                 | eukaryotes |     |
 | -------------- | ------------- | --------------- | ---------- | --- |
 | âž¢ Include      | amoeba        | and paramecium. |            |     |
@@ -2800,7 +2800,7 @@ cases of disease annually, is caused by different species of the
 âž¢ They are and have differentiated tissues
 âž¢ have complex reproductive cycles
 âž¢ The common helminthes are Ascaris, Tape worm,
-hook worm and Schistosoma etcâ€¦
+hook worm and Schistosoma etc...
 
 â‘ Overview of the immune system
 ï†Is the body's biological defense mechanism that
@@ -2813,27 +2813,27 @@ diseases and the medical basis for immunization).
 
 | â‘   |     | Components of the Immune system |     |     |     |     |     |     |     |     |     |     |     |     |
 | --- | --- | ------------------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-â€¢
+• 
 |     |      | It is | composed |       | of a  | number        | of  |     | different |      | cell     | types, | tissues  |     |
 | --- | ---- | ----- | -------- | ----- | ----- | ------------- | --- | --- | --------- | ---- | -------- | ------ | -------- | --- |
 |     | and  |       | organs.  |       |       |               |     |     |           |      |          |        |          |     |
-| â€¢   | Many |       | of       | these | cells | are organized |     |     |           | into | separate |        | lymphoid |     |
+| •    | Many |       | of       | these | cells | are organized |     |     |           | into | separate |        | lymphoid |     |
 organs.
-| â€¢   | It    | has | a   | mobile | force | of cells |         | in  | the | bloodstream |     |           | that | are |
+| •    | It    | has | a   | mobile | force | of cells |         | in  | the | bloodstream |     |           | that | are |
 | --- | ----- | --- | --- | ------ | ----- | -------- | ------- | --- | --- | ----------- | --- | --------- | ---- | --- |
 |     | ready |     | to  | attack | the   | invading | microbe |     |     | wherever    |     | it enters |      | the |
 body.
-| â€¢   |           | Cells |     | maintain | communication |     |     |     | through |     | cell | contact |     | and |
+| •    |           | Cells |     | maintain | communication |     |     |     | through |     | cell | contact |     | and |
 | --- | --------- | ----- | --- | -------- | ------------- | --- | --- | --- | ------- | --- | ---- | ------- | --- | --- |
 |     | molecules |       |     | called   | cytokines     |     |     |     |         |     |      |         |     |     |
 
 Cells of the immune system
 ï‚ Myeloid cells
-â€¢ Granulocytes (PMNC)
-â€¢ Monocytes/macrophages
-â€¢ Dendritic cells
+•  Granulocytes (PMNC)
+•  Monocytes/macrophages
+•  Dendritic cells
 ï‚ Lymphoid cells
-â€¢ Lymphocytes (B&T cells)
+•  Lymphocytes (B&T cells)
 
 | â‘ The      | human | immune     | system    | has Two | general | mechanisms | for |
 | ---------- | ----- | ---------- | --------- | ------- | ------- | ---------- | --- |
@@ -2842,37 +2842,37 @@ Cells of the immune system
 from any  (wide range) pathogen
 2. Specific (Adaptive) Defense Mechanisms  : defense that the body
 offers  against  particular pathogen
-1. Innate Immunity â€“ There are 4 types of defensive barriers
+1. Innate Immunity – There are 4 types of defensive barriers
 (Protective actions) of nonspecific (innate) defense mechanisms
 
 Physical/Anatomical barriers- the 1st line of defense
 1.
-â€“ Skin, Mucous membranes, Mucous, Cilia propel Mos out of the body &
+– Skin, Mucous membranes, Mucous, Cilia propel Mos out of the body &
 Normal flora-biological barriers
 2. Physiological barriers
-â€“ PH of our environment, HCL-Low PH
-â€“ Temperature of our body
+– PH of our environment, HCL-Low PH
+– Temperature of our body
 3. Chemical barriers and biologically active substance
-â€“ tears, saliva, (enzymes lysozyme), vaginal secretions, sweat (lysozyme,
+– tears, saliva, (enzymes lysozyme), vaginal secretions, sweat (lysozyme,
 toxic lipids)
-â€“ These secretions act to wash away potential invaders
-â€“ Contain antibacterial / antiviral substance
+– These secretions act to wash away potential invaders
+– Contain antibacterial / antiviral substance
 
 4. Cellular defense (innate immune cells)- Non- specific leukocytes
 via phagocytosis and Inflammatory response
 2. ADAPTIVE/Acquired immune response
-- Develops after birth â€“ Acquired
+- Develops after birth – Acquired
 - Triggered when Innate response is not enough
 - Response is specific for individual microbe/epitope
-- Remembers â€“ heightened response second time
-â€¢ Two arms: Humoral Immunity (B cell mediated) &
+- Remembers – heightened response second time
+•  Two arms: Humoral Immunity (B cell mediated) &
 Cellular Immunity (T cell mediated)
 
 | 1.  | Humoral |            | (antibody-mediated) |               |        |     | immunity |        | (HI):-       | Involves |     |     |
 | --- | ------- | ---------- | ------------------- | ------------- | ------ | --- | -------- | ------ | ------------ | -------- | --- | --- |
 |     | the     | production |                     | of Antibodies |        | by  | B cells  | (B-    | lymphocytes) |          |     |     |
 |     | defends |            | mostly              | against       | bact., |     | bact.    | toxin, | and          | virus    | in  |     |
-|     | bodyâ€™s  | fluids     |                     |               |        |     |          |        |              |          |     |     |
+|     | body's  | fluids     |                     |               |        |     |          |        |              |          |     |     |
 2.
 |     | Cell-mediated |     |     | immunit(CMI) |     |     | Involves |     | the | production |     | of  |
 | --- | ------------- | --- | --- | ------------ | --- | --- | -------- | --- | --- | ---------- | --- | --- |
@@ -2895,15 +2895,15 @@ components.
 3. Immunodeficiency
 
 1. Hypersensitivity
-â‘ The word â€œhypersensitivityâ€ Implies an increased
+â‘ The word "hypersensitivity" Implies an increased
 response, the response is not always heightened but may, instead,
 be an inappropriate immune response to an antigen
 â‘ Develop in the course of either HI or CMI response
 â‘ Immediate hypersensitivity if it occurs within the humoral
 branch & initiated by Ab or Ag-Ab complexes
-â€“ because the symptoms are manifested within minutes or hours
+– because the symptoms are manifested within minutes or hours
 after a sensitized recipient encounters antigen
-â€¢ Delayed-type hypersensitivity (DTH) is so named in recognition
+•  Delayed-type hypersensitivity (DTH) is so named in recognition
 of the delay of symptoms until days after exposure
 
 Four (4) types of hypersensitivity reactions mediated b
@@ -2969,13 +2969,13 @@ identification
 
 | Etymology | of     | Taxonomy |       |             |      |           |               |        |
 | --------- | ------ | -------- | ----- | ----------- | ---- | --------- | ------------- | ------ |
-| â– The     | word   | taxonomy | was   | derived     | from | two Greek | words:        | â€œTaxis |
+| â– The     | word   | taxonomy | was   | derived     | from | two Greek | words:        | "Taxis |
 | and       | Nomos" | which    | means | arrangement |      | and law   | respectively. |        |
 â– Thus, taxonomy means the law governing the classification or
 | arrangement |     | of organisms |     | into taxa. |     |     |     |     |
 | ----------- | --- | ------------ | --- | ---------- | --- | --- | --- | --- |
-â– some naturalists use the term â€œTaxonomyâ€ as synonymous with
-â€œsystematicsâ€, but many naturalists consider taxonomy as one part
+â– some naturalists use the term "Taxonomy" as synonymous with
+"systematics", but many naturalists consider taxonomy as one part
 | of systematics, |      | and             | it is mainly | concerned     |     | with: |     |     |
 | --------------- | ---- | --------------- | ------------ | ------------- | --- | ----- | --- | --- |
 |                 | i.   | classification, |              |               |     |       |     |     |
@@ -3004,7 +3004,7 @@ Brainstorming questions:
 | âž¢                     | Taxonomy     |         | was        |       | started     |         | as           | old      |         | as   |
 |                       | man himself. |         |            |       |             |         |              |          |         |      |
 | âž¢                     | Among        | several | early      | Greek | and         | Roman   | philosophers |          |         | who  |
-|                       | enumerated   |         | organisms, |       | Aristotle   |         | (384â€“322     |          |         | BC), |
+|                       | enumerated   |         | organisms, |       | Aristotle   |         | (384–322     |          |         | BC), |
 |                       | Theophrastus |         | (370-285   |       | BC),        | Carolus |              | Linnaeus | (1707-  |      |
 |                       | 1778),       | M.      | Adanson    |       | (1727-1806) |         |              | and      | Lamarck |      |
 |                       | to mention   | few.    |            |       |             |         |              |          |         |      |
@@ -3022,12 +3022,12 @@ Botany by Linnaeus.
 âž¢ Pliny the Elder (23-79 A.D.): mentioned and categorized plants in terms
 horticultural practices, medicinal uses, and timber use practices.
 âœ“ In his classification, he used a similar classification as his predecessors' errors.
-â€¢
-â€¢
-â€¢
+• 
+• 
+• 
 
 âž¢ Dioscorides (1st Century AD):He was a Greek physician who studied and
-described about 600 medicinal plants in his book â€œDe Matera Medicaâ€ with
+described about 600 medicinal plants in his book "De Matera Medica" with
 | their useful  | applications. |     |               |        |       |     |
 | ------------- | ------------- | --- | ------------- | ------ | ----- | --- |
 | âž¢ Caesalpinus | (1519-1603):  |     | He classified | plants | based | on  |
@@ -3062,7 +3062,7 @@ organisms.
 âž¢ The differences in approach to comparison of character states are
 lead to the development of five different classification systems.
 
-| â€¢ 7.2.1.Artificial |     | classification |     |     | system |
+| •  7.2.1.Artificial |     | classification |     |     | system |
 | ------------------ | --- | -------------- | --- | --- | ------ |
 âœ“ Artificial system was the first to be used in the classification of organisms
 âœ“ Theophrastus and Linnaeus are good example of artificial system of
@@ -3072,7 +3072,7 @@ making comparison among organisms i.e. a few characters are involved.
 âœ“ Artificial system is monothetic i.e. possession of unique set of
 | characters/features |         |                | and not | difficult |            |
 | ------------------- | ------- | -------------- | ------- | --------- | ---------- |
-| â€¢ 7.2.2.            | Natural | classification |         |           | system     |
+| •  7.2.2.            | Natural | classification |         |           | system     |
 | âœ“ is based          | up on   | several        | to      | many      | characters |
 âœ“ is therefore polythetic i.e. it places together organisms that have the
 | greatest | number | of  | shared | features, |     |
@@ -3110,7 +3110,7 @@ character.
 organisms are categorized in each kingdom?
 
 âž¢ Linnaeus developed a hierarchical system of classification.
-âž¢ An arrangement of taxa into an ascending series of everâ€“increasing
+âž¢ An arrangement of taxa into an ascending series of ever–increasing
 | inclusiveness | forms | is known | as a | hierarchical | system | of  |
 | ------------- | ----- | -------- | ---- | ------------ | ------ | --- |
 classification.
@@ -3136,7 +3136,7 @@ Species are a series of recognizably similar individuals distinct
 âž¢ they are the fundamental bases of the hierarchy of classification.
 | âž¢ Related | species |     | are grouped | in to     | one genus. |     |     |     |
 | --------- | ------- | --- | ----------- | --------- | ---------- | --- | --- | --- |
-| âž¢ Related | genera  |     | are grouped | in to one | familyâ€¦â€¦   |     |     |     |
+| âž¢ Related | genera  |     | are grouped | in to one | family......   |     |     |     |
 âž¢ Related orders put in one class, classes in to division (if plant) and
 | in  | to phylum |     | (if animal) | and | in to | kingdom | and | domain. |
 | --- | --------- | --- | ----------- | --- | ----- | ------- | --- | ------- |
@@ -3243,23 +3243,23 @@ Chapter 8: Ecology & Conservation of Natural Resources(3 Hrs)
 âœ“ What are the basic terms of Ecology?
 â– Ecology is one of the major discipline of biology
 â– The term ecology is derived from the two Greek words:
-âž¢ â€œokiosâ€ meaning â€˜houseâ€™ or â€˜a place to liveâ€™ &
-âž¢ â€œlogosâ€ meaning â€˜studyâ€™ to designate the study of organisms in their
+âž¢ "okios" meaning 'house' or 'a place to live' &
+âž¢ "logos" meaning 'study' to designate the study of organisms in their
 natural habitat.
 â– The term was introduced by Ernst Haeckel (G. Biologist) in 1866.
 â– Living things depend on each other & on the non-living components of
-the environment (envâ€™t) for survival.
+the environment (env't) for survival.
 â– Hence, Ecology is the scientific study of interactions of organisms with
-one another & with their envâ€™t (physical & chemical env't).
+one another & with their env't (physical & chemical env't).
 â–Ecology is also the study of distribution, abundance & relationships of
-organisms, or a group of organisms in a common envâ€™t.
+organisms, or a group of organisms in a common env't.
 
 â–ª Why do we study ecology?
 â– Ecologists study these interactions in order to understand the abundance &
 diversity of life within Earth's ecosystems.
 â– In other words,
-âž¢ why there are so many plants & animals existing in an envâ€™t, &
-âž¢ why there are so many different types of plants & animals existing in an envâ€™t?
+âž¢ why there are so many plants & animals existing in an env't, &
+âž¢ why there are so many different types of plants & animals existing in an env't?
 â– To answer these questions, they may use:
 âž¢ field measurements, such as counting & observing the behavior of
 species in their habitats;
@@ -3286,7 +3286,7 @@ the specific climate of each region, where the climate determines
 the unique plant & animal species that live & are adapted to survive
 in a region.
 6. Carnivores: they are animals that eat only meat. They are
-generally predators, like lions, cheetahs, etc., in a specific envâ€™t.
+generally predators, like lions, cheetahs, etc., in a specific env't.
 7. Ecosystem: consists of physical & biological components of a
 specific habitat, where animals & plants are interdependent on each
 other for survival.
@@ -3301,10 +3301,10 @@ humans, pigs, baboons.
 âœ“ What are the branches of ecology?
 âœ“ What criteria are employed for this classification?
 â– Ecology can be divided depending on the following concepts:
-âž¢ Hierarchical organization â€“ according to level of organization
+âž¢ Hierarchical organization – according to level of organization
 (Fig 1)
 e.g., organism, population, community, ecosystem, biosphere
-âž¢ Taxonomic â€“ according to organisms studied
+âž¢ Taxonomic – according to organisms studied
 e.g., plant ecology, animal ecology, microbial ecology &avian
 ecology
 âž¢ Time/Place - According to time/place
@@ -3322,7 +3322,7 @@ influencing that community.
 5) Biome: A distinct ecological community of plants & animals living
 together in a particular climate.
 6) Biosphere: is the aggregation of all ecosystems (the sum of all of the
-organisms of the earth & their envâ€™t).
+organisms of the earth & their env't).
 âž¢ Biome is the living zone of the planet.
 
 The major branches of ecology can be classified into the following:
@@ -3364,7 +3364,7 @@ functions as a unit & is capable of maintaining its identity such as
 | â–   | An aquatic |     | ecosystem |     | is an ecosystem |     |     | in a body | of water. |
 | --- | ---------- | --- | --------- | --- | --------------- | --- | --- | --------- | --------- |
 â– Communities of organisms that are dependent on each other & on
-their envâ€™t live in aquatic ecosystems. E.g., plants, animals, MOs
+their env't live in aquatic ecosystems. E.g., plants, animals, MOs
 â– The two main types of aquatic ecosystems are:
 |     | a)  | Marine ecosystems      |     |     |     |     |     |     |     |
 | --- | --- | ---------------------- | --- | --- | --- | --- | --- | --- | --- |
@@ -3379,11 +3379,11 @@ a) Marine ecosystems cover about 71% of the earth's surface &
 â– About 85% of the dissolved materials in seawater are sodium &
 chlorine.
 â– Organisms found in marine ecosystems include brown algae,
-dinoflagellates, corals, cephalopods, echinoderms, sharksâ€¦etc.
+dinoflagellates, corals, cephalopods, echinoderms, sharks...etc.
 â– Fishes caught in marine ecosystems are the biggest source of
 commercial foods obtained from wild populations.
 b) Freshwater ecosystems
-â– Freshwater ecosystems occupy only about 2% of earthâ€˜s surface.
+â– Freshwater ecosystems occupy only about 2% of earth's surface.
 â– These fresh water ecosystems can also be categorized into 2:
 i. flowing-water (lotic) ecosystems, e.g., rivers & streams
 ii. standing-water (lentic) ecosystems, e.g., Lakes, ponds,
@@ -3485,7 +3485,7 @@ centipedes, molluscs, rotifers, annelid worms, & nematodes. E.g.,
 Fig: 3 Terrestrial & aquatic food chain
 
 8.4.2 The food web
-â–ª What do define the term â€œfood webâ€ ? How it is different from food chain?
+â–ª What do define the term "food web" ? How it is different from food chain?
 â– In an ecosystem there are a very large number of interlinked chains & forms
 a food web.
 â– Stability of the ecosystem is maintained by food web.
@@ -3632,7 +3632,7 @@ produce large amount of wastes that leads to pollution of air, water,
 | soil, | & oceans; | global |     | warming | &   | acid rains. |     |     |     |
 | ----- | --------- | ------ | --- | ------- | --- | ----------- | --- | --- | --- |
 â– Untreated or improperly treated waste is a major cause of pollution
-of rivers & envâ€™tal degradation causing ill health & loss of crop
+of rivers & env'tal degradation causing ill health & loss of crop
 productivity.
 8.7.1 Pollution & pollutants
 â– Pollution may be defined as addition of undesirable material into the
@@ -3641,14 +3641,14 @@ productivity.
 | â– The       | agents | which |          | cause    | environmental |             |     | pollution | are called |
 pollutants.
 â– Pollutants may be defined as a physical, chemical or biological
-substance unintentionally released into the envâ€™t which is directly or
+substance unintentionally released into the env't which is directly or
 | indirectly | harmful |     | to humans |     | & other | living | organisms. |     |     |
 | ---------- | ------- | --- | --------- | --- | ------- | ------ | ---------- | --- | --- |
 
 8.7.2. Types of pollution
 Activities
-â€¢ List types of pollution
-â€¢ What are the main sources of pollution?
+•  List types of pollution
+•  What are the main sources of pollution?
 â– Pollution may be of the following types:
 âœ“ Air pollution
 âœ“ Noise pollution
@@ -3718,10 +3718,10 @@ INTRODUCTION TO BOTANY AND ZOOLOGY
 | --------------- | ------------------ | ----- |
 
 9.1. Introduction to Botany
-â€¢ Botany is one of the main branches of Biology concerned with
+•  Botany is one of the main branches of Biology concerned with
 | the | scientific | study |     | of plants. |     |     |     |     |     |
 | --- | ---------- | ----- | --- | ---------- | --- | --- | --- | --- | --- |
-â€¢
+• 
 | Botany       | has |       | several | branches.   |     | Such  | as algology, |       | bryology, |
 | ------------ | --- | ----- | ------- | ----------- | --- | ----- | ------------ | ----- | --------- |
 | pteridology, |     | plant |         | physiology, |     | plant | ecology,     | plant | anatomy,  |
@@ -3731,11 +3731,11 @@ plant nutrition, plant pathology, dendrology, phytochemistry,
 | geobotany, |          | paleobotany |            |     | etc.            |     |     |                 |     |
 
 9.1.1. Algology
-â€¢ Algology (phycology) is a branch of botany deals with algae.
-â€¢ They lack the roots, stems, leaves & vascular tissues.Algae
+•  Algology (phycology) is a branch of botany deals with algae.
+•  They lack the roots, stems, leaves & vascular tissues.Algae
 |     | show               |     | the following |     |        | major |        | morphological |     |     | variations: |           |     |     |
 | --- | ------------------ | --- | ------------- | --- | ------ | ----- | ------ | ------------- | --- | --- | ----------- | --------- | --- | --- |
-| â€¢   | Unicellular:single |     |               |     | celled |       | algae. |               |     |     |             |           |     |     |
+| •    | Unicellular:single |     |               |     | celled |       | algae. |               |     |     |             |           |     |     |
 | â‘   | Colonial:          |     | An assemblage |     |        |       | of     | individual    |     |     | cells       | together. |     |     |
 â‘
 |     | Filamentous:a  |     |       |         | morphology |            |     | in     | which |       | daughter |     | cells  | remain |
@@ -3743,17 +3743,17 @@ plant nutrition, plant pathology, dendrology, phytochemistry,
 |     | attached       |     | after | cell    | division.  |            |     |        |       |       |          |     |        |        |
 | â‘   | Siphonaceaous: |     |       |         | a          | morphology |     |        | in    | which |          | one | large, | multi- |
 |     | nucleate       |     | cell  | without |            | cross      |     | walls. |       |       |          |     |        |        |
-â€¢
+• 
 |     | Algae    |        | reproduce      |         | both |     | asexually  |         | and | sexually.     |       |             |      |        |
 | --- | -------- | ------ | -------------- | ------- | ---- | --- | ---------- | ------- | --- | ------------- | ----- | ----------- | ---- | ------ |
-| â€¢   | The      | common |                | methods |      |     | of         | asexual |     | reproductions |       |             | are: | binary |
+| •    | The      | common |                | methods |      |     | of         | asexual |     | reproductions |       |             | are: | binary |
 |     | fission, |        | fragmentation, |         |      |     | hormogonia |         |     | and           | spore | production. |      |        |
 
 Ecology and Distribution of Algae
-â€¢
+• 
 |     | Generally, |     | algae |     | can | be  | found |     | everywhere |     |     | in  | nature. |     |     |     |     |
 | --- | ---------- | --- | ----- | --- | --- | --- | ----- | --- | ---------- | --- | --- | --- | ------- | --- | --- | --- | --- |
-â€¢
+• 
 |     | Endozoic/epizoic: |             |            |     | Live  |              | in or      | on    | animals |         |       |          |          |     |            |         |     |
 | --- | ----------------- | ----------- | ---------- | --- | ----- | ------------ | ---------- | ----- | ------- | ------- | ----- | -------- | -------- | --- | ---------- | ------- | --- |
 | â–   | Cyanophyta:a      |             |            |     | group |              | of         | blue  | green   |         | algae |          | includes |     |            | Nostoc, |     |
@@ -3775,7 +3775,7 @@ Ecology and Distribution of Algae
 |     | feature.      | Example |     |     | Euglena.    |     |     |       |     |       |     |        |     |              |     |     |     |
 
 Economical uses of Algae
-â€¢
+• 
 | Algae | have | various | economical |     | uses like: |     |
 | ----- | ---- | ------- | ---------- | --- | ---------- | --- |
 âž¢
@@ -3786,8 +3786,8 @@ Economical uses of Algae
 | âž¢ Pharmaceutical, |            |        | cosmetic,  | and | industrial    | applications |
 | âž¢ Biofuel         | production |        | and Carbon |     | sequestration |              |
 âž¢ Bioremediation
-â€¢ 9.1.2. Bryology and Pteridology
-â€¢ Bryology is a science mosses and liverworts (Bryophyta).
+•  9.1.2. Bryology and Pteridology
+•  Bryology is a science mosses and liverworts (Bryophyta).
 Pteridology is the science of ferns and their relatives. Division
 | Bryophyta                             |     | is divided in to 3 classes. 1. Class Hepaticopsida |     |     |                       |     |
 | ------------------------------------- | --- | -------------------------------------------------- | --- | --- | --------------------- | --- |
@@ -3795,12 +3795,12 @@ Pteridology is the science of ferns and their relatives. Division
 | Bryopsida                             |     | (Mosses)                                           |     |     |                       |     |
 
 Liverworts
-â€¢
+• 
 | Liverworts  |          | are | given | their    | name |     | because |       | the lobes |     | of their |     |
 | ----------- | -------- | --- | ----- | -------- | ---- | --- | ------- | ----- | --------- | --- | -------- | --- |
 | gametophyte |          |     | plant | resemble |      | to  | the     | liver | of human, |     | wort     | -   |
 | means       | "plant". |     |       |          |      |     |         |       |           |     |          |     |
-â€¢
+• 
 | Most    | species       |     | are | leafy      | resemble |          | mosses |     | while | others | are |     |
 | ------- | ------------- | --- | --- | ---------- | -------- | -------- | ------ | --- | ----- | ------ | --- | --- |
 | thaloid | superficially |     |     | resembling |          | lichens. |        |     |       |        |     |     |
@@ -3808,51 +3808,51 @@ Marchantia
 (Liverwort)
 
 Hornworts
-â€¢
+• 
 | Hornworts  | are  | a group  | of small, |     | inconspicuous |     | thaloid | plants |
 | ---------- | ---- | -------- | --------- | --- | ------------- | --- | ------- | ------ |
 | that often | grow | on moist | soils.    |     |               |     |         |        |
-â€¢ Division of pteridophyta
-â€¢ The division Pteridophytes also categorized in to four main
+•  Division of pteridophyta
+•  The division Pteridophytes also categorized in to four main
 groups. These are 1. Psilophyta 2. Lycophyta 3. Shenophyta 4.
 Pterophyta
-â€¢
+• 
 Psilophyta
-â€¢
+• 
 Psilophyta are characterized by aerial stem, bear small scale
 | like leaves | that | are epidermal |     | in origin. |     |     |     |     |
 | ----------- | ---- | ------------- | --- | ---------- | --- | --- | --- | --- |
-â€¢Lycophyta
-| â€¢ Lycophyta | are          | also | characterized |     |      | or distinguished |            | form |
+• Lycophyta
+| •  Lycophyta | are          | also | characterized |     |      | or distinguished |            | form |
 | ----------- | ------------ | ---- | ------------- | --- | ---- | ---------------- | ---------- | ---- |
 | members     | of Psilotals |      | by having     |     | true | leaves           | and roots; | by   |
 association of their sporangia with fertile leaves-sporophylls.
 
 9.1.3. Seed plants
-â€¢ Dominant group of plants are called seed plants. Seed is the
+•  Dominant group of plants are called seed plants. Seed is the
 product of the fertilized ovule. Seed is a culmination of the
 activities of one plant generation and the start of a new one
 |     | that | contains |     |     | embryo | for | survival |     | value. |     |     |     |     |
 | --- | ---- | -------- | --- | --- | ------ | --- | -------- | --- | ------ | --- | --- | --- | --- |
-â€¢
+• 
 Seeds
-â€¢
+• 
 |     | Seeds |             | contain: |         | embryo,          |      | food, |          | endosperm, |            | seed | coat     | or testa |
 | --- | ----- | ----------- | -------- | ------- | ---------------- | ---- | ----- | -------- | ---------- | ---------- | ---- | -------- | -------- |
 |     | and   | sporophyte. |          |         |                  |      |       |          |            |            |      |          |          |
-| â€¢   | Seeds |             | have     | freedom |                  | from |       | external |            | water      | for  | transfer | of the   |
+| •    | Seeds |             | have     | freedom |                  | from |       | external |            | water      | for  | transfer | of the   |
 |     | male  | gamete      |          |         | or spermatozoids |      |       |          | to         | the female |      | gamete   | or egg   |
 cells.
-â€¢
+• 
 |     | They | produce |     |     | pollen | and | pollen |     | tube. |     |     |     |     |
 | --- | ---- | ------- | --- | --- | ------ | --- | ------ | --- | ----- | --- | --- | --- | --- |
-â€¢
+• 
 |     | Endosperm |     |        | provides |        |     | nourishment |     |     | or food |     | supply | for the |
 | --- | --------- | --- | ------ | -------- | ------ | --- | ----------- | --- | --- | ------- | --- | ------ | ------- |
 |     | growing   |     | embryo |          | (young |     | sporophyte) |     |     |         |     |        |         |
 
-Contâ€¦
-| â€¢ Seed | plants |     | have | also |     | have | other |     | many | features | in common, |     |
+Cont...
+| •  Seed | plants |     | have | also |     | have | other |     | many | features | in common, |     |
 | ------ | ------ | --- | ---- | ---- | --- | ---- | ----- | --- | ---- | -------- | ---------- | --- |
 like:
 | The               | dominant     |     | phase |        | is    | represented |               |         | by     | the sporophyte, |     | which |
@@ -3866,43 +3866,43 @@ desiccation and injury by the protective covering of the ovules
 | coat   | ortesta.    |     |      |        |     |       |               |     |     |           |        |      |
 | The    | leaves      | of  | seed | plants |     | are   | megaphyllous. |     |     |           |        |      |
 
-â€¢ The generalized life cycle of seed plants, which have separate
+•  The generalized life cycle of seed plants, which have separate
 | male   | and female   | gametophytes |             | produced | by different | sized |
 | ------ | ------------ | ------------ | ----------- | -------- | ------------ | ----- |
 | spores | is indicated | below        | the Figure. |          |              |       |
 Generalized life cycle of seed plants
 
-Contâ€¦
-â€¢
+Cont...
+• 
 |     | Seed  | plants |             | are | broadly |     | divided |     |              | in to | two. |     |     |     |     |
 | --- | ----- | ------ | ----------- | --- | ------- | --- | ------- | --- | ------------ | ----- | ---- | --- | --- | --- | --- |
-| â€¢   | These | are    | Gymnosperms |     |         |     |         | and | angiosperms. |       |      |     |     |     |     |
-â€¢
+| •    | These | are    | Gymnosperms |     |         |     |         | and | angiosperms. |       |      |     |     |     |     |
+• 
 |     | The      | term |        | gymnosperm |                   |     |     | derived |     |     | from | two      | Greek |     | words |
 | --- | -------- | ---- | ------ | ---------- | ----------------- | --- | --- | ------- | --- | --- | ---- | -------- | ----- | --- | ----- |
 |     | (gymnos- |      | naked, |            | sperma-seed=naked |     |     |         |     |     | seed | plants). |       |     |       |
-â€¢ Plants with seeds that are not enclosed within a fruit- seeds
+•  Plants with seeds that are not enclosed within a fruit- seeds
 |     | are  | produced |     | on   | the  | open |         | surface |     | of     | the | cones | or cups. |     |     |
 | --- | ---- | -------- | --- | ---- | ---- | ---- | ------- | ------- | --- | ------ | --- | ----- | -------- | --- | --- |
-| â€¢   | They | do       | not | form | true |      | flowers |         | and | fruits |     |       |          |     |     |
-â€¢
+| •    | They | do       | not | form | true |      | flowers |         | and | fruits |     |       |          |     |     |
+• 
 |     | They       | are      | needle |     | shaped  |     | leaves. |        |     |           |     |     |              |     |        |
 | --- | ---------- | -------- | ------ | --- | ------- | --- | ------- | ------ | --- | --------- | --- | --- | ------------ | --- | ------ |
-| â€¢   | Have       | vascular |        |     | tissues |     |         | for    |     | transport |     | and | reproductive |     |        |
+| •    | Have       | vascular |        |     | tissues |     |         | for    |     | transport |     | and | reproductive |     |        |
 |     | structures |          | are    |     | found   |     | on      | cones. |     | Seeds     |     | are | found        | in  | female |
 cones.
 
 Introduction to Zoology
 General Characteristics of Invertebrates
-â€¢ are animals without backbones that is a single characteristic in common.
-â€¢ are varying in size, in structural diversity, and in adaptations to different
+•  are animals without backbones that is a single characteristic in common.
+•  are varying in size, in structural diversity, and in adaptations to different
 | modes     | of  | existence. |     |              |     |          |           |     |     |
 | --------- | --- | ---------- | --- | ------------ | --- | -------- | --------- | --- | --- |
-| â€¢ exhibit | all | types      | of  | reproduction |     | and body | symmetry. |     |     |
-â€¢
+| •  exhibit | all | types      | of  | reproduction |     | and body | symmetry. |     |     |
+• 
 | categorized |       | as      | acoelomates, |          |     | pseudocoelomates |     | or coelomates. |     |
 | ----------- | ----- | ------- | ------------ | -------- | --- | ---------------- | --- | -------------- | --- |
-| â€¢ The       | major | phyla   | are          |          |     |                  |     |                |     |
+| •  The       | major | phyla   | are          |          |     |                  |     |                |     |
 |             |       | â–Phylum |              | Porifera |     | (Sponges)        |     |                |     |
 |             |       | â–Phylum |              | Radiata  |     |                  |     |                |     |
 â–Acoelomate
@@ -3917,37 +3917,37 @@ Arthropoda
 | --- | --- | ------- | --- | ------------- | --- | --- | --- | --- | --- |
 
 Phylum Porifera (Sponges).
-â€¢ The word Porifera has been adopted from the Latin porus for
-pore and Ferre to bear, hence sponges are called â€œpore bearing
-animalsâ€
-| â€¢ mostly       | marine;  |         | all aquatic      | in habitat.    |            |         |
+•  The word Porifera has been adopted from the Latin porus for
+pore and Ferre to bear, hence sponges are called "pore bearing
+animals"
+| •  mostly       | marine;  |         | all aquatic      | in habitat.    |            |         |
 | -------------- | -------- | ------- | ---------------- | -------------- | ---------- | ------- |
-| â€¢ Radial       | symmetry |         | or asymmetrical. |                |            |         |
-| â€¢ diploblastic |          | animals | and              | both by sexual | or asexual | reprodu |
-â€¢ All adults sessile and attached to substratum. filter-feeders
-â€¢ Gas exchange: by simple diffusion across the cell membrane.
+| •  Radial       | symmetry |         | or asymmetrical. |                |            |         |
+| •  diploblastic |          | animals | and              | both by sexual | or asexual | reprodu |
+•  All adults sessile and attached to substratum. filter-feeders
+•  Gas exchange: by simple diffusion across the cell membrane.
 | â– Classes of Porifera |                      |     | :                 |                                |     |     |
 | --------------------- | -------------------- | --- | ----------------- | ------------------------------ | --- | --- |
 | 1.                    | Class Calcarea       |     | (calcispongiae),  |                                |     |     |
 | 2.                    | Class Hexactinellida |     |                   | (Hyalospongiae) /Glass sponges |     |     |
 | 3.                    | Class Demospongiae   |     |                   |                                |     |     |
-â€¢
+• 
 
 Cont.
 Phylum Radiata
-â€¢ Most have tentacles, which are extensible projections for food
+•  Most have tentacles, which are extensible projections for food
 capture.
-| â€¢   | Have |     | statocysts |     |     | ,ocelli |     | and | nerve |     | cells; |     | there | is  | no CNS |     |     |
+| •    | Have |     | statocysts |     |     | ,ocelli |     | and | nerve |     | cells; |     | there | is  | no CNS |     |     |
 | --- | ---- | --- | ---------- | --- | --- | ------- | --- | --- | ----- | --- | ------ | --- | ----- | --- | ------ | --- | --- |
-â€¢ Use muscular contraction or ciliary comb plates for locomotion
-| â€¢   | Unique |     |     | features |     | include |     |     |     |     |     |     |     |     |     |     |     |
+•  Use muscular contraction or ciliary comb plates for locomotion
+| •    | Unique |     |     | features |     | include |     |     |     |     |     |     |     |     |     |     |     |
 | --- | ------ | --- | --- | -------- | --- | ------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 âž¢
 |        |            | nematocysts- |            |      |      |         | defense,        |             |      | prey        |            | capture, |               |     | and         | temporary |     |
 | ------ | ---------- | ------------ | ---------- | ---- | ---- | ------- | --------------- | ----------- | ---- | ----------- | ---------- | -------- | ------------- | --- | ----------- | --------- | --- |
 |        |            | anchorage    |            |      | of   | the     |                 | body        | to   | a substrate |            |          | in cnidarian, |     |             |           |     |
 |        | âž¢          | colloblasts  |            |      | and  |         | ciliary         |             | comb | plates      |            | in       | ctenophores.  |     |             |           |     |
-| â€¢      | Cnidaria   |              |            | have |      | two     | basic           |             | body |             | plans.:    |          | polyp         |     | and medussa |           | but |
+| •       | Cnidaria   |              |            | have |      | two     | basic           |             | body |             | plans.:    |          | polyp         |     | and medussa |           | but |
 |        | ctenphores |              |            |      | have | only    |                 | polyp       | plan |             |            |          |               |     |             |           |     |
 | Phylum |            |              | Cnidaria:  |      |      | include |                 |             |      |             |            |          |               |     |             |           |     |
 | 1.     |            | Hydrozoa     |            |      |      | 2.      | Scyphozoa       |             |      |             | 3. Cubozoa |          |               |     | 4.Anthozoa  |           |     |
@@ -3957,115 +3957,115 @@ capture.
 |     |       |             | Flatworms :- |     |     |     | the 1st |     | Bilateral symmetry |     |
 | --- | ----- | ----------- | ------------ | --- | --- | --- | ------- | --- | ------------------ | --- |
 | 1.  | Class | Turbellaria |              |     |     |     |         |     |                    |     |
-â€¢ mostly free-living forms ranging, bottom dwellers in aquatic
+•  mostly free-living forms ranging, bottom dwellers in aquatic
 |     | habitat |            | and | predators |       | and   |     | scavengers. |                  |     |
 | --- | ------- | ---------- | --- | --------- | ----- | ----- | --- | ----------- | ---------------- | --- |
-| â€¢   | Have    | rhabdites, |     |           | flame | cells |     | or          | a protonephridia |     |
+| •    | Have    | rhabdites, |     |           | flame | cells |     | or          | a protonephridia |     |
 | 2.  | Class   | Monogenea  |     |           |       |       |     |             |                  |     |
-â€¢
+• 
 |     | Need | only | one | host |     | in its | life | cycle. |     |     |
 | --- | ---- | ---- | --- | ---- | --- | ------ | ---- | ------ | --- | --- |
-â€¢
+• 
 distinguished from the digenetic trematodes in having a large,
 |     | posterior |           | adhesive |     |     | organ       | called |     | the opisthaptor. |             |
 | --- | --------- | --------- | -------- | --- | --- | ----------- | ------ | --- | ---------------- | ----------- |
 | 3.  | class     | Trematoda |          |     | the | (digenetic) |        |     | flukes.          |             |
-| â€¢   | Many      | species   |          | are | of  | medical     |        | and | economic         | importance! |
-â€¢ All species have at least two hosts, one for transmission and the
+| •    | Many      | species   |          | are | of  | medical     |        | and | economic         | importance! |
+•  All species have at least two hosts, one for transmission and the
 |     | other | for | reproduction. |     |     |     |     |     |     |     |
 | --- | ----- | --- | ------------- | --- | --- | --- | --- | --- | --- | --- |
-â€¢ Have syncytial tegument that does not bear cilia in the adult.
+•  Have syncytial tegument that does not bear cilia in the adult.
 
 | Phylum Nematoda |     | Are pseudocoelomate, Triploblastic and More  |     |     |     |
 | --------------- | --- | -------------------------------------------- | --- | --- | --- |
 diverse
-â€¢ elongated roundworms covered with a flexible, nonliving cuticle.
+•  elongated roundworms covered with a flexible, nonliving cuticle.
 | Phylum    | Annelids | ringlike | constriction |            | of body.        |
 | --------- | -------- | -------- | ------------ | ---------- | --------------- |
-| â€“ Inhabit |          | marine,  | brackish,    | freshwater | and terrestrial |
+| – Inhabit |          | marine,  | brackish,    | freshwater | and terrestrial |
 Include
-â–Class â€“
+â–Class –
 |     |     | Polychaeta | (Tubeworms, Clamworms, and Fanworm) |     |     |
 | --- | --- | ---------- | ----------------------------------- | --- | --- |
 â–Class Hirudinea( e.g. Leech)
 | â–Class Oligochaeta |     |     | (e.g Earthworms)     |     |     |
 | ------------------ | --- | --- | -------------------- | --- | --- |
-| Phylum Arthropoda  |     |     | means â€œjointed footâ€ |     |     |
-â€¢ Most successful of all animals,
-â€¢ Represents ~ 80% of animal kingdom, Has exoskeleton-
-â€¢ Body divided into 3 sections;head,thorax (mid-body region) and
+| Phylum Arthropoda  |     |     | means "jointed foot" |     |     |
+•  Most successful of all animals,
+•  Represents ~ 80% of animal kingdom, Has exoskeleton-
+•  Body divided into 3 sections;head,thorax (mid-body region) and
 abdomen
 
 Subphylum Vertebrates
-| â€¢   | Head      |             | with      | brain  |        | and      |        | skull     |         |             |        |     |        |     |     |     |
+| •    | Head      |             | with      | brain  |        | and      |        | skull     |         |             |        |     |        |     |     |     |
 | --- | --------- | ----------- | --------- | ------ | ------ | -------- | ------ | --------- | ------- | ----------- | ------ | --- | ------ | --- | --- | --- |
-| â€¢   | Vertebral |             |           | column |        |          | â€“      |           |         |             |        |     |        |     |     |     |
-| â€¢   | Neural    |             | crest     |        |        |          |        |           |         |             |        |     |        |     |     |     |
-| â€¢   | Highly    |             | developed |        |        | internal |        |           | organs: |             |        |     |        |     |     |     |
-|     | â€“         | unique      |           | kidney |        |          | and    | excretory |         |             | system |     |        |     |     |     |
-|     | â€“         | endocrine   |           |        | glands |          |        |           |         |             |        |     |        |     |     |     |
-|     | â€“         | specialized |           |        | heart; |          | closed |           |         | circulatory |        |     | system |     |     |     |
-â€¢
+| •    | Vertebral |             |           | column |        |          | –      |           |         |             |        |     |        |     |     |     |
+| •    | Neural    |             | crest     |        |        |          |        |           |         |             |        |     |        |     |     |     |
+| •    | Highly    |             | developed |        |        | internal |        |           | organs: |             |        |     |        |     |     |     |
+|     | –         | unique      |           | kidney |        |          | and    | excretory |         |             | system |     |        |     |     |     |
+|     | –         | endocrine   |           |        | glands |          |        |           |         |             |        |     |        |     |     |     |
+|     | –         | specialized |           |        | heart; |          | closed |           |         | circulatory |        |     | system |     |     |     |
+• 
 |     | Endoskeleton |     |     |     | made |     | of  | cartilage |     |     | and/or |     | bone: |     |     |     |
 | --- | ------------ | --- | --- | --- | ---- | --- | --- | --------- | --- | --- | ------ | --- | ----- | --- | --- | --- |
-â€“
+–
 |     |     |         | cartilage |     | and    |     | bone     |     | are |     | tissues |     | with | compacted |       | collagen  |
 | --- | --- | ------- | --------- | --- | ------ | --- | -------- | --- | --- | --- | ------- | --- | ---- | --------- | ----- | --------- |
 |     |     | protein |           |     | fibers |     | collagen |     |     |     | matrix  |     | laid | down      | first | (provides |
 flexibility)
-|     | â€“   | for       | bone, |        |     | calcium |      |        | phosphate |     |        | is  | then | deposited   |     | (provides |
+|     | –   | for       | bone, |        |     | calcium |      |        | phosphate |     |        | is  | then | deposited   |     | (provides |
 | --- | --- | --------- | ----- | ------ | --- | ------- | ---- | ------ | --------- | --- | ------ | --- | ---- | ----------- | --- | --------- |
-|     |     | rigidity) |       | better |     |         | than | chitin |           | â€“   | strong |     | but  | not brittle |     |           |
+|     |     | rigidity) |       | better |     |         | than | chitin |           | –   | strong |     | but  | not brittle |     |           |
 
 Classification of Subphylum Vertebrates
 divided into two super classes and 9 classes.
 | 1. Superclass Agnatha |     |          |        |     |           | (jawless fish) |              |       |     |      |           |     |         |        |
 | --------------------- | --- | -------- | ------ | --- | --------- | -------------- | ------------ | ----- | --- | ---- | --------- | --- | ------- | ------ |
-|                       | â€“   | Class    | Myxini |     | (clade)   |                | â€“ hagfishes: |       |     |      |           |     |         |        |
-|                       |     | â€¢ alive  |        | in  | temperate |                | oceans       |       |     |      |           |     |         |        |
-|                       |     | â€¢ cannot |        |     | regulate  |                | body         | salts |     |      |           |     |         |        |
-|                       |     | â€¢ slime  |        |     | glands,   | no             | vertebrae    |       |     | (so, | craniates |     | but not | really |
+|                       | –   | Class    | Myxini |     | (clade)   |                | – hagfishes: |       |     |      |           |     |         |        |
+|                       |     | •  alive  |        | in  | temperate |                | oceans       |       |     |      |           |     |         |        |
+|                       |     | •  cannot |        |     | regulate  |                | body         | salts |     |      |           |     |         |        |
+|                       |     | •  slime  |        |     | glands,   | no             | vertebrae    |       |     | (so, | craniates |     | but not | really |
 vertebrates)
-|     | â€“     | Class | Cephalaspidomorphi: |     |             |     |     |               | Lampreys |     |         |     |     |     |
+|     | –     | Class | Cephalaspidomorphi: |     |             |     |     |               | Lampreys |     |         |     |     |     |
 | --- | ----- | ----- | ------------------- | --- | ----------- | --- | --- | ------------- | -------- | --- | ------- | --- | --- | --- |
-| â€¢   | Occur | in    | both                |     | marine      |     | and | fresh         | waters   |     |         |     |     |     |
-| â€¢   | About | half  |                     | of  | all species |     | are | ectoparasites |          |     | of fish |     |     |     |
-â€¢ produces an anticoagulant as it feeds to maintain blood flow.
-| â€¢   | Separate               |     |     | sexes |      | with |      | long  |     | larval     | stage |     | and | radical |
+| •    | Occur | in    | both                |     | marine      |     | and | fresh         | waters   |     |         |     |     |     |
+| •    | About | half  |                     | of  | all species |     | are | ectoparasites |          |     | of fish |     |     |     |
+•  produces an anticoagulant as it feeds to maintain blood flow.
+| •    | Separate               |     |     | sexes |      | with |      | long  |     | larval     | stage |     | and | radical |
 | --- | ---------------------- | --- | --- | ----- | ---- | ---- | ---- | ----- | --- | ---------- | ----- | --- | --- | ------- |
 |     | metamorphosis.Lampreys |     |     |       |      |      |      | spawn |     | in streams |       | and | the | larvae  |
 |     | (ammocoetes)           |     |     |       | live | and  | grow |       |     |            |       |     |     |         |
 
-Contâ€¦..
+Cont.....
 Superclass Gnathostomata (jawed vertebrates)
 âœ“ Chondrichthyes: cartilaginous fishes, such as sharks, skates, rays
 and ratfish.
-â€“ the first to evolve jaws (derived from first pair of gills
+– the first to evolve jaws (derived from first pair of gills
 âœ“ bony fish
-â€¢ includes the vast majority of freshwater and marine fish and fish
+•  includes the vast majority of freshwater and marine fish and fish
 retain a bony skeleton
-â€¢ Swim bladder
-â€¢ Lateral line system
-â€¢ Operculum or gill cover allows greater diversity in food capture
+•  Swim bladder
+•  Lateral line system
+•  Operculum or gill cover allows greater diversity in food capture
 and preparation
 
-â– Class Amphibia â€“ frogs, salamanders, caecilians
-â€¢ are cold blooded animal with moist, hairless skin through which
+â– Class Amphibia – frogs, salamanders, caecilians
+•  are cold blooded animal with moist, hairless skin through which
 water can pass in and out.
-â€¢ Amphibians were the first animals with backbone to adapt to life
+•  Amphibians were the first animals with backbone to adapt to life
 on land. They are the ancestors of reptiles, which in turn gave
 rise to mammals and birds.
 Class Reptile
-â€¢ live in a wide range of habitats, including forests, swamps,
+•  live in a wide range of habitats, including forests, swamps,
 grasslands, deserts, oceans, and mountains.
-â€¢ must regulate their body temperature by behavior, either by
+•  must regulate their body temperature by behavior, either by
 basking in the sun to keep warm
-â€¢ Lay shelled egg and the first able to reproduce on land
+•  Lay shelled egg and the first able to reproduce on land
 
 âœ“ Birds (Class Aves)
-â€¢ are the direct descendents of theropod type dinosaurs, are
+•  are the direct descendents of theropod type dinosaurs, are
 winged, bipedal,Endothermic and egg-laying, vertebrate animals
-â€¢ The major characteristics of this class are adaptations for flight,
+•  The major characteristics of this class are adaptations for flight,
 |     | including |         | appendages |       |     |      | modified |     |      | as wings, |     | feathers |     | and |     | modern |     |
 | --- | --------- | ------- | ---------- | ----- | --- | ---- | -------- | --- | ---- | --------- | --- | -------- | --- | --- | --- | ------ | --- |
 |     | birds     | possess |            | horny |     | bill | and      |     | lack | teeth.    |     |          |     |     |     |        |     |
@@ -4088,121 +4088,121 @@ Sciences
 Ogato
 
 10. Applications of Biological Sciences
-| â€¢   | Biology      | has |     | several           |     | applications |          |          |               | in           | various |     | areas        | such |
+| •    | Biology      | has |     | several           |     | applications |          |          |               | in           | various |     | areas        | such |
 | --- | ------------ | --- | --- | ----------------- | --- | ------------ | -------- | -------- | ------------- | ------------ | ------- | --- | ------------ | ---- |
 |     | as in :      |     |     |                   |     |              |          |          |               |              |         |     |              |      |
-|     | â€“ Medicine   |     |     | and other         |     | health       |          | sciences |               |              |         |     |              |      |
-|     | â€“ Technology |     |     | (bioengineering)= |     |              |          |          | Environmental |              |         |     | engineering, |      |
+|     | – Medicine   |     |     | and other         |     | health       |          | sciences |               |              |         |     |              |      |
+|     | – Technology |     |     | (bioengineering)= |     |              |          |          | Environmental |              |         |     | engineering, |      |
 |     | ecological   |     |     | engineering,      |     |              | chemical |          |               | engineering, |         |     | etc.         |      |
-â€“
+–
 |     | Agriculture-       |            |      | tissue |          | culture,             |     |     | animal           |     | breeding, |                 | transgenic |     |
 | --- | ------------------ | ---------- | ---- | ------ | -------- | -------------------- | --- | --- | ---------------- | --- | --------- | --------------- | ---------- | --- |
 |     | animals,           |            | etc. |        |          |                      |     |     |                  |     |           |                 |            |     |
-|     | â€“ Industries-Food, |            |      |        | brewery, |                      |     |     | pharmaceuticals, |     |           |                 | tannery    | and |
+|     | – Industries-Food, |            |      |        | brewery, |                      |     |     | pharmaceuticals, |     |           |                 | tannery    | and |
 |     | textile,           | etc.       |      |        |          |                      |     |     |                  |     |           |                 |            |     |
-|     | â€“ Waste            | treatments |      |        | and      | recycling-Bioenergy, |     |     |                  |     |           | bioremediation, |            |     |
+|     | – Waste            | treatments |      |        | and      | recycling-Bioenergy, |     |     |                  |     |           | bioremediation, |            |     |
 etc.
-|     | â€“ Forensic       |     | Science- |          |     | inspect |       | crime |            | using |     | blood, | saliva,     | hair |
+|     | – Forensic       |     | Science- |          |     | inspect |       | crime |            | using |     | blood, | saliva,     | hair |
 | --- | ---------------- | --- | -------- | -------- | --- | ------- | ----- | ----- | ---------- | ----- | --- | ------ | ----------- | ---- |
 |     | and fingerprints |     |          |          |     |         |       |       |            |       |     |        |             |      |
-|     | â€“ Biological     |     |          | warfare- |     |         | using |       | biological |       |     | toxins | /infectious |      |
+|     | – Biological     |     |          | warfare- |     |         | using |       | biological |       |     | toxins | /infectious |      |
 agents
 
 10.1. Application of Biology in medicine and
 other health sciences
-| â€¢   | Biology | have | several | application |     | in  | improving |     |     | the public |     |
+| •    | Biology | have | several | application |     | in  | improving |     |     | the public |     |
 | --- | ------- | ---- | ------- | ----------- | --- | --- | --------- | --- | --- | ---------- | --- |
 health
-|     | â€“ Rapid      |           | diagnosis      | of              | disease     |           | (PCR, |            | Recombinant   |     |     |
+|     | – Rapid      |           | diagnosis      | of              | disease     |           | (PCR, |            | Recombinant   |     |     |
 | --- | ------------ | --------- | -------------- | --------------- | ----------- | --------- | ----- | ---------- | ------------- | --- | --- |
 |     | antigens,    |           | Monoclonal     |                 | antibodies, |           |       | Test       | kits)         |     |     |
-|     | â€“ Production |           | of recombinant |                 |             | vaccine   |       |            |               |     |     |
-|     | â€“ The        | knowledge |                | of biology      |             | helps     |       | in         | understanding |     |     |
+|     | – Production |           | of recombinant |                 |             | vaccine   |       |            |               |     |     |
+|     | – The        | knowledge |                | of biology      |             | helps     |       | in         | understanding |     |     |
 |     | the          | mechanism |                | of transplanted |             |           | organ |            | rejection     |     | and |
 |     | develop      |           | strategies     | to              | minimize    |           | the   | rejection. |               |     |     |
-|     | â€“ Medicinal  |           | plant          | for disease     |             | treatment |       |            |               |     |     |
+|     | – Medicinal  |           | plant          | for disease     |             | treatment |       |            |               |     |     |
 
 10.2. The application of Biology in technology
-| â€¢ Bio-engineering: |           |              |        | is the | application    |           | of the | principles |         | of  |
+| •  Bio-engineering: |           |              |        | is the | application    |           | of the | principles |         | of  |
 | ------------------ | --------- | ------------ | ------ | ------ | -------------- | --------- | ------ | ---------- | ------- | --- |
 | biology            |           | and          | the    | tools  | of engineering |           | to     | create     | usable, |     |
 | tangible,          |           | economically |        |        | viable         | products. |        |            |         |     |
-| â€“                  | It is     | used         | in the | design | of             |           |        |            |         |     |
-|                    | â€¢ Medical |              | device |        |                |           |        |            |         |     |
-â€¢
+| –                  | It is     | used         | in the | design | of             |           |        |            |         |     |
+|                    | •  Medical |              | device |        |                |           |        |            |         |     |
+• 
 |     | Diagnostic      |     | equipment |              |     |             |     |     |     |     |
 | --- | --------------- | --- | --------- | ------------ | --- | ----------- | --- | --- | --- | --- |
-|     | â€¢ Biocompatible |     |           | material     |     |             |     |     |     |     |
-|     | â€¢ Renewable     |     | bioenergy |              |     |             |     |     |     |     |
-|     | â€¢ Ecological    |     | and       | Agricultural |     | engineering |     |     |     |     |
+|     | •  Biocompatible |     |           | material     |     |             |     |     |     |     |
+|     | •  Renewable     |     | bioenergy |              |     |             |     |     |     |     |
+|     | •  Ecological    |     | and       | Agricultural |     | engineering |     |     |     |     |
 
 10.3. Application of Biology in agriculture
-| â€¢   | Biological |     |     | knowledge's |     |     | used | in  | advancement |     |     | of  |
+| •    | Biological |     |     | knowledge's |     |     | used | in  | advancement |     |     | of  |
 | --- | ---------- | --- | --- | ----------- | --- | --- | ---- | --- | ----------- | --- | --- | --- |
 Agriculture
-|     | â€“ The    | use     | organic |     | fertilizer, |     | bio-fertilizers, |           |             | crop | rotation |     |
+|     | – The    | use     | organic |     | fertilizer, |     | bio-fertilizers, |           |             | crop | rotation |     |
 | --- | -------- | ------- | ------- | --- | ----------- | --- | ---------------- | --------- | ----------- | ---- | -------- | --- |
 |     | with     | legumes |         | for | improving   |     | soil             | fertility |             |      |          |     |
-|     | â€“ Tissue |         | culture |     | techniques  |     | for              | quick     | propagation |      |          | of  |
+|     | – Tissue |         | culture |     | techniques  |     | for              | quick     | propagation |      |          | of  |
 plants
-|     | â€“ Genetic  |     | modification |     |          | (Transgenic |     |     | methodology) |     |     | for |
+|     | – Genetic  |     | modification |     |          | (Transgenic |     |     | methodology) |     |     | for |
 | --- | ---------- | --- | ------------ | --- | -------- | ----------- | --- | --- | ------------ | --- | --- | --- |
 |     | production |     |              | of  | improved | strains     |     | of  | livestock    |     |     |     |
 
-â€¦Biology in Agriculture
-| â€“ Bio-control |              | method  | to       | combat    | for disease | and pest |
+...Biology in Agriculture
+| – Bio-control |              | method  | to       | combat    | for disease | and pest |
 | ------------- | ------------ | ------- | -------- | --------- | ----------- | -------- |
-| â€¢ By          | artificially | raising | their    | natural   | enemies     |          |
-| â€¢ By          | development  |         | of plant | varieties | resistant   | to pests |
-â€“
+| •  By          | artificially | raising | their    | natural   | enemies     |          |
+| •  By          | development  |         | of plant | varieties | resistant   | to pests |
+–
 Selective breeding to improve plants and animal
 traits
-â€“ The knowledge of biology also helps to understand
+– The knowledge of biology also helps to understand
 how climate change affect crops
 
 10.4. Application of Biology in industries
-| â€¢   | Biology    |             |               | can        |                     | be         | applied          | in:          |           |       |               |                   |          |     |          |
+| •    | Biology    |             |               | can        |                     | be         | applied          | in:          |           |       |               |                   |          |     |          |
 | --- | ---------- | ----------- | ------------- | ---------- | ------------------- | ---------- | ---------------- | ------------ | --------- | ----- | ------------- | ----------------- | -------- | --- | -------- |
-|     | â€“          | Food,       |               | brewery,   |                     |            | pharmaceuticals, |              |           |       |               | tannery           |          | and | textile, |
+|     | –          | Food,       |               | brewery,   |                     |            | pharmaceuticals, |              |           |       |               | tannery           |          | and | textile, |
 |     |            | single      |               | cell       | production,         |            |                  | preservation |           |       |               |                   |          |     |          |
-| â€¢   | Industrial |             |               |            | biotechnology/white |            |                  |              |           |       |               | biotechnology:    |          |     |          |
-|     | â€“          | Is          | the           | use        | and                 |            | application      |              | of        |       | biotechnology |                   |          |     | for the  |
+| •    | Industrial |             |               |            | biotechnology/white |            |                  |              |           |       |               | biotechnology:    |          |     |          |
+|     | –          | Is          | the           | use        | and                 |            | application      |              | of        |       | biotechnology |                   |          |     | for the  |
 |     |            | sustainable |               |            |                     | production |                  |              | and       |       | processing    |                   |          |     | of bio-  |
 |     |            | products,   |               |            | using               |            | living           | cells        | and/or    |       |               | their             | enzymes. |     |          |
-|     | â€“          | The         | bio-products  |            |                     |            | are:             |              |           |       |               |                   |          |     |          |
-|     |            | â€¢           | Food          | substances |                     |            | and              | chemicals    |           | (e.g. |               | pharmaceuticals), |          |     |          |
-|     |            | â€¢           | Bio-materials |            |                     |            | and fuels        | from         | renewable |       |               | sources           |          |     |          |
+|     | –          | The         | bio-products  |            |                     |            | are:             |              |           |       |               |                   |          |     |          |
+|     |            | •            | Food          | substances |                     |            | and              | chemicals    |           | (e.g. |               | pharmaceuticals), |          |     |          |
+|     |            | •            | Bio-materials |            |                     |            | and fuels        | from         | renewable |       |               | sources           |          |     |          |
 
-â€¦ Biology in industries
-| â€¢   | Microorganisms |     |             |     |     | and | their |     | enzymes |     | are | utilized |     |       | for |
+... Biology in industries
+| •    | Microorganisms |     |             |     |     | and | their |     | enzymes |     | are | utilized |     |       | for |
 | --- | -------------- | --- | ----------- | --- | --- | --- | ----- | --- | ------- | --- | --- | -------- | --- | ----- | --- |
 |     | the production |     |             |     | of: |     |       |     |         |     |     |          |     |       |     |
-|     | â€“ Food         |     | supplements |     |     |     | such  | as  | Vitamin |     | B   | , many   |     | other |     |
+|     | – Food         |     | supplements |     |     |     | such  | as  | Vitamin |     | B   | , many   |     | other |     |
 2
 |     | pharmaceuticals |     |     |      |     | such          | as  | drugs | and   | vaccines, |     |     |     |     |     |
 | --- | --------------- | --- | --- | ---- | --- | ------------- | --- | ----- | ----- | --------- | --- | --- | --- | --- | --- |
-|     | â€“ Bioplastics   |     |     | such |     | as polylactic |     |       | acid, |           |     |     |     |     |     |
-â€“
+|     | – Bioplastics   |     |     | such |     | as polylactic |     |       | acid, |           |     |     |     |     |     |
+–
 |     | Energy        |     | carriers     |      | such    |           | as biogas |     | and | bioethanol, |     |     |     |     |     |
 | --- | ------------- | --- | ------------ | ---- | ------- | --------- | --------- | --- | --- | ----------- | --- | --- | --- | --- | --- |
-|     | â€“ Detergents, |     |              | pulp |         | and       | paper,    |     |     |             |     |     |     |     |     |
-|     | â€“ Quality     |     | textiles     |      | fibers, |           |           |     |     |             |     |     |     |     |     |
-|     | â€“ Many        |     | agricultural |      |         | products. |           |     |     |             |     |     |     |     |     |
-â€¢
+|     | – Detergents, |     |              | pulp |         | and       | paper,    |     |     |             |     |     |     |     |     |
+|     | – Quality     |     | textiles     |      | fibers, |           |           |     |     |             |     |     |     |     |     |
+|     | – Many        |     | agricultural |      |         | products. |           |     |     |             |     |     |     |     |     |
+• 
 |     | Single          | cell |     | proteins |     | can       | be  | produced |            | from |     | wide   | range |       | of  |
 | --- | --------------- | ---- | --- | -------- | --- | --------- | --- | -------- | ---------- | ---- | --- | ------ | ----- | ----- | --- |
 |     | microorganisms: |      |     |          |     | mushroom, |     |          | spirulina, |      |     | yeast, |       | green |     |
 algae
-|     | â€“ Promising |     |     | area | in  | alleviating |     |     | food | security |     |     |     |     |     |
+|     | – Promising |     |     | area | in  | alleviating |     |     | food | security |     |     |     |     |     |
 | --- | ----------- | --- | --- | ---- | --- | ----------- | --- | --- | ---- | -------- | --- | --- | --- | --- | --- |
 
-â€¦ Biology in industries
-| â€¢ Applied |           |     | for       | food   | preservation |          |            |          |     |         |     |     |
+... Biology in industries
+| •  Applied |           |     | for       | food   | preservation |          |            |          |     |         |     |     |
 | --------- | --------- | --- | --------- | ------ | ------------ | -------- | ---------- | -------- | --- | ------- | --- | --- |
-| â€“         | The       |     | processes |        | to           | stop     | food       | spoilage |     |         | due | to  |
+| –         | The       |     | processes |        | to           | stop     | food       | spoilage |     |         | due | to  |
 |           | microbial |     |           | action | by           | applying | biological |          |     | methods |     | of  |
 preservation
-| â€“   | By         | adding |        | cultures | of  | innocuous       |     | microorganisms |               |     |      | of  |
+| –   | By         | adding |        | cultures | of  | innocuous       |     | microorganisms |               |     |      | of  |
 | --- | ---------- | ------ | ------ | -------- | --- | --------------- | --- | -------------- | ------------- | --- | ---- | --- |
 |     | high       |        | purity | to       | the | food.           | The | cultures       |               |     | have | an  |
 |     | inhibitory |        |        | effect   | on  | the undesirable |     |                | decomposition |     |      |     |
@@ -4210,45 +4210,45 @@ microorganisms
 
 10.5 Application of biology in waste
 treatments and recycling
-â€¢ Biotechnological processes are used for wastewater
+•  Biotechnological processes are used for wastewater
 treatment and reuse: bioenergy, bioremediation, water
 treatment, biomining
-â€¢ Extensively used waste treatment technologies include:
-â€“ Environmental engineering,
-â€“ Activated sludge process,
-â€“ Trickling filters and biotrickling filters,
-â€“ Oxidation ponds and anaerobic treatment,
-â€“ Composting units and biogas reactors
-â€¢ Bio-mining: chemical mining is substituted by
+•  Extensively used waste treatment technologies include:
+– Environmental engineering,
+– Activated sludge process,
+– Trickling filters and biotrickling filters,
+– Oxidation ponds and anaerobic treatment,
+– Composting units and biogas reactors
+•  Bio-mining: chemical mining is substituted by
 microorganisms that can efficiently extract
 minerals from natural ores.
 
 10.6. Application of Biology in forensic
 Science
-| â€¢ Inspecting |           |      | crime |        | scenes |             | for | potential |          |     | sources |           |     | of  |
+| •  Inspecting |           |      | crime |        | scenes |             | for | potential |          |     | sources |           |     | of  |
 | ------------ | --------- | ---- | ----- | ------ | ------ | ----------- | --- | --------- | -------- | --- | ------- | --------- | --- | --- |
 | evidence     |           | from |       | blood, |        | saliva,     |     | and       | hair,    | by  |         | analyzing |     |     |
 | the          | specimens |      |       | in     | a      | laboratory, |     |           | focusing |     |         | on        | DNA |     |
 analysis
-| â€¢ Fingerprints |     |       | are |        | used | to           | investigate |      |      | crime   |     | and    |      | the |
+| •  Fingerprints |     |       | are |        | used | to           | investigate |      |      | crime   |     | and    |      | the |
 | -------------- | --- | ----- | --- | ------ | ---- | ------------ | ----------- | ---- | ---- | ------- | --- | ------ | ---- | --- |
 | paternity      |     | case  |     | of     | a    | child.       |             | This | is   | because |     |        | each |     |
 | individual     |     | has   |     | unique |      | fingerprints |             |      | that | do      | not | change |      |     |
 | throughout     |     | life. |     |        |      |              |             |      |      |         |     |        |      |     |
 
 10.7. Biological warfare
-| â€¢   | Biological |     |     |     | warfare |     |     | (germ |     | warfare) |     |     |     |     |     |     |     |     |
+| •    | Biological |     |     |     | warfare |     |     | (germ |     | warfare) |     |     |     |     |     |     |     |     |
 | --- | ---------- | --- | --- | --- | ------- | --- | --- | ----- | --- | -------- | --- | --- | --- | --- | --- | --- | --- | --- |
-â€“ Is the use of biological toxins or infectious agents such as
+– Is the use of biological toxins or infectious agents such as
 |     |              | bacteria,      |     |           | viruses, |         |           | and       | fungi    |         | with       |               | the       | intent  |                 | to  | kill     | or  |
 | --- | ------------ | -------------- | --- | --------- | -------- | ------- | --------- | --------- | -------- | ------- | ---------- | ------------- | --------- | ------- | --------------- | --- | -------- | --- |
 |     |              | incapacitate   |     |           |          | humans, |           | animals   |          |         | or         | plants        |           | as an   | act             | of  | war.     |     |
-| â€¢   | Biological   |                |     |           | weapons  |         |           | (agents)  |          | include |            | microorganism |           |         |                 |     | or toxin |     |
+| •    | Biological   |                |     |           | weapons  |         |           | (agents)  |          | include |            | microorganism |           |         |                 |     | or toxin |     |
 |     | found        |                | in  | nature    |          | that    | can       | be        | used     |         | to kill    |               | or injure |         | people:         |     |          |     |
-|     | â€“            | Microorganism: |     |           |          |         | bacteria, |           | viruses, |         |            | or            | fungi     |         |                 |     |          |     |
-|     | â€“            | Toxin:         |     | poisonous |          |         |           | compounds |          |         | produced   |               |           | by      | microorganisms. |     |          |     |
-| â€¢   | Bioterrorism |                |     |           |          | is the  |           | use of    | these    |         | biological |               |           | weapons |                 |     |          |     |
-| â€¢   | Biological   |                |     |           |          | agents  |           | may       |          | be      |            | used          |           | for     | an              |     | isolated |     |
+|     | –            | Microorganism: |     |           |          |         | bacteria, |           | viruses, |         |            | or            | fungi     |         |                 |     |          |     |
+|     | –            | Toxin:         |     | poisonous |          |         |           | compounds |          |         | produced   |               |           | by      | microorganisms. |     |          |     |
+| •    | Bioterrorism |                |     |           |          | is the  |           | use of    | these    |         | biological |               |           | weapons |                 |     |          |     |
+| •    | Biological   |                |     |           |          | agents  |           | may       |          | be      |            | used          |           | for     | an              |     | isolated |     |
 assassination, as well as to cause incapacitation or death to
 thousands
 
