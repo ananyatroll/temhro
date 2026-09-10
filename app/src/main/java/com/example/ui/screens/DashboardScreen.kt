@@ -450,7 +450,6 @@ fun DashboardScreen(viewModel: StudyViewModel) {
                         "freshman_soc_english_1",
                         "freshman_soc_global_trends",
                         "freshman_soc_economics",
-                        "freshman_soc_success",
                         "freshman_soc_emerging_tech",
                         "freshman_soc_entrepreneurship"
                     )

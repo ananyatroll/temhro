@@ -255,7 +255,6 @@ class StudyRepository(
                 StudySubject("freshman_soc_english_1", "Communicative English Language Skills I – FLEn 1111", "english", "freshman_social"),
                 StudySubject("freshman_soc_global_trends", "Global Trends – GlTr 1012", "geography", "freshman_social"),
                 StudySubject("freshman_soc_economics", "Economics – Econ 1011", "economics", "freshman_social"),
-                StudySubject("freshman_soc_success", "Students Success Suite – ELCE 101", "reading", "freshman_social"),
                 StudySubject("freshman_soc_emerging_tech", "Introduction to Emerging Technologies – EmTe 1012", "computer", "freshman_social"),
                 StudySubject("freshman_soc_entrepreneurship", "Entrepreneurship – MGMT 1012", "business", "freshman_social"),
 
