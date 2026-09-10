@@ -174,7 +174,7 @@ class StudyRepository(private val dao: EducationDao) : DataRepository {
         Log.d(TAG, "seedDatabaseIfEmpty: Verification check -> subjects: $subjectsCount, notes: $notesCount, questions: $questionsCount, flashcards: $flashcardsCount")
 
         // Fast path: If all data is already populated and verified, return immediately without instantiating large lists
-        if (subjectsCount >= 75 && notesCount >= 750 && questionsCount >= 796 && flashcardsCount >= 17000) {
+        if (subjectsCount >= 75 && notesCount >= 400 && questionsCount >= 796 && flashcardsCount >= 17000) {
             val elapsed = System.currentTimeMillis() - startTime
             Log.d(TAG, "seedDatabaseIfEmpty: Database verified in ${elapsed}ms. DB is fully populated with subjects, notes, questions, and flashcards.")
             return@withContext
@@ -284,7 +284,7 @@ class StudyRepository(private val dao: EducationDao) : DataRepository {
         }
 
         // 2. Seed Notes if needed
-        if (notesCount < 750) {
+        if (notesCount < 400) {
             Log.d(TAG, "seedDatabaseIfEmpty: Notes count low ($notesCount), seeding comprehensive notes...")
             val notesList = listOf(
                 // Biology
