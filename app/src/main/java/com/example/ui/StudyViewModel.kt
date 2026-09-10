@@ -18,7 +18,7 @@ import kotlinx.coroutines.withTimeoutOrNull
 class StudyViewModel(application: Application) : AndroidViewModel(application) {
 
     private val database = AppDatabase.getDatabase(application)
-    private val repository: DataRepository = StudyRepository(database.educationDao())
+    private val repository: DataRepository = StudyRepository(database.educationDao(), application)
     val studentToolsRepo = StudentToolsRepository(database.studentToolsDao())
     private val sharedPrefs = application.getSharedPreferences("offline_study_local_cache", Context.MODE_PRIVATE)
 
@@ -450,8 +450,14 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     val activeNotes = combine(rawNotes, selectedGradeFilter) { notesList, grade ->
-        val filtered = if (grade == "All") notesList
-        else notesList.filter { it.gradeLevel.equals(grade, ignoreCase = true) || it.gradeLevel == "General" }
+        val hasGrades = notesList.any { it.gradeLevel.startsWith("Grade", ignoreCase = true) }
+        val filtered = if (!hasGrades || grade == "All") notesList
+        else notesList.filter { 
+            it.gradeLevel.equals(grade, ignoreCase = true) || 
+            it.gradeLevel == "General" || 
+            it.gradeLevel == "Freshman" || 
+            it.gradeLevel.isBlank() 
+        }
         filtered.sortedWith(
             compareBy<SubjectNote> { note ->
                 val uMatch = Regex("""(?:Unit|Chapter)\s*(\d+)""", RegexOption.IGNORE_CASE).find(note.unit)
@@ -966,6 +972,9 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
             paywallPackageIdForUpgrade.value = if (sub.packageId.startsWith("euee")) "euee" else sub.packageId
             showFreeTrialPaywall.value = true
             return
+        }
+        if (sub.packageId.startsWith("freshman") || sub.id.startsWith("freshman_") || !sub.packageId.startsWith("euee")) {
+            selectedGradeFilter.value = "All"
         }
         activeSubject.value = sub
         showStudyOptionsModal.value = false

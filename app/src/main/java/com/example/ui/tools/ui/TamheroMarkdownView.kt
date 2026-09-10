@@ -18,6 +18,9 @@ import androidx.compose.ui.text.*
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.ui.theme.*
@@ -30,6 +33,7 @@ sealed interface MarkdownBlock {
     data class Quote(val text: String) : MarkdownBlock
     data class CodeBlock(val language: String, val code: String) : MarkdownBlock
     data class ExamTip(val text: String) : MarkdownBlock
+    data class Table(val headers: List<String>, val rows: List<List<String>>) : MarkdownBlock
     object Divider : MarkdownBlock
 }
 
@@ -255,6 +259,69 @@ fun TamheroMarkdownView(
                         modifier = Modifier.padding(vertical = 4.dp)
                     )
                 }
+
+                is MarkdownBlock.Table -> {
+                    Surface(
+                        shape = RoundedCornerShape(8.dp),
+                        color = if (isDark) Color(0xFF1E293B).copy(alpha = 0.6f) else Color(0xFFF8FAFC),
+                        border = BorderStroke(1.dp, if (isDark) Color(0xFF334155) else Color(0xFFE2E8F0)),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 6.dp)
+                    ) {
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .horizontalScroll(rememberScrollState())
+                        ) {
+                            if (block.headers.isNotEmpty()) {
+                                Row(
+                                    modifier = Modifier
+                                        .background(if (isDark) Color(0xFF0F172A) else Color(0xFFF1F5F9))
+                                        .padding(horizontal = 12.dp, vertical = 8.dp)
+                                ) {
+                                    block.headers.forEach { header ->
+                                        Text(
+                                            text = parseMarkdownInline(header, accentColor, accentColor, isDark),
+                                            fontWeight = FontWeight.Bold,
+                                            fontSize = 12.sp,
+                                            color = if (isDark) EmeraldLight else EmeraldDark,
+                                            modifier = Modifier
+                                                .widthIn(min = 90.dp)
+                                                .padding(horizontal = 4.dp)
+                                        )
+                                    }
+                                }
+                                HorizontalDivider(thickness = 1.dp, color = if (isDark) Color(0xFF334155) else Color(0xFFE2E8F0))
+                            }
+                            block.rows.forEachIndexed { rIdx, row ->
+                                val rowBg = if (rIdx % 2 == 1) {
+                                    if (isDark) Color(0xFF0F172A).copy(alpha = 0.3f) else Color(0xFFF8FAFC)
+                                } else Color.Transparent
+                                Row(
+                                    modifier = Modifier
+                                        .background(rowBg)
+                                        .padding(horizontal = 12.dp, vertical = 6.dp)
+                                ) {
+                                    row.forEach { cell ->
+                                        Text(
+                                            text = parseMarkdownInline(cell, baseColor, accentColor, isDark),
+                                            fontSize = 12.sp,
+                                            lineHeight = 16.sp,
+                                            color = baseColor,
+                                            modifier = Modifier
+                                                .widthIn(min = 90.dp)
+                                                .padding(horizontal = 4.dp)
+                                        )
+                                    }
+                                }
+                                if (rIdx < block.rows.size - 1) {
+                                    HorizontalDivider(thickness = 0.5.dp, color = if (isDark) Color(0xFF334155).copy(alpha = 0.5f) else Color(0xFFE2E8F0))
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -345,7 +412,29 @@ fun parseMarkdownBlocks(rawText: String): List<MarkdownBlock> {
             continue
         }
 
-        // 8. Normal Paragraph
+        // 8. Markdown Table: starts with '|' and contains '|'
+        if (trimmed.startsWith("|") && trimmed.contains("|")) {
+            val tableLines = mutableListOf<String>()
+            while (i < total && lines[i].trim().startsWith("|") && lines[i].trim().contains("|")) {
+                tableLines.add(lines[i].trim())
+                i++
+            }
+            if (tableLines.isNotEmpty()) {
+                val headers = tableLines[0].split("|").map { it.trim() }.filter { it.isNotEmpty() }
+                val rows = mutableListOf<List<String>>()
+                val dataStartIndex = if (tableLines.size > 1 && tableLines[1].contains("---")) 2 else 1
+                for (r in dataStartIndex until tableLines.size) {
+                    val cells = tableLines[r].split("|").map { it.trim() }.filter { it.isNotEmpty() }
+                    if (cells.isNotEmpty() && !tableLines[r].contains("---")) {
+                        rows.add(cells)
+                    }
+                }
+                blocks.add(MarkdownBlock.Table(headers, rows))
+                continue
+            }
+        }
+
+        // 9. Normal Paragraph
         blocks.add(MarkdownBlock.Paragraph(trimmed))
         i++
     }

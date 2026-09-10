@@ -5,17 +5,89 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.*
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-                import com.example.ads.AdManager
+import com.example.ads.AdConfig
+import com.example.ads.AdManager
+import com.example.ads.TinatBannerAd
+import com.example.ui.StudyViewModel
+import com.example.ui.components.*
+import com.example.ui.screens.*
+import com.example.ui.theme.EmeraldPrimary
+import com.example.ui.theme.MyApplicationTheme
+import com.example.ui.tools.ui.StudentToolsLauncher
+import com.example.ui.tools.ui.StudentToolsModalSheet
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
+            requestPermissions(arrayOf(android.Manifest.permission.POST_NOTIFICATIONS), 101)
+        }
+
+        // Initialize Google AdMob SDK & UMP Privacy Consent flow via AdManager
+        AdManager.initialize(this)
+
+        setContent {
+            val viewModel: StudyViewModel = viewModel()
+            val isDarkTheme by viewModel.isDarkTheme.collectAsState()
+
+            MyApplicationTheme(darkTheme = isDarkTheme) {
+                // Initialize Central ViewModel states
+                val progress by viewModel.userProgress.collectAsState()
+                val currentTab by viewModel.currentTab.collectAsState()
+                val showMarketing by viewModel.showMarketingPage.collectAsState()
+                val onboardingCompleted by viewModel.isOnboardingCompleted.collectAsState()
+                val isSplashChecking by viewModel.isSplashChecking.collectAsState()
+
+                val academicDepartment by viewModel.academicDepartment.collectAsState()
+
+                // Student Tools & Assessment States
+                val isStudentToolsOpen by viewModel.isStudentToolsOpen.collectAsState()
+                val activeSub by viewModel.activeSubject.collectAsState()
+                val showContentPlay by viewModel.showContentPlayView.collectAsState()
+                val showNotes by viewModel.showNotesView.collectAsState()
+                val showNotesTOC by viewModel.showNotesTableOfContents.collectAsState()
+                val showVideos by viewModel.showVideosView.collectAsState()
+                val showTextbookReader by viewModel.showTextbookReader.collectAsState()
+                val showStudyOptions by viewModel.showStudyOptionsModal.collectAsState()
+                val showModeSelection by viewModel.showModeSelectionModal.collectAsState()
+                val showSavedMaterialPicker by viewModel.showSavedMaterialPickerModal.collectAsState()
+                val showScoreResultModal by viewModel.showScoreResultModal.collectAsState()
+
+                val showPaymentForm by viewModel.showPaymentVerificationScreen.collectAsState()
+                val showFreeTrialPaywall by viewModel.showFreeTrialPaywall.collectAsState()
+
+                val isPaymentOrVerification = showPaymentForm || showFreeTrialPaywall || progress.paymentStatus == "pending"
+
+                // Check if user is in any active study screen, notes reader, exam arena, or modal
+                val isStudyingOrTakingExam = showNotes || showContentPlay || showNotesTOC ||
+                        showVideos || showTextbookReader || showStudyOptions || showModeSelection ||
+                        showSavedMaterialPicker || showScoreResultModal || (currentTab == "flashcards")
+
+                // Student tools button is strictly locked to the courses selector view only
+                val isUserEnrolledInCourses = onboardingCompleted &&
+                        progress.activePackageId != null &&
+                        progress.paymentStatus != "pending" &&
+                        !(progress.activePackageId == "department" && academicDepartment.isBlank())
+
+                val isCourseSelectorScreen = isUserEnrolledInCourses &&
+                        currentTab == "home" &&
+                        !isStudyingOrTakingExam
+
+                val showStudentToolsLauncher = isCourseSelectorScreen && !showMarketing && !isStudentToolsOpen
 
                 val shouldShowBottomBanner = AdManager.ADS_ENABLED &&
                         AdManager.BANNER_ADS_ENABLED &&
@@ -140,16 +212,13 @@ import androidx.lifecycle.viewmodel.compose.viewModel
                                         MarketingLandingView(viewModel = viewModel)
                                     }
 
-                                     // Student Tools Floating Launcher (Circular 56dp button with Tamhero logo)
-                                     val isUserEnrolledInCourses = onboardingCompleted && progress.activePackageId != null && progress.paymentStatus != "pending"
-                                     val isCoursesOrSubjectView = isUserEnrolledInCourses && (currentTab == "home" || activeSub != null)
-                                     val showStudentToolsLauncher = isCoursesOrSubjectView && !showMarketing && !isStudentToolsOpen
-
-                                     StudentToolsLauncher(
-                                         isVisible = showStudentToolsLauncher,
-                                         onClick = { viewModel.openStudentTools("timer_tasks") },
-                                         modifier = Modifier.align(androidx.compose.ui.Alignment.BottomEnd)
-                                     )
+                                    // Student Tools Floating Launcher (Circular 56dp button with Tamhero logo)
+                                    // Locked strictly to the course selector view; hidden in notes reader, exam arena, etc.
+                                    StudentToolsLauncher(
+                                        isVisible = showStudentToolsLauncher,
+                                        onClick = { viewModel.openStudentTools("timer_tasks") },
+                                        modifier = Modifier.align(androidx.compose.ui.Alignment.BottomEnd)
+                                    )
 
                                     // Student Tools Modal Bottom Sheet
                                     if (isStudentToolsOpen) {

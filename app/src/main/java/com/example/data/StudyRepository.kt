@@ -6,14 +6,29 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.withContext
 
-class StudyRepository(private val dao: EducationDao) : DataRepository {
+class StudyRepository(
+    private val dao: EducationDao,
+    private val context: Context? = null
+) : DataRepository {
 
     private val TAG = "TinatRoomFlow"
 
     override val userProgress: Flow<UserProgress?> = dao.getUserProgress()
     override val subjects: Flow<List<StudySubject>> = dao.getSubjects()
 
-    override fun getNotesBySubject(subjectId: String): Flow<List<SubjectNote>> = dao.getNotesBySubject(subjectId)
+    override fun getNotesBySubject(subjectId: String): Flow<List<SubjectNote>> = kotlinx.coroutines.flow.channelFlow {
+        dao.getNotesBySubject(subjectId).collect { list ->
+            if (subjectId.startsWith("freshman_") && context != null && (list.isEmpty() || list.any { it.id.startsWith("fn_") || it.content.length < 300 })) {
+                val assetNotes = FreshmanNotesLoader.loadNotesForSubject(context, subjectId)
+                if (assetNotes.isNotEmpty()) {
+                    dao.insertNotes(assetNotes)
+                    send(assetNotes)
+                    return@collect
+                }
+            }
+            send(list)
+        }
+    }
     override fun getAllNotes(): Flow<List<SubjectNote>> = dao.getAllNotes()
     override fun getNotesByGrade(gradeLevel: String): Flow<List<SubjectNote>> = dao.getNotesByGrade(gradeLevel)
     override fun searchNotes(query: String): Flow<List<SubjectNote>> = dao.searchNotes(query)
@@ -171,10 +186,24 @@ class StudyRepository(private val dao: EducationDao) : DataRepository {
         val questionsCount = dao.getQuestionsCount()
         val flashcardsCount = dao.getFlashcardsCount()
 
-        Log.d(TAG, "seedDatabaseIfEmpty: Verification check -> subjects: $subjectsCount, notes: $notesCount, questions: $questionsCount, flashcards: $flashcardsCount")
+        // 0.5 Ensure Freshman Markdown Notes are properly seeded from assets
+        val hasRichFreshmanNotes = try {
+            dao.getNotesBySubjectDirect("freshman_nat_english_1").any { it.content.length > 500 }
+        } catch (e: Exception) { false }
+
+        if (!hasRichFreshmanNotes && context != null) {
+            dao.clearFreshmanNotes()
+            val freshmanNotes = FreshmanNotesLoader.getAllFreshmanNotes(context)
+            if (freshmanNotes.isNotEmpty()) {
+                dao.insertNotes(freshmanNotes)
+                Log.d(TAG, "seedDatabaseIfEmpty: Seeded ${freshmanNotes.size} full freshman markdown notes from assets.")
+            }
+        }
+
+        val updatedNotesCount = dao.getNotesCount()
 
         // Fast path: If all data is already populated and verified, return immediately without instantiating large lists
-        if (subjectsCount >= 75 && notesCount >= 400 && questionsCount >= 796 && flashcardsCount >= 17000) {
+        if (subjectsCount >= 75 && updatedNotesCount >= 400 && questionsCount >= 796 && flashcardsCount >= 17000 && hasRichFreshmanNotes) {
             val elapsed = System.currentTimeMillis() - startTime
             Log.d(TAG, "seedDatabaseIfEmpty: Database verified in ${elapsed}ms. DB is fully populated with subjects, notes, questions, and flashcards.")
             return@withContext
@@ -363,7 +392,7 @@ class StudyRepository(private val dao: EducationDao) : DataRepository {
                     "• Classification: Australopithecus afarensis. She represents a highly complete skeletal link demonstrating evolutionary upright bipedalism, combined with small chimpanzee-sized brain cavities.\n" +
                     "• Paleontological Context: Discoveries like Ardi (Ardipithecus ramidus) further cement the Great Rift Valley as a global goldmine for human origin research."
                 )
-            ) + getFreshmanNotes() + getSemester2Notes() + getUatNotes() + getEueeNotes() + getDepartmentNotes() + getExitExamNotes() + Grade9MathNotes.getGrade9MathNotes() + Grade9EnglishNotes.getGrade9EnglishNotes() + Grade9PhysicsNotes.getGrade9PhysicsNotes() + Grade9BiologyNotes.getGrade9BiologyNotes() + Grade9ChemistryNotes.getGrade9ChemistryNotes() + Grade9HistoryNotes.getGrade9HistoryNotes() + Grade9GeographyNotes.getGrade9GeographyNotes() + Grade9EconomicsNotes.getGrade9EconomicsNotes() + Grade10MathNotes.getGrade10MathNotes() + Grade10EnglishNotes.getGrade10EnglishNotes() + Grade10ChemistryNotes.getGrade10ChemistryNotes() + Grade10PhysicsNotes.getGrade10PhysicsNotes() + Grade10BiologyNotes.getGrade10BiologyNotes() + Grade10HistoryNotes.getGrade10HistoryNotes() + Grade10GeographyNotes.getGrade10GeographyNotes() + Grade10EconomicsNotes.getGrade10EconomicsNotes() + Grade11BiologyNotes.getGrade11BiologyNotes() + Grade11ChemistryNotes.getGrade11ChemistryNotes() + Grade11EconomicsNotes.getGrade11EconomicsNotes() + Grade11EnglishNotes.getGrade11EnglishNotes() + Grade11GeographyNotes.getGrade11GeographyNotes() + Grade11HistoryNotes.getGrade11HistoryNotes() + Grade11MathNotes.getGrade11MathNotes() + Grade11PhysicsNotes.getGrade11PhysicsNotes() + Grade12BiologyNotes.getGrade12BiologyNotes() + Grade12ChemistryNotes.getGrade12ChemistryNotes() + Grade12EconomicsNotes.getGrade12EconomicsNotes() + Grade12EnglishNotes.getGrade12EnglishNotes() + Grade12GeographyNotes.getGrade12GeographyNotes() + Grade12HistoryNotes.getGrade12HistoryNotes() + Grade12MathNotes.getGrade12MathNotes() + Grade12PhysicsNotes.getGrade12PhysicsNotes()
+            ) + (if (context != null) FreshmanNotesLoader.getAllFreshmanNotes(context) else getFreshmanNotes() + getSemester2Notes()) + getUatNotes() + getEueeNotes() + getDepartmentNotes() + getExitExamNotes() + Grade9MathNotes.getGrade9MathNotes() + Grade9EnglishNotes.getGrade9EnglishNotes() + Grade9PhysicsNotes.getGrade9PhysicsNotes() + Grade9BiologyNotes.getGrade9BiologyNotes() + Grade9ChemistryNotes.getGrade9ChemistryNotes() + Grade9HistoryNotes.getGrade9HistoryNotes() + Grade9GeographyNotes.getGrade9GeographyNotes() + Grade9EconomicsNotes.getGrade9EconomicsNotes() + Grade10MathNotes.getGrade10MathNotes() + Grade10EnglishNotes.getGrade10EnglishNotes() + Grade10ChemistryNotes.getGrade10ChemistryNotes() + Grade10PhysicsNotes.getGrade10PhysicsNotes() + Grade10BiologyNotes.getGrade10BiologyNotes() + Grade10HistoryNotes.getGrade10HistoryNotes() + Grade10GeographyNotes.getGrade10GeographyNotes() + Grade10EconomicsNotes.getGrade10EconomicsNotes() + Grade11BiologyNotes.getGrade11BiologyNotes() + Grade11ChemistryNotes.getGrade11ChemistryNotes() + Grade11EconomicsNotes.getGrade11EconomicsNotes() + Grade11EnglishNotes.getGrade11EnglishNotes() + Grade11GeographyNotes.getGrade11GeographyNotes() + Grade11HistoryNotes.getGrade11HistoryNotes() + Grade11MathNotes.getGrade11MathNotes() + Grade11PhysicsNotes.getGrade11PhysicsNotes() + Grade12BiologyNotes.getGrade12BiologyNotes() + Grade12ChemistryNotes.getGrade12ChemistryNotes() + Grade12EconomicsNotes.getGrade12EconomicsNotes() + Grade12EnglishNotes.getGrade12EnglishNotes() + Grade12GeographyNotes.getGrade12GeographyNotes() + Grade12HistoryNotes.getGrade12HistoryNotes() + Grade12MathNotes.getGrade12MathNotes() + Grade12PhysicsNotes.getGrade12PhysicsNotes()
             dao.insertNotes(notesList)
             Log.d(TAG, "seedDatabaseIfEmpty: Inserted ${notesList.size} notes.")
         }

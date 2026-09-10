@@ -1688,43 +1688,13 @@ fun InAppPdfTextbookReader(
         }
     }
 
-    // Mercury Reader Mode State for PDF Reader
-    var isMercuryPdfMode by remember { mutableStateOf(true) }
-    var mercuryPdfTheme by remember { mutableStateOf("dark") } // "dark", "warm_sepia", "clean_paper"
-
-    val pdfViewerBg = when (mercuryPdfTheme) {
-        "warm_sepia" -> Color(0xFFFBF0D9)
-        "clean_paper" -> Color(0xFFFAFAFA)
-        else -> Color(0xFF1E1F22)
-    }
-    val pdfPageBg = when (mercuryPdfTheme) {
-        "warm_sepia" -> Color(0xFFF7E7CE)
-        "clean_paper" -> Color(0xFFFFFFFF)
-        else -> Color(0xFF0F172A)
-    }
-
-    // Reader UI Theme Tokens
+    // Reader UI Theme Tokens (Adapts to app light/dark theme while document retains original white-paper appearance)
     val isDarkTheme = viewModel?.isDarkTheme?.collectAsState()?.value ?: androidx.compose.foundation.isSystemInDarkTheme()
-    val barBg = when (mercuryPdfTheme) {
-        "warm_sepia" -> Color(0xFFF0E0C0)
-        "clean_paper" -> Color(0xFFFFFFFF)
-        else -> Color(0xFF2B2D30)
-    }
-    val textColor = when (mercuryPdfTheme) {
-        "warm_sepia" -> Color(0xFF432818)
-        "clean_paper" -> Color(0xFF18181B)
-        else -> Color(0xFFE6EDF3)
-    }
-    val textMuted = when (mercuryPdfTheme) {
-        "warm_sepia" -> Color(0xFF7A5C43)
-        "clean_paper" -> Color(0xFF71717A)
-        else -> Color(0xFF9DA5B4)
-    }
-    val barBorderColor = when (mercuryPdfTheme) {
-        "warm_sepia" -> Color(0xFFE0C8A0)
-        "clean_paper" -> Color(0xFFE4E4E7)
-        else -> Color(0xFF3C3F41)
-    }
+    val viewerBg = if (isDarkTheme) Color(0xFF1E1F22) else Color(0xFFF1F5F9)
+    val barBg = if (isDarkTheme) Color(0xFF2B2D30) else Color(0xFFFFFFFF)
+    val textColor = if (isDarkTheme) Color(0xFFE6EDF3) else Color(0xFF0F172A)
+    val textMuted = if (isDarkTheme) Color(0xFF9DA5B4) else Color(0xFF64748B)
+    val barBorderColor = if (isDarkTheme) Color(0xFF3C3F41) else Color(0xFFE2E8F0)
 
     val transformState = rememberTransformableState { zoomChange, offsetChange, _ ->
         scale = (scale * zoomChange).coerceIn(0.8f, 3.5f)
@@ -1732,7 +1702,7 @@ fun InAppPdfTextbookReader(
     }
 
     Scaffold(
-        containerColor = pdfViewerBg,
+        containerColor = viewerBg,
         topBar = {
             TopAppBar(
                 navigationIcon = {
@@ -1775,45 +1745,6 @@ fun InAppPdfTextbookReader(
                     }
                 },
                 actions = {
-                    // Mercury Reader Mode Pill
-                    Surface(
-                        color = if (isMercuryPdfMode) EmeraldPrimary.copy(alpha = 0.2f) else Color.Transparent,
-                        shape = RoundedCornerShape(20.dp),
-                        border = BorderStroke(1.dp, if (isMercuryPdfMode) EmeraldPrimary else Color.Gray.copy(alpha = 0.4f)),
-                        modifier = Modifier
-                            .clickable { isMercuryPdfMode = !isMercuryPdfMode }
-                            .padding(end = 4.dp)
-                    ) {
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
-                        ) {
-                            Icon(
-                                imageVector = Icons.Default.AutoAwesome,
-                                contentDescription = "Mercury Reader",
-                                tint = if (isMercuryPdfMode) EmeraldPrimary else Color.Gray,
-                                modifier = Modifier.size(14.dp)
-                            )
-                            Spacer(modifier = Modifier.width(4.dp))
-                            Text(
-                                text = "Mercury",
-                                style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
-                                color = if (isMercuryPdfMode) EmeraldPrimary else Color.Gray,
-                                fontSize = 10.sp
-                            )
-                        }
-                    }
-
-                    // Mercury Theme Palette Switcher
-                    IconButton(onClick = {
-                        mercuryPdfTheme = when (mercuryPdfTheme) {
-                            "dark" -> "warm_sepia"
-                            "warm_sepia" -> "clean_paper"
-                            else -> "dark"
-                        }
-                    }) {
-                        Icon(Icons.Default.Palette, contentDescription = "Mercury Palette", tint = textColor)
-                    }
 
                     // Zoom Out
                     IconButton(onClick = { scale = (scale - 0.25f).coerceAtLeast(0.8f) }) {

@@ -26,6 +26,12 @@ interface EducationDao {
     @Query("SELECT * FROM subject_notes WHERE subjectId = :subjectId")
     fun getNotesBySubject(subjectId: String): Flow<List<SubjectNote>>
 
+    @Query("SELECT * FROM subject_notes WHERE subjectId = :subjectId")
+    suspend fun getNotesBySubjectDirect(subjectId: String): List<SubjectNote>
+
+    @Query("DELETE FROM subject_notes WHERE subjectId LIKE 'freshman_%' OR id LIKE 'fn_%'")
+    suspend fun clearFreshmanNotes()
+
     @Query("SELECT * FROM subject_notes")
     fun getAllNotes(): Flow<List<SubjectNote>>
 
