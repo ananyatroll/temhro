@@ -258,8 +258,12 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
         sharedPrefs.edit().putBoolean("user_is_dark_theme", enabled).apply()
     }
 
-    fun toggleDarkTheme() {
-        setDarkTheme(!isDarkTheme.value)
+    // Selected Semester Filter state flow ("all", "sem1", "sem2")
+    val selectedSemesterFilter = MutableStateFlow(sharedPrefs.getString("user_selected_semester", "all") ?: "all")
+
+    fun setSemesterFilter(sem: String) {
+        selectedSemesterFilter.value = sem
+        sharedPrefs.edit().putString("user_selected_semester", sem).apply()
     }
 
     // Study Modes: "department" (University Department) or "exit_exam" (EXIT EXAM)
@@ -925,10 +929,11 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
         // Free trial rules for each package: exactly 2 selected subjects are open, all others locked
         return when (subject.packageId) {
             "freshman_natural" -> {
-                !(id == "freshman_nat_english_1" || id == "freshman_nat_emerging_tech")
+                // Exactly one subject free trial per semester: English 1 (Sem 1) and Anthropology (Sem 2)
+                !(id == "freshman_nat_english_1" || id == "freshman_nat_anthropology")
             }
             "freshman_social" -> {
-                !(id == "freshman_soc_english_1" || id == "freshman_soc_emerging_tech")
+                !(id == "freshman_soc_english_1" || id == "freshman_soc_anthropology")
             }
             "euee_natural" -> {
                 // Biology and English are open for free trial

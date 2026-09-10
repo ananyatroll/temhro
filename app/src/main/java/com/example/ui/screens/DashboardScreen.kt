@@ -60,6 +60,7 @@ fun DashboardScreen(viewModel: StudyViewModel) {
     val studentGoal by viewModel.studentGoal.collectAsState()
     val currentLang by viewModel.currentLanguage.collectAsState()
     val isDarkTheme by viewModel.isDarkTheme.collectAsState()
+    val selectedSemesterFilter by viewModel.selectedSemesterFilter.collectAsState()
 
     fun t(key: String): String = TranslationManager.get(key, currentLang)
 
@@ -216,7 +217,59 @@ fun DashboardScreen(viewModel: StudyViewModel) {
 
             // Spacing below header
             item(span = { GridItemSpan(maxLineSpan) }) {
-                Spacer(modifier = Modifier.height(12.dp))
+                Spacer(modifier = Modifier.height(10.dp))
+            }
+
+            // Interactive Semester Segmented Switcher (for freshman and semester packages)
+            val isFreshmanOrSemesterPkg = progress.activePackageId?.startsWith("freshman") == true || progress.activePackageId == "department"
+            if (isFreshmanOrSemesterPkg && !isDepartmentMode) {
+                item(span = { GridItemSpan(maxLineSpan) }) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(bottom = 12.dp),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        val filterTabs = listOf(
+                            "all" to "All Courses",
+                            "sem1" to "Semester 1",
+                            "sem2" to "Semester 2"
+                        )
+                        filterTabs.forEach { (tabKey, tabLabel) ->
+                            val isSelected = selectedSemesterFilter == tabKey
+                            Surface(
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .clickable { viewModel.setSemesterFilter(tabKey) },
+                                shape = RoundedCornerShape(10.dp),
+                                color = if (isSelected) {
+                                    if (tabKey == "sem2") Color(0xFF3B82F6) else EmeraldPrimary
+                                } else {
+                                    if (isDarkTheme) Color(0xFF1E293B) else Color(0xFFF1F5F9)
+                                },
+                                border = BorderStroke(
+                                    1.dp,
+                                    if (isSelected) Color.Transparent else (if (isDarkTheme) Color(0xFF334155) else Color(0xFFCBD5E1))
+                                )
+                            ) {
+                                Box(
+                                    modifier = Modifier.padding(vertical = 8.dp),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Text(
+                                        text = tabLabel,
+                                        style = MaterialTheme.typography.labelSmall.copy(
+                                            fontWeight = if (isSelected) FontWeight.Black else FontWeight.Bold,
+                                            fontSize = 11.sp
+                                        ),
+                                        color = if (isSelected) Color.White else (if (isDarkTheme) Color.LightGray else Color(0xFF475569)),
+                                        maxLines = 1
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
             if (isDepartmentMode) {
@@ -421,45 +474,88 @@ fun DashboardScreen(viewModel: StudyViewModel) {
                 val isSemesterBoundPackage = currentPkg.startsWith("freshman") || currentPkg == "department"
 
                 if (isSemesterBoundPackage) {
+                    val natSem1Order = listOf(
+                        "freshman_nat_english_1",
+                        "freshman_nat_psychology",
+                        "freshman_nat_geography",
+                        "freshman_nat_critical_thinking",
+                        "freshman_nat_physical_fitness",
+                        "freshman_nat_maths",
+                        "freshman_nat_physics",
+                        "freshman_nat_history"
+                    )
+                    val natSem2Order = listOf(
+                        "freshman_nat_applied_maths",
+                        "freshman_nat_english_2",
+                        "freshman_nat_computer_programming",
+                        "freshman_nat_entrepreneurship",
+                        "freshman_nat_emerging_tech",
+                        "freshman_nat_anthropology",
+                        "freshman_nat_civics",
+                        "freshman_nat_biology",
+                        "freshman_nat_chemistry"
+                    )
+
                     val sem1Subjects = subjectsList.filter { subject ->
-                        subject.id.contains("_english_1") || 
-                        subject.id == "freshman_nat_maths" || 
-                        subject.id == "freshman_nat_physics" || 
-                        subject.id == "freshman_nat_history" || 
-                        subject.id == "freshman_soc_civics" || 
-                        subject.id == "freshman_soc_anthropology" || 
-                        subject.id == "freshman_soc_global_trends" || 
-                        subject.id == "freshman_soc_economics" || 
-                        subject.id == "freshman_soc_emerging_tech" || 
-                        subject.id == "freshman_soc_entrepreneurship" ||
-                        (subject.packageId == "department" && (subject.id.contains("_1") || subject.id.contains("_dsa") || subject.id.contains("_oop") || subject.id.contains("_circuit_1") || subject.id.contains("_thermodynamics_1") || subject.id.contains("_constitutional_law")))
-                    }.sortedBy { viewModel.isSubjectLocked(it) }
+                        if (subject.packageId == "freshman_natural") {
+                            natSem1Order.contains(subject.id)
+                        } else {
+                            subject.id.contains("_english_1") || 
+                            subject.id == "freshman_nat_maths" || 
+                            subject.id == "freshman_nat_physics" || 
+                            subject.id == "freshman_nat_history" || 
+                            subject.id == "freshman_soc_civics" || 
+                            subject.id == "freshman_soc_anthropology" || 
+                            subject.id == "freshman_soc_global_trends" || 
+                            subject.id == "freshman_soc_economics" || 
+                            subject.id == "freshman_soc_emerging_tech" || 
+                            subject.id == "freshman_soc_entrepreneurship" ||
+                            (subject.packageId == "department" && (subject.id.contains("_1") || subject.id.contains("_dsa") || subject.id.contains("_oop") || subject.id.contains("_circuit_1") || subject.id.contains("_thermodynamics_1") || subject.id.contains("_constitutional_law")))
+                        }
+                    }.sortedWith(
+                        // Unlocked / Free trial courses appear first, followed by defined curriculum order
+                        compareBy<StudySubject> { viewModel.isSubjectLocked(it) }
+                            .thenBy {
+                                val idx = natSem1Order.indexOf(it.id)
+                                if (idx >= 0) idx else 99
+                            }
+                    )
 
                     val sem2Subjects = subjectsList.filter { subject ->
-                        subject.id.contains("_applied_maths") || 
-                        subject.id.contains("_english_2") || 
-                        subject.id.contains("_computer_programming") || 
-                        subject.id.contains("_psychology") ||
-                        subject.id.contains("_geography") ||
-                        subject.id.contains("_critical_thinking") ||
-                        subject.id.contains("_physical_fitness") ||
-                        (subject.packageId != "freshman_social" && subject.id.contains("_emerging_tech")) || 
-                        (subject.packageId != "freshman_social" && subject.id.contains("_anthropology")) || 
-                        (subject.packageId != "freshman_social" && subject.id.contains("_civics")) || 
-                        subject.id.contains("_biology") || 
-                        subject.id.contains("_chemistry") || 
-                        subject.id == "freshman_soc_inclusiveness" || 
-                        subject.id == "freshman_soc_history" || 
-                        subject.id == "freshman_soc_maths" || 
-                        subject.id == "freshman_soc_geography" ||
-                        (subject.packageId == "department" && !(subject.id.contains("_1") || subject.id.contains("_dsa") || subject.id.contains("_oop") || subject.id.contains("_circuit_1") || subject.id.contains("_thermodynamics_1") || subject.id.contains("_constitutional_law")))
-                    }.sortedBy { viewModel.isSubjectLocked(it) }
+                        if (subject.packageId == "freshman_natural") {
+                            natSem2Order.contains(subject.id)
+                        } else {
+                            subject.id.contains("_applied_maths") || 
+                            subject.id.contains("_english_2") || 
+                            subject.id.contains("_computer_programming") || 
+                            subject.id.contains("_psychology") ||
+                            subject.id.contains("_geography") ||
+                            subject.id.contains("_critical_thinking") ||
+                            subject.id.contains("_physical_fitness") ||
+                            (subject.packageId != "freshman_social" && subject.id.contains("_emerging_tech")) || 
+                            (subject.packageId != "freshman_social" && subject.id.contains("_anthropology")) || 
+                            (subject.packageId != "freshman_social" && subject.id.contains("_civics")) || 
+                            subject.id.contains("_biology") || 
+                            subject.id.contains("_chemistry") || 
+                            subject.id == "freshman_soc_inclusiveness" || 
+                            subject.id == "freshman_soc_history" || 
+                            subject.id == "freshman_soc_maths" || 
+                            subject.id == "freshman_soc_geography" ||
+                            (subject.packageId == "department" && !(subject.id.contains("_1") || subject.id.contains("_dsa") || subject.id.contains("_oop") || subject.id.contains("_circuit_1") || subject.id.contains("_thermodynamics_1") || subject.id.contains("_constitutional_law")))
+                        }
+                    }.sortedWith(
+                        // Unlocked / Free trial courses appear first, followed by defined curriculum order
+                        compareBy<StudySubject> { viewModel.isSubjectLocked(it) }
+                            .thenBy {
+                                val idx = natSem2Order.indexOf(it.id)
+                                if (idx >= 0) idx else 99
+                            }
+                    )
 
-                    val otherSubjects = subjectsList.filter { subject ->
-                        !sem1Subjects.contains(subject) && !sem2Subjects.contains(subject)
-                    }.sortedBy { viewModel.isSubjectLocked(it) }
+                    val showSem1 = selectedSemesterFilter == "all" || selectedSemesterFilter == "sem1"
+                    val showSem2 = selectedSemesterFilter == "all" || selectedSemesterFilter == "sem2"
 
-                    if (sem1Subjects.isNotEmpty()) {
+                    if (showSem1 && sem1Subjects.isNotEmpty()) {
                         item(span = { GridItemSpan(maxLineSpan) }) {
                             Row(
                                 modifier = Modifier
@@ -515,7 +611,7 @@ fun DashboardScreen(viewModel: StudyViewModel) {
                         }
                     }
 
-                    if (sem2Subjects.isNotEmpty()) {
+                    if (showSem2 && sem2Subjects.isNotEmpty()) {
                         item(span = { GridItemSpan(maxLineSpan) }) {
                             Row(
                                 modifier = Modifier

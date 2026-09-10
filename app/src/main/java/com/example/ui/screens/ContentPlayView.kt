@@ -2360,6 +2360,12 @@ fun FreeTrialPaywallDialog(
                                     shortLabel = if (selectedPlan == "full_year") "Full Academic Year" else "Semester ${if (selectedPlan == "sem1") "1" else "2"}"
                                 )
                             viewModel.createPurchaseRequest(matched)
+                            val semFilter = when (selectedPlan) {
+                                "sem1" -> "sem1"
+                                "sem2" -> "sem2"
+                                else -> "all"
+                            }
+                            viewModel.setSemesterFilter(semFilter)
                             onUpgradePremium()
                         },
                         modifier = Modifier
