@@ -140,12 +140,16 @@ import androidx.lifecycle.viewmodel.compose.viewModel
                                         MarketingLandingView(viewModel = viewModel)
                                     }
 
-                                    // Student Tools Floating Launcher (Circular 56dp button with Tamhero logo)
-                                    StudentToolsLauncher(
-                                        isVisible = showStudentToolsLauncher,
-                                        onClick = { viewModel.openStudentTools("timer_tasks") },
-                                        modifier = Modifier.align(androidx.compose.ui.Alignment.BottomEnd)
-                                    )
+                                     // Student Tools Floating Launcher (Circular 56dp button with Tamhero logo)
+                                     val isUserEnrolledInCourses = onboardingCompleted && progress.activePackageId != null && progress.paymentStatus != "pending"
+                                     val isCoursesOrSubjectView = isUserEnrolledInCourses && (currentTab == "home" || activeSub != null)
+                                     val showStudentToolsLauncher = isCoursesOrSubjectView && !showMarketing && !isStudentToolsOpen
+
+                                     StudentToolsLauncher(
+                                         isVisible = showStudentToolsLauncher,
+                                         onClick = { viewModel.openStudentTools("timer_tasks") },
+                                         modifier = Modifier.align(androidx.compose.ui.Alignment.BottomEnd)
+                                     )
 
                                     // Student Tools Modal Bottom Sheet
                                     if (isStudentToolsOpen) {

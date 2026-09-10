@@ -417,59 +417,202 @@ fun DashboardScreen(viewModel: StudyViewModel) {
                     }
                 }
             } else {
-                // Top-sort subjectsList so unlocked free-trial courses appear at the top
-                val sortedSubjects = remember(subjectsList, progress.purchasedPackageId, progress.paymentStatus, progress.activePackageId) {
-                    subjectsList.sortedBy { viewModel.isSubjectLocked(it) }
-                }
+                // Group subjects by Semester (Sem 1 first, Sem 2 next, others following) and sort unlocked trial subjects to top
+                val sem1Subjects = subjectsList.filter { subject ->
+                    subject.id.contains("_english_1") || subject.id.contains("_psychology") || 
+                    subject.id.contains("_geography") || subject.id.contains("_critical_thinking") || 
+                    subject.id.contains("_physical_fitness") || subject.id == "freshman_nat_maths" || 
+                    subject.id == "freshman_nat_physics" || subject.id == "freshman_nat_history" || 
+                    subject.id == "freshman_soc_civics" || subject.id == "freshman_soc_anthropology" || 
+                    subject.id == "freshman_soc_global_trends" || subject.id == "freshman_soc_economics" || 
+                    subject.id == "freshman_soc_emerging_tech" || subject.id == "freshman_soc_entrepreneurship" ||
+                    (subject.packageId == "department" && (subject.id.contains("_1") || subject.id.contains("_dsa") || subject.id.contains("_oop") || subject.id.contains("_circuit_1") || subject.id.contains("_thermodynamics_1") || subject.id.contains("_constitutional_law")))
+                }.sortedBy { viewModel.isSubjectLocked(it) }
 
-                // Grid Items (each taking 1 column span by default)
-                items(sortedSubjects) { subject ->
-                    val isDone = completedSubjectIds.contains(subject.id)
-                    val isLocked = viewModel.isSubjectLocked(subject)
-                    val progressVal = subjectProgressMap[subject.id] ?: if (isDone) 1f else 0f
-                    val context = LocalContext.current
-                    
-                    val semesterBadgeText = when {
-                        subject.id.contains("_english_1") || subject.id.contains("_psychology") || 
-                        subject.id.contains("_geography") || subject.id.contains("_critical_thinking") || 
-                        subject.id.contains("_physical_fitness") || subject.id.contains("freshman_nat_maths") || 
-                        subject.id.contains("freshman_nat_physics") || subject.id.contains("freshman_nat_history") || 
-                        subject.id.contains("freshman_soc_civics") || subject.id.contains("freshman_soc_anthropology") || 
-                        subject.id.contains("freshman_soc_global_trends") || subject.id.contains("freshman_soc_economics") || 
-                        subject.id.contains("freshman_soc_emerging_tech") || subject.id.contains("freshman_soc_entrepreneurship") -> "Sem 1"
-                        
-                        subject.id.contains("_applied_maths") || subject.id.contains("_english_2") || 
-                        subject.id.contains("_computer_programming") || subject.id.contains("_emerging_tech") || 
-                        subject.id.contains("_anthropology") || subject.id.contains("_civics") || 
-                        subject.id.contains("_biology") || subject.id.contains("_chemistry") || 
-                        subject.id.contains("freshman_soc_inclusiveness") || subject.id.contains("freshman_soc_history") || 
-                        subject.id.contains("freshman_soc_maths") -> "Sem 2"
-                        
-                        subject.packageId == "department" -> if (subject.id.contains("_1") || subject.id.contains("_dsa") || subject.id.contains("_oop") || subject.id.contains("_os") || subject.id.contains("_circuit_1") || subject.id.contains("_thermodynamics_1") || subject.id.contains("_constitutional_law")) "Sem 1" else "Sem 2"
-                        
-                        else -> null
+                val sem2Subjects = subjectsList.filter { subject ->
+                    subject.id.contains("_applied_maths") || subject.id.contains("_english_2") || 
+                    subject.id.contains("_computer_programming") || (subject.packageId != "freshman_social" && subject.id.contains("_emerging_tech")) || 
+                    (subject.packageId != "freshman_social" && subject.id.contains("_anthropology")) || (subject.packageId != "freshman_social" && subject.id.contains("_civics")) || 
+                    subject.id.contains("_biology") || subject.id.contains("_chemistry") || 
+                    subject.id == "freshman_soc_inclusiveness" || subject.id == "freshman_soc_history" || 
+                    subject.id == "freshman_soc_maths" || subject.id == "freshman_soc_geography" ||
+                    (subject.packageId == "department" && !(subject.id.contains("_1") || subject.id.contains("_dsa") || subject.id.contains("_oop") || subject.id.contains("_circuit_1") || subject.id.contains("_thermodynamics_1") || subject.id.contains("_constitutional_law")))
+                }.sortedBy { viewModel.isSubjectLocked(it) }
+
+                val otherSubjects = subjectsList.filter { subject ->
+                    !sem1Subjects.contains(subject) && !sem2Subjects.contains(subject)
+                }.sortedBy { viewModel.isSubjectLocked(it) }
+
+                val hasSemesters = sem1Subjects.isNotEmpty() || sem2Subjects.isNotEmpty()
+
+                if (hasSemesters && sem1Subjects.isNotEmpty()) {
+                    item(span = { GridItemSpan(maxLineSpan) }) {
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(top = 8.dp, bottom = 4.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Surface(
+                                shape = RoundedCornerShape(8.dp),
+                                color = EmeraldPrimary,
+                                modifier = Modifier.padding(end = 12.dp)
+                            ) {
+                                Text(
+                                    text = "SEMESTER 1 COURSES",
+                                    modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
+                                    style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black),
+                                    color = Color.White
+                                )
+                            }
+                            HorizontalDivider(
+                                modifier = Modifier.weight(1f),
+                                color = if (isDarkTheme) Color(0xFF334155) else Color(0xFFE2E8F0),
+                                thickness = 1.dp
+                            )
+                        }
                     }
 
-                    SubjectHexCard(
-                        subjectName = subject.name,
-                        iconName = subject.icon,
-                        isCompleted = isDone,
-                        isLocked = isLocked,
-                        semesterBadge = semesterBadgeText,
-                        progress = progressVal,
-                        isDarkTheme = isDarkTheme,
-                        currentLang = currentLang,
-                        onSubjectClick = {
-                            val activity = AdsManager.findActivity(context)
-                            if (activity != null) {
-                                InterstitialAdManager.showIfAllowed(activity) {
+                    items(sem1Subjects) { subject ->
+                        val isDone = completedSubjectIds.contains(subject.id)
+                        val isLocked = viewModel.isSubjectLocked(subject)
+                        val progressVal = subjectProgressMap[subject.id] ?: if (isDone) 1f else 0f
+                        val context = LocalContext.current
+                        SubjectHexCard(
+                            subjectName = subject.name,
+                            iconName = subject.icon,
+                            isCompleted = isDone,
+                            isLocked = isLocked,
+                            semesterBadge = "Sem 1",
+                            progress = progressVal,
+                            isDarkTheme = isDarkTheme,
+                            currentLang = currentLang,
+                            onSubjectClick = {
+                                val activity = AdsManager.findActivity(context)
+                                if (activity != null) {
+                                    InterstitialAdManager.showIfAllowed(activity) {
+                                        viewModel.selectSubject(subject)
+                                    }
+                                } else {
                                     viewModel.selectSubject(subject)
                                 }
-                            } else {
-                                viewModel.selectSubject(subject)
+                            }
+                        )
+                    }
+                }
+
+                if (hasSemesters && sem2Subjects.isNotEmpty()) {
+                    item(span = { GridItemSpan(maxLineSpan) }) {
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(top = 16.dp, bottom = 4.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Surface(
+                                shape = RoundedCornerShape(8.dp),
+                                color = Color(0xFF3B82F6),
+                                modifier = Modifier.padding(end = 12.dp)
+                            ) {
+                                Text(
+                                    text = "SEMESTER 2 COURSES",
+                                    modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
+                                    style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black),
+                                    color = Color.White
+                                )
+                            }
+                            HorizontalDivider(
+                                modifier = Modifier.weight(1f),
+                                color = if (isDarkTheme) Color(0xFF334155) else Color(0xFFE2E8F0),
+                                thickness = 1.dp
+                            )
+                        }
+                    }
+
+                    items(sem2Subjects) { subject ->
+                        val isDone = completedSubjectIds.contains(subject.id)
+                        val isLocked = viewModel.isSubjectLocked(subject)
+                        val progressVal = subjectProgressMap[subject.id] ?: if (isDone) 1f else 0f
+                        val context = LocalContext.current
+                        SubjectHexCard(
+                            subjectName = subject.name,
+                            iconName = subject.icon,
+                            isCompleted = isDone,
+                            isLocked = isLocked,
+                            semesterBadge = "Sem 2",
+                            progress = progressVal,
+                            isDarkTheme = isDarkTheme,
+                            currentLang = currentLang,
+                            onSubjectClick = {
+                                val activity = AdsManager.findActivity(context)
+                                if (activity != null) {
+                                    InterstitialAdManager.showIfAllowed(activity) {
+                                        viewModel.selectSubject(subject)
+                                    }
+                                } else {
+                                    viewModel.selectSubject(subject)
+                                }
+                            }
+                        )
+                    }
+                }
+
+                if (otherSubjects.isNotEmpty()) {
+                    if (hasSemesters) {
+                        item(span = { GridItemSpan(maxLineSpan) }) {
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(top = 16.dp, bottom = 4.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Surface(
+                                    shape = RoundedCornerShape(8.dp),
+                                    color = Color(0xFF8B5CF6),
+                                    modifier = Modifier.padding(end = 12.dp)
+                                ) {
+                                    Text(
+                                        text = "ADDITIONAL SUBJECTS",
+                                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
+                                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black),
+                                        color = Color.White
+                                    )
+                                }
+                                HorizontalDivider(
+                                    modifier = Modifier.weight(1f),
+                                    color = if (isDarkTheme) Color(0xFF334155) else Color(0xFFE2E8F0),
+                                    thickness = 1.dp
+                                )
                             }
                         }
-                    )
+                    }
+
+                    items(otherSubjects) { subject ->
+                        val isDone = completedSubjectIds.contains(subject.id)
+                        val isLocked = viewModel.isSubjectLocked(subject)
+                        val progressVal = subjectProgressMap[subject.id] ?: if (isDone) 1f else 0f
+                        val context = LocalContext.current
+                        SubjectHexCard(
+                            subjectName = subject.name,
+                            iconName = subject.icon,
+                            isCompleted = isDone,
+                            isLocked = isLocked,
+                            semesterBadge = null,
+                            progress = progressVal,
+                            isDarkTheme = isDarkTheme,
+                            currentLang = currentLang,
+                            onSubjectClick = {
+                                val activity = AdsManager.findActivity(context)
+                                if (activity != null) {
+                                    InterstitialAdManager.showIfAllowed(activity) {
+                                        viewModel.selectSubject(subject)
+                                    }
+                                } else {
+                                    viewModel.selectSubject(subject)
+                                }
+                            }
+                        )
+                    }
                 }
             }
         }
