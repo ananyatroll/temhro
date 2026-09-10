@@ -444,58 +444,53 @@ fun DashboardScreen(viewModel: StudyViewModel) {
                         "freshman_nat_chemistry"
                     )
 
+                    val socSem1Order = listOf(
+                        "freshman_soc_civics",
+                        "freshman_soc_anthropology",
+                        "freshman_soc_english_1",
+                        "freshman_soc_global_trends",
+                        "freshman_soc_economics",
+                        "freshman_soc_success",
+                        "freshman_soc_emerging_tech",
+                        "freshman_soc_entrepreneurship"
+                    )
+                    val socSem2Order = listOf(
+                        "freshman_soc_geography",
+                        "freshman_soc_history",
+                        "freshman_soc_inclusiveness",
+                        "freshman_soc_physical_fitness",
+                        "freshman_soc_english_2",
+                        "freshman_soc_psychology",
+                        "freshman_soc_maths",
+                        "freshman_soc_critical_thinking"
+                    )
+
                     val sem1Subjects = subjectsList.filter { subject ->
-                        if (subject.packageId == "freshman_natural") {
-                            natSem1Order.contains(subject.id)
-                        } else {
-                            subject.id.contains("_english_1") || 
-                            subject.id == "freshman_nat_maths" || 
-                            subject.id == "freshman_nat_physics" || 
-                            subject.id == "freshman_nat_history" || 
-                            subject.id == "freshman_soc_civics" || 
-                            subject.id == "freshman_soc_anthropology" || 
-                            subject.id == "freshman_soc_global_trends" || 
-                            subject.id == "freshman_soc_economics" || 
-                            subject.id == "freshman_soc_emerging_tech" || 
-                            subject.id == "freshman_soc_entrepreneurship" ||
-                            (subject.packageId == "department" && (subject.id.contains("_1") || subject.id.contains("_dsa") || subject.id.contains("_oop") || subject.id.contains("_circuit_1") || subject.id.contains("_thermodynamics_1") || subject.id.contains("_constitutional_law")))
+                        when (subject.packageId) {
+                            "freshman_natural" -> natSem1Order.contains(subject.id)
+                            "freshman_social" -> socSem1Order.contains(subject.id)
+                            else -> subject.id.contains("_1") || subject.id.contains("_dsa") || subject.id.contains("_oop") || subject.id.contains("_circuit_1") || subject.id.contains("_thermodynamics_1") || subject.id.contains("_constitutional_law")
                         }
                     }.sortedWith(
                         // Unlocked / Free trial courses appear first, followed by defined curriculum order
                         compareBy<StudySubject> { viewModel.isSubjectLocked(it) }
                             .thenBy {
-                                val idx = natSem1Order.indexOf(it.id)
+                                val idx = if (it.packageId == "freshman_social") socSem1Order.indexOf(it.id) else natSem1Order.indexOf(it.id)
                                 if (idx >= 0) idx else 99
                             }
                     )
 
                     val sem2Subjects = subjectsList.filter { subject ->
-                        if (subject.packageId == "freshman_natural") {
-                            natSem2Order.contains(subject.id)
-                        } else {
-                            subject.id.contains("_applied_maths") || 
-                            subject.id.contains("_english_2") || 
-                            subject.id.contains("_computer_programming") || 
-                            subject.id.contains("_psychology") ||
-                            subject.id.contains("_geography") ||
-                            subject.id.contains("_critical_thinking") ||
-                            subject.id.contains("_physical_fitness") ||
-                            (subject.packageId != "freshman_social" && subject.id.contains("_emerging_tech")) || 
-                            (subject.packageId != "freshman_social" && subject.id.contains("_anthropology")) || 
-                            (subject.packageId != "freshman_social" && subject.id.contains("_civics")) || 
-                            subject.id.contains("_biology") || 
-                            subject.id.contains("_chemistry") || 
-                            subject.id == "freshman_soc_inclusiveness" || 
-                            subject.id == "freshman_soc_history" || 
-                            subject.id == "freshman_soc_maths" || 
-                            subject.id == "freshman_soc_geography" ||
-                            (subject.packageId == "department" && !(subject.id.contains("_1") || subject.id.contains("_dsa") || subject.id.contains("_oop") || subject.id.contains("_circuit_1") || subject.id.contains("_thermodynamics_1") || subject.id.contains("_constitutional_law")))
+                        when (subject.packageId) {
+                            "freshman_natural" -> natSem2Order.contains(subject.id)
+                            "freshman_social" -> socSem2Order.contains(subject.id)
+                            else -> !(subject.id.contains("_1") || subject.id.contains("_dsa") || subject.id.contains("_oop") || subject.id.contains("_circuit_1") || subject.id.contains("_thermodynamics_1") || subject.id.contains("_constitutional_law"))
                         }
                     }.sortedWith(
                         // Unlocked / Free trial courses appear first, followed by defined curriculum order
                         compareBy<StudySubject> { viewModel.isSubjectLocked(it) }
                             .thenBy {
-                                val idx = natSem2Order.indexOf(it.id)
+                                val idx = if (it.packageId == "freshman_social") socSem2Order.indexOf(it.id) else natSem2Order.indexOf(it.id)
                                 if (idx >= 0) idx else 99
                             }
                     )

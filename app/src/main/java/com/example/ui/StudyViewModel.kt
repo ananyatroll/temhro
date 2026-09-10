@@ -933,7 +933,8 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
                 !(id == "freshman_nat_english_1" || id == "freshman_nat_anthropology")
             }
             "freshman_social" -> {
-                !(id == "freshman_soc_english_1" || id == "freshman_soc_anthropology")
+                // Exactly one subject free trial per semester: English 1 (Sem 1) and Geography (Sem 2)
+                !(id == "freshman_soc_english_1" || id == "freshman_soc_geography")
             }
             "euee_natural" -> {
                 // Biology and English are open for free trial
