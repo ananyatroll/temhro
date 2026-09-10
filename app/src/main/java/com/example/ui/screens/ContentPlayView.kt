@@ -825,6 +825,23 @@ fun DarkThemedNotesReader(
     val isSatCourse = subjectName.contains("SAT", ignoreCase = true) || subjectName.contains("Aptitude", ignoreCase = true)
     val context = LocalContext.current
 
+    // Mercury Reader Mode State
+    var isMercuryMode by remember { mutableStateOf(true) }
+    var mercuryFontSize by remember { mutableStateOf(16.sp) }
+    var mercuryTheme by remember { mutableStateOf("dark") } // "dark", "warm_sepia", "clean_paper"
+
+    val readerBg = when (mercuryTheme) {
+        "warm_sepia" -> Color(0xFFFBF0D9)
+        "clean_paper" -> Color(0xFFFAFAFA)
+        else -> ReaderBgDark
+    }
+
+    val readerTextColor = when (mercuryTheme) {
+        "warm_sepia" -> Color(0xFF432818)
+        "clean_paper" -> Color(0xFF18181B)
+        else -> Color.White
+    }
+
     // Date-based locking check
     val isLockedByDate = remember(note?.id) {
         val releaseDate = note?.releaseDate
@@ -860,7 +877,7 @@ fun DarkThemedNotesReader(
     }
 
     Surface(
-        color = ReaderBgDark,
+        color = readerBg,
         modifier = Modifier.fillMaxSize()
     ) {
         Column(
@@ -889,7 +906,7 @@ fun DarkThemedNotesReader(
                         Text(
                             text = subjectName.uppercase(),
                             style = MaterialTheme.typography.labelSmall,
-                            color = HolographicAqua,
+                            color = if (mercuryTheme == "dark") HolographicAqua else EmeraldDark,
                             fontWeight = FontWeight.Black
                         )
                         if (note != null && !isSatCourse && note.gradeLevel.isNotBlank()) {
@@ -917,42 +934,75 @@ fun DarkThemedNotesReader(
                             fontWeight = FontWeight.Bold,
                             fontSize = 18.sp
                         ),
-                        color = Color.White,
+                        color = readerTextColor,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis
                     )
                 }
 
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    // Download note for offline study
+                    // Mercury Reader Mode Controls Pill
+                    Surface(
+                        color = if (isMercuryMode) EmeraldPrimary.copy(alpha = 0.2f) else Color.Transparent,
+                        shape = RoundedCornerShape(20.dp),
+                        border = BorderStroke(1.dp, if (isMercuryMode) EmeraldPrimary else Color.Gray.copy(alpha = 0.4f)),
+                        modifier = Modifier
+                            .clickable { isMercuryMode = !isMercuryMode }
+                            .padding(end = 4.dp)
+                    ) {
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.AutoAwesome,
+                                contentDescription = "Mercury Reader",
+                                tint = if (isMercuryMode) EmeraldPrimary else Color.Gray,
+                                modifier = Modifier.size(14.dp)
+                            )
+                            Spacer(modifier = Modifier.width(4.dp))
+                            Text(
+                                text = "Mercury",
+                                style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
+                                color = if (isMercuryMode) EmeraldPrimary else Color.Gray,
+                                fontSize = 10.sp
+                            )
+                        }
+                    }
+
+                    // Font Size Cycle
                     IconButton(
                         onClick = {
-                            if (!isDownloaded && downloadProgress == null) {
-                                coroutineScope.launch {
-                                    for (p in 20..100 step 20) {
-                                        downloadProgress = p
-                                        kotlinx.coroutines.delay(80)
-                                    }
-                                    downloadProgress = null
-                                    isDownloaded = true
-                                }
+                            mercuryFontSize = when (mercuryFontSize) {
+                                14.sp -> 16.sp
+                                16.sp -> 18.sp
+                                18.sp -> 21.sp
+                                else -> 14.sp
                             }
                         }
                     ) {
-                        if (downloadProgress != null) {
-                            CircularProgressIndicator(
-                                progress = { (downloadProgress ?: 0) / 100f },
-                                modifier = Modifier.size(20.dp),
-                                color = EmeraldPrimary,
-                                strokeWidth = 2.dp
-                            )
-                        } else {
-                            Icon(
-                                imageVector = if (isDownloaded) Icons.Default.CheckCircle else Icons.Default.Download,
-                                contentDescription = "Download note",
-                                tint = if (isDownloaded) EmeraldPrimary else Color.White
-                            )
+                        Icon(
+                            imageVector = Icons.Default.FormatSize,
+                            contentDescription = "Font size",
+                            tint = readerTextColor
+                        )
+                    }
+
+                    // Mercury Color Theme Cycle
+                    IconButton(
+                        onClick = {
+                            mercuryTheme = when (mercuryTheme) {
+                                "dark" -> "warm_sepia"
+                                "warm_sepia" -> "clean_paper"
+                                else -> "dark"
+                            }
                         }
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.Palette,
+                            contentDescription = "Reader theme",
+                            tint = readerTextColor
+                        )
                     }
 
                     // Save note button
@@ -967,13 +1017,13 @@ fun DarkThemedNotesReader(
                         Icon(
                             imageVector = if (isSaved) Icons.Default.Bookmark else Icons.Default.BookmarkBorder,
                             contentDescription = "Save note",
-                            tint = if (isSaved) GoldAccent else Color.White
+                            tint = if (isSaved) GoldAccent else readerTextColor
                         )
                     }
 
-                    Spacer(modifier = Modifier.width(4.dp))
+                    Spacer(modifier = Modifier.width(2.dp))
                     IconButton(onClick = onClose) {
-                        Icon(Icons.Default.Close, contentDescription = "Close Note", tint = Color.White)
+                        Icon(Icons.Default.Close, contentDescription = "Close Note", tint = readerTextColor)
                     }
                 }
             }
@@ -1052,17 +1102,19 @@ fun DarkThemedNotesReader(
                             }
                         }
                     } else {
-                        // Normal Markdown content display
+                        // Mercury Reader content display
                         Text(
                             text = note.title,
-                            style = MaterialTheme.typography.displayMedium,
-                            color = Color.White,
+                            style = MaterialTheme.typography.displayMedium.copy(
+                                fontSize = (mercuryFontSize.value + 6).sp
+                            ),
+                            color = readerTextColor,
                             modifier = Modifier.padding(bottom = 16.dp)
                         )
 
                         com.example.ui.tools.ui.TamheroMarkdownView(
                             text = note.content,
-                            isDark = true,
+                            isDark = mercuryTheme == "dark",
                             modifier = Modifier.fillMaxWidth()
                         )
 
