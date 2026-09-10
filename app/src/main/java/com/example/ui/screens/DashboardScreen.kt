@@ -500,10 +500,7 @@ fun DashboardScreen(viewModel: StudyViewModel) {
                             }
                     )
 
-                    val showSem1 = selectedSemesterFilter == "all" || selectedSemesterFilter == "sem1"
-                    val showSem2 = selectedSemesterFilter == "all" || selectedSemesterFilter == "sem2"
-
-                    if (showSem1 && sem1Subjects.isNotEmpty()) {
+                    if (sem1Subjects.isNotEmpty()) {
                         item(span = { GridItemSpan(maxLineSpan) }) {
                             Row(
                                 modifier = Modifier
@@ -559,7 +556,7 @@ fun DashboardScreen(viewModel: StudyViewModel) {
                         }
                     }
 
-                    if (showSem2 && sem2Subjects.isNotEmpty()) {
+                    if (sem2Subjects.isNotEmpty()) {
                         item(span = { GridItemSpan(maxLineSpan) }) {
                             Row(
                                 modifier = Modifier
