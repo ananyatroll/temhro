@@ -1,5 +1,6 @@
 package com.example.ui
 
+import android.app.AlarmManager
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -8,21 +9,50 @@ import android.content.Intent
 import android.os.Build
 import androidx.core.app.NotificationCompat
 import com.example.MainActivity
+import java.util.Calendar
 
 object NotificationHelper {
-    private const val CHANNEL_ID = "academic_motivation_channel"
-    private const val CHANNEL_NAME = "Daily Academic Motivation"
-    private const val CHANNEL_DESC = "Morning alerts motivating you to crush your curriculum goals."
+    const val CHANNEL_ID = "academic_motivation_channel"
+    private const val CHANNEL_NAME = "Daily Academic Motivation & Study Alerts"
+    private const val CHANNEL_DESC = "Timed alerts motivating you to study and track trial deadlines."
     private const val NOTIFICATION_ID = 1001
 
     fun createNotificationChannel(context: Context) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val importance = NotificationManager.IMPORTANCE_DEFAULT
+            val importance = NotificationManager.IMPORTANCE_HIGH
             val channel = NotificationChannel(CHANNEL_ID, CHANNEL_NAME, importance).apply {
                 description = CHANNEL_DESC
+                enableLights(true)
+                enableVibration(true)
+                setShowBadge(true)
+                lockscreenVisibility = NotificationCompat.VISIBILITY_PUBLIC
             }
             val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             notificationManager.createNotificationChannel(channel)
+        }
+    }
+
+    fun scheduleAlarmSafely(alarmManager: AlarmManager, triggerTime: Long, pendingIntent: PendingIntent) {
+        try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                if (alarmManager.canScheduleExactAlarms()) {
+                    alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, triggerTime, pendingIntent)
+                } else {
+                    alarmManager.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, triggerTime, pendingIntent)
+                }
+            } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, triggerTime, pendingIntent)
+            } else {
+                alarmManager.set(AlarmManager.RTC_WAKEUP, triggerTime, pendingIntent)
+            }
+        } catch (e: SecurityException) {
+            try {
+                alarmManager.set(AlarmManager.RTC_WAKEUP, triggerTime, pendingIntent)
+            } catch (ex: Exception) {
+                ex.printStackTrace()
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
         }
     }
 
@@ -30,10 +60,10 @@ object NotificationHelper {
         createNotificationChannel(context)
 
         val quotes = listOf(
-            "Good morning! Remember your goal: $studentGoal. Success is a collection of small daily efforts.",
-            "Rise and shine! $studentName, your potential is unlimited. Spend 15 minutes of focus today.",
+            "Good morning! Remember your goal: $studentGoal. Success is built through small daily focus.",
+            "Rise and shine! $studentName, your potential is unlimited. Spend 15 minutes reviewing today.",
             "A brand new day to conquer your exams! Keep pushing towards $studentGoal.",
-            "Believe in yourself, $studentName. High-yield topics are waiting. Standard notes are fully offline!"
+            "Believe in yourself, $studentName. High-yield topics are waiting. Notes are fully offline!"
         )
         val selectedQuote = quotes.random()
 
@@ -42,24 +72,27 @@ object NotificationHelper {
         }
         val pendingIntent = PendingIntent.getActivity(
             context,
-            0,
+            NOTIFICATION_ID,
             intent,
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
         val builder = NotificationCompat.Builder(context, CHANNEL_ID)
-            .setSmallIcon(android.R.drawable.ic_dialog_info) // System fallback icon
+            .setSmallIcon(android.R.drawable.ic_dialog_info)
             .setContentTitle("☀️ Morning Goal Boost")
             .setContentText(selectedQuote)
             .setStyle(NotificationCompat.BigTextStyle().bigText(selectedQuote))
-            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .setPriority(NotificationCompat.PRIORITY_HIGH)
+            .setDefaults(NotificationCompat.DEFAULT_ALL)
+            .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
+            .setCategory(NotificationCompat.CATEGORY_REMINDER)
             .setContentIntent(pendingIntent)
             .setAutoCancel(true)
 
         val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         try {
             notificationManager.notify(NOTIFICATION_ID, builder.build())
-        } catch (e: SecurityException) {
+        } catch (e: Exception) {
             e.printStackTrace()
         }
     }
@@ -77,20 +110,23 @@ object NotificationHelper {
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
-        val text = "Upcoming $subject Assessment: $eventTitle ($timeRemaining). Open Tamhero to review your notes."
+        val text = "Upcoming $subject Assessment: $eventTitle ($timeRemaining). Open Temhiro to review your notes."
         val builder = NotificationCompat.Builder(context, CHANNEL_ID)
             .setSmallIcon(android.R.drawable.ic_dialog_info)
             .setContentTitle("📅 Academic Calendar Alert")
             .setContentText(text)
             .setStyle(NotificationCompat.BigTextStyle().bigText(text))
             .setPriority(NotificationCompat.PRIORITY_HIGH)
+            .setDefaults(NotificationCompat.DEFAULT_ALL)
+            .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
+            .setCategory(NotificationCompat.CATEGORY_EVENT)
             .setContentIntent(pendingIntent)
             .setAutoCancel(true)
 
         val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         try {
             notificationManager.notify(eventTitle.hashCode(), builder.build())
-        } catch (e: SecurityException) {
+        } catch (e: Exception) {
             e.printStackTrace()
         }
     }
@@ -115,32 +151,76 @@ object NotificationHelper {
             .setContentText(text)
             .setStyle(NotificationCompat.BigTextStyle().bigText(text))
             .setPriority(NotificationCompat.PRIORITY_HIGH)
+            .setDefaults(NotificationCompat.DEFAULT_ALL)
+            .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
+            .setCategory(NotificationCompat.CATEGORY_ALARM)
             .setContentIntent(pendingIntent)
             .setAutoCancel(true)
 
         val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         try {
             notificationManager.notify(2001, builder.build())
-        } catch (e: SecurityException) {
+        } catch (e: Exception) {
             e.printStackTrace()
+        }
+    }
+
+    fun scheduleDailyStudyReminders(context: Context) {
+        createNotificationChannel(context)
+        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as? AlarmManager ?: return
+
+        // 2 daily reminders: Morning 8:00 AM & Evening 7:30 PM
+        val reminders = listOf(
+            Triple(8, 0, "☀️ Morning Study Goal: Take 15 minutes to review high-yield summaries today!"),
+            Triple(19, 30, "🌙 Evening Focus Check: Review your study tasks and maintain your streak!")
+        )
+
+        reminders.forEachIndexed { index, (hour, minute, message) ->
+            val calendar = Calendar.getInstance().apply {
+                timeInMillis = System.currentTimeMillis()
+                set(Calendar.HOUR_OF_DAY, hour)
+                set(Calendar.MINUTE, minute)
+                set(Calendar.SECOND, 0)
+                set(Calendar.MILLISECOND, 0)
+                if (timeInMillis <= System.currentTimeMillis()) {
+                    add(Calendar.DAY_OF_YEAR, 1)
+                }
+            }
+
+            val intent = Intent(context, FreeTrialReceiver::class.java).apply {
+                putExtra("title", "📚 Temhiro Daily Study Alert")
+                putExtra("msg", message)
+                putExtra("id", 8000 + index)
+            }
+            val pendingIntent = PendingIntent.getBroadcast(
+                context,
+                8000 + index,
+                intent,
+                PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+            )
+
+            scheduleAlarmSafely(alarmManager, calendar.timeInMillis, pendingIntent)
         }
     }
 
     fun scheduleFreeTrialNotifications(context: Context, activatedAtMillis: Long) {
         createNotificationChannel(context)
-        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as? android.app.AlarmManager ?: return
+        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as? AlarmManager ?: return
         val trialDurationMillis = 72L * 3600L * 1000L
         val expiresAt = activatedAtMillis + trialDurationMillis
 
-        // Milestones: 55h, 48h, 36h, 24h, 12h, 5h, 1h, 10m remaining
+        // Milestones: 70h, 55h, 48h, 36h, 24h, 12h, 5h, 2h, 1h, 30m, 10m remaining
         val milestones = listOf(
-            Pair(55L * 3600L * 1000L, "⏰ 55 Hours Remaining on your Free Trial! Explore your course before it locks."),
-            Pair(48L * 3600L * 1000L, "⏳ 48 Hours Remaining! 2 days left to try Tamhero's high-yield content."),
+            Pair(70L * 3600L * 1000L, "🚀 Welcome to your 72-Hour Full Free Trial! Explore your freshman courses now."),
+            Pair(55L * 3600L * 1000L, "⏰ 55 Hours Remaining on your Free Trial! Explore high-yield chapters before they lock."),
+            Pair(48L * 3600L * 1000L, "⏳ 48 Hours Remaining! 2 days left of full access to Temhiro's curriculum."),
             Pair(36L * 3600L * 1000L, "⚡ 36 Hours Remaining! Halfway through your Free Trial period."),
             Pair(24L * 3600L * 1000L, "⚠️ 24 Hours Remaining! Only 1 day left on your Free Trial."),
-            Pair(12L * 3600L * 1000L, "🚨 12 Hours Remaining! Upgrade to Premium for 300 ETB to keep unlimited access."),
-            Pair(5L * 3600L * 1000L, "🔥 5 Hours Remaining! Your trial course will lock soon."),
-            Pair(1L * 3600L * 1000L, "🚨 1 Hour Remaining! Final chance before your Free Trial course locks."),
+            Pair(12L * 3600L * 1000L, "🚨 12 Hours Remaining! Upgrade to Premium for 300 ETB to keep lifetime access."),
+            Pair(5L * 3600L * 1000L, "🔥 5 Hours Remaining! Your trial courses will lock soon."),
+            Pair(2L * 3600L * 1000L, "⚡ 2 Hours Remaining! Don't lose access to your study summaries."),
+            Pair(1L * 3600L * 1000L, "🚨 1 Hour Remaining! Final chance before your Free Trial courses lock."),
+            Pair(30L * 60L * 1000L, "⚠️ 30 Minutes Remaining! Upgrade now to keep studying uninterrupted."),
             Pair(10L * 60L * 1000L, "⏰ 10 Minutes Remaining! Upgrade now for 300 ETB to retain full access.")
         )
 
@@ -150,6 +230,7 @@ object NotificationHelper {
             val triggerTime = expiresAt - remainingMs
             if (triggerTime > now) {
                 val intent = Intent(context, FreeTrialReceiver::class.java).apply {
+                    putExtra("title", "⏰ Free Trial Status Alert")
                     putExtra("msg", messageText)
                     putExtra("id", 5000 + index)
                 }
@@ -159,15 +240,7 @@ object NotificationHelper {
                     intent,
                     PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
                 )
-                try {
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                        alarmManager.setExactAndAllowWhileIdle(android.app.AlarmManager.RTC_WAKEUP, triggerTime, pendingIntent)
-                    } else {
-                        alarmManager.set(android.app.AlarmManager.RTC_WAKEUP, triggerTime, pendingIntent)
-                    }
-                } catch (e: SecurityException) {
-                    e.printStackTrace()
-                }
+                scheduleAlarmSafely(alarmManager, triggerTime, pendingIntent)
             }
         }
     }

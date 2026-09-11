@@ -23,6 +23,7 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
     private val sharedPrefs = application.getSharedPreferences("offline_study_local_cache", Context.MODE_PRIVATE)
 
     // Student Tools UI State
+    val isToolsSidebarOpen = MutableStateFlow(false)
     val isStudentToolsOpen = MutableStateFlow(false)
     val activeToolsTab = MutableStateFlow("timer_tasks") // "calendar", "grades", "scanner", "timer_tasks"
     val toolsContextPrompt = MutableStateFlow<String?>(null)
@@ -56,6 +57,11 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
             val currentEpochDay = System.currentTimeMillis() / (1000 * 60 * 60 * 24)
             studentToolsRepo.seedInitialDataIfEmpty(currentEpochDay)
         }
+        val activatedTrial = sharedPrefs.getLong("free_trial_activated_at", 0L)
+        if (activatedTrial > 0L) {
+            NotificationHelper.scheduleFreeTrialNotifications(application, activatedTrial)
+        }
+        NotificationHelper.scheduleDailyStudyReminders(application)
     }
 
     fun deriveActiveLearningContext(): LearningContext {
@@ -127,10 +133,23 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
+    fun openToolsSidebar() {
+        isToolsSidebarOpen.value = true
+    }
+
+    fun closeToolsSidebar() {
+        isToolsSidebarOpen.value = false
+    }
+
+    fun toggleToolsSidebar() {
+        isToolsSidebarOpen.value = !isToolsSidebarOpen.value
+    }
+
     fun openStudentTools(tab: String = "timer_tasks", prompt: String? = null, context: LearningContext? = null) {
         activeToolsTab.value = tab
         toolsContextPrompt.value = prompt
         activeLearningContext.value = context ?: deriveActiveLearningContext()
+        isToolsSidebarOpen.value = false
         isStudentToolsOpen.value = true
     }
 
@@ -314,7 +333,8 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
         if (freeTrialActivatedAtMillis.value == 0L) {
             freeTrialActivatedAtMillis.value = now
             sharedPrefs.edit().putLong("free_trial_activated_at", now).apply()
-            context?.let { NotificationHelper.scheduleFreeTrialNotifications(it, now) }
+            val ctx = context ?: getApplication<Application>()
+            NotificationHelper.scheduleFreeTrialNotifications(ctx, now)
         }
         showFreeTrialConfirmationDialog.value = false
         pendingTrialPackageId.value = null

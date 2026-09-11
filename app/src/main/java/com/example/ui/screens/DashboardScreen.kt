@@ -630,33 +630,32 @@ fun GreetingHeader(viewModel: StudyViewModel, username: String) {
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            horizontalArrangement = Arrangement.spacedBy(10.dp),
             modifier = Modifier.weight(1f)
         ) {
-            // Circular profile icon in the top left corner
+            // Tools Sidebar Menu Button (Opens full study suite sidebar drawer)
             Surface(
                 modifier = Modifier
                     .size(42.dp)
-                    .clip(CircleShape)
-                    .clickable { viewModel.currentTab.value = "profile" }
-                    .testTag("user_profile_icon"),
-                color = if (isDarkTheme) CardBgDark else IndigoSecondary,
-                shape = CircleShape,
-                shadowElevation = 4.dp
+                    .clip(RoundedCornerShape(12.dp))
+                    .border(1.5.dp, EmeraldPrimary.copy(alpha = 0.6f), RoundedCornerShape(12.dp))
+                    .clickable { viewModel.openToolsSidebar() }
+                    .testTag("tools_sidebar_toggle"),
+                color = if (isDarkTheme) CardBgDark else Color(0xFFF0FDF4),
+                shape = RoundedCornerShape(12.dp),
+                shadowElevation = 3.dp
             ) {
                 Box(
                     contentAlignment = Alignment.Center,
                     modifier = Modifier.fillMaxSize()
                 ) {
                     Icon(
-                        imageVector = Icons.Default.Person,
-                        contentDescription = "User Profile",
-                        tint = if (isDarkTheme) HolographicAqua else Color.White,
+                        imageVector = Icons.Default.Menu,
+                        contentDescription = "Open Study Tools Sidebar",
+                        tint = EmeraldPrimary,
                         modifier = Modifier.size(24.dp)
                     )
                 }
-            }
-
             }
 
             Column(

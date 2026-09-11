@@ -21,12 +21,13 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.ads.AdConfig
 import com.example.ads.AdManager
 import com.example.ads.TinatBannerAd
+import com.example.ui.NotificationHelper
 import com.example.ui.StudyViewModel
 import com.example.ui.components.*
 import com.example.ui.screens.*
 import com.example.ui.theme.EmeraldPrimary
 import com.example.ui.theme.MyApplicationTheme
-import com.example.ui.tools.ui.StudentToolsLauncher
+import com.example.ui.tools.ui.StudentToolsSidebar
 import com.example.ui.tools.ui.StudentToolsModalSheet
 
 class MainActivity : ComponentActivity() {
@@ -36,6 +37,10 @@ class MainActivity : ComponentActivity() {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
             requestPermissions(arrayOf(android.Manifest.permission.POST_NOTIFICATIONS), 101)
         }
+
+        // Initialize Notification Channels & Timed Daily Reminders
+        NotificationHelper.createNotificationChannel(this)
+        NotificationHelper.scheduleDailyStudyReminders(this)
 
         // Initialize Google AdMob SDK & UMP Privacy Consent flow via AdManager
         AdManager.initialize(this)
@@ -55,6 +60,7 @@ class MainActivity : ComponentActivity() {
                 val academicDepartment by viewModel.academicDepartment.collectAsState()
 
                 // Student Tools & Assessment States
+                val isToolsSidebarOpen by viewModel.isToolsSidebarOpen.collectAsState()
                 val isStudentToolsOpen by viewModel.isStudentToolsOpen.collectAsState()
                 val activeSub by viewModel.activeSubject.collectAsState()
                 val showContentPlay by viewModel.showContentPlayView.collectAsState()
@@ -87,14 +93,13 @@ class MainActivity : ComponentActivity() {
                         currentTab == "home" &&
                         !isStudyingOrTakingExam
 
-                val showStudentToolsLauncher = isCourseSelectorScreen && !showMarketing && !isStudentToolsOpen
-
                 val shouldShowBottomBanner = AdManager.ADS_ENABLED &&
                         AdManager.BANNER_ADS_ENABLED &&
                         !isSplashChecking &&
                         !isPaymentOrVerification &&
                         !showScoreResultModal &&
-                        !isStudentToolsOpen
+                        !isStudentToolsOpen &&
+                        !isToolsSidebarOpen
 
                 Scaffold(
                     modifier = Modifier.fillMaxSize(),
@@ -212,12 +217,11 @@ class MainActivity : ComponentActivity() {
                                         MarketingLandingView(viewModel = viewModel)
                                     }
 
-                                    // Student Tools Floating Launcher (Circular 56dp button with Tamhero logo)
-                                    // Locked strictly to the course selector view; hidden in notes reader, exam arena, etc.
-                                    StudentToolsLauncher(
-                                        isVisible = showStudentToolsLauncher,
-                                        onClick = { viewModel.openStudentTools("timer_tasks") },
-                                        modifier = Modifier.align(androidx.compose.ui.Alignment.BottomEnd)
+                                    // Student Tools Slide-Out Sidebar Drawer
+                                    StudentToolsSidebar(
+                                        viewModel = viewModel,
+                                        isOpen = isToolsSidebarOpen,
+                                        onClose = { viewModel.closeToolsSidebar() }
                                     )
 
                                     // Student Tools Modal Bottom Sheet
