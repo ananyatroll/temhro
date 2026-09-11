@@ -495,33 +495,6 @@ fun DashboardScreen(viewModel: StudyViewModel) {
                     )
 
                     if (sem1Subjects.isNotEmpty()) {
-                        item(span = { GridItemSpan(maxLineSpan) }) {
-                            Row(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(top = 8.dp, bottom = 4.dp),
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                Surface(
-                                    shape = RoundedCornerShape(8.dp),
-                                    color = EmeraldPrimary,
-                                    modifier = Modifier.padding(end = 12.dp)
-                                ) {
-                                    Text(
-                                        text = "SEMESTER 1 COURSES",
-                                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
-                                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black),
-                                        color = Color.White
-                                    )
-                                }
-                                HorizontalDivider(
-                                    modifier = Modifier.weight(1f),
-                                    color = if (isDarkTheme) Color(0xFF334155) else Color(0xFFE2E8F0),
-                                    thickness = 1.dp
-                                )
-                            }
-                        }
-
                         items(sem1Subjects) { subject ->
                             val isDone = completedSubjectIds.contains(subject.id)
                             val isLocked = viewModel.isSubjectLocked(subject)
@@ -532,7 +505,7 @@ fun DashboardScreen(viewModel: StudyViewModel) {
                                 iconName = subject.icon,
                                 isCompleted = isDone,
                                 isLocked = isLocked,
-                                semesterBadge = "Sem 1",
+                                semesterBadge = null,
                                 progress = progressVal,
                                 isDarkTheme = isDarkTheme,
                                 currentLang = currentLang,
@@ -551,33 +524,6 @@ fun DashboardScreen(viewModel: StudyViewModel) {
                     }
 
                     if (sem2Subjects.isNotEmpty()) {
-                        item(span = { GridItemSpan(maxLineSpan) }) {
-                            Row(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(top = 16.dp, bottom = 4.dp),
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                Surface(
-                                    shape = RoundedCornerShape(8.dp),
-                                    color = Color(0xFF3B82F6),
-                                    modifier = Modifier.padding(end = 12.dp)
-                                ) {
-                                    Text(
-                                        text = "SEMESTER 2 COURSES",
-                                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
-                                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black),
-                                        color = Color.White
-                                    )
-                                }
-                                HorizontalDivider(
-                                    modifier = Modifier.weight(1f),
-                                    color = if (isDarkTheme) Color(0xFF334155) else Color(0xFFE2E8F0),
-                                    thickness = 1.dp
-                                )
-                            }
-                        }
-
                         items(sem2Subjects) { subject ->
                             val isDone = completedSubjectIds.contains(subject.id)
                             val isLocked = viewModel.isSubjectLocked(subject)
@@ -588,7 +534,7 @@ fun DashboardScreen(viewModel: StudyViewModel) {
                                 iconName = subject.icon,
                                 isCompleted = isDone,
                                 isLocked = isLocked,
-                                semesterBadge = "Sem 2",
+                                semesterBadge = null,
                                 progress = progressVal,
                                 isDarkTheme = isDarkTheme,
                                 currentLang = currentLang,
