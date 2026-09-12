@@ -25,6 +25,11 @@ class FreeTrialReceiver : BroadcastReceiver() {
         val title = intent.getStringExtra("title") ?: "⏰ Temhiro Study Alert"
         val id = intent.getIntExtra("id", 5000)
 
+        // Reschedule daily reminders when triggered
+        if (id >= 8000) {
+            NotificationHelper.scheduleDailyStudyReminders(context)
+        }
+
         NotificationHelper.createNotificationChannel(context)
 
         val mainIntent = Intent(context, MainActivity::class.java).apply {

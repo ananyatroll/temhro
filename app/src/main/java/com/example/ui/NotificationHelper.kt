@@ -169,10 +169,11 @@ object NotificationHelper {
         createNotificationChannel(context)
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as? AlarmManager ?: return
 
-        // 2 daily reminders: Morning 8:00 AM & Evening 7:30 PM
+        // 3 daily reminders: Morning 8:00 AM, Afternoon 2:00 PM, & Evening 8:00 PM
         val reminders = listOf(
             Triple(8, 0, "☀️ Morning Study Goal: Take 15 minutes to review high-yield summaries today!"),
-            Triple(19, 30, "🌙 Evening Focus Check: Review your study tasks and maintain your streak!")
+            Triple(14, 0, "🎯 Afternoon Focus Boost: Complete 5 practice questions to build your score!"),
+            Triple(20, 0, "🌙 Evening Focus Check: Review your study tasks and maintain your streak!")
         )
 
         reminders.forEachIndexed { index, (hour, minute, message) ->

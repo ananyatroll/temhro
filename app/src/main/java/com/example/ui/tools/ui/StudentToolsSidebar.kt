@@ -46,7 +46,7 @@ fun StudentToolsSidebar(
     val answeredCount = viewModel.answeredQuestionsSet.collectAsState().value.size
     val readNotesCount = viewModel.readNotesSet.collectAsState().value.size
     val totalXp = (answeredCount * 15) + (readNotesCount * 25)
-    val streakDays = (answeredCount / 3).coerceAtLeast(1)
+    val streakDays by viewModel.dailyStreakCount.collectAsState()
 
     val trialActivatedAt by viewModel.freeTrialActivatedAtMillis.collectAsState()
     val isTrialExpired = viewModel.isFreeTrialExpired()

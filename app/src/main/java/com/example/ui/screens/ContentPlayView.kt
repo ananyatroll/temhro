@@ -1677,7 +1677,7 @@ fun SleekVideosScreen(
                     VideoItem("euee_eng4", "EUEE English Drill 4: Context Clues & Rapid Synonyms", "14 mins", "How to decrypt hard english words on comprehension passages using nearby syntax markers and context.", "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4")
                 )
             }
-            "uat_english" -> {
+            "uat_verbal", "uat_english" -> {
                 listOf(
                     VideoItem("uat_eng1", "Lecture 1: Verbal Aptitude Section & Strategy", "14 mins", "Navigating the English and critical reasoning components of the modern University Admission Test (UAT).", "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"),
                     VideoItem("uat_eng2", "Lecture 2: Synonyms, Antonyms, and Analogy Hacks", "15 mins", "Developing vocabulary reasoning power and logical associations under adaptive exam timing constraints.", "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"),
@@ -2283,63 +2283,71 @@ fun FreeTrialPaywallDialog(
                     modifier = Modifier.padding(bottom = 16.dp)
                 )
 
-                // Plan selection: Semester 1 (300 ETB), Semester 2 (300 ETB), Full Package (500 ETB)
-                Text(
-                    text = "CHOOSE YOUR PLAN",
-                    style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black, letterSpacing = 1.5.sp),
-                    color = GoldAccent,
-                    modifier = Modifier.padding(bottom = 8.dp)
-                )
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(bottom = 20.dp),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    val plans = listOf(
-                        "sem1" to ("Semester 1" to "300 ETB"),
-                        "sem2" to ("Semester 2" to "300 ETB"),
-                        "full_year" to ("Full Package" to "500 ETB")
+                val hasSemesterPlans = packageId.startsWith("freshman") || packageId == "department" || packageId.startsWith("university")
+
+                if (hasSemesterPlans) {
+                    // Plan selection: Semester 1 (300 ETB), Semester 2 (300 ETB), Full Package (500 ETB)
+                    Text(
+                        text = "CHOOSE YOUR PLAN",
+                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black, letterSpacing = 1.5.sp),
+                        color = GoldAccent,
+                        modifier = Modifier.padding(bottom = 8.dp)
                     )
-                    plans.forEach { (pKey, pInfo) ->
-                        val isSel = selectedPlan == pKey
-                        Surface(
-                            modifier = Modifier
-                                .weight(1f)
-                                .clickable { selectedPlan = pKey },
-                            shape = RoundedCornerShape(10.dp),
-                            color = if (isSel) EmeraldPrimary.copy(alpha = 0.25f) else Color(0xFF1E293B),
-                            border = BorderStroke(1.2.dp, if (isSel) EmeraldPrimary else Color.Transparent)
-                        ) {
-                            Column(
-                                modifier = Modifier.padding(vertical = 10.dp, horizontal = 4.dp),
-                                horizontalAlignment = Alignment.CenterHorizontally
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(bottom = 20.dp),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        val plans = listOf(
+                            "sem1" to ("Semester 1" to "300 ETB"),
+                            "sem2" to ("Semester 2" to "300 ETB"),
+                            "full_year" to ("Full Package" to "500 ETB")
+                        )
+                        plans.forEach { (pKey, pInfo) ->
+                            val isSel = selectedPlan == pKey
+                            Surface(
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .clickable { selectedPlan = pKey },
+                                shape = RoundedCornerShape(10.dp),
+                                color = if (isSel) EmeraldPrimary.copy(alpha = 0.25f) else Color(0xFF1E293B),
+                                border = BorderStroke(1.2.dp, if (isSel) EmeraldPrimary else Color.Transparent)
                             ) {
-                                Text(
-                                    text = pInfo.first,
-                                    style = MaterialTheme.typography.bodySmall.copy(
-                                        fontWeight = if (isSel) FontWeight.Bold else FontWeight.Medium,
-                                        fontSize = 11.sp
-                                    ),
-                                    color = Color.White,
-                                    textAlign = TextAlign.Center,
-                                    maxLines = 1
-                                )
-                                Spacer(modifier = Modifier.height(3.dp))
-                                Text(
-                                    text = pInfo.second,
-                                    style = MaterialTheme.typography.labelSmall.copy(
-                                        fontWeight = FontWeight.Bold,
-                                        fontSize = 10.sp
-                                    ),
-                                    color = if (isSel) GoldAccent else TextMuted
-                                )
+                                Column(
+                                    modifier = Modifier.padding(vertical = 10.dp, horizontal = 4.dp),
+                                    horizontalAlignment = Alignment.CenterHorizontally
+                                ) {
+                                    Text(
+                                        text = pInfo.first,
+                                        style = MaterialTheme.typography.bodySmall.copy(
+                                            fontWeight = if (isSel) FontWeight.Bold else FontWeight.Medium,
+                                            fontSize = 11.sp
+                                        ),
+                                        color = Color.White,
+                                        textAlign = TextAlign.Center,
+                                        maxLines = 1
+                                    )
+                                    Spacer(modifier = Modifier.height(3.dp))
+                                    Text(
+                                        text = pInfo.second,
+                                        style = MaterialTheme.typography.labelSmall.copy(
+                                            fontWeight = FontWeight.Bold,
+                                            fontSize = 10.sp
+                                        ),
+                                        color = if (isSel) GoldAccent else TextMuted
+                                    )
+                                }
                             }
                         }
                     }
                 }
 
-                val currentPriceETB = if (selectedPlan == "full_year") 500 else 300
+                val currentPriceETB = if (hasSemesterPlans) {
+                    if (selectedPlan == "full_year") 500 else 300
+                } else {
+                    300
+                }
 
                 Column(
                     modifier = Modifier.fillMaxWidth(),
@@ -2347,25 +2355,44 @@ fun FreeTrialPaywallDialog(
                 ) {
                     Button(
                         onClick = {
-                            val stream = if (packageId.contains("social")) "social_science" else "natural_science"
-                            val targetProductId = "freshman_${stream}_y1_${selectedPlan}"
-                            val matched = com.example.data.ProductCatalog.get(targetProductId)
-                                ?: com.example.data.Product(
-                                    id = targetProductId,
-                                    category = "freshman",
-                                    stream = stream,
-                                    academicYear = 1,
-                                    plan = selectedPlan,
-                                    amount = currentPriceETB,
-                                    shortLabel = if (selectedPlan == "full_year") "Full Academic Year" else "Semester ${if (selectedPlan == "sem1") "1" else "2"}"
-                                )
-                            viewModel.createPurchaseRequest(matched)
-                            val semFilter = when (selectedPlan) {
-                                "sem1" -> "sem1"
-                                "sem2" -> "sem2"
-                                else -> "all"
+                            if (hasSemesterPlans) {
+                                val stream = if (packageId.contains("social")) "social_science" else "natural_science"
+                                val targetProductId = "freshman_${stream}_y1_${selectedPlan}"
+                                val matched = com.example.data.ProductCatalog.get(targetProductId)
+                                    ?: com.example.data.Product(
+                                        id = targetProductId,
+                                        category = if (packageId.startsWith("freshman")) "freshman" else "university",
+                                        stream = stream,
+                                        academicYear = 1,
+                                        plan = selectedPlan,
+                                        amount = currentPriceETB,
+                                        shortLabel = if (selectedPlan == "full_year") "Full Academic Year" else "Semester ${if (selectedPlan == "sem1") "1" else "2"}"
+                                    )
+                                viewModel.createPurchaseRequest(matched)
+                                val semFilter = when (selectedPlan) {
+                                    "sem1" -> "sem1"
+                                    "sem2" -> "sem2"
+                                    else -> "all"
+                                }
+                                viewModel.setSemesterFilter(semFilter)
+                            } else {
+                                val targetProductId = when {
+                                    packageId.startsWith("coc") -> packageId
+                                    packageId == "euee" || packageId.startsWith("euee") -> "euee_full"
+                                    packageId == "aau_uat" -> "aau_uat_full"
+                                    packageId == "exit_exam" -> "exit_exam_full"
+                                    else -> "${packageId}_full"
+                                }
+                                val matched = com.example.data.ProductCatalog.get(targetProductId)
+                                    ?: com.example.data.Product(
+                                        id = targetProductId,
+                                        category = packageId,
+                                        plan = "full_package",
+                                        amount = 300,
+                                        shortLabel = displayedPackageName
+                                    )
+                                viewModel.createPurchaseRequest(matched)
                             }
-                            viewModel.setSemesterFilter(semFilter)
                             onUpgradePremium()
                         },
                         modifier = Modifier

@@ -269,10 +269,8 @@ class StudyRepository(
                 StudySubject("freshman_soc_critical_thinking", "Critical Thinking – LoCT 1011", "psychology", "freshman_social"),
 
                 // AAU UAT Prep Package
-                StudySubject("uat_verbal", "Verbal Reasoning", "english", "aau_uat"),
-                StudySubject("uat_quantitative", "Quantitative Reasoning", "maths", "aau_uat"),
-                StudySubject("uat_analytical", "Analytical Reasoning", "analytics", "aau_uat"),
-                StudySubject("uat_english", "General English & Vocabulary", "english", "aau_uat"),
+                StudySubject("uat_verbal", "Verbal Reasoning, English & Vocabulary", "english", "aau_uat"),
+                StudySubject("uat_quantitative", "Quantitative & Analytical Reasoning", "maths", "aau_uat"),
 
                 // University Department Package
                 StudySubject("dept_accounting", "Accounting and Finance", "accounting", "department"),
@@ -814,14 +812,14 @@ class StudyRepository(
 
     private fun getUatNotes(): List<SubjectNote> {
         return listOf(
-            SubjectNote("uat_verb_n1", "uat_verbal", "UNIT 1", "Verbal Analogies and Synonyms", 
-                "Verbal reasoning analyzes vocabulary relationships, logical analogies, and reading interpretation. Verbal analogies test structural logic (e.g., KITTEN : CAT :: PUPPY : DOG). Focus on recognizing synonym links and sentence completions."),
+            SubjectNote("uat_verb_n1", "uat_verbal", "UNIT 1", "Verbal Analogies, Synonyms & Vocabulary", 
+                "Verbal reasoning analyzes vocabulary relationships, logical analogies, and reading interpretation. Verbal analogies test structural logic (e.g., KITTEN : CAT :: PUPPY : DOG). Focus on recognizing synonym links, antonyms, and sentence completions."),
+            SubjectNote("uat_verb_n2", "uat_verbal", "UNIT 2", "General English & Grammar Structure", 
+                "General English sections test structural grammar, vocabulary usage, reading comprehension, error correction, and paragraph organization. Crucial tips include managing time properly and recognizing transition markers."),
             SubjectNote("uat_quant_n1", "uat_quantitative", "UNIT 1", "Quantitative and Algebraic Models", 
                 "Quantitative reasoning tests mathematical arithmetic, geometric area formulations, percentages, sequence progression, and simple statistics. Tip: focus on speed arithmetic, fraction calculations, and solving systems of algebraic equations."),
-            SubjectNote("uat_analy_n1", "uat_analytical", "UNIT 1", "Analytical Constraints and Logic Gaps", 
-                "Analytical reasoning requires organizing sets of complex data with strict constraints (e.g., ordering people in seating grids, scheduling tasks sequentially). Learn to draw logic templates to parse variables matching specific clues."),
-            SubjectNote("uat_eng_n1", "uat_english", "UNIT 1", "Addis Ababa University Test Structure", 
-                "General English sections test structural grammar, vocabulary usage, reading comprehension, error correction, and paragraph organization. Crucial tips include managing time properly and recognizing transition markers.")
+            SubjectNote("uat_quant_n2", "uat_quantitative", "UNIT 2", "Analytical Constraints & Logic Grids", 
+                "Analytical reasoning requires organizing sets of complex data with strict constraints (e.g., ordering people in seating grids, scheduling tasks sequentially). Learn to draw logic templates to parse variables matching specific clues.")
         )
     }
 
@@ -874,8 +872,8 @@ class StudyRepository(
         return listOf(
             ExamQuestion("uat_q1", "uat_verbal", "Select the pair that completes: FLOWERS : BOUQUET :: ______ : ______", "Stars : Galaxy", "Trees : Desert", "Soldiers : Camp", "Students : University", "A", "A group of flowers constitutes a bouquet; similarly, a group of stars constitutes a galaxy."),
             ExamQuestion("uat_q2", "uat_quantitative", "If 20% of a certain number is equal to 45, what is 80% of that same number?", "90", "180", "135", "360", "B", "If 20% is 45, then 80% (which is 20% * 4) must be equal to 45 * 4 = 180."),
-            ExamQuestion("uat_q3", "uat_analytical", "Five students (A, B, C, D, E) stand in line. A must stand ahead of B. C stands immediately after D. If D is third, where does E stand if A is second?", "First", "Fourth", "Fifth", "Cannot be determined", "C", "A stands ahead of B, and D is third with C fourth. Since A is second, B, C, and D are after A. So E stands first or fifth. In this arrangement, with A second, E stands first."),
-            ExamQuestion("uat_q4", "uat_english", "Identify the synonym of the word 'Pernicious' as used in formal language contexts.", "Beneficial", "Harmful or destructive", "Unbelievable", "Intricate", "B", "Pernicious means having a harmful effect, especially in a gradual, passive, or subtle way.")
+            ExamQuestion("uat_q3", "uat_quantitative", "Five students (A, B, C, D, E) stand in line. A must stand ahead of B. C stands immediately after D. If D is third, where does E stand if A is second?", "First", "Fourth", "Fifth", "Cannot be determined", "C", "A stands ahead of B, and D is third with C fourth. Since A is second, B, C, and D are after A. So E stands first or fifth. In this arrangement, with A second, E stands first."),
+            ExamQuestion("uat_q4", "uat_verbal", "Identify the synonym of the word 'Pernicious' as used in formal language contexts.", "Beneficial", "Harmful or destructive", "Unbelievable", "Intricate", "B", "Pernicious means having a harmful effect, especially in a gradual, passive, or subtle way.")
         )
     }
 
@@ -883,10 +881,10 @@ class StudyRepository(
         return listOf(
             // ===== NATURAL SCIENCE – Semester I Flashcards =====
             // General Physics (Phys 1011) – Natural only
-            Flashcard("fn_fc_nat_phy1", "freshman_nat_physics", "Vector Product", "Cross product of two vectors yielding a orthogonal vector. Chapter 1.", false, false, "Chapter 1"),
-            Flashcard("fn_fc_nat_phy2", "freshman_nat_physics", "Newton's Second Law", "Force equals mass times acceleration (F = ma). Chapter 2.", false, false, "Chapter 2"),
-            Flashcard("fn_fc_nat_phy3", "freshman_nat_physics", "Pascal's Principle", "Pressure applied to an enclosed fluid is transmitted undiminished. Chapter 3.", false, false, "Chapter 3"),
-            Flashcard("fn_fc_nat_phy4", "freshman_nat_physics", "Coulomb's Law", "Electrostatic force between charges is proportional to charge product over distance squared. Chapter 4.", false, false, "Chapter 4"),
+            Flashcard("fn_fc_nat_phy1", "freshman_nat_physics", "Vector Quantity", "A physical quantity having both magnitude and direction (e.g., Velocity, Acceleration, Force). Chapter 1.", false, false, "Chapter 1"),
+            Flashcard("fn_fc_nat_phy2", "freshman_nat_physics", "Newton's 2nd Law", "F = ma. Net force is directly proportional to acceleration and mass. Chapter 2.", false, false, "Chapter 2"),
+            Flashcard("fn_fc_nat_phy3", "freshman_nat_physics", "Pascal's Principle", "Pressure applied to an enclosed static fluid is transmitted undiminished throughout. Chapter 3.", false, false, "Chapter 3"),
+            Flashcard("fn_fc_nat_phy4", "freshman_nat_physics", "Doppler Effect", "Apparent shift in wave frequency due to relative motion between source and observer. Chapter 4.", false, false, "Chapter 4"),
 
             // Communicative English I – Both tracks
             Flashcard("fn_fc_nat_eng1_1", "freshman_nat_english_1", "Active Voice", "When the subject performs the action. Example: 'The team won.' Chapter 1.", false, false, "Chapter 1"),
@@ -1049,10 +1047,10 @@ class StudyRepository(
             Flashcard("fn_fc_nat_chem4", "freshman_nat_chemistry", "Intermolecular Force", "Forces of attraction between molecules. Chapter 4.", false, false, "Chapter 4"),
 
             // AAU UAT Prep
-            Flashcard("uat_fc1", "uat_verbal", "Analogy", "Cognitive comparison identifying patterns between pairs of terms.", false, false),
-            Flashcard("uat_fc2", "uat_quantitative", "Sequence Series", "Mathematical progressions following sequential logic.", false, false),
-            Flashcard("uat_fc3", "uat_analytical", "Logic Deductions", "Applying constraint grids sequentially to parse valid orders.", false, false),
-            Flashcard("uat_fc4", "uat_english", "Synonym Pernicious", "Destructive, harmful, causing insidious damage over time.", false, false)
+            Flashcard("uat_fc1", "uat_verbal", "Analogy & Word Pairs", "Cognitive comparison identifying patterns between pairs of terms.", false, false),
+            Flashcard("uat_fc2", "uat_quantitative", "Sequence & Series", "Mathematical progressions following sequential logic.", false, false),
+            Flashcard("uat_fc3", "uat_quantitative", "Logic Deductions", "Applying constraint grids sequentially to parse valid orders.", false, false),
+            Flashcard("uat_fc4", "uat_verbal", "Synonym: Pernicious", "Destructive, harmful, causing insidious damage over time.", false, false)
         )
     }
 

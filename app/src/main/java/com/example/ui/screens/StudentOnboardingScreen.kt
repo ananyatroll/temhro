@@ -603,24 +603,24 @@ fun StudentOnboardingScreen(viewModel: StudyViewModel) {
                 }
             }
 
-            // ------------------ QUESTION 6: 13 CONDITIONS & EULA AGREEMENT ------------------
+            // ------------------ STEP 6: LEGAL COMPLIANCE & POLICIES ------------------
+            val uriHandler = androidx.compose.ui.platform.LocalUriHandler.current
+            fun openLegalUrl(url: String) {
+                try {
+                    uriHandler.openUri(url)
+                } catch (_: Exception) {}
+            }
+
             Card(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(bottom = 20.dp)
-                    .border(
-                        1.dp,
-                        if (agreedToConditions) EmeraldPrimary.copy(alpha = 0.6f) else cardBorder,
-                        RoundedCornerShape(16.dp)
-                    ),
+                    .padding(bottom = 24.dp)
+                    .border(1.dp, if (agreedToConditions) EmeraldPrimary.copy(alpha = 0.5f) else cardBorder, RoundedCornerShape(16.dp)),
                 shape = RoundedCornerShape(16.dp),
                 colors = CardDefaults.cardColors(containerColor = cardBg)
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        modifier = Modifier.fillMaxWidth()
-                    ) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
                         Box(
                             modifier = Modifier
                                 .size(32.dp)
@@ -638,23 +638,106 @@ fun StudentOnboardingScreen(viewModel: StudyViewModel) {
                         Spacer(modifier = Modifier.width(12.dp))
                         Column(modifier = Modifier.weight(1f)) {
                             Text(
-                                text = "13 Terms, Conditions & EULA",
+                                text = "Legal Agreements & Policies",
                                 style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
                                 color = textPrimary
                             )
                             Text(
-                                text = "Required to access curriculum packages & tools",
+                                text = "Please review our legal agreements before continuing",
                                 style = MaterialTheme.typography.bodySmall.copy(fontSize = 11.sp),
                                 color = textSecondary
                             )
                         }
                     }
 
-                    Spacer(modifier = Modifier.height(12.dp))
+                    Spacer(modifier = Modifier.height(14.dp))
+
+                    // Buttons to view official legal websites
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        // EULA Button
+                        Surface(
+                            shape = RoundedCornerShape(10.dp),
+                            color = if (selectedThemeDark) Color(0xFF1E293B) else Color(0xFFF1F5F9),
+                            border = androidx.compose.foundation.BorderStroke(1.dp, if (selectedThemeDark) Color(0xFF334155) else Color(0xFFE2E8F0)),
+                            modifier = Modifier
+                                .weight(1f)
+                                .clickable { openLegalUrl(com.example.ui.components.URL_EULA) }
+                        ) {
+                            Row(
+                                modifier = Modifier.padding(vertical = 10.dp, horizontal = 6.dp),
+                                horizontalArrangement = Arrangement.Center,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Icon(Icons.Default.Article, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(14.dp))
+                                Spacer(modifier = Modifier.width(4.dp))
+                                Text(
+                                    text = "EULA",
+                                    style = MaterialTheme.typography.bodySmall.copy(fontWeight = FontWeight.Bold, fontSize = 11.sp),
+                                    color = textPrimary,
+                                    maxLines = 1
+                                )
+                            }
+                        }
+
+                        // Terms & Conditions Button
+                        Surface(
+                            shape = RoundedCornerShape(10.dp),
+                            color = if (selectedThemeDark) Color(0xFF1E293B) else Color(0xFFF1F5F9),
+                            border = androidx.compose.foundation.BorderStroke(1.dp, if (selectedThemeDark) Color(0xFF334155) else Color(0xFFE2E8F0)),
+                            modifier = Modifier
+                                .weight(1.3f)
+                                .clickable { openLegalUrl(com.example.ui.components.URL_TERMS_OF_SERVICE) }
+                        ) {
+                            Row(
+                                modifier = Modifier.padding(vertical = 10.dp, horizontal = 6.dp),
+                                horizontalArrangement = Arrangement.Center,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Icon(Icons.Default.Gavel, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(14.dp))
+                                Spacer(modifier = Modifier.width(4.dp))
+                                Text(
+                                    text = "Terms & Conditions",
+                                    style = MaterialTheme.typography.bodySmall.copy(fontWeight = FontWeight.Bold, fontSize = 11.sp),
+                                    color = textPrimary,
+                                    maxLines = 1
+                                )
+                            }
+                        }
+
+                        // Privacy Policy Button
+                        Surface(
+                            shape = RoundedCornerShape(10.dp),
+                            color = if (selectedThemeDark) Color(0xFF1E293B) else Color(0xFFF1F5F9),
+                            border = androidx.compose.foundation.BorderStroke(1.dp, if (selectedThemeDark) Color(0xFF334155) else Color(0xFFE2E8F0)),
+                            modifier = Modifier
+                                .weight(1.2f)
+                                .clickable { openLegalUrl(com.example.ui.components.URL_PRIVACY_POLICY) }
+                        ) {
+                            Row(
+                                modifier = Modifier.padding(vertical = 10.dp, horizontal = 6.dp),
+                                horizontalArrangement = Arrangement.Center,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Icon(Icons.Default.PrivacyTip, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(14.dp))
+                                Spacer(modifier = Modifier.width(4.dp))
+                                Text(
+                                    text = "Privacy Policy",
+                                    style = MaterialTheme.typography.bodySmall.copy(fontWeight = FontWeight.Bold, fontSize = 11.sp),
+                                    color = textPrimary,
+                                    maxLines = 1
+                                )
+                            }
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.height(14.dp))
 
                     Surface(
                         shape = RoundedCornerShape(12.dp),
-                        color = if (agreedToConditions) EmeraldPrimary.copy(alpha = 0.12f) else (if (selectedThemeDark) Color(0xFF1E293B) else Color(0xFFF1F5F9)),
+                        color = if (agreedToConditions) EmeraldPrimary.copy(alpha = 0.12f) else (if (selectedThemeDark) Color(0xFF1E293B) else Color(0xFFF8FAFC)),
                         border = androidx.compose.foundation.BorderStroke(
                             1.dp,
                             if (agreedToConditions) EmeraldPrimary else cardBorder
@@ -672,117 +755,20 @@ fun StudentOnboardingScreen(viewModel: StudyViewModel) {
                                 onCheckedChange = { agreedToConditions = it },
                                 colors = CheckboxDefaults.colors(checkedColor = EmeraldPrimary)
                             )
-                            Spacer(modifier = Modifier.width(6.dp))
+                            Spacer(modifier = Modifier.width(8.dp))
                             Text(
-                                text = "I have read and agree to all 13 Terms & Conditions, the End User License Agreement (EULA), and the Privacy Policy.",
+                                text = "I have read and agree to the EULA Agreement, Terms and Conditions, and Privacy Policy.",
                                 style = MaterialTheme.typography.bodySmall.copy(
-                                    fontWeight = if (agreedToConditions) FontWeight.Bold else FontWeight.Normal,
+                                    fontWeight = if (agreedToConditions) FontWeight.Bold else FontWeight.Medium,
                                     fontSize = 12.sp,
-                                    lineHeight = 16.sp
+                                    lineHeight = 17.sp
                                 ),
                                 color = textPrimary,
                                 modifier = Modifier.weight(1f)
                             )
                         }
                     }
-
-                    Spacer(modifier = Modifier.height(10.dp))
-
-                    TextButton(
-                        onClick = { showConditionsDialog = true },
-                        modifier = Modifier.align(Alignment.CenterHorizontally)
-                    ) {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Icon(Icons.Default.MenuBook, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(16.dp))
-                            Spacer(modifier = Modifier.width(6.dp))
-                            Text(
-                                text = "Read the 13 Conditions & EULA Rules",
-                                style = MaterialTheme.typography.labelMedium.copy(
-                                    fontWeight = FontWeight.Bold,
-                                    color = EmeraldPrimary,
-                                    textDecoration = androidx.compose.ui.text.style.TextDecoration.Underline
-                                )
-                            )
-                        }
-                    }
                 }
-            }
-
-            // 13 Conditions Alert Dialog Modal
-            if (showConditionsDialog) {
-                AlertDialog(
-                    onDismissRequest = { showConditionsDialog = false },
-                    containerColor = if (selectedThemeDark) CardBgDark else Color.White,
-                    title = {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Icon(Icons.Default.Gavel, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(24.dp))
-                            Spacer(modifier = Modifier.width(8.dp))
-                            Text(
-                                text = "13 Terms & Conditions / EULA",
-                                fontWeight = FontWeight.Black,
-                                fontSize = 16.sp,
-                                color = textPrimary
-                            )
-                        }
-                    },
-                    text = {
-                        val conditions = listOf(
-                            "1. Single Student License: Account access is restricted to the registered student and one authorized device.",
-                            "2. Educational Non-Commercial Use: All notes, exams, and summaries are solely for personal academic preparation.",
-                            "3. Anti-Piracy & Copyright: Copying, scraping, reproducing, or redistributing course content is strictly forbidden.",
-                            "4. 72-Hour Free Trial Policy: Free pass allows evaluation of specified courses before requiring package upgrade.",
-                            "5. Offline Storage Integrity: Offline study summaries are securely stored locally on your device storage.",
-                            "6. Academic Integrity: Practice quizzes and exams must be used for genuine skill building and self-testing.",
-                            "7. Fair Document Tool Usage: AI document scanner is provided for scanning academic past exams and notes.",
-                            "8. Payment Verification: Manual bank deposits and online payments are verified before permanent entitlement activation.",
-                            "9. Zero Misuse Tolerance: Any unauthorized tampering or reverse-engineering will terminate access immediately.",
-                            "10. Entitlement Binding: Purchases and progress are bound to your verified account credentials.",
-                            "11. Privacy & Security: Personal goals and study session metrics are protected under our Privacy Policy.",
-                            "12. Curriculum Alignment: Content reflects Ethiopian MOE & university blueprints for prep purposes.",
-                            "13. EULA Agreement: Agreeing grants a non-exclusive license and binds the user to all future academic updates."
-                        )
-                        Column(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .heightIn(max = 340.dp)
-                                .verticalScroll(rememberScrollState()),
-                            verticalArrangement = Arrangement.spacedBy(8.dp)
-                        ) {
-                            conditions.forEach { item ->
-                                Surface(
-                                    shape = RoundedCornerShape(8.dp),
-                                    color = if (selectedThemeDark) Color(0xFF0F172A) else Color(0xFFF8FAFC),
-                                    border = androidx.compose.foundation.BorderStroke(1.dp, if (selectedThemeDark) Color(0xFF334155) else Color(0xFFE2E8F0)),
-                                    modifier = Modifier.fillMaxWidth()
-                                ) {
-                                    Text(
-                                        text = item,
-                                        style = MaterialTheme.typography.bodySmall.copy(fontSize = 11.5.sp, lineHeight = 16.sp),
-                                        color = textPrimary,
-                                        modifier = Modifier.padding(10.dp)
-                                    )
-                                }
-                            }
-                        }
-                    },
-                    confirmButton = {
-                        Button(
-                            onClick = {
-                                agreedToConditions = true
-                                showConditionsDialog = false
-                            },
-                            colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary),
-                            shape = RoundedCornerShape(10.dp)
-                        ) {
-                            Text("I Agree & Accept", fontWeight = FontWeight.Bold)
-                        }
-                    },
-                    dismissButton = {
-                        TextButton(onClick = { showConditionsDialog = false }) {
-                            Text("Close", color = textSecondary)
-                        }
-                    }
-                )
             }
 
             val isValid = name.trim().isNotEmpty() &&
@@ -795,7 +781,7 @@ fun StudentOnboardingScreen(viewModel: StudyViewModel) {
             if (!isValid) {
                 val errorMsg = when {
                     !hasClickedJoinTelegram -> "Please click 'Join @temhiroapp_official' above to continue."
-                    !agreedToConditions -> "Please agree to the 13 Terms & Conditions and EULA above to continue to packages."
+                    !agreedToConditions -> "Please agree to the EULA Agreement, Terms and Conditions, and Privacy Policy above to continue to packages."
                     else -> t("onboarding_validation_error")
                 }
                 Text(

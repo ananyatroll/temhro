@@ -58,6 +58,7 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
             val currentEpochDay = System.currentTimeMillis() / (1000 * 60 * 60 * 24)
             studentToolsRepo.seedInitialDataIfEmpty(currentEpochDay)
         }
+        updateDailyStreak()
         val activatedTrial = sharedPrefs.getLong("free_trial_activated_at", 0L)
         if (activatedTrial > 0L) {
             NotificationHelper.scheduleFreeTrialNotifications(application, activatedTrial)
@@ -286,6 +287,29 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
     fun setDarkTheme(enabled: Boolean) {
         isDarkTheme.value = enabled
         sharedPrefs.edit().putBoolean("user_is_dark_theme", enabled).apply()
+    }
+
+    // Daily Study Streak Tracking
+    val dailyStreakCount = MutableStateFlow(sharedPrefs.getInt("user_daily_streak_count", 1))
+
+    fun updateDailyStreak() {
+        val todayEpochDay = System.currentTimeMillis() / (1000 * 60 * 60 * 24)
+        val lastActiveEpochDay = sharedPrefs.getLong("user_last_active_epoch_day", -1L)
+        val currentStreak = sharedPrefs.getInt("user_daily_streak_count", 1)
+
+        val newStreak = when {
+            lastActiveEpochDay == -1L -> 1
+            lastActiveEpochDay == todayEpochDay -> currentStreak
+            lastActiveEpochDay == todayEpochDay - 1 -> currentStreak + 1
+            else -> 1 // missed days reset to 1
+        }
+
+        sharedPrefs.edit()
+            .putLong("user_last_active_epoch_day", todayEpochDay)
+            .putInt("user_daily_streak_count", newStreak)
+            .apply()
+
+        dailyStreakCount.value = newStreak
     }
 
     // Selected Semester Filter state flow ("all", "sem1", "sem2")

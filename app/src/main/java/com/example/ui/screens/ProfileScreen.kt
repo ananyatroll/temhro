@@ -201,7 +201,7 @@ fun ProfileScreen(viewModel: StudyViewModel) {
                         val answeredQuestionsCount = viewModel.answeredQuestionsSet.collectAsState().value.size
                         val readNotesCount = viewModel.readNotesSet.collectAsState().value.size
                         val totalXp = (answeredQuestionsCount * 15) + (readNotesCount * 25) + (progress.scoreCount * 10)
-                        val streakDays = (answeredQuestionsCount / 3).coerceAtLeast(1)
+                        val streakDays by viewModel.dailyStreakCount.collectAsState()
 
                         Row(
                             modifier = Modifier.fillMaxWidth(),
@@ -303,86 +303,6 @@ fun ProfileScreen(viewModel: StudyViewModel) {
                                         style = MaterialTheme.typography.labelSmall,
                                         color = TextMuted
                                     )
-                                }
-                            }
-                        }
-                    }
-                }
-                Spacer(modifier = Modifier.height(24.dp))
-            }
-
-            // App Settings & Reading Preferences Segment
-            item {
-                Text(
-                    text = com.example.ui.TranslationManager.get("settings_reading_mode_title", currentLang),
-                    style = MaterialTheme.typography.titleLarge.copy(
-                        fontWeight = FontWeight.Black,
-                        fontSize = 15.sp,
-                        letterSpacing = 0.5.sp
-                    ),
-                    color = headerTextColor,
-                    modifier = Modifier.padding(bottom = 12.dp)
-                )
-
-                Card(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .border(1.dp, cardBorder, SubjectCardRoundedShape),
-                    shape = SubjectCardRoundedShape,
-                    colors = CardDefaults.cardColors(containerColor = cardBg)
-                ) {
-                    Column(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(16.dp),
-                        verticalArrangement = Arrangement.spacedBy(16.dp)
-                    ) {
-                        // Language Selector
-                        Column {
-                            Row(verticalAlignment = Alignment.CenterVertically) {
-                                Icon(
-                                    imageVector = Icons.Default.Language,
-                                    contentDescription = "Language",
-                                    tint = EmeraldPrimary,
-                                    modifier = Modifier.size(20.dp)
-                                )
-                                Spacer(modifier = Modifier.width(8.dp))
-                                Text(
-                                    text = com.example.ui.TranslationManager.get("app_language_title", currentLang),
-                                    style = MaterialTheme.typography.titleSmall,
-                                    fontWeight = FontWeight.Bold,
-                                    color = headerTextColor
-                                )
-                            }
-                            Spacer(modifier = Modifier.height(10.dp))
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.spacedBy(6.dp)
-                            ) {
-                                val langs = listOf(
-                                    "en" to "English",
-                                    "am" to "አማርኛ",
-                                    "om" to "Oromoo",
-                                    "so" to "Somali",
-                                    "ti" to "ትግርኛ"
-                                )
-                                langs.forEach { (code, label) ->
-                                    val isSelected = currentLang == code
-                                    Box(
-                                        modifier = Modifier
-                                            .clip(RoundedCornerShape(8.dp))
-                                            .background(if (isSelected) EmeraldPrimary else (if (isDarkTheme) Color(0xFF1E293B) else BgSoftGray))
-                                            .pressBounce(pressedScale = 0.92f)
-                                            .clickable { viewModel.setLanguage(code) }
-                                            .padding(horizontal = 8.dp, vertical = 6.dp)
-                                    ) {
-                                        Text(
-                                            text = label,
-                                            style = MaterialTheme.typography.labelSmall.copy(fontSize = 11.sp),
-                                            color = if (isSelected) Color.White else (if (isDarkTheme) TextMuted else Color.DarkGray),
-                                            fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal
-                                        )
-                                    }
                                 }
                             }
                         }
