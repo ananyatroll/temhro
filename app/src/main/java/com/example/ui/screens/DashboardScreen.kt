@@ -1060,7 +1060,7 @@ fun GreetingHeader(viewModel: StudyViewModel, username: String) {
             horizontalArrangement = Arrangement.spacedBy(10.dp),
             modifier = Modifier.weight(1f)
         ) {
-            // Tools Sidebar Menu Button (Opens full study suite sidebar drawer)
+            // Tools Sidebar Menu Button (Opens full study suite sidebar drawer with app logo)
             Surface(
                 modifier = Modifier
                     .size(42.dp)
@@ -1068,19 +1068,22 @@ fun GreetingHeader(viewModel: StudyViewModel, username: String) {
                     .border(1.5.dp, EmeraldPrimary.copy(alpha = 0.6f), RoundedCornerShape(12.dp))
                     .clickable { viewModel.openToolsSidebar() }
                     .testTag("tools_sidebar_toggle"),
-                color = if (isDarkTheme) CardBgDark else Color(0xFFF0FDF4),
+                color = if (isDarkTheme) CardBgDark else Color.White,
                 shape = RoundedCornerShape(12.dp),
                 shadowElevation = 3.dp
             ) {
                 Box(
                     contentAlignment = Alignment.Center,
-                    modifier = Modifier.fillMaxSize()
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(4.dp)
                 ) {
-                    Icon(
-                        imageVector = Icons.Default.Menu,
+                    Image(
+                        painter = painterResource(id = R.drawable.img_app_icon),
                         contentDescription = "Open Study Tools Sidebar",
-                        tint = EmeraldPrimary,
-                        modifier = Modifier.size(24.dp)
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .clip(RoundedCornerShape(8.dp))
                     )
                 }
             }
