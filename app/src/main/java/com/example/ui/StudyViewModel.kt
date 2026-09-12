@@ -25,6 +25,7 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
     // Student Tools UI State
     val isToolsSidebarOpen = MutableStateFlow(false)
     val isStudentToolsOpen = MutableStateFlow(false)
+    val activeToolScreen = MutableStateFlow<String?>(null) // "timer_tasks", "calendar", "grades", "scanner"
     val activeToolsTab = MutableStateFlow("timer_tasks") // "calendar", "grades", "scanner", "timer_tasks"
     val toolsContextPrompt = MutableStateFlow<String?>(null)
     val activeLearningContext = MutableStateFlow<LearningContext?>(null)
@@ -145,12 +146,22 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
         isToolsSidebarOpen.value = !isToolsSidebarOpen.value
     }
 
+    fun openToolScreen(screenId: String) {
+        activeToolScreen.value = screenId
+        isToolsSidebarOpen.value = false
+        isStudentToolsOpen.value = false
+    }
+
+    fun closeToolScreen() {
+        activeToolScreen.value = null
+    }
+
     fun openStudentTools(tab: String = "timer_tasks", prompt: String? = null, context: LearningContext? = null) {
         activeToolsTab.value = tab
         toolsContextPrompt.value = prompt
         activeLearningContext.value = context ?: deriveActiveLearningContext()
         isToolsSidebarOpen.value = false
-        isStudentToolsOpen.value = true
+        openToolScreen(tab)
     }
 
     fun setLearningContext(context: LearningContext) {

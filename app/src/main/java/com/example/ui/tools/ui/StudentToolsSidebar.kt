@@ -61,13 +61,14 @@ fun StudentToolsSidebar(
 
     val context = LocalContext.current
     val handleToolClick: (String) -> Unit = { toolTab ->
+        onClose()
         val activity = AdsManager.findActivity(context)
         if (activity != null) {
             InterstitialAdManager.showIfAllowed(activity) {
-                viewModel.openStudentTools(toolTab)
+                viewModel.openToolScreen(toolTab)
             }
         } else {
-            viewModel.openStudentTools(toolTab)
+            viewModel.openToolScreen(toolTab)
         }
     }
 
@@ -380,12 +381,12 @@ fun StudentToolsSidebar(
                         SidebarActionRow(
                             icon = Icons.Default.SwapHoriz,
                             iconTint = EmeraldPrimary,
-                            title = "Switch Curriculum / Tool",
-                            subtitle = "Change package (Freshman, EUEE, Exit Exam)",
+                            title = "Reset / Re-enroll Package",
+                            subtitle = "Re-enroll to select a new curriculum or package",
                             isDark = isDark,
                             onClick = {
                                 onClose()
-                                viewModel.openPackageSelection()
+                                viewModel.resetEnrollment()
                             }
                         )
 

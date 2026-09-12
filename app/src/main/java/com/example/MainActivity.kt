@@ -20,6 +20,8 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.ads.AdConfig
 import com.example.ads.AdManager
+import com.example.ads.AdsManager
+import com.example.ads.InterstitialAdManager
 import com.example.ads.TinatBannerAd
 import com.example.ui.NotificationHelper
 import com.example.ui.StudyViewModel
@@ -28,7 +30,6 @@ import com.example.ui.screens.*
 import com.example.ui.theme.EmeraldPrimary
 import com.example.ui.theme.MyApplicationTheme
 import com.example.ui.tools.ui.StudentToolsSidebar
-import com.example.ui.tools.ui.StudentToolsModalSheet
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -61,7 +62,7 @@ class MainActivity : ComponentActivity() {
 
                 // Student Tools & Assessment States
                 val isToolsSidebarOpen by viewModel.isToolsSidebarOpen.collectAsState()
-                val isStudentToolsOpen by viewModel.isStudentToolsOpen.collectAsState()
+                val activeToolScreen by viewModel.activeToolScreen.collectAsState()
                 val activeSub by viewModel.activeSubject.collectAsState()
                 val showContentPlay by viewModel.showContentPlayView.collectAsState()
                 val showNotes by viewModel.showNotesView.collectAsState()
@@ -81,7 +82,8 @@ class MainActivity : ComponentActivity() {
                 // Check if user is in any active study screen, notes reader, exam arena, or modal
                 val isStudyingOrTakingExam = showNotes || showContentPlay || showNotesTOC ||
                         showVideos || showTextbookReader || showStudyOptions || showModeSelection ||
-                        showSavedMaterialPicker || showScoreResultModal || (currentTab == "flashcards")
+                        showSavedMaterialPicker || showScoreResultModal || (currentTab == "flashcards") ||
+                        (activeToolScreen != null)
 
                 // Student tools button is strictly locked to the courses selector view only
                 val isUserEnrolledInCourses = onboardingCompleted &&
@@ -98,7 +100,6 @@ class MainActivity : ComponentActivity() {
                         !isSplashChecking &&
                         !isPaymentOrVerification &&
                         !showScoreResultModal &&
-                        !isStudentToolsOpen &&
                         !isToolsSidebarOpen
 
                 Scaffold(
@@ -224,18 +225,26 @@ class MainActivity : ComponentActivity() {
                                         onClose = { viewModel.closeToolsSidebar() }
                                     )
 
-                                    // Student Tools Modal Bottom Sheet
-                                    if (isStudentToolsOpen) {
-                                        val activeLearningContext by viewModel.activeLearningContext.collectAsState()
-                                        val defaultSubject = activeLearningContext?.courseName?.ifBlank { activeSub?.name ?: "" }
-                                            ?: activeSub?.name ?: ""
-                                        val defaultTopic = activeLearningContext?.topicName?.ifBlank { activeSub?.name ?: "" } ?: ""
-                                        StudentToolsModalSheet(
-                                            viewModel = viewModel,
-                                            subjectName = defaultSubject,
-                                            currentTopic = defaultTopic,
-                                            onDismiss = { viewModel.closeStudentTools() }
-                                        )
+                                    // Dedicated Full-Screen Student Tools Pages with Interstitial Ads & Persistent Bottom Banner
+                                    if (activeToolScreen != null) {
+                                        val context = androidx.compose.ui.platform.LocalContext.current
+                                        val handleToolBack: () -> Unit = {
+                                            val activity = AdsManager.findActivity(context)
+                                            if (activity != null) {
+                                                InterstitialAdManager.showIfAllowed(activity) {
+                                                    viewModel.closeToolScreen()
+                                                }
+                                            } else {
+                                                viewModel.closeToolScreen()
+                                            }
+                                        }
+                                        when (activeToolScreen) {
+                                            "timer_tasks" -> StudyTimerScreen(viewModel = viewModel, onBack = handleToolBack)
+                                            "calendar" -> AcademicCalendarScreen(viewModel = viewModel, onBack = handleToolBack)
+                                            "grades" -> GradePlannerScreen(viewModel = viewModel, onBack = handleToolBack)
+                                            "scanner" -> DocumentScannerScreen(viewModel = viewModel, onBack = handleToolBack)
+                                            else -> StudyTimerScreen(viewModel = viewModel, onBack = handleToolBack)
+                                        }
                                     }
 
                                     // Free Trial 72h Confirmation Modal Dialog

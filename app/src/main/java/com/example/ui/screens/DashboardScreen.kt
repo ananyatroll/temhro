@@ -495,6 +495,33 @@ fun DashboardScreen(viewModel: StudyViewModel) {
                     )
 
                     if (sem1Subjects.isNotEmpty()) {
+                        item(span = { GridItemSpan(maxLineSpan) }) {
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(top = 8.dp, bottom = 4.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Surface(
+                                    shape = RoundedCornerShape(8.dp),
+                                    color = EmeraldPrimary,
+                                    modifier = Modifier.padding(end = 12.dp)
+                                ) {
+                                    Text(
+                                        text = "SEMESTER 1 COURSES",
+                                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
+                                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black),
+                                        color = Color.White
+                                    )
+                                }
+                                HorizontalDivider(
+                                    modifier = Modifier.weight(1f),
+                                    color = if (isDarkTheme) Color(0xFF334155) else Color(0xFFE2E8F0),
+                                    thickness = 1.dp
+                                )
+                            }
+                        }
+
                         items(sem1Subjects) { subject ->
                             val isDone = completedSubjectIds.contains(subject.id)
                             val isLocked = viewModel.isSubjectLocked(subject)
@@ -505,7 +532,7 @@ fun DashboardScreen(viewModel: StudyViewModel) {
                                 iconName = subject.icon,
                                 isCompleted = isDone,
                                 isLocked = isLocked,
-                                semesterBadge = null,
+                                semesterBadge = "Sem 1",
                                 progress = progressVal,
                                 isDarkTheme = isDarkTheme,
                                 currentLang = currentLang,
@@ -524,6 +551,33 @@ fun DashboardScreen(viewModel: StudyViewModel) {
                     }
 
                     if (sem2Subjects.isNotEmpty()) {
+                        item(span = { GridItemSpan(maxLineSpan) }) {
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(top = 16.dp, bottom = 4.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Surface(
+                                    shape = RoundedCornerShape(8.dp),
+                                    color = Color(0xFF3B82F6),
+                                    modifier = Modifier.padding(end = 12.dp)
+                                ) {
+                                    Text(
+                                        text = "SEMESTER 2 COURSES",
+                                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
+                                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black),
+                                        color = Color.White
+                                    )
+                                }
+                                HorizontalDivider(
+                                    modifier = Modifier.weight(1f),
+                                    color = if (isDarkTheme) Color(0xFF334155) else Color(0xFFE2E8F0),
+                                    thickness = 1.dp
+                                )
+                            }
+                        }
+
                         items(sem2Subjects) { subject ->
                             val isDone = completedSubjectIds.contains(subject.id)
                             val isLocked = viewModel.isSubjectLocked(subject)
@@ -534,7 +588,7 @@ fun DashboardScreen(viewModel: StudyViewModel) {
                                 iconName = subject.icon,
                                 isCompleted = isDone,
                                 isLocked = isLocked,
-                                semesterBadge = null,
+                                semesterBadge = "Sem 2",
                                 progress = progressVal,
                                 isDarkTheme = isDarkTheme,
                                 currentLang = currentLang,
@@ -1117,6 +1171,7 @@ fun SubjectHexCard(
     Card(
         modifier = Modifier
             .fillMaxWidth()
+            .height(184.dp)
             .pressBounce(pressedScale = 0.96f)
             .clickable(onClick = onSubjectClick)
             .testTag("subject_card_${iconName}"),
@@ -1129,7 +1184,7 @@ fun SubjectHexCard(
     ) {
         Box(
             modifier = Modifier
-                .fillMaxWidth()
+                .fillMaxSize()
                 .background(
                     if (isDarkTheme && !isLocked) {
                         Brush.verticalGradient(
@@ -1175,15 +1230,15 @@ fun SubjectHexCard(
 
             Column(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 14.dp, vertical = 20.dp),
+                    .fillMaxSize()
+                    .padding(horizontal = 12.dp, vertical = 14.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
                 // Icon Box
                 Box(
                     modifier = Modifier
-                        .size(56.dp)
+                        .size(52.dp)
                         .clip(HexagonChamferShape)
                         .background(iconBoxBg),
                     contentAlignment = Alignment.Center
@@ -1191,61 +1246,76 @@ fun SubjectHexCard(
                     DuotoneIcon(
                         name = if (isLocked) "lock" else iconName,
                         isActive = !isLocked && isEffectivelyCompleted,
-                        modifier = Modifier.size(32.dp)
+                        modifier = Modifier.size(30.dp)
                     )
                 }
 
-                Spacer(modifier = Modifier.height(12.dp))
-
-                Text(
-                    text = subjectName,
-                    style = MaterialTheme.typography.displaySmall.copy(
-                        fontWeight = FontWeight.Black,
-                        fontSize = 13.sp,
-                        letterSpacing = 0.5.sp
-                    ),
-                    color = if (isLocked) Color.Gray else if (isDarkTheme) Color.White else IndigoSecondary,
-                    textAlign = TextAlign.Center,
-                    maxLines = 2,
-                    overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
-                )
-
                 Spacer(modifier = Modifier.height(8.dp))
 
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(38.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = subjectName,
+                        style = MaterialTheme.typography.displaySmall.copy(
+                            fontWeight = FontWeight.Black,
+                            fontSize = 12.sp,
+                            lineHeight = 16.sp,
+                            letterSpacing = (-0.1).sp
+                        ),
+                        color = if (isLocked) Color.Gray else if (isDarkTheme) Color.White else IndigoSecondary,
+                        textAlign = TextAlign.Center,
+                        maxLines = 2,
+                        overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
+                    )
+                }
+
+                Spacer(modifier = Modifier.height(6.dp))
+
                 // Completed / Play / Locked guide indicators
-                if (isLocked) {
-                    Text(
-                        text = t("badge_locked_trial"),
-                        color = Color(0xFFEF4444),
-                        style = MaterialTheme.typography.labelSmall.copy(
-                            fontWeight = FontWeight.Black,
-                            fontSize = 10.sp
-                        ),
-                        maxLines = 1,
-                        overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
-                    )
-                } else if (isEffectivelyCompleted) {
-                    Text(
-                        text = t("badge_completed"),
-                        color = if (isDarkTheme) HolographicAqua else EmeraldDark,
-                        style = MaterialTheme.typography.labelSmall.copy(
-                            fontWeight = FontWeight.Black,
-                            fontSize = 10.sp
-                        ),
-                        maxLines = 1,
-                        overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
-                    )
-                } else {
-                    Text(
-                        text = t("badge_tap_to_study"),
-                        color = if (isDarkTheme) TextMuted else Color.Gray,
-                        style = MaterialTheme.typography.labelSmall.copy(
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 10.sp
-                        ),
-                        maxLines = 1,
-                        overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
-                    )
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(18.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    if (isLocked) {
+                        Text(
+                            text = t("badge_locked_trial"),
+                            color = Color(0xFFEF4444),
+                            style = MaterialTheme.typography.labelSmall.copy(
+                                fontWeight = FontWeight.Black,
+                                fontSize = 10.sp
+                            ),
+                            maxLines = 1,
+                            overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
+                        )
+                    } else if (isEffectivelyCompleted) {
+                        Text(
+                            text = t("badge_completed"),
+                            color = if (isDarkTheme) HolographicAqua else EmeraldDark,
+                            style = MaterialTheme.typography.labelSmall.copy(
+                                fontWeight = FontWeight.Black,
+                                fontSize = 10.sp
+                            ),
+                            maxLines = 1,
+                            overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
+                        )
+                    } else {
+                        Text(
+                            text = t("badge_tap_to_study"),
+                            color = if (isDarkTheme) TextMuted else Color.Gray,
+                            style = MaterialTheme.typography.labelSmall.copy(
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 10.sp
+                            ),
+                            maxLines = 1,
+                            overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
+                        )
+                    }
                 }
             }
         }

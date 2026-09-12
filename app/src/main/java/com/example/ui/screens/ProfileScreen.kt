@@ -523,46 +523,7 @@ fun ProfileScreen(viewModel: StudyViewModel) {
                     modifier = Modifier.padding(bottom = 12.dp)
                 )
 
-                // Modify / Switch Package Button (satisfying state requirements)
-                Card(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .border(1.dp, Color.Red.copy(alpha = 0.2f), ChamferedCardShape)
-                        .pressBounce(pressedScale = 0.96f)
-                        .clickable { viewModel.resetEnrollment() }
-                        .testTag("profile_switch_package_button"),
-                    shape = ChamferedCardShape,
-                    colors = CardDefaults.cardColors(containerColor = cardBg)
-                ) {
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(16.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.SpaceBetween
-                    ) {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Icon(Icons.Default.ChangeCircle, contentDescription = null, tint = Color.Red)
-                            Spacer(modifier = Modifier.width(16.dp))
-                            Column {
-                                Text(
-                                    text = com.example.ui.TranslationManager.get("btn_reset_enrollment", currentLang),
-                                    style = MaterialTheme.typography.titleMedium,
-                                    color = headerTextColor,
-                                    fontWeight = FontWeight.Bold
-                                )
-                                Text(
-                                    text = com.example.ui.TranslationManager.get("desc_reset_enrollment", currentLang),
-                                    style = MaterialTheme.typography.labelSmall,
-                                    color = subTextColor
-                                )
-                            }
-                        }
-                        Icon(Icons.Default.ArrowForwardIos, contentDescription = "Reset", tint = Color.Gray, modifier = Modifier.size(16.dp))
-                    }
-                }
-
-                Spacer(modifier = Modifier.height(20.dp))
+                Spacer(modifier = Modifier.height(10.dp))
 
                 // Legal Documents Footer (Privacy Policy, Terms of Service, EULA)
                 com.example.ui.components.LegalLinksFooter(

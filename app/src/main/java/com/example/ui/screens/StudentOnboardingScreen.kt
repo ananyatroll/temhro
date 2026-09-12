@@ -57,6 +57,8 @@ fun StudentOnboardingScreen(viewModel: StudyViewModel) {
         )
     }
     var goal by remember { mutableStateOf(if (savedGoal.isNotEmpty()) savedGoal else "Complete classes with good grades") }
+    var agreedToConditions by remember { mutableStateOf(false) }
+    var showConditionsDialog by remember { mutableStateOf(false) }
 
     val scrollState = rememberScrollState()
 
@@ -601,15 +603,203 @@ fun StudentOnboardingScreen(viewModel: StudyViewModel) {
                 }
             }
 
+            // ------------------ QUESTION 6: 13 CONDITIONS & EULA AGREEMENT ------------------
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(bottom = 20.dp)
+                    .border(
+                        1.dp,
+                        if (agreedToConditions) EmeraldPrimary.copy(alpha = 0.6f) else cardBorder,
+                        RoundedCornerShape(16.dp)
+                    ),
+                shape = RoundedCornerShape(16.dp),
+                colors = CardDefaults.cardColors(containerColor = cardBg)
+            ) {
+                Column(modifier = Modifier.padding(16.dp)) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Box(
+                            modifier = Modifier
+                                .size(32.dp)
+                                .clip(CircleShape)
+                                .background(if (agreedToConditions) EmeraldPrimary else IndigoMedium),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Icon(
+                                imageVector = if (agreedToConditions) Icons.Default.Check else Icons.Default.Gavel,
+                                contentDescription = null,
+                                tint = Color.White,
+                                modifier = Modifier.size(18.dp)
+                            )
+                        }
+                        Spacer(modifier = Modifier.width(12.dp))
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(
+                                text = "13 Terms, Conditions & EULA",
+                                style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
+                                color = textPrimary
+                            )
+                            Text(
+                                text = "Required to access curriculum packages & tools",
+                                style = MaterialTheme.typography.bodySmall.copy(fontSize = 11.sp),
+                                color = textSecondary
+                            )
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.height(12.dp))
+
+                    Surface(
+                        shape = RoundedCornerShape(12.dp),
+                        color = if (agreedToConditions) EmeraldPrimary.copy(alpha = 0.12f) else (if (selectedThemeDark) Color(0xFF1E293B) else Color(0xFFF1F5F9)),
+                        border = androidx.compose.foundation.BorderStroke(
+                            1.dp,
+                            if (agreedToConditions) EmeraldPrimary else cardBorder
+                        ),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable { agreedToConditions = !agreedToConditions }
+                    ) {
+                        Row(
+                            modifier = Modifier.padding(12.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Checkbox(
+                                checked = agreedToConditions,
+                                onCheckedChange = { agreedToConditions = it },
+                                colors = CheckboxDefaults.colors(checkedColor = EmeraldPrimary)
+                            )
+                            Spacer(modifier = Modifier.width(6.dp))
+                            Text(
+                                text = "I have read and agree to all 13 Terms & Conditions, the End User License Agreement (EULA), and the Privacy Policy.",
+                                style = MaterialTheme.typography.bodySmall.copy(
+                                    fontWeight = if (agreedToConditions) FontWeight.Bold else FontWeight.Normal,
+                                    fontSize = 12.sp,
+                                    lineHeight = 16.sp
+                                ),
+                                color = textPrimary,
+                                modifier = Modifier.weight(1f)
+                            )
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.height(10.dp))
+
+                    TextButton(
+                        onClick = { showConditionsDialog = true },
+                        modifier = Modifier.align(Alignment.CenterHorizontally)
+                    ) {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Icon(Icons.Default.MenuBook, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(16.dp))
+                            Spacer(modifier = Modifier.width(6.dp))
+                            Text(
+                                text = "Read the 13 Conditions & EULA Rules",
+                                style = MaterialTheme.typography.labelMedium.copy(
+                                    fontWeight = FontWeight.Bold,
+                                    color = EmeraldPrimary,
+                                    textDecoration = androidx.compose.ui.text.style.TextDecoration.Underline
+                                )
+                            )
+                        }
+                    }
+                }
+            }
+
+            // 13 Conditions Alert Dialog Modal
+            if (showConditionsDialog) {
+                AlertDialog(
+                    onDismissRequest = { showConditionsDialog = false },
+                    containerColor = if (selectedThemeDark) CardBgDark else Color.White,
+                    title = {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Icon(Icons.Default.Gavel, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(24.dp))
+                            Spacer(modifier = Modifier.width(8.dp))
+                            Text(
+                                text = "13 Terms & Conditions / EULA",
+                                fontWeight = FontWeight.Black,
+                                fontSize = 16.sp,
+                                color = textPrimary
+                            )
+                        }
+                    },
+                    text = {
+                        val conditions = listOf(
+                            "1. Single Student License: Account access is restricted to the registered student and one authorized device.",
+                            "2. Educational Non-Commercial Use: All notes, exams, and summaries are solely for personal academic preparation.",
+                            "3. Anti-Piracy & Copyright: Copying, scraping, reproducing, or redistributing course content is strictly forbidden.",
+                            "4. 72-Hour Free Trial Policy: Free pass allows evaluation of specified courses before requiring package upgrade.",
+                            "5. Offline Storage Integrity: Offline study summaries are securely stored locally on your device storage.",
+                            "6. Academic Integrity: Practice quizzes and exams must be used for genuine skill building and self-testing.",
+                            "7. Fair Document Tool Usage: AI document scanner is provided for scanning academic past exams and notes.",
+                            "8. Payment Verification: Manual bank deposits and online payments are verified before permanent entitlement activation.",
+                            "9. Zero Misuse Tolerance: Any unauthorized tampering or reverse-engineering will terminate access immediately.",
+                            "10. Entitlement Binding: Purchases and progress are bound to your verified account credentials.",
+                            "11. Privacy & Security: Personal goals and study session metrics are protected under our Privacy Policy.",
+                            "12. Curriculum Alignment: Content reflects Ethiopian MOE & university blueprints for prep purposes.",
+                            "13. EULA Agreement: Agreeing grants a non-exclusive license and binds the user to all future academic updates."
+                        )
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .heightIn(max = 340.dp)
+                                .verticalScroll(rememberScrollState()),
+                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            conditions.forEach { item ->
+                                Surface(
+                                    shape = RoundedCornerShape(8.dp),
+                                    color = if (selectedThemeDark) Color(0xFF0F172A) else Color(0xFFF8FAFC),
+                                    border = androidx.compose.foundation.BorderStroke(1.dp, if (selectedThemeDark) Color(0xFF334155) else Color(0xFFE2E8F0)),
+                                    modifier = Modifier.fillMaxWidth()
+                                ) {
+                                    Text(
+                                        text = item,
+                                        style = MaterialTheme.typography.bodySmall.copy(fontSize = 11.5.sp, lineHeight = 16.sp),
+                                        color = textPrimary,
+                                        modifier = Modifier.padding(10.dp)
+                                    )
+                                }
+                            }
+                        }
+                    },
+                    confirmButton = {
+                        Button(
+                            onClick = {
+                                agreedToConditions = true
+                                showConditionsDialog = false
+                            },
+                            colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary),
+                            shape = RoundedCornerShape(10.dp)
+                        ) {
+                            Text("I Agree & Accept", fontWeight = FontWeight.Bold)
+                        }
+                    },
+                    dismissButton = {
+                        TextButton(onClick = { showConditionsDialog = false }) {
+                            Text("Close", color = textSecondary)
+                        }
+                    }
+                )
+            }
+
             val isValid = name.trim().isNotEmpty() &&
                     goal.trim().isNotEmpty() &&
                     selectedClassLevel.trim().isNotEmpty() &&
                     selectedLang.trim().isNotEmpty() &&
-                    hasClickedJoinTelegram
+                    hasClickedJoinTelegram &&
+                    agreedToConditions
 
             if (!isValid) {
+                val errorMsg = when {
+                    !hasClickedJoinTelegram -> "Please click 'Join @temhiroapp_official' above to continue."
+                    !agreedToConditions -> "Please agree to the 13 Terms & Conditions and EULA above to continue to packages."
+                    else -> t("onboarding_validation_error")
+                }
                 Text(
-                    text = if (!hasClickedJoinTelegram) "Please click 'Join @temhiroapp_official' above to continue." else t("onboarding_validation_error"),
+                    text = errorMsg,
                     style = MaterialTheme.typography.labelSmall,
                     color = if (selectedThemeDark) Color(0xFFFCA5A5) else Color(0xFFDC2626),
                     modifier = Modifier.padding(bottom = 8.dp)
