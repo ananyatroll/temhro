@@ -288,3 +288,20 @@ object AdManager {
         }
     }
 }
+
+object AdsManager {
+    fun findActivity(context: Context): Activity? = AdManager.findActivity(context)
+    fun showInterstitialIfAllowed(activity: Activity, onAdDismissedOrSkipped: () -> Unit) =
+        AdManager.showInterstitialIfAllowed(activity, onAdDismissedOrSkipped)
+}
+
+object InterstitialAdManager {
+    fun showIfAllowed(activity: Activity, onComplete: () -> Unit) =
+        AdManager.showInterstitialIfAllowed(activity, onComplete)
+}
+
+object AdConfig {
+    const val ADS_ENABLED = true
+    const val BANNER_ADS_ENABLED = true
+    const val INTERSTITIAL_ADS_ENABLED = true
+}
