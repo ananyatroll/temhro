@@ -214,4 +214,8 @@ object ProductCatalog {
         "freshman_social" -> expandEntitlements("freshman_social_science_y1_full_year")
         else -> emptyList() // department/euee/etc. retain their own legacy handling
     }
+
+    fun legacyMapsTo(packageId: String, productId: String): Boolean {
+        return legacyPackageToEntitlements(packageId).contains(productId)
+    }
 }

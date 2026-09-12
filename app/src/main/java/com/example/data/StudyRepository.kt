@@ -188,7 +188,8 @@ class StudyRepository(
 
         // 0.5 Ensure Freshman Markdown Notes are properly seeded from assets
         val hasRichFreshmanNotes = try {
-            dao.getNotesBySubjectDirect("freshman_nat_english_1").any { it.content.length > 500 }
+            dao.getNotesBySubjectDirect("freshman_nat_english_1").any { it.content.length > 500 } &&
+            dao.getNotesBySubjectDirect("freshman_soc_history").any { it.content.length > 500 }
         } catch (e: Exception) { false }
 
         if (!hasRichFreshmanNotes && context != null) {
@@ -1337,26 +1338,32 @@ class StudyRepository(
         )
     }
 
-    override suspend fun grantEntitlement(productId: String, reference: String) = withContext(Dispatchers.IO) {
-        val expanded = ProductCatalog.expandEntitlements(productId)
-        val now = System.currentTimeMillis()
-        val entitlements = expanded.map { id ->
-            Entitlement(productId = id, grantedAtMillis = now, purchaseReference = reference)
+    override suspend fun grantEntitlement(productId: String, reference: String) {
+        withContext(Dispatchers.IO) {
+            val expanded = ProductCatalog.expandEntitlements(productId)
+            val now = System.currentTimeMillis()
+            val entitlements = expanded.map { id ->
+                Entitlement(productId = id, grantedAtMillis = now, purchaseReference = reference)
+            }
+            dao.upsertEntitlements(entitlements)
+            Log.d(TAG, "grantEntitlement: granted $productId (expanded to $expanded) with ref=$reference")
         }
-        dao.upsertEntitlements(entitlements)
-        Log.d(TAG, "grantEntitlement: granted $productId (expanded to $expanded) with ref=$reference")
     }
 
     override fun getEntitlements(): Flow<List<Entitlement>> = dao.getAllEntitlements()
 
-    override suspend fun savePurchaseRequest(request: PurchaseRequest) = withContext(Dispatchers.IO) {
-        dao.upsertPurchaseRequest(request)
-        Log.d(TAG, "savePurchaseRequest: reference=${request.reference}, product=${request.productId}")
+    override suspend fun savePurchaseRequest(request: PurchaseRequest) {
+        withContext(Dispatchers.IO) {
+            dao.upsertPurchaseRequest(request)
+            Log.d(TAG, "savePurchaseRequest: reference=${request.reference}, product=${request.productId}")
+        }
     }
 
-    override suspend fun updatePurchaseStatus(reference: String, status: String) = withContext(Dispatchers.IO) {
-        dao.updatePurchaseRequestStatus(reference, status)
-        Log.d(TAG, "updatePurchaseStatus: reference=$reference status=$status")
+    override suspend fun updatePurchaseStatus(reference: String, status: String) {
+        withContext(Dispatchers.IO) {
+            dao.updatePurchaseRequestStatus(reference, status)
+            Log.d(TAG, "updatePurchaseStatus: reference=$reference status=$status")
+        }
     }
 
     override suspend fun isEntitledTo(productId: String): Boolean = withContext(Dispatchers.IO) {

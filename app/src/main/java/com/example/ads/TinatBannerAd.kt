@@ -90,15 +90,27 @@ fun TinatBannerAd(
     ) {
         val widthDp = maxWidth.value.toInt().coerceAtLeast(320)
         val adaptiveAdSize = remember(widthDp) {
-            AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(context, widthDp)
+            try {
+                AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(context, widthDp)
+            } catch (t: Throwable) {
+                Log.w("TinatBannerAd", "Adaptive banner size calculation error, falling back to BANNER", t)
+                AdSize.BANNER
+            }
         }
-        val bannerHeightDp = with(density) { adaptiveAdSize.getHeightInPixels(context).toDp() }
+        val bannerHeightDp = with(density) {
+            try {
+                val hPx = adaptiveAdSize.getHeightInPixels(context)
+                if (hPx > 0) hPx.toDp() else 50.dp
+            } catch (t: Throwable) {
+                50.dp
+            }
+        }
 
         Box(
             modifier = Modifier
                 .fillMaxWidth()
                 .then(
-                    if (isAdLoaded) Modifier.height(bannerHeightDp)
+                    if (isAdLoaded) Modifier.height(bannerHeightDp.coerceAtLeast(0.dp))
                     else Modifier.wrapContentHeight()
                 ),
             contentAlignment = Alignment.Center
@@ -107,37 +119,43 @@ fun TinatBannerAd(
                 AndroidView(
                     modifier = Modifier.fillMaxWidth(),
                     factory = { ctx ->
-                        AdView(ctx).apply {
-                            setAdSize(adaptiveAdSize)
-                            setAdUnitId(currentAdUnit)
-                            adListener = object : AdListener() {
-                                override fun onAdLoaded() {
-                                    Log.d("TinatBannerAd", "Anchored banner loaded successfully ($currentAdUnit).")
-                                    isAdLoaded = true
-                                }
+                        try {
+                            AdView(ctx).apply {
+                                setAdSize(adaptiveAdSize)
+                                setAdUnitId(currentAdUnit)
+                                adListener = object : AdListener() {
+                                    override fun onAdLoaded() {
+                                        Log.d("TinatBannerAd", "Anchored banner loaded successfully ($currentAdUnit).")
+                                        isAdLoaded = true
+                                    }
 
-                                override fun onAdFailedToLoad(error: LoadAdError) {
-                                    Log.w("TinatBannerAd", "Anchored banner failed on $currentAdUnit: ${error.message} (code: ${error.code})")
-                                    isAdLoaded = false
+                                    override fun onAdFailedToLoad(error: LoadAdError) {
+                                        Log.w("TinatBannerAd", "Anchored banner failed on $currentAdUnit: ${error.message} (code: ${error.code})")
+                                        isAdLoaded = false
 
-                                    // If primary production ID fails (e.g. no fill during testing), switch state to test unit
-                                    // Compose key(currentAdUnit) will safely create a new fresh AdView instance
-                                    if (currentAdUnit != AdManager.TEST_BANNER_AD_UNIT_ID) {
-                                        Log.d("TinatBannerAd", "Switching to standard test ad unit...")
-                                        currentAdUnit = AdManager.TEST_BANNER_AD_UNIT_ID
-                                    } else {
-                                        Log.d("TinatBannerAd", "All banner ad units unavailable. Cleanly collapsing banner space.")
-                                        hasPermanentlyFailed = true
+                                        if (currentAdUnit != AdManager.TEST_BANNER_AD_UNIT_ID) {
+                                            Log.d("TinatBannerAd", "Switching to standard test ad unit...")
+                                            currentAdUnit = AdManager.TEST_BANNER_AD_UNIT_ID
+                                        } else {
+                                            Log.d("TinatBannerAd", "All banner ad units unavailable. Cleanly collapsing banner space.")
+                                            hasPermanentlyFailed = true
+                                        }
                                     }
                                 }
+                                adViewInstance = this
+                                val request = AdRequest.Builder().build()
+                                loadAd(request)
                             }
-                            adViewInstance = this
-                            val request = AdRequest.Builder().build()
-                            loadAd(request)
+                        } catch (t: Throwable) {
+                            Log.e("TinatBannerAd", "Error creating AdView safely caught: ${t.message}", t)
+                            hasPermanentlyFailed = true
+                            android.view.View(ctx)
                         }
                     },
-                    update = { adView ->
-                        adViewInstance = adView
+                    update = { view ->
+                        if (view is AdView) {
+                            adViewInstance = view
+                        }
                     }
                 )
             }

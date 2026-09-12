@@ -3,6 +3,7 @@ package com.example.ui.screens
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -28,11 +29,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.R
 import com.example.ads.InterstitialAdManager
 import com.example.ads.AdsManager
 import com.example.data.StudySubject
@@ -866,6 +869,10 @@ fun DashboardScreen(viewModel: StudyViewModel) {
                                 if (idx >= 0) idx else 99
                             }
                     )
+
+                    val otherSubjects = subjectsList.filter { subject ->
+                        !sem1Subjects.contains(subject) && !sem2Subjects.contains(subject)
+                    }.sortedBy { viewModel.isSubjectLocked(it) }
 
                     if (sem1Subjects.isNotEmpty()) {
                         item(span = { GridItemSpan(maxLineSpan) }) {

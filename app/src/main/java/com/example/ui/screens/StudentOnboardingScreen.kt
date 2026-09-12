@@ -615,153 +615,294 @@ fun StudentOnboardingScreen(viewModel: StudyViewModel) {
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(bottom = 24.dp)
-                    .border(1.dp, if (agreedToConditions) EmeraldPrimary.copy(alpha = 0.5f) else cardBorder, RoundedCornerShape(16.dp)),
-                shape = RoundedCornerShape(16.dp),
+                    .border(
+                        1.5.dp,
+                        if (agreedToConditions) EmeraldPrimary else cardBorder,
+                        RoundedCornerShape(18.dp)
+                    )
+                    .testTag("legal_compliance_card"),
+                shape = RoundedCornerShape(18.dp),
                 colors = CardDefaults.cardColors(containerColor = cardBg)
             ) {
-                Column(modifier = Modifier.padding(16.dp)) {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
+                Column(modifier = Modifier.padding(18.dp)) {
+                    // Header with Icon Badge and Status Pill
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
                         Box(
                             modifier = Modifier
-                                .size(32.dp)
-                                .clip(CircleShape)
-                                .background(if (agreedToConditions) EmeraldPrimary else IndigoMedium),
+                                .size(38.dp)
+                                .clip(RoundedCornerShape(10.dp))
+                                .background(if (agreedToConditions) EmeraldPrimary.copy(alpha = 0.15f) else IndigoMedium.copy(alpha = 0.15f)),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
-                                imageVector = if (agreedToConditions) Icons.Default.Check else Icons.Default.Gavel,
+                                imageVector = if (agreedToConditions) Icons.Default.CheckCircle else Icons.Default.Gavel,
                                 contentDescription = null,
-                                tint = Color.White,
-                                modifier = Modifier.size(18.dp)
+                                tint = if (agreedToConditions) EmeraldPrimary else IndigoMedium,
+                                modifier = Modifier.size(20.dp)
                             )
                         }
                         Spacer(modifier = Modifier.width(12.dp))
                         Column(modifier = Modifier.weight(1f)) {
                             Text(
                                 text = "Legal Agreements & Policies",
-                                style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
+                                style = MaterialTheme.typography.titleMedium.copy(
+                                    fontWeight = FontWeight.Bold,
+                                    fontSize = 16.sp
+                                ),
                                 color = textPrimary
                             )
                             Text(
-                                text = "Please review our legal agreements before continuing",
-                                style = MaterialTheme.typography.bodySmall.copy(fontSize = 11.sp),
+                                text = "Review our policies prior to proceeding",
+                                style = MaterialTheme.typography.bodySmall.copy(fontSize = 11.5.sp),
                                 color = textSecondary
                             )
                         }
-                    }
-
-                    Spacer(modifier = Modifier.height(14.dp))
-
-                    // Buttons to view official legal websites
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        // EULA Button
+                        // Status indicator pill
                         Surface(
-                            shape = RoundedCornerShape(10.dp),
-                            color = if (selectedThemeDark) Color(0xFF1E293B) else Color(0xFFF1F5F9),
-                            border = androidx.compose.foundation.BorderStroke(1.dp, if (selectedThemeDark) Color(0xFF334155) else Color(0xFFE2E8F0)),
-                            modifier = Modifier
-                                .weight(1f)
-                                .clickable { openLegalUrl(com.example.ui.components.URL_EULA) }
+                            shape = RoundedCornerShape(20.dp),
+                            color = if (agreedToConditions) EmeraldPrimary.copy(alpha = 0.12f) else (if (selectedThemeDark) Color(0xFF334155) else Color(0xFFF1F5F9)),
+                            border = androidx.compose.foundation.BorderStroke(
+                                1.dp,
+                                if (agreedToConditions) EmeraldPrimary.copy(alpha = 0.4f) else Color.Transparent
+                            )
                         ) {
                             Row(
-                                modifier = Modifier.padding(vertical = 10.dp, horizontal = 6.dp),
-                                horizontalArrangement = Arrangement.Center,
+                                modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
-                                Icon(Icons.Default.Article, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(14.dp))
-                                Spacer(modifier = Modifier.width(4.dp))
-                                Text(
-                                    text = "EULA",
-                                    style = MaterialTheme.typography.bodySmall.copy(fontWeight = FontWeight.Bold, fontSize = 11.sp),
-                                    color = textPrimary,
-                                    maxLines = 1
-                                )
-                            }
-                        }
-
-                        // Terms & Conditions Button
-                        Surface(
-                            shape = RoundedCornerShape(10.dp),
-                            color = if (selectedThemeDark) Color(0xFF1E293B) else Color(0xFFF1F5F9),
-                            border = androidx.compose.foundation.BorderStroke(1.dp, if (selectedThemeDark) Color(0xFF334155) else Color(0xFFE2E8F0)),
-                            modifier = Modifier
-                                .weight(1.3f)
-                                .clickable { openLegalUrl(com.example.ui.components.URL_TERMS_OF_SERVICE) }
-                        ) {
-                            Row(
-                                modifier = Modifier.padding(vertical = 10.dp, horizontal = 6.dp),
-                                horizontalArrangement = Arrangement.Center,
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                Icon(Icons.Default.Gavel, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(14.dp))
-                                Spacer(modifier = Modifier.width(4.dp))
-                                Text(
-                                    text = "Terms & Conditions",
-                                    style = MaterialTheme.typography.bodySmall.copy(fontWeight = FontWeight.Bold, fontSize = 11.sp),
-                                    color = textPrimary,
-                                    maxLines = 1
-                                )
-                            }
-                        }
-
-                        // Privacy Policy Button
-                        Surface(
-                            shape = RoundedCornerShape(10.dp),
-                            color = if (selectedThemeDark) Color(0xFF1E293B) else Color(0xFFF1F5F9),
-                            border = androidx.compose.foundation.BorderStroke(1.dp, if (selectedThemeDark) Color(0xFF334155) else Color(0xFFE2E8F0)),
-                            modifier = Modifier
-                                .weight(1.2f)
-                                .clickable { openLegalUrl(com.example.ui.components.URL_PRIVACY_POLICY) }
-                        ) {
-                            Row(
-                                modifier = Modifier.padding(vertical = 10.dp, horizontal = 6.dp),
-                                horizontalArrangement = Arrangement.Center,
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                Icon(Icons.Default.PrivacyTip, contentDescription = null, tint = EmeraldPrimary, modifier = Modifier.size(14.dp))
-                                Spacer(modifier = Modifier.width(4.dp))
-                                Text(
-                                    text = "Privacy Policy",
-                                    style = MaterialTheme.typography.bodySmall.copy(fontWeight = FontWeight.Bold, fontSize = 11.sp),
-                                    color = textPrimary,
-                                    maxLines = 1
-                                )
+                                if (agreedToConditions) {
+                                    Icon(
+                                        Icons.Default.Check,
+                                        contentDescription = null,
+                                        tint = EmeraldPrimary,
+                                        modifier = Modifier.size(12.dp)
+                                    )
+                                    Spacer(modifier = Modifier.width(3.dp))
+                                    Text(
+                                        text = "Agreed",
+                                        style = MaterialTheme.typography.labelSmall.copy(
+                                            fontWeight = FontWeight.Bold,
+                                            fontSize = 10.sp
+                                        ),
+                                        color = EmeraldPrimary
+                                    )
+                                } else {
+                                    Text(
+                                        text = "Required",
+                                        style = MaterialTheme.typography.labelSmall.copy(
+                                            fontWeight = FontWeight.SemiBold,
+                                            fontSize = 10.sp
+                                        ),
+                                        color = if (selectedThemeDark) TextMuted else Color(0xFF64748B)
+                                    )
+                                }
                             }
                         }
                     }
 
-                    Spacer(modifier = Modifier.height(14.dp))
+                    Spacer(modifier = Modifier.height(16.dp))
 
+                    // Grouped Legal Documents List (No awkward truncation, accessible touch targets)
                     Surface(
-                        shape = RoundedCornerShape(12.dp),
-                        color = if (agreedToConditions) EmeraldPrimary.copy(alpha = 0.12f) else (if (selectedThemeDark) Color(0xFF1E293B) else Color(0xFFF8FAFC)),
+                        shape = RoundedCornerShape(14.dp),
+                        color = if (selectedThemeDark) Color(0xFF1E293B).copy(alpha = 0.65f) else Color(0xFFF8FAFC),
                         border = androidx.compose.foundation.BorderStroke(
                             1.dp,
-                            if (agreedToConditions) EmeraldPrimary else cardBorder
+                            if (selectedThemeDark) Color(0xFF334155) else Color(0xFFE2E8F0)
+                        ),
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Column {
+                            // 1. EULA Item
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clickable { openLegalUrl(com.example.ui.components.URL_EULA) }
+                                    .padding(horizontal = 14.dp, vertical = 11.dp)
+                                    .testTag("onboarding_eula_button"),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Box(
+                                    modifier = Modifier
+                                        .size(32.dp)
+                                        .clip(RoundedCornerShape(8.dp))
+                                        .background(EmeraldPrimary.copy(alpha = 0.12f)),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Icon(
+                                        Icons.Default.Article,
+                                        contentDescription = null,
+                                        tint = EmeraldPrimary,
+                                        modifier = Modifier.size(16.dp)
+                                    )
+                                }
+                                Spacer(modifier = Modifier.width(12.dp))
+                                Column(modifier = Modifier.weight(1f)) {
+                                    Text(
+                                        text = "End User License Agreement",
+                                        style = MaterialTheme.typography.bodyMedium.copy(
+                                            fontWeight = FontWeight.SemiBold,
+                                            fontSize = 13.sp
+                                        ),
+                                        color = textPrimary
+                                    )
+                                    Text(
+                                        text = "EULA · Software usage guidelines",
+                                        style = MaterialTheme.typography.bodySmall.copy(fontSize = 10.5.sp),
+                                        color = textSecondary
+                                    )
+                                }
+                                Icon(
+                                    Icons.Default.OpenInNew,
+                                    contentDescription = "Open EULA link",
+                                    tint = EmeraldPrimary,
+                                    modifier = Modifier.size(16.dp)
+                                )
+                            }
+
+                            HorizontalDivider(
+                                color = if (selectedThemeDark) Color(0xFF334155).copy(alpha = 0.6f) else Color(0xFFE2E8F0),
+                                thickness = 0.8.dp
+                            )
+
+                            // 2. Terms & Conditions Item
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clickable { openLegalUrl(com.example.ui.components.URL_TERMS_OF_SERVICE) }
+                                    .padding(horizontal = 14.dp, vertical = 11.dp)
+                                    .testTag("onboarding_terms_button"),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Box(
+                                    modifier = Modifier
+                                        .size(32.dp)
+                                        .clip(RoundedCornerShape(8.dp))
+                                        .background(Color(0xFF6366F1).copy(alpha = 0.12f)),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Icon(
+                                        Icons.Default.Gavel,
+                                        contentDescription = null,
+                                        tint = Color(0xFF6366F1),
+                                        modifier = Modifier.size(16.dp)
+                                    )
+                                }
+                                Spacer(modifier = Modifier.width(12.dp))
+                                Column(modifier = Modifier.weight(1f)) {
+                                    Text(
+                                        text = "Terms and Conditions",
+                                        style = MaterialTheme.typography.bodyMedium.copy(
+                                            fontWeight = FontWeight.SemiBold,
+                                            fontSize = 13.sp
+                                        ),
+                                        color = textPrimary
+                                    )
+                                    Text(
+                                        text = "Accounts, subscriptions & service terms",
+                                        style = MaterialTheme.typography.bodySmall.copy(fontSize = 10.5.sp),
+                                        color = textSecondary
+                                    )
+                                }
+                                Icon(
+                                    Icons.Default.OpenInNew,
+                                    contentDescription = "Open Terms link",
+                                    tint = Color(0xFF6366F1),
+                                    modifier = Modifier.size(16.dp)
+                                )
+                            }
+
+                            HorizontalDivider(
+                                color = if (selectedThemeDark) Color(0xFF334155).copy(alpha = 0.6f) else Color(0xFFE2E8F0),
+                                thickness = 0.8.dp
+                            )
+
+                            // 3. Privacy Policy Item
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clickable { openLegalUrl(com.example.ui.components.URL_PRIVACY_POLICY) }
+                                    .padding(horizontal = 14.dp, vertical = 11.dp)
+                                    .testTag("onboarding_privacy_button"),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Box(
+                                    modifier = Modifier
+                                        .size(32.dp)
+                                        .clip(RoundedCornerShape(8.dp))
+                                        .background(Color(0xFF0EA5E9).copy(alpha = 0.12f)),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Icon(
+                                        Icons.Default.PrivacyTip,
+                                        contentDescription = null,
+                                        tint = Color(0xFF0EA5E9),
+                                        modifier = Modifier.size(16.dp)
+                                    )
+                                }
+                                Spacer(modifier = Modifier.width(12.dp))
+                                Column(modifier = Modifier.weight(1f)) {
+                                    Text(
+                                        text = "Privacy Policy",
+                                        style = MaterialTheme.typography.bodyMedium.copy(
+                                            fontWeight = FontWeight.SemiBold,
+                                            fontSize = 13.sp
+                                        ),
+                                        color = textPrimary
+                                    )
+                                    Text(
+                                        text = "Student data safety & offline encryption",
+                                        style = MaterialTheme.typography.bodySmall.copy(fontSize = 10.5.sp),
+                                        color = textSecondary
+                                    )
+                                }
+                                Icon(
+                                    Icons.Default.OpenInNew,
+                                    contentDescription = "Open Privacy Policy link",
+                                    tint = Color(0xFF0EA5E9),
+                                    modifier = Modifier.size(16.dp)
+                                )
+                            }
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.height(14.dp))
+
+                    // Agreement Checkbox Container
+                    Surface(
+                        shape = RoundedCornerShape(14.dp),
+                        color = if (agreedToConditions) EmeraldPrimary.copy(alpha = 0.10f) else (if (selectedThemeDark) Color(0xFF1E293B).copy(alpha = 0.8f) else Color(0xFFF8FAFC)),
+                        border = androidx.compose.foundation.BorderStroke(
+                            1.5.dp,
+                            if (agreedToConditions) EmeraldPrimary else (if (selectedThemeDark) Color(0xFF334155) else Color(0xFFE2E8F0))
                         ),
                         modifier = Modifier
                             .fillMaxWidth()
                             .clickable { agreedToConditions = !agreedToConditions }
+                            .testTag("onboarding_agree_checkbox_card")
                     ) {
                         Row(
-                            modifier = Modifier.padding(12.dp),
+                            modifier = Modifier.padding(14.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
                             Checkbox(
                                 checked = agreedToConditions,
                                 onCheckedChange = { agreedToConditions = it },
-                                colors = CheckboxDefaults.colors(checkedColor = EmeraldPrimary)
+                                colors = CheckboxDefaults.colors(
+                                    checkedColor = EmeraldPrimary,
+                                    checkmarkColor = Color.White
+                                )
                             )
-                            Spacer(modifier = Modifier.width(8.dp))
+                            Spacer(modifier = Modifier.width(10.dp))
                             Text(
-                                text = "I have read and agree to the EULA Agreement, Terms and Conditions, and Privacy Policy.",
+                                text = "I have read, understood, and agree to the EULA Agreement, Terms and Conditions, and Privacy Policy.",
                                 style = MaterialTheme.typography.bodySmall.copy(
-                                    fontWeight = if (agreedToConditions) FontWeight.Bold else FontWeight.Medium,
+                                    fontWeight = if (agreedToConditions) FontWeight.SemiBold else FontWeight.Normal,
                                     fontSize = 12.sp,
-                                    lineHeight = 17.sp
+                                    lineHeight = 17.5.sp
                                 ),
                                 color = textPrimary,
                                 modifier = Modifier.weight(1f)
@@ -828,16 +969,7 @@ fun StudentOnboardingScreen(viewModel: StudyViewModel) {
                 }
             }
 
-            Spacer(modifier = Modifier.height(20.dp))
-
-            // Legal Documents Footer (Privacy Policy, Terms of Service, EULA)
-            com.example.ui.components.LegalLinksFooter(
-                currentLang = selectedLang,
-                textColor = if (selectedThemeDark) TextMuted else Color.Gray,
-                screenTagPrefix = "onboarding"
-            )
-
-            Spacer(modifier = Modifier.height(24.dp))
+            Spacer(modifier = Modifier.height(28.dp))
         }
     }
 }

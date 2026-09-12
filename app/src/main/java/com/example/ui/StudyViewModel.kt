@@ -22,6 +22,9 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
     val studentToolsRepo = StudentToolsRepository(database.studentToolsDao())
     private val sharedPrefs = application.getSharedPreferences("offline_study_local_cache", Context.MODE_PRIVATE)
 
+    // Daily Study Streak Tracking
+    val dailyStreakCount = MutableStateFlow(sharedPrefs.getInt("user_daily_streak_count", 1))
+
     // Student Tools UI State
     val isToolsSidebarOpen = MutableStateFlow(false)
     val isStudentToolsOpen = MutableStateFlow(false)
@@ -55,15 +58,23 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
 
     init {
         viewModelScope.launch {
-            val currentEpochDay = System.currentTimeMillis() / (1000 * 60 * 60 * 24)
-            studentToolsRepo.seedInitialDataIfEmpty(currentEpochDay)
+            try {
+                val currentEpochDay = System.currentTimeMillis() / (1000 * 60 * 60 * 24)
+                studentToolsRepo.seedInitialDataIfEmpty(currentEpochDay)
+            } catch (t: Throwable) {
+                android.util.Log.e("StudyViewModel", "Error seeding initial tools data: ${t.message}", t)
+            }
         }
-        updateDailyStreak()
-        val activatedTrial = sharedPrefs.getLong("free_trial_activated_at", 0L)
-        if (activatedTrial > 0L) {
-            NotificationHelper.scheduleFreeTrialNotifications(application, activatedTrial)
+        try {
+            updateDailyStreak()
+            val activatedTrial = sharedPrefs.getLong("free_trial_activated_at", 0L)
+            if (activatedTrial > 0L) {
+                NotificationHelper.scheduleFreeTrialNotifications(application, activatedTrial)
+            }
+            NotificationHelper.scheduleDailyStudyReminders(application)
+        } catch (t: Throwable) {
+            android.util.Log.e("StudyViewModel", "Error initializing streak/reminders: ${t.message}", t)
         }
-        NotificationHelper.scheduleDailyStudyReminders(application)
     }
 
     fun deriveActiveLearningContext(): LearningContext {
@@ -289,8 +300,9 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
         sharedPrefs.edit().putBoolean("user_is_dark_theme", enabled).apply()
     }
 
-    // Daily Study Streak Tracking
-    val dailyStreakCount = MutableStateFlow(sharedPrefs.getInt("user_daily_streak_count", 1))
+    fun toggleDarkTheme() {
+        setDarkTheme(!isDarkTheme.value)
+    }
 
     fun updateDailyStreak() {
         val todayEpochDay = System.currentTimeMillis() / (1000 * 60 * 60 * 24)
@@ -375,7 +387,7 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
         pendingTrialPackageId.value = null
         val cur = userProgress.value
         viewModelScope.launch {
-            repository.updateUserProgress(cur.copy(activePackageId = packageId))
+            repository.updateProgress(cur.copy(activePackageId = packageId))
         }
     }
 
@@ -798,19 +810,32 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
 
     init {
         viewModelScope.launch(Dispatchers.IO) {
-            // Seed database at startup if empty in background IO
-            repository.seedDatabaseIfEmpty()
+            try {
+                // Seed database at startup if empty in background IO
+                repository.seedDatabaseIfEmpty()
+            } catch (t: Throwable) {
+                android.util.Log.e("StudyViewModel", "Error seeding database: ${t.message}", t)
+            }
         }
 
         // Keep username input in sync with loaded profile
         viewModelScope.launch {
-            userProgress.collect { progress ->
-                profileUsernameEditInput.value = progress.username
+            try {
+                userProgress.collect { progress ->
+                    profileUsernameEditInput.value = progress.username
+                }
+            } catch (t: Throwable) {
+                android.util.Log.e("StudyViewModel", "Error collecting userProgress: ${t.message}", t)
             }
         }
 
         // Check entitlement on app launch if accessToken exists
-        checkSavedEntitlementOnLaunch()
+        try {
+            checkSavedEntitlementOnLaunch()
+        } catch (t: Throwable) {
+            android.util.Log.e("StudyViewModel", "Error initiating entitlement check: ${t.message}", t)
+            isSplashChecking.value = false
+        }
     }
 
     private fun checkSavedEntitlementOnLaunch() {
@@ -835,7 +860,7 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
                             sharedPrefs.edit().remove("access_token").apply()
                         }
                     }
-                } catch (e: Exception) {
+                } catch (t: Throwable) {
                     // Offline or network glitch: retain offline functionality
                 } finally {
                     isSplashChecking.value = false
@@ -1447,7 +1472,7 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun redeemCodeWithProductContext(phoneNumber: String, redeemCode: String, productId: String): Boolean {
-        val success = redeemCode(phoneNumber, redeemCode, productId)
+        val success = activatePremiumWithRedeemCode(phoneNumber, redeemCode, productId)
         if (success && productId.isNotEmpty()) {
             viewModelScope.launch(Dispatchers.IO) {
                 repository.grantEntitlement(productId = productId)

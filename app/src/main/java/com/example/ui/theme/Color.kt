@@ -21,6 +21,8 @@ val GoldLight = Color(0xFFFEF3C7)
 // Background Gradients
 val BgSoftGray = Color(0xFFF3F4F6)
 val BgOffWhite = Color(0xFFFDFDFD)
+val BackgroundDark = Color(0xFF0A0D14)
+val BackgroundLight = Color(0xFFF3F4F6)
 
 // Apple-Grade OLED Dark Mode Palette
 val ReaderBgDark = Color(0xFF0A0D14) // Deep Obsidian OLED Black

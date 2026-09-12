@@ -364,9 +364,11 @@ fun ChooseToolScreen(viewModel: StudyViewModel) {
             val pkgId = confirmationPackage!!
             val pkgName = when(pkgId) {
                 "euee" -> t("pkg_euee_title")
+                "freshman" -> "Freshman Package"
                 "freshman_natural" -> t("pkg_freshman_natural_title")
                 "freshman_social" -> t("pkg_freshman_social_title")
                 "aau_uat" -> t("pkg_uat_title")
+                "coc" -> "COC Exam Preparation"
                 "department" -> t("pkg_dept_title")
                 "exit_exam" -> t("pkg_exit_title")
                 else -> "Study Plan"
@@ -1084,8 +1086,13 @@ fun EnrollmentConfirmationModal(
                                     packageId
                                 }
                             }
-                            viewModel.activateFreeTrialConfirmed(targetPackageId, context)
-                            onConfirm(targetPackageId)
+                            if (viewModel.freeTrialActivatedAtMillis.value == 0L) {
+                                viewModel.requestFreeTrialActivation(targetPackageId)
+                                onDismiss()
+                            } else {
+                                viewModel.activateFreeTrialConfirmed(targetPackageId, context)
+                                onConfirm(targetPackageId)
+                            }
                         },
                         modifier = Modifier
                             .fillMaxWidth()

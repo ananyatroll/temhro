@@ -141,11 +141,27 @@ fun DocumentScannerView(
         }
     }
 
+    fun launchCameraDirect() {
+        try {
+            val photoFile = File(context.cacheDir, "camera_scan_${System.currentTimeMillis()}.jpg")
+            val uri = androidx.core.content.FileProvider.getUriForFile(
+                context,
+                "com.aistudio.tinat.studyapp.provider",
+                photoFile
+            )
+            tempCameraUri = uri
+            cameraLauncher.launch(uri)
+        } catch (e: Exception) {
+            e.printStackTrace()
+            popupMessage = "Unable to launch camera: ${e.message}"
+        }
+    }
+
     val cameraPermissionLauncher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.RequestPermission()
     ) { isGranted ->
         if (isGranted) {
-            launchCamera()
+            launchCameraDirect()
         } else {
             popupMessage = "Camera permission is required to scan documents."
         }
@@ -160,20 +176,7 @@ fun DocumentScannerView(
             cameraPermissionLauncher.launch(android.Manifest.permission.CAMERA)
             return
         }
-
-        try {
-            val photoFile = File(context.cacheDir, "camera_scan_${System.currentTimeMillis()}.jpg")
-            val uri = androidx.core.content.FileProvider.getUriForFile(
-                context,
-                "com.aistudio.tinat.studyapp.provider",
-                photoFile
-            )
-            tempCameraUri = uri
-            cameraLauncher.launch(uri)
-        } catch (e: Exception) {
-            e.printStackTrace()
-            popupMessage = "Unable to launch camera: ${e.message}"
-        }
+        launchCameraDirect()
     }
 
     fun launchGallery() {

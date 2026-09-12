@@ -18,7 +18,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.ads.AdConfig
 import com.example.ads.AdManager
 import com.example.ads.AdsManager
 import com.example.ads.InterstitialAdManager
@@ -40,15 +39,29 @@ class MainActivity : ComponentActivity() {
         }
 
         // Initialize Notification Channels & Timed Daily Reminders
-        NotificationHelper.createNotificationChannel(this)
-        NotificationHelper.scheduleDailyStudyReminders(this)
+        try {
+            NotificationHelper.createNotificationChannel(this)
+            NotificationHelper.scheduleDailyStudyReminders(this)
+        } catch (t: Throwable) {
+            android.util.Log.e("MainActivity", "Failed to initialize notifications", t)
+        }
 
         // Initialize Google AdMob SDK & UMP Privacy Consent flow via AdManager
-        AdManager.initialize(this)
+        try {
+            AdManager.initialize(this)
+        } catch (t: Throwable) {
+            android.util.Log.e("MainActivity", "Failed to initialize AdManager", t)
+        }
 
         setContent {
             val viewModel: StudyViewModel = viewModel()
             val isDarkTheme by viewModel.isDarkTheme.collectAsState()
+
+            // Safety fallback so splash screen never hangs permanently
+            LaunchedEffect(Unit) {
+                kotlinx.coroutines.delay(3500)
+                viewModel.isSplashChecking.value = false
+            }
 
             MyApplicationTheme(darkTheme = isDarkTheme) {
                 // Initialize Central ViewModel states
@@ -255,7 +268,9 @@ class MainActivity : ComponentActivity() {
                                         com.example.ui.screens.FreeTrialConfirmationModal(
                                             onDismiss = { viewModel.showFreeTrialConfirmationDialog.value = false },
                                             onConfirm = {
-                                                viewModel.activateFreeTrialConfirmed(pendingTrialPackageId!!, context)
+                                                pendingTrialPackageId?.let { pkg ->
+                                                    viewModel.activateFreeTrialConfirmed(pkg, context)
+                                                }
                                             }
                                         )
                                     }

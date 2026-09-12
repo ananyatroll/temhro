@@ -1501,7 +1501,7 @@ object TranslationManager {
     )
 
     fun get(key: String, lang: String): String {
-        val langMap = translations[lang] ?: translations["en"]!!
+        val langMap = translations[lang] ?: translations["en"] ?: emptyMap()
         return langMap[key] ?: translations["en"]?.get(key) ?: key
     }
 }
