@@ -67,72 +67,410 @@ fun DashboardScreen(viewModel: StudyViewModel) {
     val academicDepartment by viewModel.academicDepartment.collectAsState()
     val academicYear by viewModel.academicYear.collectAsState()
 
-    // Department Curriculum Definition by Year
+    // Department Curriculum Definition by Year and Semester
     val departmentCurriculum = remember(academicDepartment) {
         val isEng = academicDepartment.contains("Engineering", ignoreCase = true)
         val dept = academicDepartment.ifBlank { "Department" }
 
         fun s(id: String, name: String, icon: String) = StudySubject(id, name, icon, "department")
 
-        val (y2, y3, y4) = when {
-            dept.contains("Accounting", ignoreCase = true) -> Triple(
-                listOf(s("dept_fin_acc_1", "Financial Accounting I", "accounting"), s("dept_cost_acc", "Cost and Management Accounting I", "accounting"), s("dept_business_law", "Business Law", "civics"), s("dept_micro_econ", "Microeconomics", "economics")),
-                listOf(s("dept_fin_acc_2", "Financial Accounting II", "accounting"), s("dept_auditing_1", "Principles of Auditing I", "accounting"), s("dept_tax_acc", "Ethiopian Tax Accounting", "accounting"), s("dept_corp_fin", "Corporate Finance", "business")),
-                listOf(s("dept_advanced_acc", "Advanced Financial Accounting", "accounting"), s("dept_acct_info_sys", "Accounting Information Systems", "analytics"), s("dept_gov_acc", "Public Sector and Fund Accounting", "accounting"), s("dept_senior_research_acc", "Senior Accounting Research", "business"))
+        when {
+            // BAIS (Business Administration and Information Systems)
+            dept.contains("BAIS", ignoreCase = true) || dept.contains("Business Administration and Information", ignoreCase = true) -> listOf(
+                "Year 2" to listOf(
+                    ("Semester 1" to "Sem 1") to listOf(
+                        s("bais_y2_s1_mgmt", "Introduction to Management", "management"),
+                        s("bais_y2_s1_is", "Introduction to Information System", "analytics"),
+                        s("bais_y2_s1_stats", "Business Statistics I", "analytics"),
+                        s("bais_y2_s1_net1", "Computer Networking I", "computer"),
+                        s("bais_y2_s1_acc1", "Fundamental of Accounting I", "accounting"),
+                        s("bais_y2_s1_micro", "Microeconomics", "economics")
+                    ),
+                    ("Semester 2" to "Sem 2") to listOf(
+                        s("bais_y2_s2_hrm", "Human Resources Management", "management"),
+                        s("bais_y2_s2_acc2", "Fundamental of Accounting II", "accounting"),
+                        s("bais_y2_s2_comm", "Business Communication", "english"),
+                        s("bais_y2_s2_net2", "Computer Networking II", "computer"),
+                        s("bais_y2_s2_mkt", "Principle of Marketing", "marketing"),
+                        s("bais_y2_s2_stats2", "Business Statistics II", "analytics"),
+                        s("bais_y2_s2_ob", "Organizational Behavior (OB)", "management")
+                    )
+                ),
+                "Year 3" to listOf(
+                    ("Semester 1" to "Sem 1") to listOf(
+                        s("bais_y3_s1_or", "Operations Research", "analytics"),
+                        s("bais_y3_s1_mat_mgmt", "Materials Management", "management"),
+                        s("bais_y3_s1_prog1", "Programming I", "computer"),
+                        s("bais_y3_s1_risk", "Risk Management and Insurance", "business"),
+                        s("bais_y3_s1_sad", "Fundamentals of System Analysis and Design", "software"),
+                        s("bais_y3_s1_db1", "Database System I", "analytics")
+                    ),
+                    ("Semester 2" to "Sem 2") to listOf(
+                        s("bais_y3_s2_cyber_law", "Business and Cyber Law", "civics"),
+                        s("bais_y3_s2_brm", "Business Research Methods", "business"),
+                        s("bais_y3_s2_db2", "Database System II", "analytics"),
+                        s("bais_y3_s2_ecom", "E-Commerce", "computer"),
+                        s("bais_y3_s2_oosad", "Object Oriented Systems Analysis & Design", "software"),
+                        s("bais_y3_s2_web", "Web Page Development", "computer")
+                    )
+                ),
+                "Year 4" to listOf(
+                    ("Semester 1" to "Sem 1") to listOf(
+                        s("bais_y4_s1_prog2", "Programming II", "computer"),
+                        s("bais_y4_s1_om", "Operation Management", "management"),
+                        s("bais_y4_s1_win_prog", "Windows Programming", "computer"),
+                        s("bais_y4_s1_bi_dss", "Business Intelligence & Decision Support System", "analytics"),
+                        s("bais_y4_s1_sec", "Information System Security & Privacy", "computer"),
+                        s("bais_y4_s1_cma", "Cost and Managerial Accounting", "accounting")
+                    ),
+                    ("Semester 2" to "Sem 2") to listOf(
+                        s("bais_y4_s2_pm", "Project Management", "management"),
+                        s("bais_y4_s2_fin", "Financial Management", "business"),
+                        s("bais_y4_s2_sm", "Strategic Management", "management"),
+                        s("bais_y4_s2_is_retrieval", "Introduction to Info Storage & Retrieval", "analytics"),
+                        s("bais_y4_s2_ism", "Information System Management", "computer"),
+                        s("bais_y4_s2_adv_entrep", "Advanced Entrepreneurship & Innovation", "business"),
+                        s("bais_y4_s2_hist", "History of Ethiopia", "civics"),
+                        s("bais_y4_s2_proj", "Senior Project", "software")
+                    )
+                )
             )
-            dept.contains("Economics", ignoreCase = true) -> Triple(
-                listOf(s("dept_micro_1", "Intermediate Microeconomics I", "economics"), s("dept_macro_1", "Intermediate Macroeconomics I", "economics"), s("dept_math_econ", "Calculus for Economists", "maths"), s("dept_stats_econ", "Statistics for Economists", "analytics")),
-                listOf(s("dept_econometrics_1", "Introduction to Econometrics", "analytics"), s("dept_dev_econ", "Development Economics", "economics"), s("dept_monetary_econ", "Monetary and Banking Economics", "economics"), s("dept_pub_fin", "Public Finance", "business")),
-                listOf(s("dept_adv_econometrics", "Applied Econometrics & Time Series", "analytics"), s("dept_intl_trade", "International Economics & Trade", "economics"), s("dept_eth_econ", "The Ethiopian Economy: Policy & Growth", "economics"), s("dept_econ_thesis", "Undergraduate Research Project", "economics"))
+
+            // Management
+            dept.contains("Management", ignoreCase = true) && !dept.contains("Marketing", ignoreCase = true) && !dept.contains("Logistics", ignoreCase = true) && !dept.contains("BAIS", ignoreCase = true) && !dept.contains("Supply", ignoreCase = true) -> listOf(
+                "Year 2" to listOf(
+                    ("Semester 1" to "Sem 1") to listOf(
+                        s("mgmt_y2_s1_app", "Computer Applications in Management", "computer"),
+                        s("mgmt_y2_s1_writing", "Basic Writing Skills", "english"),
+                        s("mgmt_y2_s1_micro", "Microeconomics", "economics"),
+                        s("mgmt_y2_s1_intro", "Introduction to Management", "management"),
+                        s("mgmt_y2_s1_org_theory", "Organization Theory", "management"),
+                        s("mgmt_y2_s1_admin_comm", "Administrative & Business Communication", "english"),
+                        s("mgmt_y2_s1_stats1", "Statistics for Management I", "analytics")
+                    ),
+                    ("Semester 2" to "Sem 2") to listOf(
+                        s("mgmt_y2_s2_math", "Mathematics for Management", "maths"),
+                        s("mgmt_y2_s2_mkt", "Principle of Marketing", "marketing"),
+                        s("mgmt_y2_s2_acc1", "Fundamentals of Accounting I", "accounting"),
+                        s("mgmt_y2_s2_stats2", "Statistics for Management II", "analytics"),
+                        s("mgmt_y2_s2_macro", "Macroeconomics", "economics"),
+                        s("mgmt_y2_s2_ob", "Organizational Behavior", "management")
+                    )
+                ),
+                "Year 3" to listOf(
+                    ("Semester 1" to "Sem 1") to listOf(
+                        s("mgmt_y3_s1_mat_mgmt", "Materials Management", "management"),
+                        s("mgmt_y3_s1_hrm", "Human Resource Management", "management"),
+                        s("mgmt_y3_s1_intl_mkt", "International Marketing", "marketing"),
+                        s("mgmt_y3_s1_acc2", "Fundamentals of Accounting II", "accounting"),
+                        s("mgmt_y3_s1_mis", "Management Information System", "analytics"),
+                        s("mgmt_y3_s1_econ_mgmt", "Econometrics for Management", "analytics")
+                    ),
+                    ("Semester 2" to "Sem 2") to listOf(
+                        s("mgmt_y3_s2_lead_change", "Leadership & Change Management", "management"),
+                        s("mgmt_y3_s2_cma1", "Cost and Management Accounting I", "accounting"),
+                        s("mgmt_y3_s2_brm", "Business Research Methods", "business"),
+                        s("mgmt_y3_s2_sad", "System Analysis and Design", "software"),
+                        s("mgmt_y3_s2_law", "Business Law", "civics"),
+                        s("mgmt_y3_s2_mgr_econ", "Managerial Economics", "economics")
+                    )
+                ),
+                "Year 4" to listOf(
+                    ("Semester 1" to "Sem 1") to listOf(
+                        s("mgmt_y4_s1_intern", "Internship in Management", "business"),
+                        s("mgmt_y4_s1_csr", "Business Ethics & CSR", "civics"),
+                        s("mgmt_y4_s1_cma2", "Cost and Management Accounting II", "accounting"),
+                        s("mgmt_y4_s1_or", "Operations Research", "analytics"),
+                        s("mgmt_y4_s1_fin_mgmt", "Financial Management", "business"),
+                        s("mgmt_y4_s1_risk", "Risk Management and Insurance", "business"),
+                        s("mgmt_y4_s1_res1", "Research in Management I", "business")
+                    ),
+                    ("Semester 2" to "Sem 2") to listOf(
+                        s("mgmt_y4_s2_om", "Operations Management", "management"),
+                        s("mgmt_y4_s2_fin_inst", "Management of Financial Institutions", "business"),
+                        s("mgmt_y4_s2_innov_entrep", "Innovation Management & Entrepreneurship", "business"),
+                        s("mgmt_y4_s2_pm", "Project Management", "management"),
+                        s("mgmt_y4_s2_sm", "Strategic Management", "management"),
+                        s("mgmt_y4_s2_res2", "Research in Management II", "business")
+                    )
+                )
             )
-            dept.contains("Computer Science", ignoreCase = true) || dept.contains("Software", ignoreCase = true) -> Triple(
-                listOf(s("dept_dsa", "Data Structures & Algorithms", "computer"), s("dept_oop", "Object Oriented Programming (Java/C++)", "software"), s("dept_db_sys", "Database Systems & SQL", "analytics"), s("dept_comp_org", "Computer Architecture & Organization", "computer")),
-                listOf(s("dept_os", "Operating Systems & Concurrency", "computer"), s("dept_networks", "Computer Networks & Protocols", "computer"), s("dept_soft_eng", "Software Engineering Principles", "software"), s("dept_web_dev", "Web Architecture & Fullstack Dev", "computer")),
-                listOf(s("dept_distributed_sys", "Distributed Systems & Cloud Computing", "computer"), s("dept_ai_ml", "Artificial Intelligence & Data Mining", "computer"), s("dept_cybersecurity", "Information Security & Cryptography", "computer"), s("dept_capstone_1", "Senior Capstone Project I", "software"))
+
+            // Logistics and Supply Chain Management (LSCM)
+            dept.contains("Logistics", ignoreCase = true) || dept.contains("Supply Chain", ignoreCase = true) || dept.contains("LSCM", ignoreCase = true) -> listOf(
+                "Year 2" to listOf(
+                    ("Semester 1" to "Sem 1") to listOf(
+                        s("lscm_y2_s1_acc1", "Fundamental Accounting Principle One", "accounting"),
+                        s("lscm_y2_s1_scm", "Essential Supply Chain Management", "logistics"),
+                        s("lscm_y2_s1_stats1", "Basic Statistics One", "analytics"),
+                        s("lscm_y2_s1_log_mgmt", "Fundamentals Of Logistics Management", "logistics"),
+                        s("lscm_y2_s1_comp_app", "Computer Application In Management", "computer"),
+                        s("lscm_y2_s1_mkt", "Principles Of Marketing", "marketing"),
+                        s("lscm_y2_s1_intro_mgmt", "Introduction To Management", "management")
+                    ),
+                    ("Semester 2" to "Sem 2") to listOf(
+                        s("lscm_y2_s2_ob", "Organizational Behavior", "management"),
+                        s("lscm_y2_s2_proc_mgmt", "Basics Of Procurement Management", "logistics"),
+                        s("lscm_y2_s2_mgr_stats", "Managerial Statistics", "analytics"),
+                        s("lscm_y2_s2_comm", "Business Communication", "english"),
+                        s("lscm_y2_s2_neg_contract", "Negotiations And Contract Management", "civics"),
+                        s("lscm_y2_s2_acc2", "Fundamental Accounting 2", "accounting"),
+                        s("lscm_y2_s2_micro", "Micro Economics", "economics")
+                    )
+                ),
+                "Year 3" to listOf(
+                    ("Semester 1" to "Sem 1") to listOf(
+                        s("lscm_y3_s1_gov_proc", "Government Procurement", "logistics"),
+                        s("lscm_y3_s1_wh_mgmt", "Warehouse Management", "logistics"),
+                        s("lscm_y3_s1_law", "Business Law", "civics"),
+                        s("lscm_y3_s1_inv_mgmt", "Inventory Management", "logistics"),
+                        s("lscm_y3_s1_trans_mgmt", "Transportation Management", "logistics"),
+                        s("lscm_y3_s1_cma1", "Cost and Management Accounting 1", "accounting"),
+                        s("lscm_y3_s1_math", "Business Mathematics", "maths")
+                    ),
+                    ("Semester 2" to "Sem 2") to listOf(
+                        s("lscm_y3_s2_econometrics", "Introduction to Econometrics", "analytics"),
+                        s("lscm_y3_s2_risk", "Supply Chain Risk & Insurance Management", "business"),
+                        s("lscm_y3_s2_fin1", "Financial Management I", "business"),
+                        s("lscm_y3_s2_foreign_proc", "Foreign Procurement", "logistics"),
+                        s("lscm_y3_s2_res_methods", "Research Methods in SCM", "business"),
+                        s("lscm_y3_s2_strat_sourcing", "Strategic Sourcing & Supplier Relationship", "logistics"),
+                        s("lscm_y3_s2_ecom_scis", "E-Commerce & Supply Chain Info System", "computer")
+                    )
+                ),
+                "Year 4" to listOf(
+                    ("Semester 1" to "Sem 1") to listOf(
+                        s("lscm_y4_s1_or", "Operation Research", "analytics"),
+                        s("lscm_y4_s1_custom_freight", "Custom Clearance & Freight Forwarding", "logistics"),
+                        s("lscm_y4_s1_port_terminal", "Port And Terminal Operation Management", "logistics"),
+                        s("lscm_y4_s1_pm", "Project Management", "management"),
+                        s("lscm_y4_s1_hist", "History of Ethiopia", "civics"),
+                        s("lscm_y4_s1_sust_scm", "Sustainable Supply Chain Management", "logistics"),
+                        s("lscm_y4_s1_attachment", "Practical Attachment & Seminar of LSCM", "business")
+                    ),
+                    ("Semester 2" to "Sem 2") to listOf(
+                        s("lscm_y4_s2_om", "Operation Management", "management"),
+                        s("lscm_y4_s2_strat_scm", "Strategic Supply Chain Management", "logistics"),
+                        s("lscm_y4_s2_humanitarian", "Humanitarian Logistics Management", "logistics"),
+                        s("lscm_y4_s2_global_scm", "Global Supply Chain Management", "logistics"),
+                        s("lscm_y4_s2_research", "Final Research Project", "business"),
+                        s("lscm_y4_s2_dist_log", "Distribution Logistics Management", "logistics")
+                    )
+                )
             )
-            dept.contains("Electrical", ignoreCase = true) -> Triple(
-                listOf(s("dept_circuit_1", "Electric Circuits I", "electrical"), s("dept_applied_math_1", "Applied Mathematics I", "maths"), s("dept_electromagnetics", "Electromagnetic Fields", "physics"), s("dept_electronics_1", "Basic Electronics", "electrical")),
-                listOf(s("dept_signals_sys", "Signals and Systems", "electrical"), s("dept_power_sys", "Electrical Power Systems", "electrical"), s("dept_control_sys", "Control Systems Engineering", "electrical"), s("dept_microprocessors", "Microprocessors & Embedded Systems", "computer")),
-                listOf(s("dept_comm_systems", "Telecommunications Engineering", "electrical"), s("dept_power_electronics", "Power Electronics & Drives", "electrical"), s("dept_power_protection", "Power System Protection & Relay", "electrical"), s("dept_ee_capstone_1", "Engineering Capstone Project I", "electrical"))
+
+            // Economics
+            dept.contains("Economics", ignoreCase = true) -> listOf(
+                "Year 2" to listOf(
+                    ("Semester 1" to "Sem 1") to listOf(
+                        s("econ_y2_s1_acc1", "Principle Of Accounting I", "accounting"),
+                        s("econ_y2_s1_comp", "Basic Computer Skills", "computer"),
+                        s("econ_y2_s1_calc", "Calculus For Economists", "maths"),
+                        s("econ_y2_s1_stats", "Introduction To Statistics", "analytics"),
+                        s("econ_y2_s1_macro1", "Macroeconomics I", "economics"),
+                        s("econ_y2_s1_micro1", "Microeconomics I", "economics")
+                    ),
+                    ("Semester 2" to "Sem 2") to listOf(
+                        s("econ_y2_s2_acc2", "Accounting II", "accounting"),
+                        s("econ_y2_s2_writing", "Basic Writing Skills", "english"),
+                        s("econ_y2_s2_linalg", "Linear Algebra", "maths"),
+                        s("econ_y2_s2_macro2", "Macroeconomics II", "economics"),
+                        s("econ_y2_s2_micro2", "Microeconomics II", "economics"),
+                        s("econ_y2_s2_stats_econ", "Statistics for Economics", "analytics")
+                    )
+                ),
+                "Year 3" to listOf(
+                    ("Semester 1" to "Sem 1") to listOf(
+                        s("econ_y3_s1_dev1", "Developmental Economics I", "economics"),
+                        s("econ_y3_s1_metrics1", "Econometrics I", "analytics"),
+                        s("econ_y3_s1_fin_econ", "Financial Economics", "business"),
+                        s("econ_y3_s1_intl1", "International Economics I", "economics"),
+                        s("econ_y3_s1_intro_mgmt", "Introduction To Management", "management"),
+                        s("econ_y3_s1_labor", "Labor Economics", "economics"),
+                        s("econ_y3_s1_math_econ", "Mathematical Economics", "maths")
+                    ),
+                    ("Semester 2" to "Sem 2") to listOf(
+                        s("econ_y3_s2_dev2", "Development Economics II", "economics"),
+                        s("econ_y3_s2_metrics2", "Econometrics II", "analytics"),
+                        s("econ_y3_s2_ind_econ", "Industrial Economics", "economics"),
+                        s("econ_y3_s2_env_econ", "Environmental Economics", "economics"),
+                        s("econ_y3_s2_intl2", "International Economics II", "economics"),
+                        s("econ_y3_s2_res_methods", "Research Methods", "business")
+                    )
+                ),
+                "Year 4" to listOf(
+                    ("Semester 1" to "Sem 1") to listOf(
+                        s("econ_y4_s1_agri", "Agricultural Economics", "economics"),
+                        s("econ_y4_s1_behav", "Behavioral Economics", "economics"),
+                        s("econ_y4_s1_monetary", "Monetary Economics", "business"),
+                        s("econ_y4_s1_planning", "Economic Planning", "economics"),
+                        s("econ_y4_s1_stata", "STATA & Applied Statistics", "analytics"),
+                        s("econ_y4_s1_thought1", "History of Economic Thought", "economics"),
+                        s("econ_y4_s1_thesis1", "Undergraduate Thesis I", "economics")
+                    ),
+                    ("Semester 2" to "Sem 2") to listOf(
+                        s("econ_y4_s2_proj", "Senior Project", "business"),
+                        s("econ_y4_s2_thought2", "History of Economic Thought II", "economics"),
+                        s("econ_y4_s2_thesis2", "Final Thesis Defense", "economics"),
+                        s("econ_y4_s2_pub_fin", "Public Finance", "business"),
+                        s("econ_y4_s2_urban", "Urban Economics", "economics"),
+                        s("econ_y4_s2_rural", "Rural Economics", "economics")
+                    )
+                )
             )
-            dept.contains("Mechanical", ignoreCase = true) -> Triple(
-                listOf(s("dept_engineering_mechanics", "Engineering Mechanics (Statics)", "mechanical"), s("dept_thermodynamics_1", "Thermodynamics I", "mechanical"), s("dept_materials_sci", "Materials Science and Engineering", "chemistry"), s("dept_applied_math_mech", "Applied Mathematics I", "maths")),
-                listOf(s("dept_fluid_mechanics", "Fluid Mechanics", "mechanical"), s("dept_heat_transfer", "Heat Transfer & Cooling", "mechanical"), s("dept_machine_design", "Machine Elements Design I", "mechanical"), s("dept_dynamics", "Dynamics of Machinery", "mechanical")),
-                listOf(s("dept_cad_cam", "CAD/CAM and Industrial Automation", "mechanical"), s("dept_refrigeration", "HVAC & Thermal Systems", "mechanical"), s("dept_ic_engines", "Internal Combustion Engines", "mechanical"), s("dept_mech_capstone_1", "Mechanical Capstone Project I", "mechanical"))
+
+            // Accounting & Finance
+            dept.contains("Accounting", ignoreCase = true) -> listOf(
+                "Year 2" to listOf(
+                    ("Semester 1" to "Sem 1") to listOf(
+                        s("acc_y2_s1_macro", "Macro Economics", "economics"),
+                        s("acc_y2_s1_math", "Business Maths", "maths"),
+                        s("acc_y2_s1_is", "Fundamental Of Information System", "analytics"),
+                        s("acc_y2_s1_acc1", "Fundamental Of Accounting 1", "accounting"),
+                        s("acc_y2_s1_stats", "Basic Statistics", "analytics"),
+                        s("acc_y2_s1_mgmt", "Introduction Of Management", "management")
+                    ),
+                    ("Semester 2" to "Sem 2") to listOf(
+                        s("acc_y2_s2_acc2", "Fundamental Of Accounting 2", "accounting"),
+                        s("acc_y2_s2_or", "Operation Research", "analytics"),
+                        s("acc_y2_s2_mkt", "Principle Of Marketing", "marketing"),
+                        s("acc_y2_s2_stats", "Business Statistics", "analytics"),
+                        s("acc_y2_s2_risk", "Risk Management And Insurance", "business"),
+                        s("acc_y2_s2_law", "Business Law", "civics")
+                    )
+                ),
+                "Year 3" to listOf(
+                    ("Semester 1" to "Sem 1") to listOf(
+                        s("acc_y3_s1_fin_mgmt1", "Financial Management 1", "business"),
+                        s("acc_y3_s1_res_methods", "Research Methods For Accounting", "business"),
+                        s("acc_y3_s1_fin_inst", "Financial Institution And Markets", "business"),
+                        s("acc_y3_s1_inter_acc1", "Intermediate Financial Accounting 1", "accounting"),
+                        s("acc_y3_s1_cma1", "Cost And Management Accounting 1", "accounting"),
+                        s("acc_y3_s1_pub_sector", "Accounting For Public Sector & NGO", "accounting")
+                    ),
+                    ("Semester 2" to "Sem 2") to listOf(
+                        s("acc_y3_s2_inter_acc2", "Intermediate Financial Accounting 2", "accounting"),
+                        s("acc_y3_s2_om", "Operation Management", "management"),
+                        s("acc_y3_s2_hist", "History of Ethiopia", "civics"),
+                        s("acc_y3_s2_modeling", "Financial Modeling", "analytics"),
+                        s("acc_y3_s2_econometrics", "Econometrics For Finance", "analytics"),
+                        s("acc_y3_s2_cost_acc2", "Cost Accounting 2", "accounting"),
+                        s("acc_y3_s2_fin_mgmt2", "Financial Management 2", "business")
+                    )
+                ),
+                "Year 4" to listOf(
+                    ("Semester 1" to "Sem 1") to listOf(
+                        s("acc_y4_s1_res1", "Senior Research Project 1", "business"),
+                        s("acc_y4_s1_invest", "Investment Analysis & Portfolio Mgmt", "business"),
+                        s("acc_y4_s1_tax", "Public Finance & Taxation", "accounting"),
+                        s("acc_y4_s1_adv_acc1", "Advanced Financial Accounting 1", "accounting"),
+                        s("acc_y4_s1_ais", "Accounting Information System", "analytics"),
+                        s("acc_y4_s1_intern", "Internship Report", "business"),
+                        s("acc_y4_s1_audit1", "Auditing Principles And Practices I", "accounting")
+                    ),
+                    ("Semester 2" to "Sem 2") to listOf(
+                        s("acc_y4_s2_software", "Accounting Software Application", "computer"),
+                        s("acc_y4_s2_audit2", "Auditing Principles And Practice II", "accounting"),
+                        s("acc_y4_s2_proj_eval", "Project Analysis And Evaluation", "business"),
+                        s("acc_y4_s2_sm", "Strategic Management", "management"),
+                        s("acc_y4_s2_adv_acc2", "Advanced Financial Accounting 2", "accounting"),
+                        s("acc_y4_s2_res2", "Senior Research Project 2", "business"),
+                        s("acc_y4_s2_comm", "Contemporary Business Communication", "english")
+                    )
+                )
             )
-            dept.contains("Law", ignoreCase = true) -> Triple(
-                listOf(s("dept_constitutional_law", "Law of Constitutional Governance", "civics"), s("dept_contracts_law", "Law of Contracts I", "civics"), s("dept_criminal_law", "Criminal Law I", "civics"), s("dept_legal_research", "Legal Research and Writing", "english")),
-                listOf(s("dept_property_law", "Ethiopian Property & Land Law", "civics"), s("dept_commercial_law", "Commercial Law & Business Entities", "civics"), s("dept_admin_law", "Administrative Law", "civics"), s("dept_human_rights", "Human Rights Law", "civics")),
-                listOf(s("dept_evidence_law", "Law of Evidence & Trial Practice", "civics"), s("dept_criminal_proc", "Criminal Procedure", "civics"), s("dept_civil_proc", "Civil Procedure & Litigation", "civics"), s("dept_intl_law", "Public International Law", "civics"))
+
+            // Marketing Management
+            dept.contains("Marketing", ignoreCase = true) -> listOf(
+                "Year 2" to listOf(
+                    ("Semester 1" to "Sem 1") to listOf(
+                        s("mkt_y2_s1_mkt", "Principle Of Marketing", "marketing"),
+                        s("mkt_y2_s1_cb", "Consumer Behavior", "marketing"),
+                        s("mkt_y2_s1_ict", "Introduction To ICT", "computer"),
+                        s("mkt_y2_s1_mgmt", "Introduction To Management", "management"),
+                        s("mkt_y2_s1_micro", "Microeconomics", "economics"),
+                        s("mkt_y2_s1_law", "Business Law", "civics")
+                    ),
+                    ("Semester 2" to "Sem 2") to listOf(
+                        s("mkt_y2_s2_retail", "Retail Management", "marketing"),
+                        s("mkt_y2_s2_sales", "Sales Management", "marketing"),
+                        s("mkt_y2_s2_imc", "Integrated Marketing Communication", "marketing"),
+                        s("mkt_y2_s2_comm", "Business Communication", "english"),
+                        s("mkt_y2_s2_risk", "Risk Management And Insurance", "business"),
+                        s("mkt_y2_s2_ob", "Organizational Behavior", "management")
+                    )
+                ),
+                "Year 3" to listOf(
+                    ("Semester 1" to "Sem 1") to listOf(
+                        s("mkt_y3_s1_math", "Business Mathematics", "maths"),
+                        s("mkt_y3_s1_acc1", "Fundamentals Of Accounting 1", "accounting"),
+                        s("mkt_y3_s1_social_mkt", "Social Marketing", "marketing"),
+                        s("mkt_y3_s1_emarketing", "E-Marketing", "marketing"),
+                        s("mkt_y3_s1_services", "Services Marketing", "marketing"),
+                        s("mkt_y3_s1_mgr_mkt", "Managerial Marketing", "marketing")
+                    ),
+                    ("Semester 2" to "Sem 2") to listOf(
+                        s("mkt_y3_s2_pm", "Project Management", "management"),
+                        s("mkt_y3_s2_mis", "Marketing Information System", "analytics"),
+                        s("mkt_y3_s2_acc2", "Fundamentals Of Accounting 2", "accounting"),
+                        s("mkt_y3_s2_research", "Marketing Research", "marketing"),
+                        s("mkt_y3_s2_event", "Event Management", "marketing"),
+                        s("mkt_y3_s2_tourism", "Tourism & Hospitality Marketing", "marketing")
+                    )
+                ),
+                "Year 4" to listOf(
+                    ("Semester 1" to "Sem 1") to listOf(
+                        s("mkt_y4_s1_apprentice", "Apprenticeship In Marketing", "marketing"),
+                        s("mkt_y4_s1_b2b", "Business Marketing", "marketing"),
+                        s("mkt_y4_s1_fin", "Financial Management", "business"),
+                        s("mkt_y4_s1_channels", "Marketing Channel & Logistics Mgmt", "logistics"),
+                        s("mkt_y4_s1_intl_mkt", "International Marketing", "marketing"),
+                        s("mkt_y4_s1_hist", "History of Ethiopia and the Horn", "civics"),
+                        s("mkt_y4_s1_brand", "Product & Brand Management", "marketing")
+                    ),
+                    ("Semester 2" to "Sem 2") to listOf(
+                        s("mkt_y4_s2_import_export", "Import/Export Policy & Procedure", "business"),
+                        s("mkt_y4_s2_agri_mkt", "Agricultural & Commodity Marketing", "marketing"),
+                        s("mkt_y4_s2_strat_mkt", "Strategic Marketing Management", "marketing"),
+                        s("mkt_y4_s2_essay2", "Senior Essay II", "business"),
+                        s("mkt_y4_s2_negotiation", "Negotiation Management", "management"),
+                        s("mkt_y4_s2_om", "Operations Management", "management")
+                    )
+                )
             )
-            else -> Triple(
-                listOf(s("dept_core_1", "$dept Core Fundamentals", "computer"), s("dept_methods_1", "Research Methods & Quantitative Tools", "analytics"), s("dept_theory_1", "Applied Professional Theory I", "management"), s("dept_ethics_1", "Professional Ethics & Governance", "civics")),
-                listOf(s("dept_core_2", "Advanced $dept Studies", "computer"), s("dept_methods_2", "Statistical Modeling & Analytics", "analytics"), s("dept_project_prep", "Departmental Project Studio", "management"), s("dept_applied_policy", "Policy and Systems Framework", "civics")),
-                listOf(s("dept_seminar_adv", "Senior Academic Seminar", "management"), s("dept_internship_app", "Professional Field Practicum", "business"), s("dept_strategic_mgmt", "Strategic Systems Management", "management"), s("dept_grad_thesis", "Graduation Research Project", "computer"))
+
+            // Computer Science & Software Engineering Fallback
+            dept.contains("Computer Science", ignoreCase = true) || dept.contains("Software", ignoreCase = true) -> listOf(
+                "Year 2" to listOf(
+                    ("Semester 1" to "Sem 1") to listOf(s("dept_dsa", "Data Structures & Algorithms", "computer"), s("dept_oop", "Object Oriented Programming", "software")),
+                    ("Semester 2" to "Sem 2") to listOf(s("dept_db_sys", "Database Systems & SQL", "analytics"), s("dept_comp_org", "Computer Architecture", "computer"))
+                ),
+                "Year 3" to listOf(
+                    ("Semester 1" to "Sem 1") to listOf(s("dept_os", "Operating Systems", "computer"), s("dept_networks", "Computer Networks", "computer")),
+                    ("Semester 2" to "Sem 2") to listOf(s("dept_soft_eng", "Software Engineering", "software"), s("dept_web_dev", "Web Architecture", "computer"))
+                ),
+                "Year 4" to listOf(
+                    ("Semester 1" to "Sem 1") to listOf(s("dept_distributed_sys", "Distributed Systems", "computer"), s("dept_ai_ml", "Artificial Intelligence", "computer")),
+                    ("Semester 2" to "Sem 2") to listOf(s("dept_cybersecurity", "Information Security", "computer"), s("dept_capstone_1", "Senior Capstone Project", "software"))
+                )
+            )
+
+            // General Fallback
+            else -> listOf(
+                "Year 2" to listOf(
+                    ("Semester 1" to "Sem 1") to listOf(s("dept_core_1", "$dept Core Fundamentals I", "computer"), s("dept_methods_1", "Research Methods I", "analytics")),
+                    ("Semester 2" to "Sem 2") to listOf(s("dept_theory_1", "$dept Core Fundamentals II", "management"), s("dept_ethics_1", "Professional Ethics", "civics"))
+                ),
+                "Year 3" to listOf(
+                    ("Semester 1" to "Sem 1") to listOf(s("dept_core_2", "Advanced $dept Studies I", "computer"), s("dept_methods_2", "Statistical Modeling", "analytics")),
+                    ("Semester 2" to "Sem 2") to listOf(s("dept_project_prep", "Departmental Studio", "management"), s("dept_applied_policy", "Policy Framework", "civics"))
+                ),
+                "Year 4" to listOf(
+                    ("Semester 1" to "Sem 1") to listOf(s("dept_seminar_adv", "Senior Academic Seminar", "management"), s("dept_internship_app", "Professional Practicum", "business")),
+                    ("Semester 2" to "Sem 2") to listOf(s("dept_strategic_mgmt", "Strategic Systems Management", "management"), s("dept_grad_thesis", "Graduation Research Project", "computer"))
+                )
             )
         }
-
-        val y5 = if (isEng) {
-            when {
-                dept.contains("Electrical", ignoreCase = true) -> listOf(
-                    s("dept_ee_high_voltage", "High Voltage Engineering", "electrical"),
-                    s("dept_ee_smart_grid", "Renewable Energy & Smart Grid", "electrical"),
-                    s("dept_ee_final_thesis", "Final Year Engineering Thesis", "electrical")
-                )
-                dept.contains("Mechanical", ignoreCase = true) -> listOf(
-                    s("dept_mech_tribology", "Industrial Maintenance & Tribology", "mechanical"),
-                    s("dept_mech_power_plant", "Power Plant Engineering", "mechanical"),
-                    s("dept_mech_final_thesis", "Final Year Engineering Thesis", "mechanical")
-                )
-                else -> listOf(
-                    s("dept_eng_mgmt", "Engineering Economics & Project Management", "management"),
-                    s("dept_eng_internship", "Industrial Engineering Internship", "mechanical"),
-                    s("dept_eng_final_capstone", "Senior Design Capstone II", "software")
-                )
-            }
-        } else emptyList()
-
-        listOf("Year 2" to y2, "Year 3" to y3, "Year 4" to y4) + if (isEng) listOf("Year 5" to y5) else emptyList()
     }
 
     val enrolledYearNumber = remember(academicYear) {
@@ -222,7 +560,7 @@ fun DashboardScreen(viewModel: StudyViewModel) {
 
             if (isDepartmentMode) {
                 // Multi-Year Department Curriculum Section
-                departmentCurriculum.forEach { (yearLabel, yearCourses) ->
+                departmentCurriculum.forEach { (yearLabel, semestersList) ->
                     val yearNum = when {
                         yearLabel.contains("5") -> 5
                         yearLabel.contains("4") -> 4
@@ -279,35 +617,70 @@ fun DashboardScreen(viewModel: StudyViewModel) {
                         }
                     }
 
-                    // Courses for this year
-                    items(yearCourses) { subject ->
-                        val isDone = completedSubjectIds.contains(subject.id)
-                        val context = LocalContext.current
+                    // Semesters for this year
+                    semestersList.forEach { (semInfo, semCourses) ->
+                        val (semTitle, semBadge) = semInfo
 
-                        SubjectHexCard(
-                            subjectName = subject.name,
-                            iconName = subject.icon,
-                            isCompleted = isDone,
-                            isLocked = isYearLocked,
-                            progress = if (isDone) 1f else 0f,
-                            isDarkTheme = isDarkTheme,
-                            currentLang = currentLang,
-                            onSubjectClick = {
-                                if (isYearLocked) {
-                                    viewModel.paywallPackageIdForUpgrade.value = "department"
-                                    viewModel.showFreeTrialPaywall.value = true
-                                } else {
-                                    val activity = AdsManager.findActivity(context)
-                                    if (activity != null) {
-                                        InterstitialAdManager.showIfAllowed(activity) {
+                        // Semester Sub-Header Divider
+                        item(span = { GridItemSpan(maxLineSpan) }) {
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(top = 10.dp, bottom = 4.dp, start = 4.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Surface(
+                                    shape = RoundedCornerShape(6.dp),
+                                    color = if (isDarkTheme) Color(0xFF334155) else Color(0xFFE2E8F0)
+                                ) {
+                                    Text(
+                                        text = semTitle.uppercase(),
+                                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 2.dp),
+                                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
+                                        color = if (isDarkTheme) Color(0xFF94A3B8) else Color(0xFF475569),
+                                        fontSize = 11.sp
+                                    )
+                                }
+                                Spacer(modifier = Modifier.width(8.dp))
+                                HorizontalDivider(
+                                    modifier = Modifier.weight(1f),
+                                    color = if (isDarkTheme) Color(0xFF1E293B) else Color(0xFFF1F5F9),
+                                    thickness = 1.dp
+                                )
+                            }
+                        }
+
+                        // Courses for this semester
+                        items(semCourses) { subject ->
+                            val isDone = completedSubjectIds.contains(subject.id)
+                            val context = LocalContext.current
+
+                            SubjectHexCard(
+                                subjectName = subject.name,
+                                iconName = subject.icon,
+                                isCompleted = isDone,
+                                isLocked = isYearLocked,
+                                semesterBadge = semBadge,
+                                progress = if (isDone) 1f else 0f,
+                                isDarkTheme = isDarkTheme,
+                                currentLang = currentLang,
+                                onSubjectClick = {
+                                    if (isYearLocked) {
+                                        viewModel.paywallPackageIdForUpgrade.value = "department"
+                                        viewModel.showFreeTrialPaywall.value = true
+                                    } else {
+                                        val activity = AdsManager.findActivity(context)
+                                        if (activity != null) {
+                                            InterstitialAdManager.showIfAllowed(activity) {
+                                                viewModel.selectSubject(subject)
+                                            }
+                                        } else {
                                             viewModel.selectSubject(subject)
                                         }
-                                    } else {
-                                        viewModel.selectSubject(subject)
                                     }
                                 }
-                            }
-                        )
+                            )
+                        }
                     }
                 }
 
