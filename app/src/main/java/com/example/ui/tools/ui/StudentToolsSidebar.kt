@@ -89,9 +89,9 @@ fun StudentToolsSidebar(
         ) {
             AnimatedVisibility(
                 visible = isOpen,
-                enter = slideInHorizontally(initialOffsetX = { it }, animationSpec = tween(300)),
-                exit = slideOutHorizontally(targetOffsetX = { it }, animationSpec = tween(250)),
-                modifier = Modifier.align(Alignment.CenterEnd)
+                enter = slideInHorizontally(initialOffsetX = { -it }, animationSpec = tween(300)),
+                exit = slideOutHorizontally(targetOffsetX = { -it }, animationSpec = tween(250)),
+                modifier = Modifier.align(Alignment.CenterStart)
             ) {
                 Surface(
                     modifier = Modifier
@@ -400,18 +400,6 @@ fun StudentToolsSidebar(
                             onClick = {
                                 onClose()
                                 viewModel.currentTab.value = "profile"
-                            }
-                        )
-
-                        // Theme Toggle Action
-                        SidebarActionRow(
-                            icon = if (isDark) Icons.Default.WbSunny else Icons.Default.DarkMode,
-                            iconTint = if (isDark) GoldLight else Color(0xFF6366F1),
-                            title = if (isDark) "Switch to Light Mode" else "Switch to Dark Mode",
-                            subtitle = if (isDark) "Comfortable reading in bright environments" else "Dark OLED reader canvas",
-                            isDark = isDark,
-                            onClick = {
-                                viewModel.toggleDarkTheme()
                             }
                         )
 
