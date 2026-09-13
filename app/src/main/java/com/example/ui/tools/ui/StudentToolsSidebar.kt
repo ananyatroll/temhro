@@ -325,6 +325,13 @@ fun StudentToolsSidebar(
 
                         val tools = listOf(
                             SidebarToolItem(
+                                id = "saved_materials",
+                                title = TranslationManager.get("tab_saved_materials", currentLang),
+                                subtitle = "Review saved questions, notes, flashcards & bookmarks",
+                                icon = Icons.Default.Bookmark,
+                                iconBg = Color(0xFFF59E0B)
+                            ),
+                            SidebarToolItem(
                                 id = "timer_tasks",
                                 title = TranslationManager.get("tab_timer_tasks", currentLang),
                                 subtitle = "Pomodoro focus timer & daily task tracker",
@@ -359,7 +366,12 @@ fun StudentToolsSidebar(
                                 item = tool,
                                 isDark = isDark,
                                 onClick = {
-                                    handleToolClick(tool.id)
+                                    if (tool.id == "saved_materials") {
+                                        onClose()
+                                        viewModel.showSavedMaterialPickerModal.value = true
+                                    } else {
+                                        handleToolClick(tool.id)
+                                    }
                                 }
                             )
                         }

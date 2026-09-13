@@ -126,6 +126,72 @@ fun ContentPlayView(viewModel: StudyViewModel) {
         )
     }
 
+    // Saved Items Modals (Accessible globally from sidebar or study view)
+    val showSavedPicker by viewModel.showSavedMaterialPickerModal.collectAsState()
+    val currentLang by viewModel.currentLanguage.collectAsState()
+    val isDarkTheme by viewModel.isDarkTheme.collectAsState()
+    val savedNotesSet by viewModel.savedNotesSet.collectAsState()
+    val savedQuestionsSet by viewModel.savedQuestionsSet.collectAsState()
+    val savedFlashcardsSet by viewModel.savedFlashcardsSet.collectAsState()
+    val savedTextbookBookmarks by viewModel.savedTextbookBookmarksSet.collectAsState()
+    val savedTextbookCount = savedTextbookBookmarks.size
+
+    if (showSavedPicker) {
+        SavedMaterialPickerModal(
+            subjectName = activeSub?.name,
+            savedNotesCount = savedNotesSet.size,
+            savedQuestionsCount = savedQuestionsSet.size,
+            savedFlashcardsCount = savedFlashcardsSet.size,
+            currentLang = currentLang,
+            isDarkTheme = isDarkTheme,
+            onDismiss = { viewModel.showSavedMaterialPickerModal.value = false },
+            onSelectNotes = {
+                viewModel.showSavedMaterialPickerModal.value = false
+                viewModel.showSavedNotesModal.value = true
+            },
+            onSelectExams = {
+                viewModel.showSavedMaterialPickerModal.value = false
+                viewModel.showSavedQuestionsModal.value = true
+            },
+            onSelectFlashcards = {
+                viewModel.showSavedMaterialPickerModal.value = false
+                viewModel.showSavedFlashcardsModal.value = true
+            },
+            savedTextbookBookmarksCount = savedTextbookCount,
+            onSelectTextbook = {
+                viewModel.showSavedMaterialPickerModal.value = false
+                viewModel.startTextbook()
+            }
+        )
+    }
+
+    val showSavedNotes by viewModel.showSavedNotesModal.collectAsState()
+    if (showSavedNotes) {
+        SavedNotesDialog(
+            viewModel = viewModel,
+            onDismiss = { viewModel.showSavedNotesModal.value = false },
+            onSelectNote = { selectedNote ->
+                viewModel.openSavedNote(selectedNote)
+            }
+        )
+    }
+
+    val showSavedQuestions by viewModel.showSavedQuestionsModal.collectAsState()
+    if (showSavedQuestions) {
+        SavedQuestionsDialog(
+            viewModel = viewModel,
+            onDismiss = { viewModel.showSavedQuestionsModal.value = false }
+        )
+    }
+
+    val showSavedCards by viewModel.showSavedFlashcardsModal.collectAsState()
+    if (showSavedCards) {
+        SavedFlashcardsDialog(
+            viewModel = viewModel,
+            onDismiss = { viewModel.showSavedFlashcardsModal.value = false }
+        )
+    }
+
     if (activeSub == null) return
 
     val subject = activeSub!!
@@ -141,7 +207,6 @@ fun ContentPlayView(viewModel: StudyViewModel) {
         // 2. Subject Detail/Study Options Modal
         if (showStudyOptions) {
             val activeMode by viewModel.activeMode.collectAsState()
-            val currentLang by viewModel.currentLanguage.collectAsState()
             SubjectDetailModal(
                 subject = subject,
                 mode = activeMode,
@@ -150,11 +215,7 @@ fun ContentPlayView(viewModel: StudyViewModel) {
                 onNotesClick = { viewModel.startNotes() },
                 onExamsClick = { viewModel.initiateModeSelection() },
                 onFlashcardsClick = { viewModel.startFlashcards() },
-                onTextbookClick = { viewModel.startTextbook() },
-                onSavedMaterialsClick = {
-                    viewModel.showStudyOptionsModal.value = false
-                    viewModel.showSavedMaterialPickerModal.value = true
-                }
+                onTextbookClick = { viewModel.startTextbook() }
             )
         }
 
@@ -288,72 +349,6 @@ fun ContentPlayView(viewModel: StudyViewModel) {
                     viewModel.showScoreResultModal.value = false
                     viewModel.resetPlayState()
                 }
-            )
-        }
-
-        // 7. Saved Items Modals
-        val showSavedPicker by viewModel.showSavedMaterialPickerModal.collectAsState()
-        val currentLang by viewModel.currentLanguage.collectAsState()
-        val isDarkTheme by viewModel.isDarkTheme.collectAsState()
-        val savedNotesSet by viewModel.savedNotesSet.collectAsState()
-        val savedQuestionsSet by viewModel.savedQuestionsSet.collectAsState()
-        val savedFlashcardsSet by viewModel.savedFlashcardsSet.collectAsState()
-        val savedTextbookBookmarks by viewModel.savedTextbookBookmarksSet.collectAsState()
-        val savedTextbookCount = savedTextbookBookmarks.size
-
-        if (showSavedPicker) {
-            SavedMaterialPickerModal(
-                subjectName = subject.name,
-                savedNotesCount = savedNotesSet.size,
-                savedQuestionsCount = savedQuestionsSet.size,
-                savedFlashcardsCount = savedFlashcardsSet.size,
-                currentLang = currentLang,
-                isDarkTheme = isDarkTheme,
-                onDismiss = { viewModel.showSavedMaterialPickerModal.value = false },
-                onSelectNotes = {
-                    viewModel.showSavedMaterialPickerModal.value = false
-                    viewModel.showSavedNotesModal.value = true
-                },
-                onSelectExams = {
-                    viewModel.showSavedMaterialPickerModal.value = false
-                    viewModel.showSavedQuestionsModal.value = true
-                },
-                onSelectFlashcards = {
-                    viewModel.showSavedMaterialPickerModal.value = false
-                    viewModel.showSavedFlashcardsModal.value = true
-                },
-                savedTextbookBookmarksCount = savedTextbookCount,
-                onSelectTextbook = {
-                    viewModel.showSavedMaterialPickerModal.value = false
-                    viewModel.startTextbook()
-                }
-            )
-        }
-
-        val showSavedNotes by viewModel.showSavedNotesModal.collectAsState()
-        if (showSavedNotes) {
-            SavedNotesDialog(
-                viewModel = viewModel,
-                onDismiss = { viewModel.showSavedNotesModal.value = false },
-                onSelectNote = { selectedNote ->
-                    viewModel.openSavedNote(selectedNote)
-                }
-            )
-        }
-
-        val showSavedQuestions by viewModel.showSavedQuestionsModal.collectAsState()
-        if (showSavedQuestions) {
-            SavedQuestionsDialog(
-                viewModel = viewModel,
-                onDismiss = { viewModel.showSavedQuestionsModal.value = false }
-            )
-        }
-
-        val showSavedCards by viewModel.showSavedFlashcardsModal.collectAsState()
-        if (showSavedCards) {
-            SavedFlashcardsDialog(
-                viewModel = viewModel,
-                onDismiss = { viewModel.showSavedFlashcardsModal.value = false }
             )
         }
 
@@ -496,8 +491,7 @@ fun SubjectDetailModal(
     onNotesClick: () -> Unit,
     onExamsClick: () -> Unit,
     onFlashcardsClick: () -> Unit,
-    onTextbookClick: () -> Unit,
-    onSavedMaterialsClick: () -> Unit
+    onTextbookClick: () -> Unit
 ) {
     Dialog(onDismissRequest = onDismiss) {
         Card(
@@ -639,32 +633,6 @@ fun SubjectDetailModal(
                             Spacer(modifier = Modifier.width(12.dp))
                             Text(TranslationManager.get("opt_official_textbook", currentLang), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
                         }
-                    }
-                }
-
-                // 5. Saved Materials Mode Button
-                Button(
-                    onClick = onSavedMaterialsClick,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(vertical = 5.dp)
-                        .pressBounce()
-                        .testTag("study_option_saved_materials"),
-                    shape = RoundedCornerShape(12.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = GoldAccent)
-                ) {
-                    Row(
-                        modifier = Modifier.padding(vertical = 4.dp),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Icon(Icons.Default.Bookmark, contentDescription = null, tint = Color.Black)
-                        Spacer(modifier = Modifier.width(12.dp))
-                        Text(
-                            TranslationManager.get("opt_saved_materials", currentLang),
-                            style = MaterialTheme.typography.titleMedium,
-                            fontWeight = FontWeight.Bold,
-                            color = Color.Black
-                        )
                     }
                 }
 
