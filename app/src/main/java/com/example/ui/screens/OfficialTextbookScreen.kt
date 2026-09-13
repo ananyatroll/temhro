@@ -1049,7 +1049,7 @@ suspend fun renderPdfPageBitmap(
                 renderer.openPage(safePageIdx).use { page ->
                     val renderWidth = (page.width * scaleFactor).toInt().coerceAtLeast(720)
                     val renderHeight = (page.height * scaleFactor).toInt().coerceAtLeast(1020)
-                    val bmp = Bitmap.createBitmap(renderWidth, renderHeight, Bitmap.Config.RGB_565)
+                    val bmp = Bitmap.createBitmap(renderWidth, renderHeight, Bitmap.Config.ARGB_8888)
                     bmp.eraseColor(android.graphics.Color.WHITE)
                     val canvas = Canvas(bmp)
                     canvas.drawColor(android.graphics.Color.WHITE)
