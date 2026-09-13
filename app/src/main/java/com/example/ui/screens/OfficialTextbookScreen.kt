@@ -114,7 +114,19 @@ object OfficialBookLinks {
         "Grade_12_Chemistry.pdf" to "https://kehulum.com/bfile_asset/books_99/collection/grade-12-chemistry-new-curriculum--student-textbook-kehulumcom1759915918b6bd.pdf",
         "Grade_12_History.pdf" to "https://kehulum.com/bfile_asset/books_99/collection/grade-12-history-new-curriculum--student-textbook-kehulumcom17599097897dd4.pdf",
         "Grade_12_Geography.pdf" to "https://kehulum.com/bfile_asset/books_99/collection/grade-12-geography-new-curriculum--student-textbook-kehulumcom17599134797b34.pdf",
-        "Grade_12_Economics.pdf" to "https://kehulum.com/bfile_asset/books_99/collection/grade-12-economics-new-curriculum--student-textbook-kehulumcom1759915712056d.pdf"
+        "Grade_12_Economics.pdf" to "https://kehulum.com/bfile_asset/books_99/collection/grade-12-economics-new-curriculum--student-textbook-kehulumcom1759915712056d.pdf",
+
+        // Higher Education Freshman Modules (Official National First Year Modules)
+        "Freshman_General_Chemistry_Chem1011.pdf" to "https://wcu.edu.et/FirstYearModule/GENERAL%20CHEMISTRY%20module.pdf",
+        "Freshman_General_Biology_Biol1011.pdf" to "https://wcu.edu.et/FirstYearModule/GENERAL%20BIOLOGY%20module.pdf",
+        "Freshman_Critical_Thinking_LoCT1011.pdf" to "https://wcu.edu.et/FirstYearModule/CRITICAL%20THINKING%20module.pdf",
+        "Freshman_Geography_of_Ethiopia_GeES1011.pdf" to "https://wcu.edu.et/FirstYearModule/Geography%20Module.pdf",
+        "Freshman_History_of_Ethiopia_HIST1012.pdf" to "https://wcu.edu.et/FirstYearModule/History%20of%20Ethiopian%20and%20the%20Horn%20October%202022%20Final%20Omotic%20revised%20and%20final_compressed.pdf",
+        "Freshman_Moral_and_Civics_MCiE1012.pdf" to "https://wcu.edu.et/FirstYearModule/MORAL%20and%20CIVIC%20module.pdf",
+        "Freshman_Emerging_Technologies_EmTe1012.pdf" to "https://wcu.edu.et/FirstYearModule/EMERGING%20TECHNOLOGIES%20module.pdf",
+        "Freshman_Entrepreneurship_MGMT1012.pdf" to "https://wcu.edu.et/FirstYearModule/ENTREPRENEURSHIP%20module.pdf",
+        "Freshman_Economics_Econ1011.pdf" to "https://wcu.edu.et/FirstYearModule/ECONOMICS%20module.pdf",
+        "Freshman_Inclusiveness_SNIE1112.pdf" to "https://wcu.edu.et/FirstYearModule/INCLUSIVENESS%20Module.pdf"
     )
 }
 
@@ -122,6 +134,207 @@ object OfficialTextbookRegistry {
     fun getTextbooksForSubject(subjectName: String): List<TextbookEdition> {
         val lower = subjectName.lowercase()
         return when {
+            // ===== Higher Education Freshman Modules =====
+            lower.contains("chem 1011") || (lower.contains("chemistry") && (lower.contains("freshman") || lower.contains("general"))) -> listOf(
+                TextbookEdition(
+                    grade = "Freshman",
+                    title = "General Chemistry (Chem 1011) Official Module",
+                    fileName = "Freshman_General_Chemistry_Chem1011.pdf",
+                    pageCount = 280,
+                    publisher = "Ministry of Education (FDRE-MoE)",
+                    curriculumVersion = "National Higher Education First Year Module",
+                    downloadUrl = OfficialBookLinks.urls["Freshman_General_Chemistry_Chem1011.pdf"],
+                    units = listOf(
+                        TextbookUnit("Chapter 1", "Essential Ideas & Atomic Structure", 1, "Chemistry in context, atomic theory, quantum numbers, electronic configuration, and periodic law.", listOf("Measurements & Dimensional Analysis", "Quantum Mechanics & Orbitals", "Periodic Trends")),
+                        TextbookUnit("Chapter 2", "Molecules, Ions, and Chemical Compounds", 45, "Chemical formulas, ionic and molecular compounds, nomenclature, and formula mass.", listOf("Ionic vs Covalent Compounds", "Chemical Formulas & Nomenclature", "The Mole Concept")),
+                        TextbookUnit("Chapter 3", "Composition of Substances and Solutions", 85, "Formula mass, molarity, solution stoichiometry, and concentration units.", listOf("Molarity & Dilutions", "Percent Composition", "Empirical & Molecular Formulas")),
+                        TextbookUnit("Chapter 4", "Stoichiometry of Chemical Reactions", 125, "Balancing chemical equations, reaction types (acid-base, precipitation, redox), and reaction yields.", listOf("Reaction Stoichiometry", "Limiting Reactants & Percent Yield", "Redox Titrations")),
+                        TextbookUnit("Chapter 5", "Thermochemistry & Chemical Thermodynamics", 175, "Energy basics, calorimetry, enthalpy (H), Hess's Law, and Standard Enthalpies of Formation.", listOf("Calorimetry & Heat Capacity", "First Law of Thermodynamics", "Hess's Law Calculations")),
+                        TextbookUnit("Chapter 6", "Chemical Equilibrium & Acids-Bases", 220, "Equilibrium constant (K), Le Chatelier's Principle, pH calculations, buffers, and solubility product.", listOf("Equilibrium Law", "Le Chatelier's Principle", "Buffer Solutions & Ksp"))
+                    )
+                )
+            )
+
+            lower.contains("biol 1011") || (lower.contains("biology") && (lower.contains("freshman") || lower.contains("general"))) -> listOf(
+                TextbookEdition(
+                    grade = "Freshman",
+                    title = "General Biology (Biol 1011) Official Module",
+                    fileName = "Freshman_General_Biology_Biol1011.pdf",
+                    pageCount = 265,
+                    publisher = "Ministry of Education (FDRE-MoE)",
+                    curriculumVersion = "National Higher Education First Year Module",
+                    downloadUrl = OfficialBookLinks.urls["Freshman_General_Biology_Biol1011.pdf"],
+                    units = listOf(
+                        TextbookUnit("Chapter 1", "Biological Molecules & Cellular Chemistry", 1, "Carbohydrates, lipids, proteins, nucleic acids, water properties, and enzymatic catalysts.", listOf("Macromolecules & Polymers", "Enzyme Kinetics & Regulation", "Cellular Thermodynamics")),
+                        TextbookUnit("Chapter 2", "Cell Structure & Membrane Dynamics", 40, "Prokaryotic vs eukaryotic cells, organelle ultrastructure, membrane transport, and bioenergetics.", listOf("Membrane Transport Mechanisms", "Endomembrane System", "Cytoskeleton & Motility")),
+                        TextbookUnit("Chapter 3", "Cellular Metabolism & Energy Harvesting", 80, "Glycolysis, citric acid cycle, oxidative phosphorylation, and photosynthetic light/dark reactions.", listOf("Glycolysis & Fermentation", "Krebs Cycle & ATP Synthase", "Calvin Cycle")),
+                        TextbookUnit("Chapter 4", "Cell Division & Molecular Genetics", 130, "Mitosis, meiosis, DNA replication, transcription, translation, and genetic mutations.", listOf("Mitosis & Meiosis Comparison", "DNA Replication Mechanisms", "Protein Synthesis (Transcription/Translation)")),
+                        TextbookUnit("Chapter 5", "Principles of Ecology & Environmental Biology", 185, "Ecosystem energetics, biogeochemical cycles, population dynamics, biodiversity, and conservation in Ethiopia.", listOf("Trophic Cascades & Energy Flow", "Nitrogen & Carbon Cycles", "Ethiopian Biodiversity & Threats")),
+                        TextbookUnit("Chapter 6", "Evolutionary Mechanisms & Diversity", 225, "Darwinian natural selection, speciation models, phylogenetic trees, and hominid evolution evidence.", listOf("Mechanisms of Microevolution", "Speciation & Reproductive Isolation", "Human Evolution Evidence"))
+                    )
+                )
+            )
+
+            lower.contains("critical thinking") || lower.contains("loct 1011") || lower.contains("logic and critical") -> listOf(
+                TextbookEdition(
+                    grade = "Freshman",
+                    title = "Logic and Critical Thinking (LoCT 1011) Official Module",
+                    fileName = "Freshman_Critical_Thinking_LoCT1011.pdf",
+                    pageCount = 210,
+                    publisher = "Ministry of Education (FDRE-MoE)",
+                    curriculumVersion = "National Higher Education First Year Module",
+                    downloadUrl = OfficialBookLinks.urls["Freshman_Critical_Thinking_LoCT1011.pdf"],
+                    units = listOf(
+                        TextbookUnit("Chapter 1", "Introducing Logic and Critical Thinking", 1, "Meaning of logic, benefits of critical thinking, premises, conclusions, and argument structure.", listOf("Nature & Scope of Logic", "Benefits of Critical Thinking", "Recognizing Arguments")),
+                        TextbookUnit("Chapter 2", "Basic Concepts of Logic", 35, "Deductive vs inductive arguments, validity, soundness, strength, and cogency.", listOf("Deduction vs Induction", "Validity & Soundness", "Strength & Cogency")),
+                        TextbookUnit("Chapter 3", "Logic and Language", 65, "Functions of language, cognitive vs emotive meaning, definitions (types and rules), and semantic disputes.", listOf("Emotive Language", "Types of Definitions", "Rules for Lexical Definitions")),
+                        TextbookUnit("Chapter 4", "Informal Fallacies", 95, "Fallacies of relevance, weak induction, presumption, ambiguity, and grammatical analogy.", listOf("Fallacies of Relevance (Ad Hominem, Straw Man)", "Fallacies of Weak Induction (Hasty Generalization)", "Fallacies of Presumption & Ambiguity")),
+                        TextbookUnit("Chapter 5", "Categorical Propositions", 140, "Standard-form categorical propositions, Venn diagrams, square of opposition, and syllogistic reasoning.", listOf("A, E, I, O Propositions", "Traditional & Modern Square of Opposition", "Categorical Syllogisms")),
+                        TextbookUnit("Chapter 6", "Propositional Logic", 180, "Truth-functional operators, truth tables, tautologies, contradictions, and argument validity tests.", listOf("Truth Tables for Statements", "Testing Argument Validity", "Rules of Inference"))
+                    )
+                )
+            )
+
+            lower.contains("gees 1011") || (lower.contains("geography") && (lower.contains("horn") || lower.contains("ethiopia") || lower.contains("freshman"))) -> listOf(
+                TextbookEdition(
+                    grade = "Freshman",
+                    title = "Geography of Ethiopia and the Horn (GeES 1011) Official Module",
+                    fileName = "Freshman_Geography_of_Ethiopia_GeES1011.pdf",
+                    pageCount = 240,
+                    publisher = "Ministry of Education (FDRE-MoE)",
+                    curriculumVersion = "National Higher Education First Year Module",
+                    downloadUrl = OfficialBookLinks.urls["Freshman_Geography_of_Ethiopia_GeES1011.pdf"],
+                    units = listOf(
+                        TextbookUnit("Chapter 1", "Introduction & Geographic Location", 1, "Astronomical and relative location of Ethiopia and Horn countries, map reading skills, and basic concepts.", listOf("Location & Shape of Ethiopia", "Implications of Geographic Location", "Basic Map Reading Skills")),
+                        TextbookUnit("Chapter 2", "Geology of Ethiopia and the Horn", 35, "Precambrian, Paleozoic, Mesozoic, and Cenozoic geological history, volcanism, and rift valley formation.", listOf("Geological Eras of Ethiopia", "Rift Valley Formation & Tectonics", "Mineral Resources of Ethiopia")),
+                        TextbookUnit("Chapter 3", "Topography and Drainage Systems", 75, "Physiographic divisions (Highlands, Lowlands, Rift Valley), major river basins, and lakes.", listOf("Physiographic Regions", "Major River Basins (Abay, Awash, Omo)", "Lakes of Ethiopia & Water Resource Potential")),
+                        TextbookUnit("Chapter 4", "Climate of Ethiopia and the Horn", 115, "Elements of climate, controls of weather/climate, agro-ecological zones (Bereha, Kolla, Woina Dega, Dega, Wurch).", listOf("Factors Influencing Climate", "Spatiotemporal Rainfall Patterns", "Traditional Agro-climatic Zones")),
+                        TextbookUnit("Chapter 5", "Natural Vegetation, Wildlife and Soils", 155, "Major vegetation zones, endemic wildlife species, soil formation processes, degradation, and conservation.", listOf("Vegetation Belts of Ethiopia", "Endemic Wildlife & National Parks", "Soil Types & Erosion Control")),
+                        TextbookUnit("Chapter 6", "Population Dynamics & Economic Activities", 195, "Demographic trends, age-sex structure, spatial distribution, agriculture, industry, and urbanization.", listOf("Demographic Characteristics", "Migration & Urbanization Trends", "Economic Sector Analysis"))
+                    )
+                )
+            )
+
+            lower.contains("hist 1012") || (lower.contains("history") && (lower.contains("horn") || lower.contains("ethiopia") || lower.contains("freshman"))) -> listOf(
+                TextbookEdition(
+                    grade = "Freshman",
+                    title = "History of Ethiopia and the Horn (HIST 1012) Official Module",
+                    fileName = "Freshman_History_of_Ethiopia_HIST1012.pdf",
+                    pageCount = 290,
+                    publisher = "Ministry of Education (FDRE-MoE)",
+                    curriculumVersion = "National Higher Education First Year Module",
+                    downloadUrl = OfficialBookLinks.urls["Freshman_History_of_Ethiopia_HIST1012.pdf"],
+                    units = listOf(
+                        TextbookUnit("Chapter 1", "Introduction & Historiographical Foundations", 1, "Nature and uses of history, sources, historiography of Ethiopia and the Horn.", listOf("Primary vs Secondary Historical Sources", "Historiographical Tradition in Ethiopia", "Indigenous Historical Knowledge")),
+                        TextbookUnit("Chapter 2", "Peoples and Cultures in Ancient Ethiopia", 35, "Human evolution, linguistic classification (Afroasiatic, Nilo-Saharan), and ancient settlements (Punt, Da'amat, Aksum).", listOf("Cradle of Humankind Evidence", "Linguistic Super-families", "Aksumite Civilization & Foreign Relations")),
+                        TextbookUnit("Chapter 3", "Medieval Politics, Religious Dynamics & Trade", 75, "Restoration of Solomonic dynasty, Christian-Muslim sultanates relations, trade routes, and Zeila corridor.", listOf("Solomonic Dynastic Revival (1270)", "Muslim Sultanates of the Horn (Ifat, Adal)", "Long-distance Trade & Religious Expansion")),
+                        TextbookUnit("Chapter 4", "Internal Interactions & Sociopolitical Transformations (16th–19th C)", 125, "Wars of Imam Ahmad, Oromo population movement & Gadaa system, Gondar period, and Zemene Mesafint.", listOf("Imam Ahmad Ibrahim (Gragn) Wars", "Gadaa System & Socio-political Organization", "Gondarine Architecture & Culture", "Zemene Mesafint (Era of Princes)")),
+                        TextbookUnit("Chapter 5", "State Formation and Nation Building (1855–1941)", 185, "Reunification under Tewodros II, Yohannes IV, Menelik II expansion, Battle of Adwa (1896), and anti-fascist patriotic resistance (1935–1941).", listOf("Tewodros II Modernization Agenda", "Battle of Adwa 1896 Victory & Significance", "Italian Fascist Occupation & Arbegnoch Movement")),
+                        TextbookUnit("Chapter 6", "Internal Developments & External Engagements (1941–1995)", 240, "Post-liberation restoration, student movement, 1974 revolution, Derg military regime, and 1991 transition.", listOf("Post-WWII Monarchy (1941-1974)", "1974 Revolution & Derg Regime Policies", "1991 Transition & 1995 FDRE Constitution"))
+                    )
+                )
+            )
+
+            lower.contains("mcie 1012") || lower.contains("moral and civic") || (lower.contains("civic") && lower.contains("freshman")) -> listOf(
+                TextbookEdition(
+                    grade = "Freshman",
+                    title = "Moral and Civics Education (MCiE 1012) Official Module",
+                    fileName = "Freshman_Moral_and_Civics_MCiE1012.pdf",
+                    pageCount = 230,
+                    publisher = "Ministry of Education (FDRE-MoE)",
+                    curriculumVersion = "National Higher Education First Year Module",
+                    downloadUrl = OfficialBookLinks.urls["Freshman_Moral_and_Civics_MCiE1012.pdf"],
+                    units = listOf(
+                        TextbookUnit("Chapter 1", "Understanding Civics, Ethics and Morality", 1, "Defining civics, ethics, and morality; morality vs law; goals of civic and ethical education.", listOf("Nature & Goals of Civics", "Ethics vs Morality vs Law", "Importance for National Building")),
+                        TextbookUnit("Chapter 2", "Approaches to Ethics and Moral Philosophy", 40, "Normative ethical theories (Teleological/Utilitarianism, Deontological/Kantianism, Virtue Ethics).", listOf("Utilitarianism (Bentham & Mill)", "Kantian Categorical Imperative", "Aristotelian Virtue Ethics")),
+                        TextbookUnit("Chapter 3", "State, Government, and Citizenship", 80, "Elements of state, forms of government, constitutionalism, rights, and duties of citizens.", listOf("Elements & Theories of State", "Democracy & Constitutionalism", "Rights, Duties & Civic Responsibility")),
+                        TextbookUnit("Chapter 4", "Constitution and Constitutionalism in Ethiopia", 125, "Constitutional development in Ethiopia (1931, 1955, 1987, 1995), fundamental rights, and federal structure.", listOf("Constitutional History of Ethiopia", "1995 FDRE Constitutional Principles", "Human Rights vs Democratic Rights")),
+                        TextbookUnit("Chapter 5", "Democracy, Human Rights & Good Governance", 165, "Principles of democracy, universal declaration of human rights (UDHR), corruption prevention, and rule of law.", listOf("Core Democratic Principles", "Generations of Human Rights", "Combatting Corruption & Promoting Transparency")),
+                        TextbookUnit("Chapter 6", "Peacebuilding, Conflict Resolution & Social Harmony", 195, "Sources of conflict, indigenous conflict resolution mechanisms in Ethiopia (Shimgelina, Jaarsummaa, Mada'a), and national unity.", listOf("Conflict Types & Root Causes", "Indigenous Dispute Resolution Systems", "Building Inter-cultural Peace"))
+                    )
+                )
+            )
+
+            lower.contains("emte 1012") || lower.contains("emerging tech") -> listOf(
+                TextbookEdition(
+                    grade = "Freshman",
+                    title = "Introduction to Emerging Technologies (EmTe 1012) Official Module",
+                    fileName = "Freshman_Emerging_Technologies_EmTe1012.pdf",
+                    pageCount = 250,
+                    publisher = "Ministry of Education (FDRE-MoE)",
+                    curriculumVersion = "National Higher Education First Year Module",
+                    downloadUrl = OfficialBookLinks.urls["Freshman_Emerging_Technologies_EmTe1012.pdf"],
+                    units = listOf(
+                        TextbookUnit("Chapter 1", "Introduction to Industrial Revolution & Emerging Tech", 1, "From 1IR to 4IR, definition of emerging technologies, drivers, and socio-economic transformation.", listOf("First to Fourth Industrial Revolution", "Key Enablers of 4IR", "Societal Impacts & Disruptions")),
+                        TextbookUnit("Chapter 2", "Data Science & Big Data Analytics", 35, "Data types, the 5Vs of Big Data, data science lifecycle, and analytical tools.", listOf("Volume, Velocity, Variety, Veracity, Value", "Data Analytics Pipeline", "Big Data Architecture")),
+                        TextbookUnit("Chapter 3", "Artificial Intelligence (AI) & Machine Learning", 75, "History of AI, types of AI (Narrow, General, Super), Machine Learning paradigms (Supervised, Unsupervised, Reinforcement), and Deep Learning.", listOf("AI Branches & Applications", "Machine Learning Paradigms", "Neural Networks & Computer Vision")),
+                        TextbookUnit("Chapter 4", "Internet of Things (IoT) & Smart Systems", 125, "IoT architecture, sensors, actuators, edge/fog computing, smart agriculture, smart cities, and IoT security.", listOf("Sensors & Actuators", "IoT Protocols & Cloud Integration", "Smart Healthcare & City Applications")),
+                        TextbookUnit("Chapter 5", "Augmented, Virtual & Mixed Reality (AR/VR/XR)", 165, "Concepts of Extended Reality (XR), immersive hardware, spatial computing, and industrial use cases.", listOf("VR vs AR vs Mixed Reality", "XR Architecture & Hardware", "Applications in Education & Medicine")),
+                        TextbookUnit("Chapter 6", "Cybersecurity, Cloud & Emerging Tech Trends", 205, "Blockchain foundations, smart contracts, cloud computing models (IaaS/PaaS/SaaS), cybersecurity best practices, and ethical tech governance.", listOf("Blockchain & Cryptographic Hashes", "Cloud Computing Models", "Ethical AI & Cybersecurity Defense"))
+                    )
+                )
+            )
+
+            lower.contains("mgmt 1012") || lower.contains("entrepreneurship") -> listOf(
+                TextbookEdition(
+                    grade = "Freshman",
+                    title = "Entrepreneurship (MGMT 1012) Official Module",
+                    fileName = "Freshman_Entrepreneurship_MGMT1012.pdf",
+                    pageCount = 220,
+                    publisher = "Ministry of Education (FDRE-MoE)",
+                    curriculumVersion = "National Higher Education First Year Module",
+                    downloadUrl = OfficialBookLinks.urls["Freshman_Entrepreneurship_MGMT1012.pdf"],
+                    units = listOf(
+                        TextbookUnit("Chapter 1", "Understanding Entrepreneurship", 1, "Definition of entrepreneurship, entrepreneurial mindset, traits of successful entrepreneurs, and role in economic development.", listOf("Entrepreneurial Mindset & Skills", "Role in Employment & GDP Growth", "Entrepreneur vs Intrapreneur")),
+                        TextbookUnit("Chapter 2", "Opportunity Identification and Ideation", 35, "Scanning the business environment, generating innovative ideas, problem-solving techniques, and feasibility analysis.", listOf("Sources of Innovative Ideas", "Brainstorming & Design Thinking", "Feasibility Studies & Market Validation")),
+                        TextbookUnit("Chapter 3", "Business Planning & Canvas Modeling", 70, "Components of a comprehensive business plan, Business Model Canvas (BMC), value proposition, and risk mitigation.", listOf("Business Model Canvas 9 Building Blocks", "Value Proposition Design", "Writing an Executive Summary")),
+                        TextbookUnit("Chapter 4", "Marketing Strategy & Customer Discovery", 110, "Market segmentation, 4Ps/7Ps marketing mix, digital branding, pricing strategies, and sales funnels.", listOf("Market Research & Segmentation", "Marketing Mix (Product, Price, Place, Promotion)", "Digital Marketing & Growth Tactics")),
+                        TextbookUnit("Chapter 5", "Financial Planning & Sources of Capital", 150, "Startup costs, cash flow budgeting, break-even analysis, profit & loss projections, debt vs equity financing in Ethiopia.", listOf("Startup Capital Estimation", "Break-even Analysis & Cash Flow", "Microfinance, Venture & Angel Funding")),
+                        TextbookUnit("Chapter 6", "Business Operations & Legal Framework in Ethiopia", 185, "Business registration, licensing, patents & copyright, taxation (VAT, income tax), and scaling operations.", listOf("Commercial Code of Ethiopia", "Intellectual Property Protection", "Taxation & Regulatory Compliance"))
+                    )
+                )
+            )
+
+            lower.contains("econ 1011") || (lower.contains("economics") && (lower.contains("freshman") || lower.contains("1011"))) -> listOf(
+                TextbookEdition(
+                    grade = "Freshman",
+                    title = "Introduction to Economics (Econ 1011) Official Module",
+                    fileName = "Freshman_Economics_Econ1011.pdf",
+                    pageCount = 240,
+                    publisher = "Ministry of Education (FDRE-MoE)",
+                    curriculumVersion = "National Higher Education First Year Module",
+                    downloadUrl = OfficialBookLinks.urls["Freshman_Economics_Econ1011.pdf"],
+                    units = listOf(
+                        TextbookUnit("Chapter 1", "Introduction to Economics", 1, "Scarcity, choice, opportunity cost, Production Possibility Frontier (PPF), microeconomics vs macroeconomics.", listOf("Scarcity & Opportunity Cost", "PPF & Economic Efficiency", "Economic Systems (Market, Command, Mixed)")),
+                        TextbookUnit("Chapter 2", "Theory of Demand, Supply & Market Equilibrium", 35, "Law of demand/supply, determinants, price elasticity of demand and supply, market equilibrium, and price controls.", listOf("Demand & Supply Curves", "Elasticity (Price, Income, Cross)", "Market Equilibrium & Government Intervention")),
+                        TextbookUnit("Chapter 3", "Theory of Consumer Behavior", 75, "Cardinal utility theory (marginal utility, law of diminishing marginal utility) and ordinal utility theory (indifference curves, budget line).", listOf("Cardinal Utility & Consumer Surplus", "Indifference Curves & Marginal Rate of Substitution", "Consumer Equilibrium & Budget Constraint")),
+                        TextbookUnit("Chapter 4", "Theory of Production and Costs", 115, "Short-run and long-run production, law of diminishing returns, total/marginal/average costs, economies of scale.", listOf("Production Function & Isoquants", "Short-run vs Long-run Cost Curves", "Economies & Diseconomies of Scale")),
+                        TextbookUnit("Chapter 5", "Market Structures", 155, "Perfect competition, pure monopoly, monopolistic competition, and oligopoly (pricing and output determination).", listOf("Perfect Competition Short/Long Run", "Monopoly Pricing & Deadweight Loss", "Monopolistic Competition & Oligopoly Game Theory")),
+                        TextbookUnit("Chapter 6", "Fundamental Concepts of Macroeconomics", 195, "GDP measurement (expenditure, income, output approaches), inflation, unemployment, fiscal and monetary policies.", listOf("GDP & National Income Accounting", "Inflation Types & Measurement", "Fiscal vs Monetary Policy Instruments"))
+                    )
+                )
+            )
+
+            lower.contains("snie 1112") || lower.contains("inclusiveness") -> listOf(
+                TextbookEdition(
+                    grade = "Freshman",
+                    title = "Inclusiveness (SNIE 1112) Official Module",
+                    fileName = "Freshman_Inclusiveness_SNIE1112.pdf",
+                    pageCount = 200,
+                    publisher = "Ministry of Education (FDRE-MoE)",
+                    curriculumVersion = "National Higher Education First Year Module",
+                    downloadUrl = OfficialBookLinks.urls["Freshman_Inclusiveness_SNIE1112.pdf"],
+                    units = listOf(
+                        TextbookUnit("Chapter 1", "Understanding Disabilities and Vulnerabilities", 1, "Definitions of impairment, disability, and handicap; models of disability (medical, social, human rights); types of disabilities.", listOf("Impairment vs Disability vs Handicap", "Medical vs Social vs Human Rights Models", "Categories of Disabilities")),
+                        TextbookUnit("Chapter 2", "Concept of Inclusion and Inclusive Education", 35, "History from exclusion to inclusion, principles and benefits of inclusive education, creating barrier-free environments.", listOf("Evolution from Segregation to Inclusion", "Principles of Inclusive Classrooms", "Barrier-Free Physical & Social Environments")),
+                        TextbookUnit("Chapter 3", "Identification and Assessment of Special Needs", 65, "Screening tools, assessment of visual/hearing/intellectual/learning disabilities, Individualized Education Plan (IEP).", listOf("Screening & Early Identification", "IEP Development & Implementation", "Differentiated Instructional Strategies")),
+                        TextbookUnit("Chapter 4", "Differentiated Instruction & Assistive Technology", 100, "Universal Design for Learning (UDL), assistive software, braille, sign language, and adaptive devices.", listOf("Universal Design for Learning (UDL)", "Assistive Tech Hardware & Software", "Alternative Communication Systems")),
+                        TextbookUnit("Chapter 5", "Promoting Inclusive Culture and Communities", 135, "Community-Based Rehabilitation (CBR), combating social stigma, empowering marginalized groups, and family involvement.", listOf("Community-Based Rehabilitation (CBR)", "Eliminating Stigma & Discrimination", "Role of Family & Community Partnerships")),
+                        TextbookUnit("Chapter 6", "Legal Frameworks and Policies on Inclusion", 165, "UN Convention on the Rights of Persons with Disabilities (UNCRPD), Ethiopian national policies, and affirmative action.", listOf("UNCRPD International Standards", "Ethiopian Constitution & Educational Policies", "Affirmative Action & Rights-based Advocacy"))
+                    )
+                )
+            )
+
             lower.contains("bio") -> listOf(
                 TextbookEdition(
                     grade = "Grade 12",
