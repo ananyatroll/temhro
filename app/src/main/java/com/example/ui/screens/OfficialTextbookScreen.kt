@@ -136,7 +136,8 @@ object OfficialBookLinks {
         "Freshman_General_Physics_Phys1011.pdf" to "https://lavender-working-anteater-929.mypinata.cloud/ipfs/bafybeidixzm7zszdj56v7rqvsc36ms3tzeuzqol53aemcv4bueyol7zksm",
         "Freshman_Social_Anthropology_Anth1012.pdf" to "https://lavender-working-anteater-929.mypinata.cloud/ipfs/bafybeibyceumwg7wjsiibdmwtidocqza3rthlmrwl4qlvpkmkaxi2nahva",
         "Freshman_Physical_Fitness_SpSc1011.pdf" to "https://lavender-working-anteater-929.mypinata.cloud/ipfs/bafybeicxkgt77rk5k6xnz4bdbxc64dlwcrknsifamdtgu5xcc3eqkomlfe",
-        "Freshman_Global_Trends_GlTr1012.pdf" to "https://lavender-working-anteater-929.mypinata.cloud/ipfs/bafybeidoauxm5xxbia7v7kb2cjmq7dtes3zn5kfongpz4q2otirgkyqlcq"
+        "Freshman_Global_Trends_GlTr1012.pdf" to "https://lavender-working-anteater-929.mypinata.cloud/ipfs/bafybeidoauxm5xxbia7v7kb2cjmq7dtes3zn5kfongpz4q2otirgkyqlcq",
+        "Freshman_Computer_Programming_CoSc1012.pdf" to "https://lavender-working-anteater-929.mypinata.cloud/ipfs/bafybeihvclynk3yhtgaigttqicxlojhxdmjnoatbg7vnrjyruzj2zh42pq"
     )
 }
 
@@ -541,6 +542,26 @@ object OfficialTextbookRegistry {
                         TextbookUnit("Chapter 4", "International Political Economy (IPE)", 115, "Mercantilism, Economic Liberalism, Structuralism, globalization, trade agreements, and global financial institutions.", listOf("Perspectives of IPE", "Globalization Dynamics & North-South Divide", "Bretton Woods System (IMF, World Bank, WTO)")),
                         TextbookUnit("Chapter 5", "International Organizations and Global Governance", 155, "The United Nations system, African Union (AU), IGAD, regional integration, international law and norms.", listOf("UN Structure & Peacekeeping", "African Union & Pan-Africanism", "Regional Integration in East Africa (IGAD)")),
                         TextbookUnit("Chapter 6", "Contemporary Global Challenges", 192, "Global terrorism, climate change, migration, cyberwarfare, global pandemics, and human rights regimes.", listOf("Transnational Security Threats", "Climate Change & Resource Conflicts", "Global Migration & Refugee Dynamics"))
+                    )
+                )
+            )
+
+            lower.contains("cosc 1012") || lower.contains("programming") || lower.contains("computer programming") -> listOf(
+                TextbookEdition(
+                    grade = "Freshman",
+                    title = "Introduction to Computer Programming (CoSc 1012) Official Module",
+                    fileName = "Freshman_Computer_Programming_CoSc1012.pdf",
+                    pageCount = 280,
+                    publisher = "Ministry of Education (FDRE-MoE)",
+                    curriculumVersion = "National Higher Education First Year Module",
+                    downloadUrl = OfficialBookLinks.urls["Freshman_Computer_Programming_CoSc1012.pdf"],
+                    units = listOf(
+                        TextbookUnit("Chapter 1", "Introduction to Computing and Problem Solving", 1, "Computer architecture, binary systems, algorithms, flowcharting, pseudocode, and program compilation.", listOf("Computer Systems & Data Representation", "Algorithm Design & Flowcharts", "High-Level Languages & Compilers")),
+                        TextbookUnit("Chapter 2", "Basic Elements of Programming (C++/Python)", 35, "Syntax, data types, identifiers, variables, operators (arithmetic, relational, logical), standard I/O.", listOf("Data Types & Variables", "Operators & Expression Evaluation", "Standard Input and Output Operations")),
+                        TextbookUnit("Chapter 3", "Control Structures (Decisions & Loops)", 75, "Conditional branch logic (if, if-else, nested if, switch), iteration loops (for, while, do-while), jump statements.", listOf("Decision Control Statements", "Loop Constructs (For, While, Do-While)", "Nested Loops & Flow Control (Break/Continue)")),
+                        TextbookUnit("Chapter 4", "Functions and Modular Programming", 125, "Function declarations, definitions, parameter passing (pass by value/reference), return values, scope, and recursion.", listOf("Modular Program Design", "Parameter Passing Techniques", "Variable Scope, Lifetime & Recursion")),
+                        TextbookUnit("Chapter 5", "Arrays and Strings", 175, "One-dimensional and multidimensional arrays, string representations, searching (linear/binary), and sorting algorithms.", listOf("1D and 2D Array Operations", "String Manipulation & Built-in Functions", "Searching & Sorting Algorithms")),
+                        TextbookUnit("Chapter 6", "Pointers, User-Defined Types and File I/O", 225, "Memory addresses, pointer arithmetic, structures (struct), file streams, reading and writing files.", listOf("Pointers & Dynamic Memory Concepts", "Structures & User-Defined Data Types", "Sequential File Input/Output Operations"))
                     )
                 )
             )
