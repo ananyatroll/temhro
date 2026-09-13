@@ -126,7 +126,12 @@ object OfficialBookLinks {
         "Freshman_Emerging_Technologies_EmTe1012.pdf" to "https://wcu.edu.et/FirstYearModule/EMERGING%20TECHNOLOGIES%20module.pdf",
         "Freshman_Entrepreneurship_MGMT1012.pdf" to "https://wcu.edu.et/FirstYearModule/ENTREPRENEURSHIP%20module.pdf",
         "Freshman_Economics_Econ1011.pdf" to "https://wcu.edu.et/FirstYearModule/ECONOMICS%20module.pdf",
-        "Freshman_Inclusiveness_SNIE1112.pdf" to "https://wcu.edu.et/FirstYearModule/INCLUSIVENESS%20Module.pdf"
+        "Freshman_Inclusiveness_SNIE1112.pdf" to "https://wcu.edu.et/FirstYearModule/INCLUSIVENESS%20Module.pdf",
+        "Freshman_General_Psychology_Psyc1011.pdf" to "https://lavender-working-anteater-929.mypinata.cloud/ipfs/bafybeiemxwohupvyw6tdjfftv6manpa7bww77qx766f3rl2kgxis6xhgwy",
+        "Freshman_Communicative_English_I_FLEn1011.pdf" to "https://lavender-working-anteater-929.mypinata.cloud/ipfs/bafybeihwvyx6ldicsc352y2i36jj3uy2ifgk3arb33vq7etw65bvoursxi",
+        "Freshman_Communicative_English_II_FLEn1012.pdf" to "https://lavender-working-anteater-929.mypinata.cloud/ipfs/bafybeiaircxfziy4he7nb7bkde7jdz74wiaehqrdaqngsvha3sepyokydy",
+        "Freshman_Maths_Natural_Sciences_Math1011.pdf" to "https://lavender-working-anteater-929.mypinata.cloud/ipfs/bafybeih7os4gzgnkkokcn3t2syd7a2t6jdd5l76au5v52so3zufswrrapa",
+        "Freshman_Maths_Social_Sciences_Math1012.pdf" to "https://lavender-working-anteater-929.mypinata.cloud/ipfs/bafybeia26tbc46tmvqtal6lewnujioq4qujf5tmrlqinh3xfpbxn3gqrpq"
     )
 }
 
@@ -331,6 +336,105 @@ object OfficialTextbookRegistry {
                         TextbookUnit("Chapter 4", "Differentiated Instruction & Assistive Technology", 100, "Universal Design for Learning (UDL), assistive software, braille, sign language, and adaptive devices.", listOf("Universal Design for Learning (UDL)", "Assistive Tech Hardware & Software", "Alternative Communication Systems")),
                         TextbookUnit("Chapter 5", "Promoting Inclusive Culture and Communities", 135, "Community-Based Rehabilitation (CBR), combating social stigma, empowering marginalized groups, and family involvement.", listOf("Community-Based Rehabilitation (CBR)", "Eliminating Stigma & Discrimination", "Role of Family & Community Partnerships")),
                         TextbookUnit("Chapter 6", "Legal Frameworks and Policies on Inclusion", 165, "UN Convention on the Rights of Persons with Disabilities (UNCRPD), Ethiopian national policies, and affirmative action.", listOf("UNCRPD International Standards", "Ethiopian Constitution & Educational Policies", "Affirmative Action & Rights-based Advocacy"))
+                    )
+                )
+            )
+
+            lower.contains("psyc 1011") || lower.contains("psychology") -> listOf(
+                TextbookEdition(
+                    grade = "Freshman",
+                    title = "General Psychology (Psyc 1011) Official Module",
+                    fileName = "Freshman_General_Psychology_Psyc1011.pdf",
+                    pageCount = 260,
+                    publisher = "Ministry of Education (FDRE-MoE)",
+                    curriculumVersion = "National Higher Education First Year Module",
+                    downloadUrl = OfficialBookLinks.urls["Freshman_General_Psychology_Psyc1011.pdf"],
+                    units = listOf(
+                        TextbookUnit("Chapter 1", "Essence of Psychology", 1, "Definition, goals, historical roots, modern perspectives, and psychological research methods.", listOf("Nature & Goals of Psychology", "Early Schools vs Modern Perspectives", "Descriptive, Correlational & Experimental Methods")),
+                        TextbookUnit("Chapter 2", "Sensation and Perception", 38, "Sensory modalities, absolute and difference thresholds, perceptual organization (Gestalt), and depth perception.", listOf("Sensory Processes & Thresholds", "Gestalt Principles of Organization", "Perceptual Constancies & Illusions")),
+                        TextbookUnit("Chapter 3", "Learning and Behavioral Principles", 74, "Classical conditioning (Pavlov), Operant conditioning (Skinner), reinforcement schedules, and Social learning theory (Bandura).", listOf("Classical vs Operant Conditioning", "Reinforcement Schedules & Punishment", "Observational & Cognitive Learning")),
+                        TextbookUnit("Chapter 4", "Memory and Forgetting", 112, "Information processing model (Sensory, STM, LTM), encoding strategies, retrieval cues, and theories of forgetting.", listOf("Three-Stage Memory Model", "Encoding, Storage & Retrieval", "Causes of Forgetting & Memory Improvement")),
+                        TextbookUnit("Chapter 5", "Motivation and Emotion", 150, "Biological vs psychosocial motives, theories of motivation (Drive, Incentive, Humanistic), components and theories of emotions.", listOf("Theories of Motivation", "Intrinsic vs Extrinsic Motivation", "Physiological & Cognitive Aspects of Emotion")),
+                        TextbookUnit("Chapter 6", "Personality and Individual Differences", 188, "Psychoanalytic (Freud), Trait (Big Five), Humanistic (Rogers, Maslow), and Social-Cognitive personality theories.", listOf("Freudian Structure & Defense Mechanisms", "Trait Theories & Big Five", "Humanistic & Social-Cognitive Perspectives")),
+                        TextbookUnit("Chapter 7", "Psychological Disorders and Well-Being", 224, "Classification of mental disorders (Anxiety, Mood, Psychotic), stress and coping mechanisms, psychotherapy basics.", listOf("Defining Psychological Disorders", "Major Categories of Mental Disorders", "Stress Management & Mental Health Promotion"))
+                    )
+                )
+            )
+
+            lower.contains("flen 1011") || lower.contains("english 1") || lower.contains("english i") || (lower.contains("communicative english") && !lower.contains("2") && !lower.contains("ii")) -> listOf(
+                TextbookEdition(
+                    grade = "Freshman",
+                    title = "Communicative English Language Skills I (FLEn 1011) Official Module",
+                    fileName = "Freshman_Communicative_English_I_FLEn1011.pdf",
+                    pageCount = 210,
+                    publisher = "Ministry of Education (FDRE-MoE)",
+                    curriculumVersion = "National Higher Education First Year Module",
+                    downloadUrl = OfficialBookLinks.urls["Freshman_Communicative_English_I_FLEn1011.pdf"],
+                    units = listOf(
+                        TextbookUnit("Unit 1", "Study Skills and Academic Reading", 1, "Active reading strategies, skimming, scanning, Cornell note-taking, and vocabulary acquisition.", listOf("Reading Techniques (Skimming & Scanning)", "Effective Note-Taking Methods", "Dictionary & Contextual Clues")),
+                        TextbookUnit("Unit 2", "Health and Fitness", 42, "Reading scientific texts on health, conditionals (Zero, First, Second, Third), active and passive voice.", listOf("Reading for Main Ideas & Details", "Conditional Sentence Structures", "Passive Voice in Scientific Writing")),
+                        TextbookUnit("Unit 3", "Cultural Heritage and Tourism in Ethiopia", 84, "Descriptive writing, listening comprehension, adjective clauses, and cultural terminology.", listOf("Listening for Specific Information", "Descriptive Paragraph Writing", "Relative / Adjective Clauses")),
+                        TextbookUnit("Unit 4", "Environmental Protection and Climate", 126, "Cause-and-effect essay structures, modal auxiliaries, cohesive devices, and argument evaluation.", listOf("Cause and Effect Essays", "Modal Verbs & Degrees of Certainty", "Transitions & Cohesion")),
+                        TextbookUnit("Unit 5", "Science, Innovation and Technology", 168, "Expository discourse, academic debate, reported speech, and synthesizing technical texts.", listOf("Technical Text Comprehension", "Reported Speech & Reporting Verbs", "Constructing Persuasive Arguments"))
+                    )
+                )
+            )
+
+            lower.contains("flen 1012") || lower.contains("english 2") || lower.contains("english ii") || lower.contains("communicative english 2") || lower.contains("communicative english ii") -> listOf(
+                TextbookEdition(
+                    grade = "Freshman",
+                    title = "Communicative English Language Skills II (FLEn 1012) Official Module",
+                    fileName = "Freshman_Communicative_English_II_FLEn1012.pdf",
+                    pageCount = 200,
+                    publisher = "Ministry of Education (FDRE-MoE)",
+                    curriculumVersion = "National Higher Education First Year Module",
+                    downloadUrl = OfficialBookLinks.urls["Freshman_Communicative_English_II_FLEn1012.pdf"],
+                    units = listOf(
+                        TextbookUnit("Unit 1", "Public Speaking and Oral Presentations", 1, "Speech organization, verbal and non-verbal cues, overcoming stage fright, and persuasive speaking.", listOf("Speech Structure & Outlines", "Delivery Techniques & Body Language", "Handling Q&A Sessions")),
+                        TextbookUnit("Unit 2", "Advanced Academic Writing", 40, "Thesis formulation, argumentative essay architecture, counterarguments, and refutations.", listOf("Developing Strong Thesis Statements", "Argumentative Essay Frameworks", "Addressing Counter-Arguments")),
+                        TextbookUnit("Unit 3", "Research, Paraphrasing and Documentation", 80, "Finding academic sources, APA/MLA referencing, paraphrasing, summarizing, and academic integrity.", listOf("Paraphrasing & Summarizing Techniques", "In-text Citations & Reference Lists", "Avoiding Plagiarism")),
+                        TextbookUnit("Unit 4", "Professional Communication & Workplace Readiness", 120, "Curriculum Vitae (CV) and Resume drafting, cover letters, formal business correspondence, and mock interviews.", listOf("CV & Professional Resume Design", "Cover Letters & Formal Inquiries", "Interview Preparation Strategies")),
+                        TextbookUnit("Unit 5", "Critical Discourse & Media Literacy", 160, "Analyzing rhetorical appeals (Ethos, Pathos, Logos), detecting media bias, propaganda, and logical fallacies.", listOf("Rhetorical Analysis (Ethos, Pathos, Logos)", "Identifying Media Bias & Slant", "Fallacies in Public Discourse"))
+                    )
+                )
+            )
+
+            (lower.contains("math") && (lower.contains("natural") || lower.contains("applied") || lower.contains("nat"))) || lower.contains("math 1011") -> listOf(
+                TextbookEdition(
+                    grade = "Freshman",
+                    title = "Mathematics for Natural Sciences (Math 1011) Official Module",
+                    fileName = "Freshman_Maths_Natural_Sciences_Math1011.pdf",
+                    pageCount = 310,
+                    publisher = "Ministry of Education (FDRE-MoE)",
+                    curriculumVersion = "National Higher Education First Year Module",
+                    downloadUrl = OfficialBookLinks.urls["Freshman_Maths_Natural_Sciences_Math1011.pdf"],
+                    units = listOf(
+                        TextbookUnit("Chapter 1", "Propositional Logic and Set Theory", 1, "Statements, logical connectives, truth tables, quantifiers, set algebra, Cartesian product, and mathematical induction.", listOf("Propositions & Truth Tables", "Predicates & Quantifiers", "Set Operations & Mathematical Induction")),
+                        TextbookUnit("Chapter 2", "The Real and Complex Number Systems", 50, "Axioms of real numbers, absolute value, complex numbers arithmetic, modulus, argument, and De Moivre's theorem.", listOf("Real Number Properties & Order Axioms", "Complex Numbers in Rectangular Form", "Polar Form & De Moivre's Theorem")),
+                        TextbookUnit("Chapter 3", "Functions and Transformations", 100, "Domain, codomain, inverse functions, polynomial and rational functions, exponential and logarithmic functions.", listOf("Composite & Inverse Functions", "Polynomial Roots & Rational Functions", "Exponential & Logarithmic Equations")),
+                        TextbookUnit("Chapter 4", "Analytic Geometry of Conics", 155, "Straight lines, coordinate rotation/translation, circles, parabolas, ellipses, and hyperbolas with applications.", listOf("Lines & Distance Formulas", "Circles & Parabolas", "Ellipses & Hyperbolas")),
+                        TextbookUnit("Chapter 5", "Limits and Continuity", 210, "Intuitive and formal limit definitions, one-sided limits, limits at infinity, continuity theorems, and IVT.", listOf("Limit Laws & Squeeze Theorem", "Limits at Infinity & Asymptotes", "Continuity & Intermediate Value Theorem")),
+                        TextbookUnit("Chapter 6", "Foundations of Differential & Integral Calculus", 260, "Derivatives, chain rule, implicit differentiation, extrema, curve sketching, Riemann sums, and definite integrals.", listOf("Derivative Rules & Chain Rule", "Extrema & Optimization Problems", "Fundamental Theorem of Calculus"))
+                    )
+                )
+            )
+
+            (lower.contains("math") && (lower.contains("social") || lower.contains("soc"))) || lower.contains("math 1012") -> listOf(
+                TextbookEdition(
+                    grade = "Freshman",
+                    title = "Mathematics for Social Sciences (Math 1012) Official Module",
+                    fileName = "Freshman_Maths_Social_Sciences_Math1012.pdf",
+                    pageCount = 270,
+                    publisher = "Ministry of Education (FDRE-MoE)",
+                    curriculumVersion = "National Higher Education First Year Module",
+                    downloadUrl = OfficialBookLinks.urls["Freshman_Maths_Social_Sciences_Math1012.pdf"],
+                    units = listOf(
+                        TextbookUnit("Chapter 1", "Propositional Logic and Sets", 1, "Propositions, logical operations, validity of arguments, algebra of sets, and applications in decision-making.", listOf("Logical Connectives & Truth Tables", "Argument Validity & Fallacies", "Sets & Venn Diagram Applications")),
+                        TextbookUnit("Chapter 2", "Equations, Inequalities and Systems", 45, "Linear and quadratic equations, systems of linear equations, and systems of linear inequalities.", listOf("Solving Quadratic Equations", "Linear Systems in Two & Three Variables", "Inequalities & Solution Regions")),
+                        TextbookUnit("Chapter 3", "Functions in Business and Economics", 90, "Linear functions, cost, revenue, profit functions, break-even analysis, market equilibrium, and quadratic models.", listOf("Cost, Revenue & Profit Models", "Break-Even Analysis", "Supply & Demand Equilibrium")),
+                        TextbookUnit("Chapter 4", "Matrices and Applications", 135, "Matrix algebra, determinants, matrix inversion, and solving economic linear models (Gaussian elimination & Cramer's rule).", listOf("Matrix Operations & Properties", "Determinants & Inverses", "Solving Systems via Cramer's Rule")),
+                        TextbookUnit("Chapter 5", "Introduction to Linear Programming", 180, "Linear programming formulation, objective functions, constraints, graphical solution method, and corner point theorem.", listOf("LP Model Formulation", "Graphical Feasible Regions", "Optimal Solution Determination")),
+                        TextbookUnit("Chapter 6", "Mathematics of Finance & Applied Calculus", 225, "Simple and compound interest, continuous compounding, annuities, amortization, marginal analysis with derivatives.", listOf("Simple vs Compound Interest", "Annuities & Loan Amortization", "Marginal Revenue & Marginal Cost"))
                     )
                 )
             )
