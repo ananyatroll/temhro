@@ -131,7 +131,12 @@ object OfficialBookLinks {
         "Freshman_Communicative_English_I_FLEn1011.pdf" to "https://lavender-working-anteater-929.mypinata.cloud/ipfs/bafybeihwvyx6ldicsc352y2i36jj3uy2ifgk3arb33vq7etw65bvoursxi",
         "Freshman_Communicative_English_II_FLEn1012.pdf" to "https://lavender-working-anteater-929.mypinata.cloud/ipfs/bafybeiaircxfziy4he7nb7bkde7jdz74wiaehqrdaqngsvha3sepyokydy",
         "Freshman_Maths_Natural_Sciences_Math1011.pdf" to "https://lavender-working-anteater-929.mypinata.cloud/ipfs/bafybeih7os4gzgnkkokcn3t2syd7a2t6jdd5l76au5v52so3zufswrrapa",
-        "Freshman_Maths_Social_Sciences_Math1012.pdf" to "https://lavender-working-anteater-929.mypinata.cloud/ipfs/bafybeia26tbc46tmvqtal6lewnujioq4qujf5tmrlqinh3xfpbxn3gqrpq"
+        "Freshman_Maths_Social_Sciences_Math1012.pdf" to "https://lavender-working-anteater-929.mypinata.cloud/ipfs/bafybeia26tbc46tmvqtal6lewnujioq4qujf5tmrlqinh3xfpbxn3gqrpq",
+        "Freshman_Applied_Mathematics_I_Math1041.pdf" to "https://lavender-working-anteater-929.mypinata.cloud/ipfs/bafybeih32lspdj5472hza3gfs4xtau4sbdvyybhe65c5zpyolegzjljx24",
+        "Freshman_General_Physics_Phys1011.pdf" to "https://lavender-working-anteater-929.mypinata.cloud/ipfs/bafybeidixzm7zszdj56v7rqvsc36ms3tzeuzqol53aemcv4bueyol7zksm",
+        "Freshman_Social_Anthropology_Anth1012.pdf" to "https://lavender-working-anteater-929.mypinata.cloud/ipfs/bafybeibyceumwg7wjsiibdmwtidocqza3rthlmrwl4qlvpkmkaxi2nahva",
+        "Freshman_Physical_Fitness_SpSc1011.pdf" to "https://lavender-working-anteater-929.mypinata.cloud/ipfs/bafybeicxkgt77rk5k6xnz4bdbxc64dlwcrknsifamdtgu5xcc3eqkomlfe",
+        "Freshman_Global_Trends_GlTr1012.pdf" to "https://lavender-working-anteater-929.mypinata.cloud/ipfs/bafybeidoauxm5xxbia7v7kb2cjmq7dtes3zn5kfongpz4q2otirgkyqlcq"
     )
 }
 
@@ -435,6 +440,107 @@ object OfficialTextbookRegistry {
                         TextbookUnit("Chapter 4", "Matrices and Applications", 135, "Matrix algebra, determinants, matrix inversion, and solving economic linear models (Gaussian elimination & Cramer's rule).", listOf("Matrix Operations & Properties", "Determinants & Inverses", "Solving Systems via Cramer's Rule")),
                         TextbookUnit("Chapter 5", "Introduction to Linear Programming", 180, "Linear programming formulation, objective functions, constraints, graphical solution method, and corner point theorem.", listOf("LP Model Formulation", "Graphical Feasible Regions", "Optimal Solution Determination")),
                         TextbookUnit("Chapter 6", "Mathematics of Finance & Applied Calculus", 225, "Simple and compound interest, continuous compounding, annuities, amortization, marginal analysis with derivatives.", listOf("Simple vs Compound Interest", "Annuities & Loan Amortization", "Marginal Revenue & Marginal Cost"))
+                    )
+                )
+            )
+
+            lower.contains("applied math") || lower.contains("math 1041") || lower.contains("applied_math") -> listOf(
+                TextbookEdition(
+                    grade = "Freshman",
+                    title = "Applied Mathematics I (Math 1041) Official Module",
+                    fileName = "Freshman_Applied_Mathematics_I_Math1041.pdf",
+                    pageCount = 330,
+                    publisher = "Ministry of Education (FDRE-MoE)",
+                    curriculumVersion = "National Higher Education First Year Module",
+                    downloadUrl = OfficialBookLinks.urls["Freshman_Applied_Mathematics_I_Math1041.pdf"],
+                    units = listOf(
+                        TextbookUnit("Chapter 1", "Vectors and Vector Spaces", 1, "Vectors in 2D/3D space, dot and cross products, lines and planes, vector spaces and subspaces.", listOf("Vector Operations & Geometric Meaning", "Dot & Cross Products with Applications", "Lines & Planes in 3-Space")),
+                        TextbookUnit("Chapter 2", "Matrices, Determinants and Linear Systems", 55, "Matrix algebra, Gaussian elimination, rank, determinants, and matrix inverses.", listOf("Systems of Linear Equations & Row Operations", "Determinant Properties & Cofactors", "Inverse Matrices & Cramer's Rule")),
+                        TextbookUnit("Chapter 3", "Differential Calculus of Single Variable", 110, "Limits, continuity, techniques of differentiation, Mean Value Theorem, and Taylor series.", listOf("Limit Evaluation & L'Hopital's Rule", "Derivatives of Transcendental Functions", "Taylor & Maclaurin Series Expansions")),
+                        TextbookUnit("Chapter 4", "Applications of Differential Calculus", 165, "Curve sketching, optimization problems, related rates, and curvature.", listOf("Extreme Values & Optimization", "Concavity, Inflection & Curve Sketching", "Related Rates & Tangent Approximations")),
+                        TextbookUnit("Chapter 5", "Techniques of Integration", 220, "Indefinite & definite integrals, substitution, integration by parts, partial fractions, and trigonometric integrals.", listOf("Integration by Substitution & Parts", "Trigonometric Substitutions & Reductions", "Partial Fractions & Improper Integrals")),
+                        TextbookUnit("Chapter 6", "Applications of Definite Integrals", 275, "Area between curves, volumes of solids of revolution (disks/washers/shells), arc length, and work.", listOf("Area Between Curves", "Volumes of Solids of Revolution", "Arc Length & Engineering Applications"))
+                    )
+                )
+            )
+
+            lower.contains("phys 1011") || (lower.contains("physics") && (lower.contains("freshman") || lower.contains("general"))) -> listOf(
+                TextbookEdition(
+                    grade = "Freshman",
+                    title = "General Physics (Phys 1011) Official Module",
+                    fileName = "Freshman_General_Physics_Phys1011.pdf",
+                    pageCount = 310,
+                    publisher = "Ministry of Education (FDRE-MoE)",
+                    curriculumVersion = "National Higher Education First Year Module",
+                    downloadUrl = OfficialBookLinks.urls["Freshman_General_Physics_Phys1011.pdf"],
+                    units = listOf(
+                        TextbookUnit("Chapter 1", "Vectors and Physical Quantities", 1, "Units, dimensions, dimensional analysis, vector algebra, and coordinate transformations.", listOf("SI Units & Dimensional Homogeneity", "Vector Addition, Dot & Cross Products", "Unit Vectors & Coordinate Systems")),
+                        TextbookUnit("Chapter 2", "Kinematics and Dynamics in 1D and 2D", 40, "Motion with constant acceleration, projectile motion, circular motion, Newton's laws, and friction.", listOf("1D & 2D Kinematics Equations", "Newton's Laws of Motion & Free Body Diagrams", "Friction & Uniform Circular Motion")),
+                        TextbookUnit("Chapter 3", "Work, Energy, and Conservation of Momentum", 85, "Work-energy theorem, conservative/non-conservative forces, potential energy, impulse, and collisions.", listOf("Work-Energy Theorem & Power", "Conservation of Mechanical Energy", "Impulse & Elastic/Inelastic Collisions")),
+                        TextbookUnit("Chapter 4", "Rotational Motion and Static Equilibrium", 130, "Angular velocity/acceleration, rotational kinetic energy, moment of inertia, torque, and equilibrium conditions.", listOf("Rotational Kinematics & Inertia", "Torque & Angular Momentum Conservation", "Static Equilibrium of Rigid Bodies")),
+                        TextbookUnit("Chapter 5", "Fluid Mechanics and Hydrodynamics", 175, "Fluid pressure, Pascal's principle, Archimedes' principle, continuity equation, and Bernoulli's equation.", listOf("Hydrostatic Pressure & Buoyancy", "Fluid Flow & Continuity Equation", "Bernoulli's Equation & Viscosity")),
+                        TextbookUnit("Chapter 6", "Oscillations, Waves and Thermal Physics", 220, "Simple harmonic motion, wave mechanics, heat transfer, laws of thermodynamics, and entropy.", listOf("SHM, Pendulums & Resonance", "Mechanical Waves & Sound", "First & Second Laws of Thermodynamics")),
+                        TextbookUnit("Chapter 7", "Electromagnetism and Direct Current Circuits", 265, "Coulomb's law, electric field & potential, capacitance, Ohm's law, Kirchhoff's rules, and magnetic forces.", listOf("Electric Fields & Gauss's Law", "Capacitors & DC Circuit Analysis", "Magnetic Fields & Electromagnetic Induction"))
+                    )
+                )
+            )
+
+            lower.contains("anth 1012") || lower.contains("anthropology") -> listOf(
+                TextbookEdition(
+                    grade = "Freshman",
+                    title = "Social Anthropology (Anth 1012) Official Module",
+                    fileName = "Freshman_Social_Anthropology_Anth1012.pdf",
+                    pageCount = 220,
+                    publisher = "Ministry of Education (FDRE-MoE)",
+                    curriculumVersion = "National Higher Education First Year Module",
+                    downloadUrl = OfficialBookLinks.urls["Freshman_Social_Anthropology_Anth1012.pdf"],
+                    units = listOf(
+                        TextbookUnit("Chapter 1", "Introducing Anthropology and Its Methods", 1, "Definition, scope, four-field approach, ethnography, participant observation, and anthropological ethics.", listOf("Four Fields of Anthropology", "Ethnography & Fieldwork Methods", "Emic vs Etic Perspectives")),
+                        TextbookUnit("Chapter 2", "Human Culture and Society", 35, "Concept and characteristics of culture, cultural relativism, ethnocentrism, enculturation, and cultural change.", listOf("Elements & Features of Culture", "Ethnocentrism vs Cultural Relativism", "Mechanisms of Cultural Change")),
+                        TextbookUnit("Chapter 3", "Human Biological and Cultural Evolution", 70, "Human origins, evolutionary theory, biocultural evolution, and deconstructing the biological race concept.", listOf("Primate Evolution & Hominization", "Biocultural Adaptation", "Race as a Social Construct")),
+                        TextbookUnit("Chapter 4", "Kinship, Marriage, and Family Systems", 105, "Descent systems (patrilineal, matrilineal, bilateral), marriage rules, dowry/bridewealth, and family types.", listOf("Rules of Descent & Lineages", "Forms of Marriage & Post-marital Residence", "Family Typologies & Functions")),
+                        TextbookUnit("Chapter 5", "Economic, Political and Belief Systems", 145, "Modes of production (foraging, pastoralism, agriculture), reciprocity, redistribution, political organization, religion & magic.", listOf("Economic Subsistence Strategies", "Bands, Tribes, Chiefdoms, States", "Religion, Rituals & Worldviews")),
+                        TextbookUnit("Chapter 6", "Ethnicity, Identity and Pluralism in Ethiopia", 185, "Theories of ethnicity (primordialism, instrumentalism, constructivism), multiculturalism, and peacebuilding in Ethiopia.", listOf("Theories of Ethnic Identity", "Ethnic Diversity in Ethiopia", "Indigenous Conflict Transformation"))
+                    )
+                )
+            )
+
+            lower.contains("spsc 1011") || lower.contains("fitness") || lower.contains("physical fitness") -> listOf(
+                TextbookEdition(
+                    grade = "Freshman",
+                    title = "Physical Fitness & Conditioning (SpSc 1011) Official Module",
+                    fileName = "Freshman_Physical_Fitness_SpSc1011.pdf",
+                    pageCount = 190,
+                    publisher = "Ministry of Education (FDRE-MoE)",
+                    curriculumVersion = "National Higher Education First Year Module",
+                    downloadUrl = OfficialBookLinks.urls["Freshman_Physical_Fitness_SpSc1011.pdf"],
+                    units = listOf(
+                        TextbookUnit("Chapter 1", "Concepts of Physical Fitness and Wellness", 1, "Health vs skill-related fitness components, holistic wellness dimensions, hypokinetic disease prevention.", listOf("Health-Related Fitness Components", "Skill-Related Fitness Components", "Dimensions of Holistic Wellness")),
+                        TextbookUnit("Chapter 2", "Cardiorespiratory Endurance Training", 30, "Cardiovascular physiology, aerobic capacity (VO2 max), FITT principle, target heart rate calculation.", listOf("Physiological Benefits of Aerobic Exercise", "Target Heart Rate Zone Calculations", "FITT Formula for Cardiorespiratory Fitness")),
+                        TextbookUnit("Chapter 3", "Muscular Strength and Endurance Development", 60, "Musculoskeletal adaptations, isometric/isotonic exercises, progressive overload, set and rep guidelines.", listOf("Principles of Resistance Training", "Hypertrophy vs Strength Protocols", "Core Stability & Calisthenics")),
+                        TextbookUnit("Chapter 4", "Flexibility and Body Composition", 95, "Static, dynamic, PNF stretching methods, body mass index (BMI), body fat percentages, posture alignment.", listOf("Types of Stretching Techniques", "Joint Mobility & Range of Motion", "Body Composition Assessment Methods")),
+                        TextbookUnit("Chapter 5", "Nutrition, Energy Balance and Health", 130, "Macronutrients, micronutrients, hydration guidelines, caloric balance, healthy dietary planning.", listOf("Macronutrient Functions in Exercise", "Hydration & Electrolyte Balance", "Energy Balance & Weight Management")),
+                        TextbookUnit("Chapter 6", "Injury Prevention, Safety and First Aid", 160, "Warm-up and cool-down protocols, common sports injuries, RICE treatment method, exercise safety in campus environments.", listOf("Warm-Up & Cool-Down Protocols", "RICE Protocol for Acute Injuries", "Environmental Factors (Heat/Cold/Hydration)"))
+                    )
+                )
+            )
+
+            lower.contains("gltr 1012") || lower.contains("global trends") || lower.contains("international relations") -> listOf(
+                TextbookEdition(
+                    grade = "Freshman",
+                    title = "Global Trends (GlTr 1012) Official Module",
+                    fileName = "Freshman_Global_Trends_GlTr1012.pdf",
+                    pageCount = 230,
+                    publisher = "Ministry of Education (FDRE-MoE)",
+                    curriculumVersion = "National Higher Education First Year Module",
+                    downloadUrl = OfficialBookLinks.urls["Freshman_Global_Trends_GlTr1012.pdf"],
+                    units = listOf(
+                        TextbookUnit("Chapter 1", "Understanding International Relations", 1, "Meaning of IR, state and non-state actors, levels of analysis, Westphalian state system, national interest.", listOf("Nature & Scope of International Relations", "State & Non-State Global Actors", "The Concept of National Interest")),
+                        TextbookUnit("Chapter 2", "Theories of International Relations", 38, "Realism (Classical & Neorealism), Liberalism (Idealism & Neoliberalism), Constructivism, and Marxism.", listOf("Realism & Power Politics", "Liberal Institutionalism & Interdependence", "Constructivism & Social Identities")),
+                        TextbookUnit("Chapter 3", "Foreign Policy, Diplomacy and Regional Engagements", 76, "Foreign policy decision-making, diplomatic instruments, Ethiopia's foreign policy orientations and Horn diplomacy.", listOf("Instruments of Foreign Policy", "Diplomatic Strategies & Bilateral Relations", "Ethiopian Foreign Policy in the Horn of Africa")),
+                        TextbookUnit("Chapter 4", "International Political Economy (IPE)", 115, "Mercantilism, Economic Liberalism, Structuralism, globalization, trade agreements, and global financial institutions.", listOf("Perspectives of IPE", "Globalization Dynamics & North-South Divide", "Bretton Woods System (IMF, World Bank, WTO)")),
+                        TextbookUnit("Chapter 5", "International Organizations and Global Governance", 155, "The United Nations system, African Union (AU), IGAD, regional integration, international law and norms.", listOf("UN Structure & Peacekeeping", "African Union & Pan-Africanism", "Regional Integration in East Africa (IGAD)")),
+                        TextbookUnit("Chapter 6", "Contemporary Global Challenges", 192, "Global terrorism, climate change, migration, cyberwarfare, global pandemics, and human rights regimes.", listOf("Transnational Security Threats", "Climate Change & Resource Conflicts", "Global Migration & Refugee Dynamics"))
                     )
                 )
             )
