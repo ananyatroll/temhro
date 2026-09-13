@@ -486,6 +486,55 @@ where k = 2Ï€/Î» is the wave number and Ï‰ = 2Ï€f is the angular freq
 
 ---
 
+
+## Chapter 5: Oscillations, Waves, and Optics
+
+### 5.1 Simple Harmonic Motion (SHM)
+Simple Harmonic Motion is periodic oscillatory motion in which the restoring force is directly proportional to the displacement from the equilibrium position and directed opposite to the displacement:
+$$F = -kx$$ (Hooke's Law)
+
+- **Equation of Motion**: $a(t) = -\omega^2 x(t)$, where $\omega = \sqrt{k/m}$ is angular frequency.
+- **Position as a function of time**: $x(t) = A \cos(\omega t + \phi)$
+- **Velocity**: $v(t) = -A\omega \sin(\omega t + \phi)$, with maximum speed $v_{\text{max}} = A\omega$ at equilibrium ($x=0$).
+- **Acceleration**: $a(t) = -A\omega^2 \cos(\omega t + \phi)$, with maximum acceleration $a_{\text{max}} = A\omega^2$ at extreme displacement ($x=\pm A$).
+- **Period & Frequency**: $T = 2\pi \sqrt{m/k}$, $f = 1/T = \frac{1}{2\pi}\sqrt{k/m}$.
+- **Energy in SHM**: Total mechanical energy is conserved: $E = \frac{1}{2}kA^2 = \frac{1}{2}mv^2 + \frac{1}{2}kx^2$.
+
+### 5.2 The Simple Pendulum
+A simple pendulum consists of a point mass $m$ suspended by a massless string of length $L$.
+For small amplitude angular oscillations ($\theta < 10^\circ$, where $\sin\theta \approx \theta$):
+- **Restoring Torque**: $\tau = -mgL\sin\theta \approx -mgL\theta$
+- **Period**: $T = 2\pi \sqrt{\frac{L}{g}}$
+- **Note**: The period of a simple pendulum depends only on length $L$ and gravitational acceleration $g$, and is independent of mass $m$ and amplitude.
+
+### 5.3 Wave Motion and Characteristics
+A wave is a disturbance that travels through space and matter transferring energy without transferring matter.
+- **Mechanical Waves**: Require a physical medium (e.g., sound waves, seismic waves, water waves).
+- **Electromagnetic Waves**: Propagate through vacuum and media at speed $c = 3\times 10^8 \text{ m/s}$ (e.g., light, X-rays, radio waves).
+- **Transverse Waves**: Particle oscillation is perpendicular to wave propagation (e.g., light, waves on a plucked string).
+- **Longitudinal Waves**: Particle oscillation is parallel to wave propagation (e.g., sound waves, compressions and rarefactions).
+- **Fundamental Wave Equation**: $$v = f \lambda$$ where $v$ is wave speed, $f$ is frequency (Hz), and $\lambda$ is wavelength (m).
+
+### 5.4 Resonance, Sound Waves, and Beats
+- **Sound Waves**: Longitudinal mechanical waves produced by vibrating sources. Speed in air at $0^\circ\text{C}$ is $331\text{ m/s}$; $v \approx 331 + 0.6 T_C\text{ m/s}$.
+- **Resonance**: Occurs when a periodic driving force matches the natural frequency of an oscillating system, resulting in maximum energy transfer and large amplitude vibrations.
+- **Beats**: Periodic variation in intensity (loudness) produced by the interference of two sound waves of slightly different frequencies:
+  $$f_{\text{beat}} = |f_1 - f_2|$$
+
+### 5.5 The Doppler Effect
+The observed change in the frequency of a wave when the source and observer are in relative motion:
+$$f_o = f_s \left( \frac{v \pm v_o}{v \mp v_s} \right)$$
+- When source and observer approach each other, observed frequency $f_o$ increases (higher pitch/blueshift).
+- When moving apart, observed frequency $f_o$ decreases (lower pitch/redshift).
+
+### 5.6 Geometrical Optics (Reflection, Refraction, and Lenses)
+- **Law of Reflection**: Angle of incidence equals angle of reflection: $\theta_i = \theta_r$.
+- **Snell's Law of Refraction**: $$n_1 \sin\theta_1 = n_2 \sin\theta_2$$
+- **Index of Refraction**: $n = c/v$, where $c$ is speed of light in vacuum and $v$ is speed in medium.
+- **Critical Angle & Total Internal Reflection**: $\sin\theta_c = n_2 / n_1$ (when light travels from denser to rarer medium and $\theta_1 > \theta_c$).
+- **Thin Lens Equation**: $$\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i}$$
+- **Magnification**: $$M = \frac{h_i}{h_o} = -\frac{d_i}{d_o}$$
+
 ## Chapter 6: Electromagnetism
 
 # Chapter 6

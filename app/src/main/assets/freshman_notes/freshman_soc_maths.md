@@ -2353,4 +2353,51 @@ X = Aâˆ’1B
 
 ---
 
+
+## Chapter 4: Introduction to Calculus
+
+### 4.1 Limits and Continuity
+Calculus investigates how functions change dynamically. The foundation of calculus is the concept of a limit.
+- **Definition of Limit**: $\lim_{x \to a} f(x) = L$ means that as $x$ approaches $a$ (from either side, with $x \neq a$), $f(x)$ approaches arbitrarily close to $L$.
+- **One-Sided Limits**:
+  - Left-hand limit: $\lim_{x \to a^-} f(x)$
+  - Right-hand limit: $\lim_{x \to a^+} f(x)$
+  - The two-sided limit exists if and only if: $\lim_{x \to a^-} f(x) = \lim_{x \to a^+} f(x) = L$.
+- **Properties of Limits**:
+  - $\lim_{x \to a} [f(x) \pm g(x)] = \lim_{x \to a} f(x) \pm \lim_{x \to a} g(x)$
+  - $\lim_{x \to a} [f(x) \cdot g(x)] = \lim_{x \to a} f(x) \cdot \lim_{x \to a} g(x)$
+  - $\lim_{x \to a} \left[\frac{f(x)}{g(x)}\right] = \frac{\lim f(x)}{\lim g(x)}$ (provided $\lim g(x) \neq 0$)
+- **Continuity**: A function $f(x)$ is continuous at $x = c$ if:
+  1. $f(c)$ is defined.
+  2. $\lim_{x \to c} f(x)$ exists.
+  3. $\lim_{x \to c} f(x) = f(c)$.
+
+### 4.2 The Derivative and Rules of Differentiation
+The derivative of a function $f(x)$ measures its instantaneous rate of change and the slope of the tangent line to the graph at point $(x, f(x))$:
+$$f'(x) = \frac{df}{dx} = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}$$
+
+- **Standard Differentiation Rules**:
+  - Constant Rule: $\frac{d}{dx}(c) = 0$
+  - Power Rule: $\frac{d}{dx}(x^n) = n x^{n-1}$
+  - Constant Multiple: $\frac{d}{dx}[c f(x)] = c f'(x)$
+  - Sum/Difference: $\frac{d}{dx}[f(x) \pm g(x)] = f'(x) \pm g'(x)$
+  - Product Rule: $\frac{d}{dx}[f(x) g(x)] = f'(x) g(x) + f(x) g'(x)$
+  - Quotient Rule: $\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}$
+  - Chain Rule: $\frac{d}{dx}[f(g(x))] = f'(g(x)) \cdot g'(x)$
+
+### 4.3 Applications of Derivatives in Economics and Business
+1. **Marginal Analysis**:
+   - **Marginal Cost ($MC$)**: $MC(q) = \frac{dC}{dq}$ (instantaneous cost of producing one additional unit).
+   - **Marginal Revenue ($MR$)**: $MR(q) = \frac{dR}{dq}$ (instantaneous revenue from selling one additional unit).
+   - **Marginal Profit ($M\Pi$)**: $M\Pi(q) = MR(q) - MC(q)$. Profit is maximized when $MR = MC$ and $\frac{d^2\Pi}{dq^2} < 0$.
+2. **Price Elasticity of Demand ($\eta$)**:
+   $$\eta = \frac{p}{q} \cdot \frac{dq}{dp}$$
+   - If $|\eta| > 1$: Demand is elastic (lowering price increases total revenue).
+   - If $|\eta| < 1$: Demand is inelastic (raising price increases total revenue).
+   - If $|\eta| = 1$: Demand is unitary elastic (revenue is maximized).
+3. **Break-Even Analysis & Optimization**:
+   - Finding critical points where $f'(x) = 0$ and testing concavity using the second derivative $f''(x)$ to determine local maxima, minima, and point of diminishing returns.
+
+---
+
 © Tamhero. All rights reserved.
