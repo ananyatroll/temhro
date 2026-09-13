@@ -1323,7 +1323,7 @@ fun OfficialTextbookScreen(
                     )
                     Spacer(modifier = Modifier.height(6.dp))
                     Text(
-                        text = "Official Ministry of Education curriculum textbook (${currentEdition.pageCount} pages). Download to your device for high-speed offline access with complete diagrams, exercises, and chapters.",
+                        text = "Official Ministry of Education curriculum textbook. Download to your device for high-speed offline access with complete diagrams, exercises, and chapters.",
                         fontSize = 12.sp,
                         lineHeight = 18.sp,
                         color = Color(0xFFCBD5E1),
@@ -1392,7 +1392,7 @@ fun OfficialTextbookScreen(
                     ) {
                         Icon(Icons.Default.Download, contentDescription = null, modifier = Modifier.size(16.dp))
                         Spacer(modifier = Modifier.width(6.dp))
-                        Text("Download Official PDF (${currentEdition.pageCount}p)", fontWeight = FontWeight.Bold)
+                        Text("Download Official PDF", fontWeight = FontWeight.Bold)
                     }
                 }
             },
@@ -1586,49 +1586,54 @@ fun OfficialTextbookScreen(
                 }
             }
 
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                // Download All button on top bar
-                TextButton(
-                    onClick = {
-                        if (downloadAllOverallProgress == null) {
-                            showDownloadAllPromptModal = true
-                        }
-                    },
-                    modifier = Modifier
-                        .clip(RoundedCornerShape(8.dp))
-                        .background(Color(0xFF1E293B)),
-                    contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp)
-                ) {
-                    if (downloadAllOverallProgress != null) {
-                        CircularProgressIndicator(
-                            progress = { downloadAllOverallProgress ?: 0f },
-                            modifier = Modifier.size(16.dp),
-                            color = EmeraldPrimary,
-                            strokeWidth = 2.dp
-                        )
-                        Spacer(modifier = Modifier.width(6.dp))
-                        Text(
-                            "${((downloadAllOverallProgress ?: 0f) * 100).toInt()}%",
-                            color = EmeraldPrimary,
-                            style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold)
-                        )
-                    } else {
-                        Icon(
-                            imageVector = Icons.Default.CloudDownload,
-                            contentDescription = "Download All",
-                            tint = Color.White,
-                            modifier = Modifier.size(16.dp)
-                        )
-                        Spacer(modifier = Modifier.width(6.dp))
-                        Text(
-                            "Download All",
-                            color = Color.White,
-                            style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold)
-                        )
-                    }
-                }
+            val activePkg = viewModel?.userProgress?.collectAsState()?.value?.activePackageId ?: ""
+            val isEuee = activePkg.startsWith("euee")
 
-                Spacer(modifier = Modifier.width(8.dp))
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                if (!isEuee) {
+                    // Download All button on top bar
+                    TextButton(
+                        onClick = {
+                            if (downloadAllOverallProgress == null) {
+                                showDownloadAllPromptModal = true
+                            }
+                        },
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(8.dp))
+                            .background(Color(0xFF1E293B)),
+                        contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp)
+                    ) {
+                        if (downloadAllOverallProgress != null) {
+                            CircularProgressIndicator(
+                                progress = { downloadAllOverallProgress ?: 0f },
+                                modifier = Modifier.size(16.dp),
+                                color = EmeraldPrimary,
+                                strokeWidth = 2.dp
+                            )
+                            Spacer(modifier = Modifier.width(6.dp))
+                            Text(
+                                "${((downloadAllOverallProgress ?: 0f) * 100).toInt()}%",
+                                color = EmeraldPrimary,
+                                style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold)
+                            )
+                        } else {
+                            Icon(
+                                imageVector = Icons.Default.CloudDownload,
+                                contentDescription = "Download All",
+                                tint = Color.White,
+                                modifier = Modifier.size(16.dp)
+                            )
+                            Spacer(modifier = Modifier.width(6.dp))
+                            Text(
+                                "Download All",
+                                color = Color.White,
+                                style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold)
+                            )
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.width(8.dp))
+                }
 
                 IconButton(
                     onClick = {
@@ -1685,11 +1690,6 @@ fun OfficialTextbookScreen(
                                 fontWeight = if (isSelected) FontWeight.Black else FontWeight.Bold
                             ),
                             color = if (isSelected) Color.White else Color.LightGray
-                        )
-                        Text(
-                            text = "${edition.pageCount}p",
-                            style = MaterialTheme.typography.labelSmall.copy(fontSize = 9.sp),
-                            color = if (isSelected) Color.White.copy(alpha = 0.85f) else TextMuted
                         )
                     }
                 }
@@ -1810,8 +1810,8 @@ fun OfficialTextbookScreen(
                                 )
                                 Spacer(modifier = Modifier.width(8.dp))
                                 Text(
-                                    text = if (isCurrentBookCached) "Read Official ${currentEdition.grade} PDF In-App (${currentEdition.pageCount} Pages)"
-                                           else "Download & Read Official ${currentEdition.grade} PDF (${currentEdition.pageCount}p)",
+                                    text = if (isCurrentBookCached) "Read Official ${currentEdition.grade} PDF In-App"
+                                           else "Download & Read Official ${currentEdition.grade} PDF",
                                     style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
                                     color = Color.White
                                 )
