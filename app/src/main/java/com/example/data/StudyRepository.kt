@@ -36,7 +36,22 @@ class StudyRepository(
         dao.insertNotes(notes)
     }
 
-    override fun getQuestionsBySubject(subjectId: String): Flow<List<ExamQuestion>> = dao.getQuestionsBySubject(subjectId)
+    override fun getQuestionsBySubject(subjectId: String): Flow<List<ExamQuestion>> = kotlinx.coroutines.flow.channelFlow {
+        dao.getQuestionsBySubject(subjectId).collect { list ->
+            if ((subjectId == "uat_verbal" || subjectId == "uat_quantitative") && context != null && list.size < 50) {
+                val uatQuestions = UatQuestionsLoader.loadUatQuestions(context)
+                if (uatQuestions.isNotEmpty()) {
+                    dao.insertQuestions(uatQuestions)
+                    val matching = uatQuestions.filter { it.subjectId == subjectId }
+                    if (matching.isNotEmpty()) {
+                        send(matching)
+                        return@collect
+                    }
+                }
+            }
+            send(list)
+        }
+    }
     override fun getAllQuestions(): Flow<List<ExamQuestion>> = dao.getAllQuestions()
     override suspend fun getQuestionById(questionId: String): ExamQuestion? = withContext(Dispatchers.IO) {
         dao.getQuestionById(questionId)
@@ -201,10 +216,24 @@ class StudyRepository(
             }
         }
 
+        // 0.6 Ensure AAU UAT Questions from assets/uat are inserted into SQLite DB
+        val hasUatQuestions = try {
+            dao.getQuestionById("aau_uat_quant_1") != null && dao.getQuestionById("aau_uat_verbal_1") != null
+        } catch (e: Exception) { false }
+
+        if (!hasUatQuestions && context != null) {
+            val uatQuestions = UatQuestionsLoader.loadUatQuestions(context)
+            if (uatQuestions.isNotEmpty()) {
+                dao.insertQuestions(uatQuestions)
+                Log.d(TAG, "seedDatabaseIfEmpty: Seeded ${uatQuestions.size} AAU UAT questions from assets.")
+            }
+        }
+
         val updatedNotesCount = dao.getNotesCount()
+        val updatedQuestionsCount = dao.getQuestionsCount()
 
         // Fast path: If all data is already populated and verified, return immediately without instantiating large lists
-        if (subjectsCount >= 75 && updatedNotesCount >= 400 && questionsCount >= 796 && flashcardsCount >= 17000 && hasRichFreshmanNotes) {
+        if (subjectsCount >= 75 && updatedNotesCount >= 400 && updatedQuestionsCount >= 2000 && flashcardsCount >= 17000 && hasRichFreshmanNotes && hasUatQuestions) {
             val elapsed = System.currentTimeMillis() - startTime
             Log.d(TAG, "seedDatabaseIfEmpty: Database verified in ${elapsed}ms. DB is fully populated with subjects, notes, questions, and flashcards.")
             return@withContext

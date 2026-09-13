@@ -136,6 +136,15 @@ fun ContentPlayView(viewModel: StudyViewModel) {
     val savedTextbookBookmarks by viewModel.savedTextbookBookmarksSet.collectAsState()
     val savedTextbookCount = savedTextbookBookmarks.size
 
+    val userProgressState by viewModel.userProgress.collectAsState()
+    val activePkg = userProgressState.activePackageId ?: "freshman_natural"
+    val isPkgQuestionsOnly = activePkg in listOf("exit_exam", "coc", "aau_uat", "uat_aastu_astu", "uat_all")
+            || activePkg.startsWith("uat")
+            || activePkg.startsWith("coc")
+            || (activeSub?.packageId in listOf("exit_exam", "coc", "aau_uat", "uat_aastu_astu", "uat_all"))
+            || (activeSub?.packageId?.startsWith("uat") == true)
+            || (activeSub?.packageId?.startsWith("coc") == true)
+
     if (showSavedPicker) {
         SavedMaterialPickerModal(
             subjectName = activeSub?.name,
@@ -144,6 +153,7 @@ fun ContentPlayView(viewModel: StudyViewModel) {
             savedFlashcardsCount = savedFlashcardsSet.size,
             currentLang = currentLang,
             isDarkTheme = isDarkTheme,
+            isQuestionsOnlyPackage = isPkgQuestionsOnly,
             onDismiss = { viewModel.showSavedMaterialPickerModal.value = false },
             onSelectNotes = {
                 viewModel.showSavedMaterialPickerModal.value = false

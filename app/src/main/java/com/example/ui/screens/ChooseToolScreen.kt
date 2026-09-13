@@ -803,8 +803,9 @@ fun EnrollmentConfirmationModal(
                     )
 
                     val uatTracks = listOf(
-                        Triple("aau_uat", "🎓 Addis Ababa University (AAU)", "Verbal & Quantitative Reasoning Question Banks"),
-                        Triple("uat_aastu_astu", "🔬 AASTU & ASTU Joint Entrance", "STEM Mathematics, Applied Physics & Tech Aptitude")
+                        Triple("aau_uat", "🎓 Addis Ababa University (AAU)", "Verbal & Quantitative Reasoning Question Banks (300 ETB)"),
+                        Triple("uat_aastu_astu", "🔬 AASTU & ASTU Joint Entrance", "STEM Mathematics, Applied Physics & Tech Aptitude (300 ETB)"),
+                        Triple("uat_all", "⭐ ALL UAT Exams Combo (AAU + AASTU & ASTU)", "Full bundle access to all AAU Reasoning + AASTU/ASTU STEM questions (400 ETB)")
                     )
 
                     Column(
@@ -815,13 +816,14 @@ fun EnrollmentConfirmationModal(
                     ) {
                         uatTracks.forEach { (trackKey, trackLabel, trackSub) ->
                             val isSel = selectedUatTrack == trackKey
+                            val trackPrice = if (trackKey == "uat_all") "400 ETB" else "300 ETB"
                             Surface(
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .clickable { selectedUatTrack = trackKey },
                                 shape = RoundedCornerShape(12.dp),
                                 color = if (isSel) EmeraldPrimary.copy(alpha = 0.25f) else Color(0xFF1E293B),
-                                border = BorderStroke(1.dp, if (isSel) EmeraldPrimary else Color.Transparent)
+                                border = BorderStroke(1.dp, if (isSel) (if (trackKey == "uat_all") GoldAccent else EmeraldPrimary) else Color.Transparent)
                             ) {
                                 Column(
                                     modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp)
@@ -834,11 +836,11 @@ fun EnrollmentConfirmationModal(
                                         Text(
                                             text = trackLabel,
                                             style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
-                                            color = Color.White
+                                            color = if (trackKey == "uat_all" && isSel) GoldLight else Color.White
                                         )
                                         Text(
-                                            text = "300 ETB",
-                                            style = MaterialTheme.typography.labelSmall,
+                                            text = trackPrice,
+                                            style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
                                             color = GoldAccent
                                         )
                                     }
@@ -1066,7 +1068,12 @@ fun EnrollmentConfirmationModal(
                     }
                 }
 
-                val currentPriceETB = if (selectedPlan == "full_year") 500 else 300
+                val currentPriceETB = when {
+                    packageId == "aau_uat" && selectedUatTrack == "uat_all" -> 400
+                    packageId == "aau_uat" -> 300
+                    selectedPlan == "full_year" -> 500
+                    else -> 300
+                }
 
                 Column(
                     modifier = Modifier.fillMaxWidth(),

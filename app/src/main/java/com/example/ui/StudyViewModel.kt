@@ -416,7 +416,8 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
             pkg == "freshman_natural" || pkg == "freshman_social" -> list.filter { it.packageId == pkg }
             pkg == "aau_uat" -> list.filter { it.packageId == "aau_uat" }
             pkg == "uat_aastu_astu" -> list.filter { it.packageId == "uat_aastu_astu" }
-            pkg.startsWith("uat") -> list.filter { it.packageId == pkg }
+            pkg == "uat_all" || pkg == "uat_bundle" -> list.filter { it.packageId == "aau_uat" || it.packageId == "uat_aastu_astu" }
+            pkg.startsWith("uat") -> list.filter { it.packageId == "aau_uat" || it.packageId == "uat_aastu_astu" }
             pkg == "department" || pkg.startsWith("dept") -> list.filter { it.packageId == "department" }
             pkg == "exit_exam" || pkg.startsWith("exit") -> list.filter { it.packageId == "exit_exam" }
             pkg == "grade12" || pkg == "grade11" || pkg == "grade10" || pkg == "grade9" -> {
@@ -1031,6 +1032,9 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
             }
             "uat_aastu_astu" -> {
                 !(id == "uat_tech_maths" || id == "uat_tech_verbal")
+            }
+            "uat_all", "uat_bundle" -> {
+                !(id == "uat_verbal" || id == "uat_tech_maths")
             }
             "department" -> {
                 // Exactly 1 course unlocked for free trial in University Department

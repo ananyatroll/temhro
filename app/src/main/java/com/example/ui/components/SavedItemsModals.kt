@@ -567,6 +567,7 @@ fun SavedMaterialPickerModal(
     savedFlashcardsCount: Int,
     currentLang: String,
     isDarkTheme: Boolean,
+    isQuestionsOnlyPackage: Boolean = false,
     onDismiss: () -> Unit,
     onSelectNotes: () -> Unit,
     onSelectExams: () -> Unit,
@@ -647,28 +648,29 @@ fun SavedMaterialPickerModal(
 
                 Spacer(modifier = Modifier.height(10.dp))
                 Text(
-                    text = TranslationManager.get("prompt_saved_materials_desc", currentLang),
+                    text = if (isQuestionsOnlyPackage) "Review your bookmarked exam and practice questions:" else TranslationManager.get("prompt_saved_materials_desc", currentLang),
                     style = MaterialTheme.typography.bodySmall,
                     color = if (isDarkTheme) TextMuted else Color.Gray,
                     modifier = Modifier.padding(bottom = 16.dp)
                 )
 
-                // 1. Syllabus Notes Option
-                SavedCategoryOptionCard(
-                    icon = Icons.Default.MenuBook,
-                    iconTint = EmeraldPrimary,
-                    iconBg = EmeraldPrimary.copy(alpha = 0.15f),
-                    title = TranslationManager.get("saved_notes_label", currentLang),
-                    description = "Bookmarked units, summaries and formulas",
-                    count = savedNotesCount,
-                    isDarkTheme = isDarkTheme,
-                    onClick = onSelectNotes,
-                    testTag = "picker_saved_notes"
-                )
+                // 1. Syllabus Notes Option (Hidden for questions-only packages)
+                if (!isQuestionsOnlyPackage) {
+                    SavedCategoryOptionCard(
+                        icon = Icons.Default.MenuBook,
+                        iconTint = EmeraldPrimary,
+                        iconBg = EmeraldPrimary.copy(alpha = 0.15f),
+                        title = TranslationManager.get("saved_notes_label", currentLang),
+                        description = "Bookmarked units, summaries and formulas",
+                        count = savedNotesCount,
+                        isDarkTheme = isDarkTheme,
+                        onClick = onSelectNotes,
+                        testTag = "picker_saved_notes"
+                    )
+                    Spacer(modifier = Modifier.height(10.dp))
+                }
 
-                Spacer(modifier = Modifier.height(10.dp))
-
-                // 2. Exams & Practice Option
+                // 2. Exams & Practice Option (Always available)
                 SavedCategoryOptionCard(
                     icon = Icons.Default.Timer,
                     iconTint = Color(0xFF3B82F6),
@@ -681,23 +683,24 @@ fun SavedMaterialPickerModal(
                     testTag = "picker_saved_exams"
                 )
 
-                Spacer(modifier = Modifier.height(10.dp))
+                // 3. Flashcards Option (Hidden for questions-only packages)
+                if (!isQuestionsOnlyPackage) {
+                    Spacer(modifier = Modifier.height(10.dp))
+                    SavedCategoryOptionCard(
+                        icon = Icons.Default.Layers,
+                        iconTint = GoldAccent,
+                        iconBg = GoldAccent.copy(alpha = 0.15f),
+                        title = TranslationManager.get("saved_flashcards_label", currentLang),
+                        description = "Starred flashcards for quick active recall",
+                        count = savedFlashcardsCount,
+                        isDarkTheme = isDarkTheme,
+                        onClick = onSelectFlashcards,
+                        testTag = "picker_saved_flashcards"
+                    )
+                }
 
-                // 3. Flashcards Option
-                SavedCategoryOptionCard(
-                    icon = Icons.Default.Layers,
-                    iconTint = GoldAccent,
-                    iconBg = GoldAccent.copy(alpha = 0.15f),
-                    title = TranslationManager.get("saved_flashcards_label", currentLang),
-                    description = "Starred flashcards for quick active recall",
-                    count = savedFlashcardsCount,
-                    isDarkTheme = isDarkTheme,
-                    onClick = onSelectFlashcards,
-                    testTag = "picker_saved_flashcards"
-                )
-
-                // 4. Official Textbook Bookmarks Option (If available)
-                if (onSelectTextbook != null) {
+                // 4. Official Textbook Bookmarks Option (If available and not questions-only)
+                if (!isQuestionsOnlyPackage && onSelectTextbook != null) {
                     Spacer(modifier = Modifier.height(10.dp))
                     SavedCategoryOptionCard(
                         icon = Icons.Default.Bookmark,
