@@ -2055,7 +2055,8 @@ fun InAppPdfTextbookReader(
     onClose: () -> Unit,
     viewModel: StudyViewModel? = null
 ) {
-    var currentPage by remember { mutableStateOf(initialPage.coerceIn(1, edition.pageCount)) }
+    var totalPages by remember { mutableStateOf(edition.pageCount) }
+    var currentPage by remember { mutableStateOf(initialPage.coerceIn(1, totalPages)) }
     var scale by remember { mutableStateOf(1f) }
     var offset by remember { mutableStateOf(Offset.Zero) }
     var showJumpDialog by remember { mutableStateOf(false) }
@@ -2068,7 +2069,26 @@ fun InAppPdfTextbookReader(
     val scope = rememberCoroutineScope()
     val context = LocalContext.current
 
-    val totalPages = edition.pageCount
+    LaunchedEffect(edition.fileName, reloadTrigger) {
+        kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+            try {
+                val realPdfFile = getOrCreateTextbookPdfFile(context, edition)
+                if (realPdfFile != null && realPdfFile.exists() && realPdfFile.length() > 0) {
+                    android.os.ParcelFileDescriptor.open(realPdfFile, android.os.ParcelFileDescriptor.MODE_READ_ONLY).use { pfd ->
+                        android.graphics.pdf.PdfRenderer(pfd).use { renderer ->
+                            val actualCount = renderer.pageCount
+                            totalPages = actualCount
+                            if (currentPage > actualCount) {
+                                currentPage = actualCount
+                            }
+                        }
+                    }
+                }
+            } catch (e: Exception) {
+                // Ignore, use fallback edition.pageCount
+            }
+        }
+    }
 
     // Reactively observe saved textbook bookmarks so bookmark state updates instantly in UI
     val bookmarkedPagesSet = viewModel?.savedTextbookBookmarksSet?.collectAsState()?.value ?: emptySet()
@@ -2165,29 +2185,11 @@ fun InAppPdfTextbookReader(
                     }
                 },
                 title = {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Icon(
-                            imageVector = Icons.Default.PictureAsPdf,
-                            contentDescription = null,
-                            tint = Color(0xFFEA4335),
-                            modifier = Modifier.size(20.dp)
-                        )
-                        Spacer(modifier = Modifier.width(8.dp))
-                        Column {
-                            Text(
-                                text = edition.fileName,
-                                style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
-                                color = textColor,
-                                maxLines = 1,
-                                overflow = TextOverflow.Ellipsis
-                            )
-                            Text(
-                                text = "Page $currentPage of $totalPages • ${currentUnit?.unitNumber ?: "Chapter"}",
-                                style = MaterialTheme.typography.labelSmall,
-                                color = EmeraldPrimary
-                            )
-                        }
-                    }
+                    Text(
+                        text = "$currentPage / $totalPages",
+                        style = MaterialTheme.typography.titleMedium.copy(fontWeight = androidx.compose.ui.text.font.FontWeight.Bold),
+                        color = textColor
+                    )
                 },
                 actions = {
 
