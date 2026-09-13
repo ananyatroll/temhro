@@ -1547,28 +1547,14 @@ fun OfficialTextbookScreen(
                 }
                 Spacer(modifier = Modifier.width(12.dp))
                 Column {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Text(
-                            text = "OFFICIAL TEXTBOOK",
-                            style = MaterialTheme.typography.labelSmall.copy(
-                                fontWeight = FontWeight.Black,
-                                letterSpacing = 1.2.sp
-                            ),
-                            color = GoldAccent
-                        )
-                        Spacer(modifier = Modifier.width(6.dp))
-                        Surface(
-                            shape = RoundedCornerShape(4.dp),
-                            color = Color(0xFF1E293B)
-                        ) {
-                            Text(
-                                text = "FDRE MoE",
-                                color = Color.White,
-                                style = MaterialTheme.typography.labelSmall.copy(fontSize = 9.sp),
-                                modifier = Modifier.padding(horizontal = 4.dp, vertical = 1.dp)
-                            )
-                        }
-                    }
+                    Text(
+                        text = "OFFICIAL TEXTBOOK",
+                        style = MaterialTheme.typography.labelSmall.copy(
+                            fontWeight = FontWeight.Black,
+                            letterSpacing = 1.2.sp
+                        ),
+                        color = GoldAccent
+                    )
                     Text(
                         text = subjectName,
                         style = MaterialTheme.typography.titleMedium.copy(
@@ -1586,8 +1572,8 @@ fun OfficialTextbookScreen(
             val isEuee = activePkg.startsWith("euee")
 
             Row(verticalAlignment = Alignment.CenterVertically) {
-                if (!isEuee) {
-                    // Download All button on top bar
+                if (isEuee) {
+                    // Download All button on top bar (Exclusive to EUEE Prep Plan)
                     TextButton(
                         onClick = {
                             if (downloadAllOverallProgress == null) {
