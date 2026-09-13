@@ -114,9 +114,15 @@ object ProductCatalog {
         Product("coc_cs_is", "coc", plan = "field", field = "cs_is", amount = PRICE_COC_ETB, shortLabel = "Computer Science & Info IT/Science COC"),
         Product("coc_law", "coc", plan = "field", field = "law", amount = PRICE_COC_ETB, shortLabel = "Law COC")
     )
+    // UAT Products — AAU UAT & Joint AASTU / ASTU UAT (300 ETB)
+    // ---------------------------------------------------------------------
+    private val uatProducts = listOf(
+        Product("aau_uat", "uat", plan = "university", field = "aau", amount = 300, shortLabel = "AAU UAT"),
+        Product("uat_aastu_astu", "uat", plan = "university", field = "aastu_astu", amount = 300, shortLabel = "AASTU & ASTU UAT")
+    )
 
     private val all: List<Product> =
-        freshmanNaturalProducts + freshmanSocialProducts + allUniversityProducts + cocProducts
+        freshmanNaturalProducts + freshmanSocialProducts + allUniversityProducts + cocProducts + uatProducts
 
     private val byId: Map<String, Product> = all.associateBy { it.id }
 

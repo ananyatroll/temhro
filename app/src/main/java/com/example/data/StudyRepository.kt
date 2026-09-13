@@ -269,9 +269,15 @@ class StudyRepository(
                 StudySubject("freshman_soc_maths", "Mathematics for Social Sciences – Math 1012", "maths", "freshman_social"),
                 StudySubject("freshman_soc_critical_thinking", "Critical Thinking – LoCT 1011", "psychology", "freshman_social"),
 
-                // AAU UAT Prep Package
-                StudySubject("uat_verbal", "Verbal Reasoning, English & Vocabulary", "english", "aau_uat"),
+                // (AAU, AASTU & ASTU) UAT Prep Packages
+                // 1. AAU UAT (Addis Ababa University Track)
+                StudySubject("uat_verbal", "Verbal Reasoning & English Comprehension", "english", "aau_uat"),
                 StudySubject("uat_quantitative", "Quantitative & Analytical Reasoning", "maths", "aau_uat"),
+
+                // 2. AASTU & ASTU UAT (Joint Science & Technology Track)
+                StudySubject("uat_tech_maths", "STEM Mathematics & Advanced Reasoning", "maths", "uat_aastu_astu"),
+                StudySubject("uat_tech_physics", "Applied Engineering Physics & Mechanics", "physics", "uat_aastu_astu"),
+                StudySubject("uat_tech_verbal", "Technical English & Logical Aptitude", "english", "uat_aastu_astu"),
 
                 // University Department Package
                 StudySubject("dept_accounting", "Accounting and Finance", "accounting", "department"),
@@ -463,7 +469,7 @@ class StudyRepository(
                     "B",
                     "Australopithecus afarensis is the bipedal hominid ancestor dating back 3.2 million years, with Lucy being its quintessential specimen."
                 )
-            ) + getFreshmanQuestions() + getSemester2Questions() + getUatQuestions() + getEueeQuestions() + getDepartmentQuestions() + getExitExamQuestions() + Grade9MathQuestions.get750Questions()
+            ) + (if (context != null) UatQuestionsLoader.loadUatQuestions(context) else emptyList()) + getFreshmanQuestions() + getSemester2Questions() + getUatQuestions() + getEueeQuestions() + getDepartmentQuestions() + getExitExamQuestions() + Grade9MathQuestions.get750Questions()
             dao.insertQuestions(questionsList)
             Log.d(TAG, "seedDatabaseIfEmpty: Inserted ${questionsList.size} questions.")
         }
@@ -813,6 +819,7 @@ class StudyRepository(
 
     private fun getUatNotes(): List<SubjectNote> {
         return listOf(
+            // AAU UAT Notes
             SubjectNote("uat_verb_n1", "uat_verbal", "UNIT 1", "Verbal Analogies, Synonyms & Vocabulary", 
                 "Verbal reasoning analyzes vocabulary relationships, logical analogies, and reading interpretation. Verbal analogies test structural logic (e.g., KITTEN : CAT :: PUPPY : DOG). Focus on recognizing synonym links, antonyms, and sentence completions."),
             SubjectNote("uat_verb_n2", "uat_verbal", "UNIT 2", "General English & Grammar Structure", 
@@ -820,7 +827,19 @@ class StudyRepository(
             SubjectNote("uat_quant_n1", "uat_quantitative", "UNIT 1", "Quantitative and Algebraic Models", 
                 "Quantitative reasoning tests mathematical arithmetic, geometric area formulations, percentages, sequence progression, and simple statistics. Tip: focus on speed arithmetic, fraction calculations, and solving systems of algebraic equations."),
             SubjectNote("uat_quant_n2", "uat_quantitative", "UNIT 2", "Analytical Constraints & Logic Grids", 
-                "Analytical reasoning requires organizing sets of complex data with strict constraints (e.g., ordering people in seating grids, scheduling tasks sequentially). Learn to draw logic templates to parse variables matching specific clues.")
+                "Analytical reasoning requires organizing sets of complex data with strict constraints (e.g., ordering people in seating grids, scheduling tasks sequentially). Learn to draw logic templates to parse variables matching specific clues."),
+
+            // AASTU & ASTU Joint Science & Technology Notes
+            SubjectNote("uat_tech_math_n1", "uat_tech_maths", "UNIT 1", "Calculus, Functions & Coordinate Geometry",
+                "AASTU & ASTU mathematics emphasizes differentiation rules, limits at infinity, integration techniques, coordinate geometry, and vector algebra in 2D and 3D space."),
+            SubjectNote("uat_tech_math_n2", "uat_tech_maths", "UNIT 2", "Matrices, Systems of Linear Equations & Series",
+                "Matrix arithmetic, determinants, Cramer's rule, arithmetic & geometric sequences, binomial expansions, and logarithmic equations."),
+            SubjectNote("uat_tech_phy_n1", "uat_tech_physics", "UNIT 1", "Classical Mechanics & Dynamics",
+                "Newton's laws of motion, work-energy theorem, rotational kinematics, moment of inertia, gravitational potential, and simple harmonic motion."),
+            SubjectNote("uat_tech_phy_n2", "uat_tech_physics", "UNIT 2", "Electromagnetism & Thermodynamics",
+                "Coulomb's Law, electric circuits, Kirchhoff's laws, magnetic fields on moving charges, ideal gas equations, and heat engines."),
+            SubjectNote("uat_tech_verb_n1", "uat_tech_verbal", "UNIT 1", "Technical Vocabulary & Analytical Inferences",
+                "Scientific vocabulary in STEM contexts, parsing conditional statements, analyzing technical reading passages, and deductive logical reasoning.")
         )
     }
 
@@ -874,7 +893,13 @@ class StudyRepository(
             ExamQuestion("uat_q1", "uat_verbal", "Select the pair that completes: FLOWERS : BOUQUET :: ______ : ______", "Stars : Galaxy", "Trees : Desert", "Soldiers : Camp", "Students : University", "A", "A group of flowers constitutes a bouquet; similarly, a group of stars constitutes a galaxy."),
             ExamQuestion("uat_q2", "uat_quantitative", "If 20% of a certain number is equal to 45, what is 80% of that same number?", "90", "180", "135", "360", "B", "If 20% is 45, then 80% (which is 20% * 4) must be equal to 45 * 4 = 180."),
             ExamQuestion("uat_q3", "uat_quantitative", "Five students (A, B, C, D, E) stand in line. A must stand ahead of B. C stands immediately after D. If D is third, where does E stand if A is second?", "First", "Fourth", "Fifth", "Cannot be determined", "C", "A stands ahead of B, and D is third with C fourth. Since A is second, B, C, and D are after A. So E stands first or fifth. In this arrangement, with A second, E stands first."),
-            ExamQuestion("uat_q4", "uat_verbal", "Identify the synonym of the word 'Pernicious' as used in formal language contexts.", "Beneficial", "Harmful or destructive", "Unbelievable", "Intricate", "B", "Pernicious means having a harmful effect, especially in a gradual, passive, or subtle way.")
+            ExamQuestion("uat_q4", "uat_verbal", "Identify the synonym of the word 'Pernicious' as used in formal language contexts.", "Beneficial", "Harmful or destructive", "Unbelievable", "Intricate", "B", "Pernicious means having a harmful effect, especially in a gradual, passive, or subtle way."),
+            // AASTU & ASTU Joint Science & Technology Questions
+            ExamQuestion("uat_tech_q1", "uat_tech_maths", "Evaluate the limit: lim(x->0) [sin(5x) / x].", "0", "1", "5", "Undefined", "C", "Standard calculus trigonometric limit lim(x->0) [sin(kx)/x] = k. Hence lim(x->0) [sin(5x)/x] = 5."),
+            ExamQuestion("uat_tech_q2", "uat_tech_maths", "If matrix A has determinant 4, what is the determinant of 3*A for a 2x2 matrix?", "12", "36", "48", "64", "B", "For an n x n matrix, det(k*A) = k^n * det(A). Here n=2 and k=3, so det(3*A) = 3^2 * 4 = 9 * 4 = 36."),
+            ExamQuestion("uat_tech_q3", "uat_tech_physics", "A particle moves in a circular path of radius 2m at constant speed 4 m/s. What is its centripetal acceleration?", "2 m/s²", "4 m/s²", "8 m/s²", "16 m/s²", "C", "Centripetal acceleration a_c = v² / r = (4)² / 2 = 16 / 2 = 8 m/s²."),
+            ExamQuestion("uat_tech_q4", "uat_tech_physics", "According to Kirchhoff's Current Law (KCL), the algebraic sum of currents entering any circuit node is:", "Equal to total voltage", "Equal to zero", "Proportional to resistance", "Infinite", "B", "Kirchhoff's Current Law states that charge is conserved, so sum of currents entering a node equals sum leaving it (total sum = 0)."),
+            ExamQuestion("uat_tech_q5", "uat_tech_verbal", "Identify the relationship: HYPOTHESIS : EXPERIMENTATION :: PREMISE : ______", "Conclusion", "Assumption", "Argumentation", "Contradiction", "C", "A hypothesis is tested through experimentation; a premise is substantiated through argumentation.")
         )
     }
 
@@ -1047,11 +1072,18 @@ class StudyRepository(
             Flashcard("fn_fc_nat_chem3", "freshman_nat_chemistry", "Mole Concept", "Unit measuring amount of substance (6.022 x 10^23 particles). Chapter 3.", false, false, "Chapter 3"),
             Flashcard("fn_fc_nat_chem4", "freshman_nat_chemistry", "Intermolecular Force", "Forces of attraction between molecules. Chapter 4.", false, false, "Chapter 4"),
 
-            // AAU UAT Prep
+            // AAU UAT Prep Flashcards
             Flashcard("uat_fc1", "uat_verbal", "Analogy & Word Pairs", "Cognitive comparison identifying patterns between pairs of terms.", false, false),
             Flashcard("uat_fc2", "uat_quantitative", "Sequence & Series", "Mathematical progressions following sequential logic.", false, false),
             Flashcard("uat_fc3", "uat_quantitative", "Logic Deductions", "Applying constraint grids sequentially to parse valid orders.", false, false),
-            Flashcard("uat_fc4", "uat_verbal", "Synonym: Pernicious", "Destructive, harmful, causing insidious damage over time.", false, false)
+            Flashcard("uat_fc4", "uat_verbal", "Synonym: Pernicious", "Destructive, harmful, causing insidious damage over time.", false, false),
+
+            // AASTU & ASTU Joint Science & Technology Flashcards
+            Flashcard("uat_tech_fc1", "uat_tech_maths", "Trigonometric Limit", "lim(x->0) [sin(kx)/x] = k. Foundational standard calculus limit.", false, false),
+            Flashcard("uat_tech_fc2", "uat_tech_maths", "Dot Product Formula", "A · B = |A||B|cos(θ). Yields zero for mutually orthogonal vectors.", false, false),
+            Flashcard("uat_tech_fc3", "uat_tech_physics", "Work-Energy Theorem", "Net work done on an object equals change in kinetic energy: W_net = ΔK.", false, false),
+            Flashcard("uat_tech_fc4", "uat_tech_physics", "Ohm's Law", "V = IR. Voltage across conductor is directly proportional to current through it.", false, false),
+            Flashcard("uat_tech_fc5", "uat_tech_verbal", "Deductive Reasoning", "Top-down logical process moving from general premises to specific true conclusions.", false, false)
         )
     }
 

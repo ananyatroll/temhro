@@ -792,6 +792,67 @@ fun EnrollmentConfirmationModal(
 
                 var selectedPlan by remember { mutableStateOf("sem1") } // "sem1", "sem2", "full_year"
                 var selectedCocField by remember { mutableStateOf("coc_medicine") }
+                var selectedUatTrack by remember { mutableStateOf("aau_uat") } // "aau_uat", "uat_aastu_astu"
+
+                if (packageId == "aau_uat") {
+                    Text(
+                        text = "SELECT TARGET ENTRANCE EXAM",
+                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Black, letterSpacing = 1.5.sp),
+                        color = GoldAccent,
+                        modifier = Modifier.padding(bottom = 8.dp)
+                    )
+
+                    val uatTracks = listOf(
+                        Triple("aau_uat", "🎓 Addis Ababa University (AAU)", "Verbal & Quantitative Reasoning Question Banks"),
+                        Triple("uat_aastu_astu", "🔬 AASTU & ASTU Joint Entrance", "STEM Mathematics, Applied Physics & Tech Aptitude")
+                    )
+
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(bottom = 14.dp),
+                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        uatTracks.forEach { (trackKey, trackLabel, trackSub) ->
+                            val isSel = selectedUatTrack == trackKey
+                            Surface(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clickable { selectedUatTrack = trackKey },
+                                shape = RoundedCornerShape(12.dp),
+                                color = if (isSel) EmeraldPrimary.copy(alpha = 0.25f) else Color(0xFF1E293B),
+                                border = BorderStroke(1.dp, if (isSel) EmeraldPrimary else Color.Transparent)
+                            ) {
+                                Column(
+                                    modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp)
+                                ) {
+                                    Row(
+                                        modifier = Modifier.fillMaxWidth(),
+                                        horizontalArrangement = Arrangement.SpaceBetween,
+                                        verticalAlignment = Alignment.CenterVertically
+                                    ) {
+                                        Text(
+                                            text = trackLabel,
+                                            style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
+                                            color = Color.White
+                                        )
+                                        Text(
+                                            text = "300 ETB",
+                                            style = MaterialTheme.typography.labelSmall,
+                                            color = GoldAccent
+                                        )
+                                    }
+                                    Spacer(modifier = Modifier.height(2.dp))
+                                    Text(
+                                        text = trackSub,
+                                        style = MaterialTheme.typography.bodySmall.copy(fontSize = 11.sp),
+                                        color = TextMuted
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
 
                 if (packageId == "freshman" || packageId == "department") {
                     Text(
@@ -1022,6 +1083,7 @@ fun EnrollmentConfirmationModal(
                                 packageId == "freshman" -> "freshman_${streamSuffix}_y1_${selectedPlan}"
                                 packageId == "euee" -> "euee_${selectedStream}"
                                 packageId == "coc" -> selectedCocField
+                                packageId == "aau_uat" -> selectedUatTrack
                                 else -> packageId
                             }
                             val matchedProduct = com.example.data.ProductCatalog.get(targetProductId)
@@ -1079,6 +1141,7 @@ fun EnrollmentConfirmationModal(
                                 "euee" -> if (selectedStream == "natural") "euee_natural" else "euee_social"
                                 "freshman" -> if (selectedStream == "natural") "freshman_natural" else "freshman_social"
                                 "coc" -> selectedCocField
+                                "aau_uat" -> selectedUatTrack
                                 else -> {
                                     if (packageId == "department" || packageId == "exit_exam") {
                                         viewModel.saveDepartmentSetup("", selectedYear)

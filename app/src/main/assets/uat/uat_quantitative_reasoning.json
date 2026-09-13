@@ -1,0 +1,3712 @@
+[
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If x and y are real numbers such that x + y = 7 and xy = 10, find x³ + y³.",
+    "A": "91",
+    "B": "133",
+    "C": "153",
+    "D": "343",
+    "correct": "B",
+    "explanation": "x³+y³ = (x+y)³ - 3xy(x+y) = 7³ - 3(10)(7) = 343 - 210 = 133."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "In a group, 40% of the items are red. Of all the red items in the group, 30% also have stripes. What percentage of the items in the group are red and have stripes?",
+    "A": "10%",
+    "B": "12%",
+    "C": "70%",
+    "D": "75%",
+    "correct": "B",
+    "explanation": "The red items are 0.4x. Of these, 30% have stripes: 0.3(0.4x) = 0.12x, which is 12% of the group."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "In a line of 6 people, Ann stands immediately to the left of Ben, and Cara stands at the right end (position 6). There are exactly 2 people between Ben and Cara. How many people stand to the left of Ann?",
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3",
+    "correct": "B",
+    "explanation": "Since 2 people stand between Ben and Cara (position 6), Ben is at position 3. Ann, immediately left of Ben, is at position 2. Only 1 person (position 1) stands to the left of Ann."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "The following data represents the number of hours 9 grade-12 students spent studying per day for an exam: 2, 3, 4, 5, 6, 7, 8, 9, 10. What is the interquartile range of this data?",
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "7",
+    "correct": "B",
+    "explanation": "Lower half: 2,3,4,5 → Q1 = (3+4)/2 = 3.5. Upper half: 7,8,9,10 → Q3 = (8+9)/2 = 8.5. IQR = 8.5 - 3.5 = 5."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "For a class of 4 students to get a reward, the class average on the final exam must be at least 90%. The first 3 students received an average of 88%. What is the lowest possible score the 4th student can get?",
+    "A": "94",
+    "B": "96",
+    "C": "98",
+    "D": "100",
+    "correct": "B",
+    "explanation": "Total needed = 4×90 = 360. Total of first 3 students = 3×88 = 264. The 4th student needs at least 360 - 264 = 96."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the sum of the first 20 terms of the sequence: 3, 7, 11, 15, …",
+    "A": "780",
+    "B": "800",
+    "C": "820",
+    "D": "840",
+    "correct": "C",
+    "explanation": "This is an arithmetic sequence with a = 3, d = 4, n = 20. Sum = (n/2)[2a + (n-1)d] = 10[6 + 76] = 10(82) = 820."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If f(x) = x + 7 and g(x) = 7x, what is the value of 4f(2) − g(2)?",
+    "A": "−5",
+    "B": "1",
+    "C": "22",
+    "D": "28",
+    "correct": "C",
+    "explanation": "f(2) = 2 + 7 = 9, so 4f(2) = 36. g(2) = 7(2) = 14. 4f(2) − g(2) = 36 − 14 = 22."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "The ratio of apples to oranges in a basket is 5:8. After removing 15 apples, the ratio becomes 1:4. How many total pieces of fruit are in the basket after removing the 15 apples?",
+    "A": "40",
+    "B": "45",
+    "C": "50",
+    "D": "55",
+    "correct": "C",
+    "explanation": "Let apples = 5x, oranges = 8x. (5x − 15)/8x = 1/4 → 20x − 60 = 8x → 12x = 60 → x = 5. Oranges = 40, apples after removal = 10. Total = 50."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Two pipes can fill a tank in 6 hours and 8 hours respectively. If the first pipe fills alone for 2 hours and then both pipes work together, how long will it take to fill the remaining part of the tank?",
+    "A": "16/7 hours",
+    "B": "7/16 hours",
+    "C": "2 hours",
+    "D": "3 hours",
+    "correct": "A",
+    "explanation": "Work done by pipe 1 in 2 hours = 2×(1/6) = 1/3, leaving 2/3 of the tank. Combined rate = 1/6 + 1/8 = 7/24. Time = (2/3) ÷ (7/24) = 16/7 hours."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "What are the roots of x³ - 6x² + 11x - 6 = 0?",
+    "A": "{1, 2, 3}",
+    "B": "{-1, -2, -3}",
+    "C": "{1, 2, 4}",
+    "D": "{2, 3, 4}",
+    "correct": "A",
+    "explanation": "Factoring gives (x-1)(x-2)(x-3) = 0, so x = 1, 2, 3."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If 3x < 48 and 2x > 24, x could equal which of the following?",
+    "A": "10",
+    "B": "12",
+    "C": "14",
+    "D": "18",
+    "correct": "C",
+    "explanation": "3x < 48 means x < 16. 2x > 24 means x > 12. So 12 < x < 16, and only 14 satisfies this."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "In how many different ways can the letters of the word 'TABLE' be arranged so that the vowels (A, E) always come together?",
+    "A": "24",
+    "B": "48",
+    "C": "120",
+    "D": "240",
+    "correct": "B",
+    "explanation": "Treat the two vowels A and E as one unit, giving 4 units to arrange: 4! = 24 ways. The vowels can be arranged internally in 2! = 2 ways. Total = 24 × 2 = 48."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "3/4 − 2/3 + 1/2 = ?",
+    "A": "7/12",
+    "B": "6/7",
+    "C": "6",
+    "D": "10",
+    "correct": "A",
+    "explanation": "Using a common denominator of 12: 9/12 − 8/12 + 6/12 = 7/12."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Adis wanted to save an average of Birr 20 per week over 15 weeks. For the first 5 weeks, he saved an average of Birr 15 per week. For the next 5 weeks, he saved an average of Birr 19 per week. What must he save on average per week for the remaining 5 weeks to reach his goal?",
+    "A": "24",
+    "B": "26",
+    "C": "28",
+    "D": "30",
+    "correct": "B",
+    "explanation": "Total goal = 15×20 = 300. First 10 weeks total = 5(15) + 5(19) = 75 + 95 = 170. Remaining needed = 300 − 170 = 130 over 5 weeks, so average = 130/5 = 26."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If the average of 6 numbers is 4.5, what is the sum of the numbers?",
+    "A": "24",
+    "B": "27",
+    "C": "30",
+    "D": "33",
+    "correct": "B",
+    "explanation": "Sum = average × count = 4.5 × 6 = 27."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "For the function f, f(0) = 86, and for each increase in x by 1, the value of f(x) decreases by 80%. What is the value of f(2)?",
+    "A": "3.44",
+    "B": "6.88",
+    "C": "17.2",
+    "D": "68.8",
+    "correct": "A",
+    "explanation": "Since f decreases by 80% each step, f(x) = 86(0.2)^x. f(1) = 86(0.2) = 17.2. f(2) = 17.2(0.2) = 3.44."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "52 − (2 × 6) + 17 = ?",
+    "A": "57",
+    "B": "32",
+    "C": "48",
+    "D": "33",
+    "correct": "A",
+    "explanation": "52 − 12 + 17 = 40 + 17 = 57."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the sum of the squares of the roots of x² − 5x + 6 = 0.",
+    "A": "11",
+    "B": "13",
+    "C": "19",
+    "D": "25",
+    "correct": "B",
+    "explanation": "Sum of roots = 5, product of roots = 6. Sum of squares = (sum)² − 2(product) = 25 − 12 = 13."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If the sum of the interior angles of a polygon is 1620°, how many sides does it have?",
+    "A": "9",
+    "B": "10",
+    "C": "11",
+    "D": "12",
+    "correct": "C",
+    "explanation": "Sum = (n−2)×180 = 1620 → n−2 = 9 → n = 11."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A store sells apples for $2.50 each and oranges for $1.75 each. Miriam buys a total of 20 pieces of fruit for $41.75. How many apples did she buy?",
+    "A": "7",
+    "B": "8",
+    "C": "9",
+    "D": "10",
+    "correct": "C",
+    "explanation": "Let a = number of apples. 2.50a + 1.75(20−a) = 41.75 → 2.50a + 35 − 1.75a = 41.75 → 0.75a = 6.75 → a = 9."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "The ratio of x to y is 3:4. The ratio of y to z is 2:10 (simplified 1:5). What is the ratio of x to z?",
+    "A": "3:20",
+    "B": "3:10",
+    "C": "3:5",
+    "D": "6:20",
+    "correct": "A",
+    "explanation": "Scale y to a common value: x:y = 3:4 and y:z = 1:5 = 4:20 (scaling by 4). So x:y:z = 3:4:20, giving x:z = 3:20."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A 10-foot-tall tree casts a shadow that is 5 feet long. At the same time, another tree casts a shadow that is 2 feet long. How tall, in feet, is the other tree?",
+    "A": "3 feet",
+    "B": "4 feet",
+    "C": "5 feet",
+    "D": "6 feet",
+    "correct": "B",
+    "explanation": "The triangles formed by each tree and its shadow are similar: 10/5 = x/2 → x = 4."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "The length of a rectangle's diagonal is 5√17, and the length of the rectangle's shorter side is 5. What is the length of the rectangle's longer side?",
+    "A": "15",
+    "B": "17",
+    "C": "20",
+    "D": "400",
+    "correct": "C",
+    "explanation": "By the Pythagorean theorem, 5² + b² = (5√17)² → 25 + b² = 425 → b² = 400 → b = 20."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "2a³ − 2ab + b³ = ? , if a = 3, b = −5",
+    "A": "41",
+    "B": "48",
+    "C": "−41",
+    "D": "40",
+    "correct": "C",
+    "explanation": "2(27) − 2(3)(−5) + (−125) = 54 + 30 − 125 = −41."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the next number in the sequence: 2, 6, 12, 20, 30, ?",
+    "A": "36",
+    "B": "40",
+    "C": "42",
+    "D": "45",
+    "correct": "C",
+    "explanation": "The sequence follows n(n+1): 1×2=2, 2×3=6, 3×4=12, 4×5=20, 5×6=30, 6×7=42."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "The sum of two numbers is 20, and the sum of their squares is 208. What are the two numbers?",
+    "A": "8 and 12",
+    "B": "10 and 10",
+    "C": "6 and 14",
+    "D": "9 and 11",
+    "correct": "A",
+    "explanation": "(a+b)² = a² + 2ab + b² → 400 = 208 + 2ab → ab = 96. Solving t² − 20t + 96 = 0 gives t = 8, 12."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "How many real solutions does the equation x² + 4x + 8 = 0 have?",
+    "A": "Zero",
+    "B": "Exactly one",
+    "C": "Exactly two",
+    "D": "Infinitely many",
+    "correct": "A",
+    "explanation": "The discriminant is 4² − 4(1)(8) = 16 − 32 = −16, which is negative, so there are zero real solutions."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "The probability of Tomas being found guilty is 1/4 and the probability of Tesfaye being found guilty is 2/5. Assuming independence, what is the probability that at least one of them is found guilty?",
+    "A": "9/20",
+    "B": "11/20",
+    "C": "3/10",
+    "D": "7/10",
+    "correct": "B",
+    "explanation": "P(at least one) = P(A) + P(B) − P(A)P(B) = 1/4 + 2/5 − (1/4)(2/5) = 5/20 + 8/20 − 2/20 = 11/20."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A sequence is defined by a₁ = 2, aₙ₊₁ = 2aₙ + 1. Find a₄.",
+    "A": "11",
+    "B": "17",
+    "C": "23",
+    "D": "29",
+    "correct": "C",
+    "explanation": "a₂ = 2(2)+1 = 5. a₃ = 2(5)+1 = 11. a₄ = 2(11)+1 = 23."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A rectangular box has volume 120 cm³. Its length is twice its width, and its height is 3 cm. Find the width.",
+    "A": "2√5 cm",
+    "B": "3√5 cm",
+    "C": "4√5 cm",
+    "D": "5√5 cm",
+    "correct": "A",
+    "explanation": "Volume = L×W×H = (2W)(W)(3) = 6W² = 120 → W² = 20 → W = 2√5 cm."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A swimming pool can be filled by pipe A in 5 hours and by pipe B in 8 hours. How long would it take to fill the pool if both pipes were used together?",
+    "A": "40/13 hours",
+    "B": "67/13 hours",
+    "C": "7 hours",
+    "D": "25/3 hours",
+    "correct": "A",
+    "explanation": "Combined rate = 1/5 + 1/8 = 13/40. Time = 40/13 hours."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "The total number of students is 55, and the ratio of boys to girls is 4:7. How many girls need to be added for the ratio of boys to girls to become 1:2?",
+    "A": "3",
+    "B": "5",
+    "C": "7",
+    "D": "10",
+    "correct": "B",
+    "explanation": "Boys = 20, girls = 35. We need 20:(35+g) = 1:2 → 35+g = 40 → g = 5."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A circle has center O, and points A and B lie on the circle. The measure of arc AB is 45°, and the length of arc AB is 3 inches. What is the circumference, in inches, of the circle?",
+    "A": "3",
+    "B": "6",
+    "C": "9",
+    "D": "24",
+    "correct": "D",
+    "explanation": "Since 45°/360° = 3/x, we get 1/8 = 3/x, so x = 24 inches."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Ethiopia sends 5 athletes to compete in a marathon. Historically, 60% of the country's marathon runners finish in the top 10. What is the probability that exactly 3 of the 5 athletes finish in the top 10?",
+    "A": "0.226",
+    "B": "0.276",
+    "C": "0.346",
+    "D": "0.401",
+    "correct": "C",
+    "explanation": "Using the binomial formula: C(5,3)(0.6)³(0.4)² = 10(0.216)(0.16) ≈ 0.346."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If x + 1/x = 5, find x² + 1/x².",
+    "A": "21",
+    "B": "23",
+    "C": "25",
+    "D": "27",
+    "correct": "B",
+    "explanation": "(x + 1/x)² = x² + 2 + 1/x² → 25 = x² + 1/x² + 2 → x² + 1/x² = 23."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "What is the hypotenuse of a right triangle if one leg is 3 cm and the other leg is 4 cm?",
+    "A": "9 cm",
+    "B": "16 cm",
+    "C": "25 cm",
+    "D": "5 cm",
+    "correct": "D",
+    "explanation": "By the Pythagorean theorem, hypotenuse = √(3² + 4²) = √25 = 5 cm."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A bag contains 4 red, 3 blue, and 5 green balls. Two balls are drawn at random without replacement. What is the probability that both balls are red?",
+    "A": "1/12",
+    "B": "1/11",
+    "C": "1/6",
+    "D": "2/11",
+    "correct": "B",
+    "explanation": "Total balls = 12. Probability = (4/12) × (3/11) = 1/11."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "In right triangle ABC, right-angled at A, AB = 10 and AC = 20. D is the foot of the altitude from A to hypotenuse BC. What is the length of AD?",
+    "A": "5",
+    "B": "4√5",
+    "C": "63",
+    "D": "8√35",
+    "correct": "B",
+    "explanation": "BC = √(10² + 20²) = √500 = 10√5. AD = (AB×AC)/BC = 200/(10√5) = 20/√5 = 4√5."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "5/6 ÷ 3/4 = ?",
+    "A": "18/20",
+    "B": "20/18",
+    "C": "15/24",
+    "D": "20/43",
+    "correct": "B",
+    "explanation": "5/6 ÷ 3/4 = 5/6 × 4/3 = 20/18."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "For a data set with Q1 = 15 and Q3 = 35, if a new extreme value of 100 is added, how is the interquartile range typically affected?",
+    "A": "Increases slightly",
+    "B": "Increases moderately",
+    "C": "Increases significantly",
+    "D": "Stays about the same",
+    "correct": "D",
+    "explanation": "The interquartile range is resistant to outliers because it depends only on the middle 50% of the data, so a single extreme value has little to no effect on it."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "In the data set 3, 5, 7, x, 12, 14 (arranged in increasing order), the median is 8.5. What is the value of x?",
+    "A": "8",
+    "B": "9",
+    "C": "10",
+    "D": "11",
+    "correct": "C",
+    "explanation": "For 6 values in order, the median is the average of the 3rd and 4th values: (7 + x)/2 = 8.5 → x = 10."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "In the xy-plane, a line with equation 2y = 4.5 intersects a parabola with equation y = −4x² + bx, where b is a positive constant, at exactly one point. What is the value of b?",
+    "A": "1.5",
+    "B": "2.4",
+    "C": "3.3",
+    "D": "6",
+    "correct": "D",
+    "explanation": "Dividing by 2: y = 2.25. Substituting: 2.25 = −4x² + bx → 4x² − bx + 2.25 = 0. For exactly one solution, the discriminant must be 0: b² − 4(4)(2.25) = 0 → b² = 36 → b = 6 (positive)."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "5/20 is the same as which decimal?",
+    "A": "0.20",
+    "B": "0.25",
+    "C": "0.025",
+    "D": "0.30",
+    "correct": "B",
+    "explanation": "5/20 = 1/4 = 0.25."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If it takes 5 people 12 hours to paint 3 identical houses, how many hours will it take 4 people, working at the same rate, to paint 5 identical houses?",
+    "A": "20",
+    "B": "24",
+    "C": "25",
+    "D": "30",
+    "correct": "C",
+    "explanation": "Person-hours per house = (5×12)/3 = 20. For 5 houses: 100 person-hours needed. With 4 people: 100/4 = 25 hours."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If the sum of the first n natural numbers is 210, find n.",
+    "A": "18",
+    "B": "19",
+    "C": "20",
+    "D": "21",
+    "correct": "C",
+    "explanation": "n(n+1)/2 = 210 → n(n+1) = 420 → n = 20, since 20×21 = 420."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the value of x in 3^(2x−1) = 81.",
+    "A": "3/2",
+    "B": "2",
+    "C": "5/2",
+    "D": "3",
+    "correct": "C",
+    "explanation": "81 = 3⁴, so 2x − 1 = 4 → 2x = 5 → x = 5/2."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Solve for x: 7x + (-3) = 11.",
+    "A": "2",
+    "B": "4",
+    "C": "1",
+    "D": "3",
+    "correct": "A",
+    "explanation": "7x = 11 - (-3) = 14 → x = 14/7 = 2."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the 8th term of the geometric sequence: 3, 6, 12, …",
+    "A": "384",
+    "B": "386",
+    "C": "768",
+    "D": "382",
+    "correct": "A",
+    "explanation": "aₙ = a₁·r^(n-1) = 3·(2)^7 = 384."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A circle has radius 2 cm. Find the length of an arc with a central angle of 120°. (Use π ≈ 3.14, round to 2 decimals.)",
+    "A": "6.19",
+    "B": "8.38",
+    "C": "2.19",
+    "D": "4.19",
+    "correct": "D",
+    "explanation": "Arc length = (θ/360)×2πr = (120/360)×2×3.14×2 ≈ 4.19 cm."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If x and y are real numbers such that x + y = 6 and xy = 18, find x² + y².",
+    "A": "0",
+    "B": "10",
+    "C": "6",
+    "D": "-10",
+    "correct": "A",
+    "explanation": "x²+y² = (x+y)² - 2xy = 6² - 2(18) = 36 - 36 = 0."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "What are the roots of x² + 9x + 20 = 0?",
+    "A": "{-6, -4}",
+    "B": "{-4, -3}",
+    "C": "{-5, -4}",
+    "D": "{5, 4}",
+    "correct": "C",
+    "explanation": "Factoring gives (x-(-5))(x-(-4)) = 0, so x = -5 or x = -4."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A circle has radius 4 cm. Find the area of a sector with a central angle of 60°. (Use π ≈ 3.14, round to 2 decimals.)",
+    "A": "16.76",
+    "B": "8.38",
+    "C": "5.38",
+    "D": "11.38",
+    "correct": "B",
+    "explanation": "Sector area = (θ/360)×πr² = (60/360)×3.14×4² ≈ 8.38 cm²."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If x and y are real numbers such that x + y = 4 and xy = 11, find x² + y².",
+    "A": "4",
+    "B": "-6",
+    "C": "-2",
+    "D": "-16",
+    "correct": "B",
+    "explanation": "x²+y² = (x+y)² - 2xy = 4² - 2(11) = 16 - 22 = -6."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the range of the data set: 14, 27, 31, 33, 40, 45, 49.",
+    "A": "35",
+    "B": "40",
+    "C": "33",
+    "D": "37",
+    "correct": "A",
+    "explanation": "Range = max - min = 49 - 14 = 35."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the volume of a cube with edge length 3 cm.",
+    "A": "30",
+    "B": "9",
+    "C": "27",
+    "D": "24",
+    "correct": "C",
+    "explanation": "Volume = s³ = 3³ = 27 cm³."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A card is drawn at random from a standard deck of 52 cards. What is the probability that it is a heart (a card of the hearts suit)?",
+    "A": "1/4",
+    "B": "1/13",
+    "C": "3/13",
+    "D": "1/52",
+    "correct": "A",
+    "explanation": "There are 13 hearts out of 52 cards, so P = 13/52 = 1/4."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the measure of each interior angle of a regular polygon with 15 sides.",
+    "A": "151.0",
+    "B": "24.0",
+    "C": "156.0",
+    "D": "161.0",
+    "correct": "C",
+    "explanation": "Each interior angle = (n-2)×180/n = (15-2)×180/15 ≈ 156.0°."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the circumference of a circle with radius 5 cm. (Use π ≈ 3.14, round to 2 decimals.)",
+    "A": "28.42",
+    "B": "34.42",
+    "C": "31.42",
+    "D": "78.54",
+    "correct": "C",
+    "explanation": "Circumference = 2πr = 2×3.14×5 ≈ 31.42 cm."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the simple interest on a principal of Birr 1000 at an annual rate of 5% for 6 years.",
+    "A": "Birr 350",
+    "B": "Birr 400",
+    "C": "Birr 250",
+    "D": "Birr 300",
+    "correct": "D",
+    "explanation": "SI = P×r×t/100 = 1000×5×6/100 = 300."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the mean of the data set: 3, 10, 13, 26, 33, 39, 45, 49.",
+    "A": "27.25",
+    "B": "29.25",
+    "C": "25.25",
+    "D": "28.25",
+    "correct": "A",
+    "explanation": "Mean = sum/count = 218/8 = 27.25."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the 24th term of the arithmetic sequence: 4, 8, 12, 16, …",
+    "A": "104",
+    "B": "96",
+    "C": "100",
+    "D": "92",
+    "correct": "B",
+    "explanation": "aₙ = a₁ + (n-1)d = 4 + (24-1)(4) = 96."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Worker A can complete a job in 6 days, and Worker B can complete the same job in 5 days. How long will it take them to complete the job together?",
+    "A": "11 days",
+    "B": "31/11 days",
+    "C": "29/11 days",
+    "D": "30/11 days",
+    "correct": "D",
+    "explanation": "Combined rate = 1/6 + 1/5 = 11/30. Time = 1/(11/30) = 30/11 days."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "The ratio of boys to girls in a class is 5:7. If there are 48 students in total, how many girls are there?",
+    "A": "32",
+    "B": "24",
+    "C": "28",
+    "D": "20",
+    "correct": "C",
+    "explanation": "Total parts = 5+7 = 12. Each part = 48/12 = 4. Girls = 7×4 = 28."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "The ratio of boys to girls in a class is 4:5. If there are 54 students in total, how many girls are there?",
+    "A": "36",
+    "B": "37",
+    "C": "30",
+    "D": "24",
+    "correct": "C",
+    "explanation": "Total parts = 4+5 = 9. Each part = 54/9 = 6. Girls = 5×6 = 30."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "How many liters of a 20% acid solution must be mixed with a 60% acid solution to make 60 liters of a 48% acid solution?",
+    "A": "18.0 liters",
+    "B": "16.0 liters",
+    "C": "42.0 liters",
+    "D": "20.0 liters",
+    "correct": "A",
+    "explanation": "Let x = liters of 20% solution. 20x + 60(60-x) = 48(60) → x = 18.0 liters."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Evaluate 3x² + (-2)x when x = 1.",
+    "A": "-1",
+    "B": "1",
+    "C": "4",
+    "D": "-2",
+    "correct": "B",
+    "explanation": "3(1)² + (-2)(1) = 3 + -2 = 1."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "How many liters of a 30% acid solution must be mixed with a 70% acid solution to make 60 liters of a 39% acid solution?",
+    "A": "48.5 liters",
+    "B": "13.5 liters",
+    "C": "46.5 liters",
+    "D": "44.5 liters",
+    "correct": "C",
+    "explanation": "Let x = liters of 30% solution. 30x + 70(60-x) = 39(60) → x = 46.5 liters."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "In how many distinct ways can 7 people be seated around a circular table?",
+    "A": "720",
+    "B": "727",
+    "C": "5040",
+    "D": "713",
+    "correct": "A",
+    "explanation": "Circular permutations = (n-1)! = (7-1)! = 720."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the sum of the interior angles of a regular polygon with 9 sides.",
+    "A": "1080",
+    "B": "1440",
+    "C": "1350",
+    "D": "1260",
+    "correct": "D",
+    "explanation": "Sum of interior angles = (n-2)×180 = (9-2)×180 = 1260°."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "In a survey of 71 people, 18 like tea, 30 like coffee, and 13 like both. How many people like neither tea nor coffee?",
+    "A": "33",
+    "B": "22",
+    "C": "36",
+    "D": "39",
+    "correct": "C",
+    "explanation": "Like at least one = 18+30-13 = 35. Neither = 71 - 35 = 36."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "What are the roots of x² + 6x - 16 = 0?",
+    "A": "{-8, 2}",
+    "B": "{-9, 2}",
+    "C": "{8, -2}",
+    "D": "{-7, 3}",
+    "correct": "A",
+    "explanation": "Factoring gives (x-(-8))(x-(2)) = 0, so x = -8 or x = 2."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the population standard deviation of the data set: 18, 9, 19, 2, 3. (Round to 2 decimal places.)",
+    "A": "7.69",
+    "B": "8.04",
+    "C": "6.69",
+    "D": "7.19",
+    "correct": "D",
+    "explanation": "Mean = 10.20. Variance = average of squared deviations = 51.76. SD = √variance ≈ 7.19."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the sum of the first 7 terms of the geometric sequence: 3, -6, 12, …",
+    "A": "127",
+    "B": "258",
+    "C": "131",
+    "D": "129",
+    "correct": "D",
+    "explanation": "Sum = a₁(rⁿ-1)/(r-1) = 3((-2)^7-1)/(-2-1) = 129."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A store sells pens for $2 each and notebooks for $3 each. Hana buys 12 items total for $28, buying only pens and notebooks. How many pens did she buy?",
+    "A": "10",
+    "B": "8",
+    "C": "7",
+    "D": "9",
+    "correct": "B",
+    "explanation": "Let p = pens, notebooks = 12-p. 2p + 3(12-p) = 28 → (-1)p = -8 → p = 8."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the simple interest on a principal of Birr 2500 at an annual rate of 6% for 5 years.",
+    "A": "Birr 750",
+    "B": "Birr 700",
+    "C": "Birr 1000",
+    "D": "Birr 800",
+    "correct": "A",
+    "explanation": "SI = P×r×t/100 = 2500×6×5/100 = 750."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Solve for x: 6x + (-18) = 72.",
+    "A": "14",
+    "B": "16",
+    "C": "15",
+    "D": "17",
+    "correct": "C",
+    "explanation": "6x = 72 - (-18) = 90 → x = 90/6 = 15."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the 17th term of the arithmetic sequence: 1, 7, 13, 19, …",
+    "A": "97",
+    "B": "109",
+    "C": "103",
+    "D": "91",
+    "correct": "A",
+    "explanation": "aₙ = a₁ + (n-1)d = 1 + (17-1)(6) = 97."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Solve for x: 8x + (20) = 4.",
+    "A": "-1",
+    "B": "-3",
+    "C": "0",
+    "D": "-2",
+    "correct": "D",
+    "explanation": "8x = 4 - (20) = -16 → x = -16/8 = -2."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the volume of a sphere with radius 8 cm. (Use π ≈ 3.14, round to 2 decimals.)",
+    "A": "2164.66",
+    "B": "2144.66",
+    "C": "804.25",
+    "D": "2124.66",
+    "correct": "B",
+    "explanation": "Volume = (4/3)πr³ = (4/3)×3.14×8³ ≈ 2144.66 cm³."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A price of $96 is decreased by 20%. What is the new price?",
+    "A": "$72",
+    "B": "$82",
+    "C": "$77",
+    "D": "$76",
+    "correct": "C",
+    "explanation": "New price = 96 × (1 - 20/100) = 96 × 0.80 = $77."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the greatest common divisor (GCD) of 39 and 23.",
+    "A": "1",
+    "B": "4",
+    "C": "2",
+    "D": "3",
+    "correct": "A",
+    "explanation": "GCD(39,23) = 1."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Evaluate 6x² + (4)x when x = 5.",
+    "A": "164",
+    "B": "174",
+    "C": "176",
+    "D": "170",
+    "correct": "D",
+    "explanation": "6(5)² + (4)(5) = 150 + 20 = 170."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "In a survey of 83 people, 11 like tea, 17 like coffee, and 4 like both. How many people like neither tea nor coffee?",
+    "A": "62",
+    "B": "56",
+    "C": "59",
+    "D": "20",
+    "correct": "C",
+    "explanation": "Like at least one = 11+17-4 = 24. Neither = 83 - 24 = 59."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "How many distinct arrangements are there of all the letters in the word 'ORANGE'?",
+    "A": "710",
+    "B": "720",
+    "C": "730",
+    "D": "1440",
+    "correct": "B",
+    "explanation": "Total arrangements = 6!/(1×1×1×1×1×1) = 720."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the greatest common divisor (GCD) of 66 and 37.",
+    "A": "4",
+    "B": "2",
+    "C": "3",
+    "D": "1",
+    "correct": "D",
+    "explanation": "GCD(66,37) = 1."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the amount after 2 years if Birr 2000 is invested at 20% annual compound interest.",
+    "A": "Birr 2980",
+    "B": "Birr 2780",
+    "C": "Birr 2880",
+    "D": "Birr 2800",
+    "correct": "C",
+    "explanation": "A = P(1+r/100)^t = 2000(1+20/100)^2 = 2880."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If x and y are real numbers such that x + y = 5 and xy = 15, find x³ + y³.",
+    "A": "-90",
+    "B": "-100",
+    "C": "-110",
+    "D": "-95",
+    "correct": "B",
+    "explanation": "x³+y³ = (x+y)³ - 3xy(x+y) = 5³ - 3(15)(5) = 125 - 225 = -100."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "What are the roots of x² + 5x - 14 = 0?",
+    "A": "{-8, 2}",
+    "B": "{7, -2}",
+    "C": "{-7, 2}",
+    "D": "{-6, 3}",
+    "correct": "C",
+    "explanation": "Factoring gives (x-(-7))(x-(2)) = 0, so x = -7 or x = 2."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the volume of a cylinder with radius 4 cm and height 10 cm. (Use π ≈ 3.14, round to 2 decimals.)",
+    "A": "502.65",
+    "B": "492.65",
+    "C": "512.65",
+    "D": "251.33",
+    "correct": "A",
+    "explanation": "Volume = πr²h = 3.14×4²×10 ≈ 502.65 cm³."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Triangle ABC is similar to triangle DEF with a scale factor of 5/2. If the corresponding side in triangle ABC has length 4, what is the length of the corresponding side in triangle DEF?",
+    "A": "10.0",
+    "B": "1.6",
+    "C": "9.0",
+    "D": "11.0",
+    "correct": "A",
+    "explanation": "DEF's side = ABC's side × scale factor = 4 × (5/2) = 10.0."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the 15th term of the arithmetic sequence: 3, 8, 13, 18, …",
+    "A": "73",
+    "B": "68",
+    "C": "83",
+    "D": "78",
+    "correct": "A",
+    "explanation": "aₙ = a₁ + (n-1)d = 3 + (15-1)(5) = 73."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "The ratio of boys to girls in a class is 4:5. If there are 27 students in total, how many girls are there?",
+    "A": "12",
+    "B": "19",
+    "C": "15",
+    "D": "18",
+    "correct": "C",
+    "explanation": "Total parts = 4+5 = 9. Each part = 27/9 = 3. Girls = 5×3 = 15."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the area of a circle with radius 15 cm. (Use π ≈ 3.14, round to 2 decimals.)",
+    "A": "701.86",
+    "B": "94.25",
+    "C": "711.86",
+    "D": "706.86",
+    "correct": "D",
+    "explanation": "Area = πr² = 3.14×15² ≈ 706.86 cm²."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Solve for x: 5x + (-3) = 52.",
+    "A": "10",
+    "B": "13",
+    "C": "11",
+    "D": "12",
+    "correct": "C",
+    "explanation": "5x = 52 - (-3) = 55 → x = 55/5 = 11."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "40% of a number is 189. What is the number?",
+    "A": "472",
+    "B": "756",
+    "C": "462",
+    "D": "482",
+    "correct": "A",
+    "explanation": "Let the number be x. 40/100 × x = 189 → x = 189/0.4 = 472."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Triangle ABC is similar to triangle DEF with a scale factor of 3/2. If the corresponding side in triangle ABC has length 5, what is the length of the corresponding side in triangle DEF?",
+    "A": "6.5",
+    "B": "3.33",
+    "C": "8.5",
+    "D": "7.5",
+    "correct": "D",
+    "explanation": "DEF's side = ABC's side × scale factor = 5 × (3/2) = 7.5."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the greatest common divisor (GCD) of 73 and 21.",
+    "A": "4",
+    "B": "3",
+    "C": "2",
+    "D": "1",
+    "correct": "D",
+    "explanation": "GCD(73,21) = 1."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A store sells pens for $4 each and notebooks for $1 each. Hana buys 5 items total for $14, buying only pens and notebooks. How many pens did she buy?",
+    "A": "4",
+    "B": "2",
+    "C": "5",
+    "D": "3",
+    "correct": "D",
+    "explanation": "Let p = pens, notebooks = 5-p. 4p + 1(5-p) = 14 → (3)p = 9 → p = 3."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "How many liters of a 30% acid solution must be mixed with a 50% acid solution to make 40 liters of a 35% acid solution?",
+    "A": "10.0 liters",
+    "B": "28.0 liters",
+    "C": "30.0 liters",
+    "D": "32.0 liters",
+    "correct": "C",
+    "explanation": "Let x = liters of 30% solution. 30x + 50(40-x) = 35(40) → x = 30.0 liters."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Simplify: 2^3 × 2^3.",
+    "A": "512",
+    "B": "128",
+    "C": "64",
+    "D": "32",
+    "correct": "C",
+    "explanation": "2^3 × 2^3 = 2^(3+3) = 2^6 = 64."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A train travels 120 km in 3 hours. What is its average speed?",
+    "A": "45 km/h",
+    "B": "40 km/h",
+    "C": "30 km/h",
+    "D": "50 km/h",
+    "correct": "B",
+    "explanation": "speed = distance/time = 120/3 = 40 km/h."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A train travels 640 km in 8 hours. What is its average speed?",
+    "A": "80 km/h",
+    "B": "85 km/h",
+    "C": "90 km/h",
+    "D": "70 km/h",
+    "correct": "A",
+    "explanation": "speed = distance/time = 640/8 = 80 km/h."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the sum of the first 24 terms of the arithmetic sequence: 6, 12, 18, 24, …",
+    "A": "1806",
+    "B": "1800",
+    "C": "1794",
+    "D": "1812",
+    "correct": "B",
+    "explanation": "Sum = (n/2)[2a₁+(n-1)d] = (24/2)[12+138] = 1800."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the 6th term of the geometric sequence: 5, 15, 45, …",
+    "A": "1215",
+    "B": "1212",
+    "C": "2430",
+    "D": "1218",
+    "correct": "A",
+    "explanation": "aₙ = a₁·r^(n-1) = 5·(3)^5 = 1215."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Worker A can complete a job in 12 days, and Worker B can complete the same job in 15 days. How long will it take them to complete the job together?",
+    "A": "21/3 days",
+    "B": "20/3 days",
+    "C": "27 days",
+    "D": "19/3 days",
+    "correct": "B",
+    "explanation": "Combined rate = 1/12 + 1/15 = 3/20. Time = 1/(3/20) = 20/3 days."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the volume of a rectangular box with length 6 cm, width 5 cm, and height 6 cm.",
+    "A": "174",
+    "B": "186",
+    "C": "180",
+    "D": "60",
+    "correct": "C",
+    "explanation": "Volume = l×w×h = 6×5×6 = 180 cm³."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the 25th term of the arithmetic sequence: 4, 7, 10, 13, …",
+    "A": "79",
+    "B": "82",
+    "C": "76",
+    "D": "73",
+    "correct": "C",
+    "explanation": "aₙ = a₁ + (n-1)d = 4 + (25-1)(3) = 76."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Worker A can complete a job in 4 days, and Worker B can complete the same job in 12 days. How long will it take them to complete the job together?",
+    "A": "2/1 days",
+    "B": "3 days",
+    "C": "16 days",
+    "D": "4/1 days",
+    "correct": "B",
+    "explanation": "Combined rate = 1/4 + 1/12 = 1/3. Time = 1/(1/3) = 3 days."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Solve for x: 3x + (20) = 2.",
+    "A": "-4",
+    "B": "-7",
+    "C": "-5",
+    "D": "-6",
+    "correct": "D",
+    "explanation": "3x = 2 - (20) = -18 → x = -18/3 = -6."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the sum of the first 8 terms of the geometric sequence: 3, -6, 12, …",
+    "A": "-255",
+    "B": "-257",
+    "C": "-253",
+    "D": "-510",
+    "correct": "A",
+    "explanation": "Sum = a₁(rⁿ-1)/(r-1) = 3((-2)^8-1)/(-2-1) = -255."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A bag contains 6 red, 4 blue, and 6 green balls. A ball is drawn, its color noted, and it is replaced. A second ball is then drawn. What is the probability that both balls are red?",
+    "A": "25/256",
+    "B": "3/8",
+    "C": "9/64",
+    "D": "36/257",
+    "correct": "C",
+    "explanation": "P = (6/16) × (6/16) = 9/64."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the interquartile range of the data set: 1, 3, 12, 19, 20, 37, 39, 48, 56.",
+    "A": "36.0",
+    "B": "38.0",
+    "C": "34.0",
+    "D": "41.0",
+    "correct": "A",
+    "explanation": "Q1 = 7.5, Q3 = 43.5. IQR = Q3 - Q1 = 36.0."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "How many liters of a 20% acid solution must be mixed with a 40% acid solution to make 40 liters of a 29% acid solution?",
+    "A": "18.0 liters",
+    "B": "22.0 liters",
+    "C": "24.0 liters",
+    "D": "20.0 liters",
+    "correct": "B",
+    "explanation": "Let x = liters of 20% solution. 20x + 40(40-x) = 29(40) → x = 22.0 liters."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Two fair six-sided dice are rolled. What is the probability that the sum is 6?",
+    "A": "1/7",
+    "B": "1/9",
+    "C": "5/36",
+    "D": "1/6",
+    "correct": "C",
+    "explanation": "There are 5 outcomes (out of 36) that sum to 6, so P = 5/36 = 5/36."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the mean of the data set: 10, 16, 25, 34, 40, 41, 47.",
+    "A": "30.43",
+    "B": "28.43",
+    "C": "32.43",
+    "D": "31.43",
+    "correct": "A",
+    "explanation": "Mean = sum/count = 213/7 = 30.43."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the sum of the first 17 terms of the arithmetic sequence: 3, 6, 9, 12, …",
+    "A": "465",
+    "B": "456",
+    "C": "462",
+    "D": "459",
+    "correct": "D",
+    "explanation": "Sum = (n/2)[2a₁+(n-1)d] = (17/2)[6+48] = 459."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "In a survey of 97 people, 18 like tea, 11 like coffee, and 3 like both. How many people like neither tea nor coffee?",
+    "A": "71",
+    "B": "74",
+    "C": "68",
+    "D": "23",
+    "correct": "A",
+    "explanation": "Like at least one = 18+11-3 = 26. Neither = 97 - 26 = 71."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "The ratio of boys to girls in a class is 3:8. If there are 99 students in total, how many girls are there?",
+    "A": "27",
+    "B": "72",
+    "C": "63",
+    "D": "81",
+    "correct": "B",
+    "explanation": "Total parts = 3+8 = 11. Each part = 99/11 = 9. Girls = 8×9 = 72."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the area of a triangle with base 8 cm and height 7 cm.",
+    "A": "26 cm²",
+    "B": "56 cm²",
+    "C": "28 cm²",
+    "D": "30 cm²",
+    "correct": "C",
+    "explanation": "Area = (1/2)×base×height = (1/2)×8×7 = 28 cm²."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the slope of the line passing through (-10, -7) and (-2, -3).",
+    "A": "-1/2",
+    "B": "1/2",
+    "C": "3/2",
+    "D": "2",
+    "correct": "B",
+    "explanation": "Slope = (y2-y1)/(x2-x1) = (-3--7)/(-2--10) = 1/2."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the population standard deviation of the data set: 17, 8, 9, 6, 10. (Round to 2 decimal places.)",
+    "A": "4.24",
+    "B": "3.74",
+    "C": "4.18",
+    "D": "3.24",
+    "correct": "B",
+    "explanation": "Mean = 10.00. Variance = average of squared deviations = 14.00. SD = √variance ≈ 3.74."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the volume of a rectangular box with length 7 cm, width 8 cm, and height 6 cm.",
+    "A": "104",
+    "B": "336",
+    "C": "329",
+    "D": "343",
+    "correct": "B",
+    "explanation": "Volume = l×w×h = 7×8×6 = 336 cm³."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the least common multiple (LCM) of 33 and 68.",
+    "A": "2244",
+    "B": "2277",
+    "C": "2176",
+    "D": "2177",
+    "correct": "A",
+    "explanation": "LCM(33,68) = (33×68)/GCD(33,68) = 2244/1 = 2244."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Worker A can complete a job in 5 days, and Worker B can complete the same job in 6 days. How long will it take them to complete the job together?",
+    "A": "30/11 days",
+    "B": "31/11 days",
+    "C": "11 days",
+    "D": "29/11 days",
+    "correct": "A",
+    "explanation": "Combined rate = 1/5 + 1/6 = 11/30. Time = 1/(11/30) = 30/11 days."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the interquartile range of the data set: 7, 9, 12, 16, 21, 26, 31, 43.",
+    "A": "18.0",
+    "B": "16.0",
+    "C": "23.0",
+    "D": "20.0",
+    "correct": "A",
+    "explanation": "Q1 = 10.5, Q3 = 28.5. IQR = Q3 - Q1 = 18.0."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the simple interest on a principal of Birr 500 at an annual rate of 4% for 4 years.",
+    "A": "Birr 30*",
+    "B": "Birr 80",
+    "C": "Birr 130",
+    "D": "Birr 30",
+    "correct": "B",
+    "explanation": "SI = P×r×t/100 = 500×4×4/100 = 80."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A car travels 63 km at a constant speed of 50 km/h. How long does the trip take?",
+    "A": "1.76 hours",
+    "B": "1.26 hours",
+    "C": "0.76 hours",
+    "D": "2.26 hours",
+    "correct": "B",
+    "explanation": "time = distance/speed = 63/50 = 1.26 hours."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Worker A can complete a job in 10 days, and Worker B can complete the same job in 15 days. How long will it take them to complete the job together?",
+    "A": "6 days",
+    "B": "5/1 days",
+    "C": "7/1 days",
+    "D": "25 days",
+    "correct": "A",
+    "explanation": "Combined rate = 1/10 + 1/15 = 1/6. Time = 1/(1/6) = 6 days."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If x and y are real numbers such that x + y = 4 and xy = 9, find x² + y².",
+    "A": "8",
+    "B": "-12",
+    "C": "2",
+    "D": "-2",
+    "correct": "D",
+    "explanation": "x²+y² = (x+y)² - 2xy = 4² - 2(9) = 16 - 18 = -2."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Simplify: 5^4 × 5^1.",
+    "A": "3125",
+    "B": "625",
+    "C": "626",
+    "D": "15625",
+    "correct": "A",
+    "explanation": "5^4 × 5^1 = 5^(4+1) = 5^5 = 3125."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "An item is bought for Birr 487 and sold at a 20% loss. Find the selling price.",
+    "A": "Birr 410",
+    "B": "Birr 390",
+    "C": "Birr 370",
+    "D": "Birr 467",
+    "correct": "B",
+    "explanation": "SP = CP×(1-20/100) = 487×0.80 = 390."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the sum of the first 4 terms of the geometric sequence: 3, 6, 12, …",
+    "A": "43",
+    "B": "47",
+    "C": "90",
+    "D": "45",
+    "correct": "D",
+    "explanation": "Sum = a₁(rⁿ-1)/(r-1) = 3((2)^4-1)/(2-1) = 45."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Worker A can complete a job in 9 days, and Worker B can complete the same job in 5 days. How long will it take them to complete the job together?",
+    "A": "44/14 days",
+    "B": "14 days",
+    "C": "46/14 days",
+    "D": "45/14 days",
+    "correct": "D",
+    "explanation": "Combined rate = 1/9 + 1/5 = 14/45. Time = 1/(14/45) = 45/14 days."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Triangle ABC is similar to triangle DEF with a scale factor of 5/3. If the corresponding side in triangle ABC has length 7, what is the length of the corresponding side in triangle DEF?",
+    "A": "11.67",
+    "B": "4.2",
+    "C": "10.67",
+    "D": "12.67",
+    "correct": "A",
+    "explanation": "DEF's side = ABC's side × scale factor = 7 × (5/3) = 11.67."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the population standard deviation of the data set: 2, 7, 15, 12, 9. (Round to 2 decimal places.)",
+    "A": "4.43",
+    "B": "4.95",
+    "C": "4.93",
+    "D": "3.93",
+    "correct": "A",
+    "explanation": "Mean = 9.00. Variance = average of squared deviations = 19.60. SD = √variance ≈ 4.43."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A cyclist rides at 60 km/h for 7 hours. How far does the cyclist travel?",
+    "A": "410 km",
+    "B": "480 km",
+    "C": "420 km",
+    "D": "430 km",
+    "correct": "C",
+    "explanation": "distance = speed × time = 60×7 = 420 km."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A circle has radius 5 cm. Find the length of an arc with a central angle of 90°. (Use π ≈ 3.14, round to 2 decimals.)",
+    "A": "7.85",
+    "B": "15.7",
+    "C": "9.85",
+    "D": "5.85",
+    "correct": "A",
+    "explanation": "Arc length = (θ/360)×2πr = (90/360)×2×3.14×5 ≈ 7.85 cm."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Evaluate 3x² + (7)x when x = -3.",
+    "A": "9",
+    "B": "6",
+    "C": "3",
+    "D": "13",
+    "correct": "B",
+    "explanation": "3(-3)² + (7)(-3) = 27 + -21 = 6."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A committee of 5 people is to be chosen from a group of 11 people. In how many ways can this be done?",
+    "A": "473",
+    "B": "462",
+    "C": "55440",
+    "D": "451",
+    "correct": "B",
+    "explanation": "C(11,5) = 11!/(5!(11-5)!) = 462."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the interquartile range of the data set: 1, 17, 20, 24, 37, 38, 42, 45, 47.",
+    "A": "23.0",
+    "B": "25.0",
+    "C": "27.0",
+    "D": "30.0",
+    "correct": "B",
+    "explanation": "Q1 = 18.5, Q3 = 43.5. IQR = Q3 - Q1 = 25.0."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the least common multiple (LCM) of 44 and 22.",
+    "A": "88",
+    "B": "44",
+    "C": "968",
+    "D": "22",
+    "correct": "B",
+    "explanation": "LCM(44,22) = (44×22)/GCD(44,22) = 968/22 = 44."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "In a survey of 57 people, 22 like tea, 12 like coffee, and 3 like both. How many people like neither tea nor coffee?",
+    "A": "26",
+    "B": "23",
+    "C": "29",
+    "D": "28",
+    "correct": "A",
+    "explanation": "Like at least one = 22+12-3 = 31. Neither = 57 - 31 = 26."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Evaluate 4x² + (6)x when x = -1.",
+    "A": "-2",
+    "B": "4",
+    "C": "-6",
+    "D": "2",
+    "correct": "A",
+    "explanation": "4(-1)² + (6)(-1) = 4 + -6 = -2."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the area of a triangle with base 15 cm and height 5 cm.",
+    "A": "75 cm²",
+    "B": "79/2 cm²",
+    "C": "71/2 cm²",
+    "D": "75/2 cm²",
+    "correct": "D",
+    "explanation": "Area = (1/2)×base×height = (1/2)×15×5 = 75/2 cm²."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the slope of the line passing through (10, -5) and (-5, 10).",
+    "A": "-1",
+    "B": "-2",
+    "C": "-2*",
+    "D": "0",
+    "correct": "A",
+    "explanation": "Slope = (y2-y1)/(x2-x1) = (10--5)/(-5-10) = -1."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Solve for x: 8x + (5) = 69.",
+    "A": "9",
+    "B": "7",
+    "C": "8",
+    "D": "10",
+    "correct": "C",
+    "explanation": "8x = 69 - (5) = 64 → x = 64/8 = 8."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "The ratio of boys to girls in a class is 7:9. If there are 128 students in total, how many girls are there?",
+    "A": "56",
+    "B": "72",
+    "C": "64",
+    "D": "80",
+    "correct": "B",
+    "explanation": "Total parts = 7+9 = 16. Each part = 128/16 = 8. Girls = 9×8 = 72."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the slope of the line passing through (-7, -3) and (1, -5).",
+    "A": "-4",
+    "B": "-1/4",
+    "C": "3/4",
+    "D": "-5/4",
+    "correct": "B",
+    "explanation": "Slope = (y2-y1)/(x2-x1) = (-5--3)/(1--7) = -1/4."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the population standard deviation of the data set: 17, 18, 14, 7, 4. (Round to 2 decimal places.)",
+    "A": "5.55",
+    "B": "6.05",
+    "C": "6.2",
+    "D": "5.05",
+    "correct": "A",
+    "explanation": "Mean = 12.00. Variance = average of squared deviations = 30.80. SD = √variance ≈ 5.55."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the median of the data set: 1, 7, 9, 17, 24, 26, 28, 35.",
+    "A": "20.5",
+    "B": "19.5",
+    "C": "22.5",
+    "D": "21.5",
+    "correct": "A",
+    "explanation": "Sorted data's middle value(s) give a median of 20.5."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "In how many ways can 2 people be selected and arranged in a row from a group of 6 people?",
+    "A": "30",
+    "B": "36",
+    "C": "15",
+    "D": "24",
+    "correct": "A",
+    "explanation": "P(6,2) = 6!/(6-2)! = 30."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the measure of each exterior angle of a regular polygon with 5 sides.",
+    "A": "108.0",
+    "B": "67.0",
+    "C": "77.0",
+    "D": "72.0",
+    "correct": "D",
+    "explanation": "Each exterior angle = 360/n = 360/5 ≈ 72.0°."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the amount after 3 years if Birr 4000 is invested at 5% annual compound interest.",
+    "A": "Birr 4631",
+    "B": "Birr 4531",
+    "C": "Birr 4731",
+    "D": "Birr 4600",
+    "correct": "A",
+    "explanation": "A = P(1+r/100)^t = 4000(1+5/100)^3 = 4631."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the mean of the data set: 11, 15, 19, 21, 23, 34, 46, 49.",
+    "A": "27.25",
+    "B": "28.25",
+    "C": "25.25",
+    "D": "29.25",
+    "correct": "A",
+    "explanation": "Mean = sum/count = 218/8 = 27.25."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A committee of 4 people is to be chosen from a group of 10 people. In how many ways can this be done?",
+    "A": "200",
+    "B": "5040",
+    "C": "210",
+    "D": "220",
+    "correct": "C",
+    "explanation": "C(10,4) = 10!/(4!(10-4)!) = 210."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the mean of the data set: 2, 8, 20, 22, 24, 27, 38, 41, 44.",
+    "A": "26.11",
+    "B": "27.11",
+    "C": "23.11",
+    "D": "25.11",
+    "correct": "D",
+    "explanation": "Mean = sum/count = 226/9 = 25.11."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A circle has radius 14 cm. Find the area of a sector with a central angle of 60°. (Use π ≈ 3.14, round to 2 decimals.)",
+    "A": "105.63",
+    "B": "99.63",
+    "C": "102.63",
+    "D": "205.26",
+    "correct": "C",
+    "explanation": "Sector area = (θ/360)×πr² = (60/360)×3.14×14² ≈ 102.63 cm²."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Solve for x: 8x + (8) = -16.",
+    "A": "-3",
+    "B": "-4",
+    "C": "-2",
+    "D": "-1",
+    "correct": "A",
+    "explanation": "8x = -16 - (8) = -24 → x = -24/8 = -3."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the 4th term of the geometric sequence: 2, 6, 18, …",
+    "A": "57",
+    "B": "54",
+    "C": "51",
+    "D": "108",
+    "correct": "B",
+    "explanation": "aₙ = a₁·r^(n-1) = 2·(3)^3 = 54."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the population standard deviation of the data set: 3, 4, 9, 10, 13. (Round to 2 decimal places.)",
+    "A": "3.26",
+    "B": "4.21",
+    "C": "3.76",
+    "D": "4.26",
+    "correct": "C",
+    "explanation": "Mean = 7.80. Variance = average of squared deviations = 14.16. SD = √variance ≈ 3.76."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A cyclist rides at 60 km/h for 2 hours. How far does the cyclist travel?",
+    "A": "130 km",
+    "B": "180 km",
+    "C": "120 km",
+    "D": "110 km",
+    "correct": "C",
+    "explanation": "distance = speed × time = 60×2 = 120 km."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the sum of the interior angles of a regular polygon with 5 sides.",
+    "A": "360",
+    "B": "630",
+    "C": "720",
+    "D": "540",
+    "correct": "D",
+    "explanation": "Sum of interior angles = (n-2)×180 = (5-2)×180 = 540°."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Solve for x: 2^x = 4.",
+    "A": "2",
+    "B": "1",
+    "C": "4",
+    "D": "3",
+    "correct": "A",
+    "explanation": "2^x = 2^2, so x = 2."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the interquartile range of the data set: 8, 20, 33, 41, 44, 45, 46, 50, 57.",
+    "A": "19.5",
+    "B": "26.5",
+    "C": "21.5",
+    "D": "23.5",
+    "correct": "C",
+    "explanation": "Q1 = 26.5, Q3 = 48.0. IQR = Q3 - Q1 = 21.5."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the range of the data set: 18, 25, 29, 33, 36, 40.",
+    "A": "22",
+    "B": "20",
+    "C": "24",
+    "D": "27",
+    "correct": "A",
+    "explanation": "Range = max - min = 40 - 18 = 22."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Triangle ABC is similar to triangle DEF with a scale factor of 7/4. If the corresponding side in triangle ABC has length 4, what is the length of the corresponding side in triangle DEF?",
+    "A": "2.29",
+    "B": "7.0",
+    "C": "6.0",
+    "D": "8.0",
+    "correct": "B",
+    "explanation": "DEF's side = ABC's side × scale factor = 4 × (7/4) = 7.0."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A price of $283 is decreased by 25%. What is the new price?",
+    "A": "$207",
+    "B": "$258",
+    "C": "$212",
+    "D": "$217",
+    "correct": "C",
+    "explanation": "New price = 283 × (1 - 25/100) = 283 × 0.75 = $212."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the volume of a sphere with radius 7 cm. (Use π ≈ 3.14, round to 2 decimals.)",
+    "A": "1436.76",
+    "B": "1456.76",
+    "C": "615.75",
+    "D": "1416.76",
+    "correct": "A",
+    "explanation": "Volume = (4/3)πr³ = (4/3)×3.14×7³ ≈ 1436.76 cm³."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A car travels a certain distance at 60 km/h and returns the same distance at 80 km/h. What is its average speed for the round trip?",
+    "A": "63.57 km/h",
+    "B": "73.57 km/h",
+    "C": "70.0 km/h",
+    "D": "68.57 km/h",
+    "correct": "D",
+    "explanation": "Average speed = 2s₁s₂/(s₁+s₂) = 2(60)(80)/(60+80) = 68.57 km/h."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Solve for x: 8x + (9) = 89.",
+    "A": "10",
+    "B": "12",
+    "C": "9",
+    "D": "11",
+    "correct": "A",
+    "explanation": "8x = 89 - (9) = 80 → x = 80/8 = 10."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the volume of a cylinder with radius 5 cm and height 4 cm. (Use π ≈ 3.14, round to 2 decimals.)",
+    "A": "324.16",
+    "B": "314.16",
+    "C": "304.16",
+    "D": "125.66",
+    "correct": "B",
+    "explanation": "Volume = πr²h = 3.14×5²×4 ≈ 314.16 cm³."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the 14th term of the arithmetic sequence: 3, 8, 13, 18, …",
+    "A": "78",
+    "B": "73",
+    "C": "63",
+    "D": "68",
+    "correct": "D",
+    "explanation": "aₙ = a₁ + (n-1)d = 3 + (14-1)(5) = 68."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the amount after 2 years if Birr 2000 is invested at 10% annual compound interest.",
+    "A": "Birr 2400",
+    "B": "Birr 2320",
+    "C": "Birr 2520",
+    "D": "Birr 2420",
+    "correct": "D",
+    "explanation": "A = P(1+r/100)^t = 2000(1+10/100)^2 = 2420."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If f(x) = 4x + 2 and g(x) = 6x + 6, find g(f(1)).",
+    "A": "36",
+    "B": "48",
+    "C": "42",
+    "D": "37",
+    "correct": "C",
+    "explanation": "f(1) = 4(1)+2 = 6. g(6) = 6(6)+6 = 42."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the measure of each exterior angle of a regular polygon with 15 sides.",
+    "A": "24.0",
+    "B": "19.0",
+    "C": "29.0",
+    "D": "156.0",
+    "correct": "A",
+    "explanation": "Each exterior angle = 360/n = 360/15 ≈ 24.0°."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A car travels 63 km at a constant speed of 30 km/h. How long does the trip take?",
+    "A": "2.1 hours",
+    "B": "3.1 hours",
+    "C": "2.6 hours",
+    "D": "1.6 hours",
+    "correct": "A",
+    "explanation": "time = distance/speed = 63/30 = 2.1 hours."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the 30th term of the arithmetic sequence: 6, 9, 12, 15, …",
+    "A": "99",
+    "B": "90",
+    "C": "93",
+    "D": "96",
+    "correct": "C",
+    "explanation": "aₙ = a₁ + (n-1)d = 6 + (30-1)(3) = 93."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Two fair six-sided dice are rolled. What is the probability that the sum is 10?",
+    "A": "1/12",
+    "B": "3/35",
+    "C": "1/9",
+    "D": "1/18",
+    "correct": "A",
+    "explanation": "There are 3 outcomes (out of 36) that sum to 10, so P = 3/36 = 1/12."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the greatest common divisor (GCD) of 78 and 68.",
+    "A": "1",
+    "B": "4",
+    "C": "3",
+    "D": "2",
+    "correct": "D",
+    "explanation": "GCD(78,68) = 2."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the slope of the line passing through (-4, 4) and (-7, -2).",
+    "A": "2",
+    "B": "3",
+    "C": "1",
+    "D": "1/2",
+    "correct": "A",
+    "explanation": "Slope = (y2-y1)/(x2-x1) = (-2-4)/(-7--4) = 2."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A store sells pens for $4 each and notebooks for $3 each. Hana buys 19 items total for $66, buying only pens and notebooks. How many pens did she buy?",
+    "A": "8",
+    "B": "11",
+    "C": "9",
+    "D": "10",
+    "correct": "C",
+    "explanation": "Let p = pens, notebooks = 19-p. 4p + 3(19-p) = 66 → (1)p = 9 → p = 9."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Solve for x: 3x + (-3) = 3.",
+    "A": "2",
+    "B": "1",
+    "C": "4",
+    "D": "3",
+    "correct": "A",
+    "explanation": "3x = 3 - (-3) = 6 → x = 6/3 = 2."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "In a group, 60% of the items are blue. Of the blue items, 10% are also large. What percentage of all items are both blue and large?",
+    "A": "1.0%",
+    "B": "50%",
+    "C": "11.0%",
+    "D": "6.0%",
+    "correct": "D",
+    "explanation": "(10/100)×(60/100) = 0.06 = 6.0% of all items."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Evaluate 3x² + (-9)x when x = -1.",
+    "A": "15",
+    "B": "12",
+    "C": "3",
+    "D": "9",
+    "correct": "B",
+    "explanation": "3(-1)² + (-9)(-1) = 3 + 9 = 12."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A cyclist rides at 60 km/h for 3 hours. How far does the cyclist travel?",
+    "A": "190 km",
+    "B": "170 km",
+    "C": "240 km",
+    "D": "180 km",
+    "correct": "D",
+    "explanation": "distance = speed × time = 60×3 = 180 km."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the range of the data set: 2, 14, 27, 32, 37, 40, 41, 42.",
+    "A": "38",
+    "B": "42",
+    "C": "40",
+    "D": "45",
+    "correct": "C",
+    "explanation": "Range = max - min = 42 - 2 = 40."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A train travels 200 km in 4 hours. What is its average speed?",
+    "A": "50 km/h",
+    "B": "40 km/h",
+    "C": "55 km/h",
+    "D": "60 km/h",
+    "correct": "A",
+    "explanation": "speed = distance/time = 200/4 = 50 km/h."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Solve for x: 3x + (-3) = -33.",
+    "A": "-9",
+    "B": "-8",
+    "C": "-11",
+    "D": "-10",
+    "correct": "D",
+    "explanation": "3x = -33 - (-3) = -30 → x = -30/3 = -10."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A bag contains 4 red, 6 blue, and 5 green balls. A ball is drawn, its color noted, and it is replaced. A second ball is then drawn. What is the probability that both balls are red?",
+    "A": "1/25",
+    "B": "16/225",
+    "C": "4/15",
+    "D": "8/113",
+    "correct": "B",
+    "explanation": "P = (4/15) × (4/15) = 16/225."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A fair coin is flipped 5 times. What is the probability of getting exactly 1 heads?",
+    "A": "5/33",
+    "B": "5/32",
+    "C": "3/16",
+    "D": "1/8",
+    "correct": "B",
+    "explanation": "P = C(5,1)/2^5 = 5/32 = 5/32."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "The ratio of boys to girls in a class is 3:8. If there are 55 students in total, how many girls are there?",
+    "A": "15",
+    "B": "45",
+    "C": "40",
+    "D": "35",
+    "correct": "C",
+    "explanation": "Total parts = 3+8 = 11. Each part = 55/11 = 5. Girls = 8×5 = 40."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "What are the roots of x² + 9x + 18 = 0?",
+    "A": "{-5, -2}",
+    "B": "{6, 3}",
+    "C": "{-6, -3}",
+    "D": "{-7, -3}",
+    "correct": "C",
+    "explanation": "Factoring gives (x-(-3))(x-(-6)) = 0, so x = -3 or x = -6."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "An item is bought for Birr 286 and sold at a 30% loss. Find the selling price.",
+    "A": "Birr 180",
+    "B": "Birr 220",
+    "C": "Birr 200",
+    "D": "Birr 256",
+    "correct": "C",
+    "explanation": "SP = CP×(1-30/100) = 286×0.70 = 200."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the simple interest on a principal of Birr 1500 at an annual rate of 8% for 2 years.",
+    "A": "Birr 390",
+    "B": "Birr 190",
+    "C": "Birr 290",
+    "D": "Birr 240",
+    "correct": "D",
+    "explanation": "SI = P×r×t/100 = 1500×8×2/100 = 240."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the 30th term of the arithmetic sequence: 4, 7, 10, 13, …",
+    "A": "91",
+    "B": "97",
+    "C": "88",
+    "D": "94",
+    "correct": "A",
+    "explanation": "aₙ = a₁ + (n-1)d = 4 + (30-1)(3) = 91."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the sum of the interior angles of a regular polygon with 14 sides.",
+    "A": "2340",
+    "B": "2160",
+    "C": "1980",
+    "D": "2250",
+    "correct": "B",
+    "explanation": "Sum of interior angles = (n-2)×180 = (14-2)×180 = 2160°."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "An item is bought for Birr 160 and sold at a 10% profit. Find the selling price.",
+    "A": "Birr 170",
+    "B": "Birr 156",
+    "C": "Birr 196",
+    "D": "Birr 176",
+    "correct": "D",
+    "explanation": "SP = CP×(1+10/100) = 160×1.10 = 176."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If f(x) = 3x + 5, find f(4).",
+    "A": "22",
+    "B": "14",
+    "C": "17",
+    "D": "20",
+    "correct": "C",
+    "explanation": "f(4) = 3(4) + 5 = 17."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A bag contains 3 red, 6 blue, and 5 green balls. A ball is drawn, its color noted, and it is replaced. A second ball is then drawn. What is the probability that both balls are red?",
+    "A": "3/14",
+    "B": "1/49",
+    "C": "9/196",
+    "D": "9/197",
+    "correct": "C",
+    "explanation": "P = (3/14) × (3/14) = 9/196."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "In a survey of 92 people, 14 like tea, 19 like coffee, and 8 like both. How many people like neither tea nor coffee?",
+    "A": "17",
+    "B": "67",
+    "C": "70",
+    "D": "64",
+    "correct": "B",
+    "explanation": "Like at least one = 14+19-8 = 25. Neither = 92 - 25 = 67."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "What are the roots of x² - 6x + 5 = 0?",
+    "A": "{2, 6}",
+    "B": "{0, 5}",
+    "C": "{1, 5}",
+    "D": "{-1, -5}",
+    "correct": "C",
+    "explanation": "Factoring gives (x-(1))(x-(5)) = 0, so x = 1 or x = 5."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Two fair six-sided dice are rolled. What is the probability that the sum is 7?",
+    "A": "5/36",
+    "B": "6/35",
+    "C": "7/36",
+    "D": "1/6",
+    "correct": "D",
+    "explanation": "There are 6 outcomes (out of 36) that sum to 7, so P = 6/36 = 1/6."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the measure of each exterior angle of a regular polygon with 10 sides.",
+    "A": "36.0",
+    "B": "144.0",
+    "C": "41.0",
+    "D": "31.0",
+    "correct": "A",
+    "explanation": "Each exterior angle = 360/n = 360/10 ≈ 36.0°."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A circle has radius 5 cm. Find the area of a sector with a central angle of 120°. (Use π ≈ 3.14, round to 2 decimals.)",
+    "A": "26.18",
+    "B": "52.36",
+    "C": "29.18",
+    "D": "23.18",
+    "correct": "A",
+    "explanation": "Sector area = (θ/360)×πr² = (120/360)×3.14×5² ≈ 26.18 cm²."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the interquartile range of the data set: 8, 13, 18, 22, 30, 33, 52, 55.",
+    "A": "29.0",
+    "B": "27.0",
+    "C": "32.0",
+    "D": "25.0",
+    "correct": "B",
+    "explanation": "Q1 = 15.5, Q3 = 42.5. IQR = Q3 - Q1 = 27.0."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A cyclist rides at 75 km/h for 2 hours. How far does the cyclist travel?",
+    "A": "140 km",
+    "B": "160 km",
+    "C": "150 km",
+    "D": "225 km",
+    "correct": "C",
+    "explanation": "distance = speed × time = 75×2 = 150 km."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the measure of each exterior angle of a regular polygon with 6 sides.",
+    "A": "65.0",
+    "B": "55.0",
+    "C": "60.0",
+    "D": "120.0",
+    "correct": "C",
+    "explanation": "Each exterior angle = 360/n = 360/6 ≈ 60.0°."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Solve for x: 9x + (-4) = 50.",
+    "A": "6",
+    "B": "7",
+    "C": "8",
+    "D": "5",
+    "correct": "A",
+    "explanation": "9x = 50 - (-4) = 54 → x = 54/9 = 6."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A fair coin is flipped 4 times. What is the probability of getting exactly 1 heads?",
+    "A": "5/16",
+    "B": "4/17",
+    "C": "1/4",
+    "D": "3/16",
+    "correct": "C",
+    "explanation": "P = C(4,1)/2^4 = 4/16 = 1/4."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A bag contains 4 red, 6 blue, and 4 green balls. A ball is drawn, its color noted, and it is replaced. A second ball is then drawn. What is the probability that both balls are red?",
+    "A": "16/197",
+    "B": "2/7",
+    "C": "4/49",
+    "D": "9/196",
+    "correct": "C",
+    "explanation": "P = (4/14) × (4/14) = 4/49."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Worker A can complete a job in 8 days, and Worker B can complete the same job in 10 days. How long will it take them to complete the job together?",
+    "A": "41/9 days",
+    "B": "18 days",
+    "C": "39/9 days",
+    "D": "40/9 days",
+    "correct": "D",
+    "explanation": "Combined rate = 1/8 + 1/10 = 9/40. Time = 1/(9/40) = 40/9 days."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the least common multiple (LCM) of 53 and 48.",
+    "A": "2597",
+    "B": "2544",
+    "C": "2497",
+    "D": "2496",
+    "correct": "B",
+    "explanation": "LCM(53,48) = (53×48)/GCD(53,48) = 2544/1 = 2544."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "The ratio of boys to girls in a class is 3:4. If there are 28 students in total, how many girls are there?",
+    "A": "16",
+    "B": "21",
+    "C": "20",
+    "D": "12",
+    "correct": "A",
+    "explanation": "Total parts = 3+4 = 7. Each part = 28/7 = 4. Girls = 4×4 = 16."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A train travels 400 km in 5 hours. What is its average speed?",
+    "A": "80 km/h",
+    "B": "70 km/h",
+    "C": "90 km/h",
+    "D": "85 km/h",
+    "correct": "A",
+    "explanation": "speed = distance/time = 400/5 = 80 km/h."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A price of $305 is decreased by 30%. What is the new price?",
+    "A": "$214",
+    "B": "$209",
+    "C": "$219",
+    "D": "$275",
+    "correct": "A",
+    "explanation": "New price = 305 × (1 - 30/100) = 305 × 0.70 = $214."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A car travels 132 km at a constant speed of 80 km/h. How long does the trip take?",
+    "A": "1.65 hours",
+    "B": "1.15 hours",
+    "C": "2.15 hours",
+    "D": "2.65 hours",
+    "correct": "A",
+    "explanation": "time = distance/speed = 132/80 = 1.65 hours."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the simple interest on a principal of Birr 3000 at an annual rate of 4% for 5 years.",
+    "A": "Birr 900",
+    "B": "Birr 550",
+    "C": "Birr 650",
+    "D": "Birr 600",
+    "correct": "D",
+    "explanation": "SI = P×r×t/100 = 3000×4×5/100 = 600."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the midpoint of the segment connecting (1, -10) and (5, -7).",
+    "A": "(3, -17/2)",
+    "B": "(3, -15/2)",
+    "C": "(6, -17)",
+    "D": "(4, -17/2)",
+    "correct": "A",
+    "explanation": "Midpoint = ((x1+x2)/2, (y1+y2)/2) = ((1+5)/2, (-10+-7)/2) = (3, -17/2)."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Solve for x: 8x + (-19) = -91.",
+    "A": "-8",
+    "B": "-7",
+    "C": "-10",
+    "D": "-9",
+    "correct": "D",
+    "explanation": "8x = -91 - (-19) = -72 → x = -72/8 = -9."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the slope of the line passing through (0, -8) and (-1, -9).",
+    "A": "2",
+    "B": "0*",
+    "C": "0",
+    "D": "1",
+    "correct": "D",
+    "explanation": "Slope = (y2-y1)/(x2-x1) = (-9--8)/(-1-0) = 1."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the 5th term of the geometric sequence: 1, -2, 4, …",
+    "A": "32",
+    "B": "18",
+    "C": "14",
+    "D": "16",
+    "correct": "D",
+    "explanation": "aₙ = a₁·r^(n-1) = 1·(-2)^4 = 16."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "In a survey of 89 people, 18 like tea, 26 like coffee, and 7 like both. How many people like neither tea nor coffee?",
+    "A": "49",
+    "B": "55",
+    "C": "30",
+    "D": "52",
+    "correct": "D",
+    "explanation": "Like at least one = 18+26-7 = 37. Neither = 89 - 37 = 52."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "How many liters of a 30% acid solution must be mixed with a 40% acid solution to make 40 liters of a 35% acid solution?",
+    "A": "20.0 liters",
+    "B": "22.0 liters",
+    "C": "18.0 liters*",
+    "D": "18.0 liters",
+    "correct": "A",
+    "explanation": "Let x = liters of 30% solution. 30x + 40(40-x) = 35(40) → x = 20.0 liters."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the distance between the points (0, -7) and (-3, -1).",
+    "A": "4.71",
+    "B": "6.71",
+    "C": "8.71",
+    "D": "9",
+    "correct": "B",
+    "explanation": "Distance = √[(-3-0)² + (-1--7)²] = √45 ≈ 6.71."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Solve for x: 4x + (1) = -15.",
+    "A": "-2",
+    "B": "-5",
+    "C": "-3",
+    "D": "-4",
+    "correct": "D",
+    "explanation": "4x = -15 - (1) = -16 → x = -16/4 = -4."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the circumference of a circle with radius 3 cm. (Use π ≈ 3.14, round to 2 decimals.)",
+    "A": "15.85",
+    "B": "18.85",
+    "C": "21.85",
+    "D": "28.27",
+    "correct": "B",
+    "explanation": "Circumference = 2πr = 2×3.14×3 ≈ 18.85 cm."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A bag contains 6 red, 3 blue, and 6 green balls. Two balls are drawn at random without replacement. What is the probability that both balls are red?",
+    "A": "3/7",
+    "B": "6/35",
+    "C": "1/7",
+    "D": "5/42",
+    "correct": "C",
+    "explanation": "P = (6/15) × (5/14) = 1/7."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the range of the data set: 2, 6, 14, 16, 20, 26, 30, 32, 33.",
+    "A": "31",
+    "B": "36",
+    "C": "33",
+    "D": "29",
+    "correct": "A",
+    "explanation": "Range = max - min = 33 - 2 = 31."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the median of the data set: 11, 16, 19, 25, 27, 40.",
+    "A": "22.0",
+    "B": "23.0",
+    "C": "21.0",
+    "D": "24.0",
+    "correct": "A",
+    "explanation": "Sorted data's middle value(s) give a median of 22.0."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If x and y are real numbers such that x + y = 9 and xy = 18, find x³ + y³.",
+    "A": "252",
+    "B": "253",
+    "C": "243",
+    "D": "233",
+    "correct": "C",
+    "explanation": "x³+y³ = (x+y)³ - 3xy(x+y) = 9³ - 3(18)(9) = 729 - 486 = 243."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A store sells pens for $6 each and notebooks for $4 each. Hana buys 14 items total for $66, buying only pens and notebooks. How many pens did she buy?",
+    "A": "7",
+    "B": "6",
+    "C": "4",
+    "D": "5",
+    "correct": "D",
+    "explanation": "Let p = pens, notebooks = 14-p. 6p + 4(14-p) = 66 → (2)p = 10 → p = 5."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "What are the roots of x² - 1x - 20 = 0?",
+    "A": "{4, -5}",
+    "B": "{-5, 5}",
+    "C": "{-3, 6}",
+    "D": "{-4, 5}",
+    "correct": "D",
+    "explanation": "Factoring gives (x-(5))(x-(-4)) = 0, so x = 5 or x = -4."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the 25th term of the arithmetic sequence: 10, 15, 20, 25, …",
+    "A": "135",
+    "B": "130",
+    "C": "125",
+    "D": "140",
+    "correct": "B",
+    "explanation": "aₙ = a₁ + (n-1)d = 10 + (25-1)(5) = 130."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A price of $278 is decreased by 25%. What is the new price?",
+    "A": "$208",
+    "B": "$203",
+    "C": "$213",
+    "D": "$253",
+    "correct": "A",
+    "explanation": "New price = 278 × (1 - 25/100) = 278 × 0.75 = $208."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If f(x) = 6x + 4 and g(x) = 5x + 8, find g(f(1)).",
+    "A": "58",
+    "B": "66",
+    "C": "53",
+    "D": "63",
+    "correct": "A",
+    "explanation": "f(1) = 6(1)+4 = 10. g(10) = 5(10)+8 = 58."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A price of $315 is decreased by 15%. What is the new price?",
+    "A": "$263",
+    "B": "$273",
+    "C": "$300",
+    "D": "$268",
+    "correct": "D",
+    "explanation": "New price = 315 × (1 - 15/100) = 315 × 0.85 = $268."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the simple interest on a principal of Birr 2500 at an annual rate of 5% for 5 years.",
+    "A": "Birr 625",
+    "B": "Birr 875",
+    "C": "Birr 675",
+    "D": "Birr 575",
+    "correct": "A",
+    "explanation": "SI = P×r×t/100 = 2500×5×5/100 = 625."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "In how many distinct ways can 8 people be seated around a circular table?",
+    "A": "5040",
+    "B": "5032",
+    "C": "40320",
+    "D": "5048",
+    "correct": "A",
+    "explanation": "Circular permutations = (n-1)! = (8-1)! = 5040."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "An item is bought for Birr 863 and sold at a 10% profit. Find the selling price.",
+    "A": "Birr 873",
+    "B": "Birr 969",
+    "C": "Birr 929",
+    "D": "Birr 949",
+    "correct": "D",
+    "explanation": "SP = CP×(1+10/100) = 863×1.10 = 949."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Evaluate 9x² + (5)x when x = 2.",
+    "A": "37",
+    "B": "46",
+    "C": "51",
+    "D": "55",
+    "correct": "B",
+    "explanation": "9(2)² + (5)(2) = 36 + 10 = 46."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the simple interest on a principal of Birr 1500 at an annual rate of 4% for 6 years.",
+    "A": "Birr 510",
+    "B": "Birr 410",
+    "C": "Birr 360",
+    "D": "Birr 310",
+    "correct": "C",
+    "explanation": "SI = P×r×t/100 = 1500×4×6/100 = 360."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "In a survey of 83 people, 19 like tea, 18 like coffee, and 5 like both. How many people like neither tea nor coffee?",
+    "A": "48",
+    "B": "27",
+    "C": "51",
+    "D": "54",
+    "correct": "C",
+    "explanation": "Like at least one = 19+18-5 = 32. Neither = 83 - 32 = 51."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the sum of the first 7 terms of the geometric sequence: 3, 6, 12, …",
+    "A": "381",
+    "B": "762",
+    "C": "383",
+    "D": "379",
+    "correct": "A",
+    "explanation": "Sum = a₁(rⁿ-1)/(r-1) = 3((2)^7-1)/(2-1) = 381."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A car travels 205 km at a constant speed of 80 km/h. How long does the trip take?",
+    "A": "2.06 hours",
+    "B": "3.06 hours",
+    "C": "3.56 hours",
+    "D": "2.56 hours",
+    "correct": "D",
+    "explanation": "time = distance/speed = 205/80 = 2.56 hours."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "In a group, 50% of the items are blue. Of the blue items, 40% are also large. What percentage of all items are both blue and large?",
+    "A": "20.0%",
+    "B": "10%",
+    "C": "15.0%",
+    "D": "25.0%",
+    "correct": "A",
+    "explanation": "(40/100)×(50/100) = 0.2 = 20.0% of all items."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the circumference of a circle with radius 2 cm. (Use π ≈ 3.14, round to 2 decimals.)",
+    "A": "15.57",
+    "B": "9.57",
+    "C": "10.57",
+    "D": "12.57",
+    "correct": "D",
+    "explanation": "Circumference = 2πr = 2×3.14×2 ≈ 12.57 cm."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If x and y are real numbers such that x + y = 8 and xy = 11, find x³ + y³.",
+    "A": "248",
+    "B": "238",
+    "C": "258",
+    "D": "256",
+    "correct": "A",
+    "explanation": "x³+y³ = (x+y)³ - 3xy(x+y) = 8³ - 3(11)(8) = 512 - 264 = 248."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the volume of a sphere with radius 3 cm. (Use π ≈ 3.14, round to 2 decimals.)",
+    "A": "113.1",
+    "B": "93.1",
+    "C": "133.1",
+    "D": "94.1",
+    "correct": "A",
+    "explanation": "Volume = (4/3)πr³ = (4/3)×3.14×3³ ≈ 113.1 cm³."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the volume of a rectangular box with length 3 cm, width 3 cm, and height 6 cm.",
+    "A": "54",
+    "B": "51",
+    "C": "57",
+    "D": "27",
+    "correct": "A",
+    "explanation": "Volume = l×w×h = 3×3×6 = 54 cm³."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A price of $275 is increased by 5%. What is the new price?",
+    "A": "$294",
+    "B": "$289",
+    "C": "$284",
+    "D": "$280",
+    "correct": "B",
+    "explanation": "New price = 275 × (1 + 5/100) = 275 × 1.05 = $289."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A price of $290 is increased by 15%. What is the new price?",
+    "A": "$305",
+    "B": "$329",
+    "C": "$339",
+    "D": "$334",
+    "correct": "D",
+    "explanation": "New price = 290 × (1 + 15/100) = 290 × 1.15 = $334."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If f(x) = 2x + 4 and g(x) = 6x + 6, find g(f(6)).",
+    "A": "108",
+    "B": "97",
+    "C": "102",
+    "D": "96",
+    "correct": "C",
+    "explanation": "f(6) = 2(6)+4 = 16. g(16) = 6(16)+6 = 102."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the median of the data set: 4, 5, 11, 27, 29, 30, 31, 45.",
+    "A": "28.0",
+    "B": "29.0",
+    "C": "30.0",
+    "D": "27.0",
+    "correct": "A",
+    "explanation": "Sorted data's middle value(s) give a median of 28.0."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "What are the roots of x² + 0x - 64 = 0?",
+    "A": "{8, -8}",
+    "B": "{-8, 8}",
+    "C": "{-9, 8}",
+    "D": "{-7, 9}",
+    "correct": "B",
+    "explanation": "Factoring gives (x-(8))(x-(-8)) = 0, so x = 8 or x = -8."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Evaluate 8x² + (9)x when x = 0.",
+    "A": "8",
+    "B": "-8",
+    "C": "0",
+    "D": "9",
+    "correct": "C",
+    "explanation": "8(0)² + (9)(0) = 0 + 0 = 0."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the median of the data set: 9, 11, 21, 33, 39, 40, 46.",
+    "A": "33",
+    "B": "34",
+    "C": "32",
+    "D": "35",
+    "correct": "A",
+    "explanation": "Sorted data's middle value(s) give a median of 33."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the sum of the first 15 terms of the arithmetic sequence: 9, 14, 19, 24, …",
+    "A": "660",
+    "B": "665",
+    "C": "670",
+    "D": "655",
+    "correct": "A",
+    "explanation": "Sum = (n/2)[2a₁+(n-1)d] = (15/2)[18+70] = 660."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Simplify: 2^5 × 2^1.",
+    "A": "64",
+    "B": "32",
+    "C": "128",
+    "D": "33",
+    "correct": "A",
+    "explanation": "2^5 × 2^1 = 2^(5+1) = 2^6 = 64."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Worker A can complete a job in 3 days, and Worker B can complete the same job in 9 days. How long will it take them to complete the job together?",
+    "A": "8/4 days",
+    "B": "12 days",
+    "C": "10/4 days",
+    "D": "9/4 days",
+    "correct": "D",
+    "explanation": "Combined rate = 1/3 + 1/9 = 4/9. Time = 1/(4/9) = 9/4 days."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "The sum of a father's age and his son's age is 51, and the father is 23 years older than his son. How old is the son?",
+    "A": "16",
+    "B": "14",
+    "C": "37",
+    "D": "12",
+    "correct": "B",
+    "explanation": "Let son = x, father = x+23. 2x+23 = 51 → x = 14."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A bag contains 5 red, 3 blue, and 5 green balls. Two balls are drawn at random without replacement. What is the probability that both balls are red?",
+    "A": "5/12",
+    "B": "5/39",
+    "C": "25/156",
+    "D": "4/39",
+    "correct": "B",
+    "explanation": "P = (5/13) × (4/12) = 5/39."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If x and y are real numbers such that x + y = 4 and xy = 10, find x² + y².",
+    "A": "-14",
+    "B": "6",
+    "C": "0",
+    "D": "-4",
+    "correct": "D",
+    "explanation": "x²+y² = (x+y)² - 2xy = 4² - 2(10) = 16 - 20 = -4."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "In a group, 40% of the items are blue. Of the blue items, 25% are also large. What percentage of all items are both blue and large?",
+    "A": "5.0%",
+    "B": "10.0%",
+    "C": "15.0%",
+    "D": "15%",
+    "correct": "B",
+    "explanation": "(25/100)×(40/100) = 0.1 = 10.0% of all items."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the amount after 3 years if Birr 1000 is invested at 5% annual compound interest.",
+    "A": "Birr 1150",
+    "B": "Birr 1158",
+    "C": "Birr 1058",
+    "D": "Birr 1258",
+    "correct": "B",
+    "explanation": "A = P(1+r/100)^t = 1000(1+5/100)^3 = 1158."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Solve for x: 7x + (-8) = 48.",
+    "A": "9",
+    "B": "10",
+    "C": "8",
+    "D": "7",
+    "correct": "C",
+    "explanation": "7x = 48 - (-8) = 56 → x = 56/7 = 8."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "The ratio of boys to girls in a class is 3:4. If there are 42 students in total, how many girls are there?",
+    "A": "18",
+    "B": "24",
+    "C": "31",
+    "D": "30",
+    "correct": "B",
+    "explanation": "Total parts = 3+4 = 7. Each part = 42/7 = 6. Girls = 4×6 = 24."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A fair coin is flipped 4 times. What is the probability of getting exactly 3 heads?",
+    "A": "1/4",
+    "B": "3/16",
+    "C": "4/17",
+    "D": "5/16",
+    "correct": "A",
+    "explanation": "P = C(4,3)/2^4 = 4/16 = 1/4."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A price of $172 is decreased by 25%. What is the new price?",
+    "A": "$147",
+    "B": "$124",
+    "C": "$134",
+    "D": "$129",
+    "correct": "D",
+    "explanation": "New price = 172 × (1 - 25/100) = 172 × 0.75 = $129."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "How many distinct arrangements are there of all the letters in the word 'LETTER'?",
+    "A": "190",
+    "B": "180",
+    "C": "360",
+    "D": "170",
+    "correct": "B",
+    "explanation": "Total arrangements = 6!/(1×2×2×1) = 180."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the 6th term of the geometric sequence: 3, -6, 12, …",
+    "A": "-94",
+    "B": "-96",
+    "C": "-98",
+    "D": "-192",
+    "correct": "B",
+    "explanation": "aₙ = a₁·r^(n-1) = 3·(-2)^5 = -96."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If f(x) = 6x + 4, find f(5).",
+    "A": "28",
+    "B": "38",
+    "C": "34",
+    "D": "40",
+    "correct": "C",
+    "explanation": "f(5) = 6(5) + 4 = 34."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the interquartile range of the data set: 13, 19, 22, 37, 44, 48, 49, 51.",
+    "A": "28.0",
+    "B": "30.0",
+    "C": "26.0",
+    "D": "33.0",
+    "correct": "A",
+    "explanation": "Q1 = 20.5, Q3 = 48.5. IQR = Q3 - Q1 = 28.0."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the volume of a cube with edge length 10 cm.",
+    "A": "990",
+    "B": "30",
+    "C": "1000",
+    "D": "1010",
+    "correct": "C",
+    "explanation": "Volume = s³ = 10³ = 1000 cm³."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Evaluate: log base 5 of 3125.",
+    "A": "4",
+    "B": "7",
+    "C": "6",
+    "D": "5",
+    "correct": "D",
+    "explanation": "log_5(3125) = x means 5^x = 3125, so x = 5."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "An item is bought for Birr 837 and sold at a 10% profit. Find the selling price.",
+    "A": "Birr 921",
+    "B": "Birr 901",
+    "C": "Birr 847",
+    "D": "Birr 941",
+    "correct": "A",
+    "explanation": "SP = CP×(1+10/100) = 837×1.10 = 921."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the sum of the first 7 terms of the geometric sequence: 4, 12, 36, …",
+    "A": "4375",
+    "B": "4369",
+    "C": "4372",
+    "D": "8744",
+    "correct": "C",
+    "explanation": "Sum = a₁(rⁿ-1)/(r-1) = 4((3)^7-1)/(3-1) = 4372."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "In how many distinct ways can 6 people be seated around a circular table?",
+    "A": "120",
+    "B": "114",
+    "C": "126",
+    "D": "720",
+    "correct": "A",
+    "explanation": "Circular permutations = (n-1)! = (6-1)! = 120."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "The sum of a father's age and his son's age is 59, and the father is 23 years older than his son. How old is the son?",
+    "A": "16",
+    "B": "41",
+    "C": "20",
+    "D": "18",
+    "correct": "D",
+    "explanation": "Let son = x, father = x+23. 2x+23 = 59 → x = 18."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A store sells pens for $4 each and notebooks for $2 each. Hana buys 11 items total for $30, buying only pens and notebooks. How many pens did she buy?",
+    "A": "6",
+    "B": "4",
+    "C": "5",
+    "D": "3",
+    "correct": "B",
+    "explanation": "Let p = pens, notebooks = 11-p. 4p + 2(11-p) = 30 → (2)p = 8 → p = 4."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A store sells pens for $2 each and notebooks for $3 each. Hana buys 11 items total for $27, buying only pens and notebooks. How many pens did she buy?",
+    "A": "8",
+    "B": "7",
+    "C": "5",
+    "D": "6",
+    "correct": "D",
+    "explanation": "Let p = pens, notebooks = 11-p. 2p + 3(11-p) = 27 → (-1)p = -6 → p = 6."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "In how many ways can 4 people be selected and arranged in a row from a group of 6 people?",
+    "A": "366",
+    "B": "15",
+    "C": "354",
+    "D": "360",
+    "correct": "D",
+    "explanation": "P(6,4) = 6!/(6-4)! = 360."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the sum of the first 5 terms of the geometric sequence: 4, -8, 16, …",
+    "A": "44",
+    "B": "46",
+    "C": "42",
+    "D": "88",
+    "correct": "A",
+    "explanation": "Sum = a₁(rⁿ-1)/(r-1) = 4((-2)^5-1)/(-2-1) = 44."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A circle has radius 9 cm. Find the area of a sector with a central angle of 120°. (Use π ≈ 3.14, round to 2 decimals.)",
+    "A": "87.82",
+    "B": "84.82",
+    "C": "169.64",
+    "D": "81.82",
+    "correct": "B",
+    "explanation": "Sector area = (θ/360)×πr² = (120/360)×3.14×9² ≈ 84.82 cm²."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Evaluate 9x² + (-8)x when x = -2.",
+    "A": "44",
+    "B": "52",
+    "C": "43",
+    "D": "61",
+    "correct": "B",
+    "explanation": "9(-2)² + (-8)(-2) = 36 + 16 = 52."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "The sum of a father's age and his son's age is 40, and the father is 24 years older than his son. How old is the son?",
+    "A": "32",
+    "B": "6",
+    "C": "8",
+    "D": "10",
+    "correct": "C",
+    "explanation": "Let son = x, father = x+24. 2x+24 = 40 → x = 8."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A store sells pens for $2 each and notebooks for $4 each. Hana buys 14 items total for $36, buying only pens and notebooks. How many pens did she buy?",
+    "A": "12",
+    "B": "10",
+    "C": "9",
+    "D": "11",
+    "correct": "B",
+    "explanation": "Let p = pens, notebooks = 14-p. 2p + 4(14-p) = 36 → (-2)p = -20 → p = 10."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the amount after 3 years if Birr 5000 is invested at 20% annual compound interest.",
+    "A": "Birr 8540",
+    "B": "Birr 8740",
+    "C": "Birr 8640",
+    "D": "Birr 8000",
+    "correct": "C",
+    "explanation": "A = P(1+r/100)^t = 5000(1+20/100)^3 = 8640."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the population standard deviation of the data set: 8, 19, 10, 16, 17. (Round to 2 decimal places.)",
+    "A": "4.74",
+    "B": "3.74",
+    "C": "4.24",
+    "D": "5.24",
+    "correct": "C",
+    "explanation": "Mean = 14.00. Variance = average of squared deviations = 18.00. SD = √variance ≈ 4.24."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Evaluate 8x² + (4)x when x = 5.",
+    "A": "224",
+    "B": "228",
+    "C": "220",
+    "D": "212",
+    "correct": "C",
+    "explanation": "8(5)² + (4)(5) = 200 + 20 = 220."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Solve for x: 3^x = 243.",
+    "A": "6",
+    "B": "4",
+    "C": "5",
+    "D": "7",
+    "correct": "C",
+    "explanation": "3^x = 3^5, so x = 5."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A price of $218 is decreased by 20%. What is the new price?",
+    "A": "$169",
+    "B": "$198",
+    "C": "$179",
+    "D": "$174",
+    "correct": "D",
+    "explanation": "New price = 218 × (1 - 20/100) = 218 × 0.80 = $174."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "In how many ways can 3 people be selected and arranged in a row from a group of 8 people?",
+    "A": "344",
+    "B": "328",
+    "C": "336",
+    "D": "56",
+    "correct": "C",
+    "explanation": "P(8,3) = 8!/(8-3)! = 336."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If f(x) = 3x + 10 and g(x) = 2x + 3, find g(f(1)).",
+    "A": "27",
+    "B": "31",
+    "C": "29",
+    "D": "32",
+    "correct": "C",
+    "explanation": "f(1) = 3(1)+10 = 13. g(13) = 2(13)+3 = 29."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "What are the roots of x² + 6x + 5 = 0?",
+    "A": "{-6, -1}",
+    "B": "{5, 1}",
+    "C": "{-5, -1}",
+    "D": "{-4, 0}",
+    "correct": "C",
+    "explanation": "Factoring gives (x-(-1))(x-(-5)) = 0, so x = -1 or x = -5."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A store sells pens for $4 each and notebooks for $1 each. Hana buys 15 items total for $45, buying only pens and notebooks. How many pens did she buy?",
+    "A": "12",
+    "B": "10",
+    "C": "9",
+    "D": "11",
+    "correct": "B",
+    "explanation": "Let p = pens, notebooks = 15-p. 4p + 1(15-p) = 45 → (3)p = 30 → p = 10."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the interquartile range of the data set: 4, 8, 13, 33, 36, 37, 54, 59.",
+    "A": "37.0",
+    "B": "33.0",
+    "C": "35.0",
+    "D": "40.0",
+    "correct": "C",
+    "explanation": "Q1 = 10.5, Q3 = 45.5. IQR = Q3 - Q1 = 35.0."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the volume of a rectangular box with length 7 cm, width 10 cm, and height 8 cm.",
+    "A": "150",
+    "B": "567",
+    "C": "553",
+    "D": "560",
+    "correct": "D",
+    "explanation": "Volume = l×w×h = 7×10×8 = 560 cm³."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "An item is bought for Birr 557 and sold at a 10% loss. Find the selling price.",
+    "A": "Birr 547",
+    "B": "Birr 501",
+    "C": "Birr 521",
+    "D": "Birr 481",
+    "correct": "B",
+    "explanation": "SP = CP×(1-10/100) = 557×0.90 = 501."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the distance between the points (-3, 6) and (-5, 7).",
+    "A": "0.24",
+    "B": "4.24",
+    "C": "2.24",
+    "D": "3",
+    "correct": "C",
+    "explanation": "Distance = √[(-5--3)² + (7-6)²] = √5 ≈ 2.24."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "The ratio of boys to girls in a class is 4:5. If there are 72 students in total, how many girls are there?",
+    "A": "40",
+    "B": "48",
+    "C": "49",
+    "D": "32",
+    "correct": "A",
+    "explanation": "Total parts = 4+5 = 9. Each part = 72/9 = 8. Girls = 5×8 = 40."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Evaluate 3x² + (-9)x when x = -2.",
+    "A": "30",
+    "B": "33",
+    "C": "27",
+    "D": "21",
+    "correct": "A",
+    "explanation": "3(-2)² + (-9)(-2) = 12 + 18 = 30."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the volume of a cube with edge length 9 cm.",
+    "A": "729",
+    "B": "738",
+    "C": "720",
+    "D": "27",
+    "correct": "A",
+    "explanation": "Volume = s³ = 9³ = 729 cm³."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If f(x) = 4x + 2 and g(x) = 6x + 2, find g(f(2)).",
+    "A": "64",
+    "B": "56",
+    "C": "68",
+    "D": "62",
+    "correct": "D",
+    "explanation": "f(2) = 4(2)+2 = 10. g(10) = 6(10)+2 = 62."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "An item is bought for Birr 910 and sold at a 25% loss. Find the selling price.",
+    "A": "Birr 885",
+    "B": "Birr 682",
+    "C": "Birr 662",
+    "D": "Birr 702",
+    "correct": "B",
+    "explanation": "SP = CP×(1-25/100) = 910×0.75 = 682."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A circle has radius 5 cm. Find the area of a sector with a central angle of 60°. (Use π ≈ 3.14, round to 2 decimals.)",
+    "A": "10.09",
+    "B": "13.09",
+    "C": "16.09",
+    "D": "26.18",
+    "correct": "B",
+    "explanation": "Sector area = (θ/360)×πr² = (60/360)×3.14×5² ≈ 13.09 cm²."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the surface area of a cube with edge length 4 cm.",
+    "A": "100",
+    "B": "92",
+    "C": "64",
+    "D": "96",
+    "correct": "D",
+    "explanation": "Surface area = 6s² = 6×4² = 96 cm²."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the midpoint of the segment connecting (0, 4) and (-4, 6).",
+    "A": "(-2, 5)",
+    "B": "(-1, 5)",
+    "C": "(-2, 6)",
+    "D": "(-4, 10)",
+    "correct": "A",
+    "explanation": "Midpoint = ((x1+x2)/2, (y1+y2)/2) = ((0+-4)/2, (4+6)/2) = (-2, 5)."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Evaluate: log base 10 of 10000.",
+    "A": "5",
+    "B": "3",
+    "C": "4",
+    "D": "6",
+    "correct": "C",
+    "explanation": "log_10(10000) = x means 10^x = 10000, so x = 4."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If x and y are real numbers such that x + y = 7 and xy = 7, find x³ + y³.",
+    "A": "186",
+    "B": "203",
+    "C": "196",
+    "D": "206",
+    "correct": "C",
+    "explanation": "x³+y³ = (x+y)³ - 3xy(x+y) = 7³ - 3(7)(7) = 343 - 147 = 196."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If f(x) = 5x + 3, find f(5).",
+    "A": "28",
+    "B": "33",
+    "C": "23",
+    "D": "31",
+    "correct": "A",
+    "explanation": "f(5) = 5(5) + 3 = 28."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the mean of the data set: 9, 12, 23, 30, 34, 36, 38, 41, 44.",
+    "A": "31.67",
+    "B": "30.67",
+    "C": "27.67",
+    "D": "29.67",
+    "correct": "D",
+    "explanation": "Mean = sum/count = 267/9 = 29.67."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A circle has radius 10 cm. Find the area of a sector with a central angle of 60°. (Use π ≈ 3.14, round to 2 decimals.)",
+    "A": "49.36",
+    "B": "52.36",
+    "C": "55.36",
+    "D": "104.72",
+    "correct": "B",
+    "explanation": "Sector area = (θ/360)×πr² = (60/360)×3.14×10² ≈ 52.36 cm²."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A circle has radius 12 cm. Find the area of a sector with a central angle of 90°. (Use π ≈ 3.14, round to 2 decimals.)",
+    "A": "110.1",
+    "B": "116.1",
+    "C": "226.2",
+    "D": "113.1",
+    "correct": "D",
+    "explanation": "Sector area = (θ/360)×πr² = (90/360)×3.14×12² ≈ 113.1 cm²."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A bag contains 6 red, 6 blue, and 5 green balls. A ball is drawn, its color noted, and it is replaced. A second ball is then drawn. What is the probability that both balls are red?",
+    "A": "25/289",
+    "B": "18/145",
+    "C": "36/289",
+    "D": "6/17",
+    "correct": "C",
+    "explanation": "P = (6/17) × (6/17) = 36/289."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A right triangle has legs of length 6 and 8. What is the length of the hypotenuse?",
+    "A": "11",
+    "B": "10",
+    "C": "14",
+    "D": "9",
+    "correct": "B",
+    "explanation": "By the Pythagorean theorem, hypotenuse = √(6²+8²) = √100 = 10."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the midpoint of the segment connecting (2, -10) and (-4, -4).",
+    "A": "(-1, -7)",
+    "B": "(-1, -6)",
+    "C": "(-2, -14)",
+    "D": "(0, -7)",
+    "correct": "A",
+    "explanation": "Midpoint = ((x1+x2)/2, (y1+y2)/2) = ((2+-4)/2, (-10+-4)/2) = (-1, -7)."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the volume of a cylinder with radius 6 cm and height 4 cm. (Use π ≈ 3.14, round to 2 decimals.)",
+    "A": "452.39",
+    "B": "150.8",
+    "C": "462.39",
+    "D": "442.39",
+    "correct": "A",
+    "explanation": "Volume = πr²h = 3.14×6²×4 ≈ 452.39 cm³."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the simple interest on a principal of Birr 1000 at an annual rate of 10% for 5 years.",
+    "A": "Birr 600",
+    "B": "Birr 550",
+    "C": "Birr 450",
+    "D": "Birr 500",
+    "correct": "D",
+    "explanation": "SI = P×r×t/100 = 1000×10×5/100 = 500."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If f(x) = 4x + 8 and g(x) = 2x + 10, find g(f(1)).",
+    "A": "36",
+    "B": "34",
+    "C": "32",
+    "D": "44",
+    "correct": "B",
+    "explanation": "f(1) = 4(1)+8 = 12. g(12) = 2(12)+10 = 34."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "What are the roots of x² + 7x + 6 = 0?",
+    "A": "{-6, -1}",
+    "B": "{-5, 0}",
+    "C": "{6, 1}",
+    "D": "{-7, -1}",
+    "correct": "A",
+    "explanation": "Factoring gives (x-(-6))(x-(-1)) = 0, so x = -6 or x = -1."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Simplify: 5^5 × 5^1.",
+    "A": "3126",
+    "B": "78125",
+    "C": "3125",
+    "D": "15625",
+    "correct": "D",
+    "explanation": "5^5 × 5^1 = 5^(5+1) = 5^6 = 15625."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If x and y are real numbers such that x + y = 7 and xy = 11, find x³ + y³.",
+    "A": "112",
+    "B": "102",
+    "C": "122",
+    "D": "119",
+    "correct": "A",
+    "explanation": "x³+y³ = (x+y)³ - 3xy(x+y) = 7³ - 3(11)(7) = 343 - 231 = 112."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the median of the data set: 7, 9, 16, 21, 24, 26, 33, 36.",
+    "A": "24.5",
+    "B": "21.5",
+    "C": "22.5",
+    "D": "23.5",
+    "correct": "C",
+    "explanation": "Sorted data's middle value(s) give a median of 22.5."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "25% of a number is 149. What is the number?",
+    "A": "596",
+    "B": "606",
+    "C": "372",
+    "D": "586",
+    "correct": "A",
+    "explanation": "Let the number be x. 25/100 × x = 149 → x = 149/0.25 = 596."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If f(x) = 4x + 5, find f(5).",
+    "A": "25",
+    "B": "29",
+    "C": "30",
+    "D": "21",
+    "correct": "A",
+    "explanation": "f(5) = 4(5) + 5 = 25."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the sum of the first 12 terms of the arithmetic sequence: 8, 14, 20, 26, …",
+    "A": "492",
+    "B": "486",
+    "C": "498",
+    "D": "504",
+    "correct": "A",
+    "explanation": "Sum = (n/2)[2a₁+(n-1)d] = (12/2)[16+66] = 492."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A price of $197 is decreased by 20%. What is the new price?",
+    "A": "$177",
+    "B": "$158",
+    "C": "$153",
+    "D": "$163",
+    "correct": "B",
+    "explanation": "New price = 197 × (1 - 20/100) = 197 × 0.80 = $158."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Simplify: 3^5 × 3^4.",
+    "A": "19683",
+    "B": "59049",
+    "C": "6561",
+    "D": "3486784401",
+    "correct": "A",
+    "explanation": "3^5 × 3^4 = 3^(5+4) = 3^9 = 19683."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the greatest common divisor (GCD) of 66 and 23.",
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "1",
+    "correct": "D",
+    "explanation": "GCD(66,23) = 1."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the sum of the first 18 terms of the arithmetic sequence: 8, 11, 14, 17, …",
+    "A": "603",
+    "B": "606",
+    "C": "609",
+    "D": "600",
+    "correct": "A",
+    "explanation": "Sum = (n/2)[2a₁+(n-1)d] = (18/2)[16+51] = 603."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the midpoint of the segment connecting (8, 2) and (3, -5).",
+    "A": "(11/2, -1/2)",
+    "B": "(11/2, -3/2)",
+    "C": "(13/2, -3/2)",
+    "D": "(11, -3)",
+    "correct": "B",
+    "explanation": "Midpoint = ((x1+x2)/2, (y1+y2)/2) = ((8+3)/2, (2+-5)/2) = (11/2, -3/2)."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the sum of the first 7 terms of the geometric sequence: 4, -8, 16, …",
+    "A": "174",
+    "B": "172",
+    "C": "344",
+    "D": "170",
+    "correct": "B",
+    "explanation": "Sum = a₁(rⁿ-1)/(r-1) = 4((-2)^7-1)/(-2-1) = 172."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "In a survey of 46 people, 12 like tea, 11 like coffee, and 3 like both. How many people like neither tea nor coffee?",
+    "A": "26",
+    "B": "23",
+    "C": "17",
+    "D": "29",
+    "correct": "A",
+    "explanation": "Like at least one = 12+11-3 = 20. Neither = 46 - 20 = 26."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "How many liters of a 10% acid solution must be mixed with a 70% acid solution to make 40 liters of a 19% acid solution?",
+    "A": "36.0 liters",
+    "B": "34.0 liters",
+    "C": "6.0 liters",
+    "D": "32.0 liters",
+    "correct": "B",
+    "explanation": "Let x = liters of 10% solution. 10x + 70(40-x) = 19(40) → x = 34.0 liters."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "edge of this sample? In a group, 40% of the items are red. Of all the red items A) 0.98 in the group, 30% also have stripes. What percentage of",
+    "A": "10%",
+    "B": "12%",
+    "C": "70%",
+    "D": "75% Solve problems involving derived units Use percentages to solve problems density of a certain type of wood is 353 kilograms per cubic meter (kg/m ), and a sample of this type of wood in a group, 40% of the items are red. It follows that the number of red items in the group can be represented has a mass of 345 kg. Let x represent the volume, in m , by 0.4x, where x represents the total number of items in of the sample. It follows that the relationship between the the group. It’s also given that of all the red items in the density, mass, and volume of this sample can be written group, 30% also have stripes. It follows that the number 353 kg 345 kg 345 of items in the group that are red and have stripes can be as = , or 353 = . Multiplying both 1 m 3 x m 3 x represented by 0.3(0.4x), or 0.12x. The expression 0.12x sides of this equation by x yields 353x = 345. Dividing represents 12% of x. Since x represents the total number of items in the group, it follows that 12% of the items in both sides of this equation by 353 yields x = . the group are red and have stripes. 345 3 Therefore, the volume of this sample is m . Since may result from subtracting 30% from 40% rather than follows that the length of one edge of this sample can be calculating 30% of 40%. Choice C is incorrect and may result from adding 30% and 40% rather than calculating found using the volume formula for a cube, V = s , where 30% of 40%. Choice D is incorrect and may result from 3 V represents the volume, in m , and s represents the calculating the percentage that 30% is of 40% rather length, in m, of one edge of the cube. Substituting than calculating 30% of 40%. 345 3 for V in this formula yields = s . Taking the cube root 17 345 x of both sides of this equation yields 3 = s, or 2 = by 2 yields 4 = x. Therefore, the other tree is 353 2 s ≈ 0.99. Therefore, the length of one edge of this sample 4 feet tall. to the nearest hundredth of a meter is 0.99. may result from calculating the difference between the lengths of the shadows, rather than the height of incorrect and may result from conceptual or calculation the other tree. Choice C is incorrect and may result errors. from calculating the difference between the height of the 10-foot-tall tree and the length of the shadow of the other tree, rather than calculating the height of the",
+    "correct": "B",
+    "explanation": "Choice B is correct. It’s given that"
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "4. In a row of 8 chairs, A is sitting to the left of B and C is sitting to the right of A. If D is sitting at one end and E is sitting in the middle, which of the following must be true?",
+    "A": "A is sitting at the left end.",
+    "B": "B is sitting at the right end.",
+    "C": "C is sitting to the left of E.",
+    "D": "D is sitting next to A.",
+    "correct": "",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "5. The following data represents the number of hours grade 12 students spent studying for UAT exam Per day : 2, 3, 4, 5, 6, 7, 8, 9, 10. What is the interquartile range of this data?",
+    "A": "1/5",
+    "B": "4/21",
+    "C": "1/7",
+    "D": "2/5",
+    "correct": "",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "8. For Mr. Wendosen class to get a food party, the class average on the final must be at least 85%. The first fifteen students received an average of 82%. What is the lowest possible score that the 16th student can receive to still allow the class of 20 students to get a food party?",
+    "A": "5 months",
+    "B": "8 months",
+    "C": "10 months",
+    "D": "6 months",
+    "correct": "",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If f (x) = x + 7 and g(x) = 7x, what is the value of Skill Linear equations in two variables 4f (2) − g(2)? Make connections between an algebraic",
+    "A": "−5 representation and a graph",
+    "B": "1 Key Explanation: The correct answer is −32. It’s given",
+    "C": "22 that the y-intercept of the graph of y = −6x − 32 is (0, y). Substituting 0 for x in this equation yields y = −6(0) − 32",
+    "D": "28 or y = −32. Therefore, the value of y that corresponds to the y-intercept of the graph of y = −6x − 32 in the",
+    "correct": "C",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "11. The ratio of apples to oranges is 5:8. After taking away 15 apples, the ratio becomes 1:4. How much total fruit do we have after taking away the 15 apples?",
+    "A": "12",
+    "B": "18",
+    "C": "24",
+    "D": "36",
+    "correct": "",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Two pipes fill a tank in 6 and 8 hours respectively. If the first pipe fills for 2 hours and then both",
+    "A": "",
+    "B": "",
+    "C": "",
+    "D": "",
+    "correct": "",
+    "explanation": "Work done by pipe 1 in 2 hrs = 2×(1/6) = 1/3. Remaining work = 2/3. Combined rate = 1/6 + 1/8 ="
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Solve for x: x³ - 6x² + 11x - 6 = 0.",
+    "A": "",
+    "B": "",
+    "C": "",
+    "D": "",
+    "correct": "",
+    "explanation": "Factor: (x - 1)(x - 2)(x - 3) = 0 ⇒ x = 1, 2, 3."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "14. If 3x<48 and 2x>24, the x could equal which of the following?",
+    "A": "10                     B) 12 ---  ---",
+    "B": "",
+    "C": "14                     D) 18",
+    "D": "",
+    "correct": "",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "15. In how many different ways can the letters of the word 'MATH' be arranged so that the vowels always come together?",
+    "A": "12",
+    "B": "24",
+    "C": "36",
+    "D": "484",
+    "correct": "",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "16. 3/4 -2/3+1/2?",
+    "A": "7/12                                                                              B) 6/7 ---  ---------",
+    "B": "",
+    "C": "6                                                                                 D) 10",
+    "D": "",
+    "correct": "",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "17. Adis wanted to save an average of Birr20 per week over the past 15 weeks. For the first 5 weeks, he saved an average of Birr15 per week. For the next 5 weeks, he saved an average of Birr19 per week. For the last 5 weeks, he saved an average of Birr23 per week. How much more should he have saved each week to hit his goal?",
+    "A": "75 pieces of fruit",
+    "B": "80 pieces of fruit",
+    "C": "50 pieces of fruit",
+    "D": "90 pieces of fruit",
+    "correct": "",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "20. If the average of 6 numbers is 4.5, what is the sum of numbers?",
+    "A": "4.5                    B) 24 ---  ---",
+    "B": "",
+    "C": "1/4                    D) 7/3 DIRECTIONS:  Based  on  our  class  discussion  and additional  points,  answer following  questions accordingly and choose the correct answer. the",
+    "D": "",
+    "correct": "",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "For the function f, f (0) = 86, and for each increase in x by 1, the value of f (x) decreases by 80%. What is the 4 1 value of f (2)? Which expression is equivalent to – ? 4x−5 x +1 | | | Keys | 3.44, 86/25 | | | | ---------- | --- | ------ | ------------- | --- | --- | | A) ( )( | ) | | | | | | x +1 4x−5 | | | | | | | | | Domain | Advanced Math | | | | | | Skill | Nonlinear functions | | | | --- | --- | ----- | ------------------- | --- | --- |",
+    "A": "",
+    "B": "3x−6 Create and use quadratic or exponential | C)  ( )(   | )   |                                                          | functions |     |     | | ---------- | --- | -------------------------------------------------------- | --------- | --- | --- | | x +1  4x−5 |     |                                                          |           |     |     | | 1          |     | Key Explanation: The correct answer is 3.44. It’s given  |           |     |     | −",
+    "C": "",
+    "D": "( x +1  )( 4x−5 ) that f (0) = 86 and that for each increase in x by 1, the value of f (x) decreases by 80%. Because the output of the function decreases by a constant percentage for each 1-unit increase in the value of x, this relationship | Key A |     |     |     |     |     | | ----- | --- | --- | --- | --- | --- | can be represented by an exponential function of the | Domain Advanced Math |     |     |     |     |     | | -------------------- | --- | --- | --- | --- | --- | form f (x) = a(b)x, where a represents the initial value of the as a decimal. Because f (0) = 86, the value of a must be Rewrite a rational expression",
+    "correct": "",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "22. 52 - (2 x 6) + 17",
+    "A": "57                    B) 32 ---  ---",
+    "B": "",
+    "C": "48                    D) 33",
+    "D": "",
+    "correct": "",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the sum of the squares of the roots of x² - 5x + 6 = 0.",
+    "A": "",
+    "B": "",
+    "C": "",
+    "D": "",
+    "correct": "",
+    "explanation": "x² + y² = (sum of roots)² - 2(product of roots) = 5² - 2×6 = 25 - 12 = 13."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "If the sum of interior angles of a polygon is 1620°, how many sides does it have?",
+    "A": "",
+    "B": "",
+    "C": "",
+    "D": "",
+    "correct": "",
+    "explanation": "Sum = (n - 2)×180 = 1620 ⇒ n - 2 = 9 ⇒ n = 11 sides."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "store B, 35.75r + 44b = 363, yields (35.75r − 35.75r) + (44b − 19.5b) = (363 − 240.5), or Store A sells raspberries for $5.50 per pint and 24.5b = 122.5. Dividing both sides of this equation by blackberries for $3.00 per pint. Store B sells raspberries 24.5 yields b = 5. Thus, 5 pints of blackberries are in this for $6.50 per pint and blackberries for $8.00 per pint. A purchase. certain purchase of raspberries and blackberries would cost $37.00 at store A or $66.00 at store B. How many and may result from conceptual or calculation errors. pints of blackberries are in this purchase? Choice D is incorrect. This is the number of pints of",
+    "A": "12 raspberries, not blackberries, in the purchase.",
+    "B": "8",
+    "C": "5",
+    "D": "",
+    "correct": "",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "27. The ratio of x to y is 3:4. The ratio of y to z is 2:10. What is the ratio of x : z?",
+    "A": "2 liters",
+    "B": "4 liters",
+    "C": "6 liters",
+    "D": "8 liters",
+    "correct": "",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "shadow that is 5 feet long. At the same time, the shadow of the other tree is 2 feet long. How tall, in feet, is the other tree? The length of a rectangle’s diagonal is 5 17 , and the length of the rectangle’s shorter side is 5. What is the",
+    "A": "17",
+    "B": "20",
+    "C": "15 2",
+    "D": "400 Use concepts of congruence and similarity of triangles to solve problems Skill Right triangles and trigonometry Use the Pythagorean theorem to solve problems shadow can be modeled using a right triangle, where the height of the tree and the length of its shadow are the legs of the triangle. At a given point in time, the diagonal divides a rectangle into two congruent right right triangles formed by two nearby trees and their respective shadows will be similar. Therefore, if the triangles, where the diagonal is the hypotenuse of both height of the other tree is x, in feet, the value of x can triangles. It’s given that the length of the diagonal is be calculated by solving the proportional relationship 5 17and the length of the rectangle’s shorter side is 5. 10 feet tall x feet tall Therefore, each of the two right triangles formed by the = . This equation is equivalent to 5 feet long 2 feet long rectangle’s diagonal has a hypotenuse with length 5 17, 10 x x = , or 2 = . Multiplying each side of the equation and a shorter leg with length 5. To calculate the length of 5 2 2 the longer leg of each right triangle, the Pythagorean 18 2 2 2 theorem, a + b = c , can be used, where a and b are the Key Explanation: Choice D is correct. It’s given that the lengths of the legs and c is the length of the hypotenuse measure of arc AB is 45° and the length of arc AB is 3 inches. The arc measure of the full circle is 360°. If x of the triangle. Substituting 5 for a and 5 17for c in the 2 2 2 2 2 ( )2 represents the circumference, in inches, of the circle, it equation a + b = c yields 5 + b = 5 17 , which is ° 2 2 45 3 inches equivalent to 25 + b = 25(17), or 25 + b = 425. follows that ° = . This equation is 360 x inches Subtracting 25 from each side of this equation yields 45 3 1 3 b 2 = 400. Taking the positive square root of each side of equivalent to = , or = . Multiplying both 360 x 8 x this equation yields b = 20. Therefore, the length of the sides of this equation by 8x yields 1(x) = 3(8), or x = 24. longer leg of each right triangle formed by the diagonal of Therefore, the circumference of the circle is 24 inches. the rectangle is 20. It follows that the length of the rectangle’s longer side is 20. the length of arc AB. Choice B is incorrect and may result result from dividing the length of the rectangle’s diagonal incorrect and may result from squaring the length of by the length of the rectangle’s shorter side, rather arc AB. than substituting these values into the Pythagorean theorem. Choice C is incorrect and may result from using the length of the rectangle’s diagonal as the length of a leg of the right triangle, rather than the length of the hypotenuse. Choice D is incorrect. This is the square of the length of the rectangle’s longer side.",
+    "correct": "B",
+    "explanation": "Choice B is correct. A rectangle’s"
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "30. 2a3-2ab+b3=? , if a=3, b = -5",
+    "A": "41                     B) 48 ---  ---",
+    "B": "",
+    "C": "-41                    D) 40",
+    "D": "",
+    "correct": "",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "The sum of two numbers is 20, and the sum of their squares is 208. Find the numbers.",
+    "A": "",
+    "B": "",
+    "C": "",
+    "D": "",
+    "correct": "",
+    "explanation": "a + b = 20, a² + b² = 208. Using (a + b)² = a² + 2ab + b² ⇒ 400 = 208 + 2ab ⇒ 2ab = 192 ⇒ ab = 96."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "value of ab. Choice B is incorrect and may result from conceptual or calculation errors. Choice D is incorrect and may result from correctly finding the value of a as 6, The function h is defined by h (x) = ax + b, where a but multiplying it by the y-value in the first ordered pair and b are positive constants. The graph of y = h (x) in rather than by the value of b. the xy-plane passes through the points (0, 10) and  325 −2,  . What is the value of ab ?  36  Math question 33",
+    "A": "4 (x − 1)2 = −4",
+    "B": "Exactly two",
+    "C": "Infinitely many",
+    "D": "Zero Make connections between algebraic representations and a graph 14 do not have any common factors, each rational | Key D |     |     |     |     |     | | ----- | --- | --- | --- | --- | --- | expression should be rewritten with a denominator + | Domain Advanced Math |     |     |     | 4   | x  1  | | -------------------- | --- | --- | --- | --- | ----- | ( ) |                                                |     | of (x + 1)(4x – 5). Multiplying  |             | -  by                             | +     | | ---------------------------------------------- | --- | -------------------------------- | ----------- | --------------------------------- | ----- | |                                                |     |                                  |             | 4x 5                              | x  1  | | Skill Nonlinear equations in one variable and  |     |                                  |             | -                                 |       | |                                                |     |                                  | 1           | 4x 5                              |       | | systems of equations in two variables          |     |                                  | ( +         | )                                 |       | |                                                |     | and multiplying                  | x  1        |  by  -  yields                    |       | |                                                |     | ( +                              | )           | 4x 5                              |       | |                                                |     | 4 x                              | 1           | -                                 |       | | Determine the conditions under which a         |     |                                  |             | 4x 5                              |       | |                                                |     | ( + )(                           | - )  –  ( + | )( - )                            |       | |                                                |     | x  1  4x                         | 5 x         | 1  4x 5 . This expression can be  |       | quadratic equation has zero, one, two, or infinitely many real solutions rewritten using the distributive property, which yields |     |     | +   |     | -   |     | | --- | --- | --- | --- | --- | --- | |     |     | ( )( | ) (     | )( )                        |     | | --- | --- | ---- | ------- | --------------------------- | --- | |     |     | +    | -  –  + | - . Since the denominators  |     | that is positive or negative in value has a positive value  x  1  4x 5 x  1  4x 5 when squared. Therefore, the left-hand side of the given are the same, this expression is equivalent to equation is either positive or zero for any value of x. Since |     |     | + -     | +       |     |     | | --- | --- | ------- | ------- | --- | --- | |     |     | 4x   4  |  4x   5 | 9   |     | the right-hand side of the given equation is negative,  ( + )( - ) ( + )( - ) |     |     | x  1  | 4x 5 , or  x  | 1  4x 5 . |     | | --- | --- | ----- | ------------- | --------- | --- | there is no value of x for which the given equation is true. Thus, the number of distinct real solutions for the given equation is zero. incorrect and may result from conceptual or calculation | Distractor Explanations: Choices A, B, and C are  |     | errors. |     |     |     | | ------------------------------------------------- | --- | ------- | --- | --- | --- | incorrect and may result from conceptual errors.",
+    "correct": "C",
+    "explanation": "Choice D is correct. Any quantity  4x   4 4x 5"
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "34. The probability of Tomas being found guilty is 1/4 and the probability of Tesfaye being found guilty is 2/5. What is the probability that either of them is found guilty?",
+    "A": "10/21",
+    "B": "11/21",
+    "C": "2/7",
+    "D": "5/7",
+    "correct": "",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "A rectangular box has volume 120 cm³. If its length is twice its width and height is 3 cm, find",
+    "A": "",
+    "B": "",
+    "C": "",
+    "D": "",
+    "correct": "",
+    "explanation": "Volume = L×W×H = 2W×W×3 = 6W² = 120 ⇒ W² = 20 ⇒ W = 2√5 cm ⇒ L = 4√5 cm."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "38. The swimming pool can be filled by pipe A in 5 hours and by pipe B in 8 hours. How long would it take to fill the pool if both pipes were used?",
+    "A": "40/13 hours",
+    "B": "67/13 hours",
+    "C": "7 hours",
+    "D": "25/3 hours",
+    "correct": "",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "39. Total number of students is 55 and the ratio of Boys to Girls is 4:7. How many girls do we need to add for the ratio of boys to girls to become 1:2?",
+    "A": "3",
+    "B": "5",
+    "C": "7",
+    "D": "10",
+    "correct": "",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "41. Our country Ethiopia is known in long-distance running. In Paris Olympics, our Athletics Federation sends 5 athletes to compete in the men's marathon. Historically, 60% of our marathon runners finish in the top 10, what's the probability that exactly 3 of the 5 Ethiopian athletes will finish in the top 10 in Paris Olympic?",
+    "A": "10 x+ 7 y = 1 ax− 2by = 1",
+    "B": "10 x+ 7 y = 1 ax+ 2by = 1",
+    "C": "10 x+ 7 y = 1 2ax +by = 1",
+    "D": "5 x− 7 y = 1 ax +by = 1",
+    "correct": "",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "Find the value of x in 3^(2x - 1) = 81.",
+    "A": "",
+    "B": "",
+    "C": "",
+    "D": "",
+    "correct": "",
+    "explanation": "81 = 3⁴ ⇒ 3^(2x - 1) = 3⁴ ⇒ 2x - 1 = 4 ⇒ 2x = 5 ⇒ x = 5/2."
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "44. What is the hypotenuse if perpendicular of a triangle is 3cm and its base is 4 cm?",
+    "A": "9cm                   B) 16cm ---  ---",
+    "B": "",
+    "C": "25cm                  D) 5cm",
+    "D": "",
+    "correct": "",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "48. In triangle ABC Below, if AB =10 and AC= 20, what is the length of AD?",
+    "A": "5",
+    "B": "4√5",
+    "C": "63",
+    "D": "8√35",
+    "correct": "",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "49. 5/6 ÷ 3/4=",
+    "A": "18/20                   B) 20/18 ---  ---",
+    "B": "",
+    "C": "15 /24                  D) 20/43",
+    "D": "",
+    "correct": "",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "50. For a data with Q1 = 15 and Q3 = 35, if a new extreme value 100 is added, how is the interquartile range affected?",
+    "A": "Increases slightly",
+    "B": "Increases moderately",
+    "C": "Increases significantly",
+    "D": "Stays the same",
+    "correct": "",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "51. In a data: (x, 3, 7, 8, 10, 15), the median is 8. What is the value of x?",
+    "A": "74.75",
+    "B": "74",
+    "C": "73.5",
+    "D": "73",
+    "correct": "",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "In the xy-plane, a line with equation 2y = 4.5 intersects a parabola at exactly one point. If the parabola has equation y = −4x2 + bx, where b is a positive constant, what is the value of b ? At x = 32, which of the following is closest to the y-value systems of equations in two variables",
+    "A": "",
+    "B": "1.5 Solve systems of linear and nonlinear",
+    "C": "2.4 equations in two variables",
+    "D": "3.3 a line with equation 2y = 4.5 intersects a parabola with 2 Key C equation y = −4x + bx, where b is a positive constant, at exactly one point in the xy-plane. It follows that the Domain Problem-Solving and Data Analysis system of equations consisting of 2y = 4.5 and y = −4x + bx has exactly one solution. Dividing both sides of the equation of the line by 2 yields y = 2.25. Analyze and interpret data in a scatterplot Substituting 2.25 for y in the equation of the parabola 2 2 Key Explanation: Choice C is correct. At x = 32, the line yields 2.25 = −4x + bx. Adding 4x and subtracting bx 2 of best fit has a y-value between 2 and 3. The only choice from both sides of this equation yields 4x – bx + 2.25 = 0. 2 with a value between 2 and 3 is choice C. A quadratic equation in the form of ax + bx + c = 0, where a, b, and c are constants, has exactly one solution Distractor Explanations: Choice A is incorrect. This is when the discriminant, b − 4ac, is equal to zero. the difference between the y-value predicted by the line Substituting 4 for a and 2.25 for c in the expression of best fit and the actual y-value at x = 32 rather than b − 4ac and setting this expression equal to 0 yields the y-value predicted by the line of best fit at x = 32. 16 Choice B is incorrect. This is the y-value predicted by the",
+    "correct": "",
+    "explanation": "The correct answer is 6. It’s given that"
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "53. 5/20 is the same as",
+    "A": "0.20                   B) 0.25 ---  ---",
+    "B": "",
+    "C": "0.025                  D) 0.30",
+    "D": "",
+    "correct": "",
+    "explanation": ""
+  },
+  {
+    "subject": "quantitative_reasoning",
+    "question": "54. If it takes 5 people 12 hours to paint 3 identical houses, then how many hours will it take 4 people working at the same rate to paint 5 identical houses? Assume they work at the same rate.",
+    "A": "4",
+    "B": "6",
+    "C": "8",
+    "D": "10",
+    "correct": "",
+    "explanation": ""
+  }
+]
