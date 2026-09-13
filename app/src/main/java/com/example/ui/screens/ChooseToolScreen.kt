@@ -831,17 +831,19 @@ fun EnrollmentConfirmationModal(
                                     Row(
                                         modifier = Modifier.fillMaxWidth(),
                                         horizontalArrangement = Arrangement.SpaceBetween,
-                                        verticalAlignment = Alignment.CenterVertically
+                                        verticalAlignment = Alignment.Top
                                     ) {
                                         Text(
                                             text = trackLabel,
                                             style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
-                                            color = if (trackKey == "uat_all" && isSel) GoldLight else Color.White
+                                            color = if (trackKey == "uat_all" && isSel) GoldLight else Color.White,
+                                            modifier = Modifier.weight(1f).padding(end = 8.dp)
                                         )
                                         Text(
                                             text = trackPrice,
                                             style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
-                                            color = GoldAccent
+                                            color = GoldAccent,
+                                            modifier = Modifier.align(Alignment.CenterVertically)
                                         )
                                     }
                                     Spacer(modifier = Modifier.height(2.dp))

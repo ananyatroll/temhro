@@ -81,7 +81,7 @@ object TranslationManager {
             "btn_switch_program" to "Switch Program",
             "btn_go_back" to "Go Back",
             "btn_enroll_free_trial" to "Enroll in Free Trial",
-            "btn_unlock_package" to "Unlock Package (300 ETB)",
+            "btn_unlock_package" to "Unlock Package",
             "locked_package_modal_title" to "Package Locked",
             "locked_package_modal_desc" to "This package is locked. You have an active free trial on another package. Buy the full package for 300 ETB to unlock lifetime access to all subjects, notes, and past exams.",
 
@@ -98,7 +98,7 @@ object TranslationManager {
             "trial_inc_2" to "• Past national exam libraries with answers",
             "trial_inc_3" to "• Timed practice modes",
             "trial_inc_4" to "• Progressive subject track indicators",
-            "btn_go_premium" to "Go Premium (300 ETB)",
+            "btn_go_premium" to "Go Premium",
             "btn_activate_trial" to "Activate Free Trial",
             "btn_cancel_back" to "Cancel and Go Back",
 
@@ -391,7 +391,7 @@ object TranslationManager {
             "btn_switch_program" to "ፕሮግራም ይቀይሩ",
             "btn_go_back" to "ተመለስ",
             "btn_enroll_free_trial" to "በነፃ ትሪያል ይመዝገቡ",
-            "btn_unlock_package" to "ፓኬጅ ክፈት (300 ETB)",
+            "btn_unlock_package" to "ፓኬጅ ክፈት",
             "locked_package_modal_title" to "ፓኬጁ ተቆልፏል",
             "locked_package_modal_desc" to "ይህ ፓኬጅ ተቆልፏል። በሌላ ፓኬጅ ላይ ንቁ ነፃ ትሪያል አለዎት። የሁሉንም ትምህርቶች፣ ማስታወሻዎች እና ያለፉ ፈተናዎች የሕይወት ዘመን መዳረሻ ለማግኘት ሙሉውን ፓኬጅ በ300 ETB ይግዙ።",
 
@@ -408,7 +408,7 @@ object TranslationManager {
             "trial_inc_2" to "• ያለፉ ብሔራዊ ፈተናዎች ቤተ-መጻሕፍት ከ መልሶች ጋር",
             "trial_inc_3" to "• በጊዜ የተገደቡ የልምምድ ሞዶች",
             "trial_inc_4" to "• የእድገት ትራክ አመልካቾች",
-            "btn_go_premium" to "ወደ ፕሪሚየም እድግ (300 ETB)",
+            "btn_go_premium" to "ወደ ፕሪሚየም እድግ",
             "btn_activate_trial" to "ነፃ ትሪያል አንቃ",
             "btn_cancel_back" to "ሰርዝ እና ተመለስ",
 
@@ -690,7 +690,7 @@ object TranslationManager {
             "btn_switch_program" to "Puroograama Jijjiiraa",
             "btn_go_back" to "Gara Duubatti Deebi'aa",
             "btn_enroll_free_trial" to "Yaalii Bilisaatiin Galmaa'aa",
-            "btn_unlock_package" to "Paakeejii Banaa (300 ETB)",
+            "btn_unlock_package" to "Paakeejii Banaa",
             "locked_package_modal_title" to "Paakeejiin Cufameera",
             "locked_package_modal_desc" to "Paakeejiin kuni cufamaadha. Paakeejii biraa irratti yaalii bilisaa hojiirra jiru qabdu. Barnoota, yaadannoo fi qormaata darban hunda bara baraaf banachuuf paakeejii guutuu Birrii 300n bitadhaa.",
 
@@ -707,7 +707,7 @@ object TranslationManager {
             "trial_inc_2" to "• Kuusaa qormaata biyoolessaa darban deebii wajjin",
             "trial_inc_3" to "• Akkaataa shaakala yeroodhaan daangeffame",
             "trial_inc_4" to "• Agarsiistuu guddina saabjektii",
-            "btn_go_premium" to "Gara Pirimiyaamiitti Guddisaa (300 ETB)",
+            "btn_go_premium" to "Gara Pirimiyaamiitti Guddisaa",
             "btn_activate_trial" to "Yaalii Bilisaa Hoojjirra Oolchaa",
             "btn_cancel_back" to "Haqiitii Gara Duubatti Deebi'aa",
 
@@ -989,7 +989,7 @@ object TranslationManager {
             "btn_switch_program" to "ፕሮግራም ቐይሩ",
             "btn_go_back" to "ናብ ድሕሪት ተመለሱ",
             "btn_enroll_free_trial" to "ብነጻ ትሪያል ተመዝገቡ",
-            "btn_unlock_package" to "ፓኬጅ ክፈቱ (300 ETB)",
+            "btn_unlock_package" to "ፓኬጅ ክፈቱ",
             "locked_package_modal_title" to "ፓኬጅ ተቖሊፉ እዩ",
             "locked_package_modal_desc" to "እዚ ፓኬጅ ተቖሊፉ እዩ። ኣብ ካልእ ፓኬጅ ነጻ ትሪያል አለኩም። ናይ ኵሎም ሰብጀክታት፣ ማስታወሻታትን ዝሓለፉ ፈተናታትን ናይ ህይወት ዘመን መበጻሕታ ንምርካብ ምሉእ ፓኬጅ ብ 300 ETB ይግዝኡ።",
 
@@ -1006,7 +1006,7 @@ object TranslationManager {
             "trial_inc_2" to "• ዝሓለፉ ብሄራዊ ፈተናታት ላይብረሪታት ምስ መልስታት",
             "trial_inc_3" to "• ብጊዜ ዝተገደቡ ናይ ተግባር ሞዳት",
             "trial_inc_4" to "• ዕብየትኩም ዘርእዩ ናይ ሰብጀክት ትራክ አመልካችታት",
-            "btn_go_premium" to "ናብ ፕሪሚየም ዐብዩ (300 ETB)",
+            "btn_go_premium" to "ናብ ፕሪሚየም ዐብዩ",
             "btn_activate_trial" to "ነጻ ትሪያል ኣነቓቕሑ",
             "btn_cancel_back" to "ሰርዝ ва ናብ ድሕሪት ተመለሱ",
 
@@ -1288,7 +1288,7 @@ object TranslationManager {
             "btn_switch_program" to "Badal Barnaamijka",
             "btn_go_back" to "Roor Xagga Dambe",
             "btn_enroll_free_trial" to "Iska Diwaan geli Tijaabada Bilaashka ah",
-            "btn_unlock_package" to "Fura Xurmada (300 ETB)",
+            "btn_unlock_package" to "Fura Xurmada",
             "locked_package_modal_title" to "Xurmadu waan Xiran tahay",
             "locked_package_modal_desc" to "Xurmadani waa tan xiran. Waxaad leedahay tijaabo bilaash ah oo firfircoon xurmo kale. Soo ibso xurmada buuxda 300 ETB si aad u hesho helitaanka nolosha oo dhan ee dhammaan maadooyinka, qoraallada, iyo imtixaannadii hore.",
 
@@ -1305,7 +1305,7 @@ object TranslationManager {
             "trial_inc_2" to "• Maktabadaha imtixaannadii hore ee qaranka oo leh jawaabo",
             "trial_inc_3" to "• Modedyada tababarka ee wakhtiga leh",
             "trial_inc_4" to "• Tilmaamayaasha horumarka maaddada",
-            "btn_go_premium" to "U gudub Premium (300 ETB)",
+            "btn_go_premium" to "U gudub Premium",
             "btn_activate_trial" to "Shuqulaysii Tijaabada Bilaashka ah",
             "btn_cancel_back" to "Kansal gareey oo Dib u noqo",
 

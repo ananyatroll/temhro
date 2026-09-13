@@ -44,8 +44,9 @@ fun SavedNotesDialog(
     val allNotes by viewModel.allDatabaseNotes.collectAsState()
     val subjectsList by viewModel.subjects.collectAsState()
 
-    val savedNotes = remember(savedIds, allNotes) {
-        allNotes.filter { savedIds.contains(it.id) }
+    val savedNotes = remember(savedIds, allNotes, subjectsList) {
+        val activeSubjectIds = subjectsList.map { it.id }.toSet()
+        allNotes.filter { savedIds.contains(it.id) && activeSubjectIds.contains(it.subjectId) }
     }
 
     Dialog(
@@ -199,8 +200,9 @@ fun SavedFlashcardsDialog(
     val allCards by viewModel.allDatabaseFlashcards.collectAsState()
     val subjectsList by viewModel.subjects.collectAsState()
 
-    val savedCards = remember(savedIds, allCards) {
-        allCards.filter { savedIds.contains(it.id) }
+    val savedCards = remember(savedIds, allCards, subjectsList) {
+        val activeSubjectIds = subjectsList.map { it.id }.toSet()
+        allCards.filter { savedIds.contains(it.id) && activeSubjectIds.contains(it.subjectId) }
     }
 
     Dialog(
@@ -362,8 +364,9 @@ fun SavedQuestionsDialog(
     val allQuestions by viewModel.allDatabaseQuestions.collectAsState()
     val subjectsList by viewModel.subjects.collectAsState()
 
-    val savedQuestions = remember(savedIds, allQuestions) {
-        allQuestions.filter { savedIds.contains(it.id) }
+    val savedQuestions = remember(savedIds, allQuestions, subjectsList) {
+        val activeSubjectIds = subjectsList.map { it.id }.toSet()
+        allQuestions.filter { savedIds.contains(it.id) && activeSubjectIds.contains(it.subjectId) }
     }
 
     Dialog(

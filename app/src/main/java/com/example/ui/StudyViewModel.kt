@@ -336,7 +336,7 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
     val activeMode: StateFlow<String> = repository.userProgress
         .map { progress ->
             val pkg = progress?.activePackageId
-            if (pkg == "exit_exam" || pkg == "euee_natural" || pkg == "euee_social" || pkg == "euee") {
+            if (pkg == "exit_exam") {
                 "exit_exam"
             } else {
                 "department"

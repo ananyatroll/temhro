@@ -146,12 +146,32 @@ fun ContentPlayView(viewModel: StudyViewModel) {
             || (activeSub?.packageId?.startsWith("uat") == true)
             || (activeSub?.packageId?.startsWith("coc") == true)
 
+    val allNotes by viewModel.allDatabaseNotes.collectAsState()
+    val allQuestions by viewModel.allDatabaseQuestions.collectAsState()
+    val allFlashcards by viewModel.allDatabaseFlashcards.collectAsState()
+    val subjectsList by viewModel.subjects.collectAsState()
+    
+    val scopedNotesCount = remember(savedNotesSet, allNotes, subjectsList) {
+        val validSubjectIds = subjectsList.map { it.id }.toSet()
+        allNotes.count { savedNotesSet.contains(it.id) && validSubjectIds.contains(it.subjectId) }
+    }
+    
+    val scopedQuestionsCount = remember(savedQuestionsSet, allQuestions, subjectsList) {
+        val validSubjectIds = subjectsList.map { it.id }.toSet()
+        allQuestions.count { savedQuestionsSet.contains(it.id) && validSubjectIds.contains(it.subjectId) }
+    }
+    
+    val scopedFlashcardsCount = remember(savedFlashcardsSet, allFlashcards, subjectsList) {
+        val validSubjectIds = subjectsList.map { it.id }.toSet()
+        allFlashcards.count { savedFlashcardsSet.contains(it.id) && validSubjectIds.contains(it.subjectId) }
+    }
+
     if (showSavedPicker) {
         SavedMaterialPickerModal(
             subjectName = activeSub?.name,
-            savedNotesCount = savedNotesSet.size,
-            savedQuestionsCount = savedQuestionsSet.size,
-            savedFlashcardsCount = savedFlashcardsSet.size,
+            savedNotesCount = scopedNotesCount,
+            savedQuestionsCount = scopedQuestionsCount,
+            savedFlashcardsCount = scopedFlashcardsCount,
             currentLang = currentLang,
             isDarkTheme = isDarkTheme,
             isQuestionsOnlyPackage = isPkgQuestionsOnly,
