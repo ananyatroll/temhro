@@ -1,7 +1,14 @@
-CLICK HERE🎠 GET PREMIUM
+# Disclaimer
 
-Applied Mathematics I (Math 1014B)
-CHAPTER ONE
+The content provided in these notes is for educational and informational purposes only. While every effort has been made to ensure accuracy, the author makes no warranties or guarantees regarding the completeness, reliability, or suitability of the information contained herein. Users are encouraged to verify all information with original sources and consult qualified professionals before making decisions based on this material. This content may not be reproduced, distributed, or transmitted without prior written permission from Tamhero.
+
+---
+
+# Applied Mathematics I (Math 1041 / 1014B) Lecture Notes
+
+---
+
+## Chapter 1: Vectors and Vector Spaces
 VECTORS AND VECTOR SPACES
 1.1. Scalar and vectors in ℝ𝟐 𝒂𝒏𝒅 ℝ𝟑
 Definitions: a) A scalar is a physical quantity that is described by its magnitude only.
@@ -38,9 +45,6 @@ a b X
 Definition (Parallel / collinear Vectors)
 Definition Two non – zero vectors 𝑢⃗ 𝑎𝑛𝑑 𝑣 of the same dimension are said to be parallel or,
 alternatively, collinear if at least one of the vectors is a scalar multiple of the other. If one of
-Page 1
-
-Applied Mathematics I (Math 1014B)
 the vectors is a positive scalar multiple of the other, then the vectors are said to have the
 same direction, and if one of them is a negative scalar multiple of the other, then the vectors
 are said to have opposite directions. In other words, the two vectors 𝑢⃗ 𝑎𝑛𝑑 𝑣 are said to be
@@ -74,9 +78,6 @@ V
 A B
 U
 b) The Parallelogram Law
-Page 2
-
-Applied Mathematics I (Math 1014B)
 Addition of vectors on the coordinate plane
 Let 𝑣 = (𝑣 ,𝑣 ) 𝑎𝑛𝑑 𝑤⃗⃗ = (𝑤 ,𝑤 ) then →+→ = (𝑣 +𝑤 ,𝑣 +𝑤 ).
 1 2 1 2 1 1 2 2
@@ -89,10 +90,6 @@ a) U + V b) 2U c) V -2U
 Solution: a) U+V= (-1,0,1) + (2,-1,5 ) = (1,-1,6)
 b) 2U = 2 (-1,0,1) = (-2 , 0 , 2)
 c) V -2U = (2,-1,5 )-2(-1,0,1)= (4 ,-1 ,3)
-Page 3
-
-Applied Mathematics I (Math 1014B)
-
    Properties of Vector addition & Scalar Multiplication
 Let 𝑢⃗ ,𝑣  and 𝑤⃗⃗  be vectors in ℝ2 and 𝑐  & 𝑚 are scalars. Then:
 a)  𝑢⃗  +𝑣  ∈ ℝ2
@@ -117,10 +114,7 @@ Definition: Let 𝑣  = (𝑣 ,𝑣 ,𝑣 ) be a vector in ℝ3. Then the magnit
 |     | 1 2 3 |     |     |     |
 | --- | ----- | --- | --- | --- |
 by ‖𝑣 ‖ is defined by:
-  Page 4
-
-Applied Mathematics I (Math 1014B)
-|                                                                 |     |      |  ‖𝑣 ‖2 = (𝑂𝑅)2              | +(𝑃𝑅)2   | = (𝑂𝑄)2 +(𝑄𝑅)2 | +(𝑃𝑅)2  |
+  |                                                                 |     |      |  ‖𝑣 ‖2 = (𝑂𝑅)2              | +(𝑃𝑅)2   | = (𝑂𝑄)2 +(𝑄𝑅)2 | +(𝑃𝑅)2  |
 | --------------------------------------------------------------- | --- | ---- | --------------------------- | -------- | -------------- | ------- |
 |                                                            ‖𝑣 ‖ |     |      | = √𝑣2                       | +𝑣2 +𝑣2  |                |         |
 |                                                                 |     |      | 1                           | 2 3      |                |         |
@@ -163,10 +157,7 @@ N.B: 1. All unit vectors in ℝ2 are of the form (cos𝜃 ,sin𝜃),𝑤ℎ𝑒�
 |     |     | 1 2 | 1 2 |     |     |     |
 | --- | --- | --- | --- | --- | --- | --- |
 between the two points, as :
-  Page 5
-
-Applied Mathematics I (Math 1014B)
-|     |     |   𝑑 (Ρ,𝑄) |     | = ‖Ρ⃗⃗⃗⃗𝑄⃗ ‖ | =   | √(𝑣 −𝑢 )2+(𝑣 | −𝑢 )2,    |
+  |     |     |   𝑑 (Ρ,𝑄) |     | = ‖Ρ⃗⃗⃗⃗𝑄⃗ ‖ | =   | √(𝑣 −𝑢 )2+(𝑣 | −𝑢 )2,    |
 | --- | --- | --------- | --- | ------------ | --- | ------------ | --------- |
 |     |     |           |     |              |     | 1 1          | 2 2       |
 where Ρ⃗⃗⃗⃗𝑄⃗  is the vector  with initial point P and terminal point Q,     Ρ⃗⃗⃗⃗𝑄⃗  = (𝑣 −𝑢  ,𝑣 −𝑢 ).
@@ -218,10 +209,7 @@ Properties of the dot product
 ‖𝑢⃗ ‖2                                   4. 0 ∙𝑢⃗
 |     | 1. 𝑢⃗  ∙𝑢⃗  = |     |     |     |     | = 0  |     |
 | --- | ------------- | --- | --- | --- | --- | ---- | --- |
-  Page 6
-
-Applied Mathematics I (Math 1014B)
-2. 𝑢⃗  ∙𝑣  = 𝑣  ∙𝑢⃗                                     5. (𝑐 𝑢⃗  )∙𝑣  = 𝑐 (𝑢⃗ ∙𝑣 ) = 𝑣  ∙(𝑐 𝑢⃗  )
+  2. 𝑢⃗  ∙𝑣  = 𝑣  ∙𝑢⃗                                     5. (𝑐 𝑢⃗  )∙𝑣  = 𝑐 (𝑢⃗ ∙𝑣 ) = 𝑣  ∙(𝑐 𝑢⃗  )
       3. 𝑢⃗  ∙(𝑣  +𝑤⃗⃗ ) = 𝑢⃗  ∙𝑣  +𝑢⃗  ∙𝑤⃗⃗           6. 𝑢⃗  ∙𝑢⃗  ≥ 0 𝑎𝑛𝑑 𝑢⃗  ∙𝑢⃗  = 0 𝑖𝑓𝑓 𝑢⃗  = 0.
 1.3.3. Angle between two vectors
 If 𝜃 is the angle between two non – zero vectors 𝑢⃗  𝑎𝑛𝑑 𝑣 , then, the angle between the two
@@ -268,10 +256,7 @@ A
 𝑝𝑟𝑜𝑗𝐵 = 𝑃⃗⃗⃗⃗𝑆  = 𝑡𝐴 ⟹  𝐵−𝑝𝑟𝑜𝑗𝐵 = 𝑆⃗⃗⃗⃗𝑅⃗  ⟹  (𝐵−𝑝𝑟𝑜𝑗𝐵).A=0 ⟹ (B- t A).A =0 ⟹ B.A –t A.A =0
 | 𝐴   |     | 𝐴   | 𝐴   |     |
 | --- | --- | --- | --- | --- |
-  Page 7
-
-Applied Mathematics I (Math 1014B)
-|     ⟹   𝒕 | =    | 𝑨∙𝑩  ⟹  𝑝𝑟𝑜𝑗𝐵 |     | 𝑃⃗⃗⃗⃗𝑆  | 𝒕.𝑨= | 𝑨∙𝑩  |     |     |     |     |     |     |     |
+  |     ⟹   𝒕 | =    | 𝑨∙𝑩  ⟹  𝑝𝑟𝑜𝑗𝐵 |     | 𝑃⃗⃗⃗⃗𝑆  | 𝒕.𝑨= | 𝑨∙𝑩  |     |     |     |     |     |     |     |
 | --------- | ---- | ------------- | --- | ------- | ---- | ---- | --- | --- | --- | --- | --- | --- | --- |
 |           |      |               |     | =       | =    |      | 𝐴   |     |     |     |     |     |     |
 |           | ‖𝑨‖𝟐 |               | 𝐴   |         |      | ‖𝑨‖𝟐 |     |     |     |     |     |     |     |
@@ -324,9 +309,8 @@ From this relation we can deduce a unit vector
 | Remark: 𝑐𝑜𝑠2𝛼+𝑐𝑜𝑠2𝛽       |     |     |                                                    | +𝑐𝑜𝑠2𝛾 |     |               |     |     |     |     |     |     |         |
 |                           |     |     |                                                    |        | =   | 1. (Verify!)  |     |     |     |     |     |     |         |
 | Exercise: Let 𝐴           |     | =   | (−1,2,2). Then find the directional cosines of A.  |        |     |               |     |     |     |     |     |     |         |
-|                           |     |     |                                                    |        |     |               |     |     |     |     |     |     | Page 8  |
+|                           |     |     |                                                    |        |     |               |     |     |     |     |     |     |   |
 
-Applied Mathematics I (Math 1014B)
 1.4. The Cross (or Vector) Product and Triple Products
 Given two nonzero vectors 𝐴 = (𝑎 ,𝑎 ,𝑎 ) = 𝑎 𝑖+𝑎 𝑗+𝑎 𝑘 and 𝐵 = (𝑏 ,𝑏 ,𝑏 ) = 𝑏 𝑖 +
 1 2 3 1 2 3 1 2 3 1
@@ -372,9 +356,6 @@ Or 𝐴𝑋𝐵 = 𝐷𝑒𝑡 (𝑎 𝑎 𝑎 )
 1 2 3
 Example: Let 𝐴 = 4𝑖 −3𝑗+2𝑘
 𝐵 = 2𝑖 −5𝑗−𝑘
-Page 9
-
-Applied Mathematics I (Math 1014B)
      Then find a) 𝐴×𝐵                                                b) 𝐵×𝐴
 Remarks: For two non – zero vectors A & B,
 1.  𝐴×𝐵 is a vector which is orthogonal to both A and B.
@@ -409,10 +390,7 @@ Let A, B and C be vectors in ℝ3 and 𝛼 be any scalar. Then:
 𝜋
 Example: If ‖𝐴‖ = 2 ,‖Β‖ = 4 𝑎𝑛𝑑 𝜃 = ⁄  for two vectors A and B then find ‖𝐴×Β‖.
 4
-  Page 10
-
-Applied Mathematics I (Math 1014B)
-‖𝐴×Β‖
+  ‖𝐴×Β‖
 Note: The angle 𝜃 between A and B can be obtained by sin𝜃 = , for two non – zero
 ‖𝐴‖ ‖Β‖
 vectors A and B.
@@ -448,9 +426,6 @@ BXC
 A
 B
 C
-Page 11
-
-Applied Mathematics I (Math 1014B)
 |     |     |     |     |     | 𝐴   | 𝐴∙(𝐵×𝐶) |     | |𝐴∙(𝐵×𝐶)| |     |
 | --- | --- | --- | --- | --- | --- | ------- | --- | --------- | --- |
 (𝐵×𝐶)‖
@@ -508,10 +483,7 @@ Let Ρ  (𝑥 ,𝑦 ,𝑧 ) be a given point on a line ℓ and 𝑃 (𝑥,𝑦,�
 (3) The vector equation of ℓ is written as 𝒓⃗ −𝒓⃗  = 𝒕𝒗⃗⃗ ,𝑤ℎ𝑒𝑟𝑒 𝑡 ∈ ℜ.
 𝟎
     Remarks:
-  Page 12
-
-Applied Mathematics I (Math 1014B)
-1.  The above equations of the line can be derived using vector algebra as follows:
+  1.  The above equations of the line can be derived using vector algebra as follows:
 Z
 p
 P
@@ -568,10 +540,7 @@ Suppose that 𝑃 (𝑥,𝑦,𝑧) be any arbitrary point in the plane, and let 
 |                  |     |     |     |            |     |        | 𝟎   | 𝟎 𝟎    |
           (general or standard form of the equation of a plane).
 Examples:
-  Page 13
-
-Applied Mathematics I (Math 1014B)
-1.  Find the equations of a line that contains the point (1,4,−1) and parallel to 𝑣  =
+  1.  Find the equations of a line that contains the point (1,4,−1) and parallel to 𝑣  =
 | −2𝑖             | +3𝑗.  |                  |       |
 | --------------- | ----- | ---------------- | ----- |
 | Solution: let Ρ | =     | 〈1 ,4,−1) =(𝑥 ,𝑦 | ,𝑧 )  |
@@ -618,10 +587,7 @@ The distance D from a point Ρ  (not on ℓ) to a line ℓ in space is given by:
 |     |     | 𝒗⃗ ⃗  | Ο   |
 | --- | --- | ----- | --- |
 Proof:
-  Page 14
-
-Applied Mathematics I (Math 1014B)
-Z
+  Z
 P
 |     |     | 1   | L   |     |
 | --- | --- | --- | --- | --- |
@@ -676,12 +642,9 @@ Proof: Consider the diagram below:
 |       |     |           | 1          | 1 1    |
 √𝑎2+𝑏2+𝑐2
 
-  Page 15
-
-P (x ,y ,z )
+  P (x ,y ,z )
 1 1 1 1
-𝜃  Applied Mathematics I (Math 1014B)
-B
+𝜃  B
 O
 P (x ,y ,z )
 0 0 0 0
@@ -732,10 +695,6 @@ OR: Take 𝑛⃗ = 〈3,5,4〉 & 0 = (0,0, ) ∈ 𝜋. Then
 |𝑛⃗ ∙0⃗⃗⃗⃗Ρ⃗ | |(3,5,−4) (1,2, )| 19√2
 𝐷 = = 4 = .
 ‖𝑣⃗ ‖ √50 5
-Page 16
-
-Applied Mathematics I (Math 1014B)
-
 Distance between two parallel planes
 Given two parallel planes 𝜋  𝑎𝑛𝑑 𝜋 . Then we can have normal vectors with coefficients
 |     |     |     |     | 1   | 2   |     |     |
@@ -793,10 +752,7 @@ following conditions:
 | iv.   | 0,1 ∈      | 𝐹.    |         |           |       |     |     |
 
 Examples:
-  Page 17
-
-Applied Mathematics I (Math 1014B)
-i.  The field of real numbers (ℝ),
+  i.  The field of real numbers (ℝ),
 ii.  the field of complex numbers (₵ ),
 iii.  The field of rational numbers (ℚ).
 Definition of a vector space
@@ -828,10 +784,7 @@ space.
 3. The Vector Space of All Polynomials of Degree 2 or Less
 4. The Vector Space of All 2 x 3 Matrices
 5. 𝑉 = ℝ3 = {(𝑥,𝑦,𝑧);𝑥,𝑦,𝑧 ∈ ℝ} is a vector space over the field of real numbers, ℝ.
-  Page 18
-
-Applied Mathematics I (Math 1014B)
-6. The set defined by 𝑆 = {(𝑥,𝑦,𝑧);𝑥,𝑦,𝑧 ∈ ℚ} is not a vector space over ℝ because if we
+  6. The set defined by 𝑆 = {(𝑥,𝑦,𝑧);𝑥,𝑦,𝑧 ∈ ℚ} is not a vector space over ℝ because if we
 take𝑐 = √2 ∈ ℝ & 𝑢 = (1,3,0) ∈ 𝑆, then we can see that 𝑐𝑢 is not in 𝑆.
 Subspaces
 Definition: Let V be a given vector space over a field F. Then a non-empty subset W of V is
@@ -872,9 +825,6 @@ a) 𝑊 = {(𝑥 ,𝑥 ,1);𝑥 ,𝑥 ∈ 𝑅
 1 2 1 2
 b) 𝑊 = {(𝑥 ,𝑥 +𝑥 ,𝑥 );𝑥 ,𝑥 ∈ 𝑅
 1 1 3 3 1 3
-Page 19
-
-Applied Mathematics I (Math 1014B)
 7. Linear Dependence and Independence
 Definition:
  Let  𝑣 , 𝑣 …,𝑣   be  elements  of  an  arbitrary  vector  space  V,  and  𝛼 , 𝛼 …,𝛼   be
@@ -920,10 +870,9 @@ Let 𝑣 , 𝑣 …,𝑣 are vectors in a vector space V over ℝ.Then vectors a
 |     |  𝛼  | = 𝛼 | =  … | = 𝛼 | = 0.  |     |      |     |     |     |     |     |
 |     |     | 1   | 2    | 𝑛   |       |     |      |     |     |     |     |     |
 
-|     |     |     |     |     |     |     |     |     |     |     |     | Page 20  |
+|     |     |     |     |     |     |     |     |     |     |     |     |   |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | -------- |
 
-Applied Mathematics I (Math 1014B)
 Linear dependence in the vector space V = R3 can be described geometrically as follows:
 (a) Any two vectors u and v in R3 are linearly dependent if and only if they lie on the same
 line through the origin O, as shown in Fig. 4-3(a).
@@ -954,9 +903,6 @@ linearly dependent or independent.
 a. {(1,0,0),(0 ,1,0),(0,0,3)}
 b. {(2,6,0),(2 ,4,1),(1 ,1,1)}.
 c. {(1,2,3),(0,1,2),(-2,0,1)}
-Page 21
-
-Applied Mathematics I (Math 1014B)
 2. Let V be the vector space of all real valued functions of the variable t. Then which of
 the following set of functions are LD/LI? Justify!
 a. {𝑡,𝑡2,𝑠𝑖𝑛𝑡 } b) {𝑐𝑜𝑠2𝑡,𝑠𝑖𝑛 2𝑡,1 }
@@ -994,9 +940,7 @@ Let (x, y ,z) ℜ3 then (𝑥,𝑦,𝑧) = 𝛼(1,0,0)+𝛽(0,1,0),+ 𝛾(0,0
 5
 Therefore , S Spans ℜ3 and hence the dimension of ℜ3 is 3, which is the
 number of elements in S.
-Page 22
-
-Chapter 2
+## Chapter 2: Matrices and Determinants
 | Addis Ababa Science and Technology University (AASTU)   |     |     |     |     |     |     |     |
 | ------------------------------------------------------- | --- | --- | --- | --- | --- | --- | --- |
                                                Department of Mathematics
@@ -1049,7 +993,6 @@ Example 3: ( ) is a 3 1 column matrix.
 
 1
 
-Chapter 2
 |     | Addis Ababa Science and Technology University (AASTU)   |     |     |     |     |     |     |     |     |     |
 | --- | ------------------------------------------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
                                                Department of Mathematics
@@ -1095,7 +1038,6 @@ Definition: A matrix all of whose elements are zero is called a zero matrix and 
 
 2
 
-Chapter 2
 |     | Addis Ababa Science and Technology University (AASTU)   |     |     |     |     |     |
 | --- | ------------------------------------------------------- | --- | --- | --- | --- | --- |
                                                Department of Mathematics
@@ -1135,7 +1077,6 @@ matrix.
 
 3
 
-Chapter 2
 Addis Ababa Science and Technology University (AASTU)
 Department of Mathematics
 Definition: A diagonal matrix whose all of its diagonal elements are equal is called Scalar
@@ -1153,7 +1094,6 @@ iii.
 iv.
 4
 
-Chapter 2
 | Addis Ababa Science and Technology University (AASTU)   |     |     |     |     |     |     |
 | ------------------------------------------------------- | --- | --- | --- | --- | --- | --- |
                                                Department of Mathematics
@@ -1204,7 +1144,6 @@ a sequence of elementary row operations.
 
 5
 
-Chapter 2
 |     | Addis Ababa Science and Technology University (AASTU)   |     |     |     |     |     |     |     |     |     |     |     |     |
 | --- | ------------------------------------------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
                                                Department of Mathematics
@@ -1255,7 +1194,6 @@ Definition: Let A be an     matrix. Let    be the row echelon form of A. The ran
 
 6
 
-Chapter 2
 |     | Addis Ababa Science and Technology University (AASTU)   |     |     |     |     |     |     |     |     |     |     |
 | --- | ------------------------------------------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
                                                Department of Mathematics
@@ -1308,7 +1246,6 @@ Solution: 1. Here       and we can choose                      choosing
 
 7
 
-Chapter 2
 | Addis Ababa Science and Technology University (AASTU)   |     |     |     |     |     |     |     |     |     |     |
 | ------------------------------------------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
                                                Department of Mathematics
@@ -1367,7 +1304,6 @@ doesn’t change.
 
 8
 
-Chapter 2
 |     |     | Addis Ababa Science and Technology University (AASTU)   |     |     |     |     |     |     |     |     |
 | --- | --- | ------------------------------------------------------- | --- | --- | --- | --- | --- | --- | --- | --- |
                                                Department of Mathematics
@@ -1425,7 +1361,6 @@ the matrix A. det    is called the minor of the element    of an       matrix A.
 
 9
 
-Chapter 2
 |     |     | Addis Ababa Science and Technology University (AASTU)   |     |     |     |     |     |     |     |     |     |     |     |     |
 | --- | --- | ------------------------------------------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
                                                Department of Mathematics
@@ -1488,7 +1423,6 @@ called the coefficient matrix. If     ( ), the system is called homogenous; othe
 
 10
 
-Chapter 2
 |     | Addis Ababa Science and Technology University (AASTU)   |     |     |     |     |
 | --- | ------------------------------------------------------- | --- | --- | --- | --- |
                                                Department of Mathematics
@@ -1536,7 +1470,6 @@ Example: Using Gaussian elimination method, solve the following systems of linea
 
 11
 
-Chapter 2
 | Addis Ababa Science and Technology University (AASTU)   |     |     |     |     |     |     |     |     |     |     |     |     |     |
 | ------------------------------------------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
                                                Department of Mathematics
@@ -1610,7 +1543,6 @@ a). If a linear system of equations consisting of n equations with the same numb
 
 12
 
-Chapter 2
 |     | Addis Ababa Science and Technology University (AASTU)   |     |     |     |     |     |     |     |     |     |     |
 | --- | ------------------------------------------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
                                                Department of Mathematics
@@ -1673,7 +1605,6 @@ Solution: The system of linear equation can be expressed in its equivalent matri
 
 13
 
-Chapter 2
 |     | Addis Ababa Science and Technology University (AASTU)   |     |     |     |     |     |     |     |
 | --- | ------------------------------------------------------- | --- | --- | --- | --- | --- | --- | --- |
                                                Department of Mathematics
@@ -1725,7 +1656,6 @@ Solution: Characteristic polynomial is| |
 
 14
 
-Chapter 2
 |     | Addis Ababa Science and Technology University (AASTU)   |     |     |     |     |     |     |     |     |     |
 | --- | ------------------------------------------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
                                                Department of Mathematics
@@ -1788,12 +1718,11 @@ ii.  Similarly the Eigen vector corresponding to        is     (   )
 
 15
 
-Chapter 3
+## Chapter 3: Limits, Continuity and Derivatives of Single Variable
 Limit and
 Addis Ababa Science and Technology University (AASTU)
 Continuity
 Department of Mathematics
-Chapter 3
 LIMIT AND CONTINUITY
 3.1 Definition of Limit
 Definition :( Formal Definition of Limit)
@@ -1809,7 +1738,6 @@ Note:
 - The calculated  is not unique i.e. for  value, Taking /  is true
 1
 
-Chapter 3
 Limit and
 Addis Ababa Science and Technology University (AASTU)
 Continuity
@@ -1853,7 +1781,6 @@ doesn’t show up in the right inequality above. We are going to find some way t
 get rid of the |x 5| .
 2
 
-Chapter 3
 Limit and
 Addis Ababa Science and Technology University (AASTU)
 Continuity
@@ -1905,7 +1832,6 @@ We also get, 0 |x 4| 1 |x 4| 1 |x �
 Finally, all we need to do is,
 3
 
-Chapter 3
 Limit and
 Continuity
 Addis Ababa Science and Technology University (AASTU)
@@ -1975,7 +1901,6 @@ Let A(r)  be the area of the circular metal disk for radius r
 
 4
 
-Chapter 3
 Limit and
 Addis Ababa Science and Technology University (AASTU)
 Continuity
@@ -2029,7 +1954,6 @@ In the case that n is an integer this rule can be thought of as an extended case
 Example: Evaluate the following limits
 5
 
-Chapter 3
 Limit and
 Continuity
 Addis Ababa Science and Technology University (AASTU)
@@ -2097,7 +2021,6 @@ x0
 
 6
 
-Chapter 3
 Limit and
 Addis Ababa Science and Technology University (AASTU)
 Continuity
@@ -2135,7 +2058,6 @@ looks like the right inequality. Recall that x2 = |x|
 x2 M
 7
 
-Chapter 3
 Limit and
 Continuity
 Addis Ababa Science and Technology University (AASTU)
@@ -2208,7 +2130,6 @@ x2
 
 8
 
-Chapter 3
 Limit and
 Addis Ababa Science and Technology University (AASTU)
 Continuity
@@ -2269,7 +2190,6 @@ As we are considering a particle farther from the point load keeping the
 depth constant, the effect of the stress is none
 9
 
-Chapter 3
 Limit and
 Addis Ababa Science and Technology University (AASTU)
 Continuity
@@ -2310,7 +2230,6 @@ x2
 x2
 10
 
-Chapter 3
 Limit and
 Addis Ababa Science and Technology University (AASTU)
 Continuity
@@ -2345,7 +2264,6 @@ c)lim f(x)  f(b)
 xb
 11
 
-Chapter 3
 Limit and
 Continuity
 Addis Ababa Science and Technology University (AASTU)
@@ -2405,7 +2323,6 @@ gravitational constant. Is F a continuous function of r ?
 
 12
 
-Chapter 3
 Limit and
 Continuity
 Addis Ababa Science and Technology University (AASTU)
@@ -2454,7 +2371,6 @@ Example:  Show that  2x3 5x2 10x5 has a root in the interval   [-1, 2]
 
 13
 
-Chapter 3
 Limit and
 Addis Ababa Science and Technology University (AASTU)
 Continuity
@@ -2481,7 +2397,6 @@ capacity if a 2.
 Solution:
 14
 
-Chapter 3
 Limit and
 Continuity
 Addis Ababa Science and Technology University (AASTU)
@@ -2516,7 +2431,7 @@ Lecture Title: Derivativesandtheirapplications Academic Year: 2021/22
 | Course Title: | AppliedMathematics-IB |     |     | Year of       | study: Freshman     |
 | Enrollment:   | Regular               |     |     | Target Group: | Engineering&Applied |
 
-|       | Chapter     |            |     | 4        |            |             |     |     |             |                |     |
+## Chapter 4: Applications of Derivatives
 | ----- | ----------- | ---------- | --- | -------- | ---------- | ----------- | --- | --- | ----------- | -------------- | --- |
 |       | Derivatives |            |     |          | and        | Application |     |     |             | of Derivatives |     |
 | 4.1   | Definition, |            |     | examples | &          | properties  |     | of  | derivatives |                |     |
@@ -4491,9 +4406,7 @@ xr1
 | --- | ----------------- | ---- | --- | --- |
       5)
 x
-Addis Ababa Science and Technology University  Page 1
-
-Applied MathI: Integrations  2022
+Addis Ababa Science and Technology University  Applied MathI: Integrations  2022
 
      6)   sin  x dxcos xC ,cos  x dxsin xC and sec2x dxtan xC
 ax
@@ -4537,9 +4450,7 @@ Theorem: Suppose   and   are open intervals,  f  has domain ,   maps   in to , a
                  is differentiable on  .  Assume that we take   as independent variable.
      f  g  x  g x  dx  f(u)du F(u)C, where   is the independent variable andu  g(x)
 
-Addis Ababa Science and Technology University  Page 2
-
-Applied MathI: Integrations  2022
+Addis Ababa Science and Technology University  Applied MathI: Integrations  2022
 
 Example: Evaluate the following integrals
 |     |     | x   |     |     |     |     | 1  |     |     |     |
@@ -4603,9 +4514,7 @@ Theorem: Let   and   be differentiable functions, then
 
 The u - v Method:
 The u - v Method is given by udvuvvdu which is identical to the canonical method.
-Addis Ababa Science and Technology University  Page 3
-
-Applied MathI: Integrations  2022
+Addis Ababa Science and Technology University  Applied MathI: Integrations  2022
 
 |                                        |     |     |              |     |    |     |     |     |     |
 | -------------------------------------- | --- | --- | -------------- | --- | ---- | --- | --- | --- | --- |
@@ -4660,9 +4569,7 @@ xdx
 Let u  cosx
                                           (1cos2 x)2 cos4 xsinxdx ,
 du -sinxdx
-Addis Ababa Science and Technology University  Page 4
-
-Applied MathI: Integrations  2022
+Addis Ababa Science and Technology University  Applied MathI: Integrations  2022
 
                                         (1u2)2u4du(u4 2u6 u8)du
 |                                           |     |     | 1    | 2    | 1   |      |       |
@@ -4707,9 +4614,7 @@ Let x = 2, then, 5A = 10 and A = 2, Let x = -3, then, -5B = -10 and   B = 2
 |                                                  |     | x2 x6 |     | x2    |     | x3 |     |
 |                                          2lnx2 |     |         |     | 2lnx3 |     | C   |     |
 
-Addis Ababa Science and Technology University  Page 5
-
-Applied MathI: Integrations  2022
+Addis Ababa Science and Technology University  Applied MathI: Integrations  2022
 
 D. Integration by trigonometric substitution
 An integrand which contains one of the forms a2 b2x2 , a2 b2x2 , or  b2x2 a2 may
@@ -4769,9 +4674,7 @@ Therefore, 
 |     | x2 4 | x2  |     |     |     |     |     |     |
 | --- | ----- | --- | --- | --- | --- | --- | --- | --- |
 
-Addis Ababa Science and Technology University  Page 6
-
-Applied MathI: Integrations  2022
+Addis Ababa Science and Technology University  Applied MathI: Integrations  2022
 
 94x2
 | Example  Evaluate   |     |     |     |     | dx      |     |     |     |     |     |
@@ -4829,9 +4732,7 @@ x
 | So, sin1 | xdx |  xsin1 | x |     | dx  |     |     |     |     |     |
 | ---------- | --- | -------- | --- | --- | --- | --- | --- | --- | --- | --- |
 1x2
-Addis Ababa Science and Technology University  Page 7
-
-Applied MathI: Integrations  2022
+Addis Ababa Science and Technology University  Applied MathI: Integrations  2022
 
                          =   xsin1 x 1x2 C --------------by substitution
 | 2. tan1                         | xdx  |     |                       |     |     |
@@ -4893,9 +4794,7 @@ k k
 | --- | --- | --- | ------ | --- | --- |
 of the subintervals associated with P and is called the normal of P.
 
-Addis Ababa Science and Technology University  Page 8
-
-Applied MathI: Integrations  2022
+Addis Ababa Science and Technology University  Applied MathI: Integrations  2022
 
 5.4.2 Properties of the Definite Integral
 |      Definition  Let  |     |        | f   |  be continuous on [a, b].  Then   |         |      |         |     |     |
@@ -4960,9 +4859,7 @@ a a
 
 |     | a   |     |     | a   |     |     |     |     |     |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-Addis Ababa Science and Technology University  Page 9
-
-Applied MathI: Integrations  2022
+Addis Ababa Science and Technology University  Applied MathI: Integrations  2022
 
  Theorem (Fundamental theorem of calculus II)
 The second fundamental theorem of calculus holds for f a continuous function on an open
@@ -5037,9 +4934,7 @@ dt
 | Solution:   Set F |     | x   |    |     |     |     |     |
 | ----------------- | --- | --- | --- | --- | --- | --- | --- |
 0
-Addis Ababa Science and Technology University  Page 10
-
-Applied MathI: Integrations  2022
+Addis Ababa Science and Technology University  Applied MathI: Integrations  2022
 
 From the Fundamental Theorem of Calculus, we know that F(x) is an anti-derivative of cos(x2).
 x2
@@ -5106,9 +5001,7 @@ f x
 a
 |     |     | tb | a   |     |
 | --- | --- | ---- | --- | --- |
-Addis Ababa Science and Technology University  Page 11
-
-Applied MathI: Integrations  2022
+Addis Ababa Science and Technology University  Applied MathI: Integrations  2022
 
        Remark What happened if the function f(x) is unbounded at more than one point on the
 interval [a,b]? Very easy, first you need to study f(x) on [a,b] and find out where the function is
@@ -5185,7 +5078,7 @@ definition.
 |               |     |      | m   |      | m0 |      |    |             |     |     |     |     |
 m
        5.5.2 Convergence and Divergence of Improper Integrals
-| Addis Ababa Science and Technology University  |     |     |     |     |     |     |     |     |     |     |     | Page 12  |
+| Addis Ababa Science and Technology University  |     |     |     |     |     |     |     |     |     |     |     |   |
 | ---------------------------------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | -------- |
 
 Applied MathI: Integrations 2022
@@ -5226,9 +5119,7 @@ Solution To find the end point, we solve the equations
 y  x2 and y  x 6
  x2  x6(x3)(x2)0
 x3 x2
-Addis Ababa Science and Technology University Page 13
-
-Applied MathI: Integrations  2022
+Addis Ababa Science and Technology University Applied MathI: Integrations  2022
 
 |                   y | 9 for | x3and | y 4 for | x2  |     |
 | -------------------- | ------ | ------ | -------- | ----- | --- |
@@ -5267,9 +5158,7 @@ ii) If A is given by A(y), which is perpendicular to the y – axis for c  y 
 | of S is given by    |     |          |         | ---- Vertical axis of revolution  |     |
 |                     |     | c        | c       |                                   |     |
 
-Addis Ababa Science and Technology University  Page 14
-
-Applied MathI: Integrations  2022
+Addis Ababa Science and Technology University  Applied MathI: Integrations  2022
 
 Theorem
 If the solid is generated by revolving the region between the graphs of f and g
@@ -5318,4 +5207,4 @@ Example:   Find the length of the curve   y 3x2 1 from x = 0 to x = 1
 | 2.  Find the length of the curve x |     |     | (y2 2)2 from y = 0 to y = 1.  |     |     |
 | ----------------------------------- | --- | --- | ------------------------------ | --- | --- |
 3
-Addis Ababa Science and Technology University  Page 15
+Addis Ababa Science and Technology University

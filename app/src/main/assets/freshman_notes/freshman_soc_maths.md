@@ -4,16 +4,13 @@ The content provided in these notes is for educational and informational purpose
 
 ---
 
+# Mathematics for Social Sciences (Math 1012) Lecture Notes
 
+---
 
+## Chapter 1: Propositional Logic and Set Theory
 
-
-
-
-
-
-
-Out lines
+Outlines
 | 1 Propositional     | Logic and         | Set Theory   |
 | ------------------- | ----------------- | ------------ |
 | Logical             | connectives       |              |
@@ -705,7 +702,7 @@ Function
 | Logarithm   | function            |                  |            |
 
 Function
-Therealnumbersystemandarithmeticoperations
+## Chapter 2: Real Numbers, Relations, and Functionsandarithmeticoperations
 | The real number | system |     |     |     |
 | --------------- | ------ | --- | --- | --- |
 Definition
@@ -1654,7 +1651,7 @@ e
 |     | function. |     | We  | simply | write as | f(x) = | lnx. |     |
 | --- | --------- | --- | --- | ------ | -------- | ------ | ---- | --- |
 
-Matrix,DeterminantandSystemsoflinearequations
+## Chapter 3: Matrices, Determinants, and Systems of Linear Equations
 
 
 
