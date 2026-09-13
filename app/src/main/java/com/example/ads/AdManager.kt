@@ -125,9 +125,10 @@ object AdManager {
 
         val appContext = context.applicationContext
         try {
-            // Configure general family-safe ad settings
+            // Configure general family-safe ad settings and register emulator test device
             val requestConfig = RequestConfiguration.Builder()
                 .setMaxAdContentRating(RequestConfiguration.MAX_AD_CONTENT_RATING_G)
+                .setTestDeviceIds(listOf(AdRequest.DEVICE_ID_EMULATOR))
                 .build()
             MobileAds.setRequestConfiguration(requestConfig)
 

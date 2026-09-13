@@ -32,12 +32,12 @@ object UatQuestionsLoader {
                         ExamQuestion(
                             id = "aau_uat_quant_${i + 1}",
                             subjectId = "uat_quantitative",
-                            question = qText,
+                            questionText = qText,
                             optionA = optA,
                             optionB = optB,
                             optionC = optC,
                             optionD = optD,
-                            correctAnswer = correct,
+                            correctOption = correct,
                             explanation = exp
                         )
                     )
@@ -68,12 +68,12 @@ object UatQuestionsLoader {
                         ExamQuestion(
                             id = "aau_uat_verbal_${i + 1}",
                             subjectId = "uat_verbal",
-                            question = qText,
+                            questionText = qText,
                             optionA = optA,
                             optionB = optB,
                             optionC = optC,
                             optionD = optD,
-                            correctAnswer = correct,
+                            correctOption = correct,
                             explanation = exp
                         )
                     )

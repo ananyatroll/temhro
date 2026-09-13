@@ -53,6 +53,7 @@ fun ProfileScreen(viewModel: StudyViewModel) {
         "freshman_social" -> "Social Science Freshman"
         "aau_uat" -> "AAU UAT Entrance"
         "uat_aastu_astu" -> "AASTU & ASTU Joint Entrance"
+        "uat_all", "uat_bundle" -> "All UAT Entrance Exams Combo"
         "department" -> "University Department"
         "exit_exam" -> "Exit Exam Prep"
         "grade12" -> "Freshman"

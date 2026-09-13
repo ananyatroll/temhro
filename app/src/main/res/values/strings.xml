@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ተምህሮ / Temhiro</string>
+    <string name="google_app_id" translatable="false">1:105871888257:android:3415839336282886724065</string>
+    <string name="project_id" translatable="false">temhiro-study-hub</string>
+    <string name="gcm_defaultSenderId" translatable="false">105871888257</string>
+    <string name="google_api_key" translatable="false">AIzaSyDummyKeyForTemhiroStudyHub00000</string>
 </resources>

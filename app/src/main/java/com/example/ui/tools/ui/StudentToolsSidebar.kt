@@ -214,6 +214,7 @@ fun StudentToolsSidebar(
                                             "euee_social" -> "EUEE Social Science"
                                             "aau_uat" -> "AAU UAT Entrance"
                                             "uat_aastu_astu" -> "AASTU & ASTU Joint Entrance"
+                                            "uat_all", "uat_bundle" -> "All UAT Entrance Combo"
                                             "department" -> "Department Curriculum"
                                             "exit_exam" -> "Exit Exam Blueprints"
                                             else -> "Enrolled Student"

@@ -37,11 +37,20 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3415839336282886~7240657730"/>
+        <meta-data
+            android:name="com.google.android.gms.ads.flag.OPTIMIZE_INITIALIZATION"
+            android:value="true"/>
+        <meta-data
+            android:name="com.google.android.gms.ads.flag.OPTIMIZE_AD_LOADING"
+            android:value="true"/>
 
         <!-- Deactivate unused Firebase Analytics / App Measurement auto-collection -->
         <meta-data
             android:name="firebase_analytics_collection_deactivated"
             android:value="true"/>
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="false"/>
         <meta-data
             android:name="google_analytics_adid_collection_enabled"
             android:value="false"/>

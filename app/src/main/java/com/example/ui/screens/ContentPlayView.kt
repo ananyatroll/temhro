@@ -114,6 +114,7 @@ fun ContentPlayView(viewModel: StudyViewModel) {
             "freshman_social" -> "Social Science Freshman"
             "aau_uat" -> "AAU UAT Entrance Pro"
             "uat_aastu_astu" -> "AASTU & ASTU Joint Entrance Pro"
+            "uat_all", "uat_bundle" -> "All UAT Entrance Exams Combo Pro"
             "department" -> "University Department Pro"
             "exit_exam" -> "Exit Exam Pro"
             else -> "Pro Study Plan"
