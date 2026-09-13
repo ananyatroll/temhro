@@ -1014,13 +1014,9 @@ object OfficialTextbookRegistry {
  * lazily rendering pages on demand on an IO/Default dispatcher to avoid OOM.
  */
 object PdfPageBitmapCache {
-    private val memoryCache = object : android.util.LruCache<String, Bitmap>(6) {
+    private val memoryCache = object : android.util.LruCache<String, Bitmap>(16) {
         override fun entryRemoved(evicted: Boolean, key: String?, oldValue: Bitmap?, newValue: Bitmap?) {
-            // Let GC reclaim recycled bitmaps safely
-            if (evicted && oldValue != null && !oldValue.isRecycled) {
-                // Don't manually recycle if it might still be referenced by an active Compose frame,
-                // rely on Android GC after removal from LRU cache.
-            }
+            // Memory managed safely by Android GC
         }
     }
 
@@ -1041,7 +1037,7 @@ object PdfPageBitmapCache {
 suspend fun renderPdfPageBitmap(
     pdfFile: File,
     pageNumber: Int, // 1-indexed
-    scaleFactor: Float = 2.0f
+    scaleFactor: Float = 1.75f
 ): Bitmap? = kotlinx.coroutines.withContext(Dispatchers.IO) {
     val cacheKey = "${pdfFile.absolutePath}_p${pageNumber}_s$scaleFactor"
     PdfPageBitmapCache.get(cacheKey)?.let { return@withContext it }
@@ -1051,9 +1047,9 @@ suspend fun renderPdfPageBitmap(
             PdfRenderer(pfd).use { renderer ->
                 val safePageIdx = (pageNumber - 1).coerceIn(0, renderer.pageCount - 1)
                 renderer.openPage(safePageIdx).use { page ->
-                    val renderWidth = (page.width * scaleFactor).toInt().coerceAtLeast(800)
-                    val renderHeight = (page.height * scaleFactor).toInt().coerceAtLeast(1100)
-                    val bmp = Bitmap.createBitmap(renderWidth, renderHeight, Bitmap.Config.ARGB_8888)
+                    val renderWidth = (page.width * scaleFactor).toInt().coerceAtLeast(720)
+                    val renderHeight = (page.height * scaleFactor).toInt().coerceAtLeast(1020)
+                    val bmp = Bitmap.createBitmap(renderWidth, renderHeight, Bitmap.Config.RGB_565)
                     bmp.eraseColor(android.graphics.Color.WHITE)
                     val canvas = Canvas(bmp)
                     canvas.drawColor(android.graphics.Color.WHITE)
@@ -1908,18 +1904,6 @@ fun OfficialTextbookScreen(
                             }
 
                             Row(verticalAlignment = Alignment.CenterVertically) {
-                                Surface(
-                                    shape = RoundedCornerShape(6.dp),
-                                    color = Color(0xFF0F172A)
-                                ) {
-                                    Text(
-                                        text = "Page ${unit.pageStart}",
-                                        style = MaterialTheme.typography.labelSmall.copy(fontSize = 10.sp),
-                                        color = TextMuted,
-                                        modifier = Modifier.padding(horizontal = 6.dp, vertical = 3.dp)
-                                    )
-                                }
-                                Spacer(modifier = Modifier.width(6.dp))
                                 Icon(
                                     imageVector = if (isExpanded) Icons.Default.ExpandLess else Icons.Default.ExpandMore,
                                     contentDescription = null,
@@ -2118,14 +2102,24 @@ fun InAppPdfTextbookReader(
     LaunchedEffect(currentPage, edition.fileName, reloadTrigger) {
         val realPdfFile = getOrCreateTextbookPdfFile(context, edition)
         if (realPdfFile != null && realPdfFile.exists() && realPdfFile.length() > 0) {
-            val cached = PdfPageBitmapCache.get("${realPdfFile.absolutePath}_p${currentPage}_s2.0")
+            val cached = PdfPageBitmapCache.get("${realPdfFile.absolutePath}_p${currentPage}_s1.75")
             if (cached != null) {
                 pdfBitmap = cached
             } else {
                 isRenderingPage = true
-                val bmp = renderPdfPageBitmap(realPdfFile, currentPage, 2.0f)
+                val bmp = renderPdfPageBitmap(realPdfFile, currentPage, 1.75f)
                 pdfBitmap = bmp
                 isRenderingPage = false
+            }
+
+            // Prefetch adjacent pages in background for instant navigation
+            kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+                if (currentPage + 1 <= totalPages) {
+                    renderPdfPageBitmap(realPdfFile, currentPage + 1, 1.75f)
+                }
+                if (currentPage - 1 >= 1) {
+                    renderPdfPageBitmap(realPdfFile, currentPage - 1, 1.75f)
+                }
             }
         } else {
             pdfBitmap = null
@@ -2594,17 +2588,6 @@ fun InAppPdfTextbookReader(
                                             color = textColor,
                                             maxLines = 1,
                                             overflow = TextOverflow.Ellipsis
-                                        )
-                                    }
-                                    Surface(
-                                        shape = RoundedCornerShape(6.dp),
-                                        color = barBg
-                                    ) {
-                                        Text(
-                                            text = "Page ${unit.pageStart}",
-                                            style = MaterialTheme.typography.labelSmall,
-                                            color = EmeraldPrimary,
-                                            modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
                                         )
                                     }
                                 }

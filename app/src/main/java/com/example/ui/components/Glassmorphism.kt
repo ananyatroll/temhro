@@ -26,43 +26,31 @@ fun GlassBackground(
     content: @Composable BoxScope.() -> Unit
 ) {
     val baseBg = if (isDark) ReaderBgDark else Color(0xFFF8FAFC)
-    val orb1 = if (isDark) Color(0x2810B981) else Color(0x2810B981) // Glowing Emerald ambient
-    val orb2 = if (isDark) Color(0x2238BDF8) else Color(0x256366F1) // Electric Cyan ambient
-    val orb3 = if (isDark) Color(0x1C4338CA) else Color(0x20F59E0B) // Deep Indigo ambient
+    val bgBrush = androidx.compose.runtime.remember(isDark) {
+        if (isDark) {
+            Brush.verticalGradient(
+                colors = listOf(
+                    ReaderBgDark,
+                    Color(0xFF0F172A),
+                    Color(0xFF0D1B2A)
+                )
+            )
+        } else {
+            Brush.verticalGradient(
+                colors = listOf(
+                    Color(0xFFF8FAFC),
+                    Color(0xFFF1F5F9),
+                    Color(0xFFE2E8F0)
+                )
+            )
+        }
+    }
 
     Box(
         modifier = modifier
             .fillMaxSize()
             .background(baseBg)
-            .drawBehind {
-                drawCircle(
-                    brush = Brush.radialGradient(
-                        colors = listOf(orb1, Color.Transparent),
-                        center = Offset(size.width * 0.2f, size.height * 0.15f),
-                        radius = size.width * 0.75f
-                    ),
-                    radius = size.width * 0.75f,
-                    center = Offset(size.width * 0.2f, size.height * 0.15f)
-                )
-                drawCircle(
-                    brush = Brush.radialGradient(
-                        colors = listOf(orb2, Color.Transparent),
-                        center = Offset(size.width * 0.85f, size.height * 0.45f),
-                        radius = size.width * 0.8f
-                    ),
-                    radius = size.width * 0.8f,
-                    center = Offset(size.width * 0.85f, size.height * 0.45f)
-                )
-                drawCircle(
-                    brush = Brush.radialGradient(
-                        colors = listOf(orb3, Color.Transparent),
-                        center = Offset(size.width * 0.35f, size.height * 0.85f),
-                        radius = size.width * 0.7f
-                    ),
-                    radius = size.width * 0.7f,
-                    center = Offset(size.width * 0.35f, size.height * 0.85f)
-                )
-            }
+            .background(bgBrush)
     ) {
         content()
     }

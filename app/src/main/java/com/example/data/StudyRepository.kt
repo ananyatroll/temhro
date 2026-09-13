@@ -16,9 +16,12 @@ class StudyRepository(
     override val userProgress: Flow<UserProgress?> = dao.getUserProgress()
     override val subjects: Flow<List<StudySubject>> = dao.getSubjects()
 
+    private val seededFreshmanSet = java.util.concurrent.ConcurrentHashMap.newKeySet<String>()
+    private val seededUatSet = java.util.concurrent.ConcurrentHashMap.newKeySet<String>()
+
     override fun getNotesBySubject(subjectId: String): Flow<List<SubjectNote>> = kotlinx.coroutines.flow.channelFlow {
         dao.getNotesBySubject(subjectId).collect { list ->
-            if (subjectId.startsWith("freshman_") && context != null && (list.isEmpty() || list.any { it.id.startsWith("fn_") || it.content.length < 300 })) {
+            if (subjectId.startsWith("freshman_") && context != null && list.isEmpty() && seededFreshmanSet.add(subjectId)) {
                 val assetNotes = FreshmanNotesLoader.loadNotesForSubject(context, subjectId)
                 if (assetNotes.isNotEmpty()) {
                     dao.insertNotes(assetNotes)
@@ -38,7 +41,7 @@ class StudyRepository(
 
     override fun getQuestionsBySubject(subjectId: String): Flow<List<ExamQuestion>> = kotlinx.coroutines.flow.channelFlow {
         dao.getQuestionsBySubject(subjectId).collect { list ->
-            if ((subjectId == "uat_verbal" || subjectId == "uat_quantitative") && context != null && list.size < 50) {
+            if ((subjectId == "uat_verbal" || subjectId == "uat_quantitative") && context != null && list.isEmpty() && seededUatSet.add(subjectId)) {
                 val uatQuestions = UatQuestionsLoader.loadUatQuestions(context)
                 if (uatQuestions.isNotEmpty()) {
                     dao.insertQuestions(uatQuestions)
