@@ -112,7 +112,7 @@ fun ContentPlayView(viewModel: StudyViewModel) {
             "euee" -> "EUEE Prep Ultimate"
             "freshman_natural" -> "Natural Science Freshman"
             "freshman_social" -> "Social Science Freshman"
-            "aau_uat" -> "AAU UAT Prep Pro"
+            "aau_uat" -> "(AAU, AASTU & ASTU) UAT Exams Pro"
             "department" -> "University Department Pro"
             "exit_exam" -> "Exit Exam Pro"
             else -> "Pro Study Plan"

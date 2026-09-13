@@ -212,7 +212,7 @@ fun StudentToolsSidebar(
                                             "freshman_social" -> "Freshman Social Sciences"
                                             "euee_natural" -> "EUEE Natural Science"
                                             "euee_social" -> "EUEE Social Science"
-                                            "aau_uat" -> "AAU UAT Entrance"
+                                            "aau_uat" -> "(AAU, AASTU & ASTU) UAT Exams"
                                             "department" -> "Department Curriculum"
                                             "exit_exam" -> "Exit Exam Blueprints"
                                             else -> "Enrolled Student"
