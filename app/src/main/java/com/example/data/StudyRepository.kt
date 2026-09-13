@@ -190,6 +190,15 @@ class StudyRepository(
     }
 
     override suspend fun seedDatabaseIfEmpty() = withContext(Dispatchers.IO) {
+        val prefs = context?.getSharedPreferences("offline_study_local_cache", Context.MODE_PRIVATE)
+        if (prefs != null && prefs.getBoolean("db_fully_seeded_v3", false)) {
+            val user = dao.getUserProgressDirect()
+            if (user == null) {
+                dao.insertUserProgress(UserProgress(username = "Ananya", activePackageId = null))
+            }
+            return@withContext
+        }
+
         val startTime = System.currentTimeMillis()
 
         // 0. Ensure default user progress exists using fast direct single query
@@ -239,6 +248,7 @@ class StudyRepository(
         if (subjectsCount >= 75 && updatedNotesCount >= 400 && updatedQuestionsCount >= 2000 && flashcardsCount >= 17000 && hasRichFreshmanNotes && hasUatQuestions) {
             val elapsed = System.currentTimeMillis() - startTime
             Log.d(TAG, "seedDatabaseIfEmpty: Database verified in ${elapsed}ms. DB is fully populated with subjects, notes, questions, and flashcards.")
+            prefs?.edit()?.putBoolean("db_fully_seeded_v3", true)?.apply()
             return@withContext
         }
 
