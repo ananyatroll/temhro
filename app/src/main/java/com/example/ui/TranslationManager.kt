@@ -128,6 +128,7 @@ object TranslationManager {
             // 4. Study Modals, Notes & Exam Arena
             "opt_syllabus_notes" to "1. Syllabus Notes",
             "opt_past_exams" to "2. Past Exams & Practice",
+            "opt_exams_only" to "Exams",
             "opt_flashcards" to "3. Flashcards",
             "opt_official_textbook" to "4. Official Textbooks",
             "opt_saved_materials" to "5. Saved Materials",
@@ -436,6 +437,7 @@ object TranslationManager {
             // 4. Study Modals, Notes & Exam Arena
             "opt_syllabus_notes" to "1. የሲላበስ ማስታወሻዎች",
             "opt_past_exams" to "2. ያለፉ ፈተናዎች እና ልምምድ",
+            "opt_exams_only" to "ፈተናዎች",
             "opt_flashcards" to "3. ፍላሽ ካርዶች",
             "opt_official_textbook" to "4. ኦፊሴላዊ መጻሕፍት",
             "opt_saved_materials" to "5. የተቀመጡ ማቴሪያሎች",
@@ -733,6 +735,7 @@ object TranslationManager {
             // 4. Study Modals, Notes & Exam Arena
             "opt_syllabus_notes" to "1. Yaadannoo Silabasii",
             "opt_past_exams" to "2. Qormaata Darban fi Shaakala",
+            "opt_exams_only" to "Qormaata",
             "opt_flashcards" to "3. Flaashkaardii",
             "opt_official_textbook" to "4. Kitaabolee Uummataa",
             "opt_saved_materials" to "5. Meeshaalee Olkaa'aman",
@@ -1030,6 +1033,7 @@ object TranslationManager {
             // 4. Study Modals, Notes & Exam Arena
             "opt_syllabus_notes" to "1. ናይ ሲላበስ ማስታወሻታት",
             "opt_past_exams" to "2. ዝሓለፉ ፈተናታትን ልምምድን",
+            "opt_exams_only" to "ፈተናታት",
             "opt_flashcards" to "3. ፍላሽ ካርዳት",
             "opt_official_textbook" to "4. ኦፊሴላዊ መጻሕፍቲ",
             "opt_saved_materials" to "5. ዝተዓቀቡ ማቴሪያላት",
@@ -1327,6 +1331,7 @@ object TranslationManager {
             // 4. Study Modals, Notes & Exam Arena
             "opt_syllabus_notes" to "1. Qoraallada Manhajka",
             "opt_past_exams" to "2. Imtixaannadii Hore & Tababarka",
+            "opt_exams_only" to "Imtixaannada",
             "opt_flashcards" to "3. Kaararka Qoraalka",
             "opt_official_textbook" to "4. Buugaagta Rasmiga ah",
             "opt_saved_materials" to "5. Agabka La Kaydiyay",

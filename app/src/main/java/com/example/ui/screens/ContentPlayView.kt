@@ -541,10 +541,15 @@ fun SubjectDetailModal(
                 )
                 Spacer(modifier = Modifier.height(16.dp))
 
-                val isUat = subject.packageId == "aau_uat" || mode == "aau_uat"
+                val isQuestionsOnlyPackage = subject.packageId in listOf("exit_exam", "coc", "aau_uat", "uat_aastu_astu")
+                        || mode in listOf("exit_exam", "coc", "aau_uat", "uat_aastu_astu")
+                        || subject.packageId.startsWith("coc")
+                        || subject.packageId.startsWith("uat")
+                        || mode.startsWith("uat")
+                        || mode.startsWith("coc")
 
-                // 1. Notes Mode Button (Hidden for AAU UAT)
-                if (!isUat) {
+                // 1. Notes Mode Button (Hidden for Exit Exam, COC, UAT)
+                if (!isQuestionsOnlyPackage) {
                     Button(
                         onClick = onNotesClick,
                         modifier = Modifier
@@ -553,7 +558,7 @@ fun SubjectDetailModal(
                             .pressBounce()
                             .testTag("study_option_notes"),
                         shape = RoundedCornerShape(12.dp),
-                        colors = ButtonDefaults.buttonColors(containerColor = if (mode == "exit_exam") Color(0xFF991B1B) else EmeraldPrimary)
+                        colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary)
                     ) {
                         Row(
                             modifier = Modifier.padding(vertical = 4.dp),
@@ -566,7 +571,7 @@ fun SubjectDetailModal(
                     }
                 }
 
-                // 2. Exams Mode Button (Always available, tailored for UAT practice & mock exams)
+                // 2. Exams Mode Button (Always available; labeled 'Exams' for questions-only packages)
                 Button(
                     onClick = onExamsClick,
                     modifier = Modifier
@@ -575,7 +580,7 @@ fun SubjectDetailModal(
                         .pressBounce()
                         .testTag("study_option_exams"),
                     shape = RoundedCornerShape(12.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = EmeraldPrimary)
+                    colors = ButtonDefaults.buttonColors(containerColor = if (mode == "exit_exam" || subject.packageId == "exit_exam") Color(0xFFDC2626) else EmeraldPrimary)
                 ) {
                     Row(
                         modifier = Modifier.padding(vertical = 4.dp),
@@ -584,15 +589,15 @@ fun SubjectDetailModal(
                         Icon(Icons.Default.Timer, contentDescription = null, tint = Color.White)
                         Spacer(modifier = Modifier.width(12.dp))
                         Text(
-                            if (isUat) "Timed Mock & Past Exams" else TranslationManager.get("opt_past_exams", currentLang),
+                            if (isQuestionsOnlyPackage) TranslationManager.get("opt_exams_only", currentLang) else TranslationManager.get("opt_past_exams", currentLang),
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold
                         )
                     }
                 }
 
-                // 3. Flashcards Mode Button (Hidden for AAU UAT)
-                if (!isUat) {
+                // 3. Flashcards Mode Button (Hidden for Exit Exam, COC, UAT)
+                if (!isQuestionsOnlyPackage) {
                     Button(
                         onClick = onFlashcardsClick,
                         modifier = Modifier
@@ -614,8 +619,8 @@ fun SubjectDetailModal(
                     }
                 }
 
-                // 4. Official Textbook Mode Button (Hidden for AAU UAT)
-                if (!isUat) {
+                // 4. Official Textbook Mode Button (Hidden for Exit Exam, COC, UAT)
+                if (!isQuestionsOnlyPackage) {
                     Button(
                         onClick = onTextbookClick,
                         modifier = Modifier
